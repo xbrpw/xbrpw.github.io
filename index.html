@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!-- CodePen - Cool hover effect -->
+<html lang="es-MX" >    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8">
+  <title>Go</title>
+  <style>.coolHoverEffect {
+  --c: #ef6a3e;
+  line-height: 1.2em;
+  background: linear-gradient(var(--c) 0 0), conic-gradient(from -135deg at 100% 50%, var(--c) 90deg, #0000 0) 0 var(--p, 0%), conic-gradient(from -135deg at 1.2em 50%, #0000 90deg, var(--c) 0) 100% var(--p, 0%);
+  -webkit-background-clip: text, border-box, border-box;
+  background-size: 100%, var(--s, 0%) 200%, var(--s, 0%) 200%;
+  background-repeat: no-repeat;
+  background-blend-mode: difference, normal;
+  filter: Invert(1);
+  color: transparent;
+  transition: 0.4s ease-in, background-position 0s;
+}
+
+.coolHoverEffect:hover {
+  --p: 100%;
+  /* it should be .6em (1.2em/2) but we use a litte bigger to avoid gaps */
+  --s: calc(50% + .61em);
+}
+
+.coolHoverEffect {
+  font-family: system-ui, sans-serif;
+  font-size: 5rem;
+  cursor: pointer;
+  padding: 0 0.07em;
+}</style>
+
+</head>
+<body style=" height: 100vh;
+margin: 0;
+display: grid;
+place-content: center;">
+
+<h1 class="coolHoverEffect">Go</h1>
+
+  
+</body>
+</html>
