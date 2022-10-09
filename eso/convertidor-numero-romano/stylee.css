@@ -1,0 +1,61 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  background-color: hsl(216, 5%, 95%);
+}
+.wrapper {
+  max-width: 960px;
+  margin: 5rem auto;
+  padding: 0 3rem;
+}
+h1 {
+  text-align: left;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+.subtitle {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+input[type="text"] {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  max-width: 15rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: 1px solid hsl(216, 10%, 80%);
+  border-radius: 3px;
+  box-shadow: 0 6px 12px hsla(235, 70%, 10%, 0.1);
+  outline: none;
+  transition: all 0.2s;
+}
+input[type="text"]:hover, input[type="text"]:focus {
+  box-shadow: 0 3px 6px hsla(235, 70%, 10%, 0.1);
+}
+input[type="text"]:focus {
+  border: 1px solid hsl(216, 80%, 60%);
+}
+.error-message {
+  color: hsl(345, 60%, 60%);
+  margin-bottom: 0;
+}
+.result {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

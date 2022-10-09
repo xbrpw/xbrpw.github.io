@@ -1,0 +1,61 @@
+<!DOCTYPE html><!-- ⊙⩌⨀ 2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack ¿Quién hizo todo esto? http://twitter.com/luisangelmaciel -->
+<html lang="es-MX" > <head><meta charset="UTF-8">  <title>Lista de útiles escolares</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">   
+  <link rel="icon" type="image/x-icon" sizes="192x192" href="favicon.sgv" id="favicon" />
+
+
+<link rel="stylesheet" href="https://luisangelmaciel.github.io/eevee/eevee.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div ng-app="TodoApp" ng-controller="TodoController" class="task-list _wrap centered max-width text-center-h">
+ 
+ 
+
+  
+  <ul class="list-no-style text-left">
+    <li ng-repeat="task in tasksActive | filter:taskSearch.name | orderBy:'-priority'" class="task _item -done-{{ task.complete }} -task-priority-{{ task.priority==true ? 'high' : 'low' }} block-table">
+      <div class="task _task-left">
+        <p>{{ task.text }}</p>
+      </div>
+      <div class="task _task-right text-right">
+        <a href ng-click="togglePriority(task)" class="btn -task-action -priority" title="Cambiar prioridad"><i class="fa fa-exclamation"></i></a>
+        <a href ng-click="completeTask(task)" class="btn -task-action -complete" title="Listo"><i class="fa fa-check"></i></a>
+        <!-- <a href ng-click="deleteTask(task,'active')" class="btn -clear" title="Delete"><i class="fa fa-times-circle"></i></a> -->
+      </div>
+    </li>
+    <li ng-repeat="task in tasksComplete | filter:taskSearch.name" class="task _item -done-{{ task.complete }} block">
+      <p class="task _task-left">{{ task.text }}</p>
+      <div class="task _task-right text-right">
+        <a href ng-click="uncompleteTask(task)" class="btn -task-action -re-open" title="Re-open"><i class="fa fa-undo"></i></a>
+        <!-- <a href ng-click="deleteTask(task,'complete')" class="btn -clear" title="Delete"><i class="fa fa-times-circle"></i></a>  -->
+      </div>
+    </li>
+  </ul>
+
+    
+  <form class="add-form _wrap block text-left">
+    <input class="input -text -add-task" type="text" placeholder="Agregar nuevo material" ng-model="taskInput.name" ng-model-instant />
+    <div class="add-form _buttons text-right">
+      <p>Prioridad</p>
+      <div class="add-form _checkbox-wrap">
+        <label class="add-form _checkbox"><input class="input -checkbox" type="checkbox" name="priority" ng-model="taskInput.priority" ng-init="checked=false" parse-int ng-true-value="1" ng-false-value="0"><i class="fa fa-exclamation -clickable"></i></label>
+      </div>
+      <button class="add-form _submit-button btn -add" ng-click="todoAdd()">Agregar</button>
+    </div>
+  </form>
+  
+  <!-- <form class="text-right">
+    <button class="btn -clear" ng-show="tasksComplete.length" ng-click="clearCompleted()">Delete all completed</button>
+  </form> -->
+</div>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/131045/ngLocalStorage.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html><!-- ⊙⩌⨀ 2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack ¿Quién hizo todo esto? http://twitter.com/luisangelmaciel -->
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de control</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">   
+  <link rel="icon" type="image/x-icon" sizes="192x192" href="favicon.sgv" id="favicon" />
+  <meta name="title" content="Panel de Control">
+  <meta name="description" content="Bienvenido a su dasbhoard">
+  <meta name="language" content="Spanish">
+  <meta name="revisit-after" content="7 days">
+  <meta name="author" content="@LuisAngelMaciel">
+  <!-- <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>  <link rel="stylesheet" href="https://luisangelmaciel.github.io/eevee/eevee.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.1/custom/bootstrap.min.css'> -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="./style2.css">
+<style>.w3-container,.w3-panel {padding: 0.01em 16px}</style>
+  <style>#page-wrapperBox {width: 640px;padding: 1em;margin: 1em auto;box-shadow: 0 1px 5px rgba(88, 79, 79, 0.308);}.detailsbox {border-radius: 3px;margin: 1em 0;box-shadow: 0 1px 5px rgba(117, 112, 112, 0.308);}
+  .summarybox {background: #2980b9 ;color: #FFF;border-radius: 3px;padding: 5px 10px;outline: none;}/* Style the summary when details box is open */.detailsbox[open] 
+  .summarybox {background:#145885  ;color: rgb(255, 255, 255);}.un-container:after,.un-container:before{content: "";display: table;clear: both;padding: 0.01em 16px;color:initial;}</style>  
+</head>
+<body>
+<br><!-- tablas--> 
+<div class="row w3-container">
+<div class="row ">
+    <div class="col-xs-12">
+        <div class="alert alert-success">            
+            <div class="container"><center><span class="footerRandomlamp"></span> </center></div>
+            <script>
+            var elements = {
+                footerRandomlamp: document.querySelector('.footerRandomlamp')
+            };
+            var footerRandom = [
+                ' «No estudio para saber más, sino para ignorar menos» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Hombres necios que acusáis  a la mujer sin razón, sin ver que sois  ocasión de lo mismo que culpáis» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Sin claridad no hay voz de sabiduría» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Yo no puedo tenerte ni dejarte, ni sé por qué, al dejarte o al tenerte, se encuentra un no sé qué para quererte y muchos sí sé qué para olvidarte» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Para todo se halla prueba y razón en qué fundarlo; y no hay razón para nada, de haber razón para tanto» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Así como ninguno quiere ser menos que otro, así ninguno confiesa: porque es consecuencia del ser más» <b>Sor Juana Inés de la Cruz<b>',
+                ' «La más brillante de las apariencias, puede cubrir las más vulgares realidades» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Dime vencedor rapaz, vencido de mi constancia, ¿qué ha sacado tu arrogancia de alterar mi firme paz» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Hagas lo que hagas nunca hagas algo de lo que te puedas arrepentir» <b>Sor Juana Inés de la Cruz<b>',
+                ' «…teniendo por mejor en mis verdades consumir vanidades de la vida  que consumir la vida en vanidades» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Al que ingrato me deja, busco amante; al que amante me sigue, dejo ingrata;  constante adoro a quien me maltrata, maltrato a quien mi amor busca constante» <b>Sor Juana Inés de la Cruz<b>',
+                ' «¿Cuál será más de culpar, aunque cualquiera mal haga, la que peca por la paga o el que paga por pecar?» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Hasta el saber cansa, cuando es el saber por oficio» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Queredlas cual las hacéis o hacedlas cual las buscáis» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Quien oye y aprende, es mucha razón que atienda y calle» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Aquellos signos exteriores que ejercita el amante, siendo su causa motiva el amor, eso se llama fineza» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Al que trato de amor hallo diamante; y soy diamante al que de amor me trata» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Constante adoro a quien mi amor maltrata; maltrato a quien mi amor busca constante» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Nunca lo que es razón ha sido injuria» <b>Sor Juana Inés de la Cruz<b>' + new Date().getFullYear()
+            ];
+            var rand = Math.floor(Math.random() * footerRandom.length);
+            elements.footerRandomlamp.innerHTML += footerRandom[rand];
+
+            reset();
+            </script> 
+        </div> <!-- / alert alert-success -->
+    </div>
+</div>
+</div>
+<!-- /.row -->
+<div class="row w3-container">
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-comments fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">2</div>
+                        <div>Publicaciones del Blog</div>
+                    </div>
+                </div>
+            </div>
+            <a href="https://www.blogger.com/blog/posts/4117858681829256415">
+                <div class="panel-footer">
+                    <span class="pull-left">Ir al blog</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-green">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-users fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">4</div>
+                        <div>Bases de datos registradas</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left">Mostrar información</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-check fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge" title="360 horas al 1 de septiembre 2022">360</div>
+                        <div>horas de servicio </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left">Ver reporte de entregas</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-red">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-support fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">1</div>
+                        <div>Mensaje nuevo</div>
+                    </div>
+                </div>
+            </div>
+            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl">
+                <div class="panel-footer">
+                    <span class="pull-left">Ir a Gmail</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- /.row -->
+<div class="row w3-container">
+    <div class="col-lg-6">
+        <div class="widget">
+            <div class="widget-title">
+                <i class="fa fa-check"></i> Reportes de Entrega
+                <a href="https://www.xbr.pw/secu" class="pull-right">Webapp</a>
+            </div>
+            <div class="widget-body medium no-padding">
+                <div class="table-responsive">
+                    <table class="table">
+                        <tbody>                        
+                        <tr><td><a href="#Carrusel" target="_blank" title="Carrusel">Carrusel</a> </td><td> 01.09.22</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Serve images in next-gen formats </td><td>02.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Image elements attributes </td><td>03.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Links discernible name </td><td>04.09.22  </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Accessibility to read </td><td>05.09.22  </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Document meta description </td><td>06.09.22  </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Reduce unused CSS </td><td>07.09.22  </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Random SorJuana </td><td>08.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Search info random SorJuana </td><td>09.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Icons original </td><td>10.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Color palette </td><td>11.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Font family </td><td>12.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td> </td><td>13.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td> </td><td>14.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td> </td><td>15.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td> </td><td>16.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td> </td><td>17.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>RDVMPC001</td><td>238.103.133.37</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>RDVMPC002</td><td>68.66.63.170</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>RDVMPC003</td><td>76.117.212.33</td><td><span tooltip="Server Down!" class="text-danger"><i class="fa fa-warning"></i></span></td></tr>
+                        <tr><td>RDPHPC001</td><td>91.88.224.5</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>RDESX001</td><td>197.188.15.93</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>RDESX002</td><td>168.85.154.251</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>RDESX003</td><td>209.25.191.61</td><td><span tooltip="Server Down!" class="text-danger"><i class="fa fa-warning"></i></span></td></tr>
+                        <tr><td>RDESX004</td><td>252.37.192.235</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>RDTerminal01</td><td>139.71.18.207</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>RDTerminal02</td><td>136.80.122.212</td><td><span tooltip="Could not connect!" class="text-warning"><i class="fa fa-flash"></i></span></td></tr>
+                        <tr><td>RDDomainCont01</td><td>196.80.245.33</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="widget">
+            <div class="widget-title">
+                <i class="fa fa-users"></i> Alumnos registrados
+                <input type="text" placeholder="Buscar" class="form-control input-sm pull-right" title="Busqueda no disponible por el momento"/>
+                <div class="clearfix"></div>
+            </div>
+            <div class="widget-body medium no-padding">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr><th class="text-center">ID</th><th>Alumno</th><th>Grado</th><th>Email</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr><td class="text-center">1</td><td>Luis Angel Maciel</td><td>Prueba</td><td>luis.angel.maciel.padilla@gmail.com</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row"><div class="col-lg-6">
+<div id="page-wrapperBoxx">
+  <details class="detailsbox ">
+    <summary class="summarybox" >Nota de servicios</summary>
+    <div class="un-container w3-container" style="color: inherit;">
+      <p >&nbsp; &nbsp;1 de 2</p>   
+      <p >&nbsp; &nbsp;2 de 2</p>
+    </div>
+  </details>
+</div>
+
+<div id="page-wrapperBoxx">
+  <details class="detailsbox ">
+    <summary class="summarybox" >Requerimientos</summary>
+    <div class="un-container w3-container" style="color: inherit;">
+    <p>&nbsp; &nbsp; <s>Enviar los siguientes datos del director, responsable del proyecto y responsable tecnico Identificación oficial y correo electronico en Gmail <b onclick="document.location='2022/01/index.html'">Enviar</b></s></p> 
+    <p> &nbsp; &nbsp;Opción servicio de <b https://forms.gle/tMDDZ84qPFWYwieh8>Google. Enviar </b></p> 
+    </div>
+  </details>
+</div>
+
+<div id="page-wrapperBoxx">
+  <details class="detailsbox ">
+    <summary class="summarybox" >Instrucciones</summary>
+    <div class="un-container w3-container" style="color: inherit;">
+    <p>&nbsp; &nbsp; <s>Enviar los siguientes datos del director, responsable del proyecto y responsable tecnico Identificación oficial y correo electronico en Gmail <b onclick="document.location='2022/01/index.html'">Enviar</b></s></p> 
+    <p> &nbsp; &nbsp;Opción servicio de <b https://forms.gle/tMDDZ84qPFWYwieh8>Google. Enviar </b></p> 
+   
+
+    <ul><li>
+      <li>&nbsp; &nbsp;materia1.txt </li>
+      <li>&nbsp; &nbsp;e1-1.png</li>
+      <li>&nbsp; &nbsp;e1-2.png</li>
+      <li>&nbsp; &nbsp;e1-3.png</li>
+      <li>&nbsp; &nbsp;e1-4.png</li>
+      <li>&nbsp; &nbsp;e1-5.png</li>
+      <li>&nbsp; &nbsp;e1-6.png</li></ul></s>
+
+
+    <h1> &nbsp; &nbsp;Sobre las herramientas de apoyo </h1>
+    &nbsp; &nbsp;Lista de útiles. Favor de enviar su si desean sea integrada la app, en caso de que sí, favor de enviar la lista de materiales frecuentes en cada ciclo escolar. Se sugiere una lista de los libros que utilicen, así como de lecturas recomendadas para su formación. 
+    <p>&nbsp; &nbsp;<s>Los archivos se subirán a la unidad de Google Drive.  
+      <br>&nbsp; &nbsp;Los profesores deberán iniciar sesión en Google para la subida de archivos.</p>
+      <p>&nbsp; &nbsp;El formulario de entrega final por entrega mensual acepta archivos hasta alcanzar un máximo de 1 GB. </p>
+      <p>&nbsp; &nbsp;Cada envío puede enviar hasta un máximo de 6 fotografías, 1 video, 1 URL, con cada carga de archivo limitada a 25 MB.</s> </p>
+  </details>
+</div>
+
+
+
+<div id="page-wrapperBoxx">
+  <details class="detailsbox ">
+    <summary class="summarybox" >Publicar las evidencias</summary>
+    <div class="un-container w3-container" style="color: inherit;">
+      &nbsp; &nbsp;La forma de pulicación es enviando un correo electronico a <a href="mailto:escuela.secundaria.oficial.514.sorjuana@blogger.com">escuela.secundaria.oficial.514.sorjuana@blogger.com</a>
+      &nbsp; &nbsp;En el titulo del correo va el titulo que llevara la publicación. El cuerpo del mensaje redactar su evidencia, adjuntar contenido multimedia y listo. <br>
+      &nbsp; &nbsp;El moderador puede entrar a <a href="https://www.blogger.com/blog/posts/4117858681829256415">el Blog </a> donde encontrara los emails convertidos en publicaciones como borrador<br>
+      <br>
+      &nbsp; &nbsp;Una vez realizada la revisión, puede publicarse. Este se hara en blogspot y en un periodo después de 72 horas de ver sido publicado se direccionara el contenido del blog al filtro y metadata seo de la web en forma de enlace.      
+      &nbsp; &nbsp;Si desea peude desactivar la opción de Guardar correos electrónicos como borradores de entradas que se encuentra activado para la moderación de comentarios y previa recepción de información a modo inmediato, 
+      &nbsp; &nbsp;esto quiere decir que las publicaciones ques sean enviadas al email indicado hara la publicación inmediata del material en el Blog.                  
+
+      <p>&nbsp; &nbsp; <s>Los archivos finales para ser publicados previa autorización del moderador deberán llevar la nomenclatura asignada, de lo contrario aparecera un error en la pagina de evidencias</s></p>
+    </div>
+  </details>
+</div>
+
+<div id="page-wrapperBoxx">
+  <details class="detailsbox ">
+    <summary class="summarybox" >Google Maps</summary>
+    <div class="un-container w3-container" style="color: inherit;">    
+      <a class="nav-link" href="https://www.xbr.pw/secu/dashboard/google-maps.html" target="iframe_a">
+        <span data-feather="google"></span>
+        &nbsp; &nbsp;Código de verificación
+      </a>     
+    </div>
+  </details>
+</div>
+
+    <div id="page-wrapperBoxx">
+    <details class="detailsbox ">
+        <summary class="summarybox" >Redes sociales</summary>
+        <div class="un-container w3-container" style="color: inherit;">    
+        
+        <a href="https://www.google.com/maps/place/Secundaria+Oficial+No.+0514+Sor+Juana+Ines+De+La+Cruz/@19.3930775,-98.9700814,15z/data=!4m5!3m4!1s0x0:0x494c6797f3c2a752!8m2!3d19.3930775!4d-98.9700814 " target="_blank" >&nbsp; &nbsp; Google Maps </a> <br>
+        <a href="escuela.secundaria.oficial.514@gmail.com " target="_blank" >&nbsp; &nbsp; Email: escuela.secundaria.oficial.514@<b>gmail.com</b> </a> <br>
+        <a href=" https://escuela-secundaria-oficial-514.github.io/" target="_blank" > &nbsp; &nbsp;Web: escuela-secundaria-oficial-514.<b>github</b> </a> <br>
+        <a href="https://www.xbr.pw/secu/ " target="_blank" > &nbsp; &nbsp;Hospedaje provicional: xbr.pw<b>/secu</b> </a> <br>
+        <a href=" https://secundariaoficial514.blogspot.com/" target="_blank" > &nbsp; &nbsp;Blog: secundariaoficial514.<b>blogspot</b> </a> <br>
+        <br>
+        <a href=" https://drive.google.com/drive/my-drive " target="_blank" > &nbsp; &nbsp;Nube: Google <b>Drive</b> </a> <br>
+        <a href="https://es-la.facebook.com/login/?next=https%3A%2F%2Fes-la.facebook.com%2FEscuelaSecundariaOficialNo0514SorJuanaInesDeLaCruz%2F " target="_blank" > &nbsp; &nbsp;Comunidad: Facebook </a> <br>
+        <a href="https://github.com/escuela-secundaria-oficial-514"> &nbsp; &nbsp;Github</a>
+        <br>
+        <h4>&nbsp; &nbsp;Enviar solicitud de apoyo extra por </h4> <br>
+        <a href=" https://photos.google.com/share/AF1QipP8638ZBXujZE4Z0SH2k8cI2dHTPN42dikDooUZXJDUbdGWsvVe_ftlwCKQwHrsEw?key=UjYtVjFneFE0WkFFelFiXzlPTkNUOGRMQ05ETGhB" target="_blank" > Panel <b></b>de control </b>   </a> <br>
+        <a href="mailto:lamacpad@gmail.com?Subject=HolaLuis%20Requerimos%20apoyo%20de%20soporte%20en%20">&nbsp; &nbsp;Correo electronico</a><br>
+        <a href="https://wa.me/5512615325?text=Hola%20Luis%2C%20el%20motivo%20del%20mensaje%20es%20para%20solicitar..." target="_blank">&nbsp; &nbsp;Whatsapp</a><br>
+        <a href="tel:5512615325" target="_blank" > &nbsp; &nbsp;Celular </a>
+        <br>
+        <a href="sms:5539793727?body=Hola_Luis">&nbsp; &nbsp; SMS </a>  
+        <a href="orden-de-comptra.pdf" download="orden.pdf"> &nbsp; &nbsp;Descargar la factura </a><br>
+        <a href="mailto:escuela.secundaria.oficial.514.sorjuana@blogger.com">&nbsp; &nbsp;Para publicar</a><br>
+        <a href="https://www.blogger.com/blog/posts/4117858681829256415">&nbsp; &nbsp;Blog </a><br>
+        <a href="https://www.xbr.pw/secu/dashboard/entrega/phone-styled-iframe">&nbsp; &nbsp;Modo responsivo</a>
+        <a href="">&nbsp; &nbsp;</a>
+
+        </div>
+    </details>
+    </div>
+
+</div></div>
+
+
+</div>  
+<div class="row w3-container"><div class="col-lg-6"><div class="alert alert-success">         
+<i class="fa fa-eye"></i> &nbsp; Así se ve ESO 0514 en los diferentes tamaños de dispositivos móviles <a href="https://www.xbr.pw/secu/m/assets/asi-se-ve-eso0514/index.html" target="_blank" title="Ver en el Style-Size tecnología de Xiib"><b>Style Size</b></a>
+</div></div></div>
+<div class="row w3-container"><div class="col-lg-6"><div class="alert alert-success">         
+    <i class="fa fa-calendar"></i> &nbsp;  Calendario de entregables <a href="https://www.xbr.pw/secu/m/assets/calendario-de-entregables/index.html" target="_blank" ><b>Ver calendario</b></a>
+</div></div></div>
+
+<!-- /tablas-->
+<br>
+
+<templete hidden>
+<a href="#" class="back">
+  <div></div>
+  <h4>HAS TERMINADO</h4>
+  <span>Regresar a inicio</span>
+  </a>
+  </div> <style>
+
+.back {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 10px 10px 40px;
+}
+
+.back h4 {
+  color: #4A4F6A;
+  font-size: 16px;
+  transform: translateY(8px);
+  transition: transform 500ms 0s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.back span {
+  opacity: 0;
+  color: #858BA9;
+  font-size: 12px;
+  font-weight: 300;
+  display: inline-block;
+  transform: translateY(10px);
+  transition:
+    transform 500ms 0s cubic-bezier(0.2, 0, 0, 1),
+    opacity 500ms 0s cubic-bezier(0.2, 0, 0, 1)
+}
+
+.back div {
+  top: 11px;
+  left: 0;
+  content: '';
+  width: 30px;
+  height: 30px;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(1);
+  /*background-color: #E9E7F2;*/
+  transition: transform 400ms 0s cubic-bezier(0.2, 0, 0, 1.6);
+}
+
+.back div::after {
+  top: 0;
+  left: 0;
+  content: '';
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  background-position: 0 0;
+  /*background-image: url('https://s3-eu-west-1.amazonaws.com/thomascullen-codepen/back.svg');*/
+  transition: transform 400ms 0s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.back:hover h4 {
+  color: #171922;
+}
+
+.back:hover h4,
+.back:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back:hover div {
+  transform: scale(1.1);
+  /*background-color: white;*/
+  box-shadow:
+    0 2px 10px 0 rgba(185,182,198,0.00),
+    0 1px 3px 0 rgba(175,172,189,0.25);
+}
+
+.back:hover div::after {
+  transform: translateX(-30px);
+}</style> </templete>
+
+<!-- <div class="row">
+    <div class="col-lg-6">
+        <div class="widget">
+            <div class="widget-title">
+                <i class="fa fa-plus"></i> Extras
+                <button class="btn btn-sm btn-info pull-right">Button</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="widget-body">
+
+                <div class="message">
+                    This is a standard message which will also work the ".no-padding" class, I can also <span class="error">be an error message!</span>
+                </div>
+
+                <hr />
+
+                <div class="message">
+                    <a href="https://angular-ui.github.io/bootstrap/" target="_blank">UI Bootstrap</a> is included, so you can use <a href="#" tooltip="I'm a tooltip!">tooltips</a> and all of the other native Bootstrap JS components!
+                </div>
+
+                <hr />
+
+                <form class="form-horizontal" role="form">
+                    <div class="form-group has-feedback has-success">
+                        <label for="label" class="col-sm-2 control-label">Inline Form</label>
+                        <div class="col-sm-5">
+                            <input  type="text" class="form-control" />
+                            <span class="fa fa-key form-control-feedback"></span>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="input-mask">I'm an input mask!</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <span class="help-block form-group-inline-message">I'm a properly padded inline message!</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="widget">
+            <div class="widget-title">
+                <i class="fa fa-cog fa-spin"></i> Loading Directive
+                <a href="http://tobiasahlin.com/spinkit/" target="_blank" class="pull-right">SpinKit</a>
+            </div>
+            <div class="widget-body">
+                !-- Check out the Angular Directive inside app.js! --
+                <loading></loading>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+  
+</body>
+</html>

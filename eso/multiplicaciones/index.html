@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Juego de multiplicaciones resuelve tantos como puedas en un minuto</title>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>
+
+</head>
+
+<!-- partial:index.partial.html -->
+<body>
+  <!--Right-Align Links <b>☰</b>   -->
+  <div class="w3-block w3-light-grey w3-padding">
+    <span class="w3-xlarge" onclick="document.location='./././index.html'">&#10094; Preguntas frecuentes </span>
+  </div>
+<!--Right-Align Links -->
+
+    <!--Game intro and instructions-->
+    <section class='intro'>
+        <h1 class='heading'>Un minuto de multiplicaciones</h1>
+      <p class='intro-p'>Resuelve tantas como puedas en un minuto</p>
+        <p class='intro-p'>Escriba su respuesta y presione el botón o la tecla ENTER.</p>
+    </section>
+
+
+    <!--Container for numbers/question-->
+    <div id='num-display' class='num-display'>
+
+<button id='start-btn' class='start-btn' display='block'>A jugar</button>
+    </div>
+
+
+
+    <!--Container for answer field & buttons-->
+    <div class='game-controls'>
+        <!--Container for input & enter button-->
+        <div class='input-go'>
+           
+                <input id='answer-input' class='answer-input'  type='text' maxlength='3'>
+            
+            <button id='enter-btn' class='enter-btn' type='button'name='enter-btn'>Enter
+            </button>
+        </div>
+        <button type='button' id='restart-btn' class='restart-btn'>Reiniciar el juego</button>
+    </div>
+    <!--Score-->
+  <div class='timer-score'>
+    <div id='score' class='score'>
+        <!--Append score here-->
+    </div>
+    <!--Game timer-->
+    <div id='timer' class='timer'>Tiempo:<span class='seconds' id='seconds-display'></span>
+        <!--Append timer here-->
+    </div>
+  </div>
+
+  
+       
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

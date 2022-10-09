@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap");
+
+/* Responsive jQuery Off Canvas Push Menu 
+Plus the World's Greatest Entertainer ... Sammie! */
+
+:root {
+  --body-font-color: #111;
+  --body-background-color: rgb(59, 12, 12);
+
+  /* Header */
+
+  /* Set height of header. */
+  --header-height: 64px;
+  --header-height-mobile: 64px;
+  --header-font-size: 25px;
+  --header-font-size-mobile: 16px;
+  --header-font-spacing: 1px;
+  --header-background-color: #2d467b;
+  --header-link-color: white;
+  --header-link-hover-color: #dfe3ee;
+  --header-link-hover-bottom-border-color: white;
+  /* SVG HAMBURGER */
+  --hamburger-color: white;
+  --hamburger-hover-color: red;
+
+  /* NAV SIDE PANEL  */
+
+  /* Set max-width of side panel in pixels or % . i.e.  Full screen = 100% 
+       On mobile defaults to 100%; */
+
+  --side-nav-max-width: 400px;
+
+  --side-nav-background-color: #292929;
+  --side-nav-font-color: white;
+  --side-nav-item-border-color: rgba(255, 255, 255, 0.5);
+  --side-nav-item-background: #2d467b;
+  --side-nav-item-hover-background: #203b73;
+  --side-nav-item-active-background: #20345f;
+  
+  /* TRANSITION SPEED
+     This is speed of the push transition.
+     Set in seconds - i.e. 0.5s 0r Milliseconds - i.e. 1000ms 
+     Some like it fast, some slow.  */
+  
+ --transition-speed: 800ms;
+  
+}
+/* BODY */
+
+.body {
+  background-color: var(--body-background-color);
+  color: var(--body-font-color);
+  margin: 0;
+  padding: 0;
+  width:100vw;
+  min-height:100vh;
+}
+
+/* MAIN -->  POSITION FIXED - 100vh - 100% WIDTH + OVERFLOW SCROLL  */
+
+#site-main {
+  margin-top: var(--header-height);
+}
+
+/* MAIN MOBILE BREAKPOINT  */
+
+@media (max-width: 979px) {
+ #site_main {
+    margin-top: var(--header-height-mobile);
+  }
+
+}
+
+/* Toggle Button SVG Container */
+
+#toggle_button {
+  
+  z-index: 9999;
+  
+  float: right;
+  border: none;
+  width: var(--header-height);
+  height: var(--header-height);
+  background: var(--side-toggle-button-background-color);
+  cursor: pointer;
+}
+
+#toggle_button svg {
+  position:asbolute;
+width:100%;
+  height:100%;
+}
+/* Toggle Button SVG Container MOBILE  */
+
+@media (max-width: 979px) {
+  #toggle_button {
+    width: var(--header-height-mobile);
+    height: var(--header-height-mobile);
+  }
+}
+
+
+/* MEDIA QUERY TOGGLE BUTTON */
+
+
+#hamburger:hover line {
+  stroke: var(--hamburger-hover-color);
+}
+
+#hamburger line {
+  stroke: var(--hamburger-color);
+  stroke-width: 10;
+  stroke-linecap: round;
+  opacity: 1;
+}
+#hamburger line:first-of-type,
+#hamburger line:last-of-type {
+  transition: transform 0.2s ease-in;
+}
+#hamburger line:nth-of-type(2) {
+  transition: opacity 0.3s ease-out;
+}
+#hamburger line:first-of-type {
+  transform-origin: 10px 35px;
+}
+#hamburger line:last-of-type {
+  transform-origin: 10px 85px;
+}
+#hamburger.is-active line:first-of-type {
+  transform: rotate(45deg);
+}
+#hamburger.is-active line:nth-of-type(2) {
+  opacity: 0;
+}
+#hamburger.is-active line:last-of-type {
+  transform: rotate(-45deg);
+}
+
+/*  // END HANBURGER CSS */
+
+#side-nav {
+  position: fixed;
+  width: 100%;
+  max-width: var(--side-nav-max-width);
+  /*  CALC TRICK TO SET A NEGATIVE VALUE 
+      Closed state = to max-width    ↓ ↓ ↓ ↓    */
+  margin-right: calc(-1 * var(--side-nav-max-width));
+  height: 100vh;
+  overflow: scroll;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: var(--header-height);
+  background: var(--side-nav-background-color);
+  color: var(--side-nav-font-color);
+  transition: all var(--transition-speed) ease;
+}
+
+#side-nav.is-active {
+  margin-right: 0;
+}
+
+@media (max-width: 979px) {
+  #side-nav {
+    margin-top: var(--header-height-mobile);
+  }
+}
+
+.inner-nav-container {
+  width: 90%;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.inner-nav-container ul,
+.inner-nav-container li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.inner-nav-container ul li {
+  margin-bottom: 20px;
+}
+
+.inner-nav-container ul li a {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  text-decoration: none;
+  color: var(--side-nav-font-color);
+}
+
+/*  NAV GRID MEDIA QUERY
+   making image column and Text smaller */
+
+@media (max-width: 979px) {
+  .inner-nav-container ul li a {
+    grid-template-columns: 60px 1fr;
+  }
+}
+
+/*  NAV ITEM SECTION
+     SECTION TO BREAK UP CATEGORIES  */
+
+.nav-top-container {
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+.nav-top-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inner-nav-container ul li {
+  background-color: var(--side-nav-item-background);
+  border: 1px solid var(--side-nav-item-border-color);
+}
+.inner-nav-container ul li:hover {
+  background-color: var(--side-nav-item-hover-background);
+}
+.inner-nav-container ul li.active {
+  background-color: var(--side-nav-item-active-background);
+  /*  Disable pointer events and bring down opacity when active state  */
+    opacity:0.80;
+  pointer-events: none;
+}
+
+
+.inner-nav-container ul li a span img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inner-nav-container li div {
+  padding-left: 15px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-content: center;
+}
+
+.inner-nav-container ul li h2 {
+  line-height: 1;
+  margin: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 10px;
+  padding-right: 10%;
+  padding-bottom: 5px;
+}
+.inner-nav-container ul li h3 {
+  line-height: 1;
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  padding-right: 15%;
+  padding-bottom: 10px;
+}
+
+
+
+/*  DEMO  PAGE CONTENT  */
+
+
+
+article {width:95%;max-width:1000px;margin:0 auto;padding-top:60px;text-align:center;padding-top:80px;padding-bottom:200px}
+
+
+article iframe {aspect-ratio: 16 / 9; 
+
+
+  width: 100% !important;  /*  override default iframe width   */
+  height: auto !important;  /*  override default iframe height   */
+
+
+}
+footer h2 {font-size:21px!important; text-align:center;width:100%;color:white;}
+article h2, footer h2 {font-size:3vw;line-height:1;margin:0;padding-top:50px;}
+article h3 {font-size:2vw;line-height:1;margin:0;}
+article p {font-size:1.5vw;font-style:italic}
+@media only screen and (max-width: 980px) {
+article h2{font-size:20px}
+article h3 {font-size:18px}
+
+}
