@@ -1,0 +1,83 @@
+
+  <link rel="stylesheet" href="../../eevee.css">
+
+  <div style="display: flex;justify-content: center;align-items: center;height: 200px">
+    <p  class="text-reveal">I am vertically and horizontally centered.</p>  
+  </div>
+  
+  <hr>
+  <h1 class="text-reveal">
+    <span>Lorem ipsum</span>
+    <span>dolor sit amet consectetur</span>      
+  </h1>
+  <p class="text-reveal">
+    <span>dolor sit amet consectetur</span>
+    <span>Utinam legendos et nec. An eam lorem sensibus incorrupte, ea</span>
+    <span>mei causae recusabo repudiandae. Eros munere laudem vel ex. Ad virtute</span>
+    <span>dolor sit amet consectetur</span>
+  </p>
+  
+  
+Sabes que si derrites un gran glaciar podras ver de<span id="dots">...</span>
+<span id="masMuchoMas">cerca un gran dragon. !Shala, hed shala!</span>
+<b onclick="myFunctionIsMostrar()" id="myBtn-verMas"  class="tes-btn tes-btn--primary-dark" data-mz="true">Ver más</b>
+
+    <style>#masMuchoMas {display: none;}</style>
+      <script>
+      function myFunctionIsMostrar() {
+        var dots = document.getElementById("dots");
+        var masMuchoMasText = document.getElementById("masMuchoMas");
+        var btnText = document.getElementById("myBtn-verMas");
+      
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "Mostrar"; 
+          masMuchoMasText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Cerrar"; 
+          masMuchoMasText.style.display = "inline";
+        }
+      }
+      </script>
+
+
+<hr>
+<p><span id="vecesVista"></span> ingresos a su Dashboard</p>
+<script>
+    if (!localStorage.pageLoadCount)
+        localStorage.pageLoadCount = 0;
+    localStorage.pageLoadCount = parseInt(localStorage.pageLoadCount) + 1;
+    document.getElementById('vecesVista').textContent = localStorage.pageLoadCount;
+</script>
+<hr>
+<h1>
+  
+  
+   
+  
+  <span style="  text-shadow: 2px 2px 5px green;">Text-shadow effect!</span><br><br>
+  
+  
+  <span style="  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;">Text-shadow with red and blue neon glow!</span><br><br>
+  
+  <span style="  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">Another text shadow effect</span>
+  <br>  <br>
+  
+    
+  <span style="  text-shadow: 0 0 3px #FF0000;">Text shadow with red neon glow</span><br>  <br>
+  
+  <span style="  color: white;
+  text-shadow: 2px 2px 4px #000000;">Text shadow on white text!</span><br>  <br>
+  
+  </h1>
+  <hr>
+  
+
+  <hr>
+
+<style>.text-reveal span {position: relative;}.text-reveal span:before {content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: #ffffff;transform-origin: left;transform: scale(1, 1);}.text-reveal span:after {content: "\a";white-space: pre;}.text-reveal span:nth-of-type(1):before {animation: reveal-text 600ms cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s forwards;}.text-reveal span:nth-of-type(2):before {animation: reveal-text 600ms cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s forwards;}.text-reveal span:nth-of-type(3):before {animation: reveal-text 600ms cubic-bezier(0.645, 0.045, 0.355, 1) 0.6s forwards;}.text-reveal span:nth-of-type(4):before {animation: reveal-text 600ms cubic-bezier(0.645, 0.045, 0.355, 1) 0.8s forwards;}.text-reveal span:nth-of-type(5):before {animation: reveal-text 600ms cubic-bezier(0.645, 0.045, 0.355, 1) 0.10s forwards;}@keyframes reveal-text {100% {transform: scale(0, 1);}}</style>
+
+    
+

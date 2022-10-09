@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<title>Notificaciones</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- Catálogo de iconos Fontawesome https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free    -->
+<script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.csss">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+<style>
+.mySlides {display:none;}
+
+a:link {
+    color: #000;
+    text-decoration: none;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-weight: 500;
+}
+
+a:visited {
+    color: #000;
+    text-decoration: none;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-weight: 500;
+}
+
+
+a:hover {
+    color: #0677FF;
+    text-decoration: none;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-weight: 500;
+}
+
+
+a:active {
+    color: #0677FF;
+    text-decoration: none;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-weight: 500;
+  }
+
+
+  div {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+  }
+  
+  .danger {
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+  }
+  
+  .success {
+    background-color: #ddffdd;
+    border-left: 6px solid #04AA6D;
+  }
+  
+  .info {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+  }
+  
+  
+  .warning {
+    background-color: #ffffcc;
+    border-left: 6px solid #ffeb3b;
+  }
+  </style>
+  
+  <div style="display: flex;justify-content: center;align-items: center;height: 200px">
+    <p  class="text-reveal">Sin notificaciones</p>  
+  </div>
+
+  <!-- 
+  <div class="alert warning">
+    <span class="closebtn">&times;</span>  
+    <strong>Warning!</strong> Indicates a warning that might need attention.
+  </div>
+  <div class="alert info">
+    <span class="closebtn">&times;</span>  
+    <strong style="  font-size: 28px;   text-shadow: 2px 2px 5px rgb(0, 0, 0);">¡Importante!</strong> <br><br>
+    Recuerda participar en la retroalimentación de las actividades con un comentario , like y compartir. 
+    <br><br><span style="  font-size: 24px;">Gracias</span>
+  </div>
+  <br><br><br><br>
+  
+  <p style="font-size:18; text-align: center;">Llegaste al final o al principio como lo quieras ver</p> -->
+  
+  <script>
+  var close = document.getElementsByClassName("closebtn");
+  var i;
+  
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+      var div = this.parentElement;
+      div.style.opacity = "0";
+      setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
+  }
+  </script>

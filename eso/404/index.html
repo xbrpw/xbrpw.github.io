@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Error Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+  <div class="landing-page">
+    <div style="text-align:center;" class="icon__download">
+      <img src="https://www.xbr.pw/secu/img/error-404.svg" width="250px" height="auto" >			
+		</div>
+    <style>
+      .iconico-3d {
+          padding: 10px;
+          -webkit-animation: icon3d 600ms 10;
+          animation: icon3d 600ms 10;
+          color: black;
+      }
+      
+      .iconico-3d:hover {
+          -webkit-animation: icon3d 600ms infinite;
+          animation: icon3d 600ms infinite;
+      }
+      
+      @keyframes icon3d {
+          0% {
+              text-shadow: 5px 4px #f44336, -5px -6px #2196f3;
+          }
+          25% {
+              text-shadow: -5px -6px #f44336, 5px 4px #2196f3;
+          }
+          50% {
+              text-shadow: 5px -4px #f44336, -8px 4px #2196f3;
+          }
+          75% {
+              text-shadow: -8px -4px #f44336, -5px -4px #2196f3;
+          }
+          100% {
+              text-shadow: -5px 0 #f44336, 5px -4px #2196f3;
+          }
+      }
+  </style>
+
+    <h1 class="iconico-3d"> Ups, ¡Error 404!</h1>
+    <h2> No eres tu, es el programador</h2>
+    <b class="message " >Regresamos a inicio en <span id="count"> 10 </span> segundos </b>
+     
+  </div>
+</div>
+<script src="auto.js"></script>
+<script language="JavaScript" type="text/javascript">
+  window.opener.location.href = "https://www.xbr.pw/secu/index.html";
+  var ventana = window.self;
+  ventana.opener = window.self;
+  ventana.close(); {
+      location.href = window
+  }
+  setTimeout("redireccionar()", 8000);
+</script>
+<script type="text/javascript">
+  var pagina = 'https://www.xbr.pw/secu/index.html';
+  var segundos = 8000;
+
+  function redireccion() {
+      document.location.href = pagina;
+  }
+  setTimeout("redireccion()", segundos);
+</script>
+
+<!-- partial -->
+  
+</body>
+</html>
