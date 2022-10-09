@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+  <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>
+  <title>Alumnos </title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+<div class="login">
+            <div class="login__content">
+                <div class="login__img">
+                    <!-- <img src="https://raw.githubusercontent.com/bedimcode/responsive-login-signin-signup/b3c2eaa19d76624092bd606d28fbd616d539de92/assets/img/img-login.svg" alt=""> -->
+                    <img src="login.svg" alt="">
+                </div>
+
+                <div class="login__forms">
+
+                    <div id="loggedIn" onclick="document.location='./eso/alumnos/welcome.html'"><b> Bienvenido </b> </div>
+                      
+                     
+                
+                    <div id="login">
+                    <form action="" class="login__registre" id="login-in">
+                        <h1 class="login__title">Iniciar sesión para alumnos</h1>             
+                           
+                              
+                        <div class="login__box">
+                            <i class='bx bx-user login__icon'></i>
+                            <input  placeholder="Email" class="login__input" id="email"  name="email" type="email"> 
+                            
+                        </div>
+    
+                        <div class="login__box">
+                            <i class='bx bx-lock-alt login__icon'></i>
+                            <input type="password" placeholder="Password" class="login__input" id="password" input name="password">
+                            
+                            
+                        </div>
+
+                        <label for="email" hidden></label><br/><label for="password" hidden></label><br/>
+
+                        <a href="#" class="login__forgot">Olvido su contraseña</a>
+
+                        <a href="./eso/alumnos/welcome.html" class="login__button" id="loginBtn" >Iniciar sesión</a>
+  
+                        <div>
+                            <span class="login__account">No tienes una cuenta?</span>
+                            <label for="modal-1"><span class="login__signin" id="sign-up">Registrarse</span></label><br><br>
+                            <span class="login__account">Cuenta para <span  class="login__signin"  onclick="document.location='https://xbrpw.github.io/eso/login/docente.html'">Docentes</span></span>
+                        </div>
+                    </form> </div>
+
+                    <div id="create">
+                    <form action="" class="login__create none" id="login-up">
+                        <h1 class="login__title">Crea una cuenta</h1>
+    
+                     
+                          
+                                                   
+                        <div class="login__box">
+                            <i class='bx bx-user login__icon'></i>
+                            <input type="text" placeholder="Username" class="login__input" name="CreateName">
+                        </div>
+    
+                            <div class="login__box">
+                                <i class='bx bx-at login__icon'></i>
+                                <input  placeholder="Email" class="login__input" name="createEmail" type="email" >
+                            </div>                     
+
+                        <div class="login__box">
+                            <i class='bx bx-lock-alt login__icon'></i>
+                            <input  placeholder="Password" class="login__input"  name="createPassword" type="password"> 
+                        </div>
+    
+
+                        <div class="login__box">
+                            <i class='bx bx-lock-alt login__icon'></i>
+                            <input type="password" placeholder="Confirma tu Password" class="login__input" name="confirmPassword">
+                        </div>
+
+                        <a href="#" class="login__button" id="createBtn">Registrarse</a>
+
+                        <div>
+                            <span class="login__account">Tienes una cuenta?</span>
+                            <span class="login__signup" id="sign-in">Inicia sesión</span>
+                        </div>
+                        <label for="createEmail"></label>                           
+                        <label for="createPassword"></label>
+                        <label for="createName"></label>                      
+                        <label for="confirmPassword"></label>
+                        
+                        <!-- <div class="login__social">
+                            <a href="#" class="login__social-icon"><i class='bx bxl-facebook' ></i></a>
+                            <a href="#" class="login__social-icon"><i class='bx bxl-twitter' ></i></a>
+                            <a href="#" class="login__social-icon"><i class='bx bxl-google' ></i></a>
+                        </div> -->
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
+
+<input id="modal-1" name="modal" type="checkbox" class="modal-input" />
+<div class="modal">
+    <label for="modal-1" class="modal-close">&times;</label>
+    <div class="content">
+        <iframe src="https://share.sheetmonkey.io/f/i9RpN9QTFDNou8UKLfXhe1" name="iframe_a"  style="border:none;"height="600px" width="100%" title=""></iframe>    
+    </div>
+</div>    <style>
+    .modal-input {
+        display: none;
+    }
+    
+    .modal-input:checked+.modal {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+        background-color: #fff;
+    }
+    
+    .modal-close {
+        position: fixed;
+        right: 5%;
+        font-size: 2rem;
+        line-height: 1;
+    }
+</style>
