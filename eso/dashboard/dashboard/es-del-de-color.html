@@ -1,0 +1,328 @@
+
+<!doctype html>
+<html class="no-js" lang="es-MX">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title></title>
+    
+   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+   <style>@charset "UTF-8";
+    :root {
+      --sans: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu,
+        cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+    
+    
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
+    
+    body,
+    html {
+      margin: 0;
+      height: 100%;
+      font-size: 1rem;
+      line-height: 1.4rem;
+      font-family: var(--sans);
+    }
+    
+    p,
+    blockquote,
+    li {
+      text-align: justify;
+      line-height: 1.6rem;
+    }
+    
+    blockquote {
+      position: relative;
+      padding: 2rem 0;
+      width: 100%;
+      margin: 40px auto;
+      border-top: solid 3px;
+      border-bottom: solid 3px;
+      font-size: 1.2rem;
+      font-style: italic;
+      line-height: 1.8rem;
+    }
+    
+    blockquote:after {
+      position: absolute;
+      content: "”";
+      font-size: 8rem;
+      bottom: -40px;
+      right: 10px;
+    }
+    
+    a,
+    a:link,
+    a:visited {
+      color: inherit;
+    }
+    
+    
+    .wrapper {
+      margin: 0 auto;
+      /*padding: 0.5rem;*/
+      display: grid;
+      justify-content: start;
+      align-content: start;
+      gap: 0 30px;
+      grid-template-areas: "widgets" "header" "content" "sidebar" "footer";
+    }
+    .wrapper .main-head {
+      grid-area: header;
+      font-size: 1.2rem;
+      /*padding: 1rem 0;*/
+    
+    }
+    .wrapper .main-head h1 {
+      border-bottom: 3px solid;
+    
+      line-height: 3.5rem;
+      padding-bottom: 1rem;
+    }
+    .wrapper .head-widgets {
+      grid-area: widgets;
+      /*padding: 1rem 0;*/
+    }
+    .wrapper .content {
+      grid-area: content;
+      /*padding-bottom: 2rem;*/
+    }
+    .wrapper .side {
+      grid-area: sidebar;
+    }
+    .wrapper .side p {
+      text-align: left;
+    }
+    .wrapper .main-footer {
+      grid-area: footer;
+    /*  padding: 2rem 0;*/
+      text-align: center;
+      border-top: 1px solid;
+      font-size: 0.9rem;
+    }
+    @media (min-width: 992px) {
+      .wrapper {
+        max-width: 920px;
+        grid-template-columns: 8fr 4fr;
+        grid-template-areas: "header widgets" "content sidebar" "footer footer";
+      }
+    }</style>
+
+   <link rel="preload" href="https://www.xbr.pw/secu/assets/fonts/noe-display-medium.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="stylesheet" href="https://www.xbr.pw/secu/assets/styles/themes.css">
+   <link rel="stylesheet" href="https://www.xbr.pw/secu/assets/styles/main.css">
+      <script>(function() {
+      var theme = localStorage.getItem('theme');
+      window.metaColors = {'default':'#f7f7f9',
+      'dark':'#252526',
+      'beach':'#e3f6f5',
+      'dragonBall':'#0d33b1',
+      'choco':'#41312E','moomoo':'#f3e1d8',
+      'bowser':'#29293e','yoshi':'#f2ede9','rainbow':'#311b46','lobster':'#ffb9ad','hackernews':'#F8F8EC'};
+      if (theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', window.metaColors[theme]);
+      }
+  })();</script>
+  </head>
+
+<body>
+    <a href="#main" class="sr-skip-link">skip to main content</a>
+    <div class="titlebar"><div class="titlebar__inner"></div></div>
+    <div class="hfeed layout" role="document"><div class="themepicker js-themepicker" data-nosnippet hidden>
+      <h3 class="themepicker__title" hidden>Selecciona el tema que te guste más</h3>
+      <ul class="themepicker__list" id="theme-menu">
+        <li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Classic'" data-theme="default"><span class="themepicker__name">Classic</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Dark'" data-theme="dark"><span class="themepicker__name">Dark</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li>
+        <li class="themepicker__item">
+          <button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Koopa Beach'" data-theme="beach">
+        <span class="themepicker__name">Koopa Beach</span> 
+        <span class="themepicker__palette">
+        <span class="themepicker__hue themepicker__hue--primary"></span> 
+        <span class="themepicker__hue themepicker__hue--secondary"></span> 
+        <span class="themepicker__hue themepicker__hue--border"></span> 
+        <span class="themepicker__hue themepicker__hue--textoffset"></span> 
+        <span class="themepicker__hue themepicker__hue--text"></span></span></button></li>
+        <li class="themepicker__item">
+          <button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Dragon Ball'" data-theme="dragonBall">
+        <span class="themepicker__name">Dragon Ball</span> 
+        <span class="themepicker__palette">
+        <span class="themepicker__hue themepicker__hue--primary"></span> 
+        <span class="themepicker__hue themepicker__hue--secondary"></span> 
+        <span class="themepicker__hue themepicker__hue--border"></span> 
+        <span class="themepicker__hue themepicker__hue--textoffset"></span> 
+        <span class="themepicker__hue themepicker__hue--text"></span></span></button></li>
+        
+        <li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Choco Mountain'" data-theme="choco"><span class="themepicker__name">Choco Mountain</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Moo Moo Farm'" data-theme="moomoo"><span class="themepicker__name">Moo Moo Farm</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Bowser&#39;s Castle'" data-theme="bowser"><span class="themepicker__name">Bowser&#39;s Castle</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Yoshi Valley'" data-theme="yoshi"><span class="themepicker__name">Yoshi Valley</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Rainbow Road'" data-theme="rainbow"><span class="themepicker__name">Rainbow Road</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Lobster Life'" data-theme="lobster"><span class="themepicker__name">Lobster Life</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Hacker News'" data-theme="hackernews"><span class="themepicker__name">Hacker News</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li>
+      </ul>
+      <button class="iconbtn themepicker__close js-themepicker-close"><span class="sr-only">close themepicker</span> 
+          <svg class="icon icon--close" role="img" aria-hidden="true" width="24" height="24">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mxb.dev/assets/icons/icons.sprite.svg#icon-close"></use></svg></button>
+    </div>
+    
+    
+    <header class="header" role="banner"><div class="header__inner container"><a class="header__brand" href="/" rel="home" aria-label="Go To Homepage"><img class="header__brand__avatar" src="favicon.svg" width="48" height="48" alt="">         <span class="header__brand__text">ESO 514</span></a>
+
+        <div class="header__nav">
+            <nav class="nav js-nav" role="navigation" tabindex="-1">
+            
+            <button class="iconbtn nav__togglebtn js-nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="toggle menu"><span class="menuicon"><span class="menuicon__bar"></span> <span class="menuicon__bar"></span> <span class="menuicon__bar"></span> <span class="menuicon__bar"></span></span></button><div class="nav__content"><ul class="nav__menu js-nav-menu" id="nav-menu">
+                <li class="nav__item"><a href="/" class="nav__link"><span class="nav__num" aria-hidden="true" style="color:#1c4595; font-weight: 500; font-size: xx-large;">
+                  01</span> Inicio</a></li>
+                <li class="nav__item nav__item--active"><a href="/avisos/" class="nav__link"><span class="nav__num" aria-hidden="true" style="color:#1c4595; font-weight: 500; font-size: xx-large;">
+                  02</span>  Avisos</a></li><li class="nav__item">
+                  <a href="/herramientas/" class="nav__link"><span class="nav__num" aria-hidden="true" style="color:#1c4595; font-weight: 500; font-size: xx-large;">
+                    03</span> Herramientas</a></li>
+                <li class="nav__item"><a href="/proyecto/" class="nav__link"><span class="nav__num" aria-hidden="true" style="color:#1c4595; font-weight: 500; font-size: xx-large;">
+                  04</span> 
+                  Proyecto</a></li></ul></div><div class="nav__bg"><div class="nav__bg__circle"></div></div></nav><button class="iconbtn header__themebtn js-themepicker-toggle" aria-expanded="false" aria-controls="theme-menu">
+                    <span class="sr-only">toggle theme panel</span> <svg class="icon icon--theme" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M18 4V3c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V6h1v4H9v11c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-9h8V4h-3z"/></svg></button></div></div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <main class="main container" role="main" id="main" tabindex="-1">
+            <article id="offline-friendly-forms" class="post h-entry" role="article" itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="offline-friendly-forms-title">
+
+
+
+
+
+
+
+            
+        <header class="post__header">
+          <h1 id="offline-friendly-forms-title" class="post__title p-name title" itemprop="headline">Offline-Friendly Forms</h1>
+      <div class="post__meta"><p><time class="post__date dt-published" itemprop="datePublished" datetime="2017-08-23T00:00:00">23 Aug 2017</time> 
+        <span aria-label="in category">&sdot;</span> <span class="post__tags p-category">code</span></p></div>
+      </header>
+      
+      <div class="post__content e-content markdown" itemprop="articleBody">
+              <p class="lead">Forms on the web don't usually play nice with bad connections. If you try to submit a form while offline, you'll most likely just lose your input. Here's how we might fix that.</p>
+              <p><small>TL;DR: Here’s the <a href="" target="_blank">CodePen Demo</a> of this post.</small></p><p>With the introduction of Service Workers, developers are now able to supply experiences on the web that will work even without an internet connection. While it’s relatively easy to cache static resources, things like forms that require server interaction are harder to optimize. It is possible to provide a somewhat useful offline fallback though.</p>
+            
+                                                    
+                    <div class="extend" id="codepen-demo"> </div>
+      </div>
+                    
+                    <div class="post__footer">
+
+                        <div>
+                
+                            <a class="u-url" href="https://xbr.wp/blog/tester/">Offline-Friendly Forms</a><p class="h-card p-author">
+                              <a class="p-name u-url" rel="author" href="https://www.luisangelmaciel.one">Luis Ángel Maciel</a>
+                            
+                            <img class="u-photo" src="assets/images/avatar.svg"></p>
+                    </div>
+            
+            <p class="post__footer__info">Published in [code] &sdot; 23 Aug 2017<br>
+              <a href="" title="">Edit this Post</a></p>
+              <a href="https://twitter.com/intent/follow?screen_name=luisangelmaciel" target="_blank" rel="noopener noreferrer" title="Follow Luis Ángel Maciel on Twitter" class="btn btn--twitter">
+                <svg class="icon icon--twitter" role="img" aria-hidden="true" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mxb.dev/assets/icons/icons.sprite.svg#icon-twitter"></use></svg> Follow @luisangelmaciel</a></div>
+              </article>
+            
+            
+            <div class="postsection"><div class="postsection__header">
+                <h3 class="postsection__title u-mb0">Webmentions</h3><a href="https://indieweb.org/Webmention" class="postsection__info" target="_blank" rel="noopener noreferrer"><svg class="icon icon--question" role="img" aria-hidden="true" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mxb.dev/assets/icons/icons.sprite.svg#icon-question"></use></svg> What’s this?</a></div>
+                <div class="webmentions" id="webmentions" data-url="https://xbr.wp/blog/tester/" data-last-fetched="2022-09-06T06:53:46.483Z"><div data-render-root><div class="webmentions__preview"><ol class="webmentions__list">
+                
+                <li class="webmentions__item">
+                    <div class="webmention" id="webmention-674496"><div class="webmention__meta"><a class="webmention__author h-card u-url" href="" target="_blank" rel="ugc nofollow"><img class="webmention__author__photo u-photo" src="https://webmention.io/avatar/pbs.twimg.com/c9154ba331fe188961f5969b61d5815e4dd64835e9528ad689b6bc353b477600.jpgj" alt="" width="48" height="48" loading="lazy"> <strong class="p-name">Victor Ofoegb</strong> </a>
+                      <span class="webmention__meta__divider" aria-hidden="true">&sdot;</span> <time class="webmention__pubdate dt-published" datetime="2019-08-23T10:36:14+00:00">23 Aug 2019</time></div><div class="webmention__content p-content">
+        <a href="https://twitter.com/">@luisangelmaciel</a>'s blog is a great resource for frontend web development. I've specifically enjoyed this article on offline friendly forms. It makes a whole lot of sense to do things this way.
+         <a href="https://xbr.wp/blog/tester/">b.dev/blog/offline-f…</a></div></div></li></ol></div></div></div></div>
+        
+        <div class="postsection"><h3 class="postsection__title">Other things I've written</h3>
+            <ol class="otherposts">            
+            <li class="otherposts__item"><a href="" class="otherposts__link"><span class="otherposts__title">Make Free Stuff</span> <time class="otherposts__date" datetime="2022-01-25T00:00:00" aria-label=", written 25 Jan 2022">25 Jan 2022</time></a></li>
+            
+            <li class="otherposts__item"><a href="/blog/media-queries-in-times-of-container-queries/" class="otherposts__link"><span class="otherposts__title">Media Queries in Times of @container</span> <time class="otherposts__date" datetime="2021-06-11T00:00:00" aria-label=", written 11 Jun 2021">11 Jun 2021</time></a></li>
+            <li class="otherposts__item"><a href="/blog/the-whimsical-web/" class="otherposts__link"><span class="otherposts__title">Whimsical Website Club</span> <time class="otherposts__date" datetime="2020-06-30T00:00:00" aria-label=", written 30 Jun 2020">30 Jun 2020</time></a></li></ol></div>
+        </main>
+        <script src="https://www.xbr.pw/secu/assets/scripts/main.js" defer="defer"></script>           
+            
+      
+    </body></html>

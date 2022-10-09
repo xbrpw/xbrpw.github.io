@@ -1,0 +1,564 @@
+
+<!doctype html>
+<!-- Oh so you are an inspector? Hi, hello!
+  Quien hizo todo esto? http://twitter.com/luisangelmaciel 
+  2006 - 2022 LuisAngelMaciel -->
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Luis Angel Maciel powered xbr.power">
+    <meta name="generator" content="xbr 1.2">
+    <title>Dashboard</title>
+    <style>
+        /* SOCIAL PANEL CSS */ .social-panel-container {position: fixed; right: 0; bottom: 80px;
+            transform: translateX(100%);
+            transition: transform 0.4s ease-in-out;
+        }
+        
+        .social-panel-container.visible {
+            transform: translateX(-10px);
+        }
+        
+        .social-panel {	
+            /*background-color: #fff;*/
+            border-radius: 16px;
+            box-shadow: 0 16px 31px -17px rgba(0, 0, 0, 0.6);
+            border: 5px solid #1c4595;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 100%;	
+            width: 330px;
+            max-width: calc(100% - 10px);
+        }
+        
+        .social-panel button.close-btn {
+            border: 0;
+            color: #97A5CE;
+            cursor: pointer;
+            font-size: 20px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+        
+        .social-panel button.close-btn:focus {
+            outline: none;
+        }
+        
+        .social-panel p {
+            background-color: #1c4595;
+            border-radius: 0 0 10px 10px;
+            color: #fff;
+            font-size: 14px;
+            line-height: 18px;
+            padding: 2px 17px 6px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin: 0;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 235px;
+        }
+        
+        .social-panel p i {
+            margin: 0 5px;
+        }
+        
+        .social-panel p a {
+            color: #FF7500;
+            text-decoration: none;
+        }
+        
+        .social-panel h4 {
+            margin: 20px 0;
+            color: #97A5CE;	
+        
+            font-size: 14px;	
+            line-height: 18px;
+            
+        }
+        
+        .social-panel ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .social-panel ul li {
+            margin: 0 10px;
+        }
+        
+        .social-panel ul li a {
+            border: 1px solid #DCE1F2;
+            border-radius: 50%;
+            color: #1c4595;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 50px;
+            text-decoration: none;
+        }
+        
+        .social-panel ul li a:hover {
+            border-color: #FF6A00;
+            box-shadow: 0 9px 12px -9px #FF6A00;
+        }
+        
+        .floating-btn {
+            border-radius: 20px;
+            background-color: #1c4595;
+            border: 1px solid #1c4595;
+            box-shadow: 0 16px 22px -17px #03153B;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 20px;
+            padding: 12px 20px;
+            position: fixed;
+            bottom: 20px;
+            
+            right: 20px;
+            z-index: 999;
+        }
+        
+        .floating-btn:hover {
+            /*background-color: #ffffff;*/
+            color: #1c4595;
+        }
+        
+        .floating-btn:focus {
+            outline: none;
+        }
+        
+        @media screen and (max-width: 480px) {
+        
+            .social-panel-container.visible {
+                transform: translateX(0px);
+            }
+            
+            .floating-btn {
+                right: 10px;
+            }
+        } /* Dasboard */ .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+    
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+        </style>
+
+    <link rel="canonical" href="">
+
+    <style>a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoration: none;} a:hover {color: inherit;text-decoration: none;}a:active {color: inherit; text-decoration: none;}</style>
+
+   
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="favicon.svg" sizes="180x180">
+<link rel="icon" href="favicon.svg" sizes="32x32" type="image/png">
+<link rel="icon" href="favicon.svg" sizes="16x16" type="image/png">
+<link rel="manifest" href="manifest.json">
+<link rel="mask-icon" href="favicon.svg" color="#7952b3">
+<link rel="icon" href="favicon.svg">
+<meta name="theme-color" content="#7952b3">
+<link href="bootstrap.min.css" rel="stylesheet" >
+<link rel="stylesheet" href="dashboard.css">
+<style>@media (max-width:600px){	
+  .hide-small{display:none!important}}
+  @media (min-width:993px){.hide-large{display:none!important}}
+  @media (max-width:992px) and (min-width:601px){.hide-medium{display:none!important}}</style>
+    
+   
+</head>
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /*make an HTTP request using the attribute value as the file name:*/
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /*remove the attribute, and call this function once more:*/
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }      
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /*exit the function:*/
+        return;
+      }
+    }
+  };
+  </script>
+<body>
+    
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">ESO 514 </a> 
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- <input class="form-control form-control-dark w-100" id="myInput" type="text" placeholder="Buscar" aria-label="Search">-->
+  
+
+  
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <a class="nav-link px-3 hide-small" href="https://escuela-secundaria-oficial-514.github.io/">  <span data-feather="log-out"></span></a>
+    </div>
+  </div>
+</header>
+
+
+<div class="container-fluid">
+
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Zona S-106</span>
+          <a class="link-secondary" href="https://www.xbr.pw/proyecto" aria-label="Add a new report">
+          </a>
+        </h6> 
+        <ul class="nav flex-column">         
+          <li class="nav-item">
+            <a class="nav-link" href="entrega/equipo-de-preservacion.html" target="iframe_a">
+              <span data-feather="home"></span>
+              Inicio
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="guia-de-uso.html" target="iframe_a">
+              <span data-feather="monitor"></span>
+              Requerimientos
+            </a>
+          </li>        
+          <li class="nav-item">
+            <a class="nav-link" href="guia-de-uso.html" target="iframe_a">
+              <span data-feather="monitor"></span>
+              Guia de uso
+            </a>
+          </li>        
+          
+          <li class="nav-item" style="color:green">
+            <a class="nav-link" href="./allproperties.html" target="iframe_a">             
+              <span data-feather="power"></span> <span style="color:green">Online</span>
+            </a>
+          </li>       
+        </ul>
+
+      
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Herramientas</span>
+          <a class="link-secondary" href="#" aria-label="Add a new report">
+          </a>
+        </h6> 
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.xbr.pw/secu/to-do/index.html" target="iframe_a">
+              <span data-feather="bar-chart-2"></span>
+              To-do-list
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.xbr.pw/secu/app/bloc-de-notas.html" target="iframe_a">
+              <span data-feather="bar-chart-2"></span>
+              Block de notas
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.xbr.pw/secu/app/sor-pomodoro/index.html" target="iframe_a">
+              <span data-feather="bar-chart-2"></span>
+              Sor Pomodoro
+            </a>
+          </li>
+        </ul>
+
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Reporte mensual</span>
+          <a class="link-secondary" href="#" aria-label="Add a new report">
+          </a>
+        </h6>        
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="./entrega/equipo-de-preservacion.html" target="iframe_a">
+              <span data-feather="bar-chart-2"></span>
+              General
+            </a>
+          </li>       
+          <li class="nav-item">
+            <a class="nav-link" href="./entrega/index.html" target="iframe_a">
+              <span data-feather="bar-chart-2"></span>
+              Reportes de entrega
+            </a>
+          </li>         
+          <li class="nav-item">
+            <a class="nav-link" href="./entrega/1.html" target="iframe_a">
+              <span data-feather="file-text"></span>
+              Entrega Uno
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./entrega/2.html" target="iframe_a">
+              <span data-feather="file-text"></span>
+              Entrega Dos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./entrega/3.html" target="iframe_a">
+              <span data-feather="file-text"></span>
+              Entrega Tres
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./entrega/4.html" target="iframe_a">
+              <span data-feather="file-text"></span>
+              Entrega Cuatro
+            </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="./entrega/5.html" target="iframe_a">
+              <span data-feather="layers"></span>
+              Entrega Cinco
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./entrega/6.html" target="iframe_a">
+              <span data-feather="layers"></span>
+              Entrega Seis
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./materia/index.html" target="iframe_a">
+              <span data-feather="bar-chart-2"></span>
+              Materias
+            </a>
+          </li> 
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        
+        
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group me-2">
+        <!--     <button type="button" class="btn btn-sm btn-outline-secondary">Compartir</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Exportar</button>
+         --> </div>
+          <!--  <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+           <span data-feather="calendar"></span>
+            Esta semana -->
+          </button>
+        </div>
+        <iframe src="./requerimientos.html" style="border:none;" name="iframe_a" height="650px" width="100%" title="Dashboard "></iframe>  
+      </div>
+      <p>En <span id="findecurso"></span> concluye el ciclo escolar 2022 -2023 </p>
+
+
+      <br><br>
+<!--       <div w3-include-html="https://escuela-secundaria-oficial-514.github.io/tiempo-faltante-para.html"></div>  -->
+      <br><br>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jul 26, 2023 12:07:02").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="findecurso"
+  document.getElementById("findecurso").innerHTML = days + "<b>d</b> " + hours + "<b>h</b> "
+  + minutes + "<b>m</b> " + seconds + "<b>s</b> ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("findecurso").innerHTML = "<span><b>El ciclo escolar 2022 - 2023</b><br> ha finalizado.  <br>Felices vacaciones</span>";
+  }
+}, 1000);
+</script>
+
+   
+    </main>
+  </div>
+</div>
+
+<templete hidden>     <div class="bodyback"><a href="#" class="back">
+  <div></div>
+  <h4>HAS TERMINADO</h4>
+  <span>Regresar a inicio</span>
+  </a></div> <style>
+.bodyback {
+/*  display: flex;*/
+ /* align-items: center;*/
+  justify-content: center;
+  
+  font-family: 'Roboto', sans-serif;
+}
+
+.back {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 10px 10px 40px;
+}
+
+.back h4 {
+  color: #4A4F6A;
+  font-size 16px;
+  transform: translateY(8px);
+  transition: transform 500ms 0s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.back span {
+  opacity: 0;
+  color: #858BA9;
+  font-size: 12px;
+  font-weight: 300;
+  display: inline-block;
+  transform: translateY(10px);
+  transition:
+    transform 500ms 0s cubic-bezier(0.2, 0, 0, 1),
+    opacity 500ms 0s cubic-bezier(0.2, 0, 0, 1)
+}
+
+.back div {
+  top: 11px;
+  left: 0;
+  content: '';
+  width: 30px;
+  height: 30px;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(1);
+  /*background-color: #E9E7F2;*/
+  transition: transform 400ms 0s cubic-bezier(0.2, 0, 0, 1.6);
+}
+
+.back div::after {
+  top: 0;
+  left: 0;
+  content: '';
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  background-position: 0 0;
+  /*background-image: url('https://s3-eu-west-1.amazonaws.com/thomascullen-codepen/back.svg');*/
+  transition: transform 400ms 0s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.back:hover h4 {
+  color: #171922;
+}
+
+.back:hover h4,
+.back:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back:hover div {
+  transform: scale(1.1);
+  /*background-color: white;*/
+  box-shadow:
+    0 2px 10px 0 rgba(185,182,198,0.00),
+    0 1px 3px 0 rgba(175,172,189,0.25);
+}
+
+.back:hover div::after {
+  transform: translateX(-30px);
+}</style> </templete>
+
+
+
+
+<div class="social-panel-container">
+	<div class="social-panel">
+		<i class="fas fa-times close-btn"></i>
+		
+      
+              <p>Levantamiento de requerimiento</p>
+              <br><br>
+        <p> ¿No encuentras lo que buscas o algo no va bien? <br><b>¡Con gusto lo solucionamos!</b></p><br>
+              <a style="text-align:center" href="https://photos.google.com/share/AF1QipP8638ZBXujZE4Z0SH2k8cI2dHTPN42dikDooUZXJDUbdGWsvVe_ftlwCKQwHrsEw?key=UjYtVjFneFE0WkFFelFiXzlPTkNUOGRMQ05ETGhB" target="_new">             
+                Adjunte captura de pantalla y describa el problema que tiene. 
+                <b>Enviar solicitud</b>
+               
+              </a><br>
+		
+	</div>
+</div>
+
+<button class="floating-btn">
+    <i class="fa fa-bug"></i>
+</button>
+
+
+<!-- Catálogo de iconos Fontawesome https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free    -->
+<script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>
+
+<script>
+    // SOCIAL PANEL JS
+    const floating_btn = document.querySelector('.floating-btn');
+    const close_btn = document.querySelector('.close-btn');
+    const social_panel_container = document.querySelector('.social-panel-container');
+    
+    floating_btn.addEventListener('click', () => {
+        social_panel_container.classList.toggle('visible')
+    });
+    
+    close_btn.addEventListener('click', () => {
+        social_panel_container.classList.remove('visible')
+    });</script>
+
+    <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="https://getbootstrap.com/docs/5.1/examples/dashboard/dashboard.js"></script>
+
+      <script>
+        includeHTML();
+        </script>
+
+
+  </body>
+</html>

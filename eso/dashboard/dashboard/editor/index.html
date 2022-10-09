@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Editor.R</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href=".normalize.min.css">
+  <link rel='stylesheet prefetch' href='./bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='./font-awesome.min.css'>
+  <style>.w3-hide{display:none!important}</style>
+  
+  <style>
+    body { overflow: hidden;}
+
+    
+    /* MODAL  */
+    /* The Modal (background) */
+    
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: auto;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+    }
+    /* Modal Content */
+    
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+    /* The Close Button */
+    
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+      .modal2-input {
+          display: none;
+      }
+      
+      .modal2-input:checked+.modal2 {
+          visibility: visible;
+          opacity: 1;
+      }
+      
+      .modal2 {
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          visibility: hidden;
+          opacity: 0;
+          transition: 0.3s ease-in-out;
+          background-color: #fff;
+      }
+      
+      .modal2-close {
+          position: fixed;
+          right: 10%;
+          font-size: 3rem;
+          line-height: 2;
+      }
+  </style>
+
+  <!-- The Modal Guardar y descargar -->
+  <div id="myMenuModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>        <br>          
+        Guardar Como<br ><br> 
+        <input id="txtFileName" style="width: 100%; align-items: center;" placeholder="Nombre del archivo"></input><br><br style=" line-height: 1em;"> 
+        <button onclick="saveTextAsFile()" style=" float: right;"><i class="fas fa-file-download"></i> Guardar y descargar</button> <br style=" line-height: 1em;"> 
+    </div>
+</div>
+
+<div ng-bind-html="htmlcontent" ></div>   
+
+ 
+<body>
+
+<div ng-app="textAngularTest" ng-controller="wysiwygeditor" class="container app">
+  <h1 class="txt-graydarker txtdswh typingxxx">Editor Sor Juana <span  id="myBtnx"><small><b>i</b></small></span></h1>
+  
+  <template hidden> <button ng-click="disabled = !disabled" unselectable>Disable text-angular Toggle</button></template>  
+  <div style="padding: 1em;  background: #f5f5f5;" text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ta-disabled='disabled' ></div>
+  <br>
+  
+  <div style="padding: 1em;  background: #f5f5f5;">         
+    Guardar Como: 
+    <input id="txtFileName" style="width: 30%; align-items: center;" placeholder="Nombre del archivo"></input>
+    <button onclick="saveTextAsFile()" >Guardar y descargar</button>
+  </div>
+
+<!-- Modal Vista Previa -->
+
+
+
+    <template hidden>
+        <!-- Lo descarga, pero sin personalizar nombre -->
+        <input type="button" id="dwn-btn" value="Download"/>
+    </template>
+
+  <textarea  ng-model="htmlcontent" style="width: 100%" id="text-val" rows="4" class="w3-hide"></textarea>
+  <textarea id="inputTextToSave" ng-model="htmlcontent" style="width: 100%" rows="4" class="w3-hid"></textarea>
+  
+</div>
+
+
+
+
+  <script>
+      // MODAL MENU 
+      // Get the modal Menu 
+      var modal = document.getElementById("myMenuModal");
+      // var modal = document.getElementById("myMenuModal2");
+      
+
+      // Get the button that opens the modal Menu 
+      var btn = document.getElementById("myBtnx");    
+      // var btn = document.getElementById("myBtnVista");    
+      
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal 
+      btn.onclick = function() {
+          modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+  </script>
+
+  <script src='./jquery.min.js'></script>
+  <script  src="./nombra.js"></script>
+  <script src='./angular.min.js'></script>
+  <script src='./angular-sanitize.min.js'></script>
+  <script src='./textAngular.min.js'></script>
+  <script  src="./script.js"></script>
+  <script  src="./generate-text-file.js"></script>
+
+</body>
+
+</html>
+

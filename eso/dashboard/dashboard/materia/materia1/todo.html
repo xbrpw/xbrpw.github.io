@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Matematicas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">        
+        <link href='https://fonts.googleapis.com/css?family=Rokkitt:400,700|Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="todo.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div ng-app="TaskManager">        
+<div class="container">
+            <div class="content" ng-controller="taskController">
+            <h1>Calendario de entregables</h1>
+            <p class="tagline">Matematicas</p>
+            <form>
+                <div class="inputContainer">
+                    <input type="text" id="description" class="taskName" placeholder="Comentarios" ng-model="newTask">
+                    <label for="description">Descripción</label>
+                </div>
+                <div class="inputContainer half last">
+                    <i class="fa fa-caret-down selectArrow"></i>
+                    <select id="category" class="taskCategory" ng-model="newTaskCategory" ng-options="obj.name for obj in categories">
+                        <option class="disabled" value="">1</option>
+                    </select>
+                    <label for="category">Entrega</label>
+                </div>
+                <div class="inputContainer half last right">
+                    <input type="date" id="dueDate" class="taskDate" ng-model="newTaskDate">
+                    <label for="dueDate">Facha de entrega</label>
+                </div>
+                <div class="row">
+                    <button class="taskAdd" ng-click="addNew()"><i class="fa fa-plus icon"></i>Agregar actividad</button>
+                    <button class="taskDelete" ng-click="deleteTask()"><i class="fa fa-trash-o icon"></i>Borrar actividad</button>
+                </div>
+            </form>
+            <ul  class="taskList">
+                <li class="taskItem" ng-repeat="taskItem in taskItem track by $index" ng-model="taskItem"><input type="checkbox" class="taskCheckbox" ng-model="taskItem.complete" ng-change="save()">
+                    <span class="complete-{{taskItem.complete}}">{{taskItem.description}}</span>
+                    <span class="category-{{taskItem.category}}">{{taskItem.category}}</span>
+                    <strong class="taskDate complete-{{taskItem.complete}}"><i class="fa fa-calendar"></i>{{taskItem.date | date : 'mediumDate'}}</strong>
+                </li>
+            </ul><!-- taskList -->
+            </div><!-- content -->
+ </div><!-- container -->
+        
+</div>
+<!-- partial -->
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js'></script><script  src="todo.js"></script>
+
+</body>
+</html>
