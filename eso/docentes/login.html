@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+  <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>  
+  <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free    -->
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <title>Docentes de la ESO 0514 </title>
+  <meta name="title" content="Docentes de la Escuela Secundaria Oficial 0514 SOR JUANA INÉS DE LA CRUZ">
+  <meta name="description" content="Escuela pública de nivel secundaria para la formación y vinculación del aprendizaje y desarrollo intelectual y físico entre alumnos, profesores y tutores y padres de familia. Turno Matutino y vespertino. Chimalhuacán, Estado de México.">
+  <meta name="keywords" content="secundaria oficial, secundaria 0514, secundaria Chimalhuacán, secundaria app, proyecto unesco,">
+  <link rel="preload" as="font">
+  <style>
+      /*===== GOOGLE FONTS =====*/
+      @font-face {
+    font-family: 'boxicons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('boxicons'), local('boxicons'), url(boxicons.woff2) format('woff2');
+    font-display: swap;
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+  /*===== VARIABLES CSS =====*/
+  :root{
+    /*===== Colores =====*/
+    --first-color: #00CC66;
+    --first-color-dark: #045f32;
+    --first-color-light: #324d42;
+    --first-color-lighten: #F2F2F2;
+    --blue-color: #045c8c;
+
+    /*===== Font and typography =====*/
+    --body-font: 'Open Sans', sans-serif;
+    --h1-font-size: 1.5rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+  }
+
+  @media screen and (min-width: 768px){
+    :root{
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+    }
+  }
+
+  /*===== BASE =====*/
+  *,::before,::after{
+    box-sizing: border-box;
+  }
+
+  body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    color: var(--first-color-dark);
+  }
+
+  h1{
+    margin: 0;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /*===== LOGIN =====*/
+  .login{
+    display: grid;
+    grid-template-columns: 100%;
+    height: 100vh;
+
+  }
+
+  .login__content{
+    display: grid;
+  }
+
+  .login__img{
+    justify-self: center;
+  }
+
+  .login__img img{
+    width: 310px;
+    margin-top: 1.5rem;
+  }
+
+  .login__forms{
+    position: relative;
+    height: 368px;
+  }
+
+  .login__registre, .login__create{
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    background-color: var(--first-color-lighten);
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(35,0,77,.2);
+    animation-duration: .4s;
+    animation-name: animate-login;
+  }
+
+  @keyframes animate-login{
+    0%{
+      transform: scale(1,1);
+    }
+    50%{
+      transform: scale(1.1,1.1);
+    }
+    100%{
+      transform: scale(1,1);
+    }
+  }
+
+  .login__title{
+    font-size: var(--h1-font-size);
+    margin-bottom: 2rem;
+  }
+
+  .login__box{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: .5rem;
+    padding: 1.125rem 1rem;
+    background-color: #FFF;
+    margin-top: 1rem;
+    border-radius: .5rem;
+  }
+
+  .login__icon{
+    font-size: 1.5rem;
+    color: var(--first-color);
+  }
+
+  .login__input{
+    border: none;
+    outline: none;
+    font-size: var(--normal-font-size);
+    font-weight: 700;
+    color: var(--first-color-dark);
+  }
+
+  .login__input::placeholder{
+    font-size: var(--normal-font-size);
+    font-family: var(--body-font);
+    color: var(--first-color-light);
+  }
+
+  .login__forgot{
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-top: .5rem;
+    font-size: var(--small-font-size);
+    font-weight: 600;
+    color: var(--first-color-light);
+  }
+
+  .login__button{
+    display: block;
+    padding: 1rem;
+    margin: 2rem 0;
+    background-color: var(--first-color);
+    color: #FFF;text-shadow: 2px 2px 4px #000000;
+    font-weight: 600;
+    text-align: center;
+    border-radius: .5rem;
+    transition: .3s;
+  }
+
+  .login__button:hover{
+    background-color: var(--first-color-dark);
+  }
+
+  .login__account, .login__signin, .login__signup{
+    font-weight: 600;
+    font-size: var(--small-font-size);
+  }
+
+  .login__account{
+    color: var(--first-color-dark);
+  }
+
+  .login__signin, .login__signup{
+    color: var(--first-color);
+    cursor: pointer;
+  }
+
+  .login__social{
+    margin-top: 2rem;
+  }
+
+  .login__social-icon{
+    font-size: 1.5rem;
+    color: var(--first-color-dark);
+    margin: 0 1.5rem;
+  }
+
+  /*Show login*/
+  .block{
+    display: block;
+  }
+
+  /*Hidden login*/
+  .none{
+    display: none;
+  }
+
+  /* ===== MEDIA QUERIES =====*/
+  @media screen and (min-width: 576px){
+    .login__forms{
+      width: 348px;
+      justify-self: center;
+    }
+  }
+
+  @media screen and (min-width: 1024px){
+    .login{
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .login__content{
+      grid-template-columns: repeat(2, max-content);
+      justify-content: center;
+      align-items: center;
+      margin-left: 10rem;
+    }
+
+    .login__img{
+      display: flex;
+      width: 600px;
+      height: 588px;
+      background-color: var(--first-color-lighten);
+      border-radius: 1rem;
+      padding-left: 1rem;
+    }
+
+    .login__img img{
+      width: 390px;
+      margin-top: 0;
+    }
+
+    .login__registre, .login__create{
+      left: -11rem;
+    }
+
+    .login__registre{
+      bottom: -2rem;
+    }
+
+    .login__create{
+      bottom: -5.5rem;
+    }
+  }
+
+  #loggedIn {
+    display: none;
+  }
+
+
+  a:link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
+
+  a:hover {
+    color: inherit; 
+    text-decoration: none;
+  }
+
+
+  a:active {
+    color: inherit; 
+    text-decoration: none;
+  }
+
+  .main-wrapper {
+    width: 90%;
+    height: auto;
+    max-width: 900px;
+    margin: 0.5em auto;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .badge {
+    position: relative;
+    margin: 1em 2em;
+    width: 4em;
+    height: 6.2em;
+    border-radius: 10px;
+    display: inline-block;
+    top: 0;
+    transition: all 0.2s ease;
+  }
+  .badge:before, .badge:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .badge:before {
+    transform: rotate(60deg);
+  }
+  .badge:after {
+    transform: rotate(-60deg);
+  }
+  .badge:hover {
+    top: -4px;
+  }
+  .badge .circle {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background: #fff;
+    z-index: 10;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .badge .circle i.fa {
+    font-size: 2em;
+    margin-top: 8px;
+  }
+  .badge .font {
+    display: inline-block;
+    margin-top: 1em;
+  }
+  .badge .ribbonBig {
+    position: absolute;
+    border-radius: 4px;
+    padding: 5px 5px 5px;
+    width: 150px;
+    z-index: 11;
+    color: #fff;
+    bottom: 12px;
+    left: 50%;
+    margin-left: -80px;
+    height: 15px;
+    font-size: 14px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    background: linear-gradient(to bottom right, #555 0%, #333 100%);
+    cursor: default;
+  }
+
+
+  .badge .ribbon {
+    position: absolute;
+    border-radius: 4px;
+    padding: 5px 5px 5px;
+    width: 110px;
+    z-index: 11;
+    color: #fff;
+    bottom: 12px;
+    left: 50%;
+    margin-left: -60px;
+    height: 15px;
+    font-size: 14px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    background: linear-gradient(to bottom right, #555 0%, #333 100%);
+    cursor: default;
+  }
+
+
+  .yellow {
+    background: linear-gradient(to bottom right, #ffeb3b 0%, #fbc02d 100%);
+    color: #ffb300;
+  }
+
+  .orange {
+    background: linear-gradient(to bottom right, #ffc107 0%, #f57c00 100%);
+    color: #f68401;
+  }
+
+  .pink {
+    background: linear-gradient(to bottom right, #F48FB1 0%, #d81b60 100%);
+    color: #dc306f;
+  }
+
+  .red {
+    background: linear-gradient(to bottom right, #f4511e 0%, #b71c1c 100%);
+    color: #c62828;
+  }
+
+  .purple {
+    background: linear-gradient(to bottom right, #ab47bc 0%, #4527a0 100%);
+    color: #7127a8;
+  }
+
+  .teal {
+    background: linear-gradient(to bottom right, #4DB6AC 0%, #00796B 100%);
+    color: #34a297;
+  }
+
+  .blue {
+    background: linear-gradient(to bottom right, #4FC3F7 0%, #2196F3 100%);
+    color: #259af3;
+  }
+
+  .blue-dark {
+    background: linear-gradient(to bottom right, #1976D2 0%, #283593 100%);
+    color: #1c68c5;
+  }
+
+  .green {
+    background: linear-gradient(to bottom right, #cddc39 0%, #8bc34a 100%);
+    color: #7cb342;
+  }
+
+  .green-dark {
+    background: linear-gradient(to bottom right, #4CAF50 0%, #1B5E20 100%);
+    color: #00944a;
+  }
+
+  .silver {
+    background: linear-gradient(to bottom right, #E0E0E0 0%, #BDBDBD 100%);
+    color: #9e9e9e;
+  }
+
+  .gold {
+    background: linear-gradient(to bottom right, #e6ce6a 0%, #b7892b 100%);
+    color: #b7892b;
+  }
+
+  footer {
+    text-align: center;
+    margin: 5em auto;
+  }
+  footer a {
+    text-decoration: none;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #111;
+    border: 0.5px dashed #f8f8f8;
+    color: #999;
+    margin: 5px;
+  }
+  footer a:hover {
+    background: #222;
+  }
+  footer a .icons {
+    margin-top: 12px;
+    display: inline-block;
+    font-size: 20px;
+  }
+
+  .navbtn {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    box-shadow: 0 0 3px rgb(255, 255, 255);
+    z-index: 5;
+    display: flex;
+    overflow-x: auto;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .navbtn__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 13px;  
+    text-decoration: none;
+    -webkit-tap-highlight-color: white;
+    transition: background-color 0.1s ease-in-out;
+  }
+
+
+  .navbtn__icon {
+    font-size: 18px;
+  }
+
+  .border0{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit};
+
+  .alert {
+      padding: 20px;
+      background-color: #f44336;
+      color: white;
+      opacity: 1;
+      transition: opacity 0.6s;
+      margin-bottom: 15px;
+    }
+    
+    .alert.success {background-color: #04AA6D;}
+    .alert.info {background-color: #2196F3;}
+    .alert.warning {background-color: #ff9800;}
+    
+    .closebtn {
+      margin-left: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+  .closebtn:hover {color: black;} .w3-tiny {font-size: 10px!important}.w3-small {font-size: 12px!important}.w3-medium {font-size: 15px!important}.w3-large {font-size: 18px!important}.w3-xlarge {font-size: 24px!important}.w3-xxlarge {font-size: 36px!important}.w3-xxxlarge {font-size: 48px!important}.w3-jumbo {font-size: 64px!important}.w3-left-align {text-align: left!important}.w3-right-align {text-align: right!important}.w3-justify {text-align: justify!important}.w3-center {text-align: center!important}.w3-border-0 {border: 0!important}.w3-border {border: 1px solid #ccc!important}.w3-border-top {border-top: 1px solid #ccc!important}.w3-border-bottom {border-bottom: 1px solid #ccc!important}.w3-border-left {border-left: 1px solid #ccc!important}.w3-border-right {border-right: 1px solid #ccc!important}.w3-topbar {border-top: 6px solid #ccc!important}.w3-bottombar {border-bottom: 6px solid #ccc!important}.w3-leftbar {border-left: 6px solid #ccc!important}.w3-rightbar {border-right: 6px solid #ccc!important}
+  </style>
+</head>
+
+<body class="border0" >
+<div class="login">
+    <div id="loggedIn" style="background: #E2E8F0;" class="border0">
+                   
+
+        <div  class="border0" style="margin:0; display:block;width:100%; padding:8px 16px!important; color:#000!important;background-color:#E2E8F0!important; box-shadow: #000;">
+          <span style="font-size:24px!important" ><a href="hola.html" target="iframe_a"><i class="fa fa-home" ></i> </a><strong> Hola Sor Juana Ines</strong></span> 
+          <span style="float:right!important; font-size:24px!important">
+            <span> <mark style="background:transparent;color:transparent"><i class="fa fa-cog" ></i></mark></span> 
+            <!-- <span> <mark style="background:transparent;color:#000"><a href="materias.html" target="iframe_a"><i class="fa fa-book" ></i></a></mark></span>  -->
+            <!-- <span> <mark style="background:transparent;color:#000"><a href="index.html" target="iframe_a"><i class="fa fa-pencil" ></i></a></mark></span>  -->
+            <!-- <span> <mark style="background:transparent;color:#000"><a href="00-my-dashboard/index.html" target="iframe_a"><i class="fa fa-calculator" ></i></a></mark></span>  -->
+            <span> <mark style="background:transparent;color:#000"><a href="herramientas.html" target="iframe_a"><i class="fa fa-tools" ></i></a></mark></span>                   
+          </span>
+        </div>
+        <!-- <img src="img/sor-juana-ines-de-la-cruz-icon.svg" alt="SorJuanApp" hidden> -->
+        <iframe src="hola.html" name="iframe_a" height="650px" width="100%" title="Iframe Example" style="border:none;"></iframe>
+        <center style="color: grey;">www.eso154.edu.mx</center>
+        <p><span id="vecesVista"></span> has ingresado aquí. ¡Gracias!</p>  
+
+        <nav class="navbtn " tabindex="3">
+        <a href="materias.html" target="iframe_a" class="navbtn__link a">
+            <i class="fa fa-home w3-xlarge"></i>
+          <span class="navbtn__text">Materias</span>
+        </a>
+        <a href="notificaciones.html" target="iframe_a" class="navbtn__link navbtn__ a">
+            <i class="fa fa-bell w3-xlarge"></i>
+          <span class="navbtn__text">Notificaciones</span>
+        </a>  
+        <a href="bloc-de-notas/index.html" target="iframe_a" class="navbtn__link a">
+            <i class="fa fa-pencil w3-xlarge"></i>
+          <span class="navbtn__text">Bloc de notas</span>
+        </a>
+        <a href="proyecto.html" target="iframe_a" class="navbtn__link a">
+            <i class="fa fa-book w3-xlarge"></i>
+          <span class="navbtn__text">Proyecto</span>
+        </a>
+        </nav>
+
+
+        <script>
+          if (!localStorage.pageLoadCount)
+              localStorage.pageLoadCount = 0;
+          localStorage.pageLoadCount = parseInt(localStorage.pageLoadCount) + 1;
+          document.getElementById('vecesVista').textContent = localStorage.pageLoadCount;
+        </script>
+
+                    </div>
+                    
+            <div class="login__content">                
+                <div class="login__img">                 
+                    <img src="login.svg" alt="Login" width="200px" height="200px" onclick="document.location='../index.html'">
+                </div>
+                
+              <div class="login__forms">                                                                                
+                    <div id="login">
+                    <form action="" class="login__registre" id="login-in">
+                        <h1 class="login__title">Iniciar sesión</h1>             
+                           
+                              
+                        <div class="login__box">
+                            <i class='bx bx-user login__icon'></i>
+                            <input  placeholder="Email" class="login__input" id="email"  name="email" type="email"> 
+                            
+                        </div>
+    
+                        <div class="login__box">
+                            <i class='bx bx-lock-alt login__icon'></i>
+                            <input type="password" placeholder="Password" class="login__input" id="password" input name="password">                                                       
+                        </div>
+
+                        <label for="email" hidden></label><br/><label for="password" hidden></label><br/>
+
+                        <a href="#" class="login__forgot">Olvido su contraseña</a>
+
+                        <a href="#" class="login__button" id="loginBtn" style="color: white;">Iniciar sesión</a>
+  
+                        <div>
+                            <span class="login__account">No tienes una cuenta?</span>
+                            <span class="login__signin" id="sign-up" style="color: rgb(3, 61, 18);">Registrarse</span>
+                        </div>
+                    </form> </div>
+
+                    <div id="create">
+                    <form action="" class="login__create none" id="login-up">
+                        <h1 class="login__title">Crea una cuenta</h1>                                                   
+                                                   
+                        <div class="login__box">
+                            <i class='bx bx-user login__icon'></i>
+                            <input type="text" placeholder="Username" class="login__input" name="CreateName">
+                        </div>
+    
+                            <div class="login__box">
+                                <i class='bx bx-at login__icon'></i>
+                                <input  placeholder="Email" class="login__input" name="createEmail" type="email" >
+                            </div>                     
+
+                        <div class="login__box">
+                            <i class='bx bx-lock-alt login__icon'></i>
+                            <input  placeholder="Password" class="login__input"  name="createPassword" type="password"> 
+                        </div>
+    
+
+                        <div class="login__box">
+                            <i class='bx bx-lock-alt login__icon'></i>
+                            <input type="password" placeholder="Confirma tu Password" class="login__input" name="confirmPassword">
+                        </div>
+
+                        <a href="#" class="login__button" id="createBtn" style="color: white;"  onclick="document.location='index.html'">Registrarse</a>
+
+                        <div>
+                            <span class="login__account">Tienes una cuenta?</span>
+                            <span class="login__signup" id="sign-in" style="color: rgb(3, 61, 18);">Inicia sesión</span>
+                        </div>
+                        <label for="createEmail"></label>                           
+                        <label for="createPassword"></label>
+                        <label for="createName"></label>                      
+                        <label for="confirmPassword"></label>
+                    </form>
+                    </div>
+                </div>
+            </div>
+</div>
+
+  <script src="nombre.js"></script>           
+  <script src="script.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
+

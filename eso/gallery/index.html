@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es-MX" ><!-- CodePen - Waterwheel with owl carousel 2 -->
+<head>
+  <meta charset="UTF-8">
+  <title></title>  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'><style>#carrousel {
+  margin: 10px;
+}
+@media (max-width: 768px) {
+  #carrousel {
+    margin: 70px 0px 0px 0px;
+  }
+}
+@media (max-width: 425px) {
+  #carrousel {
+    margin: 50px 0px 0px 0px;
+  }
+}
+#carrousel .title {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+#carrousel .owl-carousel img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 300px;
+  object-fit: cover;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-box-shadow: 12px 12px 10px -10px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 12px 12px 10px -10px rgba(0, 0, 0, 0.25);
+  box-shadow: 12px 12px 10px -10px rgba(0, 0, 0, 0.25);
+}
+#carrousel .owl-carousel .owl-item {
+  height: 300px;
+  position: relative;
+  transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transition: all 0.2s;
+  -webkit-transform: all 0.2s;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  #carrousel .owl-carousel .owl-item {
+    height: 270px;
+  }
+}
+@media (max-width: 380px) {
+  #carrousel .owl-carousel .owl-item {
+    height: 280px;
+  }
+}
+#carrousel .owl-carousel .owl-stage-outer {
+  padding-bottom: 10px;
+}
+#carrousel .owl-item.big {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 3;
+}
+#carrousel .owl-item.medium {
+  transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  z-index: 2;
+}
+#carrousel .owl-item.medium.mdright {
+  /*border: solid 1px red;*/
+  position: relative;
+  left: -30px;
+}
+@media (min-width: 768px) {
+  #carrousel .owl-item.medium.mdright {
+    left: 0px;
+  }
+}
+#carrousel .owl-item.medium.mdleft {
+  /*border: solid 1px blue;*/
+  position: relative;
+  right: -30px;
+}
+@media (min-width: 768px) {
+  #carrousel .owl-item.medium.mdleft {
+    right: 0px;
+  }
+}
+#carrousel .owl-item.smallRight.active {
+  transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  position: relative;
+  left: -30px;
+}
+#carrousel .owl-item.smallLeft.active {
+  transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  position: relative;
+  right: -30px;
+}
+#carrousel .owl-nav {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+}
+#carrousel .owl-nav .owl-prev {
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  background: transparent !important;
+  color: #000 !important;
+  font-size: 40px !important;
+}
+#carrousel .owl-nav .owl-prev:hover {
+  color: #adadad !important;
+}
+#carrousel .owl-nav .owl-next {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  background: transparent !important;
+  color: #000 !important;
+  font-size: 40px !important;
+}
+#carrousel .owl-nav .owl-next:hover {
+  color: #adadad !important;
+}</style>
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="carrousel">
+    <div class="container">
+        <div class="title col-md-12 text-center"></div>
+        <div class="col-md-12">
+            <div class="owl-carousel owl-theme">
+              <img src="https://www.xbr.pw/secu/img/storyset/Mobile%20Marketing-cuate.svg">
+              <img src="https://www.xbr.pw/secu/img/storyset/Mobile%20Marketing-rafiki.svg">
+              <img src="https://www.xbr.pw/secu/img/storyset/Next%20steps-amico.svg">
+              <img src="https://www.xbr.pw/secu/img/storyset/Next%20steps-rafiki.svg">
+              <img src="https://www.xbr.pw/secu/img/storyset/Payment%20Information-bro.svg">
+              <img src="https://www.xbr.pw/secu/img/storyset/Payment%20Information-pana.svg">
+     
+              <img src="https://www.xbr.pw/secu/img/storyset/Telecommuting-pana.svg">
+ 
+              <img src="https://www.xbr.pw/secu/img/storyset/Vision%20board-pana.svg">
+              <img src="https://www.xbr.pw/secu/img/storyset/Webinar-pana.svg">
+              <img src="https://www.xbr.pw/secu/img/storyset/Webinar-rafiki.svg">
+              <img src="https://www.xbr.pw/secu/img/storyset/Formula-amico.svg">
+              <img src="https://www.xbr.pw/secu/img/storyset/Formula-bro.svg">
+              <img src="https://www.xbr.pw/secu/img/storyset/Formula-rafiki.svg">
+              <img src="https://www.xbr.pw/secu/img/storyset/Learning-bro.svg">
+            </div>
+        </div>
+      <div class="text-center">
+        <button id="play-carousel" type="button" class="btn btn-dark">Play</button>
+        <div class="status"></div>
+      </div>
+    </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+<script>$('.owl-carousel').owlCarousel({
+  center: true,
+  loop: true,
+  nav: true,
+  items: 5,
+  navText: ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
+  responsive:{
+    0:{
+      items: 2,
+    },
+    768:{
+      items: 3,
+    },
+    990:{
+      items: 5,
+    }
+  },
+  onInitialized: coverFlowEfx,
+  onTranslate: coverFlowEfx,
+});
+
+function coverFlowEfx(e){
+  if ($('.owl-dots')) {
+    $('.owl-dots').remove();
+  }
+  idx = e.item.index;
+  $('.owl-item.big').removeClass('big');
+  $('.owl-item.medium').removeClass('medium');
+  $('.owl-item.mdright').removeClass('mdright');
+  $('.owl-item.mdleft').removeClass('mdleft');
+  $('.owl-item.smallRight').removeClass('smallRight');
+  $('.owl-item.smallLeft').removeClass('smallLeft');
+  $('.owl-item').eq(idx -1).addClass('medium mdleft');
+  $('.owl-item').eq(idx).addClass('big');
+  $('.owl-item').eq(idx + 1).addClass('medium mdright');
+  $('.owl-item').eq(idx + 2).addClass('smallRight');
+  $('.owl-item').eq(idx - 2).addClass('smallLeft');
+}
+
+var click = false;
+
+$('#play-carousel').click(function(evt) {
+  click = !click;
+  if(click){
+    $('.status').html('Autoplay: ON');
+    $('.owl-carousel').trigger('play.owl.autoplay', [1000, 1000]);
+    $(this).html("Stop");
+  } else {
+    $('.owl-carousel').trigger('stop.owl.autoplay');
+    $(this).html("Play");
+    $('.status').html('Autoplay: OFF');
+  }
+
+});</script>
+
+</body>
+</html>

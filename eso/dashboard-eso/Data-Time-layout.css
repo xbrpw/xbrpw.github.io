@@ -1,0 +1,59 @@
+
+
+.wrapper {
+    position: absolute;
+    font-family: 'numbers', "Open Sans", -apple-system, BlinkMacSystemFont;
+    -webkit-font-smoothing: antialiased; text-align: center;
+}
+
+.center {
+
+    position: absolute;
+    text-align: center;
+}
+
+.clock {    
+    font-size: 50px;    top: 22px;
+}
+
+.month {
+    top: 72px;
+    font-size: 30px;
+    font-family: 'letters';
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.date {
+    position: absolute;
+    
+    text-align: center;
+    font-size: 52px;
+    top: 90px;
+}
+
+.year {
+    position: absolute;
+    
+    text-align: left;
+    left: 60px;
+    font-size: 30px;
+    top: 115px;
+}
+
+.day {
+    position: absolute;
+    
+    text-align: left;
+    left: 60px;
+    font-size: 15px;
+    top: 105px;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+#dates {
+    position: absolute;
+}

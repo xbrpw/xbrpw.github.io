@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es-mx" >
+<head>
+  <meta charset="UTF-8">
+  <title>En esta escuela</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<style>* {
+  box-sizing: border-box;
+  transition: color 0.15s ease;
+}
+:root {
+  --dark: #111;
+  --light: #fefefe;
+  --color: var(--dark);
+  --bg: var(--light);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: var(--light);
+    --bg: var(--dark);
+  }
+}
+body {
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 2.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+}
+p {
+  max-width: 300px;
+}
+p[data-scroll='in'] [data-char]:after {
+  -webkit-animation-name: glitch-switch;
+          animation-name: glitch-switch;
+}
+.reveal--0 [data-char]:after {
+  -webkit-animation-iteration-count: calc(var(--char-index) * 0.55);
+          animation-iteration-count: calc(var(--char-index) * 0.55);
+}
+.reveal--1 [data-char]:after {
+  -webkit-animation-iteration-count: 4;
+          animation-iteration-count: 4;
+}
+.reveal--2 [data-char]:after {
+  -webkit-animation-iteration-count: var(--count);
+          animation-iteration-count: var(--count);
+}
+p:nth-of-type(1) {
+  position: absolute;
+  opacity: 0;
+}
+.word {
+  position: relative;
+  display: inline-block;
+}
+[data-char] {
+  color: transparent;
+  position: relative;
+}
+[data-char]:after {
+  --txt: attr(data-char);
+  -webkit-animation-duration: 0.1s;
+          animation-duration: 0.1s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-timing-function: steps(1);
+          animation-timing-function: steps(1);
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  content: var(--txt);
+  color: var(--color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/**
+ * Themeing
+*/
+.page {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+  scroll-snap-align: center;
+  width: 100vw;
+}
+.container {
+  height: 100vh;
+  overflow: auto;
+  overflow-x: hidden;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+@-webkit-keyframes glitch-switch {
+  0% {
+    content: var(--char-0);
+  }
+  10% {
+    content: var(--char-1);
+  }
+  20% {
+    content: var(--char-2);
+  }
+  30% {
+    content: var(--char-3);
+  }
+  40% {
+    content: var(--char-4);
+  }
+  50% {
+    content: var(--char-5);
+  }
+  60% {
+    content: var(--char-6);
+  }
+  70% {
+    content: var(--char-7);
+  }
+  80% {
+    content: var(--char-8);
+  }
+  90% {
+    content: var(--char-9);
+  }
+  100% {
+    content: var(--char-0);
+  }
+}
+@keyframes glitch-switch {
+  0% {
+    content: var(--char-0);
+  }
+  10% {
+    content: var(--char-1);
+  }
+  20% {
+    content: var(--char-2);
+  }
+  30% {
+    content: var(--char-3);
+  }
+  40% {
+    content: var(--char-4);
+  }
+  50% {
+    content: var(--char-5);
+  }
+  60% {
+    content: var(--char-6);
+  }
+  70% {
+    content: var(--char-7);
+  }
+  80% {
+    content: var(--char-8);
+  }
+  90% {
+    content: var(--char-9);
+  }
+  100% {
+    content: var(--char-0);
+  }
+}</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="page">
+    <p>En esta escuela reforzamos</p>
+    <p class="reveal--0" aria-hidden="true" data-scroll="out" data-splitting="">En esta escuela reforzamos</p>
+  </div>
+  <div class="page">
+    <p>Puntualidad</p>
+    <p class="reveal--1" aria-hidden="true" data-scroll="out" data-splitting="">Puntualidad</p>
+  </div>
+  <div class="page">
+    <p>Trabajo diario</p>
+    <p class="reveal--2" aria-hidden="true" data-scroll="out" data-splitting="">Trabajo diario</p>
+  </div>
+  <div class="page">
+    <p>Trabajo en equipo</p>
+    <p class="reveal--3" aria-hidden="true" data-scroll="out" data-splitting="">Trabajo en equipo</p>
+  </div>
+  <div class="page">
+    <p>Respeto</p>
+    <p class="reveal--4" aria-hidden="true" data-scroll="out" data-splitting="">Respeto</p>
+  </div>
+  <div class="page">
+    <p>Responsabilidad</p>
+    <p class="reveal--5" aria-hidden="true" data-scroll="out" data-splitting="">Responsabilidad</p>
+  </div>
+  <div class="page">
+    <p>La presentación</p>
+    <p class="reveal--6" aria-hidden="true" data-scroll="out" data-splitting="">La presentación</p>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://unpkg.com/splitting/dist/splitting.js'></script>
+<script src='https://unpkg.com/scroll-out/dist/scroll-out.min.js'></script>
+<script>
+  const { Splitting } = window;
+const results = Splitting();
+const glitches = '`§¡™£¢∞¶•ªº–≠åß∂ƒ©˙∆˚¬…æ≈ç√∫˜µ≤≥÷/?░▒▓<>/'.split('');
+
+for (let r = 0; r < results.length; r++) {
+  const chars = results[r].chars;
+  for (let c = 0; c < chars.length; c++) {
+    chars[c].style.setProperty('--count', Math.random() * 5 + 1);
+    for (let g = 0; g < 10; g++) {
+      chars[c].style.setProperty(
+      `--char-${g}`,
+      `"${glitches[Math.floor(Math.random() * glitches.length)]}"`);
+
+    }
+  }
+}
+window.ScrollOut({
+  scrollingElement: '.container',
+  targets: 'p' });
+</script>
+
+</body>
+</html>

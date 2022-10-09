@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><b><span id="vecesVista"></span></b> ingresos a su panel de control<span id="dots">...</span><span id="masMuchoMas"><span id="statusEso"></span></span>
+<span onclick="myFunctionIsMostrar()" id="myBtn-verMas"  class="tes-btn tes-btn--primary-dark" data-mz="true"><b>Ver más</b></span></p>
+<script>
+    if (!localStorage.pageLoadCount)
+        localStorage.pageLoadCount = 0;
+    localStorage.pageLoadCount = parseInt(localStorage.pageLoadCount) + 1;
+    document.getElementById('vecesVista').textContent = localStorage.pageLoadCount;
+</script>
+
+    <style>#masMuchoMas {display: none;}</style>
+      <script>
+      function myFunctionIsMostrar() {
+        var dots = document.getElementById("dots");
+        var masMuchoMasText = document.getElementById("masMuchoMas");
+        var btnText = document.getElementById("myBtn-verMas");
+      
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "<b>Mostrar</b>"; 
+          masMuchoMasText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "<b>Cerrar</b>"; 
+          masMuchoMasText.style.display = "inline";
+        }
+      }
+      </script>
+
+<script>
+    let text = 
+    "<p><b>Browser Online:</b> " + navigator.onLine + "</p>" +
+    "<p><b>Browser CodeName:</b> " + navigator.appCodeName + "</p>" +
+    "<p><b>Browser Name:</b> " + navigator.appName + "</p>" +
+    "<p><b>Browser Version:</b> " + navigator.appVersion + "</p>" +
+    "<p><b>Cookies Enabled:</b> " + navigator.cookieEnabled + "</p>" +
+    "<p><b>Language:</b> " + navigator.language + "</p>" +
+    "<p><b>Platform:</b> " + navigator.platform + "</p>" +
+    "<p><b>User-agent header:</b> " + navigator.userAgent + "</p>";
+    
+    document.getElementById("statusEso").innerHTML = text;
+    </script>
+
+</body>
+</html>
