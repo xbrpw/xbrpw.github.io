@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+   <title>Protege tu cuenta</title>
+   <style>#loggedIn {display: none;}</style>
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">    <style .coneso {height:100vh; width: 100%;}></style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body > <!-- class="w3-container "  style="  border-radius: 25px;"  -->
+
+ <!--    <div class="w3-row-padding w3-center w3-margin-top" style="  border-radius: 25px;">
+      <div class="w3-third" style="  border-radius: 25px;">
+        <div class="w3-card w3-container" style="min-height:460px" style="  border-radius: 25px;">
+        <h3>Responsive</h3><br>
+        <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px" ></i>
+        <p>Built-in responsiveness</p>
+        <p>Mobile first fluid grid</p>
+        <p>Fits any screen sizes</p>
+        <p>PC Tablet and Mobile</p>
+        </div>
+      </div>
+      
+      <div class="w3-third" style="  border-radius: 25px;">
+        <div class="w3-card w3-container" style="min-height:460px" style="  border-radius: 25px;">
+        <h3>Standard CSS</h3><br>
+        <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+        <p>Standard CSS only</p>
+        <p>Easy to learn</p>
+        <p>No need for jQuery</p>
+        <p>No JavaScript library</p>
+        </div>
+      </div>
+      
+      <div class="w3-third" style="  border-radius: 25px;">
+        <div class="w3-card w3-container" style="min-height:460px" style="  border-radius: 25px;">
+        <h3>Design</h3><br>
+        <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+        <p>Paper like design</p>
+        <p>Bold colors and shadows</p>
+        <p>Equal across platforms</p>
+        <p>Equal across devices</p>
+        </div>
+      </div>
+      </div> -->
+    
+      <!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+  <div id="loggedIn">
+    <h2>Bienvenido</h2>
+  </div>
+
+
+
+  <div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button tablink " onclick="openeso(event,'login')">Login</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openeso(event,'paso1de2')">Crear cuenta Paso 1  </button>
+    <button class="w3-bar-item w3-button tablink " onclick="openeso(event,'login')"><a href="#loginPaso2de2">Paso 2</a></button>
+    
+  </div>
+  
+  <div id="login" class="w3-container  eso">
+  <!--   <div class="coneso">
+      <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+<div class="login">
+          <div class="login__content">
+              <div class="login__img">               
+                  <img src=https://www.xbr.pw/secu/m/login/login.svg" alt="">
+              </div>
+
+              <div class="login__forms">
+
+                                               
+                  
+
+
+                  <div id="login">
+                  <form action="" class="login__registre" id="login-in">
+                      <h1 class="login__title">Iniciar sesión</h1>             
+                         
+                            
+                      <div class="login__box">
+                          <i class='bx bx-user login__icon'></i>
+                          <input  placeholder="Email" class="login__input" id="email"  name="email" type="email"> 
+                          
+                      </div>
+  
+                      <div class="login__box">
+                          <i class='bx bx-lock-alt login__icon'></i>
+                          <input type="password" placeholder="Password" class="login__input" id="password" input name="password">
+                          
+                          
+                      </div>
+
+                      <label for="email" hidden></label><br/><label for="password" hidden></label><br/>
+
+                      <a href="#" class="login__forgot">Olvido su contraseña</a>
+
+                      <a href="#" class="login__button" id="loginBtn">Iniciar sesión</a>
+
+                      <div>
+                          <span class="login__account">No tienes una cuenta?</span>
+                          <span class="login__signin" id="sign-up">Registrarse</span>
+                      </div><script  src="./scriptlogin.js"></script>
+              <script src="login.js"></script>
+                  </form> </div>
+
+
+                
+                  </form>
+                  </div>
+              </div>
+          </div>
+      </div> -->
+
+      <div class=" w3-card-4"   style="  border-radius: 25px;" id="iniciarSesion">
+        <!-- <iframe src="https://www.xbr.pw/secu/m/login/index.html"  height="630px " width="100% " title="Login" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> -->
+        
+       <div class="w3-container w3-margin-top w3-padding-top-24">
+          <div autoComplete="on" class="sm__form"><div class="sm__form__fields"><div class="sm-form-title"><h2 class="sm-form-title__header"><br><small>Iniciar sesión</small></h2></div>
+            <div id="login"  class="w3-margin-bottom">      
+              <div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large">
+              <label class="sm-field__label" for="email">Email</label><br/>
+              <input  class="sm-field__input sm-field__input--text" id="email" name="email" type="email" /><br/></div></div></div>
+              <div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large">
+              <label class="sm-field__label" for="password">Password</label><br/>
+              <input  class="sm-field__input sm-field__input--text" id="password" name="password" type="password" /><br/></div></div></div>      
+              <button  id="loginBtn" class="w3-btn w3-round-xxlarge w3-teal w3-hover-green   w3-block"><b>Entrar</b></button>
+            </div>
+          </div>
+          </div>  
+        </div>
+      </div> 
+      <br><br><br><br><br><br><br><br><br><br><br><br><br>   <br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="  w3-card-4"  style="  border-radius: 25px;" id="paso2de2">
+         <div class="w3-container w3-margin-top w3-padding-top-24" style="  border-radius: 25px;"> 
+        <div  class="sm__form" id="loginPaso2de2"><div class="sm__form__fields"><div class="sm-form-title"><h2 class="sm-form-title__header">Ya casí acabamos<br><small>Paso 2 de 2</small></h2></div>
+      <div class="coneso">
+        <div id="create" class="w3-margin-bottom">
+        
+          <div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large">
+          <label class="sm-field__label" for="createEmail">Email</label><br/>
+          <input class="sm-field__input sm-field__input--text" name="createEmail" type="email" /><br/></div></div></div>
+          <div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large">
+            <label class="sm-field__label" for="createPassword">Password</label><br/>
+          <input class="sm-field__input sm-field__input--text" name="createPassword" type="password" /><br/></div></div></div>
+          <div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large">
+            <label class="sm-field__label" for="confirmPassword">Repite Password</label><br/>
+          <input class="sm-field__input sm-field__input--text" name="confirmPassword" type="password" /><br/></div></div></div>
+      
+          <button  id="createBtn" class="w3-btn w3-round-xxlarge w3-teal w3-hover-green   w3-block"><b>Enviar y accesar a tu cuenta</b></button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div> </div> <br>
+  </div>
+
+  <div id="paso1de2" class="w3-container  eso" style="display:none">
+
+    <div class=" w3-card-4"   style="  border-radius: 25px;">  
+    <iframe title="Directorio del personal docente y  administrativo" class="sm__form__iframe" width="100%" height="600px" frameBorder="0" marginHeight="0" marginWidth="0" src="https://share.sheetmonkey.io/f/8NMHuuFKxcPR8JJ23S9iCs?header=false&amp;title=false"></iframe>
+    <br>
+  </div>
+
+  <div id="paso2de2" class="w3-container  eso" style="display:none">
+    
+    <div class="  w3-card-4"  style="  border-radius: 25px;" id="paso2de2">
+        <div class="w3-container w3-margin-top w3-padding-top-24" style="  border-radius: 25px;">
+          <div  class="sm__form" id="ogin2"><div class="sm__form__fields"><div class="sm-form-title"><h2 class="sm-form-title__header">Crear una cuenta<br><small>Paso 2 de 2</small></h2></div>
+        <div class="coneso">
+          <div id="create" class="w3-margin-bottom">
+          
+            <div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large">
+            <label class="sm-field__label" for="createEmail">Email</label><br/>
+            <input class="sm-field__input sm-field__input--text" name="createEmail" type="email" /><br/></div></div></div>
+            <div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large">
+              <label class="sm-field__label" for="createPassword">Password</label><br/>
+            <input class="sm-field__input sm-field__input--text" name="createPassword" type="password" /><br/></div></div></div>
+            <div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large">
+              <label class="sm-field__label" for="confirmPassword">Repite Password</label><br/>
+            <input class="sm-field__input sm-field__input--text" name="confirmPassword" type="password" /><br/></div></div></div>
+        
+            <button  id="createBtn" class="w3-btn w3-round-xxlarge w3-teal w3-hover-green   w3-block"><b>Enviar y accesar a tu cuenta</b></button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div><br>
+  </div> </div>
+
+  <script src="login.js"></script>
+<script>
+function openeso(evt, esoName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("eso");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-green", "");
+  }
+  document.getElementById(esoName).style.display = "block";
+  evt.currentTarget.className += " w3-green";
+}
+</script>
+<script src="login.js"></script>
+<div class="w3-margin-bottom"></div> <div class="w3-margin-bottom"></div>
+</body>
+</html>
+
+
+
+   
+
+  

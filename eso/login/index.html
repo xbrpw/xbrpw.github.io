@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="./login.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+<div class="login">
+            <div class="login__content">
+                <div class="login__img">
+                    <!-- <img src="https://raw.githubusercontent.com/bedimcode/responsive-login-signin-signup/b3c2eaa19d76624092bd606d28fbd616d539de92/assets/img/img-login.svg" alt=""> -->
+                    <img src="login.svg" alt="">
+                </div>
+
+                <div class="login__forms">
+
+                    <div id="loggedIn" onclick="document.location='././index.html'"> Bienvenido  </div>
+                      
+                     
+                    
+
+
+                    <div id="login">
+                    <form action="" class="login__registre" id="login-in">
+                        <h1 class="login__title">Iniciar sesión</h1>             
+                           
+                              
+                        <div class="login__box">
+                            <i class='bx bx-user login__icon'></i>
+                            <input  placeholder="Email" class="login__input" id="email"  name="email" type="email"> 
+                            
+                        </div>
+    
+                        <div class="login__box">
+                            <i class='bx bx-lock-alt login__icon'></i>
+                            <input type="password" placeholder="Password" class="login__input" id="password" input name="password">
+                            
+                            
+                        </div>
+
+                        <label for="email" hidden></label><br/><label for="password" hidden></label><br/>
+
+                        <a href="#" class="login__forgot">Olvido su contraseña</a>
+
+                        <a href="#" class="login__button" id="loginBtn">Iniciar sesión</a>
+  
+                        <div>
+                            <span class="login__account">No tienes una cuenta?</span>
+                            <span class="login__signin" id="sign-up">Registrarse</span>
+                        </div>
+                    </form> </div>
+
+                    <div id="create">
+                    <form action="" class="login__create none" id="login-up">
+                        <h1 class="login__title">Crea una cuenta</h1>
+    
+                     
+                        <span onclick="document.location='./alumnos/'"  class="login__button" >Alumnos</span>  
+                        <span onclick="document.location='https://share.sheetmonkey.io/f/jMBVZqEcZXYjBWkUsiBuE9'"  class="login__button" >Docentes</span>                          
+                        <a href="/"  class="login__button" >Padres de familia</a>  
+                        <a href="/" class="login__button" >Comunidad</a>  
+
+                        <div>
+                            
+                            <span class="login__account">Tienes una cuenta?</span>
+                            <a href="login-confirmar.htm|" target="iframe_a"  style="width:100%;"  ><span class="login__signup" >Inicia sesión</span></a> 
+                        </div>
+                        <label for="createEmail"></label>                           
+                        <label for="createPassword"></label>
+                        <label for="createName"></label>                      
+                        <label for="confirmPassword"></label>
+                        
+                        <!-- <div class="login__social">
+                            <a href="#" class="login__social-icon"><i class='bx bxl-facebook' ></i></a>
+                            <a href="#" class="login__social-icon"><i class='bx bxl-twitter' ></i></a>
+                            <a href="#" class="login__social-icon"><i class='bx bxl-google' ></i></a>
+                        </div> -->
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- partial -->
+  <script  src="./scriptlogin.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
+
+
+<div>
+
+    <style>
+        .modal-input {
+            display: none;
+        }
+        
+        .modal-input:checked+.modal {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .modal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+            background-color: #fff;
+        }
+        
+        .modal-close {
+            position: fixed;
+            right: 5%;
+            font-size: 2rem;
+            line-height: 1;
+        }
+    </style>
+
+    <label for="modal-1"><a href="https://share.sheetmonkey.io/f/i9RpN9QTFDNou8UKLfXhe1" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">1</a> </label>
+    <label for="modal-2">2</label>
+    <label for="modal-3">3</label>
+
+    <input id="modal-1" name="modal" type="checkbox" class="modal-input" />
+    <div class="modal">
+        <label for="modal-1" class="modal-close">&times;</label>
+        <div class="content">
+            <iframe src="https://share.sheetmonkey.io/f/i9RpN9QTFDNou8UKLfXhe1" name="iframe_a"  style="border:none;"height="600px" width="100%" title=""></iframe>    
+        </div>
+    </div>
+
+    <input id="modal-2" name="modal" type="checkbox" class="modal-input" />
+    <div class="modal"><br><br>
+        <label for="modal-2" class="modal-close">&times;</label>
+        <div class="content">
+            2 </div>
+    </div>
+
+
+    <input id="modal-3" name="modal" type="checkbox" class="modal-input" />
+    <div class="modal">
+        <label for="modal-3" class="modal-close">&times;</label>
+        <div class="content">
+            3</div>
+    </div>
+</div>

@@ -1,0 +1,623 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&family=Sedgwick+Ave&display=swap");
+
+body {
+  margin: 0;
+}
+
+.App {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 16px;
+  height: 664px;
+  overflow: hidden;
+  position: relative;
+  width: 256px;
+}
+
+.title {
+  font-size: 25px;
+  margin-top: 23px;
+  position: absolute;
+  text-align: center;
+  width: 95%;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.title1 {
+  font-family: "Sedgwick Ave";
+  height: 30px;
+  overflow: hidden;
+}
+
+.titleList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.titleItem {
+  height: 30px;
+}
+
+.title2 {
+  font-family: "Muli";
+}
+
+.title3 {
+  color: #999;
+  font-family: "Muli";
+  font-size: 15px;
+}
+
+.blob {
+  position: absolute;
+}
+
+.person {
+  position: absolute;
+  transform-origin: 50% 1000px;
+}
+
+.person1 {
+  transform: rotate(0);
+}
+
+.person2 {
+  transform: rotate(20deg);
+}
+
+.person3 {
+  transform: rotate(40deg);
+}
+
+.text {
+  bottom: 40px;
+  font-family: "Muli";
+  font-size: 20px;
+  line-height: 20px;
+  padding: 24px;
+  position: absolute;
+  text-align: center;
+}
+
+.navDots {
+  bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  left: 50%;
+  margin: auto;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 72px;
+}
+
+.navDot {
+  background: black;
+  border-radius: 3px;
+  height: 6px;
+  width: 6px;
+}
+
+.p1-fil5 {
+  fill: #2a2d40;
+}
+
+.p1-fil7 {
+  fill: #2e2d2d;
+}
+
+.p1-fil4 {
+  fill: #ee4239;
+}
+
+.p1-fil22 {
+  fill: #212123;
+  fill-rule: nonzero;
+}
+
+.p1-fil20 {
+  fill: #222225;
+  fill-rule: nonzero;
+}
+
+.p1-fil26 {
+  fill: #28282a;
+  fill-rule: nonzero;
+}
+
+.p1-fil3 {
+  fill: #2a2d40;
+  fill-rule: nonzero;
+}
+
+.p1-fil15 {
+  fill: #2e2f30;
+  fill-rule: nonzero;
+}
+
+.p1-fil13 {
+  fill: #303b50;
+  fill-rule: nonzero;
+}
+
+.p1-fil18 {
+  fill: #34395f;
+  fill-rule: nonzero;
+}
+
+.p1-fil6 {
+  fill: #353d65;
+  fill-rule: nonzero;
+}
+
+.p1-fil12 {
+  fill: #435361;
+  fill-rule: nonzero;
+}
+
+.p1-fil39 {
+  fill: #546eb0;
+  fill-rule: nonzero;
+}
+
+.p1-fil10 {
+  fill: #6e88a4;
+  fill-rule: nonzero;
+}
+
+.p1-fil37 {
+  fill: #7a8cc5;
+  fill-rule: nonzero;
+}
+
+.p1-fil11 {
+  fill: #807e80;
+  fill-rule: nonzero;
+}
+
+.p1-fil29 {
+  fill: #897d7d;
+  fill-rule: nonzero;
+}
+
+.p1-fil27 {
+  fill: #9a5245;
+  fill-rule: nonzero;
+}
+
+.p1-fil24 {
+  fill: #a0683d;
+  fill-rule: nonzero;
+}
+
+.p1-fil21 {
+  fill: #b8d4e3;
+  fill-rule: nonzero;
+}
+
+.p1-fil31 {
+  fill: #ba3a4b;
+  fill-rule: nonzero;
+}
+
+.p1-fil35 {
+  fill: #c13538;
+  fill-rule: nonzero;
+}
+
+.p1-fil25 {
+  fill: #c77560;
+  fill-rule: nonzero;
+}
+
+.p1-fil33 {
+  fill: #d64456;
+  fill-rule: nonzero;
+}
+
+.p1-fil28 {
+  fill: #db7f7c;
+  fill-rule: nonzero;
+}
+
+.p1-fil0 {
+  fill: #e0c5c0;
+  fill-rule: nonzero;
+}
+
+.p1-fil9 {
+  fill: #e56f68;
+  fill-rule: nonzero;
+}
+
+.p1-fil32 {
+  fill: #e65261;
+  fill-rule: nonzero;
+}
+
+.p1-fil19 {
+  fill: #e76e41;
+  fill-rule: nonzero;
+}
+
+.p1-fil14 {
+  fill: #ebadab;
+  fill-rule: nonzero;
+}
+
+.p1-fil23 {
+  fill: #ed9897;
+  fill-rule: nonzero;
+}
+
+.p1-fil34 {
+  fill: #ee4239;
+  fill-rule: nonzero;
+}
+
+.p1-fil16 {
+  fill: #ef8e8a;
+  fill-rule: nonzero;
+}
+
+.p1-fil38 {
+  fill: #f09b97;
+  fill-rule: nonzero;
+}
+
+.p1-fil36 {
+  fill: #f29d99;
+  fill-rule: nonzero;
+}
+
+.p1-fil17 {
+  fill: #f5a656;
+  fill-rule: nonzero;
+}
+
+.p1-fil30 {
+  fill: #f69773;
+  fill-rule: nonzero;
+}
+
+.p1-fil2 {
+  fill: #f7d7d8;
+  fill-rule: nonzero;
+}
+
+.p1-fil8 {
+  fill: #fdeae7;
+  fill-rule: nonzero;
+}
+
+.p1-fil1 {
+  fill: #fefefe;
+  fill-rule: nonzero;
+}
+
+.p2-fil5 {
+  fill: #2a2d40;
+}
+.p2-fil7 {
+  fill: #2e2d2d;
+}
+.p2-fil4 {
+  fill: #ee4239;
+}
+.p2-fil22 {
+  fill: #212123;
+  fill-rule: nonzero;
+}
+.p2-fil20 {
+  fill: #222225;
+  fill-rule: nonzero;
+}
+.p2-fil26 {
+  fill: #28282a;
+  fill-rule: nonzero;
+}
+.p2-fil3 {
+  fill: #2a2d40;
+  fill-rule: nonzero;
+}
+.p2-fil15 {
+  fill: #2e2f30;
+  fill-rule: nonzero;
+}
+.p2-fil13 {
+  fill: #303b50;
+  fill-rule: nonzero;
+}
+.p2-fil18 {
+  fill: #34395f;
+  fill-rule: nonzero;
+}
+.p2-fil6 {
+  fill: #353d65;
+  fill-rule: nonzero;
+}
+.p2-fil12 {
+  fill: #435361;
+  fill-rule: nonzero;
+}
+.p2-fil39 {
+  fill: #546eb0;
+  fill-rule: nonzero;
+}
+.p2-fil10 {
+  fill: #6e88a4;
+  fill-rule: nonzero;
+}
+.p2-fil37 {
+  fill: #7a8cc5;
+  fill-rule: nonzero;
+}
+.p2-fil11 {
+  fill: #807e80;
+  fill-rule: nonzero;
+}
+.p2-fil29 {
+  fill: #897d7d;
+  fill-rule: nonzero;
+}
+.p2-fil27 {
+  fill: #9a5245;
+  fill-rule: nonzero;
+}
+.p2-fil24 {
+  fill: #a0683d;
+  fill-rule: nonzero;
+}
+.p2-fil21 {
+  fill: #b8d4e3;
+  fill-rule: nonzero;
+}
+.p2-fil31 {
+  fill: #ba3a4b;
+  fill-rule: nonzero;
+}
+.p2-fil35 {
+  fill: #c13538;
+  fill-rule: nonzero;
+}
+.p2-fil25 {
+  fill: #c77560;
+  fill-rule: nonzero;
+}
+.p2-fil33 {
+  fill: #d64456;
+  fill-rule: nonzero;
+}
+.p2-fil28 {
+  fill: #db7f7c;
+  fill-rule: nonzero;
+}
+.p2-fil0 {
+  fill: #e0c5c0;
+  fill-rule: nonzero;
+}
+.p2-fil9 {
+  fill: #e56f68;
+  fill-rule: nonzero;
+}
+.p2-fil32 {
+  fill: #e65261;
+  fill-rule: nonzero;
+}
+.p2-fil19 {
+  fill: #e76e41;
+  fill-rule: nonzero;
+}
+.p2-fil14 {
+  fill: #ebadab;
+  fill-rule: nonzero;
+}
+.p2-fil23 {
+  fill: #ed9897;
+  fill-rule: nonzero;
+}
+.p2-fil34 {
+  fill: #ee4239;
+  fill-rule: nonzero;
+}
+.p2-fil16 {
+  fill: #ef8e8a;
+  fill-rule: nonzero;
+}
+.p2-fil38 {
+  fill: #f09b97;
+  fill-rule: nonzero;
+}
+.p2-fil36 {
+  fill: #f29d99;
+  fill-rule: nonzero;
+}
+.p2-fil17 {
+  fill: #f5a656;
+  fill-rule: nonzero;
+}
+.p2-fil30 {
+  fill: #f69773;
+  fill-rule: nonzero;
+}
+.p2-fil2 {
+  fill: #f7d7d8;
+  fill-rule: nonzero;
+}
+.p2-fil8 {
+  fill: #fdeae7;
+  fill-rule: nonzero;
+}
+.p2-fil1 {
+  fill: #fefefe;
+  fill-rule: nonzero;
+}
+
+.p3-fil5 {
+  fill: #2a2d40;
+}
+.p3-fil7 {
+  fill: #2e2d2d;
+}
+.p3-fil4 {
+  fill: #ee4239;
+}
+.p3-fil22 {
+  fill: #212123;
+  fill-rule: nonzero;
+}
+.p3-fil20 {
+  fill: #222225;
+  fill-rule: nonzero;
+}
+.p3-fil26 {
+  fill: #28282a;
+  fill-rule: nonzero;
+}
+.p3-fil3 {
+  fill: #2a2d40;
+  fill-rule: nonzero;
+}
+.p3-fil15 {
+  fill: #2e2f30;
+  fill-rule: nonzero;
+}
+.p3-fil13 {
+  fill: #303b50;
+  fill-rule: nonzero;
+}
+.p3-fil18 {
+  fill: #34395f;
+  fill-rule: nonzero;
+}
+.p3-fil6 {
+  fill: #353d65;
+  fill-rule: nonzero;
+}
+.p3-fil12 {
+  fill: #435361;
+  fill-rule: nonzero;
+}
+.p3-fil39 {
+  fill: #546eb0;
+  fill-rule: nonzero;
+}
+.p3-fil10 {
+  fill: #6e88a4;
+  fill-rule: nonzero;
+}
+.p3-fil37 {
+  fill: #7a8cc5;
+  fill-rule: nonzero;
+}
+.p3-fil11 {
+  fill: #807e80;
+  fill-rule: nonzero;
+}
+.p3-fil29 {
+  fill: #897d7d;
+  fill-rule: nonzero;
+}
+.p3-fil27 {
+  fill: #9a5245;
+  fill-rule: nonzero;
+}
+.p3-fil24 {
+  fill: #a0683d;
+  fill-rule: nonzero;
+}
+.p3-fil21 {
+  fill: #b8d4e3;
+  fill-rule: nonzero;
+}
+.p3-fil31 {
+  fill: #ba3a4b;
+  fill-rule: nonzero;
+}
+.p3-fil35 {
+  fill: #c13538;
+  fill-rule: nonzero;
+}
+.p3-fil25 {
+  fill: #c77560;
+  fill-rule: nonzero;
+}
+.p3-fil33 {
+  fill: #d64456;
+  fill-rule: nonzero;
+}
+.p3-fil28 {
+  fill: #db7f7c;
+  fill-rule: nonzero;
+}
+.p3-fil0 {
+  fill: #e0c5c0;
+  fill-rule: nonzero;
+}
+.p3-fil9 {
+  fill: #e56f68;
+  fill-rule: nonzero;
+}
+.p3-fil32 {
+  fill: #e65261;
+  fill-rule: nonzero;
+}
+.p3-fil19 {
+  fill: #e76e41;
+  fill-rule: nonzero;
+}
+.p3-fil14 {
+  fill: #ebadab;
+  fill-rule: nonzero;
+}
+.p3-fil23 {
+  fill: #ed9897;
+  fill-rule: nonzero;
+}
+.p3-fil34 {
+  fill: #ee4239;
+  fill-rule: nonzero;
+}
+.p3-fil16 {
+  fill: #ef8e8a;
+  fill-rule: nonzero;
+}
+.p3-fil38 {
+  fill: #f09b97;
+  fill-rule: nonzero;
+}
+.p3-fil36 {
+  fill: #f29d99;
+  fill-rule: nonzero;
+}
+.p3-fil17 {
+  fill: #f5a656;
+  fill-rule: nonzero;
+}
+.p3-fil30 {
+  fill: #f69773;
+  fill-rule: nonzero;
+}
+.p3-fil2 {
+  fill: #f7d7d8;
+  fill-rule: nonzero;
+}
+.p3-fil8 {
+  fill: #fdeae7;
+  fill-rule: nonzero;
+}
+.p3-fil1 {
+  fill: #fefefe;
+  fill-rule: nonzero;
+}
