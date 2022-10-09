@@ -53,7 +53,7 @@
   
                         <div>
                             <span class="login__account">No tienes una cuenta?</span>
-                            <span class="login__signin" id="sign-up">Registrarse</span>
+                            <label for="modal-1"><span class="login__signin" id="sign-up">Registrarse</span></label>
                         </div>
                     </form> </div>
 
@@ -112,3 +112,38 @@
 </body>
 </html>
 
+<input id="modal-1" name="modal" type="checkbox" class="modal-input" />
+<div class="modal">
+    <label for="modal-1" class="modal-close">&times;</label>
+    <div class="content">
+        <iframe src="https://share.sheetmonkey.io/f/i9RpN9QTFDNou8UKLfXhe1" name="iframe_a"  style="border:none;"height="600px" width="100%" title=""></iframe>    
+    </div>
+</div>    <style>
+    .modal-input {
+        display: none;
+    }
+    
+    .modal-input:checked+.modal {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+        background-color: #fff;
+    }
+    
+    .modal-close {
+        position: fixed;
+        right: 5%;
+        font-size: 2rem;
+        line-height: 1;
+    }
+</style>
