@@ -79,7 +79,7 @@
     position: absolute;
     top: 80px;
     left: 20px;
-    font-size: 0.9em;
+    font-size: 14px;
     color: #333;
     width:17px;
   }
@@ -92,7 +92,7 @@
     width: 150px;
     display: block;
     float: left;
-    color: #fff;
+    color: rgb(0, 0, 0);
   }
 
   #phone-controls{
