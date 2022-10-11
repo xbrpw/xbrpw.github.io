@@ -1,60 +1,96 @@
-<!DOCTYPE html>
-<html lang="es-MX" >
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 Error Page</title>
-  <link rel="stylesheet" href="./style.css">
+<!DOCTYPE html><html lang="es-MX">
+<!-- * ⊙⩌⨀ 2006 - 2022  http://twitter.com/luisangelmaciel  */  -->
+<head> 
+  <meta charset="UTF-8">  
+  <title> 404 Error Page! En un momento regresamos al Home de la Escuela Secundaria Oficial 504 - Sor Juana Inés de la Cruz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="description" content="404 Error Page! En un momento regresamos al Home">
+  <meta name="MobileOptimized" content="width" />    
+  <meta name="author" content="Luis Angel Maciel">
+  <meta name="generator" content="xbr.pw">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" >
+  <link rel="icon" type="image/x-icon" sizes="192x192" href="../assets/favicons/favicon.svg" id="favicon" />   
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.svg">
+  <style>
+      * {
+  font-family: sans-serif;
+  color: rgba(0,0,0,0.75);
+  }
+  body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding: 0px 30px;
+  /*background: #ddd;*/
+  }
 
+  .wrapper {
+  max-width: 960px;
+  width: 100%; 
+  margin: 30px auto;
+  transform: scale(0.8);
+  }
+  .landing-page {
+  max-width: 960px;
+  height: 475px;
+  margin: 0;
+  /*box-shadow: 0px 0px 8px 1px #ccc;*/
+  /*background: #fafafa;*/
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+  svg {
+  width: 50%;
+  max-height: 225px;
+  height: auto;
+  margin: 0 0 15px;
+  }
+  h1 {
+  font-size: 48px;
+  margin: 0;
+  }
+  p {
+  font-size: 16px;
+  width: 35%; 
+  margin: 16px auto 24px;
+  text-align: center;
+  }
+  button {
+  border-radius: 50px;
+  padding: 10px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #627aad;
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 8px 0 #ccc;}
+
+  .iconico-3d {padding: 10px;-webkit-animation: icon3d 600ms 10;animation: icon3d 600ms 10;color: black;}.iconico-3d:hover {-webkit-animation: icon3d 600ms infinite;animation: icon3d 600ms infinite;}@keyframes icon3d {0% {text-shadow: 5px 4px #f44336, -5px -6px #2196f3;}25% {text-shadow: -5px -6px #f44336, 5px 4px #2196f3;}50% {text-shadow: 5px -4px #f44336, -8px 4px #2196f3;}75% {text-shadow: -8px -4px #f44336, -5px -4px #2196f3;}100% {text-shadow: -5px 0 #f44336, 5px -4px #2196f3;}}
+  </style>
 </head>
 <body>
-<!-- partial:index.partial.html -->
+
 <div class="wrapper">
   <div class="landing-page">
     <div style="text-align:center;" class="icon__download">
-      <img src="https://www.xbr.pw/secu/img/error-404.svg" width="250px" height="auto" >			
+      <img src="../img/error-404.svg" width="225px" height="225px" alt="Error 404! Sor Juana Inés de la Cruz dandole un bofetadazo al diseñador" >
 		</div>
-    <style>
-      .iconico-3d {
-          padding: 10px;
-          -webkit-animation: icon3d 600ms 10;
-          animation: icon3d 600ms 10;
-          color: black;
-      }
-      
-      .iconico-3d:hover {
-          -webkit-animation: icon3d 600ms infinite;
-          animation: icon3d 600ms infinite;
-      }
-      
-      @keyframes icon3d {
-          0% {
-              text-shadow: 5px 4px #f44336, -5px -6px #2196f3;
-          }
-          25% {
-              text-shadow: -5px -6px #f44336, 5px 4px #2196f3;
-          }
-          50% {
-              text-shadow: 5px -4px #f44336, -8px 4px #2196f3;
-          }
-          75% {
-              text-shadow: -8px -4px #f44336, -5px -4px #2196f3;
-          }
-          100% {
-              text-shadow: -5px 0 #f44336, 5px -4px #2196f3;
-          }
-      }
-  </style>
 
     <h1 class="iconico-3d"> Ups, ¡Error 404!</h1>
     <h2> No eres tu, es el programador</h2>
-    <b class="message " >Regresamos a inicio en <span id="count"> 10 </span> segundos </b>
-     
+    <b class="message " >Regresamos al inicio en <span id="count"> 10 </span> segundos </b>
   </div>
 </div>
-<script src="auto.js"></script>
-<script language="JavaScript" type="text/javascript">
-  window.opener.location.href = "https://www.xbr.pw/secu/index.html";
+
+
+<script>
+  window.opener.location.href = "../index.html";
   var ventana = window.self;
   ventana.opener = window.self;
   ventana.close(); {
@@ -62,8 +98,9 @@
   }
   setTimeout("redireccionar()", 8000);
 </script>
-<script type="text/javascript">
-  var pagina = 'https://www.xbr.pw/secu/index.html';
+
+<script>
+  var pagina = '../index.html';
   var segundos = 8000;
 
   function redireccion() {
@@ -72,7 +109,126 @@
   setTimeout("redireccion()", segundos);
 </script>
 
-<!-- partial -->
-  
+<script>
+  var countDown = document.getElementById("count");
+
+window.onload = function() {
+
+    var counter = setInterval(function() {
+
+        countDown.textContent = countDown.textContent - 1
+
+        if (countDown.textContent <= 0) {
+            clearInterval(counter);
+
+            document.getElementsByClassName("message")[0].style.opacity = "0"
+
+        } else if (countDown.textContent < 10) {
+            countDown.textContent = "0" + countDown.textContent
+
+        }
+
+    }, 1000);
+
+
+
+}
+
+
+// creating my image link
+
+var link = document.createElement("a");
+document.body.appendChild(link);
+
+link.href = "https://twitter.com/luisangelmaciel";
+link.target = "_blank";
+
+var photo = document.createElement("img");
+link.appendChild(photo);
+
+photo.alt =
+    "Error 404! Sor Juana Inés de la Cruz dandole un bofetadazo al diseñador"
+
+photo.src =    
+    "https://www.luisangelmaciel.one/img/lamp-1.svg";
+
+photo.style =
+    "border-radius:50%;position:fixed;bottom:20px;right:20px;transition:all 0.5s ease";
+
+photo.onmouseover = function() {
+    this.style.transform = "scale(1.1,1.1)";
+    this.style.boxShadow = "5px 5px 15px #fff";
+};
+
+photo.onmouseout = function() {
+    this.style.transform = "scale(1,1)";
+    this.style.boxShadow = "none";
+};
+
+</script>
+
+<script>
+    var countDown = document.getElementById("count");
+
+   window.onload = function() {
+
+      var counter = setInterval(function() {
+
+          countDown.textContent = countDown.textContent - 1
+
+          if (countDown.textContent <= 0) {
+              clearInterval(counter);
+
+              document.getElementsByClassName("message")[0].style.opacity = "0"
+
+          } else if (countDown.textContent < 10) {
+              countDown.textContent = "0" + countDown.textContent
+
+          }
+
+      }, 1000);
+
+
+
+  }
+
+  var link = document.createElement("a");
+  document.body.appendChild(link);
+
+  link.href = "https://twitter.com/luisangelmaciel";
+  link.target = "_blank";
+
+  var photo = document.createElement("img");
+  link.appendChild(photo);
+  photo.zindex = 
+      "5"
+
+  photo.height = 
+      "10px"
+
+  photo.width = 
+      "10px"    
+
+  photo.alt =
+      "Error 404! Sor Juana Inés de la Cruz dandole un bofetadazo al diseñador"
+
+  photo.src =    
+      "https://www.luisangelmaciel.one/img/lamp-1.svg";
+
+  photo.style =
+      "border-radius:50%;position:fixed;bottom:20px;right:20px;transition:all 0.5s ease";
+
+  photo.onmouseover = function() {
+      this.style.transform = "scale(1.1,1.1)";
+      this.style.boxShadow = "5px 5px 15px #fff";
+  };
+
+  photo.onmouseout = function() {
+      this.style.transform = "scale(1,1)";
+      this.style.boxShadow = "none";
+  };
+
+</script>
+
 </body>
 </html>

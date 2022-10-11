@@ -36,8 +36,10 @@ link.target = "_blank";
 var photo = document.createElement("img");
 link.appendChild(photo);
 
-photo.src =
-    
+photo.alt =
+    "Error 404! Sor Juana Inés de la Cruz dandole un bofetadazo al diseñador"
+
+photo.src =    
     "https://www.luisangelmaciel.one/img/lamp-1.svg";
 
 photo.style =
