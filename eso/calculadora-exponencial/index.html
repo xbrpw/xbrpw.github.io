@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="es-MX" >
-<head>
-  <meta charset="UTF-8">
+<!DOCTYPE html><html lang="es-MX">
+<!-- * ⊙⩌⨀ 2006 - 2022  https://twitter.com/luisangelmaciel  */  -->
+<head> 
+  <meta charset="UTF-8">  
   <title>Calculadora Exponencial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="description" content="Calculadora exponencial">
+  <meta name="MobileOptimized" content="width" />    
+  <meta name="author" content="Luis Angel Maciel">
+  <meta name="generator" content="xbr.pw">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" >
+  <link rel="icon" type="image/x-icon" sizes="192x192" href="../assets/favicons/favicon.svg" id="favicon" />   
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.svg">
   <link rel="stylesheet" href="./style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style> .input-cool[type="text"] {-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;-moz-box-shadow: rgba(47, 47, 47, 0.3) 0 0 15px inset;-webkit-box-shadow: rgba(47, 47, 47, 0.3) 0 0 15px inset;box-shadow: rgba(47, 47, 47, 0.3) 0 0 15px inset;border: 3px solid #fff;/*font-family: Helvetica, sans-serif;*//*font-size: 1em;*/outline: none;padding: 20px 10px;width: 300px;}</style>
 </head>
 
   
@@ -14,16 +24,16 @@
             <div class="form">
                 <div class="row">
                     <label for="inp-1">Base</label>
-                    <input type="text" id="inp-a" name="inp-1" autocomplete="off">
+                    <input type="text" id="inp-a" name="inp-1" autocomplete="off" aria-label="Número base" class="input-cool">
                 </div>
                 <div class="row">
-                    <label for="inp-2">Exponente</label>
-                    <input type="text" id="inp-b" name="inp-2" autocomplete="off">
+                    <label for="inp-2" >Exponente</label>
+                    <input type="text" id="inp-b" name="inp-2" autocomplete="off" aria-label="Exponente"  class="input-cool">
                 </div>
-                <button onclick="getResult()">Calcular</button>
+                <button onclick="getResult()" class="input-cool">Calcular</button>
                 <div class="row">
                     <label for="res">Resultado</label>
-                    <input class="resultbox" type="text" name="res" id="result" disabled="disabled">
+                    <input class="resultbox" type="text" name="res" id="result" disabled="disabled" aria-label="Resultado exponencial" class="input-cool">
                 </div>
             </div>
         </div>
