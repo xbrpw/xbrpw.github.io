@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="es-MX">
+<!-- * ⊙⩌⨀ 2006 - 2022  http://twitter.com/luisangelmaciel  */  -->
+<head> 
+  <meta charset="UTF-8">  
+  <title> Calculadora Básica, como la que se usaba en la secundaria</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="description" content="Calculadora Básica, como la que se usaba en la secundaria">
+  <meta name="MobileOptimized" content="width" />    
+  <meta name="author" content="Luis Angel Maciel">
+  <meta name="generator" content="xbr.pw">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" >
+  <link rel="icon" type="image/x-icon" sizes="192x192" href="../assets/favicons/favicon.svg" id="favicon" />   
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&family=Share+Tech+Mono&family=Slabo+27px&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body class="body">
+  <div class="calculator">
+    <div class="calculator__top">
+      <div class="calculator__heading">
+        <h1 class="calculator__title">SECUNDR</h1>
+        <h2 class="calculator__subtitle">OF-154</h2>
+      </div>
+      <div class="calculator__sun-battery-container">
+        <div class="calculator__sun-battery"></div>
+      </div>
+    </div>
+    <div class="calculator__screen-container">
+      <p class="calculator__screen-mem">M</p>
+      <input type="text" class="calculator__screen" name="screen" value="0"
+        maxlength="10" disabled>
+    </div>
+    <div class="calculator__keyboard">
+      <button type="button" data-type="clear" class="button button_type_reset"
+        value="C">C</button>
+      <button type="button" data-type="memory" class="button button_type_memory"
+        value="MRC">MRC</button>
+      <button type="button" data-type="memory" class="button button_type_memory"
+        value="MMINUS">M-</button>
+      <button type="button" data-type="memory" class="button button_type_memory"
+        value="MPLUS">M+</button>
+      <button type="button" data-type="function"
+        class="button button_type_advanced" value="NEGATE">+/-</button>
+      <button type="button" data-type="function"
+        class="button button_type_advanced" value="PERCENT">%</button>
+      <button type="button" data-type="function"
+        class="button button_type_advanced" value="SQUARE" aria-label="Raiz Cuadrada" title="Raiz Cuadrada">
+        <svg class="square-symbol" viewBox="0 0 33 23" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 10l5 11h2.5l6-19H33" stroke="#fff" stroke-width="3" />
+          </svg>
+      </button>
+      <button type="button" data-type="function"
+        class="button button_type_operation" value="BACKSPACE"  aria-label="Raiz Cuadrada" title="Raiz Cuadrada">
+        <svg class="backspace-symbol" viewBox="0 0 27 22" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2l-9 9 9 9M3 11h24" stroke="#fff" stroke-width="3" />
+          </svg>
+      </button>
+      <button type="button" data-type="number" class="button button_type_number"
+        value="7">7</button>
+      <button type="button" data-type="number" class="button button_type_number"
+        value="8">8</button>
+      <button type="button" data-type="number" class="button button_type_number"
+        value="9">9</button>
+      <button type="button" data-type="operation"
+        class="button button_type_operation" value="DIVIDE">÷</button>
+      <button type="button" data-type="number" class="button button_type_number"
+        value="4">4</button>
+      <button type="button" data-type="number" class="button button_type_number"
+        value="5">5</button>
+      <button type="button" data-type="number" class="button button_type_number"
+        value="6">6</button>
+      <button type="button" data-type="operation"
+        class="button button_type_operation" value="MULTIPLY">×</button>
+      <button type="button" data-type="number" class="button button_type_number"
+        value="1">1</button>
+      <button type="button" data-type="number" class="button button_type_number"
+        value="2">2</button>
+      <button type="button" data-type="number" class="button button_type_number"
+        value="3">3</button>
+      <button type="button" data-type="operation"
+        class="button button_type_operation" value="SUBTRACT">-</button>
+      <button type="button" data-type="number" class="button button_type_number"
+        value="0">0</button>
+      <button type="button" data-type="number" class="button button_type_number"
+        value=".">.</button>
+      <button type="button" data-type="equals"
+        class="button button_type_operation" value="EQUALS">=</button>
+      <button type="button" data-type="operation"
+        class="button button_type_operation" value="ADD">+</button>
+    </div>
+  </div>
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.0.2/math.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

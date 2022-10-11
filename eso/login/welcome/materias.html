@@ -1,227 +1,242 @@
-<!DOCTYPE html>
-<html lang="es-MX" >
-<head>
-  <meta charset="UTF-8">
-  <title>Materias</title>
+<!DOCTYPE html><html lang="es-MX">
+<!-- * ⊙⩌⨀ 2006 - 2022  http://twitter.com/luisangelmaciel  */  -->
+<head> 
+  <meta charset="UTF-8">  
+  <title>Materias impartidas en la Escuela Secundaria Oficial 504 - Sor Juana Inés de la Cruz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="description" content=" Materias impartidas en la Escuela Secundaria Oficial 504 - Sor Juana Inés de la Cruz">
+  <meta name="MobileOptimized" content="width" />    
+  <meta name="author" content="Luis Angel Maciel">
+  <meta name="generator" content="xbr.pw">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" >
+  <link rel="icon" type="image/x-icon" sizes="192x192" href="./assets/favicons/favicon.svg" id="favicon" />   
+  <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.svg">
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+
   <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>
   <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free    -->
-  <style>body {
-    font-family: Open Sans;
-    background: #111;
-    margin: 0;
-  }
-  
-  a:link {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  a:visited {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  
-  a:hover {
-    color: inherit; 
-    text-decoration: none;
-  }
-  
-  
-  a:active {
-    color: inherit; 
-    text-decoration: none;
-  }
-  
-  .main-wrapper {
-    width: 90%;
-    height: auto;
-    max-width: 900px;
-    margin: 0.5em auto;
-    text-align: center;
-    overflow: hidden;
-  }
-  
-  .badge {
-    position: relative;
-    margin: 1em 2em;
-    width: 4em;
-    height: 6.2em;
-    border-radius: 10px;
-    display: inline-block;
-    top: 0;
-    transition: all 0.2s ease;
-  }
-  .badge:before, .badge:after {
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    border-radius: inherit;
-    background: inherit;
-    content: "";
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-  }
-  .badge:before {
-    transform: rotate(60deg);
-  }
-  .badge:after {
-    transform: rotate(-60deg);
-  }
-  .badge:hover {
-    top: -4px;
-  }
-  .badge .circle {
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    background: #fff;
-    z-index: 10;
-    border-radius: 50%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-  }
-  .badge .circle i.fa {
-    font-size: 2em;
-    margin-top: 8px;
-  }
-  .badge .font {
-    display: inline-block;
-    margin-top: 1em;
-  }
-  .badge .ribbonBig {
-    position: absolute;
-    border-radius: 4px;
-    padding: 5px 5px 5px;
-    width: 150px;
-    z-index: 11;
-    color: #fff;
-    bottom: 12px;
-    left: 50%;
-    margin-left: -80px;
-    height: 15px;
-    font-size: 14px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27);
-    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
-    background: linear-gradient(to bottom right, #555 0%, #333 100%);
-    cursor: default;
-  }
-  
-  
-  .badge .ribbon {
-    position: absolute;
-    border-radius: 4px;
-    padding: 5px 5px 5px;
-    width: 110px;
-    z-index: 11;
-    color: #fff;
-    bottom: 12px;
-    left: 50%;
-    margin-left: -60px;
-    height: 15px;
-    font-size: 14px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27);
-    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
-    background: linear-gradient(to bottom right, #555 0%, #333 100%);
-    cursor: default;
-  }
-  
-  
-  .yellow {
-    background: linear-gradient(to bottom right, #ffeb3b 0%, #fbc02d 100%);
-    color: #ffb300;
-  }
-  
-  .orange {
-    background: linear-gradient(to bottom right, #ffc107 0%, #f57c00 100%);
-    color: #f68401;
-  }
-  
-  .pink {
-    background: linear-gradient(to bottom right, #F48FB1 0%, #d81b60 100%);
-    color: #dc306f;
-  }
-  
-  .red {
-    background: linear-gradient(to bottom right, #f4511e 0%, #b71c1c 100%);
-    color: #c62828;
-  }
-  
-  .purple {
-    background: linear-gradient(to bottom right, #ab47bc 0%, #4527a0 100%);
-    color: #7127a8;
-  }
-  
-  .teal {
-    background: linear-gradient(to bottom right, #4DB6AC 0%, #00796B 100%);
-    color: #34a297;
-  }
-  
-  .blue {
-    background: linear-gradient(to bottom right, #4FC3F7 0%, #2196F3 100%);
-    color: #259af3;
-  }
-  
-  .blue-dark {
-    background: linear-gradient(to bottom right, #1976D2 0%, #283593 100%);
-    color: #1c68c5;
-  }
-  
-  .green {
-    background: linear-gradient(to bottom right, #cddc39 0%, #8bc34a 100%);
-    color: #7cb342;
-  }
-  
-  .green-dark {
-    background: linear-gradient(to bottom right, #4CAF50 0%, #1B5E20 100%);
-    color: #00944a;
-  }
-  
-  .silver {
-    background: linear-gradient(to bottom right, #E0E0E0 0%, #BDBDBD 100%);
-    color: #9e9e9e;
-  }
-  
-  .gold {
-    background: linear-gradient(to bottom right, #e6ce6a 0%, #b7892b 100%);
-    color: #b7892b;
-  }
-  
-  footer {
-    text-align: center;
-    margin: 5em auto;
-  }
-  footer a {
-    text-decoration: none;
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: #111;
-    border: 0.5px dashed #f8f8f8;
-    color: #999;
-    margin: 5px;
-  }
-  footer a:hover {
-    background: #222;
-  }
-  footer a .icons {
-    margin-top: 12px;
-    display: inline-block;
-    font-size: 20px;
-  } .border0{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}; </style>
+<style>body {
+  font-family: Open Sans;
+  background: #111;
+  margin: 0;
+}
+
+a:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
 
 
+a:hover {
+  color: inherit; 
+  text-decoration: none;
+}
+
+
+a:active {
+  color: inherit; 
+  text-decoration: none;
+}
+
+.main-wrapper {
+  width: 90%;
+  height: auto;
+  max-width: 900px;
+  margin: 0.5em auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.badge {
+  position: relative;
+  margin: 1em 2em;
+  width: 4em;
+  height: 6.2em;
+  border-radius: 10px;
+  display: inline-block;
+  top: 0;
+  transition: all 0.2s ease;
+}
+.badge:before, .badge:after {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: inherit;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.badge:before {
+  transform: rotate(60deg);
+}
+.badge:after {
+  transform: rotate(-60deg);
+}
+.badge:hover {
+  top: -4px;
+}
+.badge .circle {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  background: #fff;
+  z-index: 10;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.badge .circle i.fa {
+  font-size: 2em;
+  margin-top: 8px;
+}
+.badge .font {
+  display: inline-block;
+  margin-top: 1em;
+}
+.badge .ribbonBig {
+  position: absolute;
+  border-radius: 4px;
+  padding: 5px 5px 5px;
+  width: 150px;
+  z-index: 11;
+  color: #fff;
+  bottom: 12px;
+  left: 50%;
+  margin-left: -80px;
+  height: 15px;
+  font-size: 14px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  background: linear-gradient(to bottom right, #555 0%, #333 100%);
+  cursor: default;
+}
+
+
+.badge .ribbon {
+  position: absolute;
+  border-radius: 4px;
+  padding: 5px 5px 5px;
+  width: 110px;
+  z-index: 11;
+  color: #fff;
+  bottom: 12px;
+  left: 50%;
+  margin-left: -60px;
+  height: 15px;
+  font-size: 14px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  background: linear-gradient(to bottom right, #555 0%, #333 100%);
+  cursor: default;
+}
+
+
+.yellow {
+  background: linear-gradient(to bottom right, #ffeb3b 0%, #fbc02d 100%);
+  color: #ffb300;
+}
+
+.orange {
+  background: linear-gradient(to bottom right, #ffc107 0%, #f57c00 100%);
+  color: #f68401;
+}
+
+.pink {
+  background: linear-gradient(to bottom right, #F48FB1 0%, #d81b60 100%);
+  color: #dc306f;
+}
+
+.red {
+  background: linear-gradient(to bottom right, #f4511e 0%, #b71c1c 100%);
+  color: #c62828;
+}
+
+.purple {
+  background: linear-gradient(to bottom right, #ab47bc 0%, #4527a0 100%);
+  color: #7127a8;
+}
+
+.teal {
+  background: linear-gradient(to bottom right, #4DB6AC 0%, #00796B 100%);
+  color: #34a297;
+}
+
+.blue {
+  background: linear-gradient(to bottom right, #4FC3F7 0%, #2196F3 100%);
+  color: #259af3;
+}
+
+.blue-dark {
+  background: linear-gradient(to bottom right, #1976D2 0%, #283593 100%);
+  color: #1c68c5;
+}
+
+.green {
+  background: linear-gradient(to bottom right, #cddc39 0%, #8bc34a 100%);
+  color: #7cb342;
+}
+
+.green-dark {
+  background: linear-gradient(to bottom right, #4CAF50 0%, #1B5E20 100%);
+  color: #00944a;
+}
+
+.silver {
+  background: linear-gradient(to bottom right, #E0E0E0 0%, #BDBDBD 100%);
+  color: #9e9e9e;
+}
+
+.gold {
+  background: linear-gradient(to bottom right, #e6ce6a 0%, #b7892b 100%);
+  color: #b7892b;
+}
+
+footer {
+  text-align: center;
+  margin: 5em auto;
+}
+footer a {
+  text-decoration: none;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #111;
+  border: 0.5px dashed #f8f8f8;
+  color: #999;
+  margin: 5px;
+}
+footer a:hover {
+  background: #222;
+}
+footer a .icons {
+  margin-top: 12px;
+  display: inline-block;
+  font-size: 20px;
+}</style>
+
+<style>
+.border0{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit};
+</style>
+
+<!-- <body style="background: #111;"> -->
 </head>
 
 <body style="background: rgba(237, 242, 247, 0.87)" >
@@ -231,44 +246,90 @@
 <div class="main-wrapper">
   <div class="badge yellow" onclick="document.location='publicacion.html'">
     <div class="circle"> <i class="fa fa-bolt"></i></div>
-    <div class="ribbon">Ciencia</div>
+    <div class="ribbon">Quimica</div>
   </div>
-  
+
+  <div class="badge yellow" onclick="document.location='publicacion.html'">
+    <div class="circle"> <i class="fa fa-bolt"></i></div>
+    <div class="ribbon">Biología</div>
+  </div>
+
+  <div class="badge yellow" onclick="document.location='publicacion.html'">
+    <div class="circle"> <i class="fa fa-bolt"></i></div>
+    <div class="ribbon">Saludable</div>
+  </div>
+   </div>
+
+   <div class="main-wrapper">
   <div class="badge pink" onclick="document.location='publicacion.html'">
-    <div class="circle"> <i class="fa fa-pied-piper"></i></div>
-    <div class="ribbon">Tecnología</div>
+    <div class="circle"><i class="fa fa-pied-piper"></i></div>
+    <div class="ribbon">Tecnología </div>
   </div>
-  <div class="badge teal" onclick="document.location='publicacion.html'">
+  <div class="badge pink " onclick="document.location='publicacion.html'">
     <div class="circle"> <i class="fa fa-bicycle"></i></div>
-    <div class="ribbon">Ingeniería</div>
+    <div class="ribbon">Talleres</div>
+  </div>   
+</div>
+
+<div class="main-wrapper">
+<div class="badge red" onclick="document.location='publicacion.html'">
+  <div class="circle"> <i class="fa fa-shield"></i></div>
+  <div class="ribbon">Fisica</div>
+</div>
+
+  <div class="badge red" onclick="document.location='publicacion.html'">
+    <div class="circle"> <i class="fa fa-users"></i></div>
+    <div class="ribbon">Geografía</div>
   </div>
-    <div class="badge red" onclick="document.location='publicacion.html'">
+</div>
+
+<div class="main-wrapper">
+  <div class="badge red" onclick="document.location='publicacion.html'">
     <div class="circle"> <i class="fa fa-shield"></i></div>
     <div class="ribbon">Matemáticas</div>
   </div>
- 
+</div>
+  
+
+  <div class="main-wrapper">
+  <div class="badge blue" onclick="document.location='publicacion.html'">
+    <div class="circle"> <i class="fa fa-tree"></i></div>
+    <div class="ribbon">F.CyE.</div>
+  </div>
 
   <div class="badge blue" onclick="document.location='publicacion.html'">
-    <div class="circle"> <i class="fa fa-users"></i></div>
-    <div class="ribbon">Valores</div>
-  </div>
- 
-  <div class="badge green" onclick="document.location='publicacion.html'">
-    <div class="circle"> <i class="fa fa-tree"></i></div>
-    <div class="ribbon">Creatividad</div>
-  </div>
- 
-  <div class="badge gold" onclick="document.location='publicacion.html'">
     <div class="circle"> <i class="fa fa-magic"></i></div>
-    <div class="ribbon">Directivos</div>
+    <div class="ribbon">Español</div>
   </div>
 
-  <div class="badge orange" >
+  <div class="badge blue " >
     <div class="circle"> <i class="fa fa-wheelchair-alt"></i></div>
-    <div class="ribbon">Tareas</div>
+    <div class="ribbon">Inglés</div>
   </div>
+</div>
+  
+<div class="main-wrapper">
+    <div class="badge green" onclick="document.location='publicacion.html'">
+      <div class="circle"> <i class="fa fa-tree"></i></div>
+      <div class="ribbon">E. Fisica</div>
+    </div>
+  
+    
+    <div class="badge green" onclick="document.location='publicacion.html'">
+      <div class="circle"> <i class="fa fa-magic"></i></div>
+      <div class="ribbon">Historia</div>
+    </div>
 
-
+    <div class="badge green" onclick="document.location='publicacion.html'">
+      <div class="circle"> <i class="fa fa-magic"></i></div>
+      <div class="ribbon">Artes</div>
+    </div>
+  
+    <div class="badge green" onclick="document.location='publicacion.html'">
+      <div class="circle"> <i class="fa fa-magic"></i></div>
+      <div class="ribbon">Orientación</div>
+    </div>
+  </div>
   
 
 </div>
@@ -310,6 +371,8 @@ $('[data-target]').on('click', function(e) {
   target_element.slideToggle(500);
 });
 </script> -->
+
+
   
 </body>
 </html>
