@@ -1,5 +1,17 @@
-<!DOCTYPE html><!-- ⊙⩌⨀ 2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack ¿Quién hizo todo esto? http://twitter.com/luisangelmaciel -->
-<html lang="es-MX" > <head><meta charset="UTF-8">  <title>Lista de útiles escolares</title>
+<html lang="es-MX" ><meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<meta charset="UTF-8">
+<title>Lista de útiles escolares</title>
+<meta name="title" content="Lista de útiles escolares">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Spanish">
+<meta name="revisit-after" content="7 days">
+<meta name="author" content="@LuisAngelMaciel">
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1">   
   <link rel="icon" type="image/x-icon" sizes="192x192" href="favicon.sgv" id="favicon" />
 
@@ -21,15 +33,15 @@
         <p>{{ task.text }}</p>
       </div>
       <div class="task _task-right text-right">
-        <a href ng-click="togglePriority(task)" class="btn -task-action -priority" title="Cambiar prioridad"><i class="fa fa-exclamation"></i></a>
-        <a href ng-click="completeTask(task)" class="btn -task-action -complete" title="Listo"><i class="fa fa-check"></i></a>
+        <a href="#prioridad" ng-click="togglePriority(task)" class="btn -task-action -priority" title="Cambiar prioridad"><i class="fa fa-exclamation"></i></a>
+        <a href="#prioridad"  ng-click="completeTask(task)" class="btn -task-action -complete" title="Listo"><i class="fa fa-check"></i></a>
         <!-- <a href ng-click="deleteTask(task,'active')" class="btn -clear" title="Delete"><i class="fa fa-times-circle"></i></a> -->
       </div>
     </li>
     <li ng-repeat="task in tasksComplete | filter:taskSearch.name" class="task _item -done-{{ task.complete }} block">
       <p class="task _task-left">{{ task.text }}</p>
       <div class="task _task-right text-right">
-        <a href ng-click="uncompleteTask(task)" class="btn -task-action -re-open" title="Re-open"><i class="fa fa-undo"></i></a>
+        <a  href="#prioridad" ng-click="uncompleteTask(task)" class="btn -task-action -re-open" title="Re-open"><i class="fa fa-undo"></i></a>
         <!-- <a href ng-click="deleteTask(task,'complete')" class="btn -clear" title="Delete"><i class="fa fa-times-circle"></i></a>  -->
       </div>
     </li>
