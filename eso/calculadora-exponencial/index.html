@@ -4,7 +4,7 @@
   <meta charset="UTF-8">  
   <title>Calculadora Exponencial</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  <meta name="description" content="Calculadora exponencial">
+  <meta name="description" content="Calculadora exponencial. Calculadora gratuita de ecuaciones exponenciales">
   <meta name="MobileOptimized" content="width" />    
   <meta name="author" content="Luis Angel Maciel">
   <meta name="generator" content="xbr.pw">
@@ -14,28 +14,40 @@
   <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.svg">
   <link rel="stylesheet" href="./style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style> .input-cool[type="text"] {-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;-moz-box-shadow: rgba(47, 47, 47, 0.3) 0 0 15px inset;-webkit-box-shadow: rgba(47, 47, 47, 0.3) 0 0 15px inset;box-shadow: rgba(47, 47, 47, 0.3) 0 0 15px inset;border: 3px solid #fff;/*font-family: Helvetica, sans-serif;*//*font-size: 1em;*/outline: none;padding: 20px 10px;width: 300px;}</style>
+  <style> .input-cool[type="text"] {-moz-border-radius: 20px;-webkit-border-radius: 20px;border-radius: 20px;-moz-box-shadow: rgba(47, 47, 47, 0.3) 0 0 15px inset;-webkit-box-shadow: rgba(47, 47, 47, 0.3) 0 0 15px inset;box-shadow: rgba(47, 47, 47, 0.3) 0 0 15px inset;border: 3px solid #fff;/*font-family: Helvetica, sans-serif;*//*font-size: 1em;*/outline: none;padding: 20px 10px;width: 300px;}
+  .searchBox {
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px auto;
+  line-height: 1.563em;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.searchBox:active,
+.searchBox:hover {
+  box-shadow: 0px 0px 10px #eef;
+}
+
+.me {
+  text-transform: uppercase;
+  font-family : serif;
+} .sor-p {font-size: 18px; color: black}</style>
 </head>
 
   
         <div class="wrap">
-            <h1>Calculadora Exponencial</h1>
-         
-            <div class="form">
-                <div class="row">
-                    <label for="inp-1">Base</label>
-                    <input type="text" id="inp-a" name="inp-1" autocomplete="off" aria-label="Número base" class="input-cool">
+            <h1 class="me">C<small>alculadora Exponencia</small>l</h1>
+         <center>
+            <div class="form">                                  
+                <input type="text" id="inp-a" name="inp-1" autocomplete="off" aria-label="Número base" class=" searchBox input-cool "  placeholder="Número Base">                                   
+                <input type="text" id="inp-b" name="inp-2" autocomplete="off" aria-label="Exponente"  class="searchBox input-cool" placeholder="Exponente">            
+                <div onclick="getResult()" >
+                <input  type="text" name="res" id="result" disabled="disabled" aria-label="Resultado exponencial" class="searchBox input-cool sor-p" placeholder="=">
                 </div>
-                <div class="row">
-                    <label for="inp-2" >Exponente</label>
-                    <input type="text" id="inp-b" name="inp-2" autocomplete="off" aria-label="Exponente"  class="input-cool">
-                </div>
-                <button onclick="getResult()" class="input-cool">Calcular</button>
-                <div class="row">
-                    <label for="res">Resultado</label>
-                    <input class="resultbox" type="text" name="res" id="result" disabled="disabled" aria-label="Resultado exponencial" class="input-cool">
-                </div>
+              
             </div>
+        </center>
         </div>
 
         <script>
@@ -52,11 +64,15 @@
                 if (a != "" && b !="") {
                     document.getElementById("result").value = result;
                 } else {
-                    document.getElementById("result").value = "Input all the correct values.";
+                    document.getElementById("result").value = "Comprueba los datos";
                 }
             }
         </script>
     </body>
+
+    <label for="inp-1"></label>         
+    <label for="inp-2" ></label>
+    <label for="res"></label>
 </html>
 <!-- partial -->
   

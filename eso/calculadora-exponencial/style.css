@@ -32,15 +32,14 @@ p {
 input {
     text-align: center;
     border: none;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+    font-size: 18px; color: black
     outline: none;
     transition: 0.3s;
 }
 
-input:focus {
-    box-shadow: 0 3px 6px rgba(64, 179, 255, 0.8);
-    color: rgb(64, 179, 255);
-}
+
+
+.input-cool[type="text"] {-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;-moz-box-shadow: rgba(47, 47, 47, 0.3) 0 0 15px inset;-webkit-box-shadow: rgba(47, 47, 47, 0.3) 0 0 15px inset;box-shadow: rgba(47, 47, 47, 0.3) 0 0 15px inset;border: 3px solid #fff;/*font-family: Helvetica, sans-serif;*//*font-size: 1em;*/outline: none;padding: 16px 11px;width: 300px; color:grey}
 
 .form {
     width: 90%;
@@ -48,7 +47,7 @@ input:focus {
 }
 
 .row {
-    margin: 15px 0;
+    margin: 10px 0;
     display: flex;
 }
 
@@ -67,18 +66,15 @@ button {
     width: 100%;
     margin-bottom: 15px;
     padding: 9px 0;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    color: #8B8B8B;
+   /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    color: #8B8B8B;*/
     background: none;
     outline: none;
     border: none;
-    transition: 0.3s;
+    transition: 0.3s;font-size: 18px; color: black
 }
 
-button:focus {
-    box-shadow: 0 3px 6px rgba(64, 179, 255, 0.8);
-    color: rgb(64, 179, 255);
-}
+
 
 .resultbox {
     background: none;
