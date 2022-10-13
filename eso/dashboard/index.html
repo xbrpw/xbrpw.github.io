@@ -110,7 +110,37 @@
 .un-containerxxx:after,
 .un-containerxxx:before{content: "";display: table;clear: both;padding: 0.01em 16px;}</style>  
   
-  
+  <style>
+    .modal-input {
+        display: none;
+    }
+    
+    .modal-input:checked+.modal {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+        background-color: #fff;
+    }
+    
+    .modal-close {
+        position: fixed;
+        right: 15px;
+        font-size: 3rem;
+        top: 15px;          
+        color:#11967e;
+    }
+    .bg-verde {background-color: #11967e;} 
+</style>
 <style>
     /* Preloder */
     
@@ -378,6 +408,8 @@
             
         </div>
     </div>
+
+  
     <!-- <div class="dashboard-nav" style="background-color: #11967e;">         -->
     <div class="dashboard-nav" style="background-color: #11967e;">        
         <header>            
@@ -387,18 +419,17 @@
                 <svg class="icon  icon-sor-juana-ines-de-la-cruzicon-"  style="font-size: 36px; color: rgb(255, 255, 255); "><use xlink:href="#icon-sor-juana-ines-de-la-cruzicon-"></use></svg><span>ESO 0514</span>
                 <!-- <svg class="icon  icon-sor-juanaicon-" style="font-size: 36px; color: rgb(255, 255, 255); "><use xlink:href="#icon-sor-juanaicon-"></use></svg><span>ESO 0514</span> -->
                 <!-- <svg class="icon icon-sor-juana-inesicon-" style="font-size: 36px; color: rgb(255, 255, 255); "><use xlink:href="#icon-sor-juana-inesicon-"></use></svg><span>ESO 0514</span> -->
-            </a>               
-            
+            </a>                           
         </header>
     <!-- <svg class="icon icon-sor-juana-inesicon-" style="font-size: 32px; color: rgb(255, 255, 255); "><use xlink:href="#icon-sor-juana-inesicon-"></use></svg> -->
-        <nav class="dashboard-nav-list">
-            <a href="./agregar/index.html" target="iframe_a" class="dashboard-nav-item "><i class="fas fa-file-upload"></i> Upload </a>
-            <a href="./gdrive/index.html"  target="iframe_a" class="dashboard-nav-item "><i class="fas fa-file-upload"></i> G Drive </a>
+        <nav class="dashboard-nav-list ">
+            <a href="./agregar/index.html" target="iframe_a" class="dashboard-nav-item  menu-toggle-Close"><i class="fas fa-file-upload"></i> Upload        
+            <a href="./gdrive/index.html"  target="iframe_a" class="dashboard-nav-item  menu-toggle-Close"><i class="fas fa-file-upload"></i> G Drive </a>
             <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle">
                 <i class="fas fa-photo-video"></i>   Media </a>
                 <div class='dashboard-nav-dropdown-menu'>
-                    <a href="./../././gallery/index.html"  target="iframe_a" class="dashboard-nav-dropdown-item">Multimedia</a>
-                    <a href="./../././multimedia.html" target="iframe_a" class="dashboard-nav-dropdown-item" >Gallery</a>
+                    <a href="./../././gallery/index.html"  target="iframe_a" class="dashboard-nav-dropdown-item menu-toggle-Close">Multimedia</a>
+                    <a href="./../././multimedia.html" target="iframe_a" class="dashboard-nav-dropdown-item menu-toggle-Close" >Gallery</a>
                     <a href="https://xbrpw.github.io/icoSorJuana/demo.html" target="iframe_a" class="dashboard-nav-dropdown-item" >IcoSorJuana</a>                    
                 </div>
                 <div class='dashboard-nav-dropdown'>
@@ -478,6 +509,9 @@
 </div>
             
 
+
+    
+      
 
 
 <div class='dashboard-app'>
@@ -572,10 +606,10 @@
                             <rect x="0" y="0" width="24" height="24" stroke="none"></rect>
                             <line x1="12" y1="5" x2="12" y2="19" />
                             <line x1="5" y1="12" x2="19" y2="12" />
-                            </svg>
-                            Crear un aviso
-                        </button>
-                </div>
+                        </svg>
+                           <a href="#CrearAviso">Crear un aviso</a>
+                    </button>
+                                       </div>
         
                 <div class="bg-orange-200 mb-10 p-6 rounded-lg shadow">
                     <div class="md:flex">
@@ -607,7 +641,7 @@
             </div>
         </div>
         <!-- /1-->
-        
+       
         <!-- 2-->
         <div class="w3-container">
             <div class="col-xs-12xxx">
@@ -949,7 +983,7 @@
            
                         <div class=" w3-half">
                             <!-- CONTENIDO -->
-                            <div class="w3-container">  
+                            <div class="w3-container" id="CrearAviso">  
                        
                                     <div id="wrapper2xx">   
                                         <div id="page-wrapperBoxxx " >
@@ -984,7 +1018,7 @@
                                     <div id="page-wrapperBoxxx " >
                                             <details > 
                                                 <summary class="  question" >
-                                                <span class="status incorrect"></span>   5
+                                                <span class="status incorrect"></span>   Aviso para los docentes
                                                 </summary>                                      
                                                     ok
                                             </details> 
@@ -1097,7 +1131,13 @@
         </div>               
 </div>
 
-   
+
+
+        <div class="w3-auto">
+               <iframe src="./gdrive/index.html" style="border:none; " name="iframe_a" height="650px" width="100%" title="Dashboard " ></iframe>  
+        </div>
+
+
 
 <script>
     includeHTML();
