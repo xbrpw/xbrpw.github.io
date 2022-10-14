@@ -776,3 +776,199 @@ h6 {
 .navbtn__icon {
   font-size: 18px;
 }
+
+ /* Preloder */
+  
+  #preloder {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999999;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem;
+      min-height: 80vh;
+      background-color: #1B1C24;
+      /*background-image: url("img/lamp-icon-black-1B1C24.svg ");*/
+      /*  background-color: #1086B5; 
+      background-image: url("lamp-icon.svg "); */
+      align-items: center;
+      text-align: center;
+  }
+  
+  .loader {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -13px;
+      margin-left: -13px;
+      border-radius: 60px;
+      animation: loader 0.8s linear infinite;
+      -webkit-animation: loader 0.8s linear infinite;
+  }
+  
+  @keyframes loader {
+      0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+          border: 4px solid #f44336;
+          border-left-color: transparent;
+      }
+      50% {
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+          border: 4px solid #673ab7;
+          border-left-color: transparent;
+      }
+      100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+          border: 4px solid #f44336;
+          border-left-color: transparent;
+      }
+  }
+  
+  @-webkit-keyframes loader {
+      0% {
+          -webkit-transform: rotate(0deg);
+          border: 4px solid #f44336;
+          border-left-color: transparent;
+      }
+      50% {
+          -webkit-transform: rotate(180deg);
+          border: 4px solid #673ab7;
+          border-left-color: transparent;
+      }
+      100% {
+          -webkit-transform: rotate(360deg);
+          border: 4px solid #f44336;
+          border-left-color: transparent;
+      }
+  }
+
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+  
+  .html-entradas {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
+  }
+  
+  .body-entradas {
+    min-height: 100vh;
+    margin: 0;
+    background: inherit;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .container-entradas {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header-entradas {
+    padding: 5px 50px 5px;
+  }
+  
+  .header-title-entrada {
+    color: inherit;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 15px 0;
+  }
+  
+  .itemsEntrada {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0px 50px 40px 50px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    perspective: 500px;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .itemsEntrada.active {
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    cursor: grabbing;
+  }
+  
+  .itemEntrada-image {
+    display: block;
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+  }
+  
+  .itemEntrada {
+    background: inherit;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.01),0 1px 2px rgba(0,0,0,0.07),0 5px 15px rgba(0,0,0,0.03);
+    margin-right: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+  
+  .itemEntrada-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex: 1;
+    flex: 1 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    margin-top: 0;
+    padding: 1.2rem;
+    width: 340px;        box-shadow: 0 0 0 1px rgba(187, 172, 172, 0.01),0 1px 2px rgba(158, 151, 151, 0.07),0 5px 15px rgba(163, 157, 157, 0.03);
+  }
+  
+  .item-title-h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: inherit;
+    margin: 0.5rem 0 0.5rem;
+  }
+  
+  .item-description {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: inherit;
+    margin: 0 0 1rem;
+  }
+  
+  .item-category-h5 {
+    display: inline-block;
+    color: inherit;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0.5rem 0 0rem;
+  }
+  

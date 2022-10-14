@@ -1,0 +1,166 @@
+
+
+  <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+<style>/*===== GOOGLE FONTS =====*/
+
+    
+    /*===== VARIABLES CSS =====*/
+    :root{
+      /*===== Colores =====*/
+      --first-color: #0e6d5b;
+      --first-color-dark: #16462e;
+      --first-color-light: #103113;
+      --first-color-lighten: #F2F2F2;
+      --blue-color: #085548;
+    
+      /*===== Font and typography =====*/
+      --body-font: 'Open Sans', sans-serif;
+      --h1-font-size: 1.5rem;
+      --normal-font-size: .938rem;
+      --small-font-size: .813rem;
+    }
+    
+    @media screen and (min-width: 768px){
+      :root{
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+      }
+    }
+    
+
+    a{
+      text-decoration: none;
+    }
+    
+    /*===== LOGIN =====*/
+    
+    .btn-log-re{
+ padding: 5px 5px 5px 5px;
+ margin: 10px 10px 10px
+      width: 100%;
+      background-color: var(--first-color-lighten);
+    
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(35,0,77,.2);
+      animation-duration: .4s;
+      animation-name: animate-login;
+    }
+    
+    @keyframes animate-login{
+      0%{
+        transform: scale(1,1);
+      }
+      50%{
+        transform: scale(1.1,1.1);
+      }
+      100%{
+        transform: scale(1,1);
+      }
+    }
+    
+    .btn-log-re-title{
+      font-size: var(--h1-font-size);
+      margin-bottom: 2rem;
+    }
+    
+    .btn-log-re-title-box{
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      column-gap: .5rem;
+      padding: 1.125rem 1rem;
+      background-color: #FFF;
+      margin-top: 1rem;
+      border-radius: .5rem;
+    }
+    
+    .login__icon{
+      font-size: 1.5rem;
+      color: var(--first-color);
+    }
+    
+    .btn-log-re-input{
+      border: none;
+      outline: none;
+      font-size: var(--normal-font-size);
+      font-weight: 700;
+      color: var(--first-color-dark);
+    }
+    
+    .btn-log-buton{
+      display: block;
+      padding: 1rem;
+      margin: 2rem 0;
+      background-color: var(--first-color);
+      color: #FFF;text-shadow: 2px 2px 4px #000000;
+      font-weight: 600;
+      text-align: center;
+      border-radius: .5rem;
+      transition: .3s;
+      font-size: large;
+    }
+    
+    .btn-log-buton:hover{
+      background-color: var(--first-color-dark);
+    }
+    
+    .btn-log-account, .btn-log-singin{
+      font-weight: 600;
+      font-size: var(--small-font-size);
+    }
+    
+    .btn-log-account{
+      color: var(--first-color-dark);
+    }
+    
+    .btn-log-singin{
+      color: var(--first-color);
+      cursor: pointer;
+    }
+    
+    /*Show login*/
+    
+    /*Hidden login*/
+    
+    /* ===== MEDIA QUERIES =====*/
+    
+    @media screen and (min-width: 1024px){
+    
+      .btn-log-re{
+        left: -11rem;
+      }
+    
+      .btn-log-re{
+        bottom: -2rem;
+      }
+    }
+    a{background-color:transparent}a:active,a:hover{outline-width:0}
+    .a,.a:after,.a:link,.a:visited,.a:hover{text-decoration: none;color:white;cursor: pointer;}</style>
+
+   
+                    <div class="btn-log-re" >
+                        <h1 class="btn-log-re-title">Iniciar sesión para docentes</h1>                                        
+                              
+                        <div class="btn-log-re-title-box">
+                            <i class='bx bx-user login__icon'></i>
+                            <input  placeholder="Email" class="btn-log-re-input"   name="email" type="email"> 
+                            
+                        </div>
+    
+                        <div class="btn-log-re-title-box">
+                            <i class='bx bx-lock-alt login__icon'></i>
+                            <input type="password" placeholder="Password" class="btn-log-re-input"  input name="password">                                                        
+                        </div>
+
+                        <label for="email" hidden></label><br/><label for="password" hidden></label><br/>                    
+
+                        <a href="https://xbrpw.github.io/eso/login/docente/welcome.html" class="btn-log-buton" >Iniciar sesión</a>
+  
+                        <div>
+                            <span class="btn-log-account">No tienes una cuenta?</span>
+                            <span class="btn-log-singin">Registrarse</span><br><br>
+                            <span class="btn-log-account">Cuenta para <span  class="btn-log-singin"  onclick="document.location='https://xbrpw.github.io/eso/login/academico.html'">Estudiantes</span></span>
+                        </div>
+                    </div>
+                 

@@ -23,6 +23,9 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.02.0/css/all.min.css'> <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v6/search?o=r&m=free -->   
   <link href='https://xbrpw.github.io/assets/fontawesome/css/all.min.css' rel='stylesheet'>
   <link href='https://xbrpw.github.io/assets/fontawesome/css/regular.min.css' rel='stylesheet'>
+  <style>
+    a{background-color:transparent}a:active,a:hover{outline-width:0}
+    .a,.a:after,.a:link,.a:visited,.a:hover{text-decoration: none;color:white;cursor: pointer;}</style>
   </head>
   <body>    
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -78,12 +81,13 @@
   
       <div id="mySidebar" class="sidebar">
         <br>
-        <a href="#"  onclick="closeNav()" onclick="myFunction()" >Indicaciones</a>
-        <a href="#materias"  onclick="closeNav()" class="w3-ripple">Materias</a>
-        <a href="#proyecto" onclick="closeNav()" class="w3-ripple">Proyecto</a>      
-        <a href="./herramientas" target="eso0514" onclick="closeNav()" class="w3-ripple"><a href="#sor-juana"><i class="fa fa-tools"></i> Herramientas</a></a>      
-        <a href="./bloc-de-notas/index.html" target="eso0514" onclick="closeNav()" class="w3-ripple"><a href="#sor-juana"><i class="fa fa-pencil"></i> Bloc de notas</a></a>    
-        <a href="#comentarios" onclick="comentarios()" onclick="closeNav()" class="w3-ripple">Comentarios</a>  
+        <a href="./info.html" target="eso0514" onclick="closeNav()" >Indicaciones</a>
+        <a href="./acesos.html#materias" target="eso0514" onclick="closeNav()" class="w3-ripple">Materias</a>
+       <!-- REGRESARLO  <a href="./acesos.html#proyecto"target="eso0514" onclick="closeNav()" class="w3-ripple">Proyecto</a>    -->   
+        <a href="../herramientas.html" target="eso0514" onclick="closeNav()" class="w3-ripple"><i class="fa fa-tools"></i> Herramientas</a></a>      
+        <a href="../bloc-de-notas/index.html" target="eso0514" onclick="closeNav()" class="w3-ripple"><i class="fa fa-pencil"></i> Bloc de notas</a>    
+        <!-- REGRESARLO <a href="./info.html" target="eso0514"  onclick="closeNav()" class="w3-ripple">Comentarios</a>   -->
+        <a href="#"  onclick="closeNav()" ><small>cerrar</small></a>
       </div>
       
       <!-- App -->     
@@ -92,11 +96,12 @@
         <div class="w3-text-black w3-left w3-ripple  w3-xxlarge"class="openbtn"><h4 >Accesos </h4></div>
             <div class="w3-text-black w3-right  w3-ripple  w3-xxlarge" ><!-- <h4><i class="fa fa-search " class="w3-text-black" ></i></h4> -->  
               <h4>
-                <span onclick="myFunction()"><i class="fa fa-info " onclick="myFunction()" ></i> &nbsp; &nbsp; </span>
+                <span> <a href="./info.html" target="eso0514" ><i class="fa fa-info"></i>  </a></span> &nbsp; &nbsp; 
+               <!--  <span onclick="myFunction()"><i class="fa fa-info " onclick="myFunction()" ></i> &nbsp; &nbsp; </span>-->
                 <!-- <span> <a href="./herramientas" target="eso0514" onclick="closeNav()"><i class="fa fa-tools"></i> </a></span> &nbsp; &nbsp;  -->
                 <!-- <span> <a href="./bloc-de-notas/index.html" target="eso0514" onclick="closeNav()">  </a></span> &nbsp; &nbsp;  -->
-                <span> <a href="./alerts/index.html" target="eso0514" onclick="closeNav()"><a href="#sor-juana"><i class="fa fa-bell"></i> </a> </a></span> &nbsp; &nbsp; 
-                <svg class="icon icon-sor-juanaicon-" style=" width: 1.7em; height:1.7em;"><use xlink:href="#icon-sor-juanaicon-"></use></svg> 
+                <span> <a href="../alerts/index.html" target="eso0514" ><i class="fa fa-bell"></i> </a></span> &nbsp;
+               <span> <svg class="icon icon-sor-juanaicon-" style=" width: 1.7em; height:1.7em;"><use xlink:href="#icon-sor-juanaicon-"></use></svg></span> &nbsp; &nbsp;
               </h4> 
             </div>
       </div>
@@ -107,10 +112,12 @@
           <div class="w3-text-black w3-left w3-ripple  w3-xxlarge"class="openbtn"><h4 >Accesos </h4></div>
             <div class="w3-text-black w3-right  w3-ripple  w3-xxlarge" ><!-- <h4><i class="fa fa-search " class="w3-text-black" ></i></h4> -->  
               <h4>
-                <span onclick="myFunction()"><i class="fa fa-info " onclick="myFunction()" ></i>&nbsp; &nbsp; Indicaciones &nbsp; &nbsp; </span>
-                <span> <a href="./herramientas" target="eso0514" onclick="closeNav()"> Herramientas</a></span> &nbsp; &nbsp; 
-                <span> <a href="./bloc-de-notas/index.html" target="eso0514" onclick="closeNav()"> Bloc de notas</a></span> &nbsp; &nbsp; 
-                <span> <a href="./alerts/index.htmll" target="eso0514" onclick="closeNav()"> <i class="fa fa-bell"></i> </a></span> &nbsp; &nbsp; 
+                
+                  <span> <a href="./info.html" target="eso0514" ><i class="fa fa-info " ></i>&nbsp; &nbsp; Indicaciones</a> &nbsp; &nbsp; 
+                <!-- <span onclick="myFunction()"><i class="fa fa-info " onclick="myFunction()" ></i>&nbsp; &nbsp; Indicaciones &nbsp; &nbsp; </span> -->
+                <span> <a href="../herramientas.html" target="eso0514" > Herramientas</a></span> &nbsp; &nbsp; 
+                <span> <a href="../bloc-de-notas/index.html" target="eso0514" > Bloc de notas</a></span> &nbsp; &nbsp; 
+                <span> <a href="../alerts/index.html" target="eso0514" > <i class="fa fa-bell"></i> </a></span> &nbsp; &nbsp; 
                 <svg class="icon icon-sor-juanaicon-" style=" width: 1.7em; height:1.7em;"><use xlink:href="#icon-sor-juanaicon-"></use></svg> 
               </h4> 
             </div>
@@ -118,7 +125,7 @@
       </div>      
       <br>
 
-      <div class="w3-auto">
+    <!--   <div class="w3-auto">
       <div id="AgregarMas" class="w3-hide w3-container">
           <br><h2>Instrucciones <span class="w3-right w3-text-teal w3-small w3-ripple"" onclick="myFunction()">X</span></h2>
           <p>Desde aquí puede guardar información e ir generando una biblioteca virtual por materia. O simplemente un respaldo de las evidencias.</p>
@@ -141,28 +148,28 @@
 
       </div>
       </div>      
+      <br> -->
       <br>
-      
-      
-      <iframe id="sor-juana" src="./alerts/index.html" name="eso0514" height="650px" width="100%" title="ESO-0514" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
-
+      <div id="sor-juana" >
+      <iframe  src="./acesos.html" name="eso0514" height="650px" width="100%" title="ESO-0514" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
+    </div>
   
 
 
       <!-- el que cierrta-->
-      <div class="w3-container" style="border-radius: 20px;">
+      <!-- <div class="w3-container" style="border-radius: 20px;">
         <div class="w3-display-container w3-container w3-card-2">
             <span onclick="this.parentElement.style.display='none'" class="w3-button w3-blue-grey w3-display-topright">&times;</span>
-            <!-- contenido -->
+       
 
             <h2>Esta información es para el directorio</h2>
             <form method="post" action="https://api.sheetmonkey.io/form/jMBVZqEcZXYjBWkUsiBuE9" autoComplete="on" class="sm__form"><div class="sm__form__fields"><div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large"><label class="sm-field__label" for="sm-field-UH0FC9OUKC">Nombre (s)   </label><input type="text" class="sm-field__input sm-field__input--text" id="sm-field-UH0FC9OUKC" name="Nombre (s)"/></div></div></div><div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large"><label class="sm-field__label" for="sm-field-maApl01bwI">Apellidos   </label><input type="text" class="sm-field__input sm-field__input--text" id="sm-field-maApl01bwI" name="Apellidos"/></div></div></div><div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field--email sm-field--large"><label class="sm-field__label" for="sm-field-JWM5NR7Uj6">Email   <strong style="color:red">*</strong></label><input type="email" class="sm-field__input sm-field__input--text" id="sm-field-JWM5NR7Uj6" name="Email" autoComplete="email" required=""/><p class="sm-field__info">Correo electrónico en Google Gmail</p></div></div></div><div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field--number sm-field--large"><label class="sm-field__label" for="sm-field-NzyVA77wqD">Télefono   </label><input type="number" class="sm-field__input sm-field__input--url" id="sm-field-NzyVA77wqD" name="Télefono"/></div></div></div><div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field--number sm-field--large"><label class="sm-field__label" for="sm-field-9wezLIcj9p">Celular   </label><input type="number" class="sm-field__input sm-field__input--url" id="sm-field-9wezLIcj9p" name="Celular"/></div></div></div><div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field--large"><label class="sm-field__label" for="sm-field-tNs9YLGJ4I">Cargo   </label><div class="sm-choice-select"><select name="Cargo" class="sm-field__select" id="sm-field-tNs9YLGJ4I"><option value="Administrativo">Administrativo</option><option value="Docente">Docente</option><option value="Otro">Otro</option></select></div></div></div></div><div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field"><label class="sm-field__label" for="sm-field-gnUqyMnmxY">Materias   </label><div class="sm-choice-list"><div class="sm-choice-list__choice"><input type="checkbox" id="sm-field-gnUqyMnmxY-0" name="Materias" value="Química, Biología, Vida saludable."/><label for="sm-field-gnUqyMnmxY-0">Química, Biología, Vida saludable.</label></div><div class="sm-choice-list__choice"><input type="checkbox" id="sm-field-gnUqyMnmxY-1" name="Materias" value="Tecnología,  Talleres "/><label for="sm-field-gnUqyMnmxY-1">Tecnología,  Talleres </label></div><div class="sm-choice-list__choice"><input type="checkbox" id="sm-field-gnUqyMnmxY-2" name="Materias" value=" Matemáticas "/><label for="sm-field-gnUqyMnmxY-2"> Matemáticas </label></div><div class="sm-choice-list__choice"><input type="checkbox" id="sm-field-gnUqyMnmxY-3" name="Materias" value=" Formación Cívica y Ética,  Español,  Inglés "/><label for="sm-field-gnUqyMnmxY-3"> Formación Cívica y Ética,  Español,  Inglés </label></div><div class="sm-choice-list__choice"><input type="checkbox" id="sm-field-gnUqyMnmxY-4" name="Materias" value="Educación Física,  Historia,  Artes, Orientación"/><label for="sm-field-gnUqyMnmxY-4">Educación Física,  Historia,  Artes, Orientación</label></div><div class="sm-choice-list__choice"><input type="checkbox" id="sm-field-gnUqyMnmxY-5" name="Materias" value=" Física,  Geografía "/><label for="sm-field-gnUqyMnmxY-5"> Física,  Geografía </label></div><div class="sm-choice-list__choice"><input type="checkbox" id="sm-field-gnUqyMnmxY-6" name="Materias" value="Directivos"/><label for="sm-field-gnUqyMnmxY-6">Directivos</label></div></div></div></div></div><div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field--number sm-field--large"><label class="sm-field__label" for="sm-field-JsZb4kZgQs">Fecha de incorporación a la escuela   </label><input type="number" class="sm-field__input sm-field__input--url" id="sm-field-JsZb4kZgQs" name="Fecha de incorporación a la escuela"/></div></div></div><div class="sm-actions__container"><button type="submit" class="sm-btn sm-btn--primary" style="background-color: #11967e; color: white">Enviar</button></div><div class="sm-branding-footer">
               </div></div><link rel="stylesheet" href="data:text/css;base64,Cjpyb290IHsKICAtLXNtLWZvbnQtc2l6ZS1zbWFsbDogOTAlOwogIC0tc20tZm9udC1zaXplLXJlZ3VsYXI6IDEwMCU7CiAgLS1zbS1mb250LXNpemUtbGFyZ2U6IDEyMCU7CiAgLS1zbS1ib3JkZXItY29sb3Itbm9ybWFsOiByZ2JhKDAsIDAsIDAsIDAuMSk7CiAgLS1zbS1idG4tYmctY29sb3I6IGJsYWNrOwogIC0tc20tYnV0dG9uLWNvbG9yOiB3aGl0ZTsKICAtLXNtLXRleHQtY29sb3Itbm9ybWFsOiAjMDAwOwogIC0tc20tdGV4dC1jb2xvci1saWdodDogaHNsKDAsIDAlLCA2MCUpOwogIC0tc20tZmllbGQtYmctY29sb3I6ICNmZmY7CiAgLS1zbS1hY2NlbnQtY29sb3I6ICNGRUQzNEQ7CiAgLS1zbS1pbnZhbGlkLWJnLWNvbG9yOiByZ2JhKDI1NSwgMCwgMCwgMC4wNSk7CiAgLS1zbS14LXNtYWxsLW1hcmdpbjogNXB4OwogIC0tc20tc21hbGwtbWFyZ2luOiAxMHB4OwogIC0tc20tbWVkaXVtLW1hcmdpbjogMjBweDsKICAtLXNtLWxhcmdlLW1hcmdpbjogMzBweDsKICAtLXNtLXgtbGFyZ2UtbWFyZ2luOiA2MHB4OwogIC0tc20tbGFyZ2UtbmVnYXRpdmUtbWFyZ2luOiAtMzBweDsKICAtLXNtLXgtbGFyZ2UtbmVnYXRpdmUtbWFyZ2luOiAtNjBweDsKICAtLXNtLWlucHV0LXdpZHRoLXNtYWxsOiAzMCU7CiAgLS1zbS1pbnB1dC13aWR0aC1tZWRpdW06IDUwJTsKICAtLXNtLWlucHV0LXdpZHRoLWxhcmdlOiBhdXRvOwp9CgpAbWVkaWEgKHByZWZlcnMtY29sb3Itc2NoZW1lOiBkYXJrKSB7Cgkuc21fX2Zvcm0gewogICAgLS1zbS1ib3JkZXItY29sb3Itbm9ybWFsOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMik7CiAgICAtLXNtLWJ0bi1iZy1jb2xvcjogd2hpdGU7CiAgICAtLXNtLXRleHQtY29sb3Itbm9ybWFsOiAjZmZmOwogICAgLS1zbS10ZXh0LWNvbG9yLWxpZ2h0OiByZ2JhKDI1NSwyNTUsMjU1LCAwLjUpOwogICAgLS1zbS1idXR0b24tY29sb3I6ICMyMTIxMjQ7CiAgICAtLXNtLWZpZWxkLWJnLWNvbG9yOiAjMjEyMTI0OwogICAgLS1zbS1saW5rLWNvbG9yOiAjRkVEMzREOwogICAgLS1zbS1pbnZhbGlkLWJnLWNvbG9yOiByZ2JhKDI1NSwgMCwgMCwgMC4yKTsKICB9CiAgLnNtX19mb3JtIC5zbS1maWVsZF9faW5wdXQgewogICAgYm9yZGVyOiAxcHggc29saWQgIzdjN2M3YyAhaW1wb3J0YW50OwogIH0KICAuc21fX2Zvcm0gLnNtLWZpZWxkX19zZWxlY3QgewogICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCdkYXRhOmltYWdlL3N2Zyt4bWw7Y2hhcnNldD1VUy1BU0NJSSwlM0NzdmclMjB4bWxucyUzRCUyMmh0dHAlM0ElMkYlMkZ3d3cudzMub3JnJTJGMjAwMCUyRnN2ZyUyMiUyMHdpZHRoJTNEJTIyMjkyLjQlMjIlMjBoZWlnaHQlM0QlMjIyOTIuNCUyMiUzRSUzQ3BhdGglMjBmaWxsJTNEJTIyd2hpdGUlMjIlMjBkJTNEJTIyTTI4NyUyMDY5LjRhMTcuNiUyMDE3LjYlMjAwJTIwMCUyMDAtMTMtNS40SDE4LjRjLTUlMjAwLTkuMyUyMDEuOC0xMi45JTIwNS40QTE3LjYlMjAxNy42JTIwMCUyMDAlMjAwJTIwMCUyMDgyLjJjMCUyMDUlMjAxLjglMjA5LjMlMjA1LjQlMjAxMi45bDEyOCUyMDEyNy45YzMuNiUyMDMuNiUyMDcuOCUyMDUuNCUyMDEyLjglMjA1LjRzOS4yLTEuOCUyMDEyLjgtNS40TDI4NyUyMDk1YzMuNS0zLjUlMjA1LjQtNy44JTIwNS40LTEyLjglMjAwLTUtMS45LTkuMi01LjUtMTIuOHolMjIlMkYlM0UlM0MlMkZzdmclM0UnKSwKICAgICAgbGluZWFyLWdyYWRpZW50KHRvIGJvdHRvbSwgcmdiYSgwLDAsMCwgMC43KSAwJSxyZ2JhKDAsMCwwLCAwLjgpIDEwMCUpICFpbXBvcnRhbnQ7CiAgfQogIAp9CgpAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7CiAgOnJvb3QgewogICAgLS14LXNtYWxsLW1hcmdpbjogM3B4OwogICAgLS1zbWFsbC1tYXJnaW46IDZweDsKICAgIC0tbWVkaXVtLW1hcmdpbjogMTJweDsKICAgIC0tbGFyZ2UtbWFyZ2luOiAyNHB4OwogICAgLS14LWxhcmdlLW1hcmdpbjogNDhweDsKICAgIC0tbGFyZ2UtbmVnYXRpdmUtbWFyZ2luOiAtMjRweDsKICAgIC0teC1sYXJnZS1uZWdhdGl2ZS1tYXJnaW46IC00OHB4OwogIH0KfQoKLnNtX19mb3JtIHsKICBmb250LWZhbWlseTogIlJvYm90byIsIHNhbnMtc2VyaWY7CiAgZm9udC1zaXplOiAxNHB4OwogIGxpbmUtaGVpZ2h0OiAyMHB4Owp9Cgouc20tZm9ybS1pY29uIHsKICBtYXgtaGVpZ2h0OiA1MHB4OwogIG1hcmdpbi1sZWZ0OiB2YXIoLS1zbS1zbWFsbC1tYXJnaW4pOwogIG1hcmdpbi10b3A6IHZhcigtLXNtLW1lZGl1bS1tYXJnaW4pOwp9Cgouc20tZm9ybS1pY29uLS1oYXMtaGVhZGVyIHsKICBtYXJnaW4tdG9wOiAtMjVweDsKfQoKLnNtLWZvcm0tYmFubmVyIHsKICBoZWlnaHQ6IDE0MHB4OwogIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7CiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjsKICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7Cn0KCi5zbS1mb3JtLXRpdGxlIHsKICBib3JkZXItYm90dG9tOiAxcHggc29saWQgdmFyKC0tc20tYm9yZGVyLWNvbG9yLW5vcm1hbCk7CiAgcGFkZGluZy1ib3R0b206IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgbWFyZ2luOiB2YXIoLS1zbS1zbWFsbC1tYXJnaW4pOwp9Cgouc20tZm9ybS10aXRsZV9faGVhZGVyIHsKICBtYXJnaW4tYm90dG9tOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7CiAgY29sb3I6IHZhcigtLXNtLXRleHQtY29sb3Itbm9ybWFsKTsKfQoKLnNtLWZvcm0tdGl0bGVfX2luZm8gewogIGNvbG9yOiB2YXIoLS1zbS10ZXh0LWNvbG9yLWxpZ2h0KTsKICBtYXJnaW4tdG9wOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7CiAgbWFyZ2luLWJvdHRvbTogMDsKfQoKLnNtLWZpZWxkX193cmFwcGVyIHsKICBwYWRkaW5nOiB2YXIoLS1zbS1zbWFsbC1tYXJnaW4pOwp9Cgouc20tZmllbGRfX3dyYXBwZXI6Zmlyc3Qtb2YtdHlwZSB7CiAgcGFkZGluZy10b3A6IHZhcigtLXNtLWxhcmdlLW1hcmdpbik7Cn0KCi5zbS1maWVsZCB7CiAgZGlzcGxheTogZmxleDsKICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOwogIGJveC1zaXppbmc6IGJvcmRlci1ib3g7Cn0KCi5zbS1maWVsZCBsYWJlbCB7CiAgY29sb3I6IHZhcigtLXNtLXRleHQtY29sb3Itbm9ybWFsKTsgIAp9Cgouc20tZmllbGQtLXNtYWxsIHsKICB3aWR0aDogdmFyKC0tc20taW5wdXQtd2lkdGgtc21hbGwpOwp9Cgouc20tZmllbGQtLW1lZGl1bSB7CiAgd2lkdGg6IHZhcigtLXNtLWlucHV0LXdpZHRoLW1lZGl1bSk7Cn0KCi5zbS1maWVsZC0tbGFyZ2UgewogIHdpZHRoOiB2YXIoLS1zbS1pbnB1dC13aWR0aC1sYXJnZSk7Cn0KCi5zbS1maWVsZC0tbGFyZ2Ugc2VsZWN0IHsKICB3aWR0aDogMTAwJTsKfQoKLnNtLWZpZWxkX19sYWJlbCB7CiAgbWFyZ2luLWJvdHRvbTogdmFyKC0tc20teC1zbWFsbC1tYXJnaW4pOwogIGNvbG9yOiB2YXIoIC0tc20tdGV4dC1jb2xvci1ub3JtYWwpOwogIGZvbnQtd2VpZ2h0OiA1MDA7Cn0KCi5zbS1maWVsZF9faW5wdXQgewogIGFsbDogdW5zZXQ7CiAgcGFkZGluZzogdmFyKC0tc20tc21hbGwtbWFyZ2luKTsKICBib3JkZXItdG9wOiAxcHggc29saWQgIzdjN2M3YzsKICBib3JkZXItbGVmdDogMXB4IHNvbGlkICNjM2MzYzM7CiAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2MzYzNjMzsKICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2RkZDsKICBiYWNrZ3JvdW5kOiB2YXIoLS1zbS1maWVsZC1iZy1jb2xvcik7CiAgYm9yZGVyLXJhZGl1czogNXB4OwogIGNvbG9yOiB2YXIoLS1zbS10ZXh0LWNvbG9yLW5vcm1hbCk7CiAgZm9udC1zaXplOiAxNnB4Owp9Cgouc20tZmllbGRfX2lucHV0OmZvY3VzOmludmFsaWQgewogIGJveC1zaGFkb3c6IGluc2V0IDAgMCAzcHggcmdiKDI1NSAwIDApOwogIGJhY2tncm91bmQtY29sb3I6IHZhcigtLXNtLWludmFsaWQtYmctY29sb3IpOwp9Cgouc20tZmllbGRfX3NlbGVjdCB7CiAgYWxsOiB1bnNldDsKICBmb250LXNpemU6IDE2cHg7CiAgcGFkZGluZzogdmFyKC0tc20tc21hbGwtbWFyZ2luKTsKICBwYWRkaW5nLXJpZ2h0OiB2YXIoLS1zbS1sYXJnZS1tYXJnaW4pOwogIGJvcmRlcjogMXB4IHNvbGlkICM3YzdjN2M7CiAgYm94LXNoYWRvdzogMCAxcHggMCAxcHggcmdiYSgwLDAsMCwuMDQpOwogIGJhY2tncm91bmQ6IHZhcigtLXNtLWJ0bi1iZy1jb2xvcik7CiAgYm9yZGVyLXJhZGl1czogNXB4OwogIGFwcGVhcmFuY2U6IG5vbmU7CiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCdkYXRhOmltYWdlL3N2Zyt4bWw7Y2hhcnNldD1VUy1BU0NJSSwlM0NzdmclMjB4bWxucyUzRCUyMmh0dHAlM0ElMkYlMkZ3d3cudzMub3JnJTJGMjAwMCUyRnN2ZyUyMiUyMHdpZHRoJTNEJTIyMjkyLjQlMjIlMjBoZWlnaHQlM0QlMjIyOTIuNCUyMiUzRSUzQ3BhdGglMjBmaWxsJTNEJTIydmFyKC0tc20tdGV4dC1jb2xvci1ub3JtYWwpJTIyJTIwZCUzRCUyMk0yODclMjA2OS40YTE3LjYlMjAxNy42JTIwMCUyMDAlMjAwLTEzLTUuNEgxOC40Yy01JTIwMC05LjMlMjAxLjgtMTIuOSUyMDUuNEExNy42JTIwMTcuNiUyMDAlMjAwJTIwMCUyMDAlMjA4Mi4yYzAlMjA1JTIwMS44JTIwOS4zJTIwNS40JTIwMTIuOWwxMjglMjAxMjcuOWMzLjYlMjAzLjYlMjA3LjglMjA1LjQlMjAxMi44JTIwNS40czkuMi0xLjglMjAxMi44LTUuNEwyODclMjA5NWMzLjUtMy41JTIwNS40LTcuOCUyMDUuNC0xMi44JTIwMC01LTEuOS05LjItNS41LTEyLjh6JTIyJTJGJTNFJTNDJTJGc3ZnJTNFJyksCiAgbGluZWFyLWdyYWRpZW50KHRvIGJvdHRvbSwgI2ZmZmZmZiAwJSwjZTVlNWU1IDEwMCUpOwogIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQsIHJlcGVhdDsKICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiByaWdodCAuN2VtIHRvcCA1MCUsIDAgMDsKICBiYWNrZ3JvdW5kLXNpemU6IC42NWVtIGF1dG8sIDEwMCU7CiAgYm94LXNpemluZzogYm9yZGVyLWJveDsKICB3aWR0aDogMTAwJTsKICBjb2xvcjogdmFyKC0tc20tdGV4dC1jb2xvci1ub3JtYWwpOwp9Cgouc20tZmllbGRfX2lucHV0OjpwbGFjZWhvbGRlciB7CiAgY29sb3I6IHZhcigtLXNtLXRleHQtY29sb3ItbGlnaHQpOwp9Cgouc20tZmllbGRfX2lucHV0LnNtLWZpZWxkX19pbnB1dC0tdGV4dCwKLnNtLWZpZWxkX19pbnB1dC5zbS1maWVsZF9faW5wdXQtLXRleHRhcmVhIHsKICBjdXJzb3I6IHRleHQ7Cn0KCi5zbS1maWVsZF9faW5wdXQuc20tZmllbGRfX2lucHV0LS10ZXh0YXJlYSB7CiAgcmVzaXplOiB2ZXJ0aWNhbDsKICBtaW4taGVpZ2h0OiA2MHB4Owp9Cgouc20tZmllbGRfX2lucHV0LS1maWxlIHsKICBtYXJnaW4tdG9wOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7Cn0KCi5zbS1jaG9pY2UtbGlzdF9fY2hvaWNlIHsKICBkaXNwbGF5OiBmbGV4OwogIGZsZXgtZGlyZWN0aW9uOiByb3c7CiAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICBtYXJnaW4tYm90dG9tOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7Cn0KCi5zbS1jaG9pY2UtbGlzdF9fY2hvaWNlIGlucHV0IHsKICBtYXJnaW4tcmlnaHQ6IHZhcigtLXNtLXgtc21hbGwtbWFyZ2luKTsKfQoKLnNtLWZpZWxkX19pbmZvIHsKICBjb2xvcjogdmFyKC0tc20tdGV4dC1jb2xvci1saWdodCk7CiAgZm9udC1zaXplOiB2YXIoLS1zbS1mb250LXNpemUtc21hbGwpOwp9Cgouc20tc2VjdGlvbi1icmVhayB7CiAgYm9yZGVyLXRvcDogMXB4IHNvbGlkIHZhcigtLXNtLWJvcmRlci1jb2xvci1ub3JtYWwpOwp9Cgouc20tc2VjdGlvbi1icmVha19faGVhZGVyIHsKICBtYXJnaW4tYm90dG9tOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7CiAgY29sb3I6IHZhcigtLXNtLXRleHQtY29sb3Itbm9ybWFsKTsKICBmb250LXdlaWdodDogNTAwOwp9Cgouc20tc2VjdGlvbi1icmVha19faW5mbyB7CiAgbWFyZ2luLXRvcDogMDsKICBjb2xvcjogdmFyKC0tc20tdGV4dC1jb2xvci1saWdodCk7Cn0KCi5zbS1hY3Rpb25zX19jb250YWluZXIgewogIGJvcmRlci10b3A6IDFweCBzb2xpZCB2YXIoLS1zbS1ib3JkZXItY29sb3Itbm9ybWFsKTsKICBtYXJnaW46IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgcGFkZGluZy10b3A6IHZhcigtLXNtLW1lZGl1bS1tYXJnaW4pOwp9Cgouc20tYnJhbmRpbmctZm9vdGVyIHsKICBtYXJnaW46IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgcGFkZGluZy10b3A6IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgcGFkZGluZy1ib3R0b206IHZhcigtLXNtLW1lZGl1bS1tYXJnaW4pOwogIGZvbnQtc2l6ZTogOTAlOwp9Cgouc20tYnJhbmRpbmctZm9vdGVyIGEgewogIHRleHQtZGVjb3JhdGlvbjogbm9uZTsKICBjb2xvcjogdmFyKC0tc20tbGluay1jb2xvcik7Cn0KCi5zbS1idG4gewogIGJhY2tncm91bmQ6IHZhcigtLXNtLWJvcmRlci1jb2xvci1ub3JtYWwpOwogIGJvcmRlcjogMDsKICBib3JkZXItcmFkaXVzOiA2cHg7CiAgcGFkZGluZzogdmFyKC0tc20tc21hbGwtbWFyZ2luKSB2YXIoLS1zbS1tZWRpdW0tbWFyZ2luKTsKICBmb250LXNpemU6IDEyMCU7CiAgZm9udC13ZWlnaHQ6IDYwMDsKICBjdXJzb3I6IHBvaW50ZXI7Cn0KCi5zbS1idG4tLXByaW1hcnkgewogIGJhY2tncm91bmQ6IHZhcigtLXNtLXRleHQtY29sb3Itbm9ybWFsKTsKICBjb2xvcjogdmFyKC0tc20tYnV0dG9uLWNvbG9yKTsKfQoKLnNtLWJ0bjpob3ZlciB7CiAgYm94LXNoYWRvdzogMCAwIDZweCAtMXB4IHZhcigtLXNtLWFjY2VudC1jb2xvcik7Cn0KCi5zbS1maWVsZF9fZ3JvdXAgewogIGRpc3BsYXk6IGZsZXg7CiAgZmxleC1kaXJlY3Rpb246IHJvdzsKfQoKLnNtLWZpZWxkX19ncm91cC1pdGVtIHsKICBkaXNwbGF5OiBmbGV4OwogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47CiAgbWFyZ2luLXJpZ2h0OiB2YXIoLS1zbS1zbWFsbC1tYXJnaW4pOwp9Cgouc20tZmllbGRfX2dyb3VwLWl0ZW06bGFzdC1vZi10eXBlIHsKICBtYXJnaW4tcmlnaHQ6IDA7Cn0KCi5zbS1maWVsZF9faXRlbS1pbmZvIHsKICBjb2xvcjogdmFyKC0tc20tdGV4dC1jb2xvci1saWdodCk7CiAgZm9udC1zaXplOiB2YXIoLS1zbS1mb250LXNpemUtc21hbGwpOwp9Cgouc20tZmllbGRfX2dyb3VwLWl0ZW0gewogIGZsZXg6IDE7Cn0KCgouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLWxhcmdlIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpmaXJzdC1vZi10eXBlIHsKICBmbGV4OiAwOwp9Cgouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLWxhcmdlICAuc20tZmllbGRfX2dyb3VwLWl0ZW06bGFzdC1vZi10eXBlIHsKICBmbGV4OiAxOwp9Cgouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLXNtYWxsIC5zbS1maWVsZF9fZ3JvdXAsCi5zbS1maWVsZC0tbmFtZS5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAgewogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47Cn0KCi5zbS1maWVsZC0tbmFtZS5zbS1maWVsZC0tc21hbGwgLnNtLWZpZWxkX19ncm91cC1pdGVtLAouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLW1lZGl1bSAuc20tZmllbGRfX2dyb3VwLWl0ZW0gewogIG1hcmdpbi1ib3R0b206IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgbWFyZ2luLXJpZ2h0OiAwOwp9Cgouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLXNtYWxsIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpsYXN0LW9mLXR5cGUsCi5zbS1maWVsZC0tbmFtZS5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpsYXN0LW9mLXR5cGUgIHsKICBtYXJnaW4tYm90dG9tOiAwOwp9Cgouc20tZmllbGQtLWFkZHJlc3Muc20tZmllbGQtLXNtYWxsIC5zbS1maWVsZF9fZ3JvdXAsCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAgewogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47Cn0KCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tc21hbGwgLnNtLWZpZWxkX19ncm91cC1pdGVtLAouc20tZmllbGQtLWFkZHJlc3Muc20tZmllbGQtLW1lZGl1bSAuc20tZmllbGRfX2dyb3VwLWl0ZW0gewogIG1hcmdpbi1ib3R0b206IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgbWFyZ2luLXJpZ2h0OiAwOwp9Cgouc20tZmllbGQtLWFkZHJlc3Muc20tZmllbGQtLXNtYWxsIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpsYXN0LW9mLXR5cGUsCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpsYXN0LW9mLXR5cGUsCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tc21hbGwgLnNtLWZpZWxkX19ncm91cC1pdGVtOmZpcnN0LW9mLXR5cGUsCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpmaXJzdC1vZi10eXBlICB7CiAgbWFyZ2luLWJvdHRvbTogMDsKfQoKLnNtLWZpZWxkLS1hZGRyZXNzIC5zbS1maWVsZF9faW5wdXQgewogIG1hcmdpbi1ib3R0b206IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7Cn0K"/></form>
-            <!-- /contenido -->
-          </div><!-- ojo ---->
-      </div><!-- /el que cierra -->
+           
+          </div>
+      </div> <!-- /el que cierra -->
 
-      <div class="container mt6"><input class="form-control" id="myInput" type="text" placeholder="Buscar">  </div><br>        
+     <!--  <div class="container mt6"><input class="form-control" id="myInput" type="text" placeholder="Buscar">  </div><br>        
       <div class="container " >	
         <div class=" table-responsive table-striped" id="myDIV">
           
@@ -256,9 +263,9 @@
               </tr>
               </tbody>
           </table>
-        </div><!-- /MyDiv -->
-      </div><!-- /container 5 -->  
-    </div><!-- imporatnte --><br><br><br>
+        </div>
+      </div>
+    </div><br><br><br> -->
   
                 
     </div><!-- ojo -->
@@ -272,7 +279,7 @@
           <input id="email" name="email" type="email" /><br/>
           <label for="password">Password</label><br/>
           <input id="password" name="password" type="password" /><br/><br/>
-          <button id="loginBtn">Entrar</button>
+          <button  id="loginBtn" style="background-color: #0e6d5b; color:white" class="w3-btn w3-round-xxlarge  w3-hover-teal   w3-block"><b>Entrar</b></button>
         </div>
       </div>
       <div class="w3-container w3-half">
@@ -284,7 +291,10 @@
           <input name="createPassword" type="password" /><br/>
           <label for="confirmPassword">Repite Password</label><br/>
           <input name="confirmPassword" type="password" /><br/><br/>
-          <button id="createBtn">Crear perfil</button>
+          <button  id="createBtn" style="background-color: #0e6d5b; color:white" class="w3-btn w3-round-xxlarge  w3-hover-teal   w3-block"><b>Crear perfil</b></button>
+          
+        </div>
+     
         </div>
       </div> 
       </div>
@@ -371,3 +381,167 @@
     </script>
   </body>
 </html>
+
+
+<script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>
+<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+<style>/*===== GOOGLE FONTS =====*/
+
+  
+  /*===== VARIABLES CSS =====*/
+  :root{
+    /*===== Colores =====*/
+    --first-color: #0e6d5b;
+    --first-color-dark: #16462e;
+    --first-color-light: #103113;
+    --first-color-lighten: #F2F2F2;
+    --blue-color: #085548;
+  
+    /*===== Font and typography =====*/
+    --body-font: 'Open Sans', sans-serif;
+    --h1-font-size: 1.5rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+  }
+  
+  @media screen and (min-width: 768px){
+    :root{
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+    }
+  }
+  
+
+  a{
+    text-decoration: none;
+  }
+  
+  /*===== LOGIN =====*/
+  
+  .btn-log-re{
+padding: 5px 5px 5px 5px;
+margin: 10px 10px 10px
+    width: 100%;
+    background-color: var(--first-color-lighten);
+  
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(35,0,77,.2);
+    animation-duration: .4s;
+    animation-name: animate-login;
+  }
+  
+  @keyframes animate-login{
+    0%{
+      transform: scale(1,1);
+    }
+    50%{
+      transform: scale(1.1,1.1);
+    }
+    100%{
+      transform: scale(1,1);
+    }
+  }
+  
+  .btn-log-re-title{
+    font-size: var(--h1-font-size);
+    margin-bottom: 2rem;
+  }
+  
+  .btn-log-re-title-box{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: .5rem;
+    padding: 1.125rem 1rem;
+    background-color: #FFF;
+    margin-top: 1rem;
+    border-radius: .5rem;
+  }
+  
+  .login__icon{
+    font-size: 1.5rem;
+    color: var(--first-color);
+  }
+  
+  .btn-log-re-input{
+    border: none;
+    outline: none;
+    font-size: var(--normal-font-size);
+    font-weight: 700;
+    color: var(--first-color-dark);
+  }
+  
+  .btn-log-buton{
+    display: block;
+    padding: 1rem;
+    margin: 2rem 0;
+    background-color: var(--first-color);
+    color: #FFF;text-shadow: 2px 2px 4px #000000;
+    font-weight: 600;
+    text-align: center;
+    border-radius: .5rem;
+    transition: .3s;
+    font-size: large;
+  }
+  
+  .btn-log-buton:hover{
+    background-color: var(--first-color-dark);
+  }
+  
+  .btn-log-account, .btn-log-singin{
+    font-weight: 600;
+    font-size: var(--small-font-size);
+  }
+  
+  .btn-log-account{
+    color: var(--first-color-dark);
+  }
+  
+  .btn-log-singin{
+    color: var(--first-color);
+    cursor: pointer;
+  }
+  
+  /*Show login*/
+  
+  /*Hidden login*/
+  
+  /* ===== MEDIA QUERIES =====*/
+  
+  @media screen and (min-width: 1024px){
+  
+    .btn-log-re{
+      left: -11rem;
+    }
+  
+    .btn-log-re{
+      bottom: -2rem;
+    }
+  }</style>
+
+ 
+<!-- <div class="btn-log-re" >
+  <div class="w3-container ">
+  <h1 class="btn-log-re-title">Iniciar sesión para docentes</h1>                                        
+        
+  <div class="btn-log-re-title-box">
+      <i class='bx bx-user login__icon'></i>
+      <input  placeholder="Email" class="btn-log-re-input"   name="email" type="email"> 
+      
+  </div>
+
+  <div class="btn-log-re-title-box">
+      <i class='bx bx-lock-alt login__icon'></i>
+      <input type="password" placeholder="Password" class="btn-log-re-input"  input name="password">                                                        
+  </div>
+
+  <label for="email" hidden></label><br/><label for="password" hidden></label><br/>                    
+
+    <a href="https://xbrpw.github.io/eso/login/docente/welcome.html" class="btn-log-buton a ablanco" >Iniciar sesión</a>
+
+  <div>
+      <span class="btn-log-account">No tienes una cuenta?</span>
+      <span class="btn-log-singin">Registrarse</span><br><br>
+      <span class="btn-log-account">Cuenta para <span  class="btn-log-singin"  onclick="document.location='https://xbrpw.github.io/eso/login/academico.html'">Estudiantes</span></span>
+  </div>
+</div> -->
