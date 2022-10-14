@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+body {
+  height: 100vh;
+  background-color: #333;
+  font-family: "Roboto", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+main {
+  --text: "⚡🗲404:!";
+  /*--text: "text";*/
+  --hue: 220deg;
+  --spin: 25deg;
+  --light-color: #1d1e75;
+  --perspective: 80vmin;
+  --stripe: .3em;
+  --stripe-angle: -35deg;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: linear-gradient(to bottom, #383838, #3c3c3c 50%, #2f2f2f 60%, #0b0e13);
+  font-size: 17.5vmin;
+}
+main .light {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 90%;
+  height: 60%;
+  min-height: 6em;
+  transform: translateX(-50%) translateY(-1em);
+  z-index: 1;
+  mix-blend-mode: screen;
+  filter: blur(0.15em);
+  opacity: 0.6;
+}
+main .light::before {
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, var(--light-color), transparent);
+  -webkit-clip-path: polygon(25% 0, 75% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(25% 0, 75% 0, 100% 100%, 0% 100%);
+  border-radius: 0 0 1em 1em;
+}
+main figure {
+  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  perspective: var(--perspective);
+}
+main figure span {
+  display: block;
+}
+main figure span::before {
+  text-align: center;
+  content: var(--text);
+  white-space: pre;
+  display: block;
+}
+main figure .text {
+  -webkit-animation: rotate 3s ease-in-out infinite both alternate;
+          animation: rotate 3s ease-in-out infinite both alternate;
+  transform-style: preserve-3d;
+  position: relative;
+}
+main figure .text span {
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main figure .text span:first-child {
+  position: static;
+  -webkit-animation: shine 3s linear infinite;
+          animation: shine 3s linear infinite;
+}
+main figure .text span:nth-child(1)::before {
+  transform: translateZ(-0.01em);
+  color: hsl(var(--hue), 59%, 77.5%);
+}
+main figure .text span:nth-child(2)::before {
+  transform: translateZ(-0.02em);
+  color: hsl(var(--hue), 58%, 75%);
+}
+main figure .text span:nth-child(3)::before {
+  transform: translateZ(-0.03em);
+  color: hsl(var(--hue), 57%, 72.5%);
+}
+main figure .text span:nth-child(4)::before {
+  transform: translateZ(-0.04em);
+  color: hsl(var(--hue), 56%, 70%);
+}
+main figure .text span:nth-child(5)::before {
+  transform: translateZ(-0.05em);
+  color: hsl(var(--hue), 55%, 67.5%);
+}
+main figure .text span:nth-child(6)::before {
+  transform: translateZ(-0.06em);
+  color: hsl(var(--hue), 54%, 65%);
+}
+main figure .text span:nth-child(7)::before {
+  transform: translateZ(-0.07em);
+  color: hsl(var(--hue), 53%, 62.5%);
+}
+main figure .text span:nth-child(8)::before {
+  transform: translateZ(-0.08em);
+  color: hsl(var(--hue), 52%, 60%);
+}
+main figure .text span:nth-child(9)::before {
+  transform: translateZ(-0.09em);
+  color: hsl(var(--hue), 51%, 57.5%);
+}
+main figure .text span:nth-child(10)::before {
+  transform: translateZ(-0.1em);
+  color: hsl(var(--hue), 50%, 55%);
+}
+main figure .text span:nth-child(11)::before {
+  transform: translateZ(-0.11em);
+  color: hsl(var(--hue), 49%, 52.5%);
+}
+main figure .text span:nth-child(12)::before {
+  transform: translateZ(-0.12em);
+  color: hsl(var(--hue), 48%, 50%);
+}
+main figure .text span:nth-child(13)::before {
+  transform: translateZ(-0.13em);
+  color: hsl(var(--hue), 47%, 47.5%);
+}
+main figure .text span:nth-child(14)::before {
+  transform: translateZ(-0.14em);
+  color: hsl(var(--hue), 46%, 45%);
+}
+main figure .text span:nth-child(15)::before {
+  transform: translateZ(-0.15em);
+  color: hsl(var(--hue), 45%, 42.5%);
+}
+main figure .text span:nth-child(16)::before {
+  transform: translateZ(-0.16em);
+  color: hsl(var(--hue), 44%, 40%);
+}
+main figure .text span:nth-child(17)::before {
+  transform: translateZ(-0.17em);
+  color: hsl(var(--hue), 43%, 37.5%);
+}
+main figure .text span:nth-child(18)::before {
+  transform: translateZ(-0.18em);
+  color: hsl(var(--hue), 42%, 35%);
+}
+main figure .text span:nth-child(19)::before {
+  transform: translateZ(-0.19em);
+  color: hsl(var(--hue), 41%, 32.5%);
+}
+main figure .text span:nth-child(20)::before {
+  transform: translateZ(-0.2em);
+  color: hsl(var(--hue), 40%, 30%);
+}
+main figure .shadow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transform-style: preserve-3d;
+  perspective: var(--perspective);
+  width: 90vw;
+  height: 90vw;
+  font-size: 1em;
+  transform: translate3D(0, 2em, 0) rotateX(90deg);
+  opacity: 0.9;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+main figure .shadow::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(closest-side, var(--light-color), transparent);
+  transform: translateY(1px);
+  z-index: 0;
+  mix-blend-mode: screen;
+  opacity: 0.5;
+}
+main figure .shadow::before {
+  filter: blur(4px);
+  opacity: 0.8;
+  -webkit-animation: rotate-shadow 3s ease-in-out infinite both alternate;
+          animation: rotate-shadow 3s ease-in-out infinite both alternate;
+  z-index: 1;
+}
+@media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+  main figure .shadow::before {
+    filter: none;
+    opacity: 0.6;
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate3D(0, 1, 0, calc(var(--spin) * -1)) rotateX(30deg);
+  }
+  to {
+    transform: rotate3D(0, 1, 0, var(--spin)) rotateX(30deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate3D(0, 1, 0, calc(var(--spin) * -1)) rotateX(30deg);
+  }
+  to {
+    transform: rotate3D(0, 1, 0, var(--spin)) rotateX(30deg);
+  }
+}
+@-webkit-keyframes rotate-shadow {
+  from {
+    transform: rotateZ(var(--spin));
+  }
+  to {
+    transform: rotateZ(calc(var(--spin) * -1));
+  }
+}
+@keyframes rotate-shadow {
+  from {
+    transform: rotateZ(var(--spin));
+  }
+  to {
+    transform: rotateZ(calc(var(--spin) * -1));
+  }
+}
+@-webkit-keyframes shine {
+  0% {
+    filter: brightness(1);
+  }
+  30% {
+    filter: brightness(1.2);
+  }
+  50% {
+    filter: brightness(1.4);
+  }
+  70% {
+    filter: brightness(1.2);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+@keyframes shine {
+  0% {
+    filter: brightness(1);
+  }
+  30% {
+    filter: brightness(1.2);
+  }
+  50% {
+    filter: brightness(1.4);
+  }
+  70% {
+    filter: brightness(1.2);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
