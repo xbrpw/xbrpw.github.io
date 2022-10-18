@@ -409,215 +409,29 @@
     <!-- Overlay effect when opening sidebar on small screens -->
     <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
     <!-- Header --><br><br><br><br><br>
-
+    <!-- <div class="header" id="myHeader">
+        <p></p>
+        <button class="btn"></button>
+        <button class="btn" onclick="one()">1</button>
+        <button class="btn" onclick="two()">2</button>
+        <button class="btn" onclick="tres()">3</button>
+        <button class="btn" onclick="five()">4</button>
+        <button class="btn active" onclick="four()">5</button>
+    </div> -->
     <!-- Photo Grid -->
-    <div class="row" >        
-        <div class="column"><img src="./img/icons/baner-apps.svg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/icons/baner-bloc-de-notas.svg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/baner-unminuto.webp" style="width:100%" onclick="openModal();currentSlide(69)" class="hover-shadow cursor"></div>        
-        <div class="column"><img src="./img/icons/baner-calcu.svg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"></div>        
-        <div class="column"><img src="./img/icons/baner-tablet.svg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/icons/baner-unminuto.svg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/icons/baner-tu-cel.svg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/icons/app-tabla-periodica-de-los-elementos-quimicos.svg" style="width:100%" onclick="openModal();currentSlide(146)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/tutores-o-padres-de-familia_wcbmzx_c_scale,w_200.webp" style="width:100%" onclick="openModal();currentSlide(134)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/tutores-o-padres-de-familia_wcbmzx_c_scale,w_700.webp" style="width:100%" onclick="openModal();currentSlide(135)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/tutores-o-padres-de-familia.webp" style="width:100%" onclick="openModal();currentSlide(136)" class="hover-shadow cursor"></div>        
-        <div class="column"><img src="./img/estudiante.webp" style="width:100%" onclick="openModal();currentSlide(84)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/general.webp" style="width:100%" onclick="openModal();currentSlide(89)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/profesores.webp" style="width:100%" onclick="openModal();currentSlide(114)" class="hover-shadow cursor"></div>                        
-        <div class="column"><img src="./img/icons/calculadora-cientifica.svg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/icons/tu-celular.svg" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/icons/ico-bloc-de-notas.svg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/icons/ico-calcu.svg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/icons/ICO-MULTIPLICAR.svg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/icons/ico-tablet.svg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/icons/ico-tu-cel.svg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/icons/orientacion.svg" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor"></div>        
-        <div class="column"><img src="./img/ico-xbr/app-de-estudio.svg" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/ico-xbr/avisos-escolares.svg" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/ico-xbr/bloc-de-notas-app.svg" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/ico-xbr/docentes.svg" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/ico-xbr/educacion-fisica.svg" style="width:100%" onclick="openModal();currentSlide(19)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/ico-xbr/estudiante-icon.svg" style="width:100%" onclick="openModal();currentSlide(20)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/ico-xbr/estudiante-sentado.svg" style="width:100%" onclick="openModal();currentSlide(21)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/ico-xbr/home-escuela.svg" style="width:100%" onclick="openModal();currentSlide(22)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/ico-xbr/libros-online.svg" style="width:100%" onclick="openModal();currentSlide(23)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/ico-xbr/location-escuela.svg" style="width:100%" onclick="openModal();currentSlide(24)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/ico-xbr/maestro-dando-clase.svg" style="width:100%" onclick="openModal();currentSlide(25)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/ico-xbr/mochila.svg" style="width:100%" onclick="openModal();currentSlide(26)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/timer_121243.svg" style="width:100%" onclick="openModal();currentSlide(39)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/social.svg" style="width:100%" onclick="openModal();currentSlide(37)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/Formula-amico.svg" style="width:100%" onclick="openModal();currentSlide(27)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/Formula-bro.svg" style="width:100%" onclick="openModal();currentSlide(28)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/Formula-rafiki.svg" style="width:100%" onclick="openModal();currentSlide(29)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/Information-bro.svg" style="width:100%" onclick="openModal();currentSlide(30)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/Information-pana.svg" style="width:100%" onclick="openModal();currentSlide(31)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/Learning-bro.svg" style="width:100%" onclick="openModal();currentSlide(32)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/Mobile-Marketing-cuate.svg" style="width:100%" onclick="openModal();currentSlide(33)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/Mobile-Marketing-rafiki.svg" style="width:100%" onclick="openModal();currentSlide(34)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/Next steps-amico.svg" style="width:100%" onclick="openModal();currentSlide(35)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/Next-steps-rafiki.svg" style="width:100%" onclick="openModal();currentSlide(36)" class="hover-shadow cursor"></div>        
-        <div class="column"><img src="./img/storyset/Telecommuting-pana.svg" style="width:100%" onclick="openModal();currentSlide(38)" class="hover-shadow cursor"></div>        
-        <div class="column"><img src="./img/storyset/Vision-board-pana.svg" style="width:100%" onclick="openModal();currentSlide(40)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/Webinar-pana.svg" style="width:100%" onclick="openModal();currentSlide(41)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/Webinar-rafiki.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/Mobile login-bro.svg" style="width:100%" onclick="openModal();currentSlide(51)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/Forgot password-rafiki.svg" style="width:100%" onclick="openModal();currentSlide(50)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/Login-amico.svg" style="width:100%" onclick="openModal();currentSlide(49)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/storyset/Login-pana.svg" style="width:100%" onclick="openModal();currentSlide(48)" class="hover-shadow cursor"></div>
-        
-        
-        
-        
+    <div class="row" sheetsu="https://sheetsu.com/apis/v1.0bu/5155e20b12b2" >        
+        <div class="column">
+            <img src=".img/{{name}}" style="width:100%" onclick="openModal();currentSlide({{id}})" class="hover-shadow cursor">
+        </div>  
+    </div><script src="https://load.sheetsu.com"></script>
 
-        <div class="column"><img src="./img/bullying/_designed_with_EDIT.org (4).webp" style="width:100%" onclick="openModal();currentSlide(43)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/bullying/_designed_with_EDIT.org.webp" style="width:100%" onclick="openModal();currentSlide(44)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/bullying/0ba5a665d7e93f1a7a666b5be7f07ad3_edit.org.jpg-376.webp" style="width:100%" onclick="openModal();currentSlide(45)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/bullying/1c8ce06660c55cc41b479430b9656b9f.webp" style="width:100%" onclick="openModal();currentSlide(46)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/bullying/4qj-bullying-posters-plantillas-gratis-imprimir.jpg-1300.webp" style="width:100%" onclick="openModal();currentSlide(47)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/bullying/54696_666_375_undefined_undefined_projectImageOriginalUrl.webp" style="width:100%" onclick="openModal();currentSlide(48)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/bullying/bu-9.webp" style="width:100%" onclick="openModal();currentSlide(49)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/bullying/Bullying-01.webp" style="width:100%" onclick="openModal();currentSlide(50)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/bullying/depositphotos_64247737-stock-illustration-stop-bullying-signs.webp" style="width:100%" onclick="openModal();currentSlide(51)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/bullying/el-bullying-en-la-legislacion-espanola-ley-bullying.webp" style="width:100%" onclick="openModal();currentSlide(52)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/bullying/gz9-plantilla-cyber-bullying-gratis-imprimir.jpg-840.webp" style="width:100%" onclick="openModal();currentSlide(53)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/bullying/stop.webp" style="width:100%" onclick="openModal();currentSlide(54)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/bullying/Zona_libre_de_Bullying_1472x625.webp" style="width:100%" onclick="openModal();currentSlide(55)" class="hover-shadow cursor"></div>        
-        <div class="column"><img src="./img/600x400.svg" style="width:100%" onclick="openModal();currentSlide(60)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/600x400obligame-perro.svg" style="width:100%" onclick="openModal();currentSlide(61)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/600x400v1.svg" style="width:100%" onclick="openModal();currentSlide(62)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/app-web.svg" style="width:100%" onclick="openModal();currentSlide(63)" class="hover-shadow cursor"></div>        
-        <div class="column"><img src="./img/avatar1.png" style="width:100%" onclick="openModal();currentSlide(65)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/avatar2.png" style="width:100%" onclick="openModal();currentSlide(66)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/avatar3.webp" style="width:100%" onclick="openModal();currentSlide(67)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/avatar4.png" style="width:100%" onclick="openModal();currentSlide(68)" class="hover-shadow cursor"></div>        
-        <div class="column"><img src="./img/English teacher-amico.svg" style="width:100%" onclick="openModal();currentSlide(71)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/English teacher-bro.svg" style="width:100%" onclick="openModal();currentSlide(72)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/error-404.svg" style="width:100%" onclick="openModal();currentSlide(73)" class="hover-shadow cursor"></div>                
-        <div class="column"><img src="./img/escudo escuela secundaria oficial 0514 sor juana ines de la cruz.webp" style="width:100%" onclick="openModal();currentSlide(76)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/escudo escuela secundaria oficial 514 sor juana ines de la cruz.svg" style="width:100%" onclick="openModal();currentSlide(77)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/escudo_estado_mexico_para_colorear.webp" style="width:100%" onclick="openModal();currentSlide(78)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/escudo-de-gobierno-de-mexico.webp" style="width:100%" onclick="openModal();currentSlide(79)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/eso0514-20220831.webp" style="width:100%" onclick="openModal();currentSlide(80)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/eso0514-vertical.svg" style="width:100%" onclick="openModal();currentSlide(81)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/eso0514.svg" style="width:100%" onclick="openModal();currentSlide(82)" class="hover-shadow cursor"></div>            
-        <div class="column"><img src="./img/Formula-amico.svg" style="width:100%" onclick="openModal();currentSlide(85)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/Formula-pana.svg" style="width:100%" onclick="openModal();currentSlide(86)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/Formula-rafiki.svg" style="width:100%" onclick="openModal();currentSlide(87)" class="hover-shadow cursor"></div>        
-        
-        <div class="column"><img src="./img/Image upload-amico.svg" style="width:100%" onclick="openModal();currentSlide(90)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/Image upload-rafiki.svg" style="width:100%" onclick="openModal();currentSlide(91)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/images.png" style="width:100%" onclick="openModal();currentSlide(92)" class="hover-shadow cursor"></div>        
-        <div class="column"><img src="./img/logo-big.webp" style="width:100%" onclick="openModal();currentSlide(94)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/logo-blanco.svg" style="width:100%" onclick="openModal();currentSlide(95)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/logo-completo.webp" style="width:100%" onclick="openModal();currentSlide(96)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/logo-escudo.webp" style="width:100%" onclick="openModal();currentSlide(97)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/LOGO-ESCUELA-SECUNDARIA-OFICIAL-0514.svg" style="width:100%" onclick="openModal();currentSlide(98)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/logo-eso.svg" style="width:100%" onclick="openModal();currentSlide(99)" class="hover-shadow cursor"></div>        
-        <div class="column"><img src="./img/logo-negro.svg" style="width:100%" onclick="openModal();currentSlide(101)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/logo.png" style="width:100%" onclick="openModal();currentSlide(102)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/logo.webp" style="width:100%" onclick="openModal();currentSlide(103)" class="hover-shadow cursor"></div>        
-        <div class="column"><img src="./img/luisangelmaciel.svg" style="width:100%" onclick="openModal();currentSlide(105)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/mobile-app.webp" style="width:100%" onclick="openModal();currentSlide(106)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/New employee-amico.svg" style="width:100%" onclick="openModal();currentSlide(107)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/Next steps-pana.svg" style="width:100%" onclick="openModal();currentSlide(108)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/obligame perro sor juana ines de la cruz.svg" style="width:100%" onclick="openModal();currentSlide(109)" class="hover-shadow cursor"></div>        
-        <div class="column"><img src="./img/og-image.svg" style="width:100%" onclick="openModal();currentSlide(111)" class="hover-shadow cursor"></div>        
-        
-        <div class="column"><img src="./img/secundaria sor juana ines de la cruz sociedad.webp" style="width:100%" onclick="openModal();currentSlide(118)" class="hover-shadow cursor"></div>        
-        <div class="column"><img src="./img/semaforo-verde-edomex.webp" style="width:100%" onclick="openModal();currentSlide(120)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/sor juana ines de la cruz cantando la vida es mejor.svg" style="width:100%" onclick="openModal();currentSlide(121)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/sor juana ines de la cruz empoderada y luchona.svg" style="width:100%" onclick="openModal();currentSlide(122)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/sor-juana-ines-de-la-cruz-gay-pride.svg" style="width:100%" onclick="openModal();currentSlide(123)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/sor-juana-ines-de-la-cruz-gris.svg" style="width:100%" onclick="openModal();currentSlide(124)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/sor-juana-ines-de-la-cruz-icon.svg" style="width:100%" onclick="openModal();currentSlide(125)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/sor-juana-ines-de-la-cruz-pensando.svg" style="width:100%" onclick="openModal();currentSlide(126)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/sor-juana-ines-de-la-cruz-rojo.svg" style="width:100%" onclick="openModal();currentSlide(127)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/sor-juana-ines-de-la-cruz-sextaedro.svg" style="width:100%" onclick="openModal();currentSlide(128)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/sor-juana-ines-de-la-cruz-verde.svg" style="width:100%" onclick="openModal();currentSlide(129)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/sor-juana-ines-de-la-cruz.svg" style="width:100%" onclick="openModal();currentSlide(130)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/sor-juana-la-ley.svg" style="width:100%" onclick="openModal();currentSlide(131)" class="hover-shadow cursor"></div>        
-        
-        <div class="column"><img src="./img/unnamed.webp" style="width:100%" onclick="openModal();currentSlide(138)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/wp-ablogame-perro.svg" style="width:100%" onclick="openModal();currentSlide(139)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/wp-dejame-pensar.svg" style="width:100%" onclick="openModal();currentSlide(140)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/wp-hagamoslo.svg" style="width:100%" onclick="openModal();currentSlide(141)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/wp-tengo-la-tarea.svg" style="width:100%" onclick="openModal();currentSlide(142)" class="hover-shadow cursor"></div>
-        <div class="column"><img src="./img/wp-toma-zas.svg" style="width:100%" onclick="openModal();currentSlide(143)" class="hover-shadow cursor"></div>        
-        <div class="column"><img src="./img/wp-vas.svg" style="width:100%" onclick="openModal();currentSlide(145)" class="hover-shadow cursor"></div><!-- va 152 -->
-        
-       
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    </div>
-
-    <div id="myModal" class="modal" >
+    <div id="myModal" class="modal" sheetsu="https://sheetsu.com/apis/v1.0/5155e20b12b2">
         <span class="close cursor" onclick="closeModal()">&times;</span>
         <div class="modal-content">
             <center>           
-               
-                </center>
-                
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                
-                <div class="caption-container">
-                <p id="caption"></p>
+                <div class="mySlides">                
+                  <img src="{{name}}"  style="width:100%" loading="lazy">
                 </div>
-                </div>
-                </div>
-                              
-                <!-- Photo Grid -->
-                <div class="row" >
-              
             </center>
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -626,7 +440,7 @@
             <div class="caption-container">
                 <p id="caption"></p>
             </div>
-    </div>
+    </div><script src="https://load.sheetsu.com"></script>
        
 
     <div style=" width: 100%; height: 10px; background: rgb(255, 255, 255); position: fixed; bottom: 0; width: 100%; margin: 0; overflow: hidden; position: fixed; bottom: 0; ">

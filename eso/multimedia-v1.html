@@ -1,0 +1,1259 @@
+<!DOCTYPE html><html lang="es-MX">
+<!-- * ⊙⩌⨀ 2006 - 2022  http://twitter.com/luisangelmaciel  */  -->
+<head> 
+  <meta charset="UTF-8">  
+  <title>Multimedia utilizada para la Escuela Secundaria Oficial 504 - Sor Juana Inés de la Cruz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="description" content=" Multimedia utilizada para la Escuela Secundaria Oficial 504 - Sor Juana Inés de la Cruz">
+  <meta name="MobileOptimized" content="width" />    
+  <meta name="author" content="Luis Angel Maciel">
+  <meta name="generator" content="xbr.pw">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" >
+  <link rel="icon" type="image/x-icon" sizes="192x192" href="./assets/favicons/favicon.svg" id="favicon" />   
+  <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.svg">
+  <link rel="stylesheet" href="css/multimedia.css">
+  <script src="https://luisangelmaciel.github.io/js/lazysizes.min.js" rel="preload " as="script " async charset="utf-8 "></script>
+
+</head>
+
+
+
+<Style>
+    
+    .containerOK {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 50px
+    }
+    /* small */
+    
+    @media (max-width:600px) {
+        .containerOK {
+            padding-top: 50px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 50px;
+        }
+    }
+
+    .responsive {
+
+        width: 100%;
+
+        max-width: 500px;
+
+        height: auto;
+
+    }
+
+</Style>
+
+<script>
+
+    // Script to open and close sidebar
+
+    function w3_open() {
+
+        document.getElementById("mySidebar").style.display = "block";
+
+        document.getElementById("myOverlay").style.display = "block";
+
+    }
+
+
+
+    function w3_close() {
+
+        document.getElementById("mySidebar").style.display = "none";
+
+        document.getElementById("myOverlay").style.display = "none";
+
+    }
+
+
+
+    // Modal Image Gallery
+
+    function onClick(element) {
+
+        document.getElementById("img01").src = element.src;
+
+        document.getElementById("modal01").style.display = "block";
+
+        var captionText = document.getElementById("caption");
+
+        captionText.innerHTML = element.alt;
+
+    }
+
+</script>
+<script>
+
+    if ("loading" in HTMLImageElement.prototype) {
+
+        // Si el navegador soporta lazy-load, tomamos todas las imágenes que tienen la clase
+
+        // `lazyload`, obtenemos el valor de su atributo `data-src` y lo inyectamos en el `src`.
+
+        const images = document.querySelectorAll("img.lazyload");
+
+        images.forEach((img) => {
+
+            img.src = img.dataset.src;
+
+        });
+
+    } else {
+
+        // Importamos dinámicamente la libreria `lazysizes`
+
+        let script = document.createElement("script");
+
+        script.async = true;
+
+        script.src =
+
+            "https://luisangelmaciel.github.io/js/lazysizes.min.js";
+
+        document.body.appendChild(script);
+
+    }
+
+</script>
+
+<body>
+
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey " style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+        <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">Cerrar</a>
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center ">Desing</a>
+    </nav>
+
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Multimedia</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+
+    <style>
+
+        * {
+
+            box-sizing: border-box;
+
+        }
+
+        
+
+        body {
+
+            margin: 0;
+
+        }
+
+        
+
+        .header {
+
+            text-align: center;
+
+            padding: 32px;
+
+        }
+
+        
+
+        .row {
+
+            display: -ms-flexbox;
+
+            /* IE 10 */
+
+            display: flex;
+
+            -ms-flex-wrap: wrap;
+
+            /* IE 10 */
+
+            flex-wrap: wrap;
+
+            padding: 0 4px;
+
+            overflow: hidden;
+
+        }
+
+        /* Create two equal columns that sits next to each other */
+
+        
+
+        .column {
+
+            -ms-flex: 50%;
+
+            /* IE 10 */
+
+            flex: 50%;
+
+            padding: 0 4px;
+
+        }
+
+        
+
+        .column img {
+
+            margin-top: 8px;
+
+            vertical-align: middle;
+
+        }
+
+        /* Style the buttons */
+
+        
+
+        .btn {
+
+            border: none;
+
+            outline: none;
+
+            padding: 10px 16px;
+
+            background-color: #f1f1f1;
+
+            cursor: pointer;
+
+            font-size: 18px;
+
+        }
+
+        
+
+        .btn:hover {
+
+            background-color: #ddd;
+
+        }
+
+        
+
+        .btn.active {
+
+            background-color: #666;
+
+            color: white;
+
+        }
+
+        /* The Modal (background) */
+
+        
+
+        .modal {
+
+            display: none;
+
+            position: fixed;
+
+            z-index: 1;
+
+            padding-top: 100px;
+
+            left: 0;
+
+            top: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            overflow: auto;
+
+            background-color: black;
+
+        }
+
+        /* Modal Content */
+
+        
+
+        .modal-content {
+
+            position: relative;
+
+            margin: auto;
+
+            padding: 0;
+
+            width: 100%;
+
+            max-width: 600px;
+
+            height: auto;
+
+            overflow: hidden;
+
+        }
+
+        /* The Close Button */
+
+        
+
+        .close {
+
+            color: white;
+
+            position: absolute;
+
+            top: 10px;
+
+            right: 25px;
+
+            font-size: 35px;
+
+            font-weight: bold;
+
+        }
+
+        
+
+        .close:hover,
+
+        .close:focus {
+
+            color: #999;
+
+            text-decoration: none;
+
+            cursor: pointer;
+
+        }
+
+        
+
+        .mySlides {
+
+            display: none;
+
+            background-color: black;
+
+        }
+
+        
+
+        .cursor {
+
+            cursor: pointer;
+
+        }
+
+        /* Next & previous buttons */
+
+        
+
+        .prev,
+
+        .next {
+
+            cursor: pointer;
+
+            position: absolute;
+
+            top: 50%;
+
+            width: auto;
+
+            padding: 16px;
+
+            margin-top: -50px;
+
+            color: white;
+
+            font-weight: bold;
+
+            font-size: 20px;
+
+            transition: 0.6s ease;
+
+            border-radius: 0 3px 3px 0;
+
+            user-select: none;
+
+            -webkit-user-select: none;
+
+        }
+
+        /* Position the "next button" to the right */
+
+        
+
+        .next {
+
+            right: 0;
+
+            border-radius: 3px 0 0 3px;
+
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+
+        
+
+        .prev:hover,
+
+        .next:hover {
+
+            background-color: rgba(0, 0, 0, 0.8);
+
+        }
+
+        /* Number text (1/3 etc) */
+
+        
+
+        .numbertext {
+
+            color: #f2f2f2;
+
+            font-size: 12px;
+
+            padding: 8px 12px;
+
+            position: absolute;
+
+            top: 0;
+
+        }
+
+        
+
+        img {
+
+            margin-bottom: -4px;
+
+        }
+
+        
+
+        .caption-container {
+
+            text-align: center;
+
+            background-color: black;
+
+            padding: 2px 16px;
+
+            color: white;
+
+        }
+
+        
+
+        .demo {
+
+            opacity: 0.6;
+
+        }
+
+        
+
+        .active,
+
+        .demo:hover {
+
+            opacity: 1;
+
+        }
+
+        
+
+        img.hover-shadow {
+
+            transition: 0.3s;
+
+        }
+
+        
+
+        .hover-shadow:hover {
+
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+    </style>
+
+
+
+    <!-- Header <br><br><br><br><br>
+
+    <div class="header" id="myHeader">
+
+        <button class="btn" onclick="one()">1</button>
+
+        <button class="btn" onclick="two()">2</button>
+
+        <button class="btn active" onclick="four()">4</button>
+
+    </div>-->
+
+
+
+    <!-- Photo Grid -->
+
+
+<!--     <div class="containerOk">  
+    <div class="row">
+
+        <div class="column">
+
+            <img src="img/600x400-1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+
+        </div>
+
+        <div class="column">
+
+            <img src="img/600x400-2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+
+        </div>
+
+        <div class="column">
+
+            <img src="img/600x400-3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+
+        </div>
+
+        <div class="column">
+            <img src="img/600x400.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+
+            <img src="img/600x400.svg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+
+        </div>
+
+        <div class="column">
+
+            <img src="img/8sorboscitas-de-Sor-Juana-Inés-de-la-Cruz.webp" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+
+        </div>
+
+        <div class="column">
+            <img src="img/app-web.svg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/app.svg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/avatar1.png" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/avatar2.png" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+        </div>
+
+
+        <div class="column">
+            <img src="img/avatar3.webp" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/avatar4.png" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/banner.svg" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/error-404.svg" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/escudo escuela secundaria oficial 0514 sor juana ines de la cruz.jpg" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/escudo escuela secundaria oficial 0514 sor juana ines de la cruz.svg" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/escudo escuela secundaria oficial 514 sor juana ines de la cruz.svg" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/og-editable.svg" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/sor juana ines de la cruz empoderada y luchona.svg" style="width:100%" onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/secundaria sor juana ines de la cruz  mujeres duertes.jpg" style="width:100%" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/secundaria sor juana ines de la cruz  pensando.jpg" style="width:100%" onclick="openModal();currentSlide(21)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/secundaria sor juana ines de la cruz sociedad.jpg" style="width:100%" onclick="openModal();currentSlide(22)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/secundaria sor juana ines de la cruz.jpg" style="width:100%" onclick="openModal();currentSlide(23)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/sor juana ines de la cruz cantando la vida es mejor.svg" style="width:100%" onclick="openModal();currentSlide(24)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/sor-juana-ines-de-la-cruz-gay-pride.svg" style="width:100%" onclick="openModal();currentSlide(25)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/sor-juana-ines-de-la-cruz-gris.svg" style="width:100%" onclick="openModal();currentSlide(26)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/sor-juana-ines-de-la-cruz-icon.svg" style="width:100%" onclick="openModal();currentSlide(27)" class="hover-shadow cursor">
+        </div>
+
+        
+
+        <div class="column">
+            <img src="img/sor-juana-ines-de-la-cruz-pensando.svg" style="width:100%" onclick="openModal();currentSlide(28)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/sor-juana-ines-de-la-cruz-rojo.svg" style="width:100%" onclick="openModal();currentSlide(29)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/sor-juana-ines-de-la-cruz-sextaedro.svg" style="width:100%" onclick="openModal();currentSlide(30)" class="hover-shadow cursor">
+        </div>
+
+        
+        <div class="column">
+            <img src="img/sor-juana-ines-de-la-cruz-verde.svg" style="width:100%" onclick="openModal();currentSlide(31)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="img/sor-juana-la-ley.svg" style="width:100%" onclick="openModal();currentSlide(32)" class="hover-shadow cursor">
+        </div>
+
+        <div class="column">
+            <img src="img/sor-juana-ines-de-la-cruz.svg" style="width:100%" onclick="openModal();currentSlide(33)" class="hover-shadow cursor">
+        </div>
+        <div class="column"><img src="img/Formula-amico.svg" style="width:100%" onclick="openModal();currentSlide(34)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/Formula-pana.svg" style="width:100%" onclick="openModal();currentSlide(35)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/English%20teacher-bro.svg" style="width:100%" onclick="openModal();currentSlide(36)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/New%20employee-amico.svg" style="width:100%" onclick="openModal();currentSlide(37)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/Next%20steps-pana.svg" style="width:100%" onclick="openModal();currentSlide(38)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/English%20teacher-amico.svg" style="width:100%" onclick="openModal();currentSlide(39)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/Image%20upload-rafiki.svg" style="width:100%" onclick="openModal();currentSlide(40)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/Thesis-amico.svg" style="width:100%" onclick="openModal();currentSlide(41)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/Formula-rafiki.svg" style="width:100%" onclick="openModal();currentSlide(41)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/Image%20upload-amico.svg" style="width:100%" onclick="openModal();currentSlide(41)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/Thesis-pana.svg" style="width:100%" onclick="openModal();currentSlide(41)" class="hover-shadow cursor"></div>
+        
+        <div class="column"><img src="img/icons/1MIN-PARAMULTIPLICAR.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/10-cosas-por-aprender-en-la-escuela.html" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/baner-apps.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/baner-bloc-de-notas.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/baner-calcu.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/baner-tablet.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/baner-tu-cel.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/baner-unminuto.jpg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/baner-unminuto.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/bg.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/calculadora-cientifica.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/ico-bloc-de-notas.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/ico-calcu.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/ICO-MULTIPLICAR.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/ico-tablet.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/ico-tu-cel.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/index.html" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/orientacion.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/tu-celular.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/icons/Untitled-1.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/storyset/Formula-amico.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/storyset/Formula-bro.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/storyset/Formula-rafiki.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/storyset/Learning-bro.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/storyset/Mobile-Marketing-cuate.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/storyset/Mobile-Marketing-rafiki.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/storyset/Next steps-amico.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/storyset/Next-steps-rafiki.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/storyset/Payment-Information-bro.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/storyset/Payment-Information-pana.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/storyset/seo-social-web-network-internet_92_icon-icons.com_61528.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/storyset/Telecommuting-pana.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/storyset/timer_121243.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/storyset/Vision-board-pana.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/storyset/Webinar-pana.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+        <div class="column"><img src="img/storyset/Webinar-rafiki.svg" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor"></div>
+    </div>    
+</div> -->
+
+   <style>
+    .w3-container {
+        padding: 0.01em 16px
+    }
+    
+    .w3-center {
+        text-align: center!important
+    }
+    
+    .responsive5 {
+        padding: 0 6px;
+        margin: 6px 0;
+        float: left;
+        width: 20%;
+        display: grid;
+    }
+    
+    @media only screen and (max-width: 700px) {
+        .responsive5 {
+            width: 50%;
+            margin: 6px 0;
+            padding: 0 6px;
+            display: grid;
+            width: 20%;
+        }
+    }
+    
+    @media only screen and (max-width: 1200px) {
+        .responsive5 {
+            width: 50%;
+            margin: 6px 0;
+            padding: 0 6px;
+            display: grid;
+            width: 20%;
+        }
+    }
+    
+    @media only screen and (max-width: 500px) {
+        .responsive5 {
+            width: 50%;
+            margin: 6px 0;
+            padding: 0 6px;
+            display: grid;
+            width: 25%;
+        }
+    }
+</style>
+
+<br><br><br><br>
+<div class="containerOK">
+    <div class="responsive5 "><div class="gallery "><p><img src="img/logo.png" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/logo-big.webp" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/logo-full.webp" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/logo-escudo.webp" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/logo-completo.webp" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/luisangelmaciel.one.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+
+    <div class="responsive5 "><div class="gallery "><p><img src="img/600x400-1.jpg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/600x400-2.jpg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/600x400-3.jpg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/600x400.jpg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/600x400.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/app-web.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/avatar1.png" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/avatar2.png" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/avatar3.webp" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/avatar4.png" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>    
+    <div class="responsive5 "><div class="gallery "><p><img src="img/error-404.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/escudo escuela secundaria oficial 0514 sor juana ines de la cruz.jpg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div> 
+    <div class="responsive5 "><div class="gallery "><p><img src="img/escudo escuela secundaria oficial 514 sor juana ines de la cruz.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/og-editable.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/sor juana ines de la cruz empoderada y luchona.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    
+    
+    <div class="responsive5 "><div class="gallery "><p><img src="img/sor juana ines de la cruz cantando la vida es mejor.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/sor-juana-ines-de-la-cruz-gay-pride.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/sor-juana-ines-de-la-cruz-gris.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/sor-juana-ines-de-la-cruz-icon.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/sor-juana-ines-de-la-cruz-pensando.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/sor-juana-ines-de-la-cruz-rojo.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/sor-juana-ines-de-la-cruz-sextaedro.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/sor-juana-ines-de-la-cruz-verde.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/sor-juana-la-ley.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/sor-juana-ines-de-la-cruz.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/Formula-amico.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/English%20teacher-bro.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/New%20employee-amico.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/Next%20steps-pana.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/English%20teacher-amico.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/Image%20upload-rafiki.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/Thesis-amico.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/Formula-rafiki.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/Image%20upload-amico.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/Thesis-pana.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/1MIN-PARAMULTIPLICAR.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/baner-apps.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/baner-bloc-de-notas.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/baner-calcu.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/baner-tablet.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/baner-tu-cel.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/baner-unminuto.jpg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/baner-unminuto.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/bg.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/calculadora-cientifica.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/ico-bloc-de-notas.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/ico-calcu.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/ICO-MULTIPLICAR.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/ico-tablet.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/ico-tu-cel.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/orientacion.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/tu-celular.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/icons/Untitled-1.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/storyset/Formula-amico.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/storyset/Formula-bro.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/storyset/Formula-rafiki.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/storyset/Learning-bro.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/storyset/Mobile-Marketing-cuate.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/storyset/Mobile-Marketing-rafiki.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/storyset/Next steps-amico.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/storyset/Next-steps-rafiki.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/storyset/Payment-Information-bro.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/storyset/Payment-Information-pana.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/storyset/seo-social-web-network-internet_92_icon-icons.com_61528.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/storyset/Telecommuting-pana.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/storyset/timer_121243.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/storyset/Vision-board-pana.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/storyset/Webinar-pana.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/storyset/Webinar-rafiki.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    
+    
+    <div class="responsive5 "><div class="gallery "><p><img src="img/directivos.html" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/equipo-de-preservacion.html" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/innovacion.html" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/leaves.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/matematicas.html" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/meatball-ornament.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/new.html" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/valores.html" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/wp-ablogame-perro.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/wp-vas.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/wp-tengo-la-tarea.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/wp-hagamoslo.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/wp-toma-zas.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/wp-dejame-pensar.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/600x400obligame-perro.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/600x400v1.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/600x400-logo-escuela-blanco.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/600x400-logo-escuela-rojo.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/600x400-logo-escuela.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/600x400-verde.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/mobile-app.png" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/lentes.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    
+<div class="responsive5 "><div class="gallery "><p><img src="img/lentes.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="img/ico-xbr/app-de-estudio.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="img/ico-xbr/avisos-escolares.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="img/ico-xbr/bloc-de-notas-app.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="img/ico-xbr/docentes.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="img/ico-xbr/educacion-fisica.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="img/ico-xbr/estudiante-icon.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="img/ico-xbr/estudiante-sentado.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="img/ico-xbr/home-escuela.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="img/ico-xbr/libros-online.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="img/ico-xbr/location-escuela.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="img/ico-xbr/maestro-dando-clase.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="img/ico-xbr/mochila.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+</div>
+
+<!-- <div class="responsive5 "><div class="gallery "><p><img src="img/secundaria sor juana ines de la cruz  mujeres duertes.jpg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/secundaria sor juana ines de la cruz  pensando.jpg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/secundaria sor juana ines de la cruz sociedad.jpg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    <div class="responsive5 "><div class="gallery "><p><img src="img/secundaria sor juana ines de la cruz.jpg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>-->
+    <!-- <div class="responsive5 "><div class="gallery "><p><img src="img/escudo escuela secundaria oficial 0514 sor juana ines de la cruz.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div> -->
+    <!-- <div class="responsive5 "><div class="gallery "><p><img src="img/8sorboscitas-de-Sor-Juana-Inés-de-la-Cruz.webp" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div> -->
+    <!-- <div class="responsive5 "><div class="gallery "><p><img src="img/banner.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div> 
+    <div class="responsive5 "><div class="gallery "><p><img src="img/app.svg" class="img " width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+    -->
+
+<style>
+.responsive5 {
+padding: 0 6px;
+margin: 6px 0;
+float: left;
+width: 20%;
+display: grid;
+}
+
+@media only screen and (max-width: 700px) {
+.responsive5 {
+width: 50%;
+margin: 6px 0;
+padding: 0 6px;
+display: grid;
+width: 20%;
+}
+}
+
+@media only screen and (max-width: 1200px) {
+.responsive5 {
+width: 50%;
+margin: 6px 0;
+padding: 0 6px;
+display: grid;
+width: 20%;
+}
+}
+
+@media only screen and (max-width: 500px) {
+.responsive5 {
+width: 50%;
+/*  margin: 6px 0;*/
+margin: 6px 0;
+padding: 0 6px;
+display: grid;
+width: 25%;
+}
+}
+
+.img {
+max-width: 400px;
+width: 100%;
+height: auto;
+border-radius: 5px;
+transition: 0.3s;
+margin: 0 auto;
+vertical-align: middle;
+}
+</style>
+
+
+
+
+    <div id="myModal" class="modal">
+
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+
+        <div class="modal-content">
+
+            <center>
+
+                <div class="mySlides">
+
+                    <div class="numbertext">1 / 4</div>
+
+                    <img src="img/sor-juana-ines-de-la-cruz-verde.svg" style="width:100%" loading="lazy">
+
+                </div>
+
+
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="img/sor-juana-ines-de-la-cruz.svg" style="width:100%">
+                </div>
+
+
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="img/sor-juana-la-ley.svg" style="width:100%">
+                </div>
+
+            </center>
+
+
+            <a href="https://storyset.com/people">People illustrations by Storyset</a>
+
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+
+            <div class="caption-container">
+
+                <p id="caption"></p>
+
+            </div>
+
+
+
+        </div>
+
+
+
+        <script>
+
+            function openModal() {
+
+                document.getElementById("myModal").style.display = "block";
+
+            }
+
+
+
+            function closeModal() {
+
+                document.getElementById("myModal").style.display = "none";
+
+            }
+
+
+
+            var slideIndex = 1;
+
+            showSlides(slideIndex);
+
+
+
+            function plusSlides(n) {
+
+                showSlides(slideIndex += n);
+
+            }
+
+
+
+            function currentSlide(n) {
+
+                showSlides(slideIndex = n);
+
+            }
+
+
+
+            function showSlides(n) {
+
+                var i;
+
+                var slides = document.getElementsByClassName("mySlides");
+
+                var dots = document.getElementsByClassName("demo");
+
+                var captionText = document.getElementById("caption");
+
+                if (n > slides.length) {
+
+                    slideIndex = 1
+
+                }
+
+                if (n < 1) {
+
+                    slideIndex = slides.length
+
+                }
+
+                for (i = 0; i < slides.length; i++) {
+
+                    slides[i].style.display = "none";
+
+                }
+
+                for (i = 0; i < dots.length; i++) {
+
+                    dots[i].className = dots[i].className.replace(" active", "");
+
+                }
+
+                slides[slideIndex - 1].style.display = "block";
+
+                dots[slideIndex - 1].className += " active";
+
+                captionText.innerHTML = dots[slideIndex - 1].alt;
+
+            }
+
+        </script>
+
+
+
+        <script>
+
+            // Get the elements with class="column"
+
+            var elements = document.getElementsByClassName("column");
+
+
+
+            // Declare a loop variable
+
+            var i;
+
+
+
+            // Full-width images
+
+            function one() {
+
+                for (i = 0; i < elements.length; i++) {
+
+                    elements[i].style.msFlex = "100%"; // IE10
+
+                    elements[i].style.flex = "100%";
+
+                }
+
+            }
+
+
+
+            // Two images side by side
+
+            function two() {
+
+                for (i = 0; i < elements.length; i++) {
+
+                    elements[i].style.msFlex = "50%"; // IE10
+
+                    elements[i].style.flex = "50%";
+
+                }
+
+            }
+
+
+
+            // Four images side by side
+
+            function four() {
+
+                for (i = 0; i < elements.length; i++) {
+
+                    elements[i].style.msFlex = "25%"; // IE10
+
+                    elements[i].style.flex = "25%";
+
+                }
+
+            }
+
+
+
+            // Add active class to the current button (highlight it)
+
+            var header = document.getElementById("myHeader");
+
+            var btns = header.getElementsByClassName("btn");
+
+            for (var i = 0; i < btns.length; i++) {
+
+                btns[i].addEventListener("click", function() {
+
+                    var current = document.getElementsByClassName("active");
+
+                    current[0].className = current[0].className.replace(" active", "");
+
+                    this.className += " active";
+
+                });
+
+            }
+
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+        <div style=" width: 100%; height: 10px; background: rgb(255, 255, 255); position: fixed; bottom: 0; width: 100%; margin: 0; overflow: hidden; position: fixed; bottom: 0; ">
+
+            <div id="myBar " style=" height: 10px; width: 0%; background: linear-gradient( to right, #18487D, #18487D, #005677, #18487D, #18487D, #005677, #18487D, #18487D, #005677); background-position: center 0%; animation: background-slide 25s infinite linear; "></div>
+
+        </div>
+
+        <!-- ****************************************************************** SCRIPTS ****************************************************************** -->
+
+
+
+        <script>
+
+            // When the user scrolls the page, execute myFunction 
+
+            window.onscroll = function() {
+
+                myFunction()
+
+            };
+
+
+
+            function myFunction() {
+
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+                var scrolled = (winScroll / height) * 100;
+
+                document.getElementById("myBar ").style.width = scrolled + "% ";
+
+            }
+
+        </script>
+
+        <script>
+
+            if ("loading" in HTMLImageElement.prototype) {
+
+                // Si el navegador soporta lazy-load, tomamos todas las imágenes que tienen la clase
+
+                // `lazyload`, obtenemos el valor de su atributo `data-src` y lo inyectamos en el `src`.
+
+                const images = document.querySelectorAll("img.lazyload");
+
+                images.forEach((img) => {
+
+                    img.src = img.dataset.src;
+
+                });
+
+            } else {
+
+                // Importamos dinámicamente la libreria `lazysizes`
+
+                let script = document.createElement("script");
+
+                script.async = true;
+
+                script.src =
+
+                    "/js/lazysizes.min.js";
+
+                document.body.appendChild(script);
+
+            }
+
+        </script>
+
+
+
+
+
+
+
+
+
+</body>
+
