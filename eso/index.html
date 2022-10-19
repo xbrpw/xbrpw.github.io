@@ -45,8 +45,73 @@
 <meta name="revisit-after" content="7 days">
 <meta name="author" content="@LuisAngelMaciel">
 <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./carusel-escolar/style.css">
 <link rel="stylesheet" href="./eevee.css">
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script> 
+
+<style>
+	* {box-sizing: border-box;}
+	body {font-family: Verdana, sans-serif;}
+	.mySlides {display: none;}
+	img {vertical-align: middle;}
+	
+	/* Slideshow container */
+	.slideshow-container {
+	  position: relative;
+	  margin: auto;
+	}
+	
+	/* Caption text */
+	.text {
+	  color: #f2f2f2;
+	  font-size: 15px;
+	  padding: 8px 12px;
+	  position: absolute;
+	  bottom: 8px;
+	  width: 100%;
+	  text-align: center;
+	}
+	
+	/* Number text (1/3 etc) */
+	.numbertext {
+	  color: #f2f2f2;
+	  font-size: 12px;
+	  padding: 8px 12px;
+	  position: absolute;
+	  top: 0;
+	}
+	
+	/* The dots/bullets/indicators */
+	.dot {
+	  height: 15px;
+	  width: 15px;
+	  margin: 0 2px;
+	  background-color: #bbb;
+	  border-radius: 50%;
+	  display: inline-block;
+	  transition: background-color 0.6s ease;
+	}
+	
+	.active {
+	  background-color: #717171;
+	}
+	
+	/* Fading animation */
+	.fade {
+	  animation-name: fade;
+	  animation-duration: 1.5s;
+	}
+	
+	@keyframes fade {
+	  from {opacity: .4} 
+	  to {opacity: 1}
+	}
+	
+	/* On smaller screens, decrease text size */
+	@media only screen and (max-width: 300px) {
+	  .text {font-size: 11px}
+	}
+	</style>
 
 
 <script>function includeHTML() {var z, i, elmnt, file, xhttp;/*loop through a collection of all HTML elements:*/z = document.getElementsByTagName("*");for (i = 0; i < z.length; i++) {elmnt = z[i];/*search for elements with a certain atrribute:*/file = elmnt.getAttribute("incluye-html");if (file) {/*make an HTTP request using the attribute value as the file name:*/xhttp = new XMLHttpRequest();xhttp.onreadystatechange = function() {if (this.readyState == 4) {if (this.status == 200) {elmnt.innerHTML = this.responseText;}if (this.status == 404) {elmnt.innerHTML = "Página no encontrada.";}/*remove the attribute, and call this function once more:*/elmnt.removeAttribute("incluye-html");includeHTML();}}      
@@ -94,7 +159,7 @@
           <a class="navbar-brand" href="/index" title="ESO-154" class="w3-hide-small"><img src="img/eso0514-vertical.svg" width="654px" height="150" alt="Logo Escuela Secundaria Oficial" class="img-fluid img-responsive w3-hide-small" id="elInicio" lazy="loading"></a>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="navbar-nav p-3">
-              <li class="nav-item active w3-hide-small" >
+              <li class="nav-item  w3-hide-small" >
                 <a class="nav-link" href="#elInicio">Inicio <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item dropdown">
@@ -171,28 +236,197 @@
   </div>
 </section>
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="jumbotron p-0">
-        <div class="jumbotron-overlay py-5 px-5">
-          <div class="herotext px-4 py-4 w-50">
-            <h2><span class="">Escuela Secundaria Oficial No. 514   <br> Sor Juana Inés de la Cruz   </span>              </h2>
-            <!-- <img src="img/eso0514-vertical.svg" width="654px" height="150" alt="Logo Escuela Secundaria Oficial" class="img-fluid img-responsive w3-hide-medium w3-hide-large" id="elInicio" >           -->
-            <p>
-              Nos ocupamos de crear, promover y ejecutar políticas educativas en nivel secundaria  que conformen un sistema educativo innovador e integrado.
-            </p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="jumbotron p-0">
+      <div class="jumbotron-overlay py-5 px-5">
+        <div class="herotext px-4 py-4 w-50">
+          <h2><span class="">Escuela Secundaria Oficial No. 514   <br> Sor Juana Inés de la Cruz   </span>              </h2>
+          <!-- <img src="img/eso0514-vertical.svg" width="654px" height="150" alt="Logo Escuela Secundaria Oficial" class="img-fluid img-responsive w3-hide-medium w3-hide-large" id="elInicio" >           -->
+          <p>Nos ocupamos de crear, promover y ejecutar políticas educativas en nivel secundaria  que conformen un sistema educativo innovador e integrado.</p>
 
-            <p>
-              <a class="btn btn-primary btn-large d-none" href="#">Más</a>
-            </p>
-          </div>
+          <p>
+            <a class="btn btn-primary btn-large d-none" href="#">Más</a>
+          </p>
         </div>
       </div>
     </div>
   </div>
+</div>
+</div>
+
+<div class="container-fluid">
   
-  
- <iframe src="carusel-escolar/index.html"  height="550px " width="100% " title="Carrusel de noticias" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy" class="w3-hide-medium w3-hide-small"></iframe>  
+  <style>
+    * {box-sizing: border-box;}
+    body {font-family: Verdana, sans-serif;}
+    .mySlides {display: none;}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .activec {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text {font-size: 11px}
+    }
+    </style>
+
+<div class="slideshow-container">	
+	<div class="mySlides fade">
+		<div class="row">
+			<div class="col-12 p-0">	
+					<div class="carousel" data-aos="zoom-out">
+					<div class="carousel-cell row">
+						<div class="col-12 col-sm-8 d-block d-sm-none slider imagemobile" style="height:120px;background-position: center center;background-image: url('./carusel-escolar/eso0514-20220831.webp');background-size: cover;"></div>
+						<div class="col-12 col-sm-4">
+							<div class="pretext">
+							<div class="subtitle" title="Escuela Secundaria Oficial No. 0514">Escuela Secundaria Oficial No. 0514</div>
+							<h2>Sor Juana Inés de la Cruz</h2>								
+							<a class="btneso2 btneso2-outline-success  " href="#masInfo" target="_blank" title="Escuela Publica Oficial No. 0514"  aria-hidden="true">Conoce tu escuela</a>
+							</div>
+						</div>
+						<div class="col-12 col-sm-8 d-none d-sm-block" style="background-position: center center;background-image: url('./carusel-escolar/eso0514-20220831.webp');background-size: cover;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="mySlides fade">
+		<div class="row">
+			<div class="col-12 p-0">	
+				<div class="carousel" data-aos="zoom-out">
+					<div class="carousel-cell row">
+						<div class="col-12 col-sm-8 d-block d-sm-none slider imagemobile" style="height:120px;background-position: center center;background-image: url('./carusel-escolar/estudiantes.webp');background-size: cover;"></div>
+						<div class="col-12 col-sm-4">
+							<div class="pretext">
+							<div class="subtitle" title="Para la formación y vinculación del aprendizaje">Escuela pública para la formación</div>
+							<h2> Y vinculación del aprendizaje  </h2><!-- y desarrollo intelectual y físico entre alumnos, profesores y tutores y padres de familia. -->
+							<a class="btneso2 btneso2-outline-success  " href="#masInfo" target="_blank" title="Escuela Publica Oficial No. 0514"  aria-hidden="true">Más Info</a>					
+							</div>
+						</div>
+						<div class="col-12 col-sm-8 d-none d-sm-block" style="background-position: center center;background-image: url('./carusel-escolar/estudiantes.webp');background-size: cover;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="mySlides fade">
+		<div class="row">
+			<div class="carousel-cell row">
+	        	<div class="col-12 col-sm-8 d-block d-sm-none slider imagemobile" style="height:120px;background-position: center center;background-image: url('./img/banner-carrusel-1.png');background-size: cover;"></div>
+				<div class="col-12 col-sm-4">
+				<div class="pretext">
+	          		<div class="subtitle" title="En esta escuela reforzamos: Puntualidad, trabajo diario, trabajo en equipo">En esta escuela reforzamos: </div>
+				<h2> Trabajo diario, trabajo en equipo...</h2>
+				<a class="btneso2 btneso2-outline-success  " href="#masInfo" target="_blank" title="Escuela Publica Oficial No. 0514"  aria-hidden="true">Más Info</a>
+				</div>
+				</div>
+				<div class="col-12 col-sm-8 d-none d-sm-block" style="background-position: center center;background-image: url('./img/banner-carrusel-1.png');background-size: cover;"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="row">
+			<div class="carousel-cell row">
+				<div class="col-12 col-sm-8 d-block d-sm-none slider imagemobile" style="height:120px;background-position: center center;background-image: url('./carusel-escolar/alumnos.webp');background-size: cover;"></div>
+            	<div class="col-12 col-sm-4">
+					<div class="pretext">
+	         		 <div class="subtitle" title="Escuela Secundaria Oficial No. 0514">Escuela Secundaria Oficial No. 0514</div>
+					<h2>Sor Juana Inés de la Cruz</h2>
+					<a class="btneso2 btneso2-outline-success  " href="#masInfo" target="_blank" title="Escuela Publica Oficial No. 0514"  aria-hidden="true">Conoce tu escuela</a>
+					</div>
+				</div>
+				<div class="col-12 col-sm-8 d-none d-sm-block" style="background-position: center center;background-image: url('./carusel-escolar/alumnos.webp');background-size: cover;"></div>
+			</div>	
+		</div>
+	</div>	
+</div>
+	<br>
+	
+	<div style="text-align:center">
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	</div>
+	
+	<script>
+	let slideIndex = 0;
+	showSlides();
+	
+	function showSlides() {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  let dots = document.getElementsByClassName("dot");
+	  for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	  }
+	  slideIndex++;
+	  if (slideIndex > slides.length) {slideIndex = 1}    
+	  for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" activec", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " activec";
+	  setTimeout(showSlides, 2000); // Change image every 2 seconds
+	}
+	</script>
+	  
+  <br><br>
+ <!-- <iframe src="carusel-escolar/index.html"  height="550px " width="100% " title="Carrusel de noticias" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy" class="w3-hide-medium w3-hide-small"></iframe>   -->
 
 
 
@@ -206,12 +440,12 @@
         </div>
         <div class="col-6 col-md-2 text-center perfilselect">
         <div class="circle" style=" background: linear-gradient(to bottom, #38ef7d, #11998e);">
-          <img src="img/estudiante.webp" alt="Estudiantes"></div>
+          <img src="./img/ico-xbr/estudiante-icon.svg" alt="Estudiantes" onclick="document.location='./login/welcome/index.html'" height="100%" width="auto" title="Estudiantes ESO"></div>
           <h4><a href="./login/welcome/index.html" title="Login para estudiantes"  class="a">Estudiantes</a></h4></div>
         
         <div class="col-6 col-md-2 text-center perfilselect">
           <div class="circle" style="background: linear-gradient(to bottom, #1CCAD8, #11998e);">
-            <img src="img/profesores.webp" style="height: 81%;padding: 6px;" alt="Docentes"></div>
+            <img src="./img/ico-xbr/maestro-dando-clase.svg" style="height: 81%;padding: 6px;" alt="Docentes" onclick="document.location='./docentes/index.html'"></div>
             <h4><a href="./docentes/index.html"  title="Login para los profesores" class="a">Docentes</a></h4>
         </div>
         <div class="col-6 col-md-2 text-center perfilselect">
@@ -220,7 +454,7 @@
         </div>
         <div class="col-6 col-md-2 text-center perfilselect">
           <div class="circle" style="    background: linear-gradient(to bottom, #38EF7D, #4CAF50);">
-            <img src="img/general.webp" alt="General">
+            <img src="./img/ico-xbr/home-escuela.svg" alt="General">
           </div> <h4> General </h4>
         </div>
       </div>
@@ -234,30 +468,26 @@
      <div class="row">
       <div class="col-md-12">
         <div class="card">
-          <div class="card-img-top" style="background-image:url('img/600x400.webp')"></div>
+          <div class="card-img-top" style="background-image:url('./img/storyset/Learning-bro.svg')"></div>
           <div class="card-body">
             <p class="card-title">10 acciones en educación</p>
             <p class="card-subtitle" >Para aprender en la casa y escuela</p><br>
-            <p class="card-text">La escuela y la educación que en ella se imparte son un conjunto complejo e interconectado, a imagen y semejanza de los vasos comunicantes.</p>
-            <a href="eso/10-en-educacion.HTML" class="btn btn-primary d-none">Leer</a>
+            <p class="card-text">La escuela y la educación que en ella se imparte son un conjunto complejo e interconectado, a imagen y semejanza de los vasos comunicantes. <span onclick="document.location='./eso/10-en-educacion.html'" class="d-none"> <b>Leer</b></span></p>          
           </div>
         </div>
         <div class="card" style="width: 18rem;">
-          <div class="card-img-top" style="background-image:url('img/600x400-1.webp')"></div>
+          <div class="card-img-top" style="background-image:url('./img/storyset/Formula-bro.svg')"></div>
           <div class="card-body">
             <p class="card-title">En está escuela</p>
-            <p class="card-subtitle">Reforzamos los siguientes valores</p><br>
-            <p class="card-text">Con el objetivo de profundizar la responsabilidad social y al mismo tiempo facilitar que los ciudadanos puedan ejercer “control social”...</p>
-            <a href="eso/reforzamos/index.html" class="btn btn-primary d-none">Ver</a>
+            <p class="card-subtitle">Reforzamos los siguientes valores <span onclick="document.location='./eso/reforzamos/index.html'" class="d-none"> <b>Leer</b></span>  </p><br>            
           </div>
         </div>
         <div class="card" style="width: 18rem;">
-          <div class="card-img-top" style="background-image:url('img/600x400-2.webp')"></div>
+          <div class="card-img-top" style="background-image:url('img/escudo/Historia del Escudo del Estado de México.webp')"></div>
           <div class="card-body">
             <p class="card-title">Historia del Escudo del Estado de México</p>
             <p class="card-subtitle">Fue diseñado por el pintor mexiquense Pastor Velázquez</p>
-            <p class="card-text">Ganador de la convocatoria realizada en 1940</p>
-            <a href="./eso/historia-del-Escudo-del-Estado-de-México.html" class="btn btn-primary d-none">Ver</a>
+            <p class="card-text">Ganador de la convocatoria realizada en 1940 <span onclick="document.location='./eso/historia-del-Escudo-del-Estado-de-México/index.html'" > <b>Leer</b></span> </p>                        
           </div>
         </div>  
       </div>
@@ -271,20 +501,18 @@
   
   <div class="row p-5 areasyproyectos">
     <div class="col-md-12">
-      <h3>
-        Equipo de preservación del cuidado ambiental y del humano.
-      </h3>
+      <h3>Equipo de preservación del cuidado ambiental y del humano.</h3>
       <h4 class="pt-4 px-5 text-muted">Campo de trabajo STEM CV 2022-2023</h4>
       <div class="row pb-5 pt-1 pt-3 px-5 areas">
-      <div class="col-md-4"><a href="#CVCiencia" class="area badge-pink d-block p-3 table-bordered">Ciencia<br>Química, Biología, Vida saludable</a><br>
-      <a href="#CVtecnologia" class="area badge-primary d-block p-3 table-bordered">Tecnología <br>Tecnología y  Talleres </a></div>
-        <div class="col-md-4"><a href="CVIngenieria" class="area badge-info d-block p-3 table-bordered">Ingeniería<br> Física,  Geografía </a><br>
-        <a href="CVMatematicas" class="area badge-lightblue d-block p-3 table-bordered">Matemáticas</a></div>
-        <div class="col-md-4"><a href="CVValores" class="area badge-purple d-block p-3 table-bordered">Valores<br>Formación Cívica y Ética,  Español,  Inglés </a><br>
-          <a href="CVCreatividad" class="area badge-deepblue d-block p-3 table-bordered">Creatividad<br> Educación Física,  Historia,  Artes, Orientación</a></div>
+      <div class="col-md-4"><a href="https://eso514-ciencia.blogspot.com/" class="area badge-pink d-block p-3 table-bordered">Ciencia<br>Química, Biología, Vida saludable</a><br>
+      <a href="https://eso514-tecnologia.blogspot.com/" class="area badge-primary d-block p-3 table-bordered">Tecnología <br>Tecnología y  Talleres </a></div>
+        <div class="col-md-4"><a href="https://eso514-ingenieria.blogspot.com/" class="area badge-info d-block p-3 table-bordered">Ingeniería<br> Física,  Geografía </a><br>
+        <a href="https://eso514-matematicas.blogspot.com/" class="area badge-lightblue d-block p-3 table-bordered">Matemáticas</a></div>
+        <div class="col-md-4"><a href="https://eso514-valores.blogspot.com/" class="area badge-purple d-block p-3 table-bordered">Valores<br>Formación Cívica y Ética,  Español,  Inglés </a><br>
+          <a href="https://eso514-creatividad.blogspot.com/" class="area badge-deepblue d-block p-3 table-bordered">Creatividad<br> Educación Física,  Historia,  Artes, Orientación</a></div>
       </div>
       
-      <h4 class="pt-4 px-5 pb-5 text-muted">Programas y Proyectos</h4>
+      <!-- <h4 class="pt-4 px-5 pb-5 text-muted">Programas y Proyectos</h4>
       <div class="row pb-3 pt-3 proyectos">
         <div class="col-md-12 px-5">
           <div class="card">
@@ -325,6 +553,7 @@
           </div>
         </div>        
       </div>
+    -->
     </div>
     <div class="col-md-12 ">
     </div>
@@ -344,17 +573,9 @@
                 <h4 class="item-title-h4">Sistema solar, versión animada.</h4>
                 <p class="item-description">¿Cuál es su inclinación? ¿Cuántos días tiene su año y cuántas horas dura un día?</p>
               </div>
-            </div>
-            <div class="itemEntrada" onclick="document.location='404/index.html'">
-              <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/error-404.svg" alt="Error 404">
-              <div class="itemEntrada-content">
-                <h5 class="item-category-h5 postsection__title">404</h5>
-                <h4 class="item-title-h4">Página de error Error </h4>
-                <!-- <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor pretium cursus...</p> -->
-              </div>
-            </div>
-            <div class="itemEntrada"  onclick="document.location='404/index.html'">
-              <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/escudo%20escuela%20secundaria%20oficial%20514%20sor%20juana%20ines%20de%20la%20cruz.svg" alt="Sor Juana Inés de la Cruz">
+            </div>           
+            <div class="itemEntrada"  onclick="document.location='eso/historia-del-Escudo-del-Estado-de-México/index.html'">
+              <img class="itemEntrada-image" src="img/escudo/Historia del Escudo del Estado de México.webp" alt="Historia del Escudo del Estado de México">
               <div class="itemEntrada-content">
                 <h5 class="item-category-h5 ">Historia</h5>
                 <h4 class="item-title-h4">Historia del escudo del Estado de México</h4>
@@ -365,54 +586,28 @@
               <img class="itemEntrada-image" src="./img/600x400.svg" alt="Sor Juana Inés de la Cruz">
               <div class="itemEntrada-content">
                 <h5 class="item-category-h5">Proyecto</h5>
-                <h4 class="item-title-h4">Entrada de evidencias</h4>
-                <p class="item-description">Cada actividad tiene su area de de texto, foto y/o video, reacciones, muro de opiniones y commpartir. Así como el sumario de actividades. </p>
+                <h4 class="item-title-h4">Unesco</h4>
+                <p class="item-description">Equipo de preservación del cuidado ambiental y del humano. </p>
               </div>
-            </div>
-            <div class="itemEntrada"  onclick="document.location=''">
-              <img class="itemEntrada-image" src="./img/sor%20juana%20ines%20de%20la%20cruz%20cantando%20la%20vida%20es%20mejor.svg" alt="Sor Juana Inés de la Cruz">
-              <div class="itemEntrada-content">
-                <h5 class="item-category-h5">Actualización</h5>
-                <h4 class="item-title-h4">Cómo actualiza está sección</h4>
-                <p class="item-description">Desde el dashboard principal tiene el acceso a la solicitud. <b>Ver más Adelante</b></p>
-              </div>
-            </div>
-            <div class="itemEntrada" onclick="document.location='./lista-de-utiles/index.html'">
-              <img class="itemEntrada-image" src="./img/600x400.svg" alt="Sor Juana Inés de la Cruz">
-              <div class="itemEntrada-content">
-                <h5 class="item-category-h5">Material</h5>
-                <h4 class="item-title-h4">Lista de utiles escolares</h4>
-                <p class="item-description"></p>
-              </div>
-            </div>           
-            <div class="itemEntrada" onclick="document.location='./calculadora-cientifica/index.html'">
-              <img class="itemEntrada-image" src="./sor%20juana%20ines%20de%20la%20cruz%20empoderada%20y%20luchona.svg" alt="Sor Juana Inés de la Cruz">
+            </div>                             
+            <div class="itemEntrada" onclick="document.location='./herramientas/index.html'">
+              <img class="itemEntrada-image" src="./img/ico-xbr/app-de-estudio.svg" alt="Sor Juana Inés de la Cruz">
               <div class="itemEntrada-content">
                 <h5 class="item-category-h5">Herramientas</h5>
                 <h4 class="item-title-h4">Recursos para los estudiantes</h4>
                 <p class="item-description">¿se te olvido la calculadora, pero tienes celular? Utiliza la calculadora de tu pagína escolar. <b>Ver más recursos</b></p>
               </div>
-            </div>
-            <div class="itemEntrada"  onclick="document.location='./herramientas.html'">
-              <img class="itemEntrada-image" src="./img/600x400.svg" alt="Sor Juana Inés de la Cruz">
-              <div class="itemEntrada-content">
-                <h5 class="item-category-h5">Apps</h5>
-                <h4 class="item-title-h4">Calculadora Cientifica</h4>
-                <p class="item-description">Usa la que más se adapte a tu perzonalidad</p>
-              </div>
-            </div>
-        
-            <div class="itemEntrada"  onclick="document.location='./herramientas.html'">
-              <img class="itemEntrada-image" src="./img/600x400.svg" alt="Sor Juana Inés de la Cruz">
+            </div>                   
+            <div class="itemEntrada"  onclick="document.location='./'">
+              <img class="itemEntrada-image" src="./img/ico-xbr/docentes.svg" alt="Sor Juana Inés de la Cruz">
               <div class="itemEntrada-content">
                 <h5 class="item-category-h5">Directorio</h5>
                 <h4 class="item-title-h4">Conoce a tu comunidad</h4>
                 <p class="item-description">Conoce al personal docente y administrativo  <i class="fas fa-user-check"></i> </p>
               </div>
-            </div>
-        
-            <div class="itemEntrada"  onclick="document.location='./herramientas.html'">
-              <img class="itemEntrada-image" src="./img/600x400.svg" alt="Sor Juana Inés de la Cruz">
+            </div>        
+            <div class="itemEntrada"  onclick="document.location='./calculadora-cientifica/index.html'">
+              <img class="itemEntrada-image" src="./img/icons/calculadora-cientifica.svg" alt="Sor Juana Inés de la Cruz">
               <div class="itemEntrada-content">
                 <h5 class="item-category-h5">Apps</h5>
                 <h4 class="item-title-h4">Calculadora Cientifica</h4>
@@ -427,6 +622,21 @@
                 <p class="item-description">Acceso directo a la biblioteca digital más grande del mundo</p>
               </div>
             </div>
+            <div class="itemEntrada" onclick="document.location='404/index.html'">
+              <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/error-404.svg" alt="Error 404">
+              <div class="itemEntrada-content">
+                <h5 class="item-category-h5 postsection__title">404</h5>
+                <h4 class="item-title-h4">Página de error Error </h4>                
+              </div>
+            </div>
+             <div class="itemEntrada" onclick="document.location='./lista-de-utiles/index.html'">
+              <img class="itemEntrada-image" src="./img/ico-xbr/mochila.svg" alt="Sor Juana Inés de la Cruz">
+              <div class="itemEntrada-content">
+                <h5 class="item-category-h5">Material</h5>
+                <h4 class="item-title-h4">Lista de utiles escolares</h4>
+                <p class="item-description"></p>
+              </div>
+            </div>    
           </div>
         </div>
         </div>
@@ -654,24 +864,20 @@ reset();
 
 
 <nav class="navbtn w3-hide-large w3-hide-medium">
-  <a href="index.html" class="navbtn__link a">
-      <i class="fa fa-home w3-xlarge"></i>
-    <span class="navbtn__text">Home</span>
-  </a>
   <a href="alerts/index.html" class="navbtn__link navbtn__ a">
-      <i class="fa fa-bell w3-xlarge"></i>
+    <img src="./img/ico-xbr/avisos-escolares.svg" class="" alt="Home" height="30px" width="30px">
     <span class="navbtn__text">Notificaciones</span>
   </a>
   <a href="calendario.html" class="navbtn__link a">
       <i class="fa fa-calendar-alt w3-xlarge"></i>
     <span class="navbtn__text">Calendario</span>
   </a>
-  <a href="unesco/index.html" class="navbtn__link a">
-      <i class="fa fa-folder-open w3-xlarge"></i>
+  <a href="unesco/index.html" class="navbtn__link a">      
+    <i class="fa fa-file w3-xlarge"></i>
     <span class="navbtn__text">Proyecto</span>
   </a>
-  <a href="login/academico.html" class="navbtn__link a">
-      <i class="fa fa-user w3-xlarge"></i>
+  <a href="login/academico.html" class="navbtn__link a">      
+      <img src="./img/ico-xbr/estudiante-icon.svg" class="" alt="Home" height="30px" width="30px">
     <span class="navbtn__text">Login</span>
   </a>
 </nav>
