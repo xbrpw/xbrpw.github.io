@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="es-MX">
+<!-- * ⊙⩌⨀ 2006 - 2022  http://twitter.com/luisangelmaciel  */  -->
+<head> 
+  <meta charset="UTF-8">  
+  <title> Report Google Lighthouse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="description" content="Report Google Lighthouse">
+  <meta name="MobileOptimized" content="width" />    
+  <meta name="author" content="Luis Angel Maciel">
+  <meta name="generator" content="xbr.pw">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" >
+  <link rel="icon" type="image/x-icon" sizes="192x192" href="./favicon.svg" id="favicon" />   
+  <link rel="apple-touch-icon" href="./apple-touch-icon.svg">
+  <title>Report Google Lighthouse |ESO-0514</title>
+  <style>
+    /*EL DE MONKEY COMPLETO @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");:root{--builder-text-color-normal:#000;--builder-text-color-light:#999;--builder-background:rgba(0,0,0,.05);--builder-container-background:#fff}body{margin:0;padding:0;background-color:var(--builder-container-background)}a{font-weight:500;text-decoration:none;color:#3a0000}a:hover{text-decoration:underline}:root{--sm-font-size-small:90%;--sm-font-size-regular:100%;--sm-font-size-large:120%;--sm-border-color-normal:rgba(0,0,0,.1);--sm-btn-bg-color:#000;--sm-button-color:#fff;--sm-text-color-normal:#000;--sm-text-color-light:#999;--sm-field-bg-color:#fff;--sm-accent-color:#fed34d;--sm-invalid-bg-color:rgba(255,0,0,.05);--sm-x-small-margin:5px;--sm-small-margin:10px;--sm-medium-margin:20px;--sm-large-margin:30px;--sm-x-large-margin:60px;--sm-large-negative-margin:-30px;--sm-x-large-negative-margin:-60px;--sm-input-width-small:30%;--sm-input-width-medium:50%;--sm-input-width-large:auto}@media (prefers-color-scheme:dark){.sm__form{--sm-border-color-normal:hsla(0,0%,100%,.2);--sm-btn-bg-color:#fff;--sm-text-color-normal:#fff;--sm-text-color-light:hsla(0,0%,100%,.5);--sm-button-color:#212124;--sm-field-bg-color:#212124;--sm-link-color:#fed34d;--sm-invalid-bg-color:rgba(255,0,0,.2)}.sm__form .sm-field__input{border:1px solid #7c7c7c!important}}@media only screen and (max-width:768px){:root{--x-small-margin:3px;--small-margin:6px;--medium-margin:12px;--large-margin:24px;--x-large-margin:48px;--large-negative-margin:-24px;--x-large-negative-margin:-48px}}.sm__form{font-family:Roboto,sans-serif;font-size:14px;line-height:20px}.sm-form-title{border-bottom:1px solid var(--sm-border-color-normal);padding-bottom:var(--sm-small-margin);margin:var(--sm-small-margin)}.sm-form-title__header{margin-bottom:var(--sm-x-small-margin);color:var(--sm-text-color-normal)}.{padding:var(--sm-small-margin)}.sm-field{display:flex;flex-direction:column;box-sizing:border-box}.sm-field label{color:var(--sm-text-color-normal)}.sm-field--large{width:var(--sm-input-width-large)}.sm-field__label{margin-bottom:var(--sm-x-small-margin);color:var( --sm-text-color-normal);font-weight:500}.sm-field__input{all:unset;padding:var(--sm-small-margin);border-color:#7c7c7c #c3c3c3 #ddd;border-style:solid;border-width:1px;background:var(--sm-field-bg-color);border-radius:5px;color:var(--sm-text-color-normal);font-size:16px}.sm-field__input:focus:invalid{box-shadow:inset 0 0 3px red;background-color:var(--sm-invalid-bg-color)}.sm-field__input.sm-field__input--text{cursor:text}.sm-actions__container{border-top:1px solid var(--sm-border-color-normal);margin:var(--sm-small-margin);padding-top:var(--sm-medium-margin)}.sm-branding-footer{margin:var(--sm-small-margin);padding-top:var(--sm-small-margin);padding-bottom:var(--sm-medium-margin);font-size:90%}.sm-branding-footer a{text-decoration:none;color:var(--sm-link-color)}.sm-btn{background:var(--sm-border-color-normal);border:0;border-radius:6px;padding:var(--sm-small-margin) var(--sm-medium-margin);font-size:120%;font-weight:600;cursor:pointer}.sm-btn--primary{background:var(--sm-text-color-normal);color:var(--sm-button-color)}.sm-btn:hover{box-shadow:0 0 6px -1px var(--sm-accent-color)}
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");:root{--builder-text-color-normal:#000;--builder-text-color-light:#999;--builder-background:rgba(0,0,0,.05);--builder-container-background:#fff}body{margin:0;padding:0;background-color:var(--builder-container-background)}a{font-weight:500;text-decoration:none;color:#3a0000}a:hover{text-decoration:underline}:root{--sm-font-size-small:90%;--sm-font-size-regular:100%;--sm-font-size-large:120%;--sm-border-color-normal:rgba(0,0,0,.1);--sm-btn-bg-color:#000;--sm-button-color:#fff;--sm-text-color-normal:#000;--sm-text-color-light:#999;--sm-field-bg-color:#fff;--sm-accent-color:#fed34d;--sm-invalid-bg-color:rgba(255,0,0,.05);--sm-x-small-margin:5px;--sm-small-margin:10px;--sm-medium-margin:20px;--sm-large-margin:30px;--sm-x-large-margin:60px;--sm-large-negative-margin:-30px;--sm-x-large-negative-margin:-60px;--sm-input-width-small:30%;--sm-input-width-medium:50%;--sm-input-width-large:auto}@media (prefers-color-scheme:dark){.sm__form{--sm-border-color-normal:hsla(0,0%,100%,.2);--sm-btn-bg-color:#fff;--sm-text-color-normal:#fff;--sm-text-color-light:hsla(0,0%,100%,.5);--sm-button-color:#212124;--sm-field-bg-color:#212124;--sm-link-color:#fed34d;--sm-invalid-bg-color:rgba(255,0,0,.2)}.sm__form .sm-field__input{border:1px solid #7c7c7c!important}}@media only screen and (max-width:768px){:root{--x-small-margin:3px;--small-margin:6px;--medium-margin:12px;--large-margin:24px;--x-large-margin:48px;--large-negative-margin:-24px;--x-large-negative-margin:-48px}}.sm__form{font-family:Roboto,sans-serif;font-size:14px;line-height:20px}.sm-form-title{border-bottom:1px solid var(--sm-border-color-normal);padding-bottom:var(--sm-small-margin);margin:var(--sm-small-margin)}.sm-form-title__header{margin-bottom:var(--sm-x-small-margin);color:var(--sm-text-color-normal)}.{padding:var(--sm-small-margin)}.sm-field{display:flex;flex-direction:column;box-sizing:border-box}.sm-field label{color:var(--sm-text-color-normal)}.sm-field--large{width:var(--sm-input-width-large)}.sm-field__label{margin-bottom:var(--sm-x-small-margin);color:var( --sm-text-color-normal);font-weight:500}.sm-field__input{all:unset;padding:var(--sm-small-margin);border-color:#7c7c7c #c3c3c3 #ddd;border-style:solid;border-width:1px;background:var(--sm-field-bg-color);border-radius:5px;color:var(--sm-text-color-normal);font-size:16px}.sm-field__input:focus:invalid{box-shadow:inset 0 0 3px red;background-color:var(--sm-invalid-bg-color)}.sm-field__input.sm-field__input--text{cursor:text}.sm-actions__container{border-top:1px solid var(--sm-border-color-normal);margin:var(--sm-small-margin);padding-top:var(--sm-medium-margin)}.sm-branding-footer{margin:var(--sm-small-margin);padding-top:var(--sm-small-margin);padding-bottom:var(--sm-medium-margin);font-size:90%}.sm-branding-footer a{text-decoration:none;color:var(--sm-link-color)}.sm-btn{background:var(--sm-border-color-normal);border:0;border-radius:6px;padding:var(--sm-small-margin) var(--sm-medium-margin);font-size:120%;font-weight:600;cursor:pointer}.sm-btn--primary{background:var(--sm-text-color-normal);color:var(--sm-button-color)}.sm-btn:hover{box-shadow:0 0 6px -1px var(--sm-accent-color)}/*Label y boton*/
+    /*REDUCIDO */
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");:root{--builder-text-color-normal:#000;--builder-text-color-light:#999;--builder-background:rgba(0,0,0,.05);--builder-container-background:#fff}body{margin:0;padding:0;background-color:var(--builder-container-background)}a{font-weight:500;text-decoration:none;color:#3a0000}a:hover{text-decoration:underline}:root{--sm-font-size-small:90%;--sm-font-size-regular:100%;--sm-font-size-large:120%;--sm-border-color-normal:rgba(0,0,0,.1);--sm-btn-bg-color:#000;--sm-button-color:#fff;--sm-text-color-normal:#000;--sm-text-color-light:#999;--sm-field-bg-color:#fff;--sm-accent-color:#fed34d;--sm-invalid-bg-color:rgba(255,0,0,.05);--sm-x-small-margin:5px;--sm-small-margin:10px;--sm-medium-margin:20px;--sm-large-margin:30px;--sm-x-large-margin:60px;--sm-large-negative-margin:-30px;--sm-x-large-negative-margin:-60px;--sm-input-width-small:30%;--sm-input-width-medium:50%;--sm-input-width-large:auto}@media only screen and (max-width:768px){:root{--x-small-margin:3px;--small-margin:6px;--medium-margin:12px;--large-margin:24px;--x-large-margin:48px;--large-negative-margin:-24px;--x-large-negative-margin:-48px}}.{padding:var(--sm-small-margin)}.sm-field{display:flex;flex-direction:column;box-sizing:border-box}.sm-field label{color:var(--sm-text-color-normal)}.sm-field--large{width:var(--sm-input-width-large)}.sm-field__label{margin-bottom:var(--sm-x-small-margin);color:var( --sm-text-color-normal);font-weight:500}.sm-field__input{all:unset;padding:var(--sm-small-margin);border-color:#7c7c7c #c3c3c3 #ddd;border-style:solid;border-width:1px;background:var(--sm-field-bg-color);border-radius:5px;color:var(--sm-text-color-normal);font-size:16px}.sm-field__input:focus:invalid{box-shadow:inset 0 0 3px red;background-color:var(--sm-invalid-bg-color)}.sm-field__input.sm-field__input--text{cursor:text}.sm-actions__container{border-top:1px solid var(--sm-border-color-normal);margin:var(--sm-small-margin);padding-top:var(--sm-medium-margin)}.sm-branding-footer{margin:var(--sm-small-margin);padding-top:var(--sm-small-margin);padding-bottom:var(--sm-medium-margin);font-size:90%}.sm-branding-footer a{text-decoration:none;color:var(--sm-link-color)}.sm-btn{background:var(--sm-border-color-normal);border:0;border-radius:6px;padding:var(--sm-small-margin) var(--sm-medium-margin);font-size:120%;font-weight:600;cursor:pointer}.sm-btn--primary{background:var(--sm-text-color-normal);color:var(--sm-button-color)}.sm-btn:hover{box-shadow:0 0 6px -1px var(--sm-accent-color)}
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");:root{--builder-text-color-normal:#000;--builder-text-color-light:#999;--builder-background:rgba(0,0,0,.05);--builder-container-background:#fff}body{margin:0;padding:0;background-color:var(--builder-container-background)}a{font-weight:500;text-decoration:none;color:#3a0000}a:hover{text-decoration:underline}:root{--sm-font-size-small:90%;--sm-font-size-regular:100%;--sm-font-size-large:120%;--sm-border-color-normal:rgba(0,0,0,.1);--sm-btn-bg-color:#000;--sm-button-color:#fff;--sm-text-color-normal:#000;--sm-text-color-light:#999;--sm-field-bg-color:#fff;--sm-accent-color:#fed34d;--sm-invalid-bg-color:rgba(255,0,0,.05);--sm-x-small-margin:5px;--sm-small-margin:10px;--sm-medium-margin:20px;--sm-large-margin:30px;--sm-x-large-margin:60px;--sm-large-negative-margin:-30px;--sm-x-large-negative-margin:-60px;--sm-input-width-small:30%;--sm-input-width-medium:50%;--sm-input-width-large:auto}@media only screen and (max-width:768px){:root{--x-small-margin:3px;--small-margin:6px;--medium-margin:12px;--large-margin:24px;--x-large-margin:48px;--large-negative-margin:-24px;--x-large-negative-margin:-48px}}.{padding:var(--sm-small-margin)}.sm-field{display:flex;flex-direction:column;box-sizing:border-box}.sm-field label{color:var(--sm-text-color-normal)}.sm-field--large{width:var(--sm-input-width-large)}.sm-field__label{margin-bottom:var(--sm-x-small-margin);color:var( --sm-text-color-normal);font-weight:500}.sm-field__input{all:unset;padding:var(--sm-small-margin);border-color:#7c7c7c #c3c3c3 #ddd;border-style:solid;border-width:1px;background:var(--sm-field-bg-color);border-radius:5px;color:var(--sm-text-color-normal);font-size:16px}.sm-field__input:focus:invalid{box-shadow:inset 0 0 3px red;background-color:var(--sm-invalid-bg-color)}.sm-field__input.sm-field__input--text{cursor:text}.sm-actions__container{border-top:1px solid var(--sm-border-color-normal);margin:var(--sm-small-margin);padding-top:var(--sm-medium-margin)}.sm-branding-footer{margin:var(--sm-small-margin);padding-top:var(--sm-small-margin);padding-bottom:var(--sm-medium-margin);font-size:90%}.sm-branding-footer a{text-decoration:none;color:var(--sm-link-color)}.sm-btn{background:var(--sm-border-color-normal);border:0;border-radius:6px;padding:var(--sm-small-margin) var(--sm-medium-margin);font-size:120%;font-weight:600;cursor:pointer}.sm-btn--primary{background:var(--sm-text-color-normal);color:var(--sm-button-color)}.sm-btn:hover{box-shadow:0 0 6px -1px var(--sm-accent-color)}
+    
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="./viewer.css">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+
+
+
+  <div class="w3-auto">
+    <!-- App -->     
+      <div class="w3-bar w3-large  w3-white w3-card-2 w3-hide-large w3-hide-medium w3-top">
+        <a class="w3-bar-item w3-circle  w3-ripple" href="#"><i class="fa fa-bars  "></i></a>
+        <span class="w3-bar-item">Report Google Lighthouse</span>
+        <!-- <a class="w3-bar-item  w3-ripple w3-right" href="#" onclick="myFunction()"><i class="fa fa-plus" ></i></a> -->
+      </div>  
+  
+    <!-- Escritorio -->
+    <div class="w3-container w3-xxlarge  w3-hide-small" >
+      <div class="w3-text-white w3-left "><h4>Report Google Lighthouse </h4></div>
+      <!-- <a class="w3-text-white w3-left w3-ripple w3-right" href="#" onclick="myFunction()"><h4><i class="fa fa-plus" ></i></h4> </a> -->
+    </div><br><br>
+       
+
+   <!--  <div class="">
+        <div class="w3-container">      
+          <div class="scores-container large">
+            <div class="scores-header"><a href="#performance" class="performance gauge-wrapper fail per37">
+            <div class="gauge-svg-wrapper">
+            <svg viewBox="0 0 120 120" class="gauge">
+            <circle class="gauge-base" r="56" cx="60" cy="60"></circle>
+            <circle class="gauge-arc" transform="rotate(-90 60 60)" r="56" cx="60" cy="60"></circle>
+            </svg>
+            </div>
+            <div class="gauge-percentage">37</div>
+            <div class="gauge-label"></div>
+            </a><a href="#accessibility" class="accessibility gauge-wrapper average per70">
+            <div class="gauge-svg-wrapper">
+            <svg viewBox="0 0 120 120" class="gauge">
+            <circle class="gauge-base" r="56" cx="60" cy="60"></circle>
+            <circle class="gauge-arc" transform="rotate(-90 60 60)" r="56" cx="60" cy="60"></circle>
+            </svg>
+            </div>
+            <div class="gauge-percentage">70</div>
+            <div class="gauge-label"></div>
+            </a>
+            <a href="#best-practices" class="best-practices gauge-wrapper pass per100">
+            <div class="gauge-svg-wrapper">
+            <svg viewBox="0 0 120 120" class="gauge">
+            <circle class="gauge-base" r="56" cx="60" cy="60"></circle>
+            <circle class="gauge-arc" transform="rotate(-90 60 60)" r="56" cx="60" cy="60"></circle>
+            </svg>
+            </div>
+            <div class="gauge-percentage">100</div>
+            <div class="gauge-label"></div>
+            </a>
+            <a href="#seo" class="seo gauge-wrapper average per50">
+            <div class="gauge-svg-wrapper">
+            <svg viewBox="0 0 120 120" class="gauge">
+            <circle class="gauge-base" r="56" cx="60" cy="60"></circle>
+            <circle class="gauge-arc" transform="rotate(-90 60 60)" r="56" cx="60" cy="60"></circle>
+            </svg>
+            </div>
+            <div class="gauge-percentage">50</div>
+            <div class="gauge-label"></div>
+            </a>
+            </div>
+            <div class="scorescale">
+            <span class="scorescale-range fail"></span>
+            <span class="scorescale-range average"></span>
+            <span class="scorescale-range pass"></span>
+            </div>
+            </div>    
+        </div>
+    </div>  
+ -->
+<br><br><br>
+    
+  <script src="https://load.sheetsu.com"></script>
+    <div class="w3-container" sheetsu="https://sheetsu.com/apis/v1.0/d49de1401d62">
+      <div id="yours-clothing" class="se-vars site-entry">
+        <img src="{{img}}" alt="website" width="151" height="85" alt="xbr.pw" lazy="load" class="w3-hide-small w3-image " style="padding-right: 15px;"> 
+        <div class="site-entry__meta">
+          <a href="{{id}}" class="site-entry__title w3-responsive w3-image" target="_blank" rel="noopener noreferrer" title="{{title}}" alt="{{title}}" >
+            {{title}}
+          </a>
+          <a href="" class="site-entry__agency" title="" target="_blank" rel="noopener noreferrer">
+            {{description}} 
+          </a>
+       
+        </div>     					
+  
+        <div class="lh-root lh-vars lh-scores-header">
+          <div class="site-entry__stat-group">
+            <div title="Performance" class="lh-gauge__wrapper lh-gauge__wrapper--pass">
+              <!-- Wrapper exists for the ::before plugin icon. Cannot create pseudo-elements on svgs. -->
+              <div class="lh-gauge__svg-wrapper">
+                <svg viewBox="0 0 120 120" class="lh-gauge">
+                  <circle class="lh-gauge-base" r="56" cx="60" cy="60"></circle>
+                  <circle class="lh-gauge-arc" transform="rotate(-90 60 60)" r="56" cx="60" cy="60" style="stroke-dasharray: 316.8, 352;"></circle>
+                </svg>
+              </div>
+              <div class="lh-gauge__percentage">{{performance}}</div>
+              <!-- TODO: should likely be an h2  -->
+              <div class="lh-gauge__label">Performance</div>
+            </div>
+      
+            <div title="Accessibility" class="lh-gauge__wrapper lh-gauge__wrapper--average">
+              <!-- Wrapper exists for the ::before plugin icon. Cannot create pseudo-elements on svgs. -->
+              <div class="lh-gauge__svg-wrapper">
+                <svg viewBox="0 0 120 120" class="lh-gauge">
+                  <circle class="lh-gauge-base" r="56" cx="60" cy="60"></circle>
+                  <circle class="lh-gauge-arc" transform="rotate(-90 60 60)" r="56" cx="60" cy="60" style="stroke-dasharray: 267.52, 352;"></circle>
+                </svg>
+              </div>
+              <div class="lh-gauge__percentage">{{accessibility}}</div>
+              <!-- TODO: should likely be an h2  -->
+              <div class="lh-gauge__label">Accessibility</div>
+            </div>
+      
+             <div title="Best Practices" class="lh-gauge__wrapper lh-gauge__wrapper--fail">
+              <!-- Wrapper exists for the ::before plugin icon. Cannot create pseudo-elements on svgs. -->
+              <div class="lh-gauge__svg-wrapper">
+                <svg viewBox="0 0 120 120" class="lh-gauge">
+                  <circle class="lh-gauge-base" r="56" cx="60" cy="60"></circle>
+                  <circle class="lh-gauge-arc" transform="rotate(-90 60 60)" r="56" cx="60" cy="60" style="stroke-dasharray: 267.52, 352;"></circle>
+                </svg>
+              </div>
+              <div class="lh-gauge__percentage">{{bestpractices}}</div>
+              <!-- TODO: should likely be an h2  -->
+              <div class="lh-gauge__label">Best Practices</div>
+            </div>
+      
+            <div title="Search Engine Optimisation" class="lh-gauge__wrapper lh-gauge__wrapper--pass">
+              <!-- Wrapper exists for the ::before plugin icon. Cannot create pseudo-elements on svgs. -->
+              <div class="lh-gauge__svg-wrapper">
+                <svg viewBox="0 0 120 120" class="lh-gauge">
+                  <circle class="lh-gauge-base" r="56" cx="60" cy="60"></circle>
+                  <circle class="lh-gauge-arc" transform="rotate(-90 60 60)" r="56" cx="60" cy="60" style="stroke-dasharray: 316.8, 352;"></circle>
+                </svg>
+              </div>
+              <div class="lh-gauge__percentage">{{seo}}</div>
+              <!-- TODO: should likely be an h2  -->
+              <div class="lh-gauge__label">SEO</div>
+            </div>
+           
+          </div>
+        </div> 
+      
+        
+      </div>
+    </div>
+   
+    <!-- original-->
+   <!--  <div class="w3-container w3-hide">
+      <div id="yours-clothing" class="se-vars site-entry">
+        <img src="./Captura de pantalla (83).png" alt="website" width="151" height="85" alt="xbr.pw" lazy="load" class="w3-hide-small w3-image " style="padding-right: 15px;"> 
+        <div class="site-entry__meta">
+          <a href="" class="site-entry__title" target="_blank" rel="noopener noreferrer">
+            Yours Clothing
+          </a>
+          <a href="" class="site-entry__agency" title="" target="_blank" rel="noopener noreferrer">
+            Remarkable.net
+          </a>
+        </div>    
+        <div class="lh-root lh-vars lh-scores-header">
+          <div class="site-entry__stat-group">
+            <div title="Performance" class="lh-gauge__wrapper lh-gauge__wrapper--pass">
+              
+              <div class="lh-gauge__svg-wrapper">
+                <svg viewBox="0 0 120 120" class="lh-gauge">
+                  <circle class="lh-gauge-base" r="56" cx="60" cy="60"></circle>
+                  <circle class="lh-gauge-arc" transform="rotate(-90 60 60)" r="56" cx="60" cy="60" style="stroke-dasharray: 316.8, 352;"></circle>
+                </svg>
+              </div>
+              <div class="lh-gauge__percentage">100</div>
+           
+              <div class="lh-gauge__label">Performance</div>
+            </div>
+      
+            <div title="Accessibility" class="lh-gauge__wrapper lh-gauge__wrapper--average">
+              
+              <div class="lh-gauge__svg-wrapper">
+                <svg viewBox="0 0 120 120" class="lh-gauge">
+                  <circle class="lh-gauge-base" r="56" cx="60" cy="60"></circle>
+                  <circle class="lh-gauge-arc" transform="rotate(-90 60 60)" r="56" cx="60" cy="60" style="stroke-dasharray: 267.52, 352;"></circle>
+                </svg>
+              </div>
+              <div class="lh-gauge__percentage">76</div>
+              
+              <div class="lh-gauge__label">Accessibility</div>
+            </div>
+      
+             <div title="Best Practices" class="lh-gauge__wrapper lh-gauge__wrapper--fail">
+              
+              <div class="lh-gauge__svg-wrapper">
+                <svg viewBox="0 0 120 120" class="lh-gauge">
+                  <circle class="lh-gauge-base" r="56" cx="60" cy="60"></circle>
+                  <circle class="lh-gauge-arc" transform="rotate(-90 60 60)" r="56" cx="60" cy="60" style="stroke-dasharray: 267.52, 352;"></circle>
+                </svg>
+              </div>
+              <div class="lh-gauge__percentage">76</div>
+              
+              <div class="lh-gauge__label">Best Practices</div>
+            </div>
+      
+            <div title="Search Engine Optimisation" class="lh-gauge__wrapper lh-gauge__wrapper--pass">
+              
+              <div class="lh-gauge__svg-wrapper">
+                <svg viewBox="0 0 120 120" class="lh-gauge">
+                  <circle class="lh-gauge-base" r="56" cx="60" cy="60"></circle>
+                  <circle class="lh-gauge-arc" transform="rotate(-90 60 60)" r="56" cx="60" cy="60" style="stroke-dasharray: 316.8, 352;"></circle>
+                </svg>
+              </div>
+              <div class="lh-gauge__percentage">90</div>
+              
+              <div class="lh-gauge__label">SEO</div>
+            </div>
+           
+          </div>
+        </div>             
+      </div>
+    </div><br>  
+
+   <div class="w3-container">
+      <div class="w3-panel w3-blue-grey w3-display-container">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-blue-grey w3-display-topright">&times;</span>
+        <p>xbr.pw</p>
+      </div>
+    </div><br>  -->  
+
+    <br><br><script src="https://load.sheetsu.com"></script>
+  </div>
+
+</body>
+</html>

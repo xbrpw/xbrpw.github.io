@@ -1,0 +1,543 @@
+<!DOCTYPE html><html lang="es-MX">
+<!-- * ⊙⩌⨀ 2006 - 2022  http://twitter.com/luisangelmaciel  */  -->
+<head> 
+  <meta charset="UTF-8">  
+  <title>Lighthouse Animation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="description" content="Lighthouse Animation">
+  <meta name="MobileOptimized" content="width" />    
+  <meta name="author" content="Luis Angel Maciel">
+  <meta name="generator" content="xbr.pw">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" >
+  <link rel="icon" type="image/x-icon" sizes="192x192" href="./favicon.svg" id="favicon" />   
+  <link rel="apple-touch-icon" href="./apple-touch-icon.svg">
+
+  <style>
+        * {
+      margin: 0 auto;
+    }
+    body {
+      height: 100vh;
+      overflow: hidden;
+      background-image: linear-gradient(to top, #5abae3, #69c1e8, #77c9ec, #84d0f1, #91d8f6);
+    }
+    .container {
+      height: 500px;
+      width: 500px;
+      margin: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      top: 100px;
+    }
+    .sun {
+      margin: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      left: -450px;
+      top: -450px;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: white;
+      opacity: 0.9;
+      box-shadow: 0px 0px 40px 15px white;
+    }
+    .ray_box {
+      position: absolute;
+      margin: auto;
+      top: 0px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 70px;
+      -webkit-animation: ray_anim 120s linear infinite;
+      animation: ray_anim 120s linear infinite;
+    }
+    .ray {
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+      margin-left: 10px;
+      border-radius: 80% 80% 0 0;
+      position: absolute;
+      opacity: 0.1;
+    }
+    .ray1 {
+      height: 170px;
+      width: 30px;
+      -webkit-transform: rotate(180deg);
+      top: -175px;
+      left: 15px;
+    }
+    .ray2 {
+      height: 100px;
+      width: 8px;
+      -webkit-transform: rotate(220deg);
+      top: -90px;
+      left: 75px;
+    }
+    .ray3 {
+      height: 170px;
+      width: 50px;
+      -webkit-transform: rotate(250deg);
+      top: -80px;
+      left: 100px;
+    }
+    .ray4 {
+      height: 120px;
+      width: 14px;
+      -webkit-transform: rotate(305deg);
+      top: 30px;
+      left: 100px;
+    }
+    .ray5 {
+      height: 140px;
+      width: 30px;
+      -webkit-transform: rotate(-15deg);
+      top: 60px;
+      left: 40px;
+    }
+    .ray6 {
+      height: 90px;
+      width: 50px;
+      -webkit-transform: rotate(30deg);
+      top: 60px;
+      left: -40px;
+    }
+    .ray7 {
+      height: 180px;
+      width: 10px;
+      -webkit-transform: rotate(70deg);
+      top: -35px;
+      left: -40px;
+    }
+    .ray8 {
+      height: 120px;
+      width: 30px;
+      -webkit-transform: rotate(100deg);
+      top: -45px;
+      left: -90px;
+    }
+    .ray9 {
+      height: 80px;
+      width: 10px;
+      -webkit-transform: rotate(120deg);
+      top: -65px;
+      left: -60px;
+    }
+    .ray10 {
+      height: 190px;
+      width: 23px;
+      -webkit-transform: rotate(150deg);
+      top: -185px;
+      left: -60px;
+    }
+    #cloud_one {
+      margin: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 50px;
+      width: 150px;
+      background-color: #e5e5e5;
+      left: -350px;
+      border-radius: 3rem;
+      animation: cloudmove 12s infinite alternate linear;
+    }
+    #cloud_one::before {
+      position: absolute;
+      content: "";
+      height: 60px;
+      width: 60px;
+      background-color: #e5e5e5;
+      top: -35px;
+      left: 30px;
+      border-radius: 3rem;
+    }
+    #cloud_one::after {
+      position: absolute;
+      content: "";
+      height: 50px;
+      width: 50px;
+      background-color: #e5e5e5;
+      top: -30px;
+      left: 75px;
+      border-radius: 3rem;
+    }
+    #cloud_two {
+      margin: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 50px;
+      width: 150px;
+      background-color: #e5e5e5;
+      top: -200px;
+      left: 450px;
+      border-radius: 3rem;
+      animation-delay: 2s;
+      animation: cloudmove2 8s infinite alternate linear;
+    }
+    #cloud_two::before {
+      position: absolute;
+      content: "";
+      height: 60px;
+      width: 60px;
+      background-color: #e5e5e5;
+      top: -35px;
+      left: 30px;
+      border-radius: 3rem;
+    }
+    #cloud_two::after {
+      position: absolute;
+      content: "";
+      height: 50px;
+      width: 50px;
+      background-color: #e5e5e5;
+      top: -30px;
+      left: 75px;
+      border-radius: 3rem;
+    }
+    #cloud_three {
+      margin: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 50px;
+      width: 150px;
+      background-color: #e5e5e5;
+      left: -550px;
+      top: -250px;
+      border-radius: 3rem;
+      animation-delay: 2s;
+      animation: cloudmove3 12s infinite alternate linear;
+    }
+    #cloud_three::before {
+      position: absolute;
+      content: "";
+      height: 60px;
+      width: 60px;
+      background-color: #e5e5e5;
+      top: -35px;
+      left: 30px;
+      border-radius: 3rem;
+    }
+    #cloud_three::after {
+      position: absolute;
+      content: "";
+      height: 50px;
+      width: 50px;
+      background-color: #e5e5e5;
+      top: -30px;
+      left: 75px;
+      border-radius: 3rem;
+    }
+    #lighthut {
+      margin: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      top: -330px;
+      height: 105px;
+      width: 100px;
+      background-color: #fff;
+    }
+    #lighthut #cells {
+      margin: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 100px;
+      width: 5px;
+      left: -50px;
+      background-color: #657B86;
+    }
+    #lighthut #cells::before {
+      position: absolute;
+      content: "";
+      height: 100px;
+      width: 5px;
+      left: 50px;
+      background-color: #657B86;
+    }
+    #lighthut #cells::after {
+      position: absolute;
+      content: "";
+      height: 5px;
+      top: 50px;
+      width: 100px;
+      left: -22.5px;
+      background-color: #657B86;
+    }
+    #lighthut #cap {
+      position: absolute;
+      height: 50px;
+      width: 100px;
+      background-color: #9E110E;
+      top: -50px;
+      border-radius: 3rem 3rem 0 0;
+    }
+    #lighthut #cap::after {
+      position: absolute;
+      content: "";
+      height: 40px;
+      width: 7.5px;
+      background-color: #657B86;
+      top: -30px;
+      left: 45px;
+      z-index: -1;
+    }
+    #lighthut #lightshine {
+      position: absolute;
+      height: 200px;
+      width: 500px;
+      background-color: #fff;
+      left: 50px;
+      top: -55px;
+      clip-path: polygon(3% 38%, 100% 35%, 84% 75%, 0 53%);
+      opacity: 0.3;
+      transform-origin: left;
+      animation: rotatelight 16s infinite linear alternate;
+    }
+    #lighthut::before {
+      position: absolute;
+      content: "";
+      top: 97.5px;
+      left: -10px;
+      height: 7.5px;
+      width: 120px;
+      background-color: #657B86;
+    }
+    #lighthut::after {
+      position: absolute;
+      content: "";
+      left: -10px;
+      height: 7.5px;
+      width: 120px;
+      background-color: #657B86;
+    }
+    #topbase {
+      margin: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      top: -150px;
+      border-bottom: 75px solid #9E110E;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      height: 0;
+      width: 75px;
+    }
+    #topbase::after {
+      position: absolute;
+      content: "";
+      border-bottom: 75px solid #b1403e;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      height: 0;
+      width: 45px;
+    }
+    #topmidbase {
+      margin: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      border-bottom: 75px solid #e5e5e5;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      height: 0;
+      width: 105px;
+    }
+    #topmidbase .door {
+      position: absolute;
+      height: 35px;
+      width: 30px;
+      top: 20px;
+      left: 37.5px;
+      background-color: black;
+      z-index: 1;
+      border-radius: 2rem 2rem 0 0;
+    }
+    #topmidbase::after {
+      position: absolute;
+      content: "";
+      border-bottom: 75px solid #fff;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      height: 0;
+      width: 75px;
+    }
+    #botmidbase {
+      margin: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      top: 150px;
+      border-bottom: 75px solid #9E110E;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      height: 0;
+      width: 135px;
+    }
+    #botmidbase::after {
+      position: absolute;
+      content: "";
+      border-bottom: 75px solid #b1403e;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      height: 0;
+      width: 105px;
+    }
+    #botbase {
+      margin: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      top: 290px;
+      border-bottom: 65px solid #e5e5e5;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      height: 0;
+      width: 165px;
+    }
+    #botbase .door {
+      position: absolute;
+      height: 40px;
+      width: 30px;
+      top: 25px;
+      left: 67.5px;
+      background-color: black;
+      z-index: 1;
+      border-radius: 2rem 2rem 0 0;
+    }
+    #botbase::after {
+      position: absolute;
+      content: "";
+      border-bottom: 65px solid #fff;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      height: 0;
+      width: 135px;
+    }
+    #floor {
+      margin: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      width: 600px;
+      left: -50px;
+      height: 10px;
+      background-color: #e5e5e5;
+      top: 365px;
+      opacity: 0.3;
+    }
+    @keyframes rotatelight {
+      to {
+        transform: rotateY(-180deg);
+      }
+      from {
+        transform: rotateY(0deg);
+      }
+    }
+    @-webkit-keyframes ray_anim {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes cloudmove {
+      to {
+        transform: translateX(60px) scale(0.5);
+      }
+      from {
+        transform: translateX(0px) scale(0.5);
+      }
+    }
+    @keyframes cloudmove2 {
+      to {
+        transform: translateX(-60px) scale(0.7);
+      }
+      from {
+        transform: translateX(0px) scale(0.7);
+      }
+    }
+    @keyframes cloudmove3 {
+      to {
+        transform: translateX(40px) scale(0.6);
+      }
+      from {
+        transform: translateX(0px) scale(0.6);
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+<div class="container">
+  <div id="cloud_one"></div>
+  <div id="cloud_two"></div>
+  <div id="cloud_three"></div>
+  <div class="sun">
+    <div class="ray_box">
+      <div class="ray ray1"></div>
+      <div class="ray ray2"></div>
+      <div class="ray ray3"></div>
+      <div class="ray ray4"></div>
+      <div class="ray ray5"></div>
+      <div class="ray ray6"></div>
+      <div class="ray ray7"></div>
+      <div class="ray ray8"></div>
+      <div class="ray ray9"></div>
+      <div class="ray ray10"></div>
+    </div>
+  </div>
+  <div id="lighthut">
+    <div id="cap"></div>
+    <div id="cells"></div>
+    <div id="lightshine"></div>
+  </div>
+  <div id="topbase"></div>
+  <div id="topmidbase">
+    <div class="door"></div>
+  </div>
+  <div id="botmidbase"></div>
+  <div id="botbase">
+    <div class="door"></div>
+  </div>
+  <div id="floor"></div>
+</div>
+
+
+</body>
+</html>

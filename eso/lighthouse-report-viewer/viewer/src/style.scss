@@ -1,0 +1,392 @@
+$body-background-color: #212121; //#212121
+$body-color: WHITE;
+$animation-speed: 1s;
+
+// LARGE
+$gauge-wrapper-width: 148px; //148px
+$gauge-size: 80px; //80px
+$arc-width: 8px; //8px
+
+// SMALL
+$gauge-wrapper-width-small: 120px; //148px
+$gauge-size-small: 40px; //80px
+$arc-width-small: 4px; //8px
+
+// GAUGE COLORS
+$fail-red: #ff4e42;
+$average-yellow: #ffa400;
+$pass-green: #0cce6b;
+
+// GAUGE LABELS
+$performance-label: 'Performance';
+$accessibility-label: 'Accessibility';
+$best-practices-label: 'Best Practices';
+$seo-label: 'SEO';
+
+// BENCHMARKS LEGEND
+$fail-threshold: '0–49';
+$average-threshold: '50–89';
+$pass-threshold: '90–100';
+
+// PERCENTAGE STROKE LENGTHS
+$arc-001: 3.52;
+$arc-002: 7.04;
+$arc-003: 10.56;
+$arc-004: 14.08;
+$arc-005: 17.6;
+$arc-006: 21.12;
+$arc-007: 24.64;
+$arc-008: 28.16;
+$arc-009: 31.68;
+$arc-010: 35.2;
+$arc-011: 38.72;
+$arc-012: 42.24;
+$arc-013: 45.76;
+$arc-014: 49.28;
+$arc-015: 52.8;
+$arc-016: 56.32;
+$arc-017: 59.84;
+$arc-018: 63.36;
+$arc-019: 66.88;
+$arc-020: 70.4;
+$arc-021: 73.92;
+$arc-022: 77.44;
+$arc-023: 80.96;
+$arc-024: 84.48;
+$arc-025: 88;
+$arc-026: 91.52;
+$arc-027: 95.04;
+$arc-028: 98.56;
+$arc-029: 102.08;
+$arc-030: 105.6;
+$arc-031: 109.12;
+$arc-032: 112.64;
+$arc-033: 116.16;
+$arc-034: 119.68;
+$arc-035: 123.2;
+$arc-036: 126.72;
+$arc-037: 130.24;
+$arc-038: 133.76;
+$arc-039: 137.28;
+$arc-040: 140.8;
+$arc-041: 144.32;
+$arc-042: 147.84;
+$arc-043: 151.36;
+$arc-044: 154.88;
+$arc-045: 158.4;
+$arc-046: 161.92;
+$arc-047: 165.44;
+$arc-048: 168.96;
+$arc-049: 172.48;
+$arc-050: 176;
+$arc-051: 179.52;
+$arc-052: 183.04;
+$arc-053: 186.56;
+$arc-054: 190.08;
+$arc-055: 193.6;
+$arc-056: 197.12;
+$arc-057: 200.64;
+$arc-058: 204.16;
+$arc-059: 207.68;
+$arc-060: 211.2;
+$arc-061: 214.72;
+$arc-062: 218.24;
+$arc-063: 221.76;
+$arc-064: 225.28;
+$arc-065: 228.8;
+$arc-066: 232.32;
+$arc-067: 235.84;
+$arc-068: 239.36;
+$arc-069: 242.88;
+$arc-070: 246.4;
+$arc-071: 249.92;
+$arc-072: 253.44;
+$arc-073: 256.96;
+$arc-074: 260.48;
+$arc-075: 264;
+$arc-076: 267.52;
+$arc-077: 271.04;
+$arc-078: 274.56;
+$arc-079: 278.08;
+$arc-080: 281.6;
+$arc-081: 285.12;
+$arc-082: 288.64;
+$arc-083: 292.16;
+$arc-084: 295.68;
+$arc-085: 299.2;
+$arc-086: 302.72;
+$arc-087: 306.24;
+$arc-088: 309.76;
+$arc-089: 313.28;
+$arc-090: 316.8;
+$arc-091: 320.32;
+$arc-092: 323.84;
+$arc-093: 327.36;
+$arc-094: 330.88;
+$arc-095: 334.4;
+$arc-096: 337.92;
+$arc-097: 341.44;
+$arc-098: 344.96;
+$arc-099: 348.48;
+$arc-100: 352;
+
+// ANIMATION - PERCENTAGE STROKE
+@keyframes load-gauge {from { stroke-dasharray: 0 352; }}
+
+
+*,*::before,*::after {box-sizing: border-box;-webkit-font-smoothing: antialiased;}
+
+html,body {background-color: $body-background-color; color:$body-color;}
+.scores-container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	padding: 20px;
+	width: 100%;
+	.scores-header {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		.gauge-wrapper {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			margin-bottom: 24px;
+			align-items: center;
+			contain: none;
+			text-decoration: none;
+			width: $gauge-wrapper-width;
+			&.performance {.gauge-label {&:after {content: $performance-label;}}}
+			&.accessibility {.gauge-label {&:after {content: $accessibility-label;}}}
+			&.best-practices {.gauge-label {&:after {content: $best-practices-label;}}}
+			&.seo {.gauge-label {&:after {content: $seo-label;}}}
+			&.pass {color: $pass-green;fill: $pass-green;stroke: $pass-green;}
+			&.average {color: $average-yellow;fill: $average-yellow;stroke: $average-yellow;}
+			&.fail {color: $fail-red;fill: $fail-red;stroke: $fail-red;}
+			&.per01 {.gauge-arc {stroke-dasharray: $arc-001, 352;}}
+			&.per02 {.gauge-arc {stroke-dasharray: $arc-002, 352;}}
+			&.per03 {.gauge-arc {stroke-dasharray: $arc-003, 352;}}
+			&.per04 {.gauge-arc {stroke-dasharray: $arc-004, 352;}}
+			&.per05 {.gauge-arc {stroke-dasharray: $arc-005, 352;}}
+			&.per06 {.gauge-arc {stroke-dasharray: $arc-006, 352;}}
+			&.per07 {.gauge-arc {stroke-dasharray: $arc-007, 352;}}
+			&.per08 {.gauge-arc {stroke-dasharray: $arc-008, 352;}}
+			&.per09 {.gauge-arc {stroke-dasharray: $arc-009, 352;}}
+			&.per10 {.gauge-arc {stroke-dasharray: $arc-010, 352;}}
+			&.per11 {.gauge-arc {stroke-dasharray: $arc-011, 352;}}
+			&.per12 {.gauge-arc {stroke-dasharray: $arc-012, 352;}}
+			&.per13 {.gauge-arc {stroke-dasharray: $arc-013, 352;}}
+			&.per14 {.gauge-arc {stroke-dasharray: $arc-014, 352;}}
+			&.per15 {.gauge-arc {stroke-dasharray: $arc-015, 352;}}
+			&.per16 {.gauge-arc {stroke-dasharray: $arc-016, 352;}}
+			&.per17 {.gauge-arc {stroke-dasharray: $arc-017, 352;}}
+			&.per18 {.gauge-arc {stroke-dasharray: $arc-018, 352;}}
+			&.per19 {.gauge-arc {stroke-dasharray: $arc-019, 352;}}
+			&.per20 {.gauge-arc {stroke-dasharray: $arc-020, 352;}}
+			&.per21 {.gauge-arc {stroke-dasharray: $arc-021, 352;}}
+			&.per22 {.gauge-arc {stroke-dasharray: $arc-022, 352;}}
+			&.per23 {.gauge-arc {stroke-dasharray: $arc-023, 352;}}
+			&.per24 {.gauge-arc {stroke-dasharray: $arc-024, 352;}}
+			&.per25 {.gauge-arc {stroke-dasharray: $arc-025, 352;}}
+			&.per26 {.gauge-arc {stroke-dasharray: $arc-026, 352;}}
+			&.per27 {.gauge-arc {stroke-dasharray: $arc-027, 352;}}
+			&.per28 {.gauge-arc {stroke-dasharray: $arc-028, 352;}}
+			&.per29 {.gauge-arc {stroke-dasharray: $arc-029, 352;}}
+			&.per30 {.gauge-arc {stroke-dasharray: $arc-030, 352;}}
+			&.per31 {.gauge-arc {stroke-dasharray: $arc-031, 352;}}
+			&.per32 {.gauge-arc {stroke-dasharray: $arc-032, 352;}}
+			&.per33 {.gauge-arc {stroke-dasharray: $arc-033, 352;}}
+			&.per34 {.gauge-arc {stroke-dasharray: $arc-034, 352;}}
+			&.per35 {.gauge-arc {stroke-dasharray: $arc-035, 352;}}
+			&.per36 {.gauge-arc {stroke-dasharray: $arc-036, 352;}}
+			&.per37 {.gauge-arc {stroke-dasharray: $arc-037, 352;}}
+			&.per38 {.gauge-arc {stroke-dasharray: $arc-038, 352;}}
+			&.per39 {.gauge-arc {stroke-dasharray: $arc-039, 352;}}
+			&.per40 {.gauge-arc {stroke-dasharray: $arc-040, 352;}}
+			&.per41 {.gauge-arc {stroke-dasharray: $arc-041, 352;}}
+			&.per42 {.gauge-arc {stroke-dasharray: $arc-042, 352;}}
+			&.per43 {.gauge-arc {stroke-dasharray: $arc-043, 352;}}
+			&.per44 {.gauge-arc {stroke-dasharray: $arc-044, 352;}}
+			&.per45 {.gauge-arc {stroke-dasharray: $arc-045, 352;}}
+			&.per46 {.gauge-arc {stroke-dasharray: $arc-046, 352;}}
+			&.per47 {.gauge-arc {stroke-dasharray: $arc-047, 352;}}
+			&.per48 {.gauge-arc {stroke-dasharray: $arc-048, 352;}}
+			&.per49 {.gauge-arc {stroke-dasharray: $arc-049, 352;}}
+			&.per50 {.gauge-arc {stroke-dasharray: $arc-050, 352;}}
+			&.per51 {.gauge-arc {stroke-dasharray: $arc-051, 352;}}
+			&.per52 {.gauge-arc {stroke-dasharray: $arc-052, 352;}}
+			&.per53 {.gauge-arc {stroke-dasharray: $arc-053, 352;}}
+			&.per54 {.gauge-arc {stroke-dasharray: $arc-054, 352;}}
+			&.per55 {.gauge-arc {stroke-dasharray: $arc-055, 352;}}
+			&.per56 {.gauge-arc {stroke-dasharray: $arc-056, 352;}}
+			&.per57 {.gauge-arc {stroke-dasharray: $arc-057, 352;}}
+			&.per58 {.gauge-arc {stroke-dasharray: $arc-058, 352;}}
+			&.per59 {.gauge-arc {stroke-dasharray: $arc-059, 352;}}
+			&.per60 {.gauge-arc {stroke-dasharray: $arc-060, 352;}}
+			&.per61 {.gauge-arc {stroke-dasharray: $arc-061, 352;}}
+			&.per62 {.gauge-arc {stroke-dasharray: $arc-062, 352;}}
+			&.per63 {.gauge-arc {stroke-dasharray: $arc-063, 352;}}
+			&.per64 {.gauge-arc {stroke-dasharray: $arc-064, 352;}}
+			&.per65 {.gauge-arc {stroke-dasharray: $arc-065, 352;}}
+			&.per66 {.gauge-arc {stroke-dasharray: $arc-066, 352;}}
+			&.per67 {.gauge-arc {stroke-dasharray: $arc-067, 352;}}
+			&.per68 {.gauge-arc {stroke-dasharray: $arc-068, 352;}}
+			&.per69 {.gauge-arc {stroke-dasharray: $arc-069, 352;}}
+			&.per70 {.gauge-arc {stroke-dasharray: $arc-070, 352;}}
+			&.per71 {.gauge-arc {stroke-dasharray: $arc-071, 352;}}
+			&.per72 {.gauge-arc {stroke-dasharray: $arc-072, 352;}}
+			&.per73 {.gauge-arc {stroke-dasharray: $arc-073, 352;}}
+			&.per74 {.gauge-arc {stroke-dasharray: $arc-074, 352;}}
+			&.per75 {.gauge-arc {stroke-dasharray: $arc-075, 352;}}
+			&.per76 {.gauge-arc {stroke-dasharray: $arc-076, 352;}}
+			&.per77 {.gauge-arc {stroke-dasharray: $arc-077, 352;}}
+			&.per78 {.gauge-arc {stroke-dasharray: $arc-078, 352;}}
+			&.per79 {.gauge-arc {stroke-dasharray: $arc-079, 352;}}
+			&.per80 {.gauge-arc {stroke-dasharray: $arc-080, 352;}}
+			&.per81 {.gauge-arc {stroke-dasharray: $arc-081, 352;}}
+			&.per82 {.gauge-arc {stroke-dasharray: $arc-082, 352;}}
+			&.per83 {.gauge-arc {stroke-dasharray: $arc-083, 352;}}
+			&.per84 {.gauge-arc {stroke-dasharray: $arc-084, 352;}}
+			&.per85 {.gauge-arc {stroke-dasharray: $arc-085, 352;}}
+			&.per86 {.gauge-arc {stroke-dasharray: $arc-086, 352;}}
+			&.per87 {.gauge-arc {stroke-dasharray: $arc-087, 352;}}
+			&.per88 {.gauge-arc {stroke-dasharray: $arc-088, 352;}}
+			&.per89 {.gauge-arc {stroke-dasharray: $arc-089, 352;}}
+			&.per90 {.gauge-arc {stroke-dasharray: $arc-090, 352;}}
+			&.per91 {.gauge-arc {stroke-dasharray: $arc-091, 352;}}
+			&.per92 {.gauge-arc {stroke-dasharray: $arc-092, 352;}}
+			&.per93 {.gauge-arc {stroke-dasharray: $arc-093, 352;}}
+			&.per94 {.gauge-arc {stroke-dasharray: $arc-094, 352;}}
+			&.per95 {.gauge-arc {stroke-dasharray: $arc-095, 352;}}
+			&.per96 {.gauge-arc {stroke-dasharray: $arc-096, 352;}}
+			&.per97 {.gauge-arc {stroke-dasharray: $arc-097, 352;}}
+			&.per98 {.gauge-arc {stroke-dasharray: $arc-098, 352;}}
+			&.per99 {.gauge-arc {stroke-dasharray: $arc-099, 352;}}
+			&.per100 {.gauge-arc {stroke-dasharray: $arc-100, 352;}}
+			.gauge-svg-wrapper {
+				position: relative;
+				svg {
+					&.gauge {
+						stroke-linecap: round;
+						width: $gauge-size;
+						height: $gauge-size;
+						.gauge-base {
+							opacity: 0.1;
+							stroke-width: $arc-width;
+						}
+						.gauge-arc {
+							fill: none;
+							stroke-width: $arc-width;
+							animation: load-gauge $animation-speed ease forwards;
+							animation-delay: 250ms;
+						}
+					}
+				}
+			}
+			.gauge-percentage {
+				font-family: "Roboto Mono","Menlo","dejavu sans mono","Consolas","Lucida Console",monospace;
+				font-size: 28.5px;
+				height: 80px;
+				line-height: 24px;
+				position: absolute;
+				text-align: center;
+				top: calc(60px/2);
+				width: 100%;
+			}
+			.gauge-label {
+				font-size: 20px;
+				.small & {font-size: 10px;}
+				line-height: 26px;
+				margin-top: 10px;
+				text-align: center;
+				color:$body-color;
+			}
+		}
+	}
+	.scorescale {
+		display: inline-flex;
+		margin: 12px auto 0 auto;
+		border: 1px solid #424242;
+		border-radius: 20px;
+		padding: 8px 8px;
+		.scorescale-range {
+			display: flex;
+			align-items: center;
+			margin: 0 12px;
+			font-family: 'Roboto Mono', 'Menlo', 'dejavu sans mono', 'Consolas', 'Lucida Console', monospace;
+			white-space: nowrap;
+			&:before {
+				content: '';
+				width: 18px;
+				height: 6px;
+				border-radius: 10px;
+				display: block;
+				margin-right: 10px;
+			}
+			&.fail {&:before {background-color: $fail-red;}&:after {content: $fail-threshold}}
+			&.average {&:before {background-color: $average-yellow;}&:after {content: $average-threshold}}
+			&.pass {&:before {background-color: $pass-green;}&:after {content: $pass-threshold}}
+		}
+	}
+}
+			
+
+
+
+
+
+
+
+hr {border: none;border-bottom: 1px solid rgba(128,128,128,0.5);}
+
+
+
+
+
+
+
+// SMALL VERSION
+.scores-container {
+	&.small {
+		.scores-header {
+			justify-content: flex-end;
+			.gauge-wrapper {
+				width: $gauge-wrapper-width-small;
+				margin-bottom: 1em;
+				svg {
+					&.gauge {
+						width: $gauge-size-small;
+						height: $gauge-size-small;
+						.gauge-base {stroke-width: $arc-width-small;}
+						.gauge-arc {stroke-width: $arc-width-small;}
+					}
+				}
+				.gauge-percentage {
+					font-size: 16px;
+					top: calc(18px/2);
+				}
+				.gauge-label {
+					font-size: 16px;
+					line-height: 1em;
+				}
+			}
+		}
+		.scorescale {display: none;}
+	}
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+	img {border-radius:8px;}
+}
+
+th, td {
+  text-align: left;
+  padding: 1em;
+}
+tr:nth-child(even) {
+  background-color: rgba(0,0,0,0.2);
+	border-top: 1px solid rgba(128,128,128,0.2);
+	border-bottom: 1px solid rgba(128,128,128,0.2);
+}

@@ -1,0 +1,253 @@
+:root {
+  --root-background-color: #2c2f38;
+  --root-font-color: #d8d8d8;
+  --root-font-family: Roboto, Helvetica, Arial, sans-serif;
+  --root-font-size: 16px;
+  --root-line-height: 1.5;
+}
+
+.lh-vars {
+  --color-average-secondary: #D04900;
+  --color-average: #FFA400;
+  --color-fail-secondary: #EB0F00;
+  --color-fail: #FF4E42;
+  --color-informative: #0D47A1;
+  --color-pass-secondary: #018642;
+  --color-pass: #0CCE6B;
+  --color-hover: #FAFAFA;
+  --gauge-circle-size-big: 112px;
+  --gauge-circle-size: 40px;
+  --gauge-label-font-size-big: 28px;
+  --gauge-label-font-size: 11px;
+  --gauge-label-line-height-big: 36px;
+  --gauge-label-line-height: 1.5;
+  --gauge-percentage-font-size-big: 38px;
+  --gauge-percentage-font-size: 28px;
+  --gauge-wrapper-width: auto;
+  --report-background-color: #fff;
+  --report-border-color-secondary: #ebebeb;
+  --report-font-family-monospace: "Roboto Mono", "Menlo", "dejavu sans mono", "Consolas", "Lucida Console", monospace;
+  --report-font-family: Roboto, Helvetica, Arial, sans-serif;
+  --report-font-size: 16px;
+  --report-line-height: 24px;
+  --report-min-width: 400px;
+  --report-text-color-secondary: #d8d8d8;
+  --report-text-color: #d8d8d8;
+  --report-width: calc(60 * var(--report-font-size));
+  --score-container-padding: 8px;
+  --score-icon-background-size: 24px;
+  --score-icon-margin-left: 4px;
+  --score-icon-margin-right: 12px;
+  --score-icon-margin: 0 var(--score-icon-margin-right) 0 var(--score-icon-margin-left);
+  --score-icon-size: 12px;
+  --scores-container-padding: 20px 0 20px 0;
+  --scorescale-height: 6px;
+  --scorescale-width: 18px;
+  --gauge-circle-size-stat: 44px;
+  --gauge-circle-weight-stat: bold;
+  --circle-fill-stat: #fff;
+  --color-stat: #fff;
+}
+
+body {
+  background-color: var(--root-background-color);
+  color: var(--root-font-color);
+  font-family: var(--root-font-family);
+  font-size: var(--root-font-size);
+  line-height: var(--root-line-height);
+}
+
+.se-vars {
+  --entry-background: transparent;
+  --entry-border-size: 1px;
+  --entry-border-color: #4c4c4c;
+  --entry-color: var(--root-font-color);
+  --entry-font-size: 18px;
+  --entry-padding: .4rem 1rem;
+  --entry-min-width: 300px;
+}
+
+.site-entry {
+  background-color: var(--entry-background);
+  border: var(--entry-border-size) solid var(--entry-border-color);
+  padding: var(--entry-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.site-entry + .site-entry {
+  border-top: none;
+}
+
+.site-entry__meta {
+  display: flex;
+  flex-direction: column;
+  /*min-width: var(--entry-min-width);*/
+}
+
+.site-entry__title,
+.site-entry__agency {
+  color: var(--entry-color);
+  font-size: var(--entry-font-size);
+  text-decoration: none;
+}
+.site-entry__title:hover,
+.site-entry__agency:hover {
+  background: rgba(255, 0, 0, 0.1);
+  color: #f00;
+}
+
+.site-entry__agency {
+  font-size: 0.8em;
+}
+
+.site-entry__stat-group {
+  display: flex;
+}
+
+/*! CSS Used from: https://googlechrome.github.io/lighthouse/viewer/styles/viewer.css */
+.lh-root *, .lh-root *::before, .lh-root *::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.lh-root {
+  font-family: var(--report-font-family);
+  font-size: var(--report-font-size);
+  line-height: var(--report-line-height);
+  scroll-behavior: smooth;
+  color: #212121;
+  margin: 0px;
+}
+
+.lh-scores-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.lh-root:focus {
+  outline: -webkit-focus-ring-color auto 3px;
+}
+
+.lh-gauge__wrapper--stat {
+  color: var(--color-stat);
+}
+.lh-gauge__wrapper--stat .lh-gauge {
+  width: var(--gauge-circle-size-stat);
+  height: var(--gauge-circle-size-stat);
+}
+.lh-gauge__wrapper--stat .lh-gauge__percentage {
+  font-weight: var(--gauge-circle-weight-stat);
+  height: var(--gauge-circle-size-stat);
+  top: calc(var(--score-container-padding) + var(--gauge-circle-size-stat) / 2);
+}
+.lh-gauge__wrapper--stat .lh-gauge-base {
+  fill: var(--circle-fill-stat);
+}
+.lh-gauge__wrapper--stat .lh-gauge-arc {
+  display: none;
+}
+
+.lh-gauge__wrapper--pass {
+  color: var(--color-pass);
+  fill: var(--color-pass);
+  stroke: var(--color-pass);
+}
+
+.lh-gauge__wrapper--average {
+  color: #FFA400;
+  fill: #FFA400;
+  stroke: #FFA400;
+}
+
+.lh-gauge__wrapper--fail {
+  color: #FF4E42;
+  fill: #FF4E42;
+  stroke: #FF4E42;
+}
+
+.lh-gauge {
+  stroke-linecap: round;
+  width: var(--gauge-circle-size);
+  height: var(--gauge-circle-size);
+}
+
+.lh-gauge-base {
+  opacity: 0.1;
+  stroke: var(--circle-background);
+  stroke-width: var(--circle-border-width);
+  fill: var(--circle-fill);
+}
+
+.lh-gauge-arc {
+  fill: none;
+  stroke: var(--circle-color);
+  stroke-width: var(--circle-border-width);
+  -webkit-animation: load-gauge var(--transition-length) ease forwards;
+          animation: load-gauge var(--transition-length) ease forwards;
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
+}
+
+.lh-gauge__svg-wrapper {
+  position: relative;
+  height: var(--gauge-circle-size);
+}
+
+.lh-gauge__percentage {
+  width: 100%;
+  height: var(--gauge-circle-size);
+  position: absolute;
+  font-family: var(--report-font-family-monospace);
+  font-size: calc(var(--gauge-circle-size) * 0.34 + 1.3px);
+  line-height: 0;
+  text-align: center;
+  top: calc(var(--score-container-padding) + var(--gauge-circle-size) / 2);
+}
+
+.lh-gauge__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  padding: var(--score-container-padding);
+  --circle-border-width:8;
+  --transition-length:1s;
+  contain: content;
+  will-change: opacity;
+}
+
+.lh-gauge__label {
+  font-size: var(--gauge-label-font-size);
+  line-height: var(--gauge-label-line-height);
+  margin-top: 10px;
+  text-align: center;
+  color: var(--report-text-color);
+}
+
+.lh-scores-header .lh-gauge__wrapper {
+  width: var(--gauge-wrapper-width);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*! CSS Used from: Embedded */
+.lh-gauge__wrapper:first-of-type {
+  contain: none;
+}
+
+/*! CSS Used keyframes */
+@-webkit-keyframes load-gauge {
+  from {
+    stroke-dasharray: 0 352;
+  }
+}
+@keyframes load-gauge {
+  from {
+    stroke-dasharray: 0 352;
+  }
+}

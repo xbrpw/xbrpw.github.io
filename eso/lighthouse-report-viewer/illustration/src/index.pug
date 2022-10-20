@@ -1,0 +1,35 @@
+.scene
+  .background
+    .stars
+      -for (var x=0;x<60;x++)
+        .star
+    .moon
+    .mountains
+      -for(var i=0;i<4;i++)
+        .mountain
+    .sea
+      -for(var i=0;i<30;i++)
+        .wave
+      .boat
+        .sail
+        .sail
+        .base
+  .lighthouse-group
+    .land
+    .lighthouse-holder
+      .shadow
+      .lighthouse
+      .top
+        .light-container
+          .light
+        .rail
+        .middle
+        .roof
+          .roof-light
+        .glow
+      .windows
+        -for(var i=0;i<4;i++)
+          .window
+      .door
+        .stairs
+      
