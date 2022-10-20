@@ -4,216 +4,17 @@
   <meta charset="UTF-8">
   <title>Panel de control</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css'><link rel="stylesheet" href="https://www.xbr.pw/go/eevee.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css'>
+  <link rel="stylesheet" href="https://www.xbr.pw/go/eevee.css">
+  <link rel="stylesheet" href="./style.css">  
   <link rel="stylesheet" href="./style2.css">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="../icoSorJuana/style.css">
-  <meta name="MobileOptimized" content="width" /><link rel="stylesheet" href="./panelSlide.css"><link rel="stylesheet" href="./Data-Time-layout.css">
+  <meta name="MobileOptimized" content="width" />
+  <link rel="stylesheet" href="./panelSlide.css">
+  <link rel="stylesheet" href="./Data-Time-layout.css">
   <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> 
   <script src="../icoSorJuana/selection.json"></script>
-<style>.w3-container,.w3-panel {padding: 0.01em 16px} .texto-verde {color:#11967e} .bg-verde {background-color: #11967e;}   :root {
-    --green: #11967e;
-  }
-  >#page-wrapperBox {width: 640px;padding: 1em;margin: 1em auto;box-shadow: 0 1px 5px rgba(88, 79, 79, 0.308);}.detailsbox {border-radius: 3px;margin: 1em 0;box-shadow: 0 1px 5px rgba(117, 112, 112, 0.308);}
-.summarybox {background: #2980b9 ;color: #FFF;border-radius: 3px;padding: 5px 10px;outline: none;}/* Style the summary when details box is open */.detailsbox[open] 
-.summarybox {background:#145885  ;color: rgb(255, 255, 255);}.un-container:after,.un-container:before{content: "";display: table;clear: both;padding: 0.01em 16px;color:initial;}</style>  
-
-<style>
-    :root {
-    --green: #11967e;
-  }
-  
-
-  #wrapper2 {
-    padding-left: 5px;
-    padding-right: 5px;
-   
-    flex-flow: wrap;
-     max-width: 800px;
-    margin: auto; 
-
-    gap: 30px; 
-  }
-  
-  #wrapper {
-    padding-left: 5px;
-    padding-right: 5px;
-    display: flex;
-    flex-flow: wrap;
-     max-width: 800px;
-    margin: auto; 
-  justify-content: flex-start; 
-    gap: 30px; 
-  }
-  
-
-
-
- 
-  
-  .status {
-    width: 20px;
-    min-width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin: 0 10px;
-  }
-  
-  .status.correct {
-    background: linear-gradient(#04ff00, #369536);
-  }
-  
-  .status.partially-correct {
-    background: linear-gradient(#fbf82b, #ffc63b);
-  }
-  
-  .status.incorrect {
-    background: linear-gradient(#ff0000, #760000);
-  }
-  
-  .question {
-    display: flex;
-   
-    align-items: center;
-    justify-content: left;
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
-    background-color: #fff;
-    border-radius: 10px;
-    margin-bottom: 20px;
-     background: linear-gradient(to right, #fff calc(100% - 25px), var(--green) calc(100% - 25px), var(--green) 100%); 
-    padding: 10px 35px 10px 10px;
-    position: relative;
-  }
-  
-  .question:after {
-    content: "";
-    height: 100%;
-    width: 25px;
-    background-color: var(--green);
-    position: absolute;
-    right: 0;
-    top: 0;
-    border-radius: inherit;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  
-
-  .w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,.w3-cell-row:before,.w3-cell-row:after,.w3-clear:after,.w3-clear:before,.w3-bar:before,.w3-bar:after {content: "";display: table;clear: both}
-  .w3-container,.w3-panel {padding: 0.01em 16px}
-#page-wrapperBox {background: none;}
-.detailsbox {/*{border-radius: 3px;margin: 1em 0;box-shadow: 0 1px 5px rgba(117, 112, 112, 0.308);*/Color:inherit}
-.summarybox2 {/*{border-radius: 3px;padding: 5px 10px;outline: none;background: #11967e; color: #FFF;*/Color:inherit}/* Style the summary when details box is open */
-.detailsbox[open] 
-.summarybox2 {color: #0d705e ;}
-.un-containerxxx:after,
-.un-containerxxx:before{content: "";display: table;clear: both;padding: 0.01em 16px;}
-
-    .modal-input {
-        display: none;
-    }
-    
-    .modal-input:checked+.modal {
-        visibility: visible;
-        opacity: 1;
-    }
-    
-    .modal {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        visibility: hidden;
-        opacity: 0;
-        transition: 0.3s ease-in-out;
-        background-color: #fff;
-    }
-    
-    .modal-close {
-        position: fixed;
-        right: 15px;
-        font-size: 3rem;
-        top: 15px;          
-        color:#11967e;
-    }
-    .bg-verde {background-color: #11967e;} 
-
-
-    /* Preloder */
-    
-    #preloder {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 999999;
-        justify-content: center;
-        gap: 2rem;
-        padding: 3rem;
-        min-height: 80vh;
-        background-color: #11967e;
-        /*background-image: url("img/lamp-icon-black-1B1C24.svg ");*/
-        /*  background-color: #1086B5; 
-        background-image: url("lamp-icon.svg "); */
-        align-items: center;
-        text-align: center;
-    }
-    
-    .loader {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: -13px;
-        margin-left: -13px;
-        border-radius: 60px;
-        animation: loader 0.8s linear infinite;
-        -webkit-animation: loader 0.8s linear infinite;
-    }
-    
-    @keyframes loader {
-        0% {
-            -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-            border: 4px solid #f44336;
-            border-left-color: transparent;
-        }
-        50% {
-            -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-            border: 4px solid #673ab7;
-            border-left-color: transparent;
-        }
-        100% {
-            -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-            border: 4px solid #f44336;
-            border-left-color: transparent;
-        }
-    }
-    
-    @-webkit-keyframes loader {
-        0% {
-            -webkit-transform: rotate(0deg);
-            border: 4px solid #f44336;
-            border-left-color: transparent;
-        }
-        50% {
-            -webkit-transform: rotate(180deg);
-            border: 4px solid #673ab7;
-            border-left-color: transparent;
-        }
-        100% {
-            -webkit-transform: rotate(360deg);
-            border: 4px solid #f44336;
-            border-left-color: transparent;
-        }
-    }
-</style>
+  <link href="https://xbrpw.github.io/assets/fontawesome/css/all.min.css" rel="stylesheet"> <link href="https://xbrpw.github.io/assets/fontawesome/css/regular.min.css" rel="stylesheet">  <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v6/search?o=r&m=free  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">    -->  
   
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -272,151 +73,129 @@
 </head>
 <body>
 
-    <div id="preloder" ><div class="loader "> </div></div>
+    <div id="preloder"><div class="loader"></div></div>
+    <div class='dashboard '>        
+        <!--     <div class=" logo lift " style="z-index: 1070; ">
+            <span class="fas fa-bell menu-toggle2 " id="toggle_button"  aria-labelledby="button-label"></span> <span id="button-label" style="display:none">Open Side Menu</span>        
+        </div> ABRIR -->
+        <!-- <div class="lasAlertas lift " style="z-index: 1070;">
+            <span class="text-gray-500 p-2 rounded-full hover:text-blue-600  cursor-pointer mr-4 ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="0" y="0" width="24" height="24" stroke="none"></rect>
+                    <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                    <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+                </svg>						  
+            </span>
+        </div> .icon {display: inline-block;width: 1em;height: 1em;stroke-width: 0;stroke: currentColor; fill: currentColor; .icon-nameicon- {font-size: 32px; color: red;  style="  width: 2em; height: 2em; fill: currentColor;"
+        }
+        }    -->
+        <div class="elUser lift " style="z-index: 1070;">
+            <div class="relative" x-data="{ open: false }" x-cloak>
+                <div @click="open = !open"
+                    class="cursor-pointer font-bold w-10 h-10 bg-blue-200 text-blue-600 flex items-center justify-center rounded-full" style="background-color: #11967e; color: white;">
+                    SO
+                </div>
 
-
-<div class='dashboard '>        
-    <!--     <div class=" logo lift " style="z-index: 1070; ">
-        <span class="fas fa-bell menu-toggle2 " id="toggle_button"  aria-labelledby="button-label"></span> <span id="button-label" style="display:none">Open Side Menu</span>        
-    </div> ABRIR -->
-    <!-- <div class="lasAlertas lift " style="z-index: 1070;">
-        <span class="text-gray-500 p-2 rounded-full hover:text-blue-600  cursor-pointer mr-4 ">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="0" y="0" width="24" height="24" stroke="none"></rect>
-                <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
-                <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
-            </svg>						  
-        </span>
-    </div> .icon {display: inline-block;width: 1em;height: 1em;stroke-width: 0;stroke: currentColor; fill: currentColor; .icon-nameicon- {font-size: 32px; color: red;  style="  width: 2em; height: 2em; fill: currentColor;"
-    }
-    }    -->
-    <div class="elUser lift " style="z-index: 1070;">
-        <div class="relative" x-data="{ open: false }" x-cloak>
-            <div @click="open = !open"
-                class="cursor-pointer font-bold w-10 h-10 bg-blue-200 text-blue-600 flex items-center justify-center rounded-full" style="background-color: #11967e; color: white;">
-                SO
+                <div x-show.transition="open" @click.away="open = false"
+                    class="absolute top-0 mt-12 right-0 w-48 bg-white py-2 shadow-md border border-gray-100 rounded-lg z-40">
+            <!--      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Edit
+                        Profile</a> -->
+                    <a href="../index.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Sign Out</a>
+                </div>            
             </div>
-
-            <div x-show.transition="open" @click.away="open = false"
-                class="absolute top-0 mt-12 right-0 w-48 bg-white py-2 shadow-md border border-gray-100 rounded-lg z-40">
-           <!--      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Edit
-                    Profile</a> -->
-                <a href="../index.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Sign Out</a>
-            </div>            
         </div>
-    </div>
+         
+        <div class="dashboard-nav" style="background-color: #11967e;">        
+            <header>            
+                <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>                        
+                <a href="#" class="brand-logo">
+                    <svg class="icon  icon-sor-juana-ines-de-la-cruzicon-"  style="font-size: 36px; color: rgb(255, 255, 255); "><use xlink:href="#icon-sor-juana-ines-de-la-cruzicon-"></use></svg><span>ESO 0514</span>
+                    <!-- <svg class="icon  icon-sor-juanaicon-" style="font-size: 36px; color: rgb(255, 255, 255); "><use xlink:href="#icon-sor-juanaicon-"></use></svg><span>ESO 0514</span> -->
+                    <!-- <svg class="icon icon-sor-juana-inesicon-" style="font-size: 36px; color: rgb(255, 255, 255); "><use xlink:href="#icon-sor-juana-inesicon-"></use></svg><span>ESO 0514</span> -->
+                </a>                           
+            </header>
+            <!-- <svg class="icon icon-sor-juana-inesicon-" style="font-size: 32px; color: rgb(255, 255, 255); "><use xlink:href="#icon-sor-juana-inesicon-"></use></svg> -->
+                <nav class="dashboard-nav-list">                 
+                    <a href="#gDrive" class="dashboard-nav-item "><i class="fa-brands fa-google-drive"></i> G Drive </a>
+                    <a href="#blogs" class="dashboard-nav-item "><i class="fa-brands fa-blogger-b"></i> Blogs </a>                    
+                    <div class='dashboard-nav-dropdown'>
+                        <a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-database"></i> Base de datos </a>
+                        <div class='dashboard-nav-dropdown-menu'>
+                            <a href="#bdalumnos" class="dashboard-nav-item "> Alumnos </a>
+                            <a href="#bddocentes" class="dashboard-nav-item "> Docentes</a>
+                            <!-- <a href="#elDirectorio"   class="dashboard-nav-dropdown-item">Directorio</a>    -->                       
+                            <a href="#editarDirectorio"   class="dashboard-nav-dropdown-item">Editar directorio</a>                                  
+                        </div>
+                    </div>
+                    <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle">
+                        <i class="fas fa-photo-video"></i>   Media </a>
+                        <div class='dashboard-nav-dropdown-menu'>                    
+                            <a href="#multimediaimg"  class="dashboard-nav-dropdown-item menu-toggle-Close" >Multimedia</a>
+                            <a href="#icoSorJuana" class="dashboard-nav-dropdown-item" >IcoSorJuana</a>                                                
+                        </div>
+                    </div>
+                    <div class="nav-item-divider"></div> 
 
-  
-    <!-- <div class="dashboard-nav" style="background-color: #11967e;">         -->
-    <div class="dashboard-nav" style="background-color: #11967e;">        
-        <header>            
-            <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
+                    <div class='dashboard-nav-dropdown'>
+                        <a href="#notasdeservicio"   class="dashboard-nav-item dashboard-nav-dropdown-toggle">
+                            <i class="fa-regular fa-file"></i> Notas de servicio 
+                        </a>
+                            <div class='dashboard-nav-dropdown-menu'>
+                                <a href="#nota1de2" class="dashboard-nav-dropdown-item" >1 de 2</a>    
+                                <a href="#nota1de2" class="dashboard-nav-dropdown-item" >2 de 2</a>    
+                                <!-- <a href="./nota/orden-de-compra.html"   class="dashboard-nav-dropdown-item"></a>
+                                <a href="./nota/nota-2.html"   class="dashboard-nav-dropdown-item">2 de 2</a>                         -->
+                            </div>
+                    </div>                    
                         
-            <a href="#" class="brand-logo">
-                <svg class="icon  icon-sor-juana-ines-de-la-cruzicon-"  style="font-size: 36px; color: rgb(255, 255, 255); "><use xlink:href="#icon-sor-juana-ines-de-la-cruzicon-"></use></svg><span>ESO 0514</span>
-                <!-- <svg class="icon  icon-sor-juanaicon-" style="font-size: 36px; color: rgb(255, 255, 255); "><use xlink:href="#icon-sor-juanaicon-"></use></svg><span>ESO 0514</span> -->
-                <!-- <svg class="icon icon-sor-juana-inesicon-" style="font-size: 36px; color: rgb(255, 255, 255); "><use xlink:href="#icon-sor-juana-inesicon-"></use></svg><span>ESO 0514</span> -->
-            </a>                           
-        </header>
-    <!-- <svg class="icon icon-sor-juana-inesicon-" style="font-size: 32px; color: rgb(255, 255, 255); "><use xlink:href="#icon-sor-juana-inesicon-"></use></svg> -->
-        <nav class="dashboard-nav-list">                 
-            <a href="#gDrive" class="dashboard-nav-item "><i class="fas fa-file-upload"></i> G Drive </a>
-            <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle">
-                <i class="fas fa-photo-video"></i>   Media </a>
-                <div class='dashboard-nav-dropdown-menu'>                    
-                    <a href="#multimediaimg"  class="dashboard-nav-dropdown-item menu-toggle-Close" >Multimedia</a>
-                    <a href="#icoSorJuana" class="dashboard-nav-dropdown-item" >IcoSorJuana</a>                    
-                    <!-- <a href="./../././icoSorJuana/demo.html" class="dashboard-nav-dropdown-item" >IcoSorJuana</a>                     -->
-                </div>
-                <div class='dashboard-nav-dropdown'>
-                    <a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle">
-                        <i class="fas fa-users"></i> Base de datos 
-                    </a>
-                <div class='dashboard-nav-dropdown-menu'>
-                     <a href="#bdalumnos" class="dashboard-nav-item "> Alumnos </a>
-                     <a href="#bddocentes" class="dashboard-nav-item "> Docentes</a>
-                    <a href="https://docs.google.com/spreadsheets/d/1HRsTYIeUaXhjHLnCrFwHo5bTOAacxAmxWpYl7k4E-oc/edit#gid=0"  target="iframe_b" class="dashboard-nav-dropdown-item">Directorio</a>
-                    <!-- <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSj7cjUbeWNJpN8J4nrLGSzpeEEvGLTeSIwyqtUDXkFqfzpHnVLyjnV7XJ0f_h8W5fAiuJXQYYqdDLC/pubhtml"  target="iframe_b" class="dashboard-nav-dropdown-item">Directorio docentes</a> -->
-                    <a href="https://forms.gle/4TmSHZ7vimyNDQco7"  target="iframe_b" class="dashboard-nav-dropdown-item">Editar formulario directorio</a>
+                    <div class='dashboard-nav-dropdown'>
+                        <a href="#reportes"   class="dashboard-nav-item dashboard-nav-dropdown-toggle">
+                            <i class="fa-solid fa-file-code"></i> Reportes </a>
+                            <div class='dashboard-nav-dropdown-menu'>                              
+                                <a href="#brief" class="dashboard-nav-dropdown-item" >Brief</a>  
+                                <a href="#mapsite" class="dashboard-nav-dropdown-item" >Mapa de sitio</a>  
+                                <a href="#lighthouse" class="dashboard-nav-dropdown-item" >Lighthouse</a>  
+                            </div>
+                    </div>                    
                     
-                   <!--  <a href="#PadresDeFamilia"  target="iframe_b" class="dashboard-nav-dropdown-item">Padres de familia</a>
-                    <a href="#General"  target="iframe_b" class="dashboard-nav-dropdown-item">General</a>   -->                     
-                </div>
-            <div class='dashboard-nav-dropdown'>
-                <a href="https://www.xbr.pw/secu/app/bloc-de-notas.html"  target="iframe_b"  class="dashboard-nav-item dashboard-nav-dropdown-toggle">
-                    <i  class="fas fa-open-file"></i> Notas de servicio </a>
-                    <div class='dashboard-nav-dropdown-menu'>
-                        <a href="https://xbrpw.github.io/esodashboard/notas/orden-de-compra.html'"  target="iframe_b"  class="dashboard-nav-dropdown-item">1 de 2</a><a
-                            href="https://xbrpw.github.io/eso/dashboard/notas/orden-de-compra.html'"  target="iframe_b"  class="dashboard-nav-dropdown-item">2 de 2</a>                        
-                    </div>
-                </div>
-
+                    <!--<a  href="#" class="dashboard-nav-item"><i class="fas fa-sign-out-alt"></i> Logout </a>-->
+                    <div class="nav-item-divider"></div> 
+                    <a href="https://photos.google.com/share/AF1QipP8638ZBXujZE4Z0SH2k8cI2dHTPN42dikDooUZXJDUbdGWsvVe_ftlwCKQwHrsEw?key=UjYtVjFneFE0WkFFelFiXzlPTkNUOGRMQ05ETGhB"  class="dashboard-nav-item" targer="_blank"><i class="fas fa-bug"></i> Soporte </a>
             
-                
-            <div class='dashboard-nav-dropdown'>
-                <a href=https://www.xbr.pw/secu/app/bloc-de-notas.html"  target="iframe_b"  class="dashboard-nav-item dashboard-nav-dropdown-toggle">
-                    <i  class="fas fa-file-open"></i> Reportes </a>
-                    <div class='dashboard-nav-dropdown-menu'>
-                        <a href="../sor-juana-ines-de-la-cruz/index.html"  target="iframe_b"  class="dashboard-nav-dropdown-item">Brief</a>
-                        <a href="../lighthouse-report-viewer/"  target="iframe_b"  class="dashboard-nav-dropdown-item">Mapa de sitio</a>                          
-                    </div>
-                </div>
-
-            
-            <div class="nav-item-divider"></div> 
-    <!--      <a  href="#" class="dashboard-nav-item"><i class="fas fa-sign-out-alt"></i> Logout </a>-->
-
-            <a href="https://photos.google.com/share/AF1QipP8638ZBXujZE4Z0SH2k8cI2dHTPN42dikDooUZXJDUbdGWsvVe_ftlwCKQwHrsEw?key=UjYtVjFneFE0WkFFelFiXzlPTkNUOGRMQ05ETGhB" 
-            class="dashboard-nav-item" targer="_blank"><i class="fas fa-bug"></i> Soporte </a>
-
-        
-                    <!-- no queda el espacio 
-                            <div class="rounded-lg relative " role="alert" x-data="{ open: true }" x-show.transition="open" style="color: antiquewhite;">
-                                    <div class="w3-container px-1"><div class="bg-orange-200 mb-6 p-3 rounded-lg mt-16">
-                                        <h2 class="text-gray-800 text-lg leading-tight">Try <strong class="font-bold">Dashing Admin.</strong></h2>
-                                        <p class="text-gray-800 text-lg mb-4 leading-tight">Premium for free!</p>
-                            
-                                        <button class="shadow text-center w-full block bg-blue-500 hover:bg-blue-600 focus:outline-none focus:shadow-outline text-white font-semibold py-2 px-4 rounded-lg">
-                                            30 Days Free Trail	  
-                                        </button>
-                                    </div>
+                  
+                    <!-- <div class="rounded-lg relative " role="alert" x-data="{ open: true }" x-show.transition="open" style="color: antiquewhite;">
+                            <div class="w3-container px-1"><div class="bg-orange-200 mb-6 p-3 rounded-lg mt-16">
+                                <h2 class="text-gray-800 text-lg leading-tight">Try <strong class="font-bold">Dashing Admin.</strong></h2>
+                                <p class="text-gray-800 text-lg mb-4 leading-tight">Premium for free!</p>
+                    
+                                <button class="shadow text-center w-full block bg-blue-500 hover:bg-blue-600 focus:outline-none focus:shadow-outline text-white font-semibold py-2 px-4 rounded-lg">
+                                    30 Days Free Trail	  
+                                </button>
                             </div>
-                                        
+                         </div> 
+                                
 
-                                <span class="cursor-pointer absolute top-0 bottom-0 right-0 hover:bg-red-100 hover:text-red-600 w-10 h-10 rounded-full inline-flex items-center justify-center mt-2 mr-3" x-on:click="open = false">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="0" y="0" width="24" height="24" stroke="none"></rect>
-                                        <line x1="18" y1="6" x2="6" y2="18" />
-                                        <line x1="6" y1="6" x2="18" y2="18" />
-                                    </svg>
-                                </span>
-                            </div>
+                         <span class="cursor-pointer absolute top-0 bottom-0 right-0 hover:bg-red-100 hover:text-red-600 w-10 h-10 rounded-full inline-flex items-center justify-center mt-2 mr-3" x-on:click="open = false">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="0" y="0" width="24" height="24" stroke="none"></rect>
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                         </span>
+                       </div>
                     -->
-                            
+                                                        
 
-            <!-- <a  href="#" class="dashboard-nav-item"><div class="wrapper ">
-            <div id="clock" class="center clock"></div>
-            <div id="month" class="center month"></div>
-            <div id="dates">
-                <div id="date" class="date"></div>
-                <div id="year" class="year"></div>
-                <div id="day" class="day"></div>
-            </div>
-        </div></a> -->
-        </nav>
-</div>
+                    <!-- <a  href="#" class="dashboard-nav-item"><div class="wrapper "><div id="clock" class="center clock"></div><div id="month" class="center month"></div><div id="dates"><div id="date" class="date"></div><div id="year" class="year"></div><div id="day" class="day"></div></div></div></a> -->
+            </nav>
+        </div>
             
 
-
-    
-      
-
-
-<div class='dashboard-app'>
+  <div class='dashboard-app'>
     <!-- <iframe src="./get-started.html" style="border:none; " name="iframe_a" height="650px" width="100%" title="Dashboard " ></iframe>   -->
     <header class='dashboard-toolbar shadow-sm' style="background-color:    #f2f2fa;">
         <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>  
-        <!--   <div class="flex items-right">
+         <!--   <div class="flex items-right">
                                 
             <a href="#" class="text-gray-500 p-2 rounded-full hover:text-blue-600 hover:bg-gray-200 cursor-pointer mr-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -443,8 +222,8 @@
                         Out</a>
                 </div>
             </div>
-        </div> -->
-        <div class=" ">               
+         </div> -->
+                  
             <div class="flex float-right items-right">
                     
                 <!--  <a href="#" class="text-gray-500 p-2 rounded-full hover:text-blue-600 hover:bg-gray-200 cursor-pointer mr-4 ">
@@ -471,8 +250,8 @@
                         <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Sign
                             Out</a>
                     </div>
-                </div>-->
-            </div>
+                </div>
+             </div>-->
                 <!--   <div class="flex items-center w-2/3">
                 <input class="bg-gray-200 focus:outline-none focus:shadow-outline focus:bg-white border border-transparent focus:border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal hidden md:block placeholder-gray-700 mr-10" type="text" placeholder="Search..."> -->
 
@@ -487,13 +266,13 @@
                     </svg>
                 </div>
                 <div class="text-xl font-bold tracking-tight text-gray-800 md:hidden ml-2">Dashing Admin.</div>
-            </div> -->
+                </div> -->
         </div>                   
     </header>
 
    
     <div id="contenidoDashboard">
-        <div class="w3-auto">
+      <div class="w3-auto">
         
         <!-- 1-->
         <div class="w3-container">
@@ -505,7 +284,7 @@
                             <line x1="12" y1="5" x2="12" y2="19" />
                             <line x1="5" y1="12" x2="19" y2="12" />
                         </svg>
-                           <a href="#ModerarBlogs">Moderar blogs</a>
+                           <a href="#blogs">Moderar blogs</a>
                     </button>
 
                                            
@@ -591,9 +370,7 @@
             </div>
         </div> 
         <!-- /2-->
-        
-        
-        
+                    
         
         <!-- de4 -->
         <div class="w3-container row">
@@ -610,9 +387,9 @@
                         </div>
                     </div>
                 </div>
-                <a href="https://www.blogger.com/blog/posts/4117858681829256415">
+                <a href="#abrirTicket">
                     <div class="panel-footer">
-                        <span class="pull-left">Ir al blog</span>
+                        <span class="pull-left">Abrir solicitud de soporte</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                         <div class="clearfix"></div>
                     </div>
@@ -654,7 +431,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#blogger">
+                <a href="#blogs">
                     <div class="panel-footer">
                         <span class="pull-left">Blogs publicados</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -676,7 +453,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl">
+                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl" target="_blank" title="GMail">
                     <div class="panel-footer">
                         <span class="pull-left">Ir a Gmail</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -690,8 +467,7 @@
         
         
        
-        
-        
+       
         
         
         
@@ -745,16 +521,14 @@
                                         </div>
                                     </details>
                                     </div>
-                            
-                            
+                                                        
                             
                             <div id="page-wrapperBoxx">
                                 <details class="detailsbox ">
                                     <summary class="summarybox" >Nota de servicios</summary>
                                     <div class="un-container w3-container" style="color: inherit;">
-                                    <p >&nbsp; &nbsp;1 de 2</p>   
-                                    <p >&nbsp; &nbsp;2 de 2</p>
-                                   
+                                    <p id="nota1de2">&nbsp; &nbsp;1 de 2</p>   
+                                    <p id="nota2de2">&nbsp; &nbsp;2 de 2</p>                                   
                                     </div>
                                 </details>
                             </div>
@@ -856,9 +630,7 @@
                                                             <div class="sm-actions__container">
                                                         <button type="submit" class="sm-btn sm-btn--primary">Publicar aviso</button></div><div class="sm-branding-footer">
                                                         </div></div>
-                                                </form>
-                        
-                        
+                                                </form>                                                
                                         </details> 
                                     </div>                                                        
                                 </div>
@@ -883,9 +655,7 @@
                                                             <div class="sm-actions__container">
                                                         <button type="submit" class="sm-btn sm-btn--primary">Publicar aviso</button></div><div class="sm-branding-footer">
                                                         </div></div>
-                                                </form>
-                        
-                        
+                                                </form>                                                
                                         </details> 
                                     </div>                                                        
                                 </div>
@@ -894,7 +664,7 @@
                             <div class="w3-container">     
                                 <div id="wrapper2xx">   
                                     <div id="page-wrapperBoxxx " >
-                                        <details > 
+                                        <details> 
                                             <summary class="  question" >
                                             <span class="status incorrect"></span> Aviso general
                                             </summary>                                      
@@ -907,8 +677,7 @@
                                                             <div class="sm-actions__container">
                                                         <button type="submit" class="sm-btn sm-btn--primary">Publicar aviso</button></div><div class="sm-branding-footer">
                                                         </div></div>
-                                                </form>
-                        
+                                                </form>                        
                         
                                         </details> 
                                     </div>                                                        
@@ -918,13 +687,36 @@
                                     <div id="page-wrapperBoxxx " >
                                             <details > 
                                                 <summary class="  question" >
-                                                <span class="status incorrect"></span>   4
+                                                <span class="status incorrect"></span> Agregar Valores
                                                 </summary>                                      
-                                                    ok
+                                               <form method="post" action="https://api.sheetmonkey.io/form/tGpASqhVRmt9gtXDdRLGd8" autoComplete="on" class="sm__form"><div class="sm__form__fields">
+                                                <div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large">
+                                                    <label class="sm-field__label" for="sm-field-qxnhOLxrFX"> </label>
+                                                    <input type="text" class="sm-field__input sm-field__input--text" id="sm-field-qxnhOLxrFX" name="Misión"/></div>
+                                                </div></div><div class="sm-actions__container"><button type="submit" class="sm-btn sm-btn--primary">Enviar</button></div>
+                                               </div><link rel="stylesheet" href="data:text/css;base64,Cjpyb290IHsKICAtLXNtLWZvbnQtc2l6ZS1zbWFsbDogOTAlOwogIC0tc20tZm9udC1zaXplLXJlZ3VsYXI6IDEwMCU7CiAgLS1zbS1mb250LXNpemUtbGFyZ2U6IDEyMCU7CiAgLS1zbS1ib3JkZXItY29sb3Itbm9ybWFsOiByZ2JhKDAsIDAsIDAsIDAuMSk7CiAgLS1zbS1idG4tYmctY29sb3I6IGJsYWNrOwogIC0tc20tYnV0dG9uLWNvbG9yOiB3aGl0ZTsKICAtLXNtLXRleHQtY29sb3Itbm9ybWFsOiAjMDAwOwogIC0tc20tdGV4dC1jb2xvci1saWdodDogaHNsKDAsIDAlLCA2MCUpOwogIC0tc20tZmllbGQtYmctY29sb3I6ICNmZmY7CiAgLS1zbS1hY2NlbnQtY29sb3I6ICNGRUQzNEQ7CiAgLS1zbS1pbnZhbGlkLWJnLWNvbG9yOiByZ2JhKDI1NSwgMCwgMCwgMC4wNSk7CiAgLS1zbS14LXNtYWxsLW1hcmdpbjogNXB4OwogIC0tc20tc21hbGwtbWFyZ2luOiAxMHB4OwogIC0tc20tbWVkaXVtLW1hcmdpbjogMjBweDsKICAtLXNtLWxhcmdlLW1hcmdpbjogMzBweDsKICAtLXNtLXgtbGFyZ2UtbWFyZ2luOiA2MHB4OwogIC0tc20tbGFyZ2UtbmVnYXRpdmUtbWFyZ2luOiAtMzBweDsKICAtLXNtLXgtbGFyZ2UtbmVnYXRpdmUtbWFyZ2luOiAtNjBweDsKICAtLXNtLWlucHV0LXdpZHRoLXNtYWxsOiAzMCU7CiAgLS1zbS1pbnB1dC13aWR0aC1tZWRpdW06IDUwJTsKICAtLXNtLWlucHV0LXdpZHRoLWxhcmdlOiBhdXRvOwp9CgpAbWVkaWEgKHByZWZlcnMtY29sb3Itc2NoZW1lOiBkYXJrKSB7Cgkuc21fX2Zvcm0gewogICAgLS1zbS1ib3JkZXItY29sb3Itbm9ybWFsOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMik7CiAgICAtLXNtLWJ0bi1iZy1jb2xvcjogd2hpdGU7CiAgICAtLXNtLXRleHQtY29sb3Itbm9ybWFsOiAjZmZmOwogICAgLS1zbS10ZXh0LWNvbG9yLWxpZ2h0OiByZ2JhKDI1NSwyNTUsMjU1LCAwLjUpOwogICAgLS1zbS1idXR0b24tY29sb3I6ICMyMTIxMjQ7CiAgICAtLXNtLWZpZWxkLWJnLWNvbG9yOiAjMjEyMTI0OwogICAgLS1zbS1saW5rLWNvbG9yOiAjRkVEMzREOwogICAgLS1zbS1pbnZhbGlkLWJnLWNvbG9yOiByZ2JhKDI1NSwgMCwgMCwgMC4yKTsKICB9CiAgLnNtX19mb3JtIC5zbS1maWVsZF9faW5wdXQgewogICAgYm9yZGVyOiAxcHggc29saWQgIzdjN2M3YyAhaW1wb3J0YW50OwogIH0KICAuc21fX2Zvcm0gLnNtLWZpZWxkX19zZWxlY3QgewogICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCdkYXRhOmltYWdlL3N2Zyt4bWw7Y2hhcnNldD1VUy1BU0NJSSwlM0NzdmclMjB4bWxucyUzRCUyMmh0dHAlM0ElMkYlMkZ3d3cudzMub3JnJTJGMjAwMCUyRnN2ZyUyMiUyMHdpZHRoJTNEJTIyMjkyLjQlMjIlMjBoZWlnaHQlM0QlMjIyOTIuNCUyMiUzRSUzQ3BhdGglMjBmaWxsJTNEJTIyd2hpdGUlMjIlMjBkJTNEJTIyTTI4NyUyMDY5LjRhMTcuNiUyMDE3LjYlMjAwJTIwMCUyMDAtMTMtNS40SDE4LjRjLTUlMjAwLTkuMyUyMDEuOC0xMi45JTIwNS40QTE3LjYlMjAxNy42JTIwMCUyMDAlMjAwJTIwMCUyMDgyLjJjMCUyMDUlMjAxLjglMjA5LjMlMjA1LjQlMjAxMi45bDEyOCUyMDEyNy45YzMuNiUyMDMuNiUyMDcuOCUyMDUuNCUyMDEyLjglMjA1LjRzOS4yLTEuOCUyMDEyLjgtNS40TDI4NyUyMDk1YzMuNS0zLjUlMjA1LjQtNy44JTIwNS40LTEyLjglMjAwLTUtMS45LTkuMi01LjUtMTIuOHolMjIlMkYlM0UlM0MlMkZzdmclM0UnKSwKICAgICAgbGluZWFyLWdyYWRpZW50KHRvIGJvdHRvbSwgcmdiYSgwLDAsMCwgMC43KSAwJSxyZ2JhKDAsMCwwLCAwLjgpIDEwMCUpICFpbXBvcnRhbnQ7CiAgfQogIAp9CgpAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7CiAgOnJvb3QgewogICAgLS14LXNtYWxsLW1hcmdpbjogM3B4OwogICAgLS1zbWFsbC1tYXJnaW46IDZweDsKICAgIC0tbWVkaXVtLW1hcmdpbjogMTJweDsKICAgIC0tbGFyZ2UtbWFyZ2luOiAyNHB4OwogICAgLS14LWxhcmdlLW1hcmdpbjogNDhweDsKICAgIC0tbGFyZ2UtbmVnYXRpdmUtbWFyZ2luOiAtMjRweDsKICAgIC0teC1sYXJnZS1uZWdhdGl2ZS1tYXJnaW46IC00OHB4OwogIH0KfQoKLnNtX19mb3JtIHsKICBmb250LWZhbWlseTogIlJvYm90byIsIHNhbnMtc2VyaWY7CiAgZm9udC1zaXplOiAxNHB4OwogIGxpbmUtaGVpZ2h0OiAyMHB4Owp9Cgouc20tZm9ybS1pY29uIHsKICBtYXgtaGVpZ2h0OiA1MHB4OwogIG1hcmdpbi1sZWZ0OiB2YXIoLS1zbS1zbWFsbC1tYXJnaW4pOwogIG1hcmdpbi10b3A6IHZhcigtLXNtLW1lZGl1bS1tYXJnaW4pOwp9Cgouc20tZm9ybS1pY29uLS1oYXMtaGVhZGVyIHsKICBtYXJnaW4tdG9wOiAtMjVweDsKfQoKLnNtLWZvcm0tYmFubmVyIHsKICBoZWlnaHQ6IDE0MHB4OwogIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7CiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjsKICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7Cn0KCi5zbS1mb3JtLXRpdGxlIHsKICBib3JkZXItYm90dG9tOiAxcHggc29saWQgdmFyKC0tc20tYm9yZGVyLWNvbG9yLW5vcm1hbCk7CiAgcGFkZGluZy1ib3R0b206IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgbWFyZ2luOiB2YXIoLS1zbS1zbWFsbC1tYXJnaW4pOwp9Cgouc20tZm9ybS10aXRsZV9faGVhZGVyIHsKICBtYXJnaW4tYm90dG9tOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7CiAgY29sb3I6IHZhcigtLXNtLXRleHQtY29sb3Itbm9ybWFsKTsKfQoKLnNtLWZvcm0tdGl0bGVfX2luZm8gewogIGNvbG9yOiB2YXIoLS1zbS10ZXh0LWNvbG9yLWxpZ2h0KTsKICBtYXJnaW4tdG9wOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7CiAgbWFyZ2luLWJvdHRvbTogMDsKfQoKLnNtLWZpZWxkX193cmFwcGVyIHsKICBwYWRkaW5nOiB2YXIoLS1zbS1zbWFsbC1tYXJnaW4pOwp9Cgouc20tZmllbGRfX3dyYXBwZXI6Zmlyc3Qtb2YtdHlwZSB7CiAgcGFkZGluZy10b3A6IHZhcigtLXNtLWxhcmdlLW1hcmdpbik7Cn0KCi5zbS1maWVsZCB7CiAgZGlzcGxheTogZmxleDsKICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOwogIGJveC1zaXppbmc6IGJvcmRlci1ib3g7Cn0KCi5zbS1maWVsZCBsYWJlbCB7CiAgY29sb3I6IHZhcigtLXNtLXRleHQtY29sb3Itbm9ybWFsKTsgIAp9Cgouc20tZmllbGQtLXNtYWxsIHsKICB3aWR0aDogdmFyKC0tc20taW5wdXQtd2lkdGgtc21hbGwpOwp9Cgouc20tZmllbGQtLW1lZGl1bSB7CiAgd2lkdGg6IHZhcigtLXNtLWlucHV0LXdpZHRoLW1lZGl1bSk7Cn0KCi5zbS1maWVsZC0tbGFyZ2UgewogIHdpZHRoOiB2YXIoLS1zbS1pbnB1dC13aWR0aC1sYXJnZSk7Cn0KCi5zbS1maWVsZC0tbGFyZ2Ugc2VsZWN0IHsKICB3aWR0aDogMTAwJTsKfQoKLnNtLWZpZWxkX19sYWJlbCB7CiAgbWFyZ2luLWJvdHRvbTogdmFyKC0tc20teC1zbWFsbC1tYXJnaW4pOwogIGNvbG9yOiB2YXIoIC0tc20tdGV4dC1jb2xvci1ub3JtYWwpOwogIGZvbnQtd2VpZ2h0OiA1MDA7Cn0KCi5zbS1maWVsZF9faW5wdXQgewogIGFsbDogdW5zZXQ7CiAgcGFkZGluZzogdmFyKC0tc20tc21hbGwtbWFyZ2luKTsKICBib3JkZXItdG9wOiAxcHggc29saWQgIzdjN2M3YzsKICBib3JkZXItbGVmdDogMXB4IHNvbGlkICNjM2MzYzM7CiAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2MzYzNjMzsKICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2RkZDsKICBiYWNrZ3JvdW5kOiB2YXIoLS1zbS1maWVsZC1iZy1jb2xvcik7CiAgYm9yZGVyLXJhZGl1czogNXB4OwogIGNvbG9yOiB2YXIoLS1zbS10ZXh0LWNvbG9yLW5vcm1hbCk7CiAgZm9udC1zaXplOiAxNnB4Owp9Cgouc20tZmllbGRfX2lucHV0OmZvY3VzOmludmFsaWQgewogIGJveC1zaGFkb3c6IGluc2V0IDAgMCAzcHggcmdiKDI1NSAwIDApOwogIGJhY2tncm91bmQtY29sb3I6IHZhcigtLXNtLWludmFsaWQtYmctY29sb3IpOwp9Cgouc20tZmllbGRfX3NlbGVjdCB7CiAgYWxsOiB1bnNldDsKICBmb250LXNpemU6IDE2cHg7CiAgcGFkZGluZzogdmFyKC0tc20tc21hbGwtbWFyZ2luKTsKICBwYWRkaW5nLXJpZ2h0OiB2YXIoLS1zbS1sYXJnZS1tYXJnaW4pOwogIGJvcmRlcjogMXB4IHNvbGlkICM3YzdjN2M7CiAgYm94LXNoYWRvdzogMCAxcHggMCAxcHggcmdiYSgwLDAsMCwuMDQpOwogIGJhY2tncm91bmQ6IHZhcigtLXNtLWJ0bi1iZy1jb2xvcik7CiAgYm9yZGVyLXJhZGl1czogNXB4OwogIGFwcGVhcmFuY2U6IG5vbmU7CiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCdkYXRhOmltYWdlL3N2Zyt4bWw7Y2hhcnNldD1VUy1BU0NJSSwlM0NzdmclMjB4bWxucyUzRCUyMmh0dHAlM0ElMkYlMkZ3d3cudzMub3JnJTJGMjAwMCUyRnN2ZyUyMiUyMHdpZHRoJTNEJTIyMjkyLjQlMjIlMjBoZWlnaHQlM0QlMjIyOTIuNCUyMiUzRSUzQ3BhdGglMjBmaWxsJTNEJTIydmFyKC0tc20tdGV4dC1jb2xvci1ub3JtYWwpJTIyJTIwZCUzRCUyMk0yODclMjA2OS40YTE3LjYlMjAxNy42JTIwMCUyMDAlMjAwLTEzLTUuNEgxOC40Yy01JTIwMC05LjMlMjAxLjgtMTIuOSUyMDUuNEExNy42JTIwMTcuNiUyMDAlMjAwJTIwMCUyMDAlMjA4Mi4yYzAlMjA1JTIwMS44JTIwOS4zJTIwNS40JTIwMTIuOWwxMjglMjAxMjcuOWMzLjYlMjAzLjYlMjA3LjglMjA1LjQlMjAxMi44JTIwNS40czkuMi0xLjglMjAxMi44LTUuNEwyODclMjA5NWMzLjUtMy41JTIwNS40LTcuOCUyMDUuNC0xMi44JTIwMC01LTEuOS05LjItNS41LTEyLjh6JTIyJTJGJTNFJTNDJTJGc3ZnJTNFJyksCiAgbGluZWFyLWdyYWRpZW50KHRvIGJvdHRvbSwgI2ZmZmZmZiAwJSwjZTVlNWU1IDEwMCUpOwogIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQsIHJlcGVhdDsKICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiByaWdodCAuN2VtIHRvcCA1MCUsIDAgMDsKICBiYWNrZ3JvdW5kLXNpemU6IC42NWVtIGF1dG8sIDEwMCU7CiAgYm94LXNpemluZzogYm9yZGVyLWJveDsKICB3aWR0aDogMTAwJTsKICBjb2xvcjogdmFyKC0tc20tdGV4dC1jb2xvci1ub3JtYWwpOwp9Cgouc20tZmllbGRfX2lucHV0OjpwbGFjZWhvbGRlciB7CiAgY29sb3I6IHZhcigtLXNtLXRleHQtY29sb3ItbGlnaHQpOwp9Cgouc20tZmllbGRfX2lucHV0LnNtLWZpZWxkX19pbnB1dC0tdGV4dCwKLnNtLWZpZWxkX19pbnB1dC5zbS1maWVsZF9faW5wdXQtLXRleHRhcmVhIHsKICBjdXJzb3I6IHRleHQ7Cn0KCi5zbS1maWVsZF9faW5wdXQuc20tZmllbGRfX2lucHV0LS10ZXh0YXJlYSB7CiAgcmVzaXplOiB2ZXJ0aWNhbDsKICBtaW4taGVpZ2h0OiA2MHB4Owp9Cgouc20tZmllbGRfX2lucHV0LS1maWxlIHsKICBtYXJnaW4tdG9wOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7Cn0KCi5zbS1jaG9pY2UtbGlzdF9fY2hvaWNlIHsKICBkaXNwbGF5OiBmbGV4OwogIGZsZXgtZGlyZWN0aW9uOiByb3c7CiAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICBtYXJnaW4tYm90dG9tOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7Cn0KCi5zbS1jaG9pY2UtbGlzdF9fY2hvaWNlIGlucHV0IHsKICBtYXJnaW4tcmlnaHQ6IHZhcigtLXNtLXgtc21hbGwtbWFyZ2luKTsKfQoKLnNtLWZpZWxkX19pbmZvIHsKICBjb2xvcjogdmFyKC0tc20tdGV4dC1jb2xvci1saWdodCk7CiAgZm9udC1zaXplOiB2YXIoLS1zbS1mb250LXNpemUtc21hbGwpOwp9Cgouc20tc2VjdGlvbi1icmVhayB7CiAgYm9yZGVyLXRvcDogMXB4IHNvbGlkIHZhcigtLXNtLWJvcmRlci1jb2xvci1ub3JtYWwpOwp9Cgouc20tc2VjdGlvbi1icmVha19faGVhZGVyIHsKICBtYXJnaW4tYm90dG9tOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7CiAgY29sb3I6IHZhcigtLXNtLXRleHQtY29sb3Itbm9ybWFsKTsKICBmb250LXdlaWdodDogNTAwOwp9Cgouc20tc2VjdGlvbi1icmVha19faW5mbyB7CiAgbWFyZ2luLXRvcDogMDsKICBjb2xvcjogdmFyKC0tc20tdGV4dC1jb2xvci1saWdodCk7Cn0KCi5zbS1hY3Rpb25zX19jb250YWluZXIgewogIGJvcmRlci10b3A6IDFweCBzb2xpZCB2YXIoLS1zbS1ib3JkZXItY29sb3Itbm9ybWFsKTsKICBtYXJnaW46IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgcGFkZGluZy10b3A6IHZhcigtLXNtLW1lZGl1bS1tYXJnaW4pOwp9Cgouc20tYnJhbmRpbmctZm9vdGVyIHsKICBtYXJnaW46IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgcGFkZGluZy10b3A6IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgcGFkZGluZy1ib3R0b206IHZhcigtLXNtLW1lZGl1bS1tYXJnaW4pOwogIGZvbnQtc2l6ZTogOTAlOwp9Cgouc20tYnJhbmRpbmctZm9vdGVyIGEgewogIHRleHQtZGVjb3JhdGlvbjogbm9uZTsKICBjb2xvcjogdmFyKC0tc20tbGluay1jb2xvcik7Cn0KCi5zbS1idG4gewogIGJhY2tncm91bmQ6IHZhcigtLXNtLWJvcmRlci1jb2xvci1ub3JtYWwpOwogIGJvcmRlcjogMDsKICBib3JkZXItcmFkaXVzOiA2cHg7CiAgcGFkZGluZzogdmFyKC0tc20tc21hbGwtbWFyZ2luKSB2YXIoLS1zbS1tZWRpdW0tbWFyZ2luKTsKICBmb250LXNpemU6IDEyMCU7CiAgZm9udC13ZWlnaHQ6IDYwMDsKICBjdXJzb3I6IHBvaW50ZXI7Cn0KCi5zbS1idG4tLXByaW1hcnkgewogIGJhY2tncm91bmQ6IHZhcigtLXNtLXRleHQtY29sb3Itbm9ybWFsKTsKICBjb2xvcjogdmFyKC0tc20tYnV0dG9uLWNvbG9yKTsKfQoKLnNtLWJ0bjpob3ZlciB7CiAgYm94LXNoYWRvdzogMCAwIDZweCAtMXB4IHZhcigtLXNtLWFjY2VudC1jb2xvcik7Cn0KCi5zbS1maWVsZF9fZ3JvdXAgewogIGRpc3BsYXk6IGZsZXg7CiAgZmxleC1kaXJlY3Rpb246IHJvdzsKfQoKLnNtLWZpZWxkX19ncm91cC1pdGVtIHsKICBkaXNwbGF5OiBmbGV4OwogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47CiAgbWFyZ2luLXJpZ2h0OiB2YXIoLS1zbS1zbWFsbC1tYXJnaW4pOwp9Cgouc20tZmllbGRfX2dyb3VwLWl0ZW06bGFzdC1vZi10eXBlIHsKICBtYXJnaW4tcmlnaHQ6IDA7Cn0KCi5zbS1maWVsZF9faXRlbS1pbmZvIHsKICBjb2xvcjogdmFyKC0tc20tdGV4dC1jb2xvci1saWdodCk7CiAgZm9udC1zaXplOiB2YXIoLS1zbS1mb250LXNpemUtc21hbGwpOwp9Cgouc20tZmllbGRfX2dyb3VwLWl0ZW0gewogIGZsZXg6IDE7Cn0KCgouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLWxhcmdlIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpmaXJzdC1vZi10eXBlIHsKICBmbGV4OiAwOwp9Cgouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLWxhcmdlICAuc20tZmllbGRfX2dyb3VwLWl0ZW06bGFzdC1vZi10eXBlIHsKICBmbGV4OiAxOwp9Cgouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLXNtYWxsIC5zbS1maWVsZF9fZ3JvdXAsCi5zbS1maWVsZC0tbmFtZS5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAgewogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47Cn0KCi5zbS1maWVsZC0tbmFtZS5zbS1maWVsZC0tc21hbGwgLnNtLWZpZWxkX19ncm91cC1pdGVtLAouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLW1lZGl1bSAuc20tZmllbGRfX2dyb3VwLWl0ZW0gewogIG1hcmdpbi1ib3R0b206IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgbWFyZ2luLXJpZ2h0OiAwOwp9Cgouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLXNtYWxsIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpsYXN0LW9mLXR5cGUsCi5zbS1maWVsZC0tbmFtZS5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpsYXN0LW9mLXR5cGUgIHsKICBtYXJnaW4tYm90dG9tOiAwOwp9Cgouc20tZmllbGQtLWFkZHJlc3Muc20tZmllbGQtLXNtYWxsIC5zbS1maWVsZF9fZ3JvdXAsCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAgewogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47Cn0KCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tc21hbGwgLnNtLWZpZWxkX19ncm91cC1pdGVtLAouc20tZmllbGQtLWFkZHJlc3Muc20tZmllbGQtLW1lZGl1bSAuc20tZmllbGRfX2dyb3VwLWl0ZW0gewogIG1hcmdpbi1ib3R0b206IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgbWFyZ2luLXJpZ2h0OiAwOwp9Cgouc20tZmllbGQtLWFkZHJlc3Muc20tZmllbGQtLXNtYWxsIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpsYXN0LW9mLXR5cGUsCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpsYXN0LW9mLXR5cGUsCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tc21hbGwgLnNtLWZpZWxkX19ncm91cC1pdGVtOmZpcnN0LW9mLXR5cGUsCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpmaXJzdC1vZi10eXBlICB7CiAgbWFyZ2luLWJvdHRvbTogMDsKfQoKLnNtLWZpZWxkLS1hZGRyZXNzIC5zbS1maWVsZF9faW5wdXQgewogIG1hcmdpbi1ib3R0b206IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7Cn0K"/></form>
                                             </details> 
                                     </div>                                                        
                               
-                            </div>
+                                </div>
+
+                                <div id="wrapper2xx">   
+                                    <div id="page-wrapperBoxxx " >
+                                            <details ir="abrirTicket"> 
+                                                <summary class="  question" >
+                                                <span class="status incorrect"></span> Abrir ticket de soporte
+                                                </summary>                                      
+                                               <form method="post" action="https://api.sheetmonkey.io/form/dT6wLMspJ2Cx5BTGeCTPPL" autoComplete="on" class="sm__form">                                               <div class="sm-field__group"><div class="sm-field__group-item"><input type="text" class="sm-field__input 
+                                                sm-field__input--text sm-field__input--first-name" id="sm-field-76rTqKHJwA-first-name" name="Nombre - First Name" placeholder="First" autoComplete="given-name"/></div>
+                                                <div class="sm-field__wrapper">
+                                                    <div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large">
+                                                <label class="sm-field__label" for="sm-field-fS8NX4Fhuu">ticketDeSoporte   </label>
+                                                <input type="text" class="sm-field__input sm-field__input--text" id="sm-field-fS8NX4Fhuu" name="ticketDeSoporte" placeholder="Detalles"/></div></div></div><div class="sm-actions__container"><button type="submit" class="sm-btn sm-btn--primary">Submit</button></div></div>
+                                                </form>
+                                            </details> 
+                                    </div>                                                        
+                              
+                                </div>
                             
                                 
                             </div>
@@ -939,7 +731,17 @@
                        
                                     <div id="wrapper2xx">   
                                         <div id="page-wrapperBoxxx " >
-                                               
+                                            <details > 
+                                                <summary class="  question" >
+                                                <span class="status incorrect"></span>   Agregar otro cotenido
+                                                </summary>                                      
+                                                <form method="post" action="https://api.sheetmonkey.io/form/tGpASqhVRmt9gtXDdRLGd8" autoComplete="on" class="sm__form"><div class="sm__form__fields">
+                                                    <div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large">
+                                                        <label class="sm-field__label" for="sm-field-qxnhOLxrFX"> </label>
+                                                        <input type="text" class="sm-field__input sm-field__input--text" id="sm-field-qxnhOLxrFX" name="Misión"/></div>
+                                                    </div></div><div class="sm-actions__container"><button type="submit" class="sm-btn sm-btn--primary">Enviar</button></div>
+                                                   </div>
+                                            </details> 
                                         </div>                                                        
                                     </div>
                              
@@ -948,9 +750,14 @@
                                     <div id="page-wrapperBoxxx " >
                                             <details > 
                                                 <summary class="  question" >
-                                                <span class="status incorrect"></span>   Aviso para los docentes
+                                                <span class="status incorrect"></span>   Agregar reglamento
                                                 </summary>                                      
-                                                    ok
+                                                <form method="post" action="https://api.sheetmonkey.io/form/tGpASqhVRmt9gtXDdRLGd8" autoComplete="on" class="sm__form"><div class="sm__form__fields">
+                                                    <div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large">
+                                                        <label class="sm-field__label" for="sm-field-qxnhOLxrFX">Reglamento  </label>
+                                                        <input type="text" class="sm-field__input sm-field__input--text" id="sm-field-qxnhOLxrFX" name="Misión"/></div>
+                                                    </div></div><div class="sm-actions__container"><button type="submit" class="sm-btn sm-btn--primary">Enviar</button></div>
+                                                   </div>
                                             </details> 
                                     </div>                                                        
                                 </div>
@@ -961,9 +768,14 @@
                                     <div id="page-wrapperBoxxx " >
                                             <details > 
                                                 <summary class="  question" >
-                                                <span class="status incorrect"></span>   6
+                                                <span class="status incorrect"></span>   Agregar Organigrama
                                                 </summary>                                      
-                                                    ok
+                                                <form method="post" action="https://api.sheetmonkey.io/form/tGpASqhVRmt9gtXDdRLGd8" autoComplete="on" class="sm__form"><div class="sm__form__fields">
+                                                    <div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large">
+                                                        <label class="sm-field__label" for="sm-field-qxnhOLxrFX"> </label>
+                                                        <input type="text" class="sm-field__input sm-field__input--text" id="sm-field-qxnhOLxrFX" name="Misión"/></div>
+                                                    </div></div><div class="sm-actions__container"><button type="submit" class="sm-btn sm-btn--primary">Enviar</button></div>
+                                                   </div>
                                             </details> 
                                     </div>                                                        
                                 </div>
@@ -974,44 +786,14 @@
                                     <div id="page-wrapperBoxxx " >
                                         <details > 
                                             <summary class="  question" >
-                                                <span class="status incorrect"></span>   Valores
+                                                <span class="status incorrect"></span>   Agregar Misión/Visión
                                             </summary>
-                                                        
-                                                        <form method="post" action="https://api.sheetmonkey.io/form/dT6wLMspJ2Cx5BTGeCTPPL" autoComplete="on" class="sm__form">
-                                                        <div class="sm__form__fields">
-                                                        <div class="sm-field__wrapper"><div class="sm-field__wrapper__inside">
-                                                            <div class="sm-field sm-field--name sm-field--large">
-                                                            <label class="sm-field__label" for="sm-field-76rTqKHJwA-first-name">Nombre   </label><div class="sm-field__group">
-                                                                <div class="sm-field__group-item">
-                                                                    <input type="text" class="sm-field__input sm-field__input--text sm-field__input--first-name" id="sm-field-76rTqKHJwA-first-name" name="Nombre - First Name" placeholder="Nombre" autoComplete="given-name"/></div>
-                                                        <div class="sm-field__group-item">
-                                                            <input type="text" class="sm-field__input sm-field__input--text sm-field__input--last-name" id="sm-field-76rTqKHJwA-last-name" name="Nombre - Last Name" placeholder="Apellidos" autoComplete="family-name"/></div>
-                                                        </div></div></div></div><div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large">
-                                                            <label class="sm-field__label" for="sm-field-7QnStboEWg">Que punto te gustaría agregar al código de conducta online  </label>
-                                                            <input type="text" class="sm-field__input sm-field__input--text" id="sm-field-7QnStboEWg" name="agregarAlcodigoDeConducta"/></div></div></div>
-                                                    <!--    <div class="sm-field__wrapper">
-                                                    <div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large">
-                                                            <label class="sm-field__label" for="sm-field-N1VT8uJAPc">Comentarios  </label>
-                                                            <input type="text" class="sm-field__input sm-field__input--text" id="sm-field-N1VT8uJAPc" name="comentariosDesdeLaWebApp"/>
-                                                        </div> 
-                                                    </div> -->
-                                                
-                                                    
-                                                    <div class="sm-field__wrapper"><div class="sm-field__wrapper__inside">
-                                                        <div class="sm-field sm-field--email sm-field--large">
-                                                            <label class="sm-field__label" for="sm-field-Q2FeJsO0op">Email   </label>
-                                                            <input type="email" class="sm-field__input sm-field__input--text" id="sm-field-Q2FeJsO0op" name="email" autoComplete="email"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                            
-                                                            <div class="sm-actions__container">
-                                                        <button type="submit" class="sm-btn sm-btn--primary" style="background-color: #11967e; color: white">Enviar</button></div>
-                                                        <div class="sm-branding-footer"></div>
-                                                        </div>
-                                                        <link rel="stylesheet" href="data:text/css;base64,Cjpyb290IHsKICAtLXNtLWZvbnQtc2l6ZS1zbWFsbDogOTAlOwogIC0tc20tZm9udC1zaXplLXJlZ3VsYXI6IDEwMCU7CiAgLS1zbS1mb250LXNpemUtbGFyZ2U6IDEyMCU7CiAgLS1zbS1ib3JkZXItY29sb3Itbm9ybWFsOiByZ2JhKDAsIDAsIDAsIDAuMSk7CiAgLS1zbS1idG4tYmctY29sb3I6IGJsYWNrOwogIC0tc20tYnV0dG9uLWNvbG9yOiB3aGl0ZTsKICAtLXNtLXRleHQtY29sb3Itbm9ybWFsOiAjMDAwOwogIC0tc20tdGV4dC1jb2xvci1saWdodDogaHNsKDAsIDAlLCA2MCUpOwogIC0tc20tZmllbGQtYmctY29sb3I6ICNmZmY7CiAgLS1zbS1hY2NlbnQtY29sb3I6ICNGRUQzNEQ7CiAgLS1zbS1pbnZhbGlkLWJnLWNvbG9yOiByZ2JhKDI1NSwgMCwgMCwgMC4wNSk7CiAgLS1zbS14LXNtYWxsLW1hcmdpbjogNXB4OwogIC0tc20tc21hbGwtbWFyZ2luOiAxMHB4OwogIC0tc20tbWVkaXVtLW1hcmdpbjogMjBweDsKICAtLXNtLWxhcmdlLW1hcmdpbjogMzBweDsKICAtLXNtLXgtbGFyZ2UtbWFyZ2luOiA2MHB4OwogIC0tc20tbGFyZ2UtbmVnYXRpdmUtbWFyZ2luOiAtMzBweDsKICAtLXNtLXgtbGFyZ2UtbmVnYXRpdmUtbWFyZ2luOiAtNjBweDsKICAtLXNtLWlucHV0LXdpZHRoLXNtYWxsOiAzMCU7CiAgLS1zbS1pbnB1dC13aWR0aC1tZWRpdW06IDUwJTsKICAtLXNtLWlucHV0LXdpZHRoLWxhcmdlOiBhdXRvOwp9CgpAbWVkaWEgKHByZWZlcnMtY29sb3Itc2NoZW1lOiBkYXJrKSB7Cgkuc21fX2Zvcm0gewogICAgLS1zbS1ib3JkZXItY29sb3Itbm9ybWFsOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMik7CiAgICAtLXNtLWJ0bi1iZy1jb2xvcjogd2hpdGU7CiAgICAtLXNtLXRleHQtY29sb3Itbm9ybWFsOiAjZmZmOwogICAgLS1zbS10ZXh0LWNvbG9yLWxpZ2h0OiByZ2JhKDI1NSwyNTUsMjU1LCAwLjUpOwogICAgLS1zbS1idXR0b24tY29sb3I6ICMyMTIxMjQ7CiAgICAtLXNtLWZpZWxkLWJnLWNvbG9yOiAjMjEyMTI0OwogICAgLS1zbS1saW5rLWNvbG9yOiAjRkVEMzREOwogICAgLS1zbS1pbnZhbGlkLWJnLWNvbG9yOiByZ2JhKDI1NSwgMCwgMCwgMC4yKTsKICB9CiAgLnNtX19mb3JtIC5zbS1maWVsZF9faW5wdXQgewogICAgYm9yZGVyOiAxcHggc29saWQgIzdjN2M3YyAhaW1wb3J0YW50OwogIH0KICAuc21fX2Zvcm0gLnNtLWZpZWxkX19zZWxlY3QgewogICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCdkYXRhOmltYWdlL3N2Zyt4bWw7Y2hhcnNldD1VUy1BU0NJSSwlM0NzdmclMjB4bWxucyUzRCUyMmh0dHAlM0ElMkYlMkZ3d3cudzMub3JnJTJGMjAwMCUyRnN2ZyUyMiUyMHdpZHRoJTNEJTIyMjkyLjQlMjIlMjBoZWlnaHQlM0QlMjIyOTIuNCUyMiUzRSUzQ3BhdGglMjBmaWxsJTNEJTIyd2hpdGUlMjIlMjBkJTNEJTIyTTI4NyUyMDY5LjRhMTcuNiUyMDE3LjYlMjAwJTIwMCUyMDAtMTMtNS40SDE4LjRjLTUlMjAwLTkuMyUyMDEuOC0xMi45JTIwNS40QTE3LjYlMjAxNy42JTIwMCUyMDAlMjAwJTIwMCUyMDgyLjJjMCUyMDUlMjAxLjglMjA5LjMlMjA1LjQlMjAxMi45bDEyOCUyMDEyNy45YzMuNiUyMDMuNiUyMDcuOCUyMDUuNCUyMDEyLjglMjA1LjRzOS4yLTEuOCUyMDEyLjgtNS40TDI4NyUyMDk1YzMuNS0zLjUlMjA1LjQtNy44JTIwNS40LTEyLjglMjAwLTUtMS45LTkuMi01LjUtMTIuOHolMjIlMkYlM0UlM0MlMkZzdmclM0UnKSwKICAgICAgbGluZWFyLWdyYWRpZW50KHRvIGJvdHRvbSwgcmdiYSgwLDAsMCwgMC43KSAwJSxyZ2JhKDAsMCwwLCAwLjgpIDEwMCUpICFpbXBvcnRhbnQ7CiAgfQogIAp9CgpAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7CiAgOnJvb3QgewogICAgLS14LXNtYWxsLW1hcmdpbjogM3B4OwogICAgLS1zbWFsbC1tYXJnaW46IDZweDsKICAgIC0tbWVkaXVtLW1hcmdpbjogMTJweDsKICAgIC0tbGFyZ2UtbWFyZ2luOiAyNHB4OwogICAgLS14LWxhcmdlLW1hcmdpbjogNDhweDsKICAgIC0tbGFyZ2UtbmVnYXRpdmUtbWFyZ2luOiAtMjRweDsKICAgIC0teC1sYXJnZS1uZWdhdGl2ZS1tYXJnaW46IC00OHB4OwogIH0KfQoKLnNtX19mb3JtIHsKICBmb250LWZhbWlseTogIlJvYm90byIsIHNhbnMtc2VyaWY7CiAgZm9udC1zaXplOiAxNHB4OwogIGxpbmUtaGVpZ2h0OiAyMHB4Owp9Cgouc20tZm9ybS1pY29uIHsKICBtYXgtaGVpZ2h0OiA1MHB4OwogIG1hcmdpbi1sZWZ0OiB2YXIoLS1zbS1zbWFsbC1tYXJnaW4pOwogIG1hcmdpbi10b3A6IHZhcigtLXNtLW1lZGl1bS1tYXJnaW4pOwp9Cgouc20tZm9ybS1pY29uLS1oYXMtaGVhZGVyIHsKICBtYXJnaW4tdG9wOiAtMjVweDsKfQoKLnNtLWZvcm0tYmFubmVyIHsKICBoZWlnaHQ6IDE0MHB4OwogIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7CiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjsKICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7Cn0KCi5zbS1mb3JtLXRpdGxlIHsKICBib3JkZXItYm90dG9tOiAxcHggc29saWQgdmFyKC0tc20tYm9yZGVyLWNvbG9yLW5vcm1hbCk7CiAgcGFkZGluZy1ib3R0b206IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgbWFyZ2luOiB2YXIoLS1zbS1zbWFsbC1tYXJnaW4pOwp9Cgouc20tZm9ybS10aXRsZV9faGVhZGVyIHsKICBtYXJnaW4tYm90dG9tOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7CiAgY29sb3I6IHZhcigtLXNtLXRleHQtY29sb3Itbm9ybWFsKTsKfQoKLnNtLWZvcm0tdGl0bGVfX2luZm8gewogIGNvbG9yOiB2YXIoLS1zbS10ZXh0LWNvbG9yLWxpZ2h0KTsKICBtYXJnaW4tdG9wOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7CiAgbWFyZ2luLWJvdHRvbTogMDsKfQoKLnNtLWZpZWxkX193cmFwcGVyIHsKICBwYWRkaW5nOiB2YXIoLS1zbS1zbWFsbC1tYXJnaW4pOwp9Cgouc20tZmllbGRfX3dyYXBwZXI6Zmlyc3Qtb2YtdHlwZSB7CiAgcGFkZGluZy10b3A6IHZhcigtLXNtLWxhcmdlLW1hcmdpbik7Cn0KCi5zbS1maWVsZCB7CiAgZGlzcGxheTogZmxleDsKICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOwogIGJveC1zaXppbmc6IGJvcmRlci1ib3g7Cn0KCi5zbS1maWVsZCBsYWJlbCB7CiAgY29sb3I6IHZhcigtLXNtLXRleHQtY29sb3Itbm9ybWFsKTsgIAp9Cgouc20tZmllbGQtLXNtYWxsIHsKICB3aWR0aDogdmFyKC0tc20taW5wdXQtd2lkdGgtc21hbGwpOwp9Cgouc20tZmllbGQtLW1lZGl1bSB7CiAgd2lkdGg6IHZhcigtLXNtLWlucHV0LXdpZHRoLW1lZGl1bSk7Cn0KCi5zbS1maWVsZC0tbGFyZ2UgewogIHdpZHRoOiB2YXIoLS1zbS1pbnB1dC13aWR0aC1sYXJnZSk7Cn0KCi5zbS1maWVsZC0tbGFyZ2Ugc2VsZWN0IHsKICB3aWR0aDogMTAwJTsKfQoKLnNtLWZpZWxkX19sYWJlbCB7CiAgbWFyZ2luLWJvdHRvbTogdmFyKC0tc20teC1zbWFsbC1tYXJnaW4pOwogIGNvbG9yOiB2YXIoIC0tc20tdGV4dC1jb2xvci1ub3JtYWwpOwogIGZvbnQtd2VpZ2h0OiA1MDA7Cn0KCi5zbS1maWVsZF9faW5wdXQgewogIGFsbDogdW5zZXQ7CiAgcGFkZGluZzogdmFyKC0tc20tc21hbGwtbWFyZ2luKTsKICBib3JkZXItdG9wOiAxcHggc29saWQgIzdjN2M3YzsKICBib3JkZXItbGVmdDogMXB4IHNvbGlkICNjM2MzYzM7CiAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2MzYzNjMzsKICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2RkZDsKICBiYWNrZ3JvdW5kOiB2YXIoLS1zbS1maWVsZC1iZy1jb2xvcik7CiAgYm9yZGVyLXJhZGl1czogNXB4OwogIGNvbG9yOiB2YXIoLS1zbS10ZXh0LWNvbG9yLW5vcm1hbCk7CiAgZm9udC1zaXplOiAxNnB4Owp9Cgouc20tZmllbGRfX2lucHV0OmZvY3VzOmludmFsaWQgewogIGJveC1zaGFkb3c6IGluc2V0IDAgMCAzcHggcmdiKDI1NSAwIDApOwogIGJhY2tncm91bmQtY29sb3I6IHZhcigtLXNtLWludmFsaWQtYmctY29sb3IpOwp9Cgouc20tZmllbGRfX3NlbGVjdCB7CiAgYWxsOiB1bnNldDsKICBmb250LXNpemU6IDE2cHg7CiAgcGFkZGluZzogdmFyKC0tc20tc21hbGwtbWFyZ2luKTsKICBwYWRkaW5nLXJpZ2h0OiB2YXIoLS1zbS1sYXJnZS1tYXJnaW4pOwogIGJvcmRlcjogMXB4IHNvbGlkICM3YzdjN2M7CiAgYm94LXNoYWRvdzogMCAxcHggMCAxcHggcmdiYSgwLDAsMCwuMDQpOwogIGJhY2tncm91bmQ6IHZhcigtLXNtLWJ0bi1iZy1jb2xvcik7CiAgYm9yZGVyLXJhZGl1czogNXB4OwogIGFwcGVhcmFuY2U6IG5vbmU7CiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCdkYXRhOmltYWdlL3N2Zyt4bWw7Y2hhcnNldD1VUy1BU0NJSSwlM0NzdmclMjB4bWxucyUzRCUyMmh0dHAlM0ElMkYlMkZ3d3cudzMub3JnJTJGMjAwMCUyRnN2ZyUyMiUyMHdpZHRoJTNEJTIyMjkyLjQlMjIlMjBoZWlnaHQlM0QlMjIyOTIuNCUyMiUzRSUzQ3BhdGglMjBmaWxsJTNEJTIydmFyKC0tc20tdGV4dC1jb2xvci1ub3JtYWwpJTIyJTIwZCUzRCUyMk0yODclMjA2OS40YTE3LjYlMjAxNy42JTIwMCUyMDAlMjAwLTEzLTUuNEgxOC40Yy01JTIwMC05LjMlMjAxLjgtMTIuOSUyMDUuNEExNy42JTIwMTcuNiUyMDAlMjAwJTIwMCUyMDAlMjA4Mi4yYzAlMjA1JTIwMS44JTIwOS4zJTIwNS40JTIwMTIuOWwxMjglMjAxMjcuOWMzLjYlMjAzLjYlMjA3LjglMjA1LjQlMjAxMi44JTIwNS40czkuMi0xLjglMjAxMi44LTUuNEwyODclMjA5NWMzLjUtMy41JTIwNS40LTcuOCUyMDUuNC0xMi44JTIwMC01LTEuOS05LjItNS41LTEyLjh6JTIyJTJGJTNFJTNDJTJGc3ZnJTNFJyksCiAgbGluZWFyLWdyYWRpZW50KHRvIGJvdHRvbSwgI2ZmZmZmZiAwJSwjZTVlNWU1IDEwMCUpOwogIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQsIHJlcGVhdDsKICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiByaWdodCAuN2VtIHRvcCA1MCUsIDAgMDsKICBiYWNrZ3JvdW5kLXNpemU6IC42NWVtIGF1dG8sIDEwMCU7CiAgYm94LXNpemluZzogYm9yZGVyLWJveDsKICB3aWR0aDogMTAwJTsKICBjb2xvcjogdmFyKC0tc20tdGV4dC1jb2xvci1ub3JtYWwpOwp9Cgouc20tZmllbGRfX2lucHV0OjpwbGFjZWhvbGRlciB7CiAgY29sb3I6IHZhcigtLXNtLXRleHQtY29sb3ItbGlnaHQpOwp9Cgouc20tZmllbGRfX2lucHV0LnNtLWZpZWxkX19pbnB1dC0tdGV4dCwKLnNtLWZpZWxkX19pbnB1dC5zbS1maWVsZF9faW5wdXQtLXRleHRhcmVhIHsKICBjdXJzb3I6IHRleHQ7Cn0KCi5zbS1maWVsZF9faW5wdXQuc20tZmllbGRfX2lucHV0LS10ZXh0YXJlYSB7CiAgcmVzaXplOiB2ZXJ0aWNhbDsKICBtaW4taGVpZ2h0OiA2MHB4Owp9Cgouc20tZmllbGRfX2lucHV0LS1maWxlIHsKICBtYXJnaW4tdG9wOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7Cn0KCi5zbS1jaG9pY2UtbGlzdF9fY2hvaWNlIHsKICBkaXNwbGF5OiBmbGV4OwogIGZsZXgtZGlyZWN0aW9uOiByb3c7CiAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICBtYXJnaW4tYm90dG9tOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7Cn0KCi5zbS1jaG9pY2UtbGlzdF9fY2hvaWNlIGlucHV0IHsKICBtYXJnaW4tcmlnaHQ6IHZhcigtLXNtLXgtc21hbGwtbWFyZ2luKTsKfQoKLnNtLWZpZWxkX19pbmZvIHsKICBjb2xvcjogdmFyKC0tc20tdGV4dC1jb2xvci1saWdodCk7CiAgZm9udC1zaXplOiB2YXIoLS1zbS1mb250LXNpemUtc21hbGwpOwp9Cgouc20tc2VjdGlvbi1icmVhayB7CiAgYm9yZGVyLXRvcDogMXB4IHNvbGlkIHZhcigtLXNtLWJvcmRlci1jb2xvci1ub3JtYWwpOwp9Cgouc20tc2VjdGlvbi1icmVha19faGVhZGVyIHsKICBtYXJnaW4tYm90dG9tOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7CiAgY29sb3I6IHZhcigtLXNtLXRleHQtY29sb3Itbm9ybWFsKTsKICBmb250LXdlaWdodDogNTAwOwp9Cgouc20tc2VjdGlvbi1icmVha19faW5mbyB7CiAgbWFyZ2luLXRvcDogMDsKICBjb2xvcjogdmFyKC0tc20tdGV4dC1jb2xvci1saWdodCk7Cn0KCi5zbS1hY3Rpb25zX19jb250YWluZXIgewogIGJvcmRlci10b3A6IDFweCBzb2xpZCB2YXIoLS1zbS1ib3JkZXItY29sb3Itbm9ybWFsKTsKICBtYXJnaW46IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgcGFkZGluZy10b3A6IHZhcigtLXNtLW1lZGl1bS1tYXJnaW4pOwp9Cgouc20tYnJhbmRpbmctZm9vdGVyIHsKICBtYXJnaW46IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgcGFkZGluZy10b3A6IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgcGFkZGluZy1ib3R0b206IHZhcigtLXNtLW1lZGl1bS1tYXJnaW4pOwogIGZvbnQtc2l6ZTogOTAlOwp9Cgouc20tYnJhbmRpbmctZm9vdGVyIGEgewogIHRleHQtZGVjb3JhdGlvbjogbm9uZTsKICBjb2xvcjogdmFyKC0tc20tbGluay1jb2xvcik7Cn0KCi5zbS1idG4gewogIGJhY2tncm91bmQ6IHZhcigtLXNtLWJvcmRlci1jb2xvci1ub3JtYWwpOwogIGJvcmRlcjogMDsKICBib3JkZXItcmFkaXVzOiA2cHg7CiAgcGFkZGluZzogdmFyKC0tc20tc21hbGwtbWFyZ2luKSB2YXIoLS1zbS1tZWRpdW0tbWFyZ2luKTsKICBmb250LXNpemU6IDEyMCU7CiAgZm9udC13ZWlnaHQ6IDYwMDsKICBjdXJzb3I6IHBvaW50ZXI7Cn0KCi5zbS1idG4tLXByaW1hcnkgewogIGJhY2tncm91bmQ6IHZhcigtLXNtLXRleHQtY29sb3Itbm9ybWFsKTsKICBjb2xvcjogdmFyKC0tc20tYnV0dG9uLWNvbG9yKTsKfQoKLnNtLWJ0bjpob3ZlciB7CiAgYm94LXNoYWRvdzogMCAwIDZweCAtMXB4IHZhcigtLXNtLWFjY2VudC1jb2xvcik7Cn0KCi5zbS1maWVsZF9fZ3JvdXAgewogIGRpc3BsYXk6IGZsZXg7CiAgZmxleC1kaXJlY3Rpb246IHJvdzsKfQoKLnNtLWZpZWxkX19ncm91cC1pdGVtIHsKICBkaXNwbGF5OiBmbGV4OwogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47CiAgbWFyZ2luLXJpZ2h0OiB2YXIoLS1zbS1zbWFsbC1tYXJnaW4pOwp9Cgouc20tZmllbGRfX2dyb3VwLWl0ZW06bGFzdC1vZi10eXBlIHsKICBtYXJnaW4tcmlnaHQ6IDA7Cn0KCi5zbS1maWVsZF9faXRlbS1pbmZvIHsKICBjb2xvcjogdmFyKC0tc20tdGV4dC1jb2xvci1saWdodCk7CiAgZm9udC1zaXplOiB2YXIoLS1zbS1mb250LXNpemUtc21hbGwpOwp9Cgouc20tZmllbGRfX2dyb3VwLWl0ZW0gewogIGZsZXg6IDE7Cn0KCgouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLWxhcmdlIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpmaXJzdC1vZi10eXBlIHsKICBmbGV4OiAwOwp9Cgouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLWxhcmdlICAuc20tZmllbGRfX2dyb3VwLWl0ZW06bGFzdC1vZi10eXBlIHsKICBmbGV4OiAxOwp9Cgouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLXNtYWxsIC5zbS1maWVsZF9fZ3JvdXAsCi5zbS1maWVsZC0tbmFtZS5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAgewogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47Cn0KCi5zbS1maWVsZC0tbmFtZS5zbS1maWVsZC0tc21hbGwgLnNtLWZpZWxkX19ncm91cC1pdGVtLAouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLW1lZGl1bSAuc20tZmllbGRfX2dyb3VwLWl0ZW0gewogIG1hcmdpbi1ib3R0b206IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgbWFyZ2luLXJpZ2h0OiAwOwp9Cgouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLXNtYWxsIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpsYXN0LW9mLXR5cGUsCi5zbS1maWVsZC0tbmFtZS5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpsYXN0LW9mLXR5cGUgIHsKICBtYXJnaW4tYm90dG9tOiAwOwp9Cgouc20tZmllbGQtLWFkZHJlc3Muc20tZmllbGQtLXNtYWxsIC5zbS1maWVsZF9fZ3JvdXAsCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAgewogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47Cn0KCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tc21hbGwgLnNtLWZpZWxkX19ncm91cC1pdGVtLAouc20tZmllbGQtLWFkZHJlc3Muc20tZmllbGQtLW1lZGl1bSAuc20tZmllbGRfX2dyb3VwLWl0ZW0gewogIG1hcmdpbi1ib3R0b206IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgbWFyZ2luLXJpZ2h0OiAwOwp9Cgouc20tZmllbGQtLWFkZHJlc3Muc20tZmllbGQtLXNtYWxsIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpsYXN0LW9mLXR5cGUsCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpsYXN0LW9mLXR5cGUsCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tc21hbGwgLnNtLWZpZWxkX19ncm91cC1pdGVtOmZpcnN0LW9mLXR5cGUsCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpmaXJzdC1vZi10eXBlICB7CiAgbWFyZ2luLWJvdHRvbTogMDsKfQoKLnNtLWZpZWxkLS1hZGRyZXNzIC5zbS1maWVsZF9faW5wdXQgewogIG1hcmdpbi1ib3R0b206IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7Cn0K"/>
-                                                        </form>  
-                                                                
+                                            <form method="post" action="https://api.sheetmonkey.io/form/tGpASqhVRmt9gtXDdRLGd8" autoComplete="on" class="sm__form"><div class="sm__form__fields">
+                                                <div class="sm-field__wrapper"><div class="sm-field__wrapper__inside"><div class="sm-field sm-field-text sm-field--large">
+                                                    <label class="sm-field__label" for="sm-field-qxnhOLxrFX"> </label>
+                                                    <input type="text" class="sm-field__input sm-field__input--text" id="sm-field-qxnhOLxrFX" name="Misión"/></div>
+                                                </div></div><div class="sm-actions__container"><button type="submit" class="sm-btn sm-btn--primary">Enviar</button></div>
+                                               </div>                                                                                                                                                                                                                
                                             </details>
                                         
                                     </div>                                                        
@@ -1025,92 +807,96 @@
                       <!-- /<div class=" w3-half w3-red"> -->
 
 
-    <!-- /<div class="w3-container"> -->
+        </div>          <!-- /<div class="w3-container"> -->
         
         
         <div class="w3-auto">
             <div class="w3-container">
                 <div class="bg-red-200 text-red-700 px-6 py-4 rounded-lg relative mb-5" role="alert" x-data="{ open: true }" x-show.transition="open">
-                <div class="mr-4">
-            
-                    <strong class="font-bold"> <span id="Day">Jueves</span>, <span id="Date">02</span> de <span id="Month"  class="block sm:inline" >Julio</span>,  <span id="Year">2023</span></strong>                                    
-                    <div>
-                        <script  src="src/work-day.js"></script> 
-                        
-                        
-                        <div class="clock"><span id="Hours" class="numbers">12</span>:<span id="Minutes" class="numbers">00</span>:<span id="Seconds" class="numbers">00</span> <span id="AMPM">PM</span></div>
-                        
-                        <div id="counters"><p>En la sesión de hoy has estado aquí por <span id="DeltaHours">00</span>:<span id="DeltaMinutes">00</span>:<span id="DeltaSeconds">00</span></p>
-                        
-                        <p id="Lunch"><span id="End">Tiempo restante de día de hoy</span> <span id="hoursUntil">00</span>:<span id="minutesUntil">00</span>:<span id="secondsUntil">00</span></p>
-                        </div>
-                        
-                        </div>
+                    <div class="mr-4">            
+                        <strong class="font-bold"> <span id="Day">Jueves</span>, <span id="Date">02</span> de <span id="Month"  class="block sm:inline" >Julio</span>,  <span id="Year">2023</span></strong>                                    
+                        <div>
+                            <script  src="src/work-day.js"></script>                         
+                            
+                            <div class="clock"><span id="Hours" class="numbers">12</span>:<span id="Minutes" class="numbers">00</span>:<span id="Seconds" class="numbers">00</span> <span id="AMPM">PM</span></div>
+                            
+                            <div id="counters"><p>En la sesión de hoy has estado aquí por <span id="DeltaHours">00</span>:<span id="DeltaMinutes">00</span>:<span id="DeltaSeconds">00</span></p>
+                            
+                            <p id="Lunch"><span id="End">Tiempo restante de día de hoy</span> <span id="hoursUntil">00</span>:<span id="minutesUntil">00</span>:<span id="secondsUntil">00</span></p>
+                        </div>                                               
+                    </div>
                 </div>
-            <svg class="icon icon-sor-juanaicon-" style="  width: 2em; height:2em;"><use xlink:href="#icon-sor-juanaicon-"></use></svg>  
-                <span class="cursor-pointer absolute top-0 bottom-0 right-0 hover:bg-red-100 hover:text-red-600 w-10 h-10 rounded-full inline-flex items-center justify-center mt-2 mr-3" x-on:click="open = false">
+            </div>
+             <svg class="icon icon-sor-juanaicon-" style="  width: 2em; height:2em;"><use xlink:href="#icon-sor-juanaicon-"></use></svg>  
+                <span class="cursor-pointer absolute top-0 bottom-0 right-0 hover:bg-red-100 hover:text-red-600 w-10 h-10 rounded-full inline-flex items-center justify-center mt-2 mr-3" 
+                x-on:click="open = false">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="0" y="0" width="24" height="24" stroke="none"></rect>
                         <line x1="18" y1="6" x2="6" y2="18" />
                         <line x1="6" y1="6" x2="18" y2="18" />
-                        </svg>
+                    </svg>
                 </span>
             </div>  
-                </div>    
-        </div>
-        </div>    
-        
-        <div class="w3-auto" id="viewpanel">
-            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSj7cjUbeWNJpN8J4nrLGSzpeEEvGLTeSIwyqtUDXkFqfzpHnVLyjnV7XJ0f_h8W5fAiuJXQYYqdDLC/pubhtml" name="iframe_b"  height="650px" width="100%" title="Descargar" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
-            <br><br><br><br>
+        </div>                                   
+       
+   
+        <div class="w3-auto">
+            <div class="w3-container">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSj7cjUbeWNJpN8J4nrLGSzpeEEvGLTeSIwyqtUDXkFqfzpHnVLyjnV7XJ0f_h8W5fAiuJXQYYqdDLC/pubhtml" name="iframe_b"  height="650px" width="100%" title="Descargar" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> <br><br><br><br>
+                
+                <div id="gDrive"><br><br><br><br><br><br>
+                    <iframe src="./gdrive/index.html" style="border:none;" height="650px" width="100%" title="Dashboard" ></iframe>  
+                </div><br><br><br><br>   
+                
+                <div id="blogs"><br><br><br><br><br><br>
+                    <iframe src="./accesos.html" style="border:none; " height="650px" width="100%" title="Dashboard " ></iframe>  
+                </div>  
+                    
+                <div id="bdalumnos"><br><br><br><br><br><br>
+                    <iframe src="https://docs.google.com/spreadsheets/d/1HRsTYIeUaXhjHLnCrFwHo5bTOAacxAmxWpYl7k4E-oc/edit#gid=0" style="border:none; " height="650px" width="100%" title="Dashboard " ></iframe>  
+                </div><br><br><br><br>
 
-            <div id="bddocentes"><br><br><br><br><br><br>
-                <iframe src="https://docs.google.com/spreadsheets/d/1HRsTYIeUaXhjHLnCrFwHo5bTOAacxAmxWpYl7k4E-oc/edit#gid=0" style="border:none; " height="650px" width="100%" title="Dashboard " ></iframe>  
-             </div>
-             <br><br><br><br>
+                <div id="bddocentes"><br><br><br><br><br><br>
+                    <iframe src="https://docs.google.com/spreadsheets/d/1WjmRbx71KH2xhDaLQiLGbEepO2WG0P3jv1GxE1xcwnY/edit#gid=0" style="border:none; " height="650px" width="100%" title="Dashboard " ></iframe>  
+                </div><br><br><br><br>
 
+                <div id="elDirectorio"><br><br><br><br><br><br>
+                    <iframe src="https://docs.google.com/spreadsheets/d/1HRsTYIeUaXhjHLnCrFwHo5bTOAacxAmxWpYl7k4E-oc/edit#gid=0" style="border:none; " height="650px" width="100%" title="Dashboard " ></iframe>  
+                </div><br><br><br><br>
 
-            <div id="gDrive"><br><br><br><br><br><br>
-               <iframe src="./gdrive/index.html" style="border:none; " height="650px" width="100%" title="Dashboard " ></iframe>  
+                <div id="editarDirectorio"><br><br><br><br><br><br>
+                    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSj7cjUbeWNJpN8J4nrLGSzpeEEvGLTeSIwyqtUDXkFqfzpHnVLyjnV7XJ0f_h8W5fAiuJXQYYqdDLC/pubhtml" style="border:none; " height="650px" width="100%" title="Dashboard " ></iframe>  
+                </div><br><br><br><br>
+                  
+                             
+
+                <div id="multimediaimg"><br><br><br><br><br><br>
+                    <iframe src="./../././multimedia.html" style="border:none; " height="650px" width="100%" title="Dashboard " ></iframe>  
+                </div>
+
+                <div id="icoSorJuana"><br><br><br><br><br><br>
+                    <iframe src="https://xbrpw.github.io/eso/icoSorJuana/demo.html" style="border:none; " height="650px" width="100%" title="Dashboard " ></iframe>  
+                </div>
+
+                <div id="brief"><br><br><br><br><br><br>
+                    <iframe src="../sor-juana-ines-de-la-cruz/index.html" style="border:none; " height="650px" width="100%" title="Dashboard " ></iframe>  
+                </div>
+
+                <div id="mapsite"><br><br><br><br><br><br>
+                    <iframe src="../mapa-de-sitio.html" style="border:none; " height="650px" width="100%" title="Dashboard " ></iframe>  
+                </div>
+
+                <div id="lighthouse"><br><br><br><br><br><br>
+                    <iframe src="../lighthouse-report-viewer/report/index.html" style="border:none; " height="650px" width="100%" title="Dashboard " ></iframe>  
+                </div>  
+                             
             </div>
-            <br><br><br><br>
-
-            <div id="blogger"><br><br><br><br><br><br>
-               <iframe src="./accesos.html" style="border:none; " height="650px" width="100%" title="Dashboard " ></iframe>  
-            </div>
-
-            <div id="blogger"><br><br><br><br><br><br>
-                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSj7cjUbeWNJpN8J4nrLGSzpeEEvGLTeSIwyqtUDXkFqfzpHnVLyjnV7XJ0f_h8W5fAiuJXQYYqdDLC/pubhtml" style="border:none; " height="650px" width="100%" title="Dashboard " ></iframe>  
-             </div>
-
-             <div id="multimediaimg"><br><br><br><br><br><br>
-                <iframe src="./../././multimedia.html" style="border:none; " height="650px" width="100%" title="Dashboard " ></iframe>  
-             </div>
-
-
-        </div></div><br><br><br><br>
-
+        </div>      
+    </div>
         
-
-     
-
-     
-
-</div>
-
-
-
-      
-
-<script>
-    includeHTML();
-</script> 
+  </div>
   
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script><script  src="./script.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="./panelSlide.js"></script>  <script src="./Data-Time-layout.js"></script>
-<script src="https://www.luisangelmaciel.one/js/compressed.js"></script>
-<script src="https://www.luisangelmaciel.one/preloader.js"></script>
+  <script>includeHTML();</script><script src="https://www.luisangelmaciel.one/js/compressed.js"></script><script src="https://www.luisangelmaciel.one/preloader.js"></script><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script><script  src="./script.js"></script><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="./panelSlide.js"></script>  <script src="./Data-Time-layout.js"></script>    
 
 </body>
 </html>
