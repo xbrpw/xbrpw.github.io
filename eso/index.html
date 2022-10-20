@@ -140,55 +140,33 @@
           <li class="nav-item ml-md-auto"><a class="nav-link" href="#altoAlByllying" target="_blank" title="Alto al bullying"  data-toggle="modal" data-target="#myModalbullying">Alto al bullying</a></li>
           <li class="nav-item ml-md-auto"><a class="nav-link" href="#accesosrapidos" target="_blank" title="+ Accesos Rápidos">+ Accesos Rápidos</a></li> 
         </ul></div></div></div></div></header><!-- /header-->
-       
-    
-
-        <div id="mySidebar" class="sidebar">
-          <br>
-          <a href="./info.html" target="eso0514" onclick="closeNav()" >Indicaciones</a>
-          <a href="./acesos.html#materias" target="eso0514" onclick="closeNav()" class="w3-ripple">Materias</a>
-         <!-- REGRESARLO  <a href="./acesos.html#proyecto"target="eso0514" onclick="closeNav()" class="w3-ripple">Proyecto</a>    -->   
-          <a href="../herramientas.html" target="eso0514" onclick="closeNav()" class="w3-ripple"><i class="fa fa-tools"></i> Herramientas</a></a>      
-          <a href="../bloc-de-notas/index.html" target="eso0514" onclick="closeNav()" class="w3-ripple"><i class="fa fa-pencil"></i> Bloc de notas</a>    
-          <!-- REGRESARLO <a href="./info.html" target="eso0514"  onclick="closeNav()" class="w3-ripple">Comentarios</a>   -->
-          <a href="#"  onclick="closeNav()" ><small>cerrar</small></a>
+        <!-- The Modal -->
+  <div class="modal" id="myModalbullying">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal  fadeHeader 
+        <div class="modal-header">
+          <h4 class="modal-title">Alto al bullying</h4>
+          <p data-dismiss="modal">&times;</p>
+        </div>-->
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <img src="./img/bullying/bu-9.webp" alt="Alto al bullying" width="500" height="497" class="w3-responsive w3-image" >
         </div>
         
-        <!-- App -->     
-        <div class="w3-bar w3-large  w3-white w3-card-2 w3-hide-large w3-hide-medium w3-top">
-          <a class="w3-bar-item w3-circle  w3-ripple" href="#ESO0514"  class="openbtn" onclick="openNav()"><i class="fa fa-bars  "></i></a> 
-          <div class="w3-text-black w3-left w3-ripple  w3-xxlarge"class="openbtn"><h4 >Accesos </h4></div>
-              <div class="w3-text-black w3-right  w3-ripple  w3-xxlarge" ><!-- <h4><i class="fa fa-search " class="w3-text-black" ></i></h4> -->  
-                <h4>
-                  <span> <a href="./info.html" target="eso0514" ><i class="fa fa-info"></i>  </a></span> &nbsp; &nbsp; 
-                 <!--  <span onclick="myFunction()"><i class="fa fa-info " onclick="myFunction()" ></i> &nbsp; &nbsp; </span>-->
-                  <!-- <span> <a href="./herramientas" target="eso0514" onclick="closeNav()"><i class="fa fa-tools"></i> </a></span> &nbsp; &nbsp;  -->
-                  <!-- <span> <a href="./bloc-de-notas/index.html" target="eso0514" onclick="closeNav()">  </a></span> &nbsp; &nbsp;  -->
-                  <span> <a href="../alerts/index.html" target="eso0514" ><i class="fa fa-bell"></i> </a></span> &nbsp;
-                 <span> <svg class="icon icon-sor-juanaicon-" style=" width: 1.7em; height:1.7em;"><use xlink:href="#icon-sor-juanaicon-"></use></svg></span> &nbsp; &nbsp;
-                </h4> 
-              </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
         </div>
-      
-        <!-- Escritorio -->
-        <div class="w3-container w3-white w3-card-2 w3-hide-small w3-xxlarge w3-top" >
-          <div class="w3-auto">
-            <div class="w3-text-black w3-left w3-ripple  w3-xxlarge"class="openbtn"><h4 >Accesos </h4></div>
-              <div class="w3-text-black w3-right  w3-ripple  w3-xxlarge" ><!-- <h4><i class="fa fa-search " class="w3-text-black" ></i></h4> -->  
-                <h4>
-                  
-                    <span> <a href="./info.html" target="eso0514" ><i class="fa fa-info " ></i>&nbsp; &nbsp; Indicaciones</a> &nbsp; &nbsp; 
-                  <!-- <span onclick="myFunction()"><i class="fa fa-info " onclick="myFunction()" ></i>&nbsp; &nbsp; Indicaciones &nbsp; &nbsp; </span> -->
-                  <span> <a href="../herramientas.html" target="eso0514" > Herramientas</a></span> &nbsp; &nbsp; 
-                  <span> <a href="../bloc-de-notas/index.html" target="eso0514" > Bloc de notas</a></span> &nbsp; &nbsp; 
-                  <span> <a href="../alerts/index.html" target="eso0514" > <i class="fa fa-bell"></i> </a></span> &nbsp; &nbsp; 
-                  <svg class="icon icon-sor-juanaicon-" style=" width: 1.7em; height:1.7em;"><use xlink:href="#icon-sor-juanaicon-"></use></svg> 
-                </h4> 
-              </div>
-          </div>
-        </div>      
-        <br>
-  
+        
+      </div>
+    </div>
+  </div><!-- /The Modal -->
+    
+
+
 
 <section class="sticky-top">
   <div class="container-fluid" style="overflow: visible;">
@@ -208,11 +186,10 @@
           <a class="navbar-brand" href="/index" title="ESO-154" class="w3-hide-small"><img src="img/eso0514-vertical.svg" width="654px" height="150" alt="Logo Escuela Secundaria Oficial" class="img-fluid img-responsive w3-hide-small" id="elInicio" lazy="loading"></a>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="navbar-nav p-3">
-             <!--  <li class="nav-item  w3-hide-small" >
+              <li class="nav-item  w3-hide-small" >
                 <a class="nav-link" href="#elInicio">Inicio <span class="sr-only">(current)</span></a>
-              </li> -->
+              </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown">Institucional</a>
                 <a class="nav-link dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown">Institucional</a>
                 <div class="dropdown-menu p-5 text-success" aria-labelledby="navbarDropdownMenuLink">
                   <div class="row">
@@ -268,106 +245,11 @@
                         </li>
                       </ul>
                     </div>
-                    <div class="col-md-3">
-                      <ul class="list-group">
-                        <li class="border-0 list-group-item">Avisos                         
-                        </li>
-                      </ul>
-                    </div>   
-                    <div class="col-md-3">
-                      <ul class="list-group">
-                        <li class="border-0 list-group-item">Login                     
-                        </li>
-                      </ul>
-                    </div>   
-                    <div class="col-md-3">
-                      <ul class="list-group">
-                        <li class="border-0 list-group-item " style="color:black">Buscar                 
-                        </li>
-                      </ul>
-                    </div>                  
-                  </div>
-                </div>
-              </li>   
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown">Institucional</a>
-                <a class="nav-link dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown">Institucional</a>
-                <div class="dropdown-menu p-5 text-success" aria-labelledby="navbarDropdownMenuLink">
-                  <div class="row">
-                    <div class="col-md-3">
-                      <ul class="list-group">
-                        <li class="border-0 list-group-item">Institucional
-                          <ul class="uk-nav-sub">
-                            <li><a href="#organigrama">Organigrama</a></li>
-                            <li><a href="materias.html">Materias impartidas</a></li>
-                            <li><a href="#directorio">Directorio Administrativo y personal docente</a></li>
-                            <li><a href="eso/codigo-de-conducta.html">Código de conducta online</a></li>
-                            <li><a href="assets/logo/index.html">Logo</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-md-3">
-                      <ul class="list-group">
-                        <li class="border-0 list-group-item">Destacados
-                          <ul class="uk-nav-sub">                            
-                            <li><a href="#noticias">Noticias</a></li>
-                            <li><a href="#tramites">Trámites</a></li>
-                            <li><a href="./herramientas.html">Enlaces</a></li>
-                            <li><a href="./alerts/index.html">Avisos</a></li>
-                            <li><a href="#Covid-19">Novedades COVID-19</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
                     
-                    <div class="col-md-3">
-                      <ul class="list-group">
-                        <li class="uk-parent uk-active uk-nav-header">Acciones
-                          <ul class="uk-nav-sub">
-                            <li class="uk-active"><a href="acciones/programas-y-proyectos">Áreas, Programas y proyectos</a></li>                            
-                            <li><a href="./calendario.html">Calendario Escolar 2022-2023</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-md-3">
-                      <ul class="list-group">
-                        <li class="border-0 list-group-item">Aplicativos en línea
-                          <ul class="uk-nav-sub">
-                            <li><a href="">Búsqueda </a></li>                                                                           
-                            <li><a href="./calculadora/index.html" target="_blank"> Calculadora</a></li>
-                            <li><a href="./calculadora-cientifica/index.html" target="_blank"> Calculadora Cientifica</a></li>
-                            <li><a href="./calculadora-cientifica-v1/index.html" target="_blank">Calculadora Cientifica </a></li>
-                            <li><a href="./404/index.html" target="_blank"> 404</a></li>
-                            <li><a href="./author/xbr-pw/index.html" target="_blank"> Author </a></li>
-                            <li><a href="./multimedia.html" target="_blank"> Multimedia </a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-md-3">
-                      <ul class="list-group">
-                        <li class="border-0 list-group-item">Avisos                         
-                        </li>
-                      </ul>
-                    </div>   
-                    <div class="col-md-3">
-                      <ul class="list-group">
-                        <li class="border-0 list-group-item">Login                     
-                        </li>
-                      </ul>
-                    </div>   
-                    <div class="col-md-3">
-                      <ul class="list-group">
-                        <li class="border-0 list-group-item " style="color:black">Buscar                 
-                        </li>
-                      </ul>
-                    </div>                  
                   </div>
                 </div>
               </li>   
-              <!-- <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="./alerts/index.html">Avisos</a>
               </li>                                     
               <li class="nav-item" >
@@ -375,7 +257,7 @@
               </li>
               <li class="nav-item"   >
                 <a class="nav-link" href="#buscar" data-toggle="modal" data-target="#myModalsearch" class="btn btn-primary my-2 my-sm-0">Buscar</a>
-              </li>   -->            
+              </li>              
             </ul>
            
           </div>
@@ -405,9 +287,7 @@
 </div>
 
 
- 
-
-
+  
 
   
 
@@ -1069,7 +949,7 @@ reset();
 
 
 <br>
-<center hidden>
+<center>
   <div onclick="typeWriter() " style="  color: #323b3f;" class="footer">
     Hecho con <span class="heartbeat"> ❤ </span> y mucho código
     <a  href="https://luisangelmaciel.github.io/ " title="luisangel.maciel" target="_blank"><span id="powered "></span></a> 
@@ -1148,74 +1028,3 @@ reset();
 <script src="https://www.luisangelmaciel.one/preloader.js"></script>
 
 <div w3-include-html="content.html"></div>
-
- <!-- The Modal -->
-  <div class="modal" id="myModalsearch"  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-      
-        <!-- Modal  fadeHeader 
-        <div class="modal-header">
-          <h4 class="modal-title">Alto al bullying</h4>
-          <p data-dismiss="modal">&times;</p>
-        </div>-->
-        
-        <!-- Modal body -->
-        <div class="modal-body">          
-                      
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-             
-              <script>
-              $(document).ready(function(){
-                $("#myInput").on("keyup", function() {
-                  var value = $(this).val().toLowerCase();
-                  $("#myDIVSearch *").filter(function() {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                  });
-                });
-              });
-              </script>
-
-
-
-              
-
-        </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-          
-        </div>
-        
-      </div>
-    </div>
-  </div><!-- /The Modal -->
-
-   <!-- The Modal -->
-   <div class="modal" id="myModalbullying">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-      
-        <!-- Modal  fadeHeader 
-        <div class="modal-header">
-          <h4 class="modal-title">Alto al bullying</h4>
-          <p data-dismiss="modal">&times;</p>
-        </div>-->
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-          <img src="./img/bullying/bu-9.webp" alt="Alto al bullying" width="500" height="497" class="w3-responsive w3-image" >
-        </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-        </div>
-        
-      </div>
-    </div>
-  </div><!-- /The Modal -->
