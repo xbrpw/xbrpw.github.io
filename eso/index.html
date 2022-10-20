@@ -198,7 +198,8 @@
 	* {box-sizing: border-box;}
 	body {font-family: Verdana, sans-serif;}
 	.mySlides {display: none;}
-	
+	.anegro:link {color: #000;text-decoration: none;}.anegro:visited {color: #000;text-decoration: none;} .anegro:hover {color: inherit;text-decoration: none;}
+      .anegro:active {color: inherit; text-decoration: none;}
 	/* Slideshow container */
 	.slideshow-container {
 	  position: relative;
@@ -330,15 +331,14 @@
   
   <!-- App -->     
   <div class="w3-bar w3-large  w3-white w3-card-2 w3-hide-large w3-hide-medium w3-top">
-    <a class="w3-bar-item w3-circle  w3-ripple" href="#ESO0514"  class="openbtn" onclick="openNav()"><i class="fa fa-bars  "></i></a> 
-    <div class="w3-text-black w3-left w3-ripple  w3-xxlarge"class="openbtn"><h4 >Accesos </h4></div>
+    <a class="w3-bar-item w3-circle  w3-ripple" href="#ESO0514"  class="openbtn anegro" onclick="openNav()"><i class="fa fa-bars  "></i></a> 
+    <div class="w3-text-black w3-left w3-ripple  w3-xxlarge"class="openbtn anegro"><h4 >ESO 0514 </h4></div>
         <div class="w3-text-black w3-right  w3-ripple  w3-xxlarge" ><!-- <h4><i class="fa fa-search " class="w3-text-black" ></i></h4> -->  
-          <h4>
-            <span> <a href="./info.html" target="eso0514" ><i class="fa fa-info"></i>  </a></span> &nbsp; &nbsp; 
+          <h4>          
            <!--  <span onclick="myFunction()"><i class="fa fa-info " onclick="myFunction()" ></i> &nbsp; &nbsp; </span>-->
             <!-- <span> <a href="./herramientas" target="eso0514" onclick="closeNav()"><i class="fa fa-tools"></i> </a></span> &nbsp; &nbsp;  -->
             <!-- <span> <a href="./bloc-de-notas/index.html" target="eso0514" onclick="closeNav()">  </a></span> &nbsp; &nbsp;  -->
-            <span> <a href="../alerts/index.html" target="eso0514" ><i class="fa fa-bell"></i> </a></span> &nbsp;
+            <span> <a href="../alerts/index.html" target="eso0514" class="anegro"><i class="fa fa-bell anegro"></i> </a></span> &nbsp;
            <span> <svg class="icon icon-sor-juanaicon-" style=" width: 1.7em; height:1.7em;"><use xlink:href="#icon-sor-juanaicon-"></use></svg></span> &nbsp; &nbsp;
           </h4> 
         </div>
