@@ -1,0 +1,236 @@
+html,
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+#draw {
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+#draw svg {
+  min-height: 100vh;
+}
+#draw * {
+  transform-origin: center;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+}
+#draw #land1 {
+  transform: translateY(-10%) scale(1.3);
+  -webkit-animation-name: anim1;
+          animation-name: anim1;
+}
+#draw #land2,
+#draw #whitesun {
+  transform: translateY(-8%) scale(1.2);
+  -webkit-animation-name: anim2;
+          animation-name: anim2;
+}
+#draw #land3 {
+  transform: translateY(-10%) scale(1.3);
+  -webkit-animation-name: anim3;
+          animation-name: anim3;
+}
+#draw #c-left1,
+#draw #c-left2,
+#draw #c-left3 {
+  transform: translateX(-20%) translateY(-10%) scale(1.5);
+  opacity: 0.01;
+  -webkit-animation-name: anim4;
+          animation-name: anim4;
+}
+#draw #c-right1,
+#draw #c-right2,
+#draw #c-right3 {
+  transform: translateX(20%) translateY(-10%) scale(1.5);
+  opacity: 0.01;
+  -webkit-animation-name: anim5;
+          animation-name: anim5;
+}
+#draw #baloons,
+#draw #birds-paradise {
+  transform: translateX(-5%) translateY(-5%) scale(1.2);
+  -webkit-animation-name: anim6;
+          animation-name: anim6;
+}
+#draw #birds {
+  transform: translateX(5%) translateY(-5%) scale(1.2);
+  -webkit-animation-name: anim7;
+          animation-name: anim7;
+}
+#draw #sky {
+  transform: translateY(30%);
+  -webkit-animation-name: anim8;
+          animation-name: anim8;
+}
+#draw #whitesun > path {
+  opacity: 0.5;
+  -webkit-animation-name: anim9;
+          animation-name: anim9;
+}
+@-webkit-keyframes anim1 {
+  from {
+    transform: translateY(-10%) scale(1.3);
+  }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+  }
+}
+@keyframes anim1 {
+  from {
+    transform: translateY(-10%) scale(1.3);
+  }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+  }
+}
+@-webkit-keyframes anim2 {
+  from {
+    transform: translateY(-8%) scale(1.2);
+  }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+  }
+}
+@keyframes anim2 {
+  from {
+    transform: translateY(-8%) scale(1.2);
+  }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+  }
+}
+@-webkit-keyframes anim3 {
+  from {
+    transform: translateY(-10%) scale(1.3);
+  }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+  }
+}
+@keyframes anim3 {
+  from {
+    transform: translateY(-10%) scale(1.3);
+  }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+  }
+}
+@-webkit-keyframes anim4 {
+  from {
+    transform: translateX(-20%) translateY(-10%) scale(1.5);
+    opacity: 0.01;
+  }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+    opacity: 0.15;
+  }
+}
+@keyframes anim4 {
+  from {
+    transform: translateX(-20%) translateY(-10%) scale(1.5);
+    opacity: 0.01;
+  }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+    opacity: 0.15;
+  }
+}
+@-webkit-keyframes anim5 {
+  from {
+    transform: translateX(20%) translateY(-10%) scale(1.5);
+    opacity: 0.01;
+  }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+    opacity: 0.15;
+  }
+}
+@keyframes anim5 {
+  from {
+    transform: translateX(20%) translateY(-10%) scale(1.5);
+    opacity: 0.01;
+  }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+    opacity: 0.15;
+  }
+}
+@-webkit-keyframes anim6 {
+  from {
+    transform: translateX(-5%) translateY(-5%) scale(1.2);
+  }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+  }
+}
+@keyframes anim6 {
+  from {
+    transform: translateX(-5%) translateY(-5%) scale(1.2);
+  }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+  }
+}
+@-webkit-keyframes anim7 {
+  from {
+    transform: translateX(5%) translateY(-5%) scale(1.2);
+  }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+  }
+}
+@keyframes anim7 {
+  from {
+    transform: translateX(5%) translateY(-5%) scale(1.2);
+  }
+  to {
+    transform: translateX(0%) translateY(0%) scale(1);
+  }
+}
+@-webkit-keyframes anim8 {
+  from {
+    transform: translateY(30%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes anim8 {
+  from {
+    transform: translateY(30%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes anim9 {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+@keyframes anim9 {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0.5;
+  }
+}

@@ -27,7 +27,7 @@ a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoratio
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #155717;
+    background-color: #103113;;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -57,7 +57,7 @@ a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoratio
   .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #155717;
+    background-color: #103113;;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -92,7 +92,7 @@ a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoratio
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #155717;
+    background-color: #103113;;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -122,7 +122,7 @@ a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoratio
   .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #155717;
+    background-color: #103113;;
     color: white;
     padding: 10px 15px;
     border: none;

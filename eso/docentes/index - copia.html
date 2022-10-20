@@ -59,10 +59,10 @@
       
       .btn-log-re{
     padding: 5px 5px 5px 5px;
-    margin: 10px 10px 10px
+    margin: 10px 10px 10px;
         width: 100%;
         background-color: var(--first-color-lighten);
-      
+        display: block;width: 100%;
         border-radius: 1rem;
         text-align: center;
         box-shadow: 0 8px 20px rgba(35,0,77,.2);
@@ -155,6 +155,100 @@
         }
       }
   </style>
+    <style>
+  
+      .infoBtnProcess {
+        margin: 40px auto;
+        text-align: center;
+        display: block;width: 100%
+      }
+      
+      .aBtnProcess {
+        color: #103113;font-weight: 400;
+      }
+      .aBtnProcess:hover {
+        text-decoration: none;font-weight: 400;
+      }
+      
+      .BtnProcess {
+        background-color: #085548;;
+        border: 0;
+        line-height: 0.45;
+        text-decoration: none;
+        height: 30px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        position: relative;
+        
+        display: block;width: 100%
+        
+      }
+      
+      .btn-text-Process {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+      
+      .btn-green {
+        background-color: #103113;
+        color: #fff;
+      }
+      .btn-green.is-vivus-complete.btn-inverse {
+        background-color: #103113;
+      }
+      
+      .btn-border {
+        border: 2px solid #000;
+      }
+      .btn-border.btn-green {
+        border-color: #103113;
+      }
+      
+      .btn-round {
+        border-radius: 70px;
+      }
+      
+      .btn-inverse {
+        transition: all 0.3s ease;
+      }
+      .btn-inverse.btn-green {
+        background-color: #103113;
+        color: #fff;display: block;width: 100%
+      }
+      .btn-inverse.btn-green:not(.is-progress):hover {
+        background-color: #103113;
+        color:#fff ;display: block;width: 100%
+      }
+      
+      .btn__circle {
+        display: none;
+        left: 50%;
+        margin-left: -35px;
+        position: absolute;
+        top: -3.5px;
+      }
+      .is-progress .btn__circle path {
+        stroke: #103113;
+      }
+      
+      .btn__checkmark {
+        display: none;
+        left: 50%;
+        margin-left: -35px;
+        margin-top: -35px;
+        position: absolute;
+        top: 50%;
+      }
+      .btn__checkmark path {
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-width: 3;
+      }
+      </style>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./circularbtn.css">
+
   </head>
   <body>    
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -403,39 +497,171 @@
     <div class="w3-container w3-cell-row"><br>
       <div class="w3-container w3-half w3-cell w3-cell-middle ">
         <div id="login" class=""> <br><br><center>
-            <img src="./../img/storyset/Formula-rafiki.svg" alt="Login docentes" width="250" class="w3-image w3-responsive w3-center w3-centered" height="65" title="Login Docentes ESO 0514 SEP">
+            <img src="./../img/storyset/Formula-rafiki.svg" alt="Login Alumnos" width="250" class="w3-image w3-responsive w3-center w3-centered" height="65" title="Login Alumnos ESO 0514 SEP">
+            <img src="./../img/storyset/Mobile login-bro.svg" alt="Login Alumnos" width="250" class="w3-image w3-responsive w3-center w3-centered" height="65" title="Login Alumnos ESO 0514 SEP">
           </center>
           <h2 class="w3-center" style="color:#103113"><b>Iniciar sesión</b></h2>
           <label for="email" class="w3-hide">Email</label><br/>
           <input id="email" name="email" type="email" placeholder="Email" /><br/>
           <label for="password"  class="w3-hide">Password</label><br/>
           <input id="password" name="password" type="password" placeholder="Password" /><br/><br/>
-          <button  id="loginBtn" style="background-color: #0e6d5b; color:white" class="w3-btn w3-round-xxlarge  w3-hover-teal   w3-block"><b>Entrar</b></button>
+          
+
+          <center>
+            <button  id="loginBtn" class="BtnProcess btn-green btn-border btn-round btn-inverse btn-animation w3-block w3-card-2 w3-center"><span class="btn-text"><b>Entrar</b></span>
+              <svg class="btn__circle" id="btn-success" width="70" height="70">
+                <path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" fill="none" stroke-width="3"></path>
+              </svg>
+              <svg class="btn__checkmark" width="70" height="70">
+                <path d="m31.5,46.5l15.3,-23.2"></path>
+                <path d="m31.5,46.5l-8.5,-7.1"></path>
+              </svg>
+            </button></center>
           <br>
-         <center> <a href="#create" style="color:rgb(32, 31, 31)" title="Crear Cuenta" aria-label="Crear cuenta" class="w3-center">Crear Cuenta</a> </center>
+         <center> <a href="#create" style="color:rgb(32, 31, 31)" title="Crear Cuenta" aria-label="Crear cuenta" class="w3-center">Crear cuenta</a>  <br>   <a href="#create" style="color:rgb(32, 31, 31)" title="Crear Cuenta" aria-label="Crear cuenta" class="w3-center">¿Olvidaste tu contraseña?</a> </center>
+
+         
           <p ><!--  <span class="w3-right-align">¿Olvidaste la contraseña?</span> --></p><br><br><br>
         </div>
       </div>
 
       <div class="w3-container w3-half w3-cell w3-cell-middle">
         <div id="create"><br> <center>
-          <img src="./../img/storyset/Login-pana.svg" alt="Login academico" width="250" class="w3-image w3-responsive w3-center w3-centered" height="65" title="Login Docentes ESO 0514 SEP">       
+          <img src="./../img/storyset/Login-pana.svg" alt="Login academico" width="250" class="w3-image w3-responsive w3-center w3-centered" height="65" title="Login Alumnos ESO 0514 SEP">       
+          <img src="./../img/storyset/Forgot password-rafiki.svg" alt="Login academico" width="250" class="w3-image w3-responsive w3-center w3-centered" height="65" title="Login Alumnos ESO 0514 SEP">       
           </center>
           <h2 class="w3-center" style="color:#103113"><b>Crea una nueva cuenta</b></h2>
-          <h2 class="w3-center" style="color:#103113"><b onclick="document.location='./docentes/index.html'" >Login Docentes</b></h2>
+          <h2 class="w3-center" style="color:#103113"><b onclick="document.location='./docentes/index.html'" >Login Alumnos</b></h2>
           <label for="createEmail" class="w3-hide">Email</label><br/>
           <input name="createEmail" type="email" aria-label="email" placeholder="Email"/><br/>
           <label for="createPassword" class="w3-hide">Password</label><br/>
           <input name="createPassword" type="password" aria-label="contraseña" placeholder="Password"/><br/>
           <label for="confirmPassword" class="w3-hide">Repite Password</label><br/>
           <input name="confirmPassword" type="password" aria-label="contraseña" placeholder="Password"/><br/><br/>
-          <button  id="createBtn" style="background-color: #0e6d5b; color:white" class="w3-btn w3-round-xxlarge  w3-hover-teal   w3-block">  <a href="#create" style="color:white"><b>Crear perfil</b></a></button>          
+          <center>
+            <button  id="createBtn" class="BtnProcess btn-green btn-border btn-round btn-inverse btn-animation w3-block w3-card-2 w3-center"><span class="btn-text"><b>Crear cuenta</b></span>
+              <svg class="btn__circle" id="btn-success" width="70" height="70">
+                <path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" fill="none" stroke-width="3"></path>
+              </svg>
+              <svg class="btn__checkmark" width="70" height="70">
+                <path d="m31.5,46.5l15.3,-23.2"></path>
+                <path d="m31.5,46.5l-8.5,-7.1"></path>
+              </svg>
+            </button></center>
+          
+
+    <script>
+      (function() {
+    (function($) {
+      'use strict';
+      $.Ryan = {};
+      $.Ryan = (function() {
+        var self;
+        self = {
+          btnAnimation: function() {
+            var btnClick, init;
+            btnClick = function(varObj) {
+              varObj.$btnAnimation.hammer().bind('tap', function() {
+                var $this, $thisSvgCheckmark, $thisSvgCircle, $thisText;
+                $this = $(this);
+                $thisText = $this.children('span');
+                $thisSvgCircle = $this.children('.btn__circle');
+                $thisSvgCheckmark = $this.children('.btn__checkmark');
+                $this.velocity({
+                  borderColor: '#ddd',
+                  borderWidth: 3,
+                  paddingLeft: 0,
+                  paddingRight: 0,
+                  height: 68.5,
+                  width: 68.5
+                }, {
+                  begin: function() {
+                    $this.attr('disabled', true);
+                  },
+                  complete: function() {
+                    $thisSvgCircle.velocity('fadeIn', {
+                      delay: 120,
+                      complete: function() {
+                        $this.addClass('is-progress');
+                        new Vivus('btn-success', {
+                          duration: 300,
+                          type: 'async',
+                          start: 'autostart',
+                          animTimingFunction: Vivus.EASE_OUT
+                        }, function() {
+                          $this.addClass('is-vivus-complete');
+                          $thisSvgCircle.velocity('fadeOut');
+                          $this.velocity({
+                            borderRadius: 70,
+                            height: 70,
+                            width: 193
+                          }, {
+                            begin: function() {
+                              $this.css('border-color', '#19cc95');
+                            },
+                            complete: function() {
+                              $thisSvgCheckmark.velocity('fadeIn', {
+                                delay: 100
+                              });
+                              $this.velocity({
+                                backgroundColor: 'transparent',
+                                borderWidth: 2,
+                                paddingLeft: 70,
+                                paddingRight: 70,
+                                paddingTop: 25,
+                                paddingBottom: 25
+                              }, {
+                                delay: 2000,
+                                begin: function() {
+                                  $this.removeClass('is-progress is-vivus-complete');
+                                  $thisSvgCheckmark.velocity('fadeOut', {
+                                    duration: 'fast',
+                                    begin: function() {
+                                      $thisText.velocity('fadeIn');
+                                    }
+                                  });
+                                },
+                                complete: function() {
+                                  $this.attr('disabled', false);
+                                }
+                              });
+                            }
+                          });
+                        });
+                      }
+                    });
+                  }
+                });
+                $thisText.velocity('fadeOut');
+              });
+            };
+            init = function() {
+              var varObj;
+              varObj = {
+                $btnAnimation: $('.btn-animation')
+              };
+              btnClick(varObj);
+            };
+            init();
+          }
+        };
+        return self;
+      })();
+      $.Ryan.btnAnimation();
+    })(jQuery);
+  
+  }).call(this);
+  
+  //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiPGFub255bW91cz4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFBQSxDQUFDLFFBQUEsQ0FBQyxDQUFELENBQUE7SUFDQztJQUNBLENBQUMsQ0FBQyxJQUFGLEdBQVMsQ0FBQTtJQUNULENBQUMsQ0FBQyxJQUFGLEdBQVksQ0FBQSxRQUFBLENBQUEsQ0FBQTtBQUNkLFVBQUE7TUFBSSxJQUFBLEdBQU87UUFBQSxZQUFBLEVBQWMsUUFBQSxDQUFBLENBQUE7QUFFekIsY0FBQSxRQUFBLEVBQUE7VUFBTSxRQUFBLEdBQVcsUUFBQSxDQUFDLE1BQUQsQ0FBQTtZQUNULE1BQU0sQ0FBQyxhQUFhLENBQUMsTUFBckIsQ0FBQSxDQUE2QixDQUFDLElBQTlCLENBQW1DLEtBQW5DLEVBQTBDLFFBQUEsQ0FBQSxDQUFBO0FBQ2xELGtCQUFBLEtBQUEsRUFBQSxpQkFBQSxFQUFBLGNBQUEsRUFBQTtjQUFVLEtBQUEsR0FBUSxDQUFBLENBQUUsSUFBRjtjQUNSLFNBQUEsR0FBWSxLQUFLLENBQUMsUUFBTixDQUFlLE1BQWY7Y0FDWixjQUFBLEdBQWlCLEtBQUssQ0FBQyxRQUFOLENBQWUsY0FBZjtjQUNqQixpQkFBQSxHQUFvQixLQUFLLENBQUMsUUFBTixDQUFlLGlCQUFmO2NBQ3BCLEtBQUssQ0FBQyxRQUFOLENBQWU7Z0JBQ2IsV0FBQSxFQUFhLE1BREE7Z0JBRWIsV0FBQSxFQUFhLENBRkE7Z0JBR2IsV0FBQSxFQUFhLENBSEE7Z0JBSWIsWUFBQSxFQUFjLENBSkQ7Z0JBS2IsTUFBQSxFQUFRLElBTEs7Z0JBTWIsS0FBQSxFQUFPO2NBTk0sQ0FBZixFQVFFO2dCQUFBLEtBQUEsRUFBTyxRQUFBLENBQUEsQ0FBQTtrQkFDTCxLQUFLLENBQUMsSUFBTixDQUFXLFVBQVgsRUFBdUIsSUFBdkI7Z0JBREssQ0FBUDtnQkFHQSxRQUFBLEVBQVUsUUFBQSxDQUFBLENBQUE7a0JBQ1IsY0FBYyxDQUFDLFFBQWYsQ0FBd0IsUUFBeEIsRUFDRTtvQkFBQSxLQUFBLEVBQU8sR0FBUDtvQkFDQSxRQUFBLEVBQVUsUUFBQSxDQUFBLENBQUE7c0JBQ1IsS0FBSyxDQUFDLFFBQU4sQ0FBZSxhQUFmO3NCQUNBLElBQUksS0FBSixDQUFVLGFBQVYsRUFBeUI7d0JBQ3ZCLFFBQUEsRUFBVSxHQURhO3dCQUV2QixJQUFBLEVBQU0sT0FGaUI7d0JBR3ZCLEtBQUEsRUFBTyxXQUhnQjt3QkFJdkIsa0JBQUEsRUFBb0IsS0FBSyxDQUFDO3NCQUpILENBQXpCLEVBS0csUUFBQSxDQUFBLENBQUE7d0JBQ0QsS0FBSyxDQUFDLFFBQU4sQ0FBZSxtQkFBZjt3QkFDQSxjQUFjLENBQUMsUUFBZixDQUF3QixTQUF4Qjt3QkFDQSxLQUFLLENBQUMsUUFBTixDQUFlOzBCQUNiLFlBQUEsRUFBYyxFQUREOzBCQUViLE1BQUEsRUFBUSxFQUZLOzBCQUdiLEtBQUEsRUFBTzt3QkFITSxDQUFmLEVBS0U7MEJBQUEsS0FBQSxFQUFPLFFBQUEsQ0FBQSxDQUFBOzRCQUNMLEtBQUssQ0FBQyxHQUFOLENBQVUsY0FBVixFQUEwQixTQUExQjswQkFESyxDQUFQOzBCQUdBLFFBQUEsRUFBVSxRQUFBLENBQUEsQ0FBQTs0QkFDUixpQkFBaUIsQ0FBQyxRQUFsQixDQUEyQixRQUEzQixFQUFxQzs4QkFBQSxLQUFBLEVBQU87NEJBQVAsQ0FBckM7NEJBQ0EsS0FBSyxDQUFDLFFBQU4sQ0FBZTs4QkFDYixlQUFBLEVBQWlCLGFBREo7OEJBRWIsV0FBQSxFQUFhLENBRkE7OEJBR2IsV0FBQSxFQUFhLEVBSEE7OEJBSWIsWUFBQSxFQUFjLEVBSkQ7OEJBS2IsVUFBQSxFQUFZLEVBTEM7OEJBTWIsYUFBQSxFQUFlOzRCQU5GLENBQWYsRUFRRTs4QkFBQSxLQUFBLEVBQU8sSUFBUDs4QkFDQSxLQUFBLEVBQU8sUUFBQSxDQUFBLENBQUE7Z0NBQ0wsS0FBSyxDQUFDLFdBQU4sQ0FBa0IsK0JBQWxCO2dDQUNBLGlCQUFpQixDQUFDLFFBQWxCLENBQTJCLFNBQTNCLEVBQ0U7a0NBQUEsUUFBQSxFQUFVLE1BQVY7a0NBQ0EsS0FBQSxFQUFPLFFBQUEsQ0FBQSxDQUFBO29DQUNMLFNBQVMsQ0FBQyxRQUFWLENBQW1CLFFBQW5CO2tDQURLO2dDQURQLENBREY7OEJBRkssQ0FEUDs4QkFTQSxRQUFBLEVBQVUsUUFBQSxDQUFBLENBQUE7Z0NBQ1IsS0FBSyxDQUFDLElBQU4sQ0FBVyxVQUFYLEVBQXVCLEtBQXZCOzhCQURROzRCQVRWLENBUkY7MEJBRlE7d0JBSFYsQ0FMRjtzQkFIQyxDQUxIO29CQUZRO2tCQURWLENBREY7Z0JBRFE7Y0FIVixDQVJGO2NBMkRBLFNBQVMsQ0FBQyxRQUFWLENBQW1CLFNBQW5CO1lBaEV3QyxDQUExQztVQURTO1VBcUVYLElBQUEsR0FBTyxRQUFBLENBQUEsQ0FBQTtBQUNiLGdCQUFBO1lBQVEsTUFBQSxHQUFTO2NBQUEsYUFBQSxFQUFlLENBQUEsQ0FBRSxnQkFBRjtZQUFmO1lBQ1QsUUFBQSxDQUFTLE1BQVQ7VUFGSztVQUtQLElBQUEsQ0FBQTtRQTVFbUI7TUFBZDthQThFUDtJQS9FVSxDQUFBO0lBZ0ZaLENBQUMsQ0FBQyxJQUFJLENBQUMsWUFBUCxDQUFBO0VBbkZELENBQUQsQ0FBQSxDQXFGRSxNQXJGRjtBQUFBIiwic291cmNlc0NvbnRlbnQiOlsiKCgkKSAtPlxuICAndXNlIHN0cmljdCdcbiAgJC5SeWFuID0ge31cbiAgJC5SeWFuID0gZG8gLT5cbiAgICBzZWxmID0gYnRuQW5pbWF0aW9uOiAtPlxuXG4gICAgICBidG5DbGljayA9ICh2YXJPYmopIC0+XG4gICAgICAgIHZhck9iai4kYnRuQW5pbWF0aW9uLmhhbW1lcigpLmJpbmQgJ3RhcCcsIC0+XG4gICAgICAgICAgJHRoaXMgPSAkKHRoaXMpXG4gICAgICAgICAgJHRoaXNUZXh0ID0gJHRoaXMuY2hpbGRyZW4oJ3NwYW4nKVxuICAgICAgICAgICR0aGlzU3ZnQ2lyY2xlID0gJHRoaXMuY2hpbGRyZW4oJy5idG5fX2NpcmNsZScpXG4gICAgICAgICAgJHRoaXNTdmdDaGVja21hcmsgPSAkdGhpcy5jaGlsZHJlbignLmJ0bl9fY2hlY2ttYXJrJylcbiAgICAgICAgICAkdGhpcy52ZWxvY2l0eSB7XG4gICAgICAgICAgICBib3JkZXJDb2xvcjogJyNkZGQnXG4gICAgICAgICAgICBib3JkZXJXaWR0aDogM1xuICAgICAgICAgICAgcGFkZGluZ0xlZnQ6IDBcbiAgICAgICAgICAgIHBhZGRpbmdSaWdodDogMFxuICAgICAgICAgICAgaGVpZ2h0OiA2OC41XG4gICAgICAgICAgICB3aWR0aDogNjguNVxuICAgICAgICAgIH0sXG4gICAgICAgICAgICBiZWdpbjogLT5cbiAgICAgICAgICAgICAgJHRoaXMuYXR0ciAnZGlzYWJsZWQnLCB0cnVlXG4gICAgICAgICAgICAgIHJldHVyblxuICAgICAgICAgICAgY29tcGxldGU6IC0+XG4gICAgICAgICAgICAgICR0aGlzU3ZnQ2lyY2xlLnZlbG9jaXR5ICdmYWRlSW4nLFxuICAgICAgICAgICAgICAgIGRlbGF5OiAxMjBcbiAgICAgICAgICAgICAgICBjb21wbGV0ZTogLT5cbiAgICAgICAgICAgICAgICAgICR0aGlzLmFkZENsYXNzICdpcy1wcm9ncmVzcydcbiAgICAgICAgICAgICAgICAgIG5ldyBWaXZ1cygnYnRuLXN1Y2Nlc3MnLCB7XG4gICAgICAgICAgICAgICAgICAgIGR1cmF0aW9uOiAzMDBcbiAgICAgICAgICAgICAgICAgICAgdHlwZTogJ2FzeW5jJ1xuICAgICAgICAgICAgICAgICAgICBzdGFydDogJ2F1dG9zdGFydCdcbiAgICAgICAgICAgICAgICAgICAgYW5pbVRpbWluZ0Z1bmN0aW9uOiBWaXZ1cy5FQVNFX09VVFxuICAgICAgICAgICAgICAgICAgfSwgLT5cbiAgICAgICAgICAgICAgICAgICAgJHRoaXMuYWRkQ2xhc3MgJ2lzLXZpdnVzLWNvbXBsZXRlJ1xuICAgICAgICAgICAgICAgICAgICAkdGhpc1N2Z0NpcmNsZS52ZWxvY2l0eSAnZmFkZU91dCdcbiAgICAgICAgICAgICAgICAgICAgJHRoaXMudmVsb2NpdHkge1xuICAgICAgICAgICAgICAgICAgICAgIGJvcmRlclJhZGl1czogNzBcbiAgICAgICAgICAgICAgICAgICAgICBoZWlnaHQ6IDcwXG4gICAgICAgICAgICAgICAgICAgICAgd2lkdGg6IDE5M1xuICAgICAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgICAgICAgIGJlZ2luOiAtPlxuICAgICAgICAgICAgICAgICAgICAgICAgJHRoaXMuY3NzICdib3JkZXItY29sb3InLCAnIzE5Y2M5NSdcbiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVyblxuICAgICAgICAgICAgICAgICAgICAgIGNvbXBsZXRlOiAtPlxuICAgICAgICAgICAgICAgICAgICAgICAgJHRoaXNTdmdDaGVja21hcmsudmVsb2NpdHkgJ2ZhZGVJbicsIGRlbGF5OiAxMDBcbiAgICAgICAgICAgICAgICAgICAgICAgICR0aGlzLnZlbG9jaXR5IHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgYmFja2dyb3VuZENvbG9yOiAndHJhbnNwYXJlbnQnXG4gICAgICAgICAgICAgICAgICAgICAgICAgIGJvcmRlcldpZHRoOiAyXG4gICAgICAgICAgICAgICAgICAgICAgICAgIHBhZGRpbmdMZWZ0OiA3MFxuICAgICAgICAgICAgICAgICAgICAgICAgICBwYWRkaW5nUmlnaHQ6IDcwXG4gICAgICAgICAgICAgICAgICAgICAgICAgIHBhZGRpbmdUb3A6IDI1XG4gICAgICAgICAgICAgICAgICAgICAgICAgIHBhZGRpbmdCb3R0b206IDI1XG4gICAgICAgICAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgICAgICAgICAgICBkZWxheTogMjAwMFxuICAgICAgICAgICAgICAgICAgICAgICAgICBiZWdpbjogLT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAkdGhpcy5yZW1vdmVDbGFzcyAnaXMtcHJvZ3Jlc3MgaXMtdml2dXMtY29tcGxldGUnXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgJHRoaXNTdmdDaGVja21hcmsudmVsb2NpdHkgJ2ZhZGVPdXQnLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZHVyYXRpb246ICdmYXN0J1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYmVnaW46IC0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICR0aGlzVGV4dC52ZWxvY2l0eSAnZmFkZUluJ1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgY29tcGxldGU6IC0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgJHRoaXMuYXR0ciAnZGlzYWJsZWQnLCBmYWxzZVxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJldHVyblxuICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuXG4gICAgICAgICAgICAgICAgICAgIHJldHVyblxuKVxuICAgICAgICAgICAgICAgICAgcmV0dXJuXG4gICAgICAgICAgICAgIHJldHVyblxuICAgICAgICAgICR0aGlzVGV4dC52ZWxvY2l0eSAnZmFkZU91dCdcbiAgICAgICAgICByZXR1cm5cbiAgICAgICAgcmV0dXJuXG5cbiAgICAgIGluaXQgPSAtPlxuICAgICAgICB2YXJPYmogPSAkYnRuQW5pbWF0aW9uOiAkKCcuYnRuLWFuaW1hdGlvbicpXG4gICAgICAgIGJ0bkNsaWNrIHZhck9ialxuICAgICAgICByZXR1cm5cblxuICAgICAgaW5pdCgpXG4gICAgICByZXR1cm5cbiAgICBzZWxmXG4gICQuUnlhbi5idG5BbmltYXRpb24oKVxuICByZXR1cm5cbikgalF1ZXJ5XG4iXX0=
+  //# sourceURL=coffeescript
+    </script>
+  <!-- partial -->
         </div>     
         </div>
       </div> 
       </div><br><br><br>
     </div>
-    
+
     <script src="login.js"></script>
     <script>
       $(document).ready(function(){
@@ -515,7 +741,48 @@
         }
       }
     </script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js'></script>
+      <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/204808/jquery.hammer.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js'></script>
+      <script src='https://cdn.jsdelivr.net/vivus/0.1.2/vivus.min.js'></script><script  src="./circularbtn.js"></script>
+
   </body>
+
+  <body>  <div class="w3-container w3-cell-row"><br>
+    <div class="w3-container w3-half w3-cell w3-cell-middle ">
+      <div id="login" class=""> <br><br><center>
+          <img src="./../img/storyset/Formula-rafiki.svg" alt="Login Alumnos" width="250" class="w3-image w3-responsive w3-center w3-centered" height="65" title="Login Alumnos ESO 0514 SEP">
+        </center>
+        <h2 class="w3-center" style="color:#103113"><b>Recuperar contraseña</b></h2>
+        <p class="w3-center"> ¿Perdiste tu contraseña? Por favor, introduzca su nombre completo o dirección de correo electrónico.<br><br> Recibirá un enlace para crear una nueva contraseña por correo electrónico.</p>
+        <label for="email" class="w3-hide">Email</label><br/>
+        <input id="email" name="email" type="email" placeholder="Nombre completo o Email" /><br/><br/><br/>
+        
+        <center>
+          <button  id="loginBtn" class="BtnProcess btn-green btn-border btn-round btn-inverse btn-animation w3-block w3-card-2 w3-center"><span class="btn-text"><b>Recuperar</b></span>
+            <svg class="btn__circle" id="btn-success" width="70" height="70">
+              <path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" fill="none" stroke-width="3"></path>
+            </svg>
+            <svg class="btn__checkmark" width="70" height="70">
+              <path d="m31.5,46.5l15.3,-23.2"></path>
+              <path d="m31.5,46.5l-8.5,-7.1"></path>
+            </svg>
+          </button></center>
+
+        <br>
+       <center> <a href="#create" style="color:rgb(32, 31, 31)" title="Crear Cuenta" aria-label="Crear cuenta" class="w3-center">O crear una cuenta nueva</a> </center>
+
+       
+        <p ><!--  <span class="w3-right-align">¿Olvidaste la contraseña?</span> --></p><br><br><br>
+      </div>
+    </div>
+
+    <div class="w3-container w3-half w3-cell w3-cell-middle">               
+    </div> 
+    </div>
+  </body>
+
 </html>
 
 

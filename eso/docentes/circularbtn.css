@@ -1,0 +1,87 @@
+
+.infoBtnProcess {
+  margin: 40px auto;
+  text-align: center;
+  width: 300px;
+}
+
+.aBtnProcess {
+  color: #085548;font-weight: 400;
+}
+.aBtnProcess:hover {
+  text-decoration: none;font-weight: 400;
+}
+
+.BtnProcess {
+  background-color: transparent;
+  border: 0;
+  line-height: 0.45;
+  text-decoration: none;
+  height: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  position: relative;
+  width: 193px;
+  
+}
+
+.btn-text-Process {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn-green {
+  background-color: #103113;
+  color: #fff;
+}
+.btn-green.is-vivus-complete.btn-inverse {
+  background-color: #fff;
+}
+
+.btn-border {
+  border: 2px solid #000;
+}
+.btn-border.btn-green {
+  border-color: #103113;
+}
+
+.btn-round {
+  border-radius: 70px;
+}
+
+.btn-inverse {
+  transition: all 0.3s ease;
+}
+.btn-inverse.btn-green {
+  background-color: #103113;
+  color: #fff;
+}
+.btn-inverse.btn-green:not(.is-progress):hover {
+  background-color: #fff;
+  color: #103113;
+}
+
+.btn__circle {
+  display: none;
+  left: 50%;
+  margin-left: -35px;
+  position: absolute;
+  top: -3.5px;
+}
+.is-progress .btn__circle path {
+  stroke: #d2ff08;
+}
+
+.btn__checkmark {
+  display: none;
+  left: 50%;
+  margin-left: -35px;
+  margin-top: -35px;
+  position: absolute;
+  top: 50%;
+}
+.btn__checkmark path {
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-width: 3;
+}
