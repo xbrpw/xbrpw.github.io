@@ -275,3 +275,32 @@ main figure .shadow::before {
     filter: brightness(1);
   }
 }
+
+@font-face{font-family:icomoon;src:url(https://assets.codepen.io/2509128/icomoon.eot?bxxefg);src:url(https://assets.codepen.io/2509128/icomoon.eot?bxxefg#iefix) format('embedded-opentype'),url(https://assets.codepen.io/2509128/icomoon.ttf?bxxefg) format('truetype'),url(https://assets.codepen.io/2509128/icomoon.woff?bxxefg) format('woff'),url(https://assets.codepen.io/2509128/icomoon.svg?bxxefg#icomoon) format('svg');font-weight:400;font-style:normal;font-display:block}[class^=icon-],[class*=" icon-"]{font-family:icomoon!important;speak:never;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-star-full:before{content:"\e900"}.icon-star-empty:before{content:"\e901"}
+
+
+*, *::before, *::after {
+  font-family: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 62.5%;
+}
+
+html body {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+}
