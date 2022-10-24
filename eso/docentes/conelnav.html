@@ -2,7 +2,7 @@
 <!-- * ⊙⩌⨀ 2006 - 2022  http://twitter.com/luisangelmaciel  */  -->
 <head> 
   <meta charset="UTF-8">  
-  <title> Docentes control</title>
+  <title> </title>
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <meta name="description" content="Docentes control">
   <meta name="MobileOptimized" content="width" />    
@@ -25,8 +25,7 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.02.0/css/all.min.css'> <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v6/search?o=r&m=free -->   
   <link href='https://xbrpw.github.io/assets/fontawesome/css/all.min.css' rel='stylesheet'>
   <link href='https://xbrpw.github.io/assets/fontawesome/css/regular.min.css' rel='stylesheet'>
-  <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script> 
-  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>   
   <style>
     body {
     background-color: white;
@@ -37,10 +36,7 @@
     background-color: black;
     color: white;
     }
-    </style>
-
-
-    <style>
+   
     
     /*--------HEADER------------*/
     #home {
@@ -73,8 +69,7 @@
         overflow:visible;
     }
 
-</style>
-<style>
+
     body {font-family: Arial, Helvetica, sans-serif;}
     * {box-sizing: border-box;}
     
@@ -177,7 +172,82 @@
       }
     }
     </style>
+ <style>
+  .bottom-buttons{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 9999;
+    background: black;
+    height: 50px;
+    width: 50px;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3) !important;
+}
+.bottom-button .tooltip{
+    position: absolute !important;
+    top: -20px !important;
+    right: calc(100% + 15px) !important;
+    z-index: 3 !important;
+    background: #fff !important;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3) !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    opacity: 0 !important;
+    white-space: nowrap !important;
+    pointer-events: none !important;
+    transition: 0s !important;
+    color: black;
+}
+.bottom-button:hover .tooltip{
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transition: all 0.4s ease !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+.blog  {
+    bottom: 110px;
+    font-size: 30px;
+    background: #00E676;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3) !important;
+}
 
+
+.nube{
+    bottom: 170px;
+    font-size: 30px;
+    background: #a00c0c;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3) !important;
+}
+.sos{
+    bottom: 230px;
+    font-size: 16px;
+    background: yellow;
+    color:black;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+
+.hidden-buttons{
+    transition: opacity 1s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+.show-bottom-fixed-buttons{
+    opacity: 1;
+    height: auto;
+}
+</style>
 <script>
     function includeHTML() {
       var z, i, elmnt, file, xhttp;
@@ -207,6 +277,9 @@
       }
     };
     </script>
+    
+
+
 
   </head>
   <body>    
@@ -257,96 +330,18 @@
      <span class="icon icon-sor-juana-ines-de-la-cruz"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
      --> 
   
-    <div id="loggedIn"> 
-     
+    <div id="loggedIn">      
       <div class="container-fluid p-5 bg-Success text-white text-center bg-eso w3-hide" >
         <h1>Equipo de preservación del cuidado ambiental y del humano.</h1>
         <h2>8. Mi campo de trabajo STEM CV 2022-2023</h2><h3><b>Integración STEM CV /&nbsp; y Campo de desarrollo</b></h3>
         <p> <span data-nosnippet>2022 - 2023 Zona S-106</span> </p> 
       </div>
-      <div>
-        <style>
-            .bottom-buttons{
-              position: fixed;
-              bottom: 50px;
-              right: 50px;
-              z-index: 9999;
-              background: black;
-              height: 50px;
-              width: 50px;
-              color: white;
-              border-radius: 50px;
-              cursor: pointer;
-              display: flex;
-              align-items: center;
-              align-content: center;
-              text-align: center;
-              justify-content: center;box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3) !important;
-          }
-          .bottom-button .tooltip{
-              position: absolute !important;
-              top: -20px !important;
-              right: calc(100% + 15px) !important;
-              z-index: 3 !important;
-              background: #fff !important;
-              box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3) !important;
-              padding: 6px 12px !important;
-              border-radius: 4px !important;
-              font-size: 15px !important;
-              font-weight: 400 !important;
-              opacity: 0 !important;
-              white-space: nowrap !important;
-              pointer-events: none !important;
-              transition: 0s !important;
-              color: black;
-          }
-          .bottom-button:hover .tooltip{
-              opacity: 1 !important;
-              pointer-events: auto !important;
-              transition: all 0.4s ease !important;
-              top: 50% !important;
-              transform: translateY(-50%) !important;
-          }
-          .blog  {
-              bottom: 110px;
-              font-size: 30px;
-              background: #00E676;
-              box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3) !important;
-          }
-    
-    
-          .nube{
-              bottom: 170px;
-              font-size: 30px;
-              background: #a00c0c;
-              box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3) !important;
-          }
-          .sos{
-              bottom: 230px;
-              font-size: 16px;
-              background: yellow;
-              color:black;
-              box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3) !important;
-          }
-    
-    
-          .hidden-buttons{
-              transition: opacity 1s ease-out;
-              opacity: 0;
-              height: 0;
-              overflow: hidden;
-          }
-          .show-bottom-fixed-buttons{
-              opacity: 1;
-              height: auto;
-          }
-        </style>
-    
-    
-    
+     
+      <div>                 
       <div class="bottom-buttons" onclick="openCloseButtonsContainer()">
-              <b>+</b>
-          </div>
+           <b>+</b>
+      </div>
+
     
         <div id="bottom-buttons-container" class="hidden-buttons ">
             <a href="#porMaterias" target="__blank">
@@ -366,8 +361,7 @@
                     SOS
                     <span class="tooltip">Publicar en el blog sin fotos</span>
                 </div>
-              </a>
-            
+              </a>            
         </div>
     
         <script> var btnVisible = true;
@@ -384,9 +378,179 @@
                   btns.classList.add('hidden-buttons');
               }
           } </script>
-
     </div>
+    <tbody>                                
+          <tr>
+          <!--  <td ><a  href="https://eso514-ciencia.blogspot.com/"  ><i class="fa-brands fa-blogger-b "></i></a> &nbsp; </td>  -->             
+            <td>  <a href="https://drive.google.com/drive/folders/1sDq3FHB5nyz4-LYlv35hxHdIvw-6TY3A" target="_blank"><i class="fa-regular fa-folder-open"></i>&nbsp; Biología</a> </td>                        
+          <!--   <td><a href="mailto:escuela.secundaria.oficial.514.ciencia@blogger.com?cc=escuela.secundaria.oficial.514@gmail.com; lamacpad@gmail.com&subject=---%20Titulo%20de%20la%20evidencia%20---&body=---Evidencia%20---%0D%0A%0D%0A%0D%0A%3Cb%3EQu%C3%ADmica%2C%20Biolog%C3%ADa%2C%20Vida%20saludable.%3C%2Fb%3E"><i class="fa fa-upload"></i></a></td>
+            <td><a href="mailto:escuela.secundaria.oficial.514.ciencia@blogger.com?cc=escuela.secundaria.oficial.514@gmail.com; lamacpad@gmail.com&subject=---%20Titulo%20de%20la%20evidencia%20---&body=---Evidencia%20---%0D%0A%0D%0A%0D%0A%3Cb%3EQu%C3%ADmica%2C%20Biolog%C3%ADa%2C%20Vida%20saludable.%3C%2Fb%3E">escuela.secundaria.oficial.514.ciencia@blogger.com </a></td>      -->
+          </tr>
+          <tr>
+            <!--  <td ><a  href="https://eso514-ciencia.blogspot.com/"  ><i class="fa-brands fa-blogger-b "></i></a> &nbsp; </td>  -->                            
+            <td><a href="https://drive.google.com/drive/folders/1jD3bEZ9MoRjolWb_Xdwn2Zj3QoFDUiom"><i class="fa-regular fa-folder-open"></i>&nbsp; Química</a></td>
+          <tr>
+          <tr>
+            <!--  <td ><a  href="https://eso514-ciencia.blogspot.com/"  ><i class="fa-brands fa-blogger-b "></i></a> &nbsp; </td>  -->                             
+              <td><a href="https://drive.google.com/drive/folders/1JqNwGm3pBl9AaNvK3le3p-CLZ9sB4nmv"  target="_blank"><i class="fa-regular fa-folder-open"></i>&nbsp; Vida saludable</a></td>
+            <!--  <td><a href="mailto:escuela.secundaria.oficial.514.ciencia@blogger.com?cc=escuela.secundaria.oficial.514@gmail.com; lamacpad@gmail.com&subject=---%20Titulo%20de%20la%20evidencia%20---&body=---Evidencia%20---%0D%0A%0D%0A%0D%0A%3Cb%3EQu%C3%ADmica%2C%20Biolog%C3%ADa%2C%20Vida%20saludable.%3C%2Fb%3E"><i class="fa fa-upload"></i></a></td>
+              <td><a href="mailto:escuela.secundaria.oficial.514.ciencia@blogger.com?cc=escuela.secundaria.oficial.514@gmail.com; lamacpad@gmail.com&subject=---%20Titulo%20de%20la%20evidencia%20---&body=---Evidencia%20---%0D%0A%0D%0A%0D%0A%3Cb%3EQu%C3%ADmica%2C%20Biolog%C3%ADa%2C%20Vida%20saludable.%3C%2Fb%3E">escuela.secundaria.oficial.514.ciencia@blogger.com </a></td>      -->
+          </tr>
+          <tr>
+            <!-- <td><a  href="https://eso514-tecnologia.blogspot.com/" target="eso0514" ><i class="fa-brands fa-blogger-b "></i></a></td>-->
+          <!--  <td><a href="https://drive.google.com/drive/folders/1G8CKVwiWmFPJFS6Q3ogq570ePgInyTCn" target="_blank" title="Carpeta en Google Drive">-->
+              <!-- <b>Tecnología</b> Innovación</a></td> -->
+            <td><a href="https://drive.google.com/drive/folders/1GDFwv1sC8gg_LMzuxj_i0thECF59F0E9"  target="_blank"><i class="fa-regular fa-folder-open"></i>&nbsp; Tecnología</a>&nbsp; </td>             
+            <!-- <td><a  href="mailto:escuela.secundaria.oficial.514.tecnologia@blogger.com?cc=escuela.secundaria.oficial.514@gmail.com&subject=---%20Titulo%20de%20la%20evidencia%20---&body=---Evidencia%20---%0D%0A%0D%0A" target="_blank" ><i class="fa fa-upload"></i></a></td>
+            <td><a  href="mailto:escuela.secundaria.oficial.514.tecnologia@blogger.com?cc=escuela.secundaria.oficial.514@gmail.com&subject=---%20Titulo%20de%20la%20evidencia%20---&body=---Evidencia%20---%0D%0A%0D%0A" target="_blank" >escuela.secundaria.oficial.514.tecnologia@blogger.com</a></td> -->
+          </tr>
+          <tr>
+            <!-- <td><a  href="https://eso514-tecnologia.blogspot.com/" target="eso0514" ><i class="fa-brands fa-blogger-b "></i></a></td>-->
+          <!--  <td><a href="https://drive.google.com/drive/folders/1G8CKVwiWmFPJFS6Q3ogq570ePgInyTCn" target="_blank" title="Carpeta en Google Drive">-->
+              <!-- <b>Tecnología</b> Innovación</a></td> -->              
+            <td><a href="https://drive.google.com/drive/folders/167LBw-RLuzRWhVJ9BazpwUEvVNJe4Duy"  target="_blank"><i class="fa-regular fa-folder-open"></i>&nbsp; Talleres</a></td>
+            <!-- <td><a  href="mailto:escuela.secundaria.oficial.514.tecnologia@blogger.com?cc=escuela.secundaria.oficial.514@gmail.com&subject=---%20Titulo%20de%20la%20evidencia%20---&body=---Evidencia%20---%0D%0A%0D%0A" target="_blank" ><i class="fa fa-upload"></i></a></td>
+            <td><a  href="mailto:escuela.secundaria.oficial.514.tecnologia@blogger.com?cc=escuela.secundaria.oficial.514@gmail.com&subject=---%20Titulo%20de%20la%20evidencia%20---&body=---Evidencia%20---%0D%0A%0D%0A" target="_blank" >escuela.secundaria.oficial.514.tecnologia@blogger.com</a></td>-->
+          </tr>
 
+          <tr>
+            <!-- <td><a  href="https://eso514-tecnologia.blogspot.com/" target="eso0514" ><i class="fa-brands fa-blogger-b "></i></a></td>-->
+          <!--  <td><a href="https://drive.google.com/drive/folders/1G8CKVwiWmFPJFS6Q3ogq570ePgInyTCn" target="_blank" title="Carpeta en Google Drive"> -->
+              <!-- <b>Tecnología</b> Innovación</a></td> -->
+            <td><a href="https://drive.google.com/drive/folders/1GDFwv1sC8gg_LMzuxj_i0thECF59F0E9"  target="_blank"><i class="fa-regular fa-folder-open"></i>&nbsp; Tecnología</a>&nbsp; </td><!--              
+              <td><a  href="mailto:escuela.secundaria.oficial.514.tecnologia@blogger.com?cc=escuela.secundaria.oficial.514@gmail.com&subject=---%20Titulo%20de%20la%20evidencia%20---&body=---Evidencia%20---%0D%0A%0D%0A" target="_blank" ><i class="fa fa-upload"></i></a></td>
+              <td><a  href="mailto:escuela.secundaria.oficial.514.tecnologia@blogger.com?cc=escuela.secundaria.oficial.514@gmail.com&subject=---%20Titulo%20de%20la%20evidencia%20---&body=---Evidencia%20---%0D%0A%0D%0A" target="_blank" >escuela.secundaria.oficial.514.tecnologia@blogger.com</a></td> -->
+          </tr>
+
+          <tr>
+            <!-- <td><a  href="https://eso514-tecnologia.blogspot.com/" target="eso0514" ><i class="fa-brands fa-blogger-b "></i></a></td>-->
+          <!--  <td><a href="https://drive.google.com/drive/folders/1G8CKVwiWmFPJFS6Q3ogq570ePgInyTCn" target="_blank" title="Carpeta en Google Drive"> -->
+              <!-- <b>Tecnología</b> Innovación</a></td> -->              
+            <td><a href="https://drive.google.com/drive/folders/167LBw-RLuzRWhVJ9BazpwUEvVNJe4Duy"  target="_blank"><i class="fa-regular fa-folder-open"></i>&nbsp; Talleres</a></td>
+               <!--               <td><a  href="mailto:escuela.secundaria.oficial.514.tecnologia@blogger.com?cc=escuela.secundaria.oficial.514@gmail.com&subject=---%20Titulo%20de%20la%20evidencia%20---&body=---Evidencia%20---%0D%0A%0D%0A" target="_blank" ><i class="fa fa-upload"></i></a></td>
+            <td><a  href="mailto:escuela.secundaria.oficial.514.tecnologia@blogger.com?cc=escuela.secundaria.oficial.514@gmail.com&subject=---%20Titulo%20de%20la%20evidencia%20---&body=---Evidencia%20---%0D%0A%0D%0A" target="_blank" >escuela.secundaria.oficial.514.tecnologia@blogger.com</a></td> -->
+          </tr>
+          
+        <tr>        
+          <!-- <td><a  href="https://eso514-ingenieria.blogspot.com/"  ><i class="fa-brands fa-blogger-b "></i></a></td> -->
+          <!--   <td><a href="https://drive.google.com/drive/folders/1OZrI48Vly2olI9BvSQ35A4n7I3QiIp6j" target="_blank" title="Carpeta en Google Drive"> -->
+              <!-- <b>Ingeniería</b> Asombro&nbsp;</a> -->
+            </td>
+            <td><a href="https://drive.google.com/drive/folders/1m9ERI3W2CqmtV36-xf5R58HcT0ZrQ3po"  target="_blank"><i class="fa-regular fa-folder-open"></i>&nbsp;  Física</a></td>              
+            <!-- <td> <a  href="mailto:escuela.secundaria.oficial.514.ingenieria@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" ><i class="fa fa-upload"></i></a></td>
+          <td> <a  href="mailto:escuela.secundaria.oficial.514.ingenieria@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" >escuela.secundaria.oficial.514.ingenieria@blogger.com</a></td> -->
+        </tr>
+              
+        <tr>        
+          <!-- <td><a  href="https://eso514-ingenieria.blogspot.com/"  ><i class="fa-brands fa-blogger-b "></i></a></td> -->
+          <!--   <td><a href="https://drive.google.com/drive/folders/1OZrI48Vly2olI9BvSQ35A4n7I3QiIp6j" target="_blank" title="Carpeta en Google Drive"> -->
+              <!-- <b>Ingeniería</b> Asombro&nbsp;</a> -->              
+            <td><a href="https://drive.google.com/drive/folders/1dxrC3hYi83LtlH8Zm5ItGu-Kri6hySiP"  target="_blank"><i class="fa-regular fa-folder-open"></i>&nbsp;  Geografía</a></td>            
+          <!--   <td> <a  href="mailto:escuela.secundaria.oficial.514.ingenieria@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" ><i class="fa fa-upload"></i></a></td>
+          <td> <a  href="mailto:escuela.secundaria.oficial.514.ingenieria@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" >escuela.secundaria.oficial.514.ingenieria@blogger.com</a></td> -->
+        </tr>
+          <tr>
+          <!--  <td><a  href="https://eso514-matematicas.blogspot.com/"  ><i class="fa-brands fa-blogger-b"></i></a></td> -->
+            <!-- <td><a href="https://drive.google.com/drive/folders/1YgUkezlW2SQtlHwiA4EG941DyYg5T67O" target="_blank" title="Carpeta en Google Drive">
+              <b>Matemáticas</b> Sorpresa&nbsp;</a></td>       -->
+              <td><a href="https://drive.google.com/drive/folders/1IpuJgME1bEKE7B-hLoBXwWk-As83Q0ed"><i class="fa-regular fa-folder-open"></i> &nbsp;Matemáticas</a></td>               
+            <!--    <td><a  href="mailto:escuela.secundaria.oficial.514.matematicas@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" ><i class="fa fa-upload"></i></a></td>
+            <td><a  href="mailto:escuela.secundaria.oficial.514.matematicas@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" >escuela.secundaria.oficial.514.matematicas@blogger.com</a></td> -->
+          </tr>
+          <tr>
+          <!--   <td> <a  href="https://eso514-valores.blogspot.com/" ><i class="fa-brands fa-blogger-b"></i></a></td>         -->            
+              <!-- <b>Valores</b> Esmero</a></td> -->              
+            <td><a href="https://drive.google.com/drive/folders/1fLd5vBs5F-NM_Ubg5w8tf10HWdeWIFZG"  target="_blank"><i class="fa-regular fa-folder-open"></i>&nbsp; Formación Cívica y Ética</a></td>               
+            <!--   <td> <a  href="mailto:escuela.secundaria.oficial.514.valores@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" ><i class="fa fa-upload"></i></a></td>
+            <td> <a  href="mailto:escuela.secundaria.oficial.514.valores@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" >escuela.secundaria.oficial.514.valores@blogger.com</a></td> -->
+          </tr>
+          <tr>
+            <!--   <td> <a  href="https://eso514-valores.blogspot.com/" ><i class="fa-brands fa-blogger-b"></i></a></td>         -->                
+                <!-- <b>Valores</b> Esmero</a></td> -->                              
+                <td><a href="https://drive.google.com/drive/folders/19bcdhB-ZKzvpkv0sQ-ekf0ui8JQW9NJ6"  target="_blank"><i class="fa-regular fa-folder-open"></i>&nbsp; Español</a>&nbsp; </td>                
+              <!--   <td> <a  href="mailto:escuela.secundaria.oficial.514.valores@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" ><i class="fa fa-upload"></i></a></td>
+              <td> <a  href="mailto:escuela.secundaria.oficial.514.valores@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" >escuela.secundaria.oficial.514.valores@blogger.com</a></td> -->
+            </tr>
+          <tr>
+            <tr>
+              <!--   <td> <a  href="https://eso514-valores.blogspot.com/" ><i class="fa-brands fa-blogger-b"></i></a></td>         -->                
+                  <!-- <b>Valores</b> Esmero</a></td> -->                                                  
+                  <td><a href="https://drive.google.com/drive/folders/1a8GHgHgAH3lBvnwdfnIkt6YXk0veZEA1"><i class="fa-regular fa-folder-open"></i>&nbsp; Inglés&nbsp;</a></td>
+                <!--   <td> <a  href="mailto:escuela.secundaria.oficial.514.valores@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" ><i class="fa fa-upload"></i></a></td>
+                <td> <a  href="mailto:escuela.secundaria.oficial.514.valores@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" >escuela.secundaria.oficial.514.valores@blogger.com</a></td> -->
+              </tr>
+            <tr>
+            <!-- <td> <a  href="https://eso514-valores.blogspot.com/" ><i class="fa-brands fa-blogger-b"></i></a></td>         -->           
+              <!-- <b>Creatividad </b>Emoción&nbsp;</a></td>   -->                      
+            <td><a href="https://drive.google.com/drive/folders/1Yu5oihkaGxzmkRuowoc19i_PnbAxPEuW"  target="_blank"><i class="fa-regular fa-folder-open"></i>&nbsp;Educación Física</a></td>              
+            
+          <!--    <td><a  href="mailto:escuela.secundaria.oficial.514.creatividad@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" ><i class="fa fa-upload"></i></a></td>
+              <td><a  href="mailto:escuela.secundaria.oficial.514.creatividad@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" >escuela.secundaria.oficial.514.creatividad@blogger.com</a></td>-->
+          </tr>
+          <tr>
+            <!-- <td> <a  href="https://eso514-valores.blogspot.com/" ><i class="fa-brands fa-blogger-b"></i></a></td>         -->              
+              <!-- <b>Creatividad </b>Emoción&nbsp;</a></td>   -->                                    
+            <td><a href="https://drive.google.com/drive/folders/1Z3_HHJASPJQVvZ6UUc_r22vwz_exJNFR"  target="_blank"> <i class="fa-regular fa-folder-open"></i>&nbsp;Historia</a>&nbsp; </td>          
+            
+          <!--    <td><a  href="mailto:escuela.secundaria.oficial.514.creatividad@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" ><i class="fa fa-upload"></i></a></td>
+              <td><a  href="mailto:escuela.secundaria.oficial.514.creatividad@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" >escuela.secundaria.oficial.514.creatividad@blogger.com</a></td>-->
+          </tr>
+          <tr>
+            <!-- <td> <a  href="https://eso514-valores.blogspot.com/" ><i class="fa-brands fa-blogger-b"></i></a></td>         -->            
+              <!-- <b>Creatividad </b>Emoción&nbsp;</a></td>   -->                                                   
+              <td><a href="https://drive.google.com/drive/folders/1Ry5Jv0ktO_A-WLuAORoJ3hBZuPPrCYrP"  target="_blank"><i class="fa-regular fa-folder-open"></i>&nbsp;Artes &nbsp;</a></td>
+            
+          <!--    <td><a  href="mailto:escuela.secundaria.oficial.514.creatividad@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" ><i class="fa fa-upload"></i></a></td>
+              <td><a  href="mailto:escuela.secundaria.oficial.514.creatividad@blogger.com?subject=---%20Publicacion%20---%20&body=---%20Blog%20---%0D%0A%0D%0A" target="_blank" >escuela.secundaria.oficial.514.creatividad@blogger.com</a></td>-->
+          </tr>
+          <tr>
+          <!--  <td> <a  href="https://eso514-directivos.blogspot.com"  ><i class="fa-brands fa-blogger-b"></i></a></td> -->              
+              <!-- <b>Directivos</b> Integración&nbsp;</a></td> -->              
+              <td><a href="https://drive.google.com/drive/folders/1dj9qMGGSxDRxBDSidC_Vinhb_snMwJEP"  target="_blank"><i class="fa-regular fa-folder-open"></i>&nbsp;Orientación</a></td>
+          </tr>
+          <td><a href="https://drive.google.com/drive/folders/1ItOVlCWErnOinRa_-XL2d2U8yUUwc5GT" target="_blank"><i class="fa-regular fa-folder-open"></i>&nbsp;Directivos</a></td>
+          <tr>
+            <td><a href="https://drive.google.com/drive/folders/1cdyGbDIZXFTov8c1XZzfnT_jqYYBtaMU" target="_blank" title="Carpeta en Google Drive">
+              <i class="fa-regular fa-folder-open"></i><b> Ciencia. </b> Descubrimientos&nbsp;</a>
+            </td>
+          </tr>
+          
+        <tr>
+          <td><a href="https://drive.google.com/drive/folders/1G8CKVwiWmFPJFS6Q3ogq570ePgInyTCn" target="_blank" title="Carpeta en Google Drive">
+            <i class="fa-regular fa-folder-open"></i> <b>Tecnología</b> Innovación</a></td>
+        </tr>
+                      
+        <tr>
+          <td><a href="https://drive.google.com/drive/folders/1OZrI48Vly2olI9BvSQ35A4n7I3QiIp6j" target="_blank" title="Carpeta en Google Drive">
+            <i class="fa-regular fa-folder-open"></i>  <b>Ingeniería</b> Asombro&nbsp;</a>
+          </td>
+        </tr>
+
+          <tr><td><a href="https://drive.google.com/drive/folders/1YgUkezlW2SQtlHwiA4EG941DyYg5T67O" target="_blank" title="Carpeta en Google Drive">
+            <i class="fa-regular fa-folder-open"></i>  <b>Matemáticas</b> Sorpresa&nbsp;</a></td>
+          </tr>
+          
+          <tr>
+            <td><a href="https://drive.google.com/drive/folders/1McCCO29ejIFZv6Bi8SWTaz7wSY7f3hht" target="_blank" title="Carpeta en Google Drive">
+              <i class="fa-regular fa-folder-open"></i><b> Valores</b> Esmero</a></td>
+          </tr>
+          
+        <tr>
+          <td><a href="https://drive.google.com/drive/folders/1ggYwE3s03G_1OY26WtfYTprIbyuFOkNo" target="_blank" title="Carpeta en Google Drive">
+            <i class="fa-regular fa-folder-open"></i><b> Creatividad </b>Emoción&nbsp;</a></td>          
+        </tr>
+            
+        <tr>
+          <td><a href="https://drive.google.com/drive/folders/1ItOVlCWErnOinRa_-XL2d2U8yUUwc5GT" target="_blank" title="Carpeta en Google Drive">
+            <i class="fa-regular fa-folder-open"></i><b> Directivos</b> Integración&nbsp;</a></td>
+        </tr>
+            
+        <tr>
+          <td><a href="https://drive.google.com/drive/folders/1ItOVlCWErnOinRa_-XL2d2U8yUUwc5GT" target="_blank" title="Carpeta en Google Drive">
+            <i class="fa-regular fa-folder-open"> </i>  Equipo de preservación del cuidado ambiental y del humano.</a></td>
+        </tr>
+            
+    </tbody>
       
       <div class="w3-container">
           <div id="id01" class="w3-modal w3-display-middle">
