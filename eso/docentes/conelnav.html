@@ -26,6 +26,35 @@
   <link href='https://xbrpw.github.io/assets/fontawesome/css/all.min.css' rel='stylesheet'>
   <link href='https://xbrpw.github.io/assets/fontawesome/css/regular.min.css' rel='stylesheet'>
   <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>   
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+    </script> 
   <style>
     body {
     background-color: white;
@@ -330,13 +359,19 @@
      <span class="icon icon-sor-juana-ines-de-la-cruz"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
      --> 
   
-    <div id="loggedIn">      
+    <div id="loggedIn">  
+      
+       
+    <div w3-include-html="./random-picture-generator/index.html"></div>
+
+
       <div class="container-fluid p-5 bg-Success text-white text-center bg-eso w3-hide" >
         <h1>Equipo de preservación del cuidado ambiental y del humano.</h1>
         <h2>8. Mi campo de trabajo STEM CV 2022-2023</h2><h3><b>Integración STEM CV /&nbsp; y Campo de desarrollo</b></h3>
         <p> <span data-nosnippet>2022 - 2023 Zona S-106</span> </p> 
       </div>
      
+      
       <div>                 
       <div class="bottom-buttons" onclick="openCloseButtonsContainer()">
            <b>+</b>
@@ -912,6 +947,9 @@
       </div> 
       </div><br><br><br>
     </div>
+    <script>
+      includeHTML();
+      </script>
     
     <script src="login.js"></script>
     <script>
@@ -1066,3 +1104,27 @@ includeHTML();
     </form>
     
 -->
+<script> const imageArray = [
+	"https://www.xbr.pw/go/icon-xbrpw/esfera-del-dragon-negra.svg",
+	"https://www.xbr.pw/go/icon-xbrpw/esfera-del-dragon.svg",
+	"https://www.xbr.pw/go/icon-xbrpw/usuario-verificado.svg",
+  "https://www.xbr.pw/go/icon-xbrpw/xbr-coins.svg",
+  "https://www.xbr.pw/go/icon-xbrpw/who-homero-escondiendose-en-una-bolsa.svg",
+  "https://www.xbr.pw/go/icon-xbrpw/pokebolas.svg"
+];
+
+
+const image = document.querySelector("img");
+const button = document.querySelector("button");
+
+window.onload = () => generateRandomPicture(imageArray);
+
+button.addEventListener("click", () => generateRandomPicture(imageArray));
+
+function generateRandomPicture(array){
+	let randomNum = Math.floor(Math.random() * array.length); 
+	image.setAttribute("src", array[randomNum]);
+}
+</script>
+
+<scrip
