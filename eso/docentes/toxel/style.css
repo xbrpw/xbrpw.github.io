@@ -1,0 +1,184 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.gradient {
+    background: #4cd964;
+    background: -moz-linear-gradient(45deg, #4cd964 0%, #5ac8fa 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, #4cd964), color-stop(100%, #5ac8fa));
+    background: -webkit-linear-gradient(45deg, #4cd964 0%, #5ac8fa 100%);
+    background: -o-linear-gradient(45deg, #4cd964 0%, #5ac8fa 100%);
+    background: -ms-linear-gradient(45deg, #4cd964 0%, #5ac8fa 100%);
+    background: linear-gradient(45deg, #4cd964 0%, #5ac8fa 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4cd964', endColorstr='#5ac8fa', GradientType=1 );
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.header {
+    padding-top: 92px;
+}
+
+.title {
+    color: white;
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin: 0 20px 20px;
+}
+
+.subtitle {
+    color: #16a085;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0 20px 20px;
+}
+
+.subtitle + .subtitle {
+    color: white;
+}
+
+.gh-btns {
+    margin: 92px 0 0;
+    background: rgba(0, 0, 0, .1);
+    padding: 20px 0 10px;
+}
+
+/* ==========================================================================
+   Main
+   ========================================================================== */
+
+.wrap {
+    margin: 0 auto 90px;
+    max-width: 540px;
+    padding: 0 15px;
+}
+
+p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+a {
+    color: #1BC1A1;
+    border-bottom: 1px dotted #1BC1A1;
+    -webkit-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    opacity: .7;
+}
+
+h1 {
+    margin-top: 80px;
+    color: #1BC1A1;
+}
+
+h3 {
+    color: #333;
+    margin: 40px 0;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* Example
+   ========================================================================== */
+
+/* Live example
+   ========================================================================== */
+
+/* Code
+   ========================================================================== */
+
+code {
+    background-color: #E8F5F2;
+    border-radius: 3px;
+    color: #1BC1A1;
+    font-size: 85%;
+    margin: 0;
+    padding: 0.2em;
+}
+
+/* Support
+   ========================================================================== */
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.credits, .maintainer {
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: #16a085;
+    padding: 30px 0;
+    margin: 0;
+}
+
+.footer-link {
+    color: white;
+    border-color: white;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+    text-decoration: none;
+    border-color: white;
+}
+
+.love {
+    display: inline-block;
+    position: relative;
+    top: .2em;
+    font-size: 1.4em;
+    -webkit-transform: scale(.9);
+    -moz-transform: scale(.9);
+    transform: scale(.9);
+    -webkit-animation: love .5s infinite linear alternate-reverse;
+    -moz-animation: love .5s infinite linear alternate-reverse;
+    animation: love .5s infinite linear alternate-reverse;
+}
+
+@-webkit-keyframes love {
+    to {-webkit-transform: scale(1.2);}
+}
+
+@-moz-keyframes love {
+    to {-moz-transform: scale(1.2);}
+}
+@keyframes love {
+    to {transform: scale(1.2);}
+}
+
+.maintainer {
+    background: rgba(0, 0, 0, .05);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media screen and (max-width: 540px) {
+    .title {
+        font-size: 48px;
+    }
+
+    .subtitle {
+        font-size: 22px;
+    }
+
+    .credits {
+        font-size: 22px;
+    }
+}
+
+/*!normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css*/html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}body{margin:0}footer,header,main{display:block}a{background-color:transparent}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code{font-family:monospace,monospace;font-size:1em}button{color:inherit;font:inherit;margin:0}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button;cursor:pointer}button::-moz-focus-inner{border:0;padding:0}*{box-sizing:border-box}button{font:13px/1.4 Helvetica,arial,nimbussansl,liberationsans,freesans,clean,sans-serif,"Segoe UI Emoji","Segoe UI Symbol"}body{font:13px/1.4 Helvetica,arial,nimbussansl,liberationsans,freesans,clean,sans-serif,"Segoe UI Emoji","Segoe UI Symbol";color:#333;background-color:#fff}a{color:#4078c0;text-decoration:none}a:hover,a:active{text-decoration:underline}hr{height:0;margin:15px 0;overflow:hidden;background:0 0;border:0;border-bottom:1px solid #ddd}hr:before{display:table;content:""}hr:after{display:table;clear:both;content:""}h1,h2,h3,h4{margin-top:15px;margin-bottom:15px;line-height:1.1}h1{font-size:30px}h2{font-size:21px}h3{font-size:16px}h4{font-size:14px}code{font-family:Consolas,liberation mono,Menlo,Courier,monospace;font-size:12px}::-webkit-input-placeholder{color:#aaa}::-moz-placeholder{color:#aaa}:-ms-input-placeholder{color:#aaa}.text-center{text-align:center}

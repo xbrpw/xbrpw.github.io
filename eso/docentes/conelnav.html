@@ -26,6 +26,8 @@
   <link href='https://xbrpw.github.io/assets/fontawesome/css/all.min.css' rel='stylesheet'>
   <link href='https://xbrpw.github.io/assets/fontawesome/css/regular.min.css' rel='stylesheet'>
   <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>   
+  <link rel="stylesheet" href="./material-ui-popup.css">
+
   <script>
     function includeHTML() {
       var z, i, elmnt, file, xhttp;
@@ -306,10 +308,12 @@
       }
     };
     </script>
-    
+<link rel="stylesheet" href="./toxel/style.css">  
+<script type="text/javascript" src="./user.json""></script>
 
-
-
+<script src="./toxel/import-templates.js"></script>
+<script src="./toxel/browser-sync.js"></script>
+<link rel="import" href="./toxel/imports/templetemain.html">
   </head>
   <body>    
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -396,7 +400,11 @@
                     SOS
                     <span class="tooltip">Publicar en el blog sin fotos</span>
                 </div>
-              </a>            
+              </a>     
+              
+        
+     
+               
         </div>
     
         <script> var btnVisible = true;
@@ -586,6 +594,8 @@
         </tr>
             
     </tbody>
+
+    
       
       <div class="w3-container">
           <div id="id01" class="w3-modal w3-display-middle">
@@ -684,6 +694,58 @@
 </script>
 
       <div id="home" class="contentido ">
+        
+<div class="container">
+  <div class="email" onclick="this.classList.add('expand')">
+    <div class="from">
+      <div class="from-contents">
+        <div class="avatar me"></div>
+        <div class="name">Mikael Ainalem</div>
+      </div>
+    </div>
+    <div class="to">
+      <div class="to-contents">
+        <div class="top">
+          <div class="avatar-large me"></div>
+          <div class="name-large">Mikael Ainalem</div>
+          <div class="x-touch" onclick="document.querySelector('.email').classList.remove('expand');event.stopPropagation();">
+            <div class="x">
+              <div class="line1"></div>
+              <div class="line2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="row">
+            <svg class="twitter" viewBox="0 0 300 244.18703">
+              <g transform="translate(-539.17946,-568.85777)" id="layer1">
+                <path id="path3611" style="fill:#1da1f2;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 633.89823,812.04479 c 112.46038,0 173.95627,-93.16765 173.95627,-173.95625 0,-2.64628 -0.0539,-5.28062 -0.1726,-7.90305 11.93799,-8.63016 22.31446,-19.39999 30.49762,-31.65984 -10.95459,4.86937 -22.74358,8.14741 -35.11071,9.62551 12.62341,-7.56929 22.31446,-19.54304 26.88583,-33.81739 -11.81284,7.00307 -24.89517,12.09297 -38.82383,14.84055 -11.15723,-11.88436 -27.04079,-19.31655 -44.62892,-19.31655 -33.76374,0 -61.14426,27.38052 -61.14426,61.13233 0,4.79784 0.5364,9.46458 1.58538,13.94057 -50.81546,-2.55686 -95.87353,-26.88582 -126.02546,-63.87991 -5.25082,9.03545 -8.27852,19.53111 -8.27852,30.73006 0,21.21186 10.79366,39.93837 27.20766,50.89296 -10.03077,-0.30992 -19.45363,-3.06348 -27.69044,-7.64676 -0.009,0.25652 -0.009,0.50661 -0.009,0.78077 0,29.60957 21.07478,54.3319 49.0513,59.93435 -5.13757,1.40062 -10.54335,2.15158 -16.12196,2.15158 -3.93364,0 -7.76596,-0.38716 -11.49099,-1.1026 7.78383,24.2932 30.35457,41.97073 57.11525,42.46543 -20.92578,16.40207 -47.28712,26.17062 -75.93712,26.17062 -4.92898,0 -9.79834,-0.28036 -14.58427,-0.84634 27.05868,17.34379 59.18936,27.46396 93.72193,27.46396"/>
+              </g>
+            </svg>
+            <div class="link"><a href="https://twitter.com/mikaelainalem">@mikaelainalem</a></div>
+          </div>
+          <div class="row">
+            <svg class="medium" viewBox="0 0 24 24">
+              <style type="text/css" id="style2">
+                .st0{fill:#3DD87F;}
+                .st1{fill:#FFFFFF;}
+              </style>
+              <g id="Page-1" transform="translate(0,1)">
+                <g id="Monogram">
+                  <rect id="Rectangle-path" x="0" y="-1" class="st0" width="24" height="24" style="fill:#000000;fill-opacity:1;stroke-width:1.090909"/>
+                  <path id="Shape" class="st1" d="m 6.3,7.6 c 0,-0.2 -0.1,-0.4 -0.2,-0.5 l -1.3,-1.7 v -0.2 h 4.3 l 3.3,7.3 2.9,-7.3 h 4.1 v 0.2 l -1.2,1.1 c -0.1,0.1 -0.2,0.2 -0.1,0.3 v 8.3 c 0,0.1 0,0.3 0.1,0.3 l 1.2,1.1 v 0.2 h -5.8 v -0.2 l 1.2,-1.2 c 0.1,-0.1 0.1,-0.2 0.1,-0.3 v -6.6 l -3.3,8.4 h -0.4 l -4,-8.4 v 5.6 c 0,0.2 0,0.5 0.2,0.6 l 1.6,1.9 v 0.2 h -4.4 v -0.2 l 1.5,-1.8 c 0.2,-0.2 0.2,-0.4 0.2,-0.6 z" inkscape:connector-curvature="0" style="fill:#ffffff"/>
+                </g>
+              </g>
+            </svg>
+            <div class="link"><a href="/">@mikael_ainalem</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+
         <div id="sor-juana" >
             <iframex  src="./acesos.html" name="verBlog" height="620px" width="100%" title="ESO-0514" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
         </div>
@@ -696,7 +758,10 @@
                         <div class="w3-bar-item ">                            
                             <span class="w3-large"><a href="https://drive.google.com/drive/folders/1cdyGbDIZXFTov8c1XZzfnT_jqYYBtaMU" target="_blank" title="Carpeta en Google Drive"><b>Ciencia</b></a></span><br>
                             <span >Descubrimiento</span> <br>
-                            <span id="myDIVCiencias"></span>                                                                                                            
+                            <span id="myDIVCiencias"></span> <br>
+                            <button class="toxel" data-clipboard-text="<img src='https://www.xbr.pw/go/icon-xbrpw/signal-dedo-grosero.svg' width='40px' height='40px'> " >
+                              <img src='' width='40px' height='40px'> <i class="far fa-copy"></i> 
+                            </button><!-- /Extras -->                                                                                                           
                         </div>                                   
                     </li>                                                  
                 </ul>
@@ -704,7 +769,6 @@
         </div>
       </div>
       
- -->
   
   <b id="PublicarSOS" onclick="document.getElementById('idporMateria').style.display='block'">Publicar SOS</b>
                                 
@@ -869,7 +933,92 @@
             </div>
         </div>
         </div><br><br><br> -->  
-                
+       
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<div class="">
+  
+
+  <button onclick="document.getElementById('id01eso').style.display='block'" class="w3-button w3-black">id01eso</button>
+
+  <div id="id01eso" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id01eso').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Modal Header</h2>
+      </header>
+      <div class="w3-container">
+        <p>You have two options to close this modal:</p>
+        <p>Click on the "x" or click anywhere outside of the modal!</p>
+      </div>
+      <footer class="w3-container w3-teal">
+        <p>Modal Footer</p>
+      </footer>
+    </div>
+  </div>
+  
+  
+  <script>
+// Get the modal
+var modal = document.getElementById('id01eso');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+</div>
+
+
+<div class="">
+
+  <div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button tablink w3-teal" onclick="openCity(event,'London')">London</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Paris')">Paris</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Tokyo</button>
+  </div>
+  
+  <div id="London" class="w3-container  city" >
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+  </div>
+
+  <div id="Paris" class="w3-container  city" style="display:none">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p> 
+  </div>
+
+  <div id="Tokyo" class="w3-container city" style="display:none">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-teal", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-teal";
+}
+</script>
+
+
+
+
     </div><!-- ojo -->   
 
     <div class="w3-container w3-cell-row">
@@ -1104,13 +1253,9 @@ includeHTML();
     </form>
     
 -->
-<script> const imageArray = [
-	"https://www.xbr.pw/go/icon-xbrpw/esfera-del-dragon-negra.svg",
-	"https://www.xbr.pw/go/icon-xbrpw/esfera-del-dragon.svg",
+<script> const imageArray = [		
 	"https://www.xbr.pw/go/icon-xbrpw/usuario-verificado.svg",
-  "https://www.xbr.pw/go/icon-xbrpw/xbr-coins.svg",
-  "https://www.xbr.pw/go/icon-xbrpw/who-homero-escondiendose-en-una-bolsa.svg",
-  "https://www.xbr.pw/go/icon-xbrpw/pokebolas.svg"
+  "https://www.xbr.pw/go/icon-xbrpw/xbr-coins.svg"
 ];
 
 
@@ -1127,4 +1272,6 @@ function generateRandomPicture(array){
 }
 </script>
 
-<scrip
+
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script type='text/javascript' src='https://luisangelmaciel.github.io/toxel.min.js'></script> <script type='text/javascript' src='https://luisangelmaciel.github.io/toxel.js'></script> <!-- Que es igual a esto  <script type='text/javascript' src='https://luisangelmaciel.github.io/toxel/toxel.min.js'></script> <script type='text/javascript' src='https://luisangelmaciel.github.io/toxel/toxel.js'></script> solo que es de lectura rápida en el buscador el otro -->
