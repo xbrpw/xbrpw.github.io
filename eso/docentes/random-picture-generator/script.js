@@ -8,7 +8,7 @@ const imageArray = [
 ];
 
 
-const image = document.querySelector("img");
+const image = document.querySelector("avatar");
 const button = document.querySelector("button");
 
 window.onload = () => generateRandomPicture(imageArray);

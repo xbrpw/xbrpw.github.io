@@ -1,0 +1,43 @@
+<div class="container">
+  <h1>FormSubmit Demo</h1>
+  <form target="_blank" action="https://formsubmit.co/lamacpad.publicando@blogger.com" method="POST">
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col">
+            <input type="text" name="_subject"  class="form-control" placeholder="Titulo del blog" value="Titulo del blog" required>
+        </div>
+        
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col">
+          <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+        </div>
+        <div class="col">
+          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+        </div>        
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+    </div>
+  
+     <input type="file" name="attachment" accept="image/png, image/jpeg"><br><br>
+     <input type="file" name="attachment" accept="image/png, image/jpeg"><br><br><br>
+    <button type="submit" class="btn btn-lg btn-dark btn-block">Publicar</button>
+    
+ 
+    
+    <input type="hidden" name="_next" value="https://www.xbr.pw">
+    
+    <input type="hidden" name="_cc" value="lamacpad@gmail.com">
+    <input type="text" name="_honey" style="display:none">
+    <input type="hidden" name="_autoresponse" value="tu mensaje personalizado"> 
+    
+  </form>
+</div>
+
+lamacpad.goldensnippets@blogger.com
+9efdb2f2ee34d1eaf83aea0f07769a5d
