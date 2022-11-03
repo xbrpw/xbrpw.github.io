@@ -60,7 +60,7 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
 .w3-badge,.w3-tag {background-color: #000;color: #fff;display: inline-block;padding-left: 8px;padding-right: 8px;text-align: center}
 .w3-badge {border-radius: 50%}
 .w3-ul {list-style-type: none;padding: 0;margin: 0}
-.w3-ul li {padding: 8px 16px;border-bottom: 1px solid #ddd}
+.w3-ul li {padding: 8px 16px;border-bottom: 1px solid rgba(221, 221, 221, 0.582)}
 .w3-ul li:last-child {border-bottom: none}
 .w3-tooltip,.w3-display-container {position: relative}
 .w3-tooltip .w3-text {display: none}
@@ -208,6 +208,7 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
 .w3-lamas,.w3-lamas:hover {background: linear-gradient(45deg, #E9427B 0%, rgba(177, 13, 169, 0) 70%), linear-gradient(135deg, #c03563 10%, rgba(212, 70, 177, 0) 80%), linear-gradient(225deg, #a52550 10%, rgba(10, 219, 216, 0) 80%), linear-gradient(315deg, #7e1f3f 100%, rgba(9, 245, 5, 0) 70%)!important;color: #fff!important;}
 .w3-sand,.w3-hover-sand:hover {color: #000!important;background-color: #fdf5e6!important}
 .w3-teal,.w3-hover-teal:hover {color: #fff!important;background-color: #009688!important}
+.w3-teal-opacity,.w3-hover-teal-opacity:hover {color: #fff!important;background-color: #009687f1!important}
 .w3-yellow,.w3-hover-yellow:hover {color: #000!important;background-color: #ffeb3b!important}
 .w3-white,.w3-hover-white:hover {color: #000!important;background-color: #fff!important}
 .w3-black,.w3-hover-black:hover {color: #fff!important;background-color: #000!important}
