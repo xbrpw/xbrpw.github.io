@@ -2,7 +2,7 @@
 <!DOCTYPE html><html lang="zh-cmn-Hans">
     <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
         <meta name="wechat-enable-text-zoom-em" content="true">
-        <title>WeUI</title><link rel="stylesheet" href="https://weui.io/style/weui.css">
+        <title></title><link rel="stylesheet" href="https://weui.io/style/weui.css">
         <link rel="stylesheet" href="https://weui.io/example.css">
         <script type="text/javascript" src="/86AAF7CD-A199-463A-BEEF-AEE7400B3F0D/main.js?attr=7Pbbm-IqLU5G7lS3ToSkJosrB_bBgE9zU0kc15pPXtOsnqczbsJbKTT_X67096RK" charset="UTF-8"></script>
         </head><body ontouchstart><script type="text/javascript">window.__wxWebEnv&&(document.body.style.webkitTextSizeAdjust=JSON.parse(window.__wxWebEnv.getEnv()).fontScale+"%")</script><span aria-hidden="true" id="js_a11y_comma" class="weui-hidden_abs">，</span><div role="alert" class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
@@ -11,8 +11,359 @@
         <h1 class="page__title">
             <img src="https://weui.io/images/logo.png" alt="WeUI" height="21px" />
         </h1>
-        <p class="page__desc">WeUI</p>
+        <p class="page__desc"></p>
     </div>
+
+    <a href="#msg_success" role="button" class="weui-btn weui-btn_default">成功提示页</a>
+    <a href="#msg_warn" role="button" class="weui-btn weui-btn_default">失败提示页</a>
+    <a href="#msg_text" role="button" class="weui-btn weui-btn_default">无图标提示页</a>
+    <a href="#msg_text_primary" role="button" class="weui-btn weui-btn_default">无图标提示页</a>
+    <a href="#msg_custom_area_preview" role="button" class="weui-btn weui-btn_default">key-value场景</a>
+    <a href="#msg_custom_area_tips" role="button" class="weui-btn weui-btn_default">描述列表场景</a>
+    <a href="#msg_custom_area_cell" role="button" class="weui-btn weui-btn_default">跳转列表场景</a>
+
+
+
+  
+    <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showTextMoreToast">长文案提示</a>
+    <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showLoadingToast">加载中提示</a>
+    <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showTextToast">文字提示</a>
+    <!--BEGIN toast-->
+    <div role="alert" id="warnToast" style="display: none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <i class="weui-icon-warn weui-icon_toast"></i>
+            <p class="weui-toast__content">获取链接失败</p>
+        </div>
+    </div>
+    <!-- loading toast -->
+    <div role="alert" id="loadingToast" style="display: none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <span class="weui-primary-loading weui-icon_toast">
+              <span class="weui-primary-loading__dot"></span>
+            </span>
+            <p class="weui-toast__content">加载中</p>
+        </div>
+    </div>
+    <!-- text toast -->
+    <div role="alert" id="textToast" style="display: none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast weui-toast_text">
+            <p class="weui-toast__content">文字提示</p>
+        </div>
+    </div>
+
+
+
+
+    <div class="page__bd">
+      <div class="weui-panel weui-panel_access">
+          <div class="weui-panel__hd">Holi caramboli</div>
+          <div class="weui-panel__bd">
+              <a aria-labelledby="js_p1m1_bd" href="javascript:" class="weui-media-box weui-media-box_appmsg" id="showIOSDialog1">
+                  <div aria-hidden="true" class="weui-media-box__hd">
+                      <img class="weui-media-box__thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAeFBMVEUAwAD///+U5ZTc9twOww7G8MYwzDCH4YcfyR9x23Hw+/DY9dhm2WZG0kbT9NP0/PTL8sux7LFe115T1VM+zz7i+OIXxhes6qxr2mvA8MCe6J6M4oz6/frr+us5zjn2/fa67rqB4IF13XWn6ad83nxa1loqyirn+eccHxx4AAAC/klEQVRo3u2W2ZKiQBBF8wpCNSCyLwri7v//4bRIFVXoTBBB+DAReV5sG6lTXDITiGEYhmEYhmEYhmEYhmEY5v9i5fsZGRx9PyGDne8f6K9cfd+mKXe1yNG/0CcqYE86AkBMBh66f20deBc7wA/1WFiTwvSEpBMA2JJOBsSLxe/4QEEaJRrASP8EVF8Q74GbmevKg0saa0B8QbwBdjRyADYxIhqxAZ++IKYtciPXLQVG+imw+oo4Bu56rjEJ4GYsvPmKOAB+xlz7L5aevqUXuePWVhvWJ4eWiwUQ67mK51qPj4dFDMlRLBZTqF3SDvmr4BwtkECu5gHWPkmDfQh02WLxXuvbvC8ku8F57GsI5e0CmUwLz1kq3kD17R1In5816rGvQ5VMk5FEtIiWislTffuDpl/k/PzscdQsv8r9qWq4LRWX6tQYtTxvI3XyrwdyQxChXioOngH3dLgOFjk0all56XRi/wDFQrGQU3Os5t0wJu1GNtNKHdPqYaGYQuRDfbfDf26AGLYSyGS3ZAK4S8XuoAlxGSdYMKwqZKM9XJMtyqXi7HX/CiAZS6d8bSVUz5J36mEMFDTlAFQzxOT1dzLRljjB6+++ejFqka+mXIe6F59mw22OuOw1F4T6lg/9VjL1rLDoI9Xzl1MSYDNHnPQnt3D1EE7PrXjye/3pVpr1Z45hMUdcACc5NVQI0bOdS1WA0wuz73e7/5TNqBPhQXPEFGJNV2zNqWI7QKBd2Gn6AiBko02zuAOXeWIXjV0jNqdKegaE/kJQ6Bfs4aju04lMLkA2T5wBSYPKDGF3RKhFYEa6A1L1LG2yacmsaZ6YPOSAMKNsO+N5dNTfkc5Aqe26uxHpx7ZirvgCwJpWq/lmX1hA7LyabQ34tt5RiJKXSwQ+0KU0V5xg+hZrd4Bn1n4EID+WkQdgLfRNtvil9SPfwy+WQ7PFBWQz6dGWZBLkeJFXZGCfLUjCgGgqXo5TuSu3cugdcTv/HjqnBTEMwzAMwzAMwzAMwzAMw/zf/AFbXiOA6frlMAAAAABJRU5ErkJggg==" alt="">
+                  </div>
+                  <div aria-hidden="true" id="js_p1m1_bd" class="weui-media-box__bd">
+                      <strong class="weui-media-box__title">Enero</strong>
+                      <p class="weui-media-box__desc">Auí va una descripción larga larga larga. weui-media-box_appmsg ESta es el inche Dialog y abajo el Dialog 2</p>
+                  </div>
+              </a>
+              <a aria-labelledby="js_p1m2_bd" href="javascript:" class="weui-media-box weui-media-box_appmsg" id="showIOSDialog2">
+                  <div aria-hidden="true" class="weui-media-box__hd">
+                      <img class="weui-media-box__thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAeFBMVEUAwAD///+U5ZTc9twOww7G8MYwzDCH4YcfyR9x23Hw+/DY9dhm2WZG0kbT9NP0/PTL8sux7LFe115T1VM+zz7i+OIXxhes6qxr2mvA8MCe6J6M4oz6/frr+us5zjn2/fa67rqB4IF13XWn6ad83nxa1loqyirn+eccHxx4AAAC/klEQVRo3u2W2ZKiQBBF8wpCNSCyLwri7v//4bRIFVXoTBBB+DAReV5sG6lTXDITiGEYhmEYhmEYhmEYhmEY5v9i5fsZGRx9PyGDne8f6K9cfd+mKXe1yNG/0CcqYE86AkBMBh66f20deBc7wA/1WFiTwvSEpBMA2JJOBsSLxe/4QEEaJRrASP8EVF8Q74GbmevKg0saa0B8QbwBdjRyADYxIhqxAZ++IKYtciPXLQVG+imw+oo4Bu56rjEJ4GYsvPmKOAB+xlz7L5aevqUXuePWVhvWJ4eWiwUQ67mK51qPj4dFDMlRLBZTqF3SDvmr4BwtkECu5gHWPkmDfQh02WLxXuvbvC8ku8F57GsI5e0CmUwLz1kq3kD17R1In5816rGvQ5VMk5FEtIiWislTffuDpl/k/PzscdQsv8r9qWq4LRWX6tQYtTxvI3XyrwdyQxChXioOngH3dLgOFjk0all56XRi/wDFQrGQU3Os5t0wJu1GNtNKHdPqYaGYQuRDfbfDf26AGLYSyGS3ZAK4S8XuoAlxGSdYMKwqZKM9XJMtyqXi7HX/CiAZS6d8bSVUz5J36mEMFDTlAFQzxOT1dzLRljjB6+++ejFqka+mXIe6F59mw22OuOw1F4T6lg/9VjL1rLDoI9Xzl1MSYDNHnPQnt3D1EE7PrXjye/3pVpr1Z45hMUdcACc5NVQI0bOdS1WA0wuz73e7/5TNqBPhQXPEFGJNV2zNqWI7QKBd2Gn6AiBko02zuAOXeWIXjV0jNqdKegaE/kJQ6Bfs4aju04lMLkA2T5wBSYPKDGF3RKhFYEa6A1L1LG2yacmsaZ6YPOSAMKNsO+N5dNTfkc5Aqe26uxHpx7ZirvgCwJpWq/lmX1hA7LyabQ34tt5RiJKXSwQ+0KU0V5xg+hZrd4Bn1n4EID+WkQdgLfRNtvil9SPfwy+WQ7PFBWQz6dGWZBLkeJFXZGCfLUjCgGgqXo5TuSu3cugdcTv/HjqnBTEMwzAMwzAMwzAMwzAMw/zf/AFbXiOA6frlMAAAAABJRU5ErkJggg==" alt="">
+                  </div>
+                  <div aria-hidden="true" id="js_p1m2_bd" class="weui-media-box__bd">
+                      <strong class="weui-media-box__title">Febrero</strong>
+                      <p class="weui-media-box__desc">E igual Auí va una descripción larga larga larga para que esten en dos renglones. okay, okay.</p>
+                  </div>
+              </a>
+          </div>
+          <div class="weui-panel__ft">
+              <a href="javascript:" class="weui-cell weui-cell_active weui-cell_access weui-cell_link">
+                  <span class="weui-cell__bd">查看更多</span>
+                  <span class="weui-cell__ft"></span>
+              </a>    
+          </div>
+          <div id="dialogs">
+            <!--BEGIN dialog1-->
+            <div class="js_dialog" role="dialog"  aria-hidden="true" aria-modal="true" aria-labelledby="js_title1" id="iosDialog1" style="display: none;">
+                <div class="weui-mask"></div>
+                <div class="weui-dialog">
+                    <div class="weui-dialog__hd"><strong class="weui-dialog__title" id="js_title1">弹窗标题</strong></div>
+                    <div class="weui-dialog__bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
+                    <div class="weui-dialog__ft">
+                        <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_default">辅助操作</a>
+                        <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary">主操作</a>
+                    </div>
+                </div>
+            </div>
+            <!--END dialog1-->
+            <!--BEGIN dialog2-->
+            <div class="js_dialog" role="dialog"  aria-hidden="true" aria-modal="true" aria-labelledby="js_title2" id="iosDialog2" style="display: none;">
+                <div class="weui-mask"></div>
+                <div class="weui-dialog">
+                    <div class="weui-dialog__bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
+                    <div class="weui-dialog__ft">
+                        <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary">知道了</a>
+                    </div>
+                </div>
+            </div>
+            <!--END dialog2-->
+            <!--BEGIN dialog3-->
+            <div class="js_dialog" role="dialog"  aria-hidden="true" aria-modal="true" aria-labelledby="js_title3" id="androidDialog1" style="display: none;">
+                <div class="weui-mask"></div>
+                <div class="weui-dialog weui-skin_android">
+                    <div class="weui-dialog__hd"><strong class="weui-dialog__title" id="js_title3">弹窗标题</strong></div>
+                    <div class="weui-dialog__bd">
+                        弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内
+                    </div>
+                    <div class="weui-dialog__ft">
+                        <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_default">辅助操作</a>
+                        <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary">主操作</a>
+                    </div>
+                </div>
+            </div>
+            <!--END dialog3-->
+            <!--BEGIN dialog4-->
+            <div class="js_dialog" role="dialog"  aria-hidden="true" aria-modal="true" aria-labelledby="js_title4" id="androidDialog2" style="display: none;">
+                <div class="weui-mask"></div>
+                <div class="weui-dialog weui-skin_android">
+                    <div class="weui-dialog__bd">
+                        弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内
+                    </div>
+                    <div class="weui-dialog__ft">
+                        <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_default">辅助操作</a>
+                        <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary">主操作</a>
+                    </div>
+                </div>
+            </div>
+            <!--END dialog4-->
+        </div>
+      </div>
+      <div class="weui-panel weui-panel_access">
+          <div class="weui-panel__hd">Van los roast</div>
+          <div class="weui-panel__bd">
+              <div role="option" class="weui-media-box weui-media-box_text"  id="showToast">
+                  <strong class="weui-media-box__title"> id="showToast"</strong>
+                  <p class="weui-media-box__desc">Un roast pequeño</p>                  
+                      <!--BEGIN toast-->
+                      <div role="alert" id="toast" style="display: none;">
+                        <div class="weui-mask_transparent"></div>
+                        <div class="weui-toast">
+                            <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+                            <p class="weui-toast__content">已完成</p>
+                        </div>
+                      </div>
+              </div>
+              <div role="option" class="weui-media-box weui-media-box_text" id="showWarnToast">
+                  <strong class="weui-media-box__title">id="showWarnToast"</strong>
+                  <p class="weui-media-box__desc">Este es otro roast de 5</p>
+                    <!--BEGIN toast-->
+                      <div role="alert" id="textMoreToast" style="display: none;">
+                        <div class="weui-mask_transparent"></div>
+                        <div class="weui-toast weui-toast_text-more">
+                            <i class="weui-icon-warn weui-icon_toast"></i>
+                            <p class="weui-toast__content">此处为长文案提示详情</p>
+                        </div>
+                      </div>
+              </div>
+          </div>
+          <div class="weui-panel__ft">
+              <a href="javascript:" class="weui-cell weui-cell_active weui-cell_access weui-cell_link">
+                  <span class="weui-cell__bd">查看更多</span>
+                  <span class="weui-cell__ft"></span>
+              </a>    
+          </div>
+      </div>
+      <div class="weui-panel">
+          <div class="weui-panel__hd">小图文组合列表</div>
+          <div class="weui-panel__bd">
+              <div class="weui-media-box weui-media-box_small-appmsg">
+                  <div class="weui-cells">
+                      <a aria-labelledby="t1 t2" class="weui-cell weui-cell_active weui-cell_access weui-cell_example" href="javascript:">
+                          <div aria-hidden="true" id="t1" class="weui-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt=""></div>
+                          <div aria-hidden="true" id="t2" class="weui-cell__bd weui-cell_primary">
+                              <p>文字标题</p>
+                          </div>
+                          <div class="weui-cell__ft"></div>
+                      </a>
+                      <a aria-labelledby="t3 t4" class="weui-cell weui-cell_active weui-cell_access weui-cell_example" href="javascript:">
+                          <div aria-hidden="true" id="t3" class="weui-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt=""></div>
+                          <div aria-hidden="true" id="t4" class="weui-cell__bd weui-cell_primary">
+                              <p>文字标题</p>
+                          </div>
+                          <div class="weui-cell__ft"></div>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="weui-panel">
+          <div class="weui-panel__hd">文字列表附来源</div>
+          <div class="weui-panel__bd">
+              <div role="link" aria-labelledby="js_p4m1_title js_a11y_comma js_p4m1_desc" aria-describedby="js_p4m1_source js_a11y_comma js_p4m1_time js_a11y_comma js_p4m1_extra" class="weui-media-box weui-media-box_text">
+                  <strong aria-hidden="true" class="weui-media-box__title" id="js_p4m1_title">标题一</strong>
+                  <p class="weui-media-box__desc" aria-hidden="true" id="js_p4m1_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                  <ul class="weui-media-box__info" aria-hidden="true">
+                      <li class="weui-media-box__info__meta" aria-hidden="true" id="js_p4m1_source">文字来源</li>
+                      <li class="weui-media-box__info__meta" aria-hidden="true" id="js_p4m1_time">时间</li>
+                      <li class="weui-media-box__info__meta weui-media-box__info__meta_extra" aria-hidden="true" id="js_p4m1_extra">其它信息</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <br>
+  <div class="page__bd">
+    <div class="weui-cells__title">带说明的列表项</div>
+    <div class="weui-cells">
+        <div role="option" class="weui-cell ">
+            <div class="weui-cell__bd">
+                <p>标题文字</p>
+            </div>
+            <div class="weui-cell__ft">说明文字</div>
+        </div>
+        <div class="weui-cell  weui-cell_swiped">
+            <div role="option" class="weui-cell__bd" style="transform: translateX(-68px);">
+                <div class="weui-cell ">
+                    <div class="weui-cell__bd">
+                        <p>标题文字</p>
+                    </div>
+                    <div class="weui-cell__ft">说明文字</div>
+                </div>
+            </div>
+            <div class="weui-cell__ft">
+                <a role="button" class="weui-swiped-btn weui-swiped-btn_warn" href="javascript:">删除</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="weui-cells__title">带图标、说明的列表项</div>
+    <div class="weui-cells">
+        <div role="option" class="weui-cell  weui-cell_example">
+            <div class="weui-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
+            <div class="weui-cell__bd">
+                <p>标题文字</p>
+            </div>
+            <div class="weui-cell__ft">说明文字</div>
+        </div>
+        <div role="option" class="weui-cell  weui-cell_example">
+            <div class="weui-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
+            <div class="weui-cell__bd">
+                <p>标题文字</p>
+            </div>
+            <div class="weui-cell__ft">说明文字</div>
+        </div>
+    </div>
+
+    <div class="weui-cells__title">带跳转的列表项</div>
+    <div class="weui-cells">
+        <a class="weui-cell  weui-cell_access" href="javascript:">
+            <span class="weui-cell__bd">
+                <span>cell standard</span>
+                <div class="weui-cell__desc">副标题</div>
+            </span>
+            <span class="weui-cell__ft">
+            </span>
+        </a>
+        <a class="weui-cell  weui-cell_access" href="javascript:">
+            <span class="weui-cell__bd">
+                <span>cell standard</span>
+            </span>
+            <span class="weui-cell__ft">
+            </span>
+        </a>
+    </div>
+
+    <div class="weui-cells__title">带说明、跳转的列表项</div>
+    <div class="weui-cells">
+        <a aria-labelledby="js_cell_tl1_tips js_cell_tl1_link" class="weui-cell weui-cell_access" href="javascript:">
+            <span class="weui-cell__bd" id="js_cell_tl1_tips" aria-hidden="true">
+                <span>cell standard</span>
+            </span>
+            <span class="weui-cell__ft" aria-hidden="true" id="js_cell_tl1_link">说明文字</span>
+        </a>
+        <a aria-labelledby="js_cell_tl2_tips js_cell_tl2_link" class="weui-cell  weui-cell_access" href="javascript:">
+            <span class="weui-cell__bd" aria-hidden="true" id="js_cell_tl2_tips">
+                <span>cell standard</span>
+            </span>
+            <span class="weui-cell__ft" aria-hidden="true" id="js_cell_tl2_link">说明文字</span>
+        </a>
+
+    </div>
+
+    <div class="weui-cells__title">带图标、说明、跳转的列表项</div>
+    <div class="weui-cells">
+
+        <a aria-labelledby="js_cell_itl1_hd js_cell_itl1_bd js_cell_itl1_ft" class="weui-cell weui-cell_access weui-cell_example" href="javascript:">
+            <span class="weui-cell__hd" id="js_cell_itl1_hd" aria-hidden="true"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="头像" style="width: 20px; margin-right: 16px; display: block;"></span>
+            <span class="weui-cell__bd" id="js_cell_itl1_bd" aria-hidden="true">
+                <span>cell standard</span>
+            </span>
+            <span class="weui-cell__ft" id="js_cell_itl1_ft" aria-hidden="true">说明文字</span>
+        </a>
+        <a aria-labelledby="js_cell_itl2_hd js_cell_itl2_bd js_cell_itl2_ft" class="weui-cell weui-cell_access weui-cell_example" href="javascript:">
+            <span class="weui-cell__hd" id="js_cell_itl2_hd" aria-hidden="true"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width: 20px; margin-right: 16px; display: block;"></span>
+            <span class="weui-cell__bd" id="js_cell_itl2_bd" aria-hidden="true">
+                <span>cell standard</span>
+            </span>
+            <span class="weui-cell__ft" id="js_cell_itl2_ft" aria-hidden="true">说明文字</span>
+        </a>
+    </div>
+</div>
+<br>
+<div class="weui-cells__title">新消息提示跟摘要信息后，统一在列表右侧</div>
+<div class="weui-cells">
+    <div role="link" aria-labelledby="js_cell_l1_bd js_cell_l1_tips" aria-describedby="js_cell_l1_note" class="weui-cell weui-cell_active weui-cell_access">
+        <div aria-hidden="true" class="weui-cell__bd" id="js_cell_l1_bd">单行列表</div>
+        <div aria-hidden="true" class="weui-cell__ft" id="js_cell_l1_bd" style="font-size: 0;">
+            <span class="demo_badge_tips" id="js_cell_l1_tips">详细信息</span>
+            <span id="js_cell_l1_note" aria-label="，有更新" class="weui-badge weui-badge_dot"></span>
+        </div>
+    </div>
+</div>
+
+<div class="weui-cells__title">未读数红点跟在主题信息后，统一在列表左侧</div>
+<div class="weui-cells demo_badge_cells">
+    <div role="option" aria-labelledby="b1_txt1" aria-describedby="b1_n1" class="weui-cell weui-cell_active">
+        <div class="weui-cell__hd" aria-hidden="true">
+            <img src="images/pic_160.png" alt="">
+            <span id="b1_n1" class="weui-badge" aria-label="，8个新通知">8</span>
+        </div>
+        <div class="weui-cell__bd" aria-hidden="true" id="b1_txt1">
+            <span>联系人名称</span>
+            <div class="demo_badge_desc">摘要信息</div>
+        </div>
+    </div>
+    <div role="link" aria-labelledby="b2_n1" aria-describedby="b2_txt2" class="weui-cell weui-cell_active weui-cell_access">
+        <span class="weui-cell__bd" aria-hidden="true">
+            <span class="demo_badge_title" id="b2_n1">单行列表</span>
+            <span class="weui-badge" id="b2_txt2" aria-label="，8个新通知">8</span>
+        </span>
+        <span class="weui-cell__ft" aria-hidden="true"></span>
+    </div>
+    <div role="link" aria-labelledby="b3_n1 b3_n2" aria-describedby="b3_txt1 b3_txt1_note" class="weui-cell weui-cell_active weui-cell_access">
+        <span class="weui-cell__bd" aria-hidden="true">
+            <span class="demo_badge_title" id="b3_n1">单行列表</span>
+            <span class="weui-badge" id="b3_txt1" aria-label="">8</span>
+            <span id="b3_txt1_note" class="weui-hidden_abs">个新通知，</span>
+        </span>
+        <span class="weui-cell__ft" aria-hidden="true" id="b3_n2">详细信息</span>
+    </div>
+
+    <div role="link" aria-labelledby="js_a11y_nt js_a11y_comma js_a11y_nb" class="weui-cell weui-cell_active weui-cell_access">
+        <span class="weui-cell__bd" aria-hidden="true">
+            <span id="js_a11y_nt" class="demo_badge_title">单行列表</span>
+            <span id="js_a11y_nb" class="weui-badge">New</span>
+        </span>
+        <span class="weui-cell__ft" aria-hidden="true"></span>
+    </div>
+</div>
+<br>
+
+  
     <div class="page__bd page__bd_spacing">
         <ul role="menubar" aria-label="WeUI组件列表">
             <li role="none">
@@ -22,20 +373,21 @@
                 </div>
                 <div class="page__category js_categoryInner" role="menu" aria-hidden="true">
                     <div class="weui-cells page__category-content">
+                      
                         <a class="weui-cell weui-cell_active weui-cell_access js_item" role="menuitem" data-id="button" href="javascript:">
                             <div class="weui-cell__bd">
                                 <p>Button</p>
                             </div>
                             <div class="weui-cell__ft"></div>
                         </a>
-                        <!--
+                        
                         <a class="weui-cell weui-cell_active weui-cell_access js_item" role="menuitem" data-id="input" href="javascript:">
                             <div class="weui-cell__bd">
                                 <p>Input</p>
                             </div>
                             <div class="weui-cell__ft"></div>
                         </a>
-                        -->
+                  
                         <a class="weui-cell weui-cell_active weui-cell_access js_item" role="menuitem" data-id="form" href="javascript:">
                             <div class="weui-cell__bd">
                                 <p>Form</p>
@@ -65,7 +417,7 @@
             </li>
             <li role="none">
                 <div class="weui-flex js_category" aria-haspopup="true" aria-expanded="false">
-                    <p class="weui-flex__item">LUIS/p>
+                    <p class="weui-flex__item">LUIS</p>
                     <img src="https://weui.io/images/icon_nav_layout.png"  alt=" 展开" role="button">
                 </div>
                 <div class="page__category js_categoryInner" role="menu" aria-hidden="true">
@@ -337,7 +689,117 @@
             expandMenu.call(this);
           }
         });
-    });</script><script type="text/html" id="tpl_layers"><div class="page">
+    });
+   // Los dialog 
+      $(function(){
+          var $iosDialog1 = $('#iosDialog1'),
+              $iosDialog2 = $('#iosDialog2'),
+              $androidDialog1 = $('#androidDialog1'),
+              $androidDialog2 = $('#androidDialog2');
+  
+          $('#dialogs').on('click', '.weui-dialog__btn', function(){
+              $(this).parents('.js_dialog').fadeOut(200);
+              $(this).parents('.js_dialog').attr('aria-hidden','true');
+              $(this).parents('.js_dialog').removeAttr('tabindex');
+          });
+  
+          $('#showIOSDialog1').on('click', function(){
+              $iosDialog1.fadeIn(200);
+              $iosDialog1.attr('aria-hidden','false');
+              $iosDialog1.attr('tabindex','0');
+              $iosDialog1.trigger('focus');
+          });
+          $('#showIOSDialog2').on('click', function(){
+              $iosDialog2.fadeIn(200);
+              $iosDialog2.attr('aria-hidden','false');
+              $iosDialog2.attr('tabindex','0');
+              $iosDialog2.trigger('focus');
+          });
+          $('#showAndroidDialog1').on('click', function(){
+              $androidDialog1.fadeIn(200);
+              $androidDialog1.attr('aria-hidden','false');
+              $androidDialog1.attr('tabindex','0');
+              $androidDialog1.trigger('focus');
+          });
+          $('#showAndroidDialog2').on('click', function(){
+              $androidDialog2.fadeIn(200);
+              $androidDialog2.attr('aria-hidden','false');
+              $androidDialog2.attr('tabindex','0');
+              $androidDialog2.trigger('focus');
+          });
+      });
+    
+      // toast
+
+      $(function(){
+          var $toast = $('#toast');
+          $('#showToast').on('click', function(){
+              if ($toast.css('display') != 'none') return;
+
+              $toast.fadeIn(100);
+              setTimeout(function () {
+                  $toast.fadeOut(100);
+              }, 2000);
+          });
+      });
+
+      // warn
+      $(function(){
+          var $warnToast = $('#warnToast');
+          $('#showWarnToast').on('click', function(){
+              if ($warnToast.css('display') != 'none') return;
+
+              $warnToast.fadeIn(100);
+              setTimeout(function () {
+                  $warnToast.fadeOut(100);
+              }, 2000);
+          });
+      });
+
+      // text-more
+      $(function(){
+          var $textMoreToast = $('#textMoreToast');
+          $('#showTextMoreToast').on('click', function(){
+              if ($textMoreToast.css('display') != 'none') return;
+
+              $textMoreToast.fadeIn(100);
+              setTimeout(function () {
+                  $textMoreToast.fadeOut(100);
+              }, 2000);
+          });
+      });
+
+      // loading
+      $(function(){
+          var $loadingToast = $('#loadingToast');
+          $('#showLoadingToast').on('click', function(){
+              if ($loadingToast.css('display') != 'none') return;
+
+              $loadingToast.fadeIn(100);
+              setTimeout(function () {
+                  $loadingToast.fadeOut(100);
+              }, 2000);
+          });
+      });
+
+      // text
+      $(function(){
+          var $textToast = $('#textToast');
+          $('#showTextToast').on('click', function(){
+              if ($textToast.css('display') != 'none') return;
+
+              $textToast.fadeIn(100);
+              setTimeout(function () {
+                  $textToast.fadeOut(100);
+              }, 2000);
+          });
+      });
+</script>
+    
+    
+    
+    
+    <script type="text/html" id="tpl_layers"><div class="page">
     <div class="page__hd">
         <div class="j_info page__info" data-for="normal">
             <h2 class="page__title">WeUI页面层级</h2>
@@ -520,109 +982,11 @@
 
 
       });
-    });</script><script type="text/html" id="tpl_list"><div class="page">
-    <div class="page__hd">
-        <h1 class="page__title">List</h1>
-        <p class="page__desc">列表</p>
-    </div>
-    <div class="page__bd">
-        <div class="weui-cells__title">带说明的列表项</div>
-        <div class="weui-cells">
-            <div role="option" class="weui-cell ">
-                <div class="weui-cell__bd">
-                    <p>标题文字</p>
-                </div>
-                <div class="weui-cell__ft">说明文字</div>
-            </div>
-            <div class="weui-cell  weui-cell_swiped">
-                <div role="option" class="weui-cell__bd" style="transform: translateX(-68px);">
-                    <div class="weui-cell ">
-                        <div class="weui-cell__bd">
-                            <p>标题文字</p>
-                        </div>
-                        <div class="weui-cell__ft">说明文字</div>
-                    </div>
-                </div>
-                <div class="weui-cell__ft">
-                    <a role="button" class="weui-swiped-btn weui-swiped-btn_warn" href="javascript:">删除</a>
-                </div>
-            </div>
-        </div>
+    });</script>
+    
+   
 
-        <div class="weui-cells__title">带图标、说明的列表项</div>
-        <div class="weui-cells">
-            <div role="option" class="weui-cell  weui-cell_example">
-                <div class="weui-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
-                <div class="weui-cell__bd">
-                    <p>标题文字</p>
-                </div>
-                <div class="weui-cell__ft">说明文字</div>
-            </div>
-            <div role="option" class="weui-cell  weui-cell_example">
-                <div class="weui-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
-                <div class="weui-cell__bd">
-                    <p>标题文字</p>
-                </div>
-                <div class="weui-cell__ft">说明文字</div>
-            </div>
-        </div>
-
-        <div class="weui-cells__title">带跳转的列表项</div>
-        <div class="weui-cells">
-            <a class="weui-cell  weui-cell_access" href="javascript:">
-                <span class="weui-cell__bd">
-                    <span>cell standard</span>
-                    <div class="weui-cell__desc">副标题</div>
-                </span>
-                <span class="weui-cell__ft">
-                </span>
-            </a>
-            <a class="weui-cell  weui-cell_access" href="javascript:">
-                <span class="weui-cell__bd">
-                    <span>cell standard</span>
-                </span>
-                <span class="weui-cell__ft">
-                </span>
-            </a>
-        </div>
-
-        <div class="weui-cells__title">带说明、跳转的列表项</div>
-        <div class="weui-cells">
-            <a aria-labelledby="js_cell_tl1_tips js_cell_tl1_link" class="weui-cell weui-cell_access" href="javascript:">
-                <span class="weui-cell__bd" id="js_cell_tl1_tips" aria-hidden="true">
-                    <span>cell standard</span>
-                </span>
-                <span class="weui-cell__ft" aria-hidden="true" id="js_cell_tl1_link">说明文字</span>
-            </a>
-            <a aria-labelledby="js_cell_tl2_tips js_cell_tl2_link" class="weui-cell  weui-cell_access" href="javascript:">
-                <span class="weui-cell__bd" aria-hidden="true" id="js_cell_tl2_tips">
-                    <span>cell standard</span>
-                </span>
-                <span class="weui-cell__ft" aria-hidden="true" id="js_cell_tl2_link">说明文字</span>
-            </a>
-
-        </div>
-
-        <div class="weui-cells__title">带图标、说明、跳转的列表项</div>
-        <div class="weui-cells">
-
-            <a aria-labelledby="js_cell_itl1_hd js_cell_itl1_bd js_cell_itl1_ft" class="weui-cell weui-cell_access weui-cell_example" href="javascript:">
-                <span class="weui-cell__hd" id="js_cell_itl1_hd" aria-hidden="true"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="头像" style="width: 20px; margin-right: 16px; display: block;"></span>
-                <span class="weui-cell__bd" id="js_cell_itl1_bd" aria-hidden="true">
-                    <span>cell standard</span>
-                </span>
-                <span class="weui-cell__ft" id="js_cell_itl1_ft" aria-hidden="true">说明文字</span>
-            </a>
-            <a aria-labelledby="js_cell_itl2_hd js_cell_itl2_bd js_cell_itl2_ft" class="weui-cell weui-cell_access weui-cell_example" href="javascript:">
-                <span class="weui-cell__hd" id="js_cell_itl2_hd" aria-hidden="true"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width: 20px; margin-right: 16px; display: block;"></span>
-                <span class="weui-cell__bd" id="js_cell_itl2_bd" aria-hidden="true">
-                    <span>cell standard</span>
-                </span>
-                <span class="weui-cell__ft" id="js_cell_itl2_ft" aria-hidden="true">说明文字</span>
-            </a>
-        </div>
-    </div>
-</div></script><script type="text/html" id="tpl_input"><div class="page">
+<script type="text/html" id="tpl_input"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Input</h1>
         <p class="page__desc">表单输入</p>
@@ -842,7 +1206,10 @@
                 $tooltips.css('display', 'none');
             }, 2000);
         });
-    });</script><script type="text/html" id="tpl_form"><div class="page">
+    });</script>
+    
+    
+    <script type="text/html" id="tpl_form"><div class="page">
   <div class="page__hd">
       <h1 class="page__title">Form</h1>
       <p class="page__desc">表单页</p>
@@ -1893,195 +2260,11 @@
       <a role="button" class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">确定</a>
     </div>
   </div>
-</div></script><script type="text/html" id="tpl_toast"><div class="page">
-    <div class="page__hd">
-        <h1 class="page__title">Toast</h1>
-        <p class="page__desc">弹出式提示</p>
-    </div>
-    <div class="page__bd page__bd_spacing">
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showToast">成功提示</a>
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showWarnToast">失败提示</a>
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showTextMoreToast">长文案提示</a>
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showLoadingToast">加载中提示</a>
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showTextToast">文字提示</a>
-    </div>
+</div></script>
 
-    <!--BEGIN toast-->
-    <div role="alert" id="toast" style="display: none;">
-        <div class="weui-mask_transparent"></div>
-        <div class="weui-toast">
-            <i class="weui-icon-success-no-circle weui-icon_toast"></i>
-            <p class="weui-toast__content">已完成</p>
-        </div>
-    </div>
 
-    <!--BEGIN toast-->
-    <div role="alert" id="textMoreToast" style="display: none;">
-        <div class="weui-mask_transparent"></div>
-        <div class="weui-toast weui-toast_text-more">
-            <i class="weui-icon-warn weui-icon_toast"></i>
-            <p class="weui-toast__content">此处为长文案提示详情</p>
-        </div>
-    </div>
-
-    <!--BEGIN toast-->
-    <div role="alert" id="warnToast" style="display: none;">
-        <div class="weui-mask_transparent"></div>
-        <div class="weui-toast">
-            <i class="weui-icon-warn weui-icon_toast"></i>
-            <p class="weui-toast__content">获取链接失败</p>
-        </div>
-    </div>
-
-    <!-- loading toast -->
-    <div role="alert" id="loadingToast" style="display: none;">
-        <div class="weui-mask_transparent"></div>
-        <div class="weui-toast">
-            <span class="weui-primary-loading weui-icon_toast">
-              <span class="weui-primary-loading__dot"></span>
-            </span>
-            <p class="weui-toast__content">加载中</p>
-        </div>
-    </div>
-
-    <!-- text toast -->
-    <div role="alert" id="textToast" style="display: none;">
-        <div class="weui-mask_transparent"></div>
-        <div class="weui-toast weui-toast_text">
-            <p class="weui-toast__content">文字提示</p>
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
-    // toast
-    $(function(){
-        var $toast = $('#toast');
-        $('#showToast').on('click', function(){
-            if ($toast.css('display') != 'none') return;
-
-            $toast.fadeIn(100);
-            setTimeout(function () {
-                $toast.fadeOut(100);
-            }, 2000);
-        });
-    });
-
-    // warn
-    $(function(){
-        var $warnToast = $('#warnToast');
-        $('#showWarnToast').on('click', function(){
-            if ($warnToast.css('display') != 'none') return;
-
-            $warnToast.fadeIn(100);
-            setTimeout(function () {
-                $warnToast.fadeOut(100);
-            }, 2000);
-        });
-    });
-
-    // text-more
-    $(function(){
-        var $textMoreToast = $('#textMoreToast');
-        $('#showTextMoreToast').on('click', function(){
-            if ($textMoreToast.css('display') != 'none') return;
-
-            $textMoreToast.fadeIn(100);
-            setTimeout(function () {
-                $textMoreToast.fadeOut(100);
-            }, 2000);
-        });
-    });
-
-    // loading
-    $(function(){
-        var $loadingToast = $('#loadingToast');
-        $('#showLoadingToast').on('click', function(){
-            if ($loadingToast.css('display') != 'none') return;
-
-            $loadingToast.fadeIn(100);
-            setTimeout(function () {
-                $loadingToast.fadeOut(100);
-            }, 2000);
-        });
-    });
-
-    // text
-    $(function(){
-        var $textToast = $('#textToast');
-        $('#showTextToast').on('click', function(){
-            if ($textToast.css('display') != 'none') return;
-
-            $textToast.fadeIn(100);
-            setTimeout(function () {
-                $textToast.fadeOut(100);
-            }, 2000);
-        });
-    });</script><script type="text/html" id="tpl_dialog"><div class="page">
-    <div class="page__hd">
-        <h1 class="page__title">Dialog</h1>
-        <p class="page__desc">对话框</p>
-    </div>
-    <div class="page__bd page__bd_spacing">
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showIOSDialog1">iOS Dialog样式一</a>
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showIOSDialog2">iOS Dialog样式二</a>
-    </div>
-
-    <div id="dialogs">
-        <!--BEGIN dialog1-->
-        <div class="js_dialog" role="dialog"  aria-hidden="true" aria-modal="true" aria-labelledby="js_title1" id="iosDialog1" style="display: none;">
-            <div class="weui-mask"></div>
-            <div class="weui-dialog">
-                <div class="weui-dialog__hd"><strong class="weui-dialog__title" id="js_title1">弹窗标题</strong></div>
-                <div class="weui-dialog__bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
-                <div class="weui-dialog__ft">
-                    <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_default">辅助操作</a>
-                    <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary">主操作</a>
-                </div>
-            </div>
-        </div>
-        <!--END dialog1-->
-        <!--BEGIN dialog2-->
-        <div class="js_dialog" role="dialog"  aria-hidden="true" aria-modal="true" aria-labelledby="js_title2" id="iosDialog2" style="display: none;">
-            <div class="weui-mask"></div>
-            <div class="weui-dialog">
-                <div class="weui-dialog__bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
-                <div class="weui-dialog__ft">
-                    <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary">知道了</a>
-                </div>
-            </div>
-        </div>
-        <!--END dialog2-->
-        <!--BEGIN dialog3-->
-        <div class="js_dialog" role="dialog"  aria-hidden="true" aria-modal="true" aria-labelledby="js_title3" id="androidDialog1" style="display: none;">
-            <div class="weui-mask"></div>
-            <div class="weui-dialog weui-skin_android">
-                <div class="weui-dialog__hd"><strong class="weui-dialog__title" id="js_title3">弹窗标题</strong></div>
-                <div class="weui-dialog__bd">
-                    弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内
-                </div>
-                <div class="weui-dialog__ft">
-                    <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_default">辅助操作</a>
-                    <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary">主操作</a>
-                </div>
-            </div>
-        </div>
-        <!--END dialog3-->
-        <!--BEGIN dialog4-->
-        <div class="js_dialog" role="dialog"  aria-hidden="true" aria-modal="true" aria-labelledby="js_title4" id="androidDialog2" style="display: none;">
-            <div class="weui-mask"></div>
-            <div class="weui-dialog weui-skin_android">
-                <div class="weui-dialog__bd">
-                    弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内
-                </div>
-                <div class="weui-dialog__ft">
-                    <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_default">辅助操作</a>
-                    <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary">主操作</a>
-                </div>
-            </div>
-        </div>
-        <!--END dialog4-->
-    </div>
-</div>
+    
+    <script type="text/html" id="tpl_dialog">
 <script type="text/javascript">
     $(function(){
         var $iosDialog1 = $('#iosDialog1'),
@@ -2119,19 +2302,18 @@
             $androidDialog2.attr('tabindex','0');
             $androidDialog2.trigger('focus');
         });
-    });</script><script type="text/html" id="tpl_half-screen-dialog"><div class="page">
-    <div class="page__hd">
-        <h1 class="page__title">Half-screen Dialog</h1>
-        <p class="page__desc">半屏组件</p>
-    </div>
-    <div class="page__bd page__bd_spacing">
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showDialog1">样式一</a>
+    });</script>
+    
+    <script type="text/html" id="tpl_half-screen-dialog">
+      <div class="page">
+
+  
+        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showDialog1">Half-screen Dialog</a>
         <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showDialog2">样式二</a>
         <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showDialog3">样式三</a>
         <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showDialog4">样式四</a>
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showDialog5">样式五</a>
-    </div>
-
+        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showDialog5">Half-screen Dialog</a>
+   
     <div id="dialogs">
         <div id="dialogWrap1" class="js_dialog_wrap" ref="showDialog1" aria-labelledby="js_title1" role="dialog" aria-modal="false" aria-hidden="true" style="display: none;">
             <div id="mask1" class="js_close weui-mask"></div>
@@ -2269,7 +2451,7 @@
             </div>
         </div>
     </div>
-</div>
+
 <script type="text/javascript">
     $(function(){
         const $dialog1 = $('#js_dialog_1');
@@ -2844,45 +3026,48 @@
       </div>
     </li>
   </ul>
-</div></script><script type="text/html" id="tpl_msg"><div class="page">
+</div></script>
+
+
+<script type="text/html" id="tpl_msg"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Msg</h1>
         <p class="page__desc">提示页</p>
     </div>
     <div class="page__bd page__bd_spacing">
-        <a href="#msg_success" role="button" class="weui-btn weui-btn_default">成功提示页</a>
-        <a href="#msg_warn" role="button" class="weui-btn weui-btn_default">失败提示页</a>
-        <a href="#msg_text" role="button" class="weui-btn weui-btn_default">无图标提示页</a>
-        <a href="#msg_text_primary" role="button" class="weui-btn weui-btn_default">无图标提示页</a>
-        <a href="#msg_custom_area_preview" role="button" class="weui-btn weui-btn_default">key-value场景</a>
-        <a href="#msg_custom_area_tips" role="button" class="weui-btn weui-btn_default">描述列表场景</a>
-        <a href="#msg_custom_area_cell" role="button" class="weui-btn weui-btn_default">跳转列表场景</a>
+       
     </div>
-</div></script><script type="text/html" id="tpl_msg_success"><div class="page">
-    <div class="weui-msg">
-        <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
-        <div class="weui-msg__text-area">
-            <h2 class="weui-msg__title">操作成功</h2>
-            <p class="weui-msg__desc">内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a class="weui-wa-hotarea weui-link" href="javascript:">文字链接</a></p>
-        </div>
-        <div class="weui-msg__opr-area">
-            <p class="weui-btn-area">
-                <a href="javascript:history.back();" role="button" class="weui-btn weui-btn_primary">推荐操作</a>
-            </p>
-        </div>
-        <div class="weui-msg__tips-area">
-          <p class="weui-msg__tips">提示详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a class="weui-wa-hotarea weui-link" href="javascript:">文字链接</a></p>
-        </div>
-        <div class="weui-msg__extra-area">
-            <div class="weui-footer">
-                <p class="weui-footer__links">
-                    <a href="javascript:" class="weui-wa-hotarea weui-footer__link">底部链接文本</a>
-                </p>
-                <p class="weui-footer__text">Copyright &copy; 2008-2016 weui.io</p>
-            </div>
-        </div>
-    </div>
-</div></script><script type="text/html" id="tpl_msg_warn"><div class="page">
+</div></script>
+
+<script type="text/html" id="tpl_msg_success"><div class="page">
+      <div class="weui-msg">
+          <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
+          <div class="weui-msg__text-area">
+              <h2 class="weui-msg__title">操作成功</h2>
+              <p class="weui-msg__desc">内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a class="weui-wa-hotarea weui-link" href="javascript:">文字链接</a></p>
+          </div>
+          <div class="weui-msg__opr-area">
+              <p class="weui-btn-area">
+                  <a href="javascript:history.back();" role="button" class="weui-btn weui-btn_primary">推荐操作</a>
+              </p>
+          </div>
+          <div class="weui-msg__tips-area">
+            <p class="weui-msg__tips">提示详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a class="weui-wa-hotarea weui-link" href="javascript:">文字链接</a></p>
+          </div>
+          <div class="weui-msg__extra-area">
+              <div class="weui-footer">
+                  <p class="weui-footer__links">
+                      <a href="javascript:" class="weui-wa-hotarea weui-footer__link">底部链接文本</a>
+                  </p>
+                  <p class="weui-footer__text">Copyright &copy; 2008-2016 weui.io</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</script>
+
+
+<script type="text/html" id="tpl_msg_warn"><div class="page">
     <div class="weui-msg">
         <div class="weui-msg__icon-area"><i class="weui-icon-warn weui-icon_msg"></i></div>
         <div class="weui-msg__text-area">
@@ -3126,65 +3311,74 @@
             $(panelId).css('display','block');
             $(panelId).siblings('.weui-tab__panel').css('display','none');
         });
-    });</script><script type="text/html" id="tpl_tabbar"><div class="page">
-    <div class="page__bd" style="height: 100%;">
-        <div class="weui-tab">
-            <div id="panel1" role="tabpanel" aria-labelledby="tab1" class="weui-tab__panel">Lorem repellat eius consectetur ab pariatur! Facere cum dignissimos sequi error perferendis quis Ipsa reiciendis earum cumque reprehenderit tenetur ab vero modi. Soluta tempore minima tempora quae voluptate! Sunt delectus?</div>
-            <div id="panel2" role="tabpanel" aria-labelledby="tab2" class="weui-tab__panel" style="display: none;">Dolor eum rerum magnam voluptatem omnis fuga, dolore libero quibusdam cupiditate Sequi vero rem corrupti hic veritatis Atque exercitationem odit odit ducimus esse, sapiente laborum inventore! Ipsum harum quo minus</div>
-            <div id="panel3" role="tabpanel" aria-labelledby="tab3" class="weui-tab__panel" style="display: none;">Elit deserunt dolore nemo harum neque libero numquam, minima nam Atque nesciunt iusto aperiam eligendi praesentium ratione? Quasi iste odio itaque doloribus hic? Est aliquam recusandae dolore ratione quos. Saepe</div>
-            <div id="panel4" role="tabpanel" aria-labelledby="tab4" class="weui-tab__panel" style="display: none;">Amet dignissimos doloribus voluptate maxime dolorem quia Deleniti eligendi similique nisi corrupti eius aut Unde nesciunt quos quos sapiente dolorem? Odit soluta repudiandae accusantium ducimus totam accusamus. Rem ad numquam</div>
-            <div role="tablist" aria-label="选项卡标题" class="weui-tabbar">
-                <div id="tab1" role="tab" aria-labelledby="t1_title" aria-describedby="t1_tips" aria-selected="true" aria-controls="panel1" class="weui-tabbar__item weui-bar__item_on">
-                    <div id="t1_tips" aria-hidden="true" style="display: inline-block; position: relative;">
-                        <img src="https://weui.io/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
-                        <span class="weui-badge" style="position: absolute; top: -2px; right: -13px;">8</span>
-                    </div>
-                    <p id="t1_title" aria-hidden="true" class="weui-tabbar__label">微信</p>
-                </div>
-                <div id="tab2" role="tab" aria-labelledby="t2_title" aria-selected="false" aria-controls="panel2" class="weui-tabbar__item">
-                    <img src="https://weui.io/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
-                    <p aria-hidden="true" id="t2_title" class="weui-tabbar__label">通讯录</p>
-                </div>
-                <div id="tab3" role="tab" aria-labelledby="t3_title" aria-describedby="t3_tips" aria-selected="false" aria-controls="panel3" class="weui-tabbar__item">
-                    <div id="t3_tips" aria-hidden="true" style="display: inline-block; position: relative;">
-                        <img src="https://weui.io/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
-                        <span class="weui-badge weui-badge_dot" role="img" alt="new" style="position: absolute; top: 0; right: -6px;"></span>
-                    </div>
-                    <p id="t3_title" aria-hidden="true" class="weui-tabbar__label">发现</p>
-                </div>
-                <div id="tab4" role="tab" aria-labelledby="t4_title" aria-selected="false" aria-controls="panel4" class="weui-tabbar__item">
-                    <img src="https://weui.io/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
-                    <p class="weui-tabbar__label" aria-hidden="true" id="t4_title">我</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
-    $(function(){
-        $('.weui-tabbar__item').on('click', function () {
-            $(this).attr('aria-selected','true').addClass('weui-bar__item_on');
-            $(this).siblings('.weui-bar__item_on').removeClass('weui-bar__item_on').attr('aria-selected','false');
-            var panelId = '#' + $(this).attr('aria-controls');
-            $(panelId).css('display','block');
-            $(panelId).siblings('.weui-tab__panel').css('display','none');
-        });
-    });</script><script type="text/html" id="tpl_panel"><div class="page">
+    });</script>
+    
+    
+    
+    <script type="text/html" id="tpl_tabbar"><div class="page">
+          <div class="page__bd" style="height: 100%;">
+              <div class="weui-tab">
+                  <div id="panel1" role="tabpanel" aria-labelledby="tab1" class="weui-tab__panel">Lorem repellat eius consectetur ab pariatur! Facere cum dignissimos sequi error perferendis quis Ipsa reiciendis earum cumque reprehenderit tenetur ab vero modi. Soluta tempore minima tempora quae voluptate! Sunt delectus?</div>
+                  <div id="panel2" role="tabpanel" aria-labelledby="tab2" class="weui-tab__panel" style="display: none;">Dolor eum rerum magnam voluptatem omnis fuga, dolore libero quibusdam cupiditate Sequi vero rem corrupti hic veritatis Atque exercitationem odit odit ducimus esse, sapiente laborum inventore! Ipsum harum quo minus</div>
+                  <div id="panel3" role="tabpanel" aria-labelledby="tab3" class="weui-tab__panel" style="display: none;">Elit deserunt dolore nemo harum neque libero numquam, minima nam Atque nesciunt iusto aperiam eligendi praesentium ratione? Quasi iste odio itaque doloribus hic? Est aliquam recusandae dolore ratione quos. Saepe</div>
+                  <div id="panel4" role="tabpanel" aria-labelledby="tab4" class="weui-tab__panel" style="display: none;">Amet dignissimos doloribus voluptate maxime dolorem quia Deleniti eligendi similique nisi corrupti eius aut Unde nesciunt quos quos sapiente dolorem? Odit soluta repudiandae accusantium ducimus totam accusamus. Rem ad numquam</div>
+                  <div role="tablist" aria-label="选项卡标题" class="weui-tabbar">
+                      <div id="tab1" role="tab" aria-labelledby="t1_title" aria-describedby="t1_tips" aria-selected="true" aria-controls="panel1" class="weui-tabbar__item weui-bar__item_on">
+                          <div id="t1_tips" aria-hidden="true" style="display: inline-block; position: relative;">
+                              <img src="https://weui.io/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                              <span class="weui-badge" style="position: absolute; top: -2px; right: -13px;">8</span>
+                          </div>
+                          <p id="t1_title" aria-hidden="true" class="weui-tabbar__label">微信</p>
+                      </div>
+                      <div id="tab2" role="tab" aria-labelledby="t2_title" aria-selected="false" aria-controls="panel2" class="weui-tabbar__item">
+                          <img src="https://weui.io/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                          <p aria-hidden="true" id="t2_title" class="weui-tabbar__label">通讯录</p>
+                      </div>
+                      <div id="tab3" role="tab" aria-labelledby="t3_title" aria-describedby="t3_tips" aria-selected="false" aria-controls="panel3" class="weui-tabbar__item">
+                          <div id="t3_tips" aria-hidden="true" style="display: inline-block; position: relative;">
+                              <img src="https://weui.io/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                              <span class="weui-badge weui-badge_dot" role="img" alt="new" style="position: absolute; top: 0; right: -6px;"></span>
+                          </div>
+                          <p id="t3_title" aria-hidden="true" class="weui-tabbar__label">发现</p>
+                      </div>
+                      <div id="tab4" role="tab" aria-labelledby="t4_title" aria-selected="false" aria-controls="panel4" class="weui-tabbar__item">
+                          <img src="https://weui.io/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                          <p class="weui-tabbar__label" aria-hidden="true" id="t4_title">我</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <script type="text/javascript">
+          $(function(){
+              $('.weui-tabbar__item').on('click', function () {
+                  $(this).attr('aria-selected','true').addClass('weui-bar__item_on');
+                  $(this).siblings('.weui-bar__item_on').removeClass('weui-bar__item_on').attr('aria-selected','false');
+                  var panelId = '#' + $(this).attr('aria-controls');
+                  $(panelId).css('display','block');
+                  $(panelId).siblings('.weui-tab__panel').css('display','none');
+              });
+          });
+    </script>
+    
+    
+    
+    <script type="text/html" id="tpl_panel"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Panel</h1>
         <p class="page__desc">面板</p>
     </div>
     <div class="page__bd">
         <div class="weui-panel weui-panel_access">
-            <div class="weui-panel__hd">图文组合列表</div>
+            <div class="weui-panel__hd">Holi caramboli</div>
             <div class="weui-panel__bd">
                 <a aria-labelledby="js_p1m1_bd" href="javascript:" class="weui-media-box weui-media-box_appmsg">
                     <div aria-hidden="true" class="weui-media-box__hd">
                         <img class="weui-media-box__thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAeFBMVEUAwAD///+U5ZTc9twOww7G8MYwzDCH4YcfyR9x23Hw+/DY9dhm2WZG0kbT9NP0/PTL8sux7LFe115T1VM+zz7i+OIXxhes6qxr2mvA8MCe6J6M4oz6/frr+us5zjn2/fa67rqB4IF13XWn6ad83nxa1loqyirn+eccHxx4AAAC/klEQVRo3u2W2ZKiQBBF8wpCNSCyLwri7v//4bRIFVXoTBBB+DAReV5sG6lTXDITiGEYhmEYhmEYhmEYhmEY5v9i5fsZGRx9PyGDne8f6K9cfd+mKXe1yNG/0CcqYE86AkBMBh66f20deBc7wA/1WFiTwvSEpBMA2JJOBsSLxe/4QEEaJRrASP8EVF8Q74GbmevKg0saa0B8QbwBdjRyADYxIhqxAZ++IKYtciPXLQVG+imw+oo4Bu56rjEJ4GYsvPmKOAB+xlz7L5aevqUXuePWVhvWJ4eWiwUQ67mK51qPj4dFDMlRLBZTqF3SDvmr4BwtkECu5gHWPkmDfQh02WLxXuvbvC8ku8F57GsI5e0CmUwLz1kq3kD17R1In5816rGvQ5VMk5FEtIiWislTffuDpl/k/PzscdQsv8r9qWq4LRWX6tQYtTxvI3XyrwdyQxChXioOngH3dLgOFjk0all56XRi/wDFQrGQU3Os5t0wJu1GNtNKHdPqYaGYQuRDfbfDf26AGLYSyGS3ZAK4S8XuoAlxGSdYMKwqZKM9XJMtyqXi7HX/CiAZS6d8bSVUz5J36mEMFDTlAFQzxOT1dzLRljjB6+++ejFqka+mXIe6F59mw22OuOw1F4T6lg/9VjL1rLDoI9Xzl1MSYDNHnPQnt3D1EE7PrXjye/3pVpr1Z45hMUdcACc5NVQI0bOdS1WA0wuz73e7/5TNqBPhQXPEFGJNV2zNqWI7QKBd2Gn6AiBko02zuAOXeWIXjV0jNqdKegaE/kJQ6Bfs4aju04lMLkA2T5wBSYPKDGF3RKhFYEa6A1L1LG2yacmsaZ6YPOSAMKNsO+N5dNTfkc5Aqe26uxHpx7ZirvgCwJpWq/lmX1hA7LyabQ34tt5RiJKXSwQ+0KU0V5xg+hZrd4Bn1n4EID+WkQdgLfRNtvil9SPfwy+WQ7PFBWQz6dGWZBLkeJFXZGCfLUjCgGgqXo5TuSu3cugdcTv/HjqnBTEMwzAMwzAMwzAMwzAMw/zf/AFbXiOA6frlMAAAAABJRU5ErkJggg==" alt="">
                     </div>
                     <div aria-hidden="true" id="js_p1m1_bd" class="weui-media-box__bd">
-                        <strong class="weui-media-box__title">标题一</strong>
-                        <p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                        <strong class="weui-media-box__title">Enero</strong>
+                        <p class="weui-media-box__desc">Auí va una descripción larga larga larga. weui-media-box_appmsg</p>
                     </div>
                 </a>
                 <a aria-labelledby="js_p1m2_bd" href="javascript:" class="weui-media-box weui-media-box_appmsg">
@@ -3192,8 +3386,8 @@
                         <img class="weui-media-box__thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAeFBMVEUAwAD///+U5ZTc9twOww7G8MYwzDCH4YcfyR9x23Hw+/DY9dhm2WZG0kbT9NP0/PTL8sux7LFe115T1VM+zz7i+OIXxhes6qxr2mvA8MCe6J6M4oz6/frr+us5zjn2/fa67rqB4IF13XWn6ad83nxa1loqyirn+eccHxx4AAAC/klEQVRo3u2W2ZKiQBBF8wpCNSCyLwri7v//4bRIFVXoTBBB+DAReV5sG6lTXDITiGEYhmEYhmEYhmEYhmEY5v9i5fsZGRx9PyGDne8f6K9cfd+mKXe1yNG/0CcqYE86AkBMBh66f20deBc7wA/1WFiTwvSEpBMA2JJOBsSLxe/4QEEaJRrASP8EVF8Q74GbmevKg0saa0B8QbwBdjRyADYxIhqxAZ++IKYtciPXLQVG+imw+oo4Bu56rjEJ4GYsvPmKOAB+xlz7L5aevqUXuePWVhvWJ4eWiwUQ67mK51qPj4dFDMlRLBZTqF3SDvmr4BwtkECu5gHWPkmDfQh02WLxXuvbvC8ku8F57GsI5e0CmUwLz1kq3kD17R1In5816rGvQ5VMk5FEtIiWislTffuDpl/k/PzscdQsv8r9qWq4LRWX6tQYtTxvI3XyrwdyQxChXioOngH3dLgOFjk0all56XRi/wDFQrGQU3Os5t0wJu1GNtNKHdPqYaGYQuRDfbfDf26AGLYSyGS3ZAK4S8XuoAlxGSdYMKwqZKM9XJMtyqXi7HX/CiAZS6d8bSVUz5J36mEMFDTlAFQzxOT1dzLRljjB6+++ejFqka+mXIe6F59mw22OuOw1F4T6lg/9VjL1rLDoI9Xzl1MSYDNHnPQnt3D1EE7PrXjye/3pVpr1Z45hMUdcACc5NVQI0bOdS1WA0wuz73e7/5TNqBPhQXPEFGJNV2zNqWI7QKBd2Gn6AiBko02zuAOXeWIXjV0jNqdKegaE/kJQ6Bfs4aju04lMLkA2T5wBSYPKDGF3RKhFYEa6A1L1LG2yacmsaZ6YPOSAMKNsO+N5dNTfkc5Aqe26uxHpx7ZirvgCwJpWq/lmX1hA7LyabQ34tt5RiJKXSwQ+0KU0V5xg+hZrd4Bn1n4EID+WkQdgLfRNtvil9SPfwy+WQ7PFBWQz6dGWZBLkeJFXZGCfLUjCgGgqXo5TuSu3cugdcTv/HjqnBTEMwzAMwzAMwzAMwzAMw/zf/AFbXiOA6frlMAAAAABJRU5ErkJggg==" alt="">
                     </div>
                     <div aria-hidden="true" id="js_p1m2_bd" class="weui-media-box__bd">
-                        <strong class="weui-media-box__title">标题二</strong>
-                        <p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                        <strong class="weui-media-box__title">Febrero</strong>
+                        <p class="weui-media-box__desc">E igual Auí va una descripción larga larga larga para que esten en dos renglones. okay, okay.</p>
                     </div>
                 </a>
             </div>
@@ -3261,7 +3455,10 @@
             </div>
         </div>
     </div>
-</div></script><script type="text/html" id="tpl_actionsheet"><div class="page">
+</div></script>
+
+
+<script type="text/html" id="tpl_actionsheet"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">ActionSheet</h1>
         <p class="page__desc">弹出式菜单</p>
@@ -3890,62 +4087,9 @@
             <p class="weui-grid__label">Grid</p>
         </a>
     </div>
-</div></script><script type="text/html" id="tpl_badge"><div class="page">
-    <div class="page__hd">
-        <h1 class="page__title">Badge</h1>
-        <p class="page__desc">徽章</p>
-    </div>
+</div></script>
 
-    <div class="page__bd">
-        <div class="weui-cells__title">新消息提示跟摘要信息后，统一在列表右侧</div>
-        <div class="weui-cells">
-            <div role="link" aria-labelledby="js_cell_l1_bd js_cell_l1_tips" aria-describedby="js_cell_l1_note" class="weui-cell weui-cell_active weui-cell_access">
-                <div aria-hidden="true" class="weui-cell__bd" id="js_cell_l1_bd">单行列表</div>
-                <div aria-hidden="true" class="weui-cell__ft" id="js_cell_l1_bd" style="font-size: 0;">
-                    <span class="demo_badge_tips" id="js_cell_l1_tips">详细信息</span>
-                    <span id="js_cell_l1_note" aria-label="，有更新" class="weui-badge weui-badge_dot"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="weui-cells__title">未读数红点跟在主题信息后，统一在列表左侧</div>
-        <div class="weui-cells demo_badge_cells">
-            <div role="option" aria-labelledby="b1_txt1" aria-describedby="b1_n1" class="weui-cell weui-cell_active">
-                <div class="weui-cell__hd" aria-hidden="true">
-                    <img src="images/pic_160.png" alt="">
-                    <span id="b1_n1" class="weui-badge" aria-label="，8个新通知">8</span>
-                </div>
-                <div class="weui-cell__bd" aria-hidden="true" id="b1_txt1">
-                    <span>联系人名称</span>
-                    <div class="demo_badge_desc">摘要信息</div>
-                </div>
-            </div>
-            <div role="link" aria-labelledby="b2_n1" aria-describedby="b2_txt2" class="weui-cell weui-cell_active weui-cell_access">
-                <span class="weui-cell__bd" aria-hidden="true">
-                    <span class="demo_badge_title" id="b2_n1">单行列表</span>
-                    <span class="weui-badge" id="b2_txt2" aria-label="，8个新通知">8</span>
-                </span>
-                <span class="weui-cell__ft" aria-hidden="true"></span>
-            </div>
-            <div role="link" aria-labelledby="b3_n1 b3_n2" aria-describedby="b3_txt1 b3_txt1_note" class="weui-cell weui-cell_active weui-cell_access">
-                <span class="weui-cell__bd" aria-hidden="true">
-                    <span class="demo_badge_title" id="b3_n1">单行列表</span>
-                    <span class="weui-badge" id="b3_txt1" aria-label="">8</span>
-                    <span id="b3_txt1_note" class="weui-hidden_abs">个新通知，</span>
-                </span>
-                <span class="weui-cell__ft" aria-hidden="true" id="b3_n2">详细信息</span>
-            </div>
-
-            <div role="link" aria-labelledby="js_a11y_nt js_a11y_comma js_a11y_nb" class="weui-cell weui-cell_active weui-cell_access">
-                <span class="weui-cell__bd" aria-hidden="true">
-                    <span id="js_a11y_nt" class="demo_badge_title">单行列表</span>
-                    <span id="js_a11y_nb" class="weui-badge">New</span>
-                </span>
-                <span class="weui-cell__ft" aria-hidden="true"></span>
-            </div>
-        </div>
-    </div>
-</div></script><script type="text/html" id="tpl_slider"><div class="page">
+<script type="text/html" id="tpl_slider"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Slider</h1>
         <p class="page__desc">滑块</p>
@@ -4553,109 +4697,9 @@
 
 
       });
-    });</script><script type="text/html" id="tpl_list"><div class="page">
-    <div class="page__hd">
-        <h1 class="page__title">List</h1>
-        <p class="page__desc">列表</p>
-    </div>
-    <div class="page__bd">
-        <div class="weui-cells__title">带说明的列表项</div>
-        <div class="weui-cells">
-            <div role="option" class="weui-cell ">
-                <div class="weui-cell__bd">
-                    <p>标题文字</p>
-                </div>
-                <div class="weui-cell__ft">说明文字</div>
-            </div>
-            <div class="weui-cell  weui-cell_swiped">
-                <div role="option" class="weui-cell__bd" style="transform: translateX(-68px);">
-                    <div class="weui-cell ">
-                        <div class="weui-cell__bd">
-                            <p>标题文字</p>
-                        </div>
-                        <div class="weui-cell__ft">说明文字</div>
-                    </div>
-                </div>
-                <div class="weui-cell__ft">
-                    <a role="button" class="weui-swiped-btn weui-swiped-btn_warn" href="javascript:">删除</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="weui-cells__title">带图标、说明的列表项</div>
-        <div class="weui-cells">
-            <div role="option" class="weui-cell  weui-cell_example">
-                <div class="weui-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
-                <div class="weui-cell__bd">
-                    <p>标题文字</p>
-                </div>
-                <div class="weui-cell__ft">说明文字</div>
-            </div>
-            <div role="option" class="weui-cell  weui-cell_example">
-                <div class="weui-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
-                <div class="weui-cell__bd">
-                    <p>标题文字</p>
-                </div>
-                <div class="weui-cell__ft">说明文字</div>
-            </div>
-        </div>
-
-        <div class="weui-cells__title">带跳转的列表项</div>
-        <div class="weui-cells">
-            <a class="weui-cell  weui-cell_access" href="javascript:">
-                <span class="weui-cell__bd">
-                    <span>cell standard</span>
-                    <div class="weui-cell__desc">副标题</div>
-                </span>
-                <span class="weui-cell__ft">
-                </span>
-            </a>
-            <a class="weui-cell  weui-cell_access" href="javascript:">
-                <span class="weui-cell__bd">
-                    <span>cell standard</span>
-                </span>
-                <span class="weui-cell__ft">
-                </span>
-            </a>
-        </div>
-
-        <div class="weui-cells__title">带说明、跳转的列表项</div>
-        <div class="weui-cells">
-            <a aria-labelledby="js_cell_tl1_tips js_cell_tl1_link" class="weui-cell weui-cell_access" href="javascript:">
-                <span class="weui-cell__bd" id="js_cell_tl1_tips" aria-hidden="true">
-                    <span>cell standard</span>
-                </span>
-                <span class="weui-cell__ft" aria-hidden="true" id="js_cell_tl1_link">说明文字</span>
-            </a>
-            <a aria-labelledby="js_cell_tl2_tips js_cell_tl2_link" class="weui-cell  weui-cell_access" href="javascript:">
-                <span class="weui-cell__bd" aria-hidden="true" id="js_cell_tl2_tips">
-                    <span>cell standard</span>
-                </span>
-                <span class="weui-cell__ft" aria-hidden="true" id="js_cell_tl2_link">说明文字</span>
-            </a>
-
-        </div>
-
-        <div class="weui-cells__title">带图标、说明、跳转的列表项</div>
-        <div class="weui-cells">
-
-            <a aria-labelledby="js_cell_itl1_hd js_cell_itl1_bd js_cell_itl1_ft" class="weui-cell weui-cell_access weui-cell_example" href="javascript:">
-                <span class="weui-cell__hd" id="js_cell_itl1_hd" aria-hidden="true"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="头像" style="width: 20px; margin-right: 16px; display: block;"></span>
-                <span class="weui-cell__bd" id="js_cell_itl1_bd" aria-hidden="true">
-                    <span>cell standard</span>
-                </span>
-                <span class="weui-cell__ft" id="js_cell_itl1_ft" aria-hidden="true">说明文字</span>
-            </a>
-            <a aria-labelledby="js_cell_itl2_hd js_cell_itl2_bd js_cell_itl2_ft" class="weui-cell weui-cell_access weui-cell_example" href="javascript:">
-                <span class="weui-cell__hd" id="js_cell_itl2_hd" aria-hidden="true"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width: 20px; margin-right: 16px; display: block;"></span>
-                <span class="weui-cell__bd" id="js_cell_itl2_bd" aria-hidden="true">
-                    <span>cell standard</span>
-                </span>
-                <span class="weui-cell__ft" id="js_cell_itl2_ft" aria-hidden="true">说明文字</span>
-            </a>
-        </div>
-    </div>
-</div></script><script type="text/html" id="tpl_input"><div class="page">
+    });</script>
+    
+ <script type="text/html" id="tpl_input"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Input</h1>
         <p class="page__desc">表单输入</p>
@@ -5926,130 +5970,18 @@
       <a role="button" class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">确定</a>
     </div>
   </div>
-</div></script><script type="text/html" id="tpl_toast"><div class="page">
-    <div class="page__hd">
-        <h1 class="page__title">Toast</h1>
-        <p class="page__desc">弹出式提示</p>
-    </div>
-    <div class="page__bd page__bd_spacing">
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showToast">成功提示</a>
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showWarnToast">失败提示</a>
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showTextMoreToast">长文案提示</a>
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showLoadingToast">加载中提示</a>
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showTextToast">文字提示</a>
-    </div>
+</div></script>
 
-    <!--BEGIN toast-->
-    <div role="alert" id="toast" style="display: none;">
-        <div class="weui-mask_transparent"></div>
-        <div class="weui-toast">
-            <i class="weui-icon-success-no-circle weui-icon_toast"></i>
-            <p class="weui-toast__content">已完成</p>
-        </div>
-    </div>
 
-    <!--BEGIN toast-->
-    <div role="alert" id="textMoreToast" style="display: none;">
-        <div class="weui-mask_transparent"></div>
-        <div class="weui-toast weui-toast_text-more">
-            <i class="weui-icon-warn weui-icon_toast"></i>
-            <p class="weui-toast__content">此处为长文案提示详情</p>
-        </div>
-    </div>
 
-    <!--BEGIN toast-->
-    <div role="alert" id="warnToast" style="display: none;">
-        <div class="weui-mask_transparent"></div>
-        <div class="weui-toast">
-            <i class="weui-icon-warn weui-icon_toast"></i>
-            <p class="weui-toast__content">获取链接失败</p>
-        </div>
-    </div>
+ 
 
-    <!-- loading toast -->
-    <div role="alert" id="loadingToast" style="display: none;">
-        <div class="weui-mask_transparent"></div>
-        <div class="weui-toast">
-            <span class="weui-primary-loading weui-icon_toast">
-              <span class="weui-primary-loading__dot"></span>
-            </span>
-            <p class="weui-toast__content">加载中</p>
-        </div>
-    </div>
 
-    <!-- text toast -->
-    <div role="alert" id="textToast" style="display: none;">
-        <div class="weui-mask_transparent"></div>
-        <div class="weui-toast weui-toast_text">
-            <p class="weui-toast__content">文字提示</p>
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
-    // toast
-    $(function(){
-        var $toast = $('#toast');
-        $('#showToast').on('click', function(){
-            if ($toast.css('display') != 'none') return;
 
-            $toast.fadeIn(100);
-            setTimeout(function () {
-                $toast.fadeOut(100);
-            }, 2000);
-        });
-    });
-
-    // warn
-    $(function(){
-        var $warnToast = $('#warnToast');
-        $('#showWarnToast').on('click', function(){
-            if ($warnToast.css('display') != 'none') return;
-
-            $warnToast.fadeIn(100);
-            setTimeout(function () {
-                $warnToast.fadeOut(100);
-            }, 2000);
-        });
-    });
-
-    // text-more
-    $(function(){
-        var $textMoreToast = $('#textMoreToast');
-        $('#showTextMoreToast').on('click', function(){
-            if ($textMoreToast.css('display') != 'none') return;
-
-            $textMoreToast.fadeIn(100);
-            setTimeout(function () {
-                $textMoreToast.fadeOut(100);
-            }, 2000);
-        });
-    });
-
-    // loading
-    $(function(){
-        var $loadingToast = $('#loadingToast');
-        $('#showLoadingToast').on('click', function(){
-            if ($loadingToast.css('display') != 'none') return;
-
-            $loadingToast.fadeIn(100);
-            setTimeout(function () {
-                $loadingToast.fadeOut(100);
-            }, 2000);
-        });
-    });
-
-    // text
-    $(function(){
-        var $textToast = $('#textToast');
-        $('#showTextToast').on('click', function(){
-            if ($textToast.css('display') != 'none') return;
-
-            $textToast.fadeIn(100);
-            setTimeout(function () {
-                $textToast.fadeOut(100);
-            }, 2000);
-        });
-    });</script><script type="text/html" id="tpl_dialog"><div class="page">
+    
+    
+    
+    <script type="text/html" id="tpl_dialog"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Dialog</h1>
         <p class="page__desc">对话框</p>
@@ -7370,7 +7302,9 @@
           $('#showAndroidActionSheet').trigger('focus');
         });
 
-    });</script><script type="text/html" id="tpl_icons"><div class="page">
+    });</script>
+    
+    <script type="text/html" id="tpl_icons"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Icons</h1>
         <p class="page__desc">图标</p>
@@ -7438,7 +7372,10 @@
         </div>
         -->
     </div>
-</div></script><script type="text/html" id="tpl_searchbar"><div class="page">
+</div></script>
+
+
+<script type="text/html" id="tpl_searchbar"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">SearchBar</h1>
         <p class="page__desc">搜索栏</p>
@@ -7978,58 +7915,11 @@
             </div>
         </div>
     </div>
-</div></script><script type="text/html" id="tpl_slider"><div class="page">
-    <div class="page__hd">
-        <h1 class="page__title">Slider</h1>
-        <p class="page__desc">滑块</p>
-    </div>
-    <div class="page__bd page__bd_spacing">
-        <div class="weui-slider">
-            <div class="weui-slider__inner">
-                <div style="width: 0;" class="weui-slider__track"></div>
-                <div role="slider" aria-label="不可调滑块" style="left: 0;" class="weui-slider__handler weui-wa-hotarea"></div>
-            </div>
-        </div>
-        <br>
-        <div class="weui-slider-box">
-            <div class="weui-slider">
-                <div id="sliderInner" class="weui-slider__inner">
-                    <div id="sliderTrack" style="width: 50%;" class="weui-slider__track"></div>
-                    <div role="slider" aria-label="可调滑块" id="sliderHandler" style="left: 50%;" class="weui-slider__handler weui-wa-hotarea"></div>
-                </div>
-            </div>
-            <div id="sliderValue" role="alert" class="weui-slider-box__value">50</div>
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
-    $(function(){
-        var $sliderTrack = $('#sliderTrack'),
-            $sliderHandler = $('#sliderHandler'),
-            $sliderValue = $('#sliderValue');
+</div></script>
 
-        var totalLen = $('#sliderInner').width(),
-            startLeft = 0,
-            startX = 0;
 
-        $sliderHandler
-            .on('touchstart', function (e) {
-                startLeft = parseInt($sliderHandler.css('left')) * totalLen / 100;
-                startX = e.changedTouches[0].clientX;
-            })
-            .on('touchmove', function(e){
-                var dist = startLeft + e.changedTouches[0].clientX - startX,
-                    percent;
-                dist = dist < 0 ? 0 : dist > totalLen ? totalLen : dist;
-                percent =  parseInt(dist / totalLen * 100);
-                $sliderTrack.css('width', percent + '%');
-                $sliderHandler.css('left', percent + '%');
-                $sliderValue.text(percent);
-
-                e.preventDefault();
-            })
-        ;
-    });</script><script type="text/html" id="tpl_top-tips"><div class="page">
+    
+    <script type="text/html" id="tpl_top-tips"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">TopTips</h1>
         <p class="page__desc">顶部提示条</p>
@@ -8582,109 +8472,12 @@
 
 
       });
-    });</script><script type="text/html" id="tpl_list"><div class="page">
-    <div class="page__hd">
-        <h1 class="page__title">List</h1>
-        <p class="page__desc">列表</p>
-    </div>
-    <div class="page__bd">
-        <div class="weui-cells__title">带说明的列表项</div>
-        <div class="weui-cells">
-            <div role="option" class="weui-cell ">
-                <div class="weui-cell__bd">
-                    <p>标题文字</p>
-                </div>
-                <div class="weui-cell__ft">说明文字</div>
-            </div>
-            <div class="weui-cell  weui-cell_swiped">
-                <div role="option" class="weui-cell__bd" style="transform: translateX(-68px);">
-                    <div class="weui-cell ">
-                        <div class="weui-cell__bd">
-                            <p>标题文字</p>
-                        </div>
-                        <div class="weui-cell__ft">说明文字</div>
-                    </div>
-                </div>
-                <div class="weui-cell__ft">
-                    <a role="button" class="weui-swiped-btn weui-swiped-btn_warn" href="javascript:">删除</a>
-                </div>
-            </div>
-        </div>
+    });</script>
+    
+    
 
-        <div class="weui-cells__title">带图标、说明的列表项</div>
-        <div class="weui-cells">
-            <div role="option" class="weui-cell  weui-cell_example">
-                <div class="weui-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
-                <div class="weui-cell__bd">
-                    <p>标题文字</p>
-                </div>
-                <div class="weui-cell__ft">说明文字</div>
-            </div>
-            <div role="option" class="weui-cell  weui-cell_example">
-                <div class="weui-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
-                <div class="weui-cell__bd">
-                    <p>标题文字</p>
-                </div>
-                <div class="weui-cell__ft">说明文字</div>
-            </div>
-        </div>
 
-        <div class="weui-cells__title">带跳转的列表项</div>
-        <div class="weui-cells">
-            <a class="weui-cell  weui-cell_access" href="javascript:">
-                <span class="weui-cell__bd">
-                    <span>cell standard</span>
-                    <div class="weui-cell__desc">副标题</div>
-                </span>
-                <span class="weui-cell__ft">
-                </span>
-            </a>
-            <a class="weui-cell  weui-cell_access" href="javascript:">
-                <span class="weui-cell__bd">
-                    <span>cell standard</span>
-                </span>
-                <span class="weui-cell__ft">
-                </span>
-            </a>
-        </div>
-
-        <div class="weui-cells__title">带说明、跳转的列表项</div>
-        <div class="weui-cells">
-            <a aria-labelledby="js_cell_tl1_tips js_cell_tl1_link" class="weui-cell weui-cell_access" href="javascript:">
-                <span class="weui-cell__bd" id="js_cell_tl1_tips" aria-hidden="true">
-                    <span>cell standard</span>
-                </span>
-                <span class="weui-cell__ft" aria-hidden="true" id="js_cell_tl1_link">说明文字</span>
-            </a>
-            <a aria-labelledby="js_cell_tl2_tips js_cell_tl2_link" class="weui-cell  weui-cell_access" href="javascript:">
-                <span class="weui-cell__bd" aria-hidden="true" id="js_cell_tl2_tips">
-                    <span>cell standard</span>
-                </span>
-                <span class="weui-cell__ft" aria-hidden="true" id="js_cell_tl2_link">说明文字</span>
-            </a>
-
-        </div>
-
-        <div class="weui-cells__title">带图标、说明、跳转的列表项</div>
-        <div class="weui-cells">
-
-            <a aria-labelledby="js_cell_itl1_hd js_cell_itl1_bd js_cell_itl1_ft" class="weui-cell weui-cell_access weui-cell_example" href="javascript:">
-                <span class="weui-cell__hd" id="js_cell_itl1_hd" aria-hidden="true"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="头像" style="width: 20px; margin-right: 16px; display: block;"></span>
-                <span class="weui-cell__bd" id="js_cell_itl1_bd" aria-hidden="true">
-                    <span>cell standard</span>
-                </span>
-                <span class="weui-cell__ft" id="js_cell_itl1_ft" aria-hidden="true">说明文字</span>
-            </a>
-            <a aria-labelledby="js_cell_itl2_hd js_cell_itl2_bd js_cell_itl2_ft" class="weui-cell weui-cell_access weui-cell_example" href="javascript:">
-                <span class="weui-cell__hd" id="js_cell_itl2_hd" aria-hidden="true"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="" style="width: 20px; margin-right: 16px; display: block;"></span>
-                <span class="weui-cell__bd" id="js_cell_itl2_bd" aria-hidden="true">
-                    <span>cell standard</span>
-                </span>
-                <span class="weui-cell__ft" id="js_cell_itl2_ft" aria-hidden="true">说明文字</span>
-            </a>
-        </div>
-    </div>
-</div></script><script type="text/html" id="tpl_input"><div class="page">
+<script type="text/html" id="tpl_input"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Input</h1>
         <p class="page__desc">表单输入</p>
@@ -9955,130 +9748,18 @@
       <a role="button" class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">确定</a>
     </div>
   </div>
-</div></script><script type="text/html" id="tpl_toast"><div class="page">
+</div></script>
+
+<script type="text/html" id="tpl_toast">
+  <div class="page">
     <div class="page__hd">
         <h1 class="page__title">Toast</h1>
-        <p class="page__desc">弹出式提示</p>
-    </div>
-    <div class="page__bd page__bd_spacing">
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showToast">成功提示</a>
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showWarnToast">失败提示</a>
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showTextMoreToast">长文案提示</a>
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showLoadingToast">加载中提示</a>
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showTextToast">文字提示</a>
-    </div>
-
-    <!--BEGIN toast-->
-    <div role="alert" id="toast" style="display: none;">
-        <div class="weui-mask_transparent"></div>
-        <div class="weui-toast">
-            <i class="weui-icon-success-no-circle weui-icon_toast"></i>
-            <p class="weui-toast__content">已完成</p>
-        </div>
-    </div>
-
-    <!--BEGIN toast-->
-    <div role="alert" id="textMoreToast" style="display: none;">
-        <div class="weui-mask_transparent"></div>
-        <div class="weui-toast weui-toast_text-more">
-            <i class="weui-icon-warn weui-icon_toast"></i>
-            <p class="weui-toast__content">此处为长文案提示详情</p>
-        </div>
-    </div>
-
-    <!--BEGIN toast-->
-    <div role="alert" id="warnToast" style="display: none;">
-        <div class="weui-mask_transparent"></div>
-        <div class="weui-toast">
-            <i class="weui-icon-warn weui-icon_toast"></i>
-            <p class="weui-toast__content">获取链接失败</p>
-        </div>
-    </div>
-
-    <!-- loading toast -->
-    <div role="alert" id="loadingToast" style="display: none;">
-        <div class="weui-mask_transparent"></div>
-        <div class="weui-toast">
-            <span class="weui-primary-loading weui-icon_toast">
-              <span class="weui-primary-loading__dot"></span>
-            </span>
-            <p class="weui-toast__content">加载中</p>
-        </div>
-    </div>
-
-    <!-- text toast -->
-    <div role="alert" id="textToast" style="display: none;">
-        <div class="weui-mask_transparent"></div>
-        <div class="weui-toast weui-toast_text">
-            <p class="weui-toast__content">文字提示</p>
-        </div>
-    </div>
+    </div>   
 </div>
-<script type="text/javascript">
-    // toast
-    $(function(){
-        var $toast = $('#toast');
-        $('#showToast').on('click', function(){
-            if ($toast.css('display') != 'none') return;
-
-            $toast.fadeIn(100);
-            setTimeout(function () {
-                $toast.fadeOut(100);
-            }, 2000);
-        });
-    });
-
-    // warn
-    $(function(){
-        var $warnToast = $('#warnToast');
-        $('#showWarnToast').on('click', function(){
-            if ($warnToast.css('display') != 'none') return;
-
-            $warnToast.fadeIn(100);
-            setTimeout(function () {
-                $warnToast.fadeOut(100);
-            }, 2000);
-        });
-    });
-
-    // text-more
-    $(function(){
-        var $textMoreToast = $('#textMoreToast');
-        $('#showTextMoreToast').on('click', function(){
-            if ($textMoreToast.css('display') != 'none') return;
-
-            $textMoreToast.fadeIn(100);
-            setTimeout(function () {
-                $textMoreToast.fadeOut(100);
-            }, 2000);
-        });
-    });
-
-    // loading
-    $(function(){
-        var $loadingToast = $('#loadingToast');
-        $('#showLoadingToast').on('click', function(){
-            if ($loadingToast.css('display') != 'none') return;
-
-            $loadingToast.fadeIn(100);
-            setTimeout(function () {
-                $loadingToast.fadeOut(100);
-            }, 2000);
-        });
-    });
-
-    // text
-    $(function(){
-        var $textToast = $('#textToast');
-        $('#showTextToast').on('click', function(){
-            if ($textToast.css('display') != 'none') return;
-
-            $textToast.fadeIn(100);
-            setTimeout(function () {
-                $textToast.fadeOut(100);
-            }, 2000);
-        });
-    });</script><script type="text/html" id="tpl_dialog"><div class="page">
+</script>
+    
+    
+    <script type="text/html" id="tpl_dialog"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Dialog</h1>
         <p class="page__desc">对话框</p>
@@ -10088,100 +9769,11 @@
         <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showIOSDialog2">iOS Dialog样式二</a>
     </div>
 
-    <div id="dialogs">
-        <!--BEGIN dialog1-->
-        <div class="js_dialog" role="dialog"  aria-hidden="true" aria-modal="true" aria-labelledby="js_title1" id="iosDialog1" style="display: none;">
-            <div class="weui-mask"></div>
-            <div class="weui-dialog">
-                <div class="weui-dialog__hd"><strong class="weui-dialog__title" id="js_title1">弹窗标题</strong></div>
-                <div class="weui-dialog__bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
-                <div class="weui-dialog__ft">
-                    <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_default">辅助操作</a>
-                    <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary">主操作</a>
-                </div>
-            </div>
-        </div>
-        <!--END dialog1-->
-        <!--BEGIN dialog2-->
-        <div class="js_dialog" role="dialog"  aria-hidden="true" aria-modal="true" aria-labelledby="js_title2" id="iosDialog2" style="display: none;">
-            <div class="weui-mask"></div>
-            <div class="weui-dialog">
-                <div class="weui-dialog__bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
-                <div class="weui-dialog__ft">
-                    <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary">知道了</a>
-                </div>
-            </div>
-        </div>
-        <!--END dialog2-->
-        <!--BEGIN dialog3-->
-        <div class="js_dialog" role="dialog"  aria-hidden="true" aria-modal="true" aria-labelledby="js_title3" id="androidDialog1" style="display: none;">
-            <div class="weui-mask"></div>
-            <div class="weui-dialog weui-skin_android">
-                <div class="weui-dialog__hd"><strong class="weui-dialog__title" id="js_title3">弹窗标题</strong></div>
-                <div class="weui-dialog__bd">
-                    弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内
-                </div>
-                <div class="weui-dialog__ft">
-                    <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_default">辅助操作</a>
-                    <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary">主操作</a>
-                </div>
-            </div>
-        </div>
-        <!--END dialog3-->
-        <!--BEGIN dialog4-->
-        <div class="js_dialog" role="dialog"  aria-hidden="true" aria-modal="true" aria-labelledby="js_title4" id="androidDialog2" style="display: none;">
-            <div class="weui-mask"></div>
-            <div class="weui-dialog weui-skin_android">
-                <div class="weui-dialog__bd">
-                    弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内
-                </div>
-                <div class="weui-dialog__ft">
-                    <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_default">辅助操作</a>
-                    <a role="button" href="javascript:" class="weui-dialog__btn weui-dialog__btn_primary">主操作</a>
-                </div>
-            </div>
-        </div>
-        <!--END dialog4-->
-    </div>
+   
 </div>
-<script type="text/javascript">
-    $(function(){
-        var $iosDialog1 = $('#iosDialog1'),
-            $iosDialog2 = $('#iosDialog2'),
-            $androidDialog1 = $('#androidDialog1'),
-            $androidDialog2 = $('#androidDialog2');
 
-        $('#dialogs').on('click', '.weui-dialog__btn', function(){
-            $(this).parents('.js_dialog').fadeOut(200);
-            $(this).parents('.js_dialog').attr('aria-hidden','true');
-            $(this).parents('.js_dialog').removeAttr('tabindex');
-        });
-
-        $('#showIOSDialog1').on('click', function(){
-            $iosDialog1.fadeIn(200);
-            $iosDialog1.attr('aria-hidden','false');
-            $iosDialog1.attr('tabindex','0');
-            $iosDialog1.trigger('focus');
-        });
-        $('#showIOSDialog2').on('click', function(){
-            $iosDialog2.fadeIn(200);
-            $iosDialog2.attr('aria-hidden','false');
-            $iosDialog2.attr('tabindex','0');
-            $iosDialog2.trigger('focus');
-        });
-        $('#showAndroidDialog1').on('click', function(){
-            $androidDialog1.fadeIn(200);
-            $androidDialog1.attr('aria-hidden','false');
-            $androidDialog1.attr('tabindex','0');
-            $androidDialog1.trigger('focus');
-        });
-        $('#showAndroidDialog2').on('click', function(){
-            $androidDialog2.fadeIn(200);
-            $androidDialog2.attr('aria-hidden','false');
-            $androidDialog2.attr('tabindex','0');
-            $androidDialog2.trigger('focus');
-        });
-    });</script><script type="text/html" id="tpl_half-screen-dialog"><div class="page">
+    
+    <script type="text/html" id="tpl_half-screen-dialog"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Half-screen Dialog</h1>
         <p class="page__desc">半屏组件</p>
@@ -10906,21 +10498,17 @@
       </div>
     </li>
   </ul>
-</div></script><script type="text/html" id="tpl_msg"><div class="page">
+</div></script>
+
+<script type="text/html" id="tpl_msg"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Msg</h1>
         <p class="page__desc">提示页</p>
     </div>
-    <div class="page__bd page__bd_spacing">
-        <a href="#msg_success" role="button" class="weui-btn weui-btn_default">成功提示页</a>
-        <a href="#msg_warn" role="button" class="weui-btn weui-btn_default">失败提示页</a>
-        <a href="#msg_text" role="button" class="weui-btn weui-btn_default">无图标提示页</a>
-        <a href="#msg_text_primary" role="button" class="weui-btn weui-btn_default">无图标提示页</a>
-        <a href="#msg_custom_area_preview" role="button" class="weui-btn weui-btn_default">key-value场景</a>
-        <a href="#msg_custom_area_tips" role="button" class="weui-btn weui-btn_default">描述列表场景</a>
-        <a href="#msg_custom_area_cell" role="button" class="weui-btn weui-btn_default">跳转列表场景</a>
-    </div>
-</div></script><script type="text/html" id="tpl_msg_success"><div class="page">
+ 
+</div></script>
+
+<script type="text/html" id="tpl_msg_success"><div class="page">
     <div class="weui-msg">
         <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
         <div class="weui-msg__text-area">
@@ -10944,7 +10532,10 @@
             </div>
         </div>
     </div>
-</div></script><script type="text/html" id="tpl_msg_warn"><div class="page">
+</div>
+</script>
+
+<script type="text/html" id="tpl_msg_warn"><div class="page">
     <div class="weui-msg">
         <div class="weui-msg__icon-area"><i class="weui-icon-warn weui-icon_msg"></i></div>
         <div class="weui-msg__text-area">
@@ -11558,7 +11149,9 @@
             cancelSearch();
             $searchInput.blur();
         });
-    });</script><script type="text/html" id="tpl_picker"><div class="page">
+    });</script>
+    
+    <script type="text/html" id="tpl_picker"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Picker</h1>
         <p class="page__desc">多列选择器，需要配合js实现</p>
@@ -11609,7 +11202,11 @@
             },
             title: '多列选择器'
         });
-    });</script><script type="text/html" id="tpl_footer"><div class="page">
+    });</script>
+    
+    
+    
+    <script type="text/html" id="tpl_footer"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Footer</h1>
         <p class="page__desc">页脚</p>
@@ -11645,7 +11242,11 @@
             </a>
         </div>
     </div>
-</div></script><script type="text/html" id="tpl_gallery"><div class="page">
+</div></script>
+
+
+
+<script type="text/html" id="tpl_gallery"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Gallery</h1>
         <p class="page__desc">画廊，可实现上传图片的展示或幻灯片播放</p>
@@ -11668,7 +11269,10 @@
       setTimeout(function(){
         $galleryImg.attr("tabindex", '-1').trigger('focus');
       },200);
-    })</script><script type="text/html" id="tpl_flex"><div class="page">
+    })</script>
+    
+    
+    <script type="text/html" id="tpl_flex"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Flex</h1>
         <p class="page__desc">Flex布局</p>
@@ -11698,7 +11302,10 @@
             <div><div class="placeholder">weui</div></div>
         </div>
     </div>
-</div></script><script type="text/html" id="tpl_loading"><div class="page">
+</div></script>
+
+
+<script type="text/html" id="tpl_loading"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Loading</h1>
         <p class="page__desc">加载中</p>
@@ -11717,28 +11324,23 @@
         </span>
       </div>
     </div>
-</div></script><script type="text/html" id="tpl_loadmore"><div class="page">
-    <div class="page__hd">
-        <h1 class="page__title">Loadmore</h1>
-        <p class="page__desc">加载更多</p>
-    </div>
-    <div class="page__bd">
-        <div role="alert" class="weui-loadmore">
-            <span aria-hidden="true" role="img" aria-label="加载中" class="weui-primary-loading">
-              <i class="weui-primary-loading__dot"></i>
-            </span>
-            <span class="weui-loadmore__tips">正在加载</span>
-        </div>
-        <div class="weui-loadmore weui-loadmore_line">
-            <span class="weui-loadmore__tips">暂无数据</span>
-        </div>
-        <div role="option" class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
-            <div class="weui-hidden_abs">已无更多数据</div>
-            <span class="weui-loadmore__tips"></span>
+</div></script>
+
+<script type="text/html" id="tpl_loadmore">    
+        <div class="page__bd">
+            <div role="alert" class="weui-loadmore">
+                <span aria-hidden="true" role="img" aria-label="加载中" class="weui-primary-loading">
+                  <i class="weui-primary-loading__dot"></i>
+                </span>blank
+                <span class="weui-loadmore__tips">Un momento</span>
+            </div>               
         </div>
     </div>
-</div>
-<script></script><script type="text/html" id="tpl_uploader"><div class="page">
+    <script>
+</script>
+
+
+<script type="text/html" id="tpl_uploader"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Uploader</h1>
         <p id="x123" class="page__desc">
@@ -11891,7 +11493,10 @@
             </div>
         </div>
     </div>
-</div></script><script type="text/html" id="tpl_grid"><div class="page">
+</div></script>
+
+
+<script type="text/html" id="tpl_grid"><div class="page">
     <div class="page__hd">
         <h1 class="page__title">Grid</h1>
         <p class="page__desc">九宫格</p>
@@ -11952,11 +11557,12 @@
             <p class="weui-grid__label">Grid</p>
         </a>
     </div>
-</div></script><script type="text/html" id="tpl_badge"><div class="page">
-    <div class="page__hd">
-        <h1 class="page__title">Badge</h1>
-        <p class="page__desc">徽章</p>
-    </div>
+</div></script>
+
+
+<script type="text/html" id="tpl_badge">
+  <div class="page">
+    
 
     <div class="page__bd">
         <div class="weui-cells__title">新消息提示跟摘要信息后，统一在列表右侧</div>
@@ -12007,65 +11613,19 @@
             </div>
         </div>
     </div>
-</div></script><script type="text/html" id="tpl_slider"><div class="page">
-    <div class="page__hd">
-        <h1 class="page__title">Slider</h1>
-        <p class="page__desc">滑块</p>
-    </div>
-    <div class="page__bd page__bd_spacing">
-        <div class="weui-slider">
-            <div class="weui-slider__inner">
-                <div style="width: 0;" class="weui-slider__track"></div>
-                <div role="slider" aria-label="不可调滑块" style="left: 0;" class="weui-slider__handler weui-wa-hotarea"></div>
-            </div>
-        </div>
-        <br>
-        <div class="weui-slider-box">
-            <div class="weui-slider">
-                <div id="sliderInner" class="weui-slider__inner">
-                    <div id="sliderTrack" style="width: 50%;" class="weui-slider__track"></div>
-                    <div role="slider" aria-label="可调滑块" id="sliderHandler" style="left: 50%;" class="weui-slider__handler weui-wa-hotarea"></div>
-                </div>
-            </div>
-            <div id="sliderValue" role="alert" class="weui-slider-box__value">50</div>
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
-    $(function(){
-        var $sliderTrack = $('#sliderTrack'),
-            $sliderHandler = $('#sliderHandler'),
-            $sliderValue = $('#sliderValue');
+</div></script>
 
-        var totalLen = $('#sliderInner').width(),
-            startLeft = 0,
-            startX = 0;
-
-        $sliderHandler
-            .on('touchstart', function (e) {
-                startLeft = parseInt($sliderHandler.css('left')) * totalLen / 100;
-                startX = e.changedTouches[0].clientX;
-            })
-            .on('touchmove', function(e){
-                var dist = startLeft + e.changedTouches[0].clientX - startX,
-                    percent;
-                dist = dist < 0 ? 0 : dist > totalLen ? totalLen : dist;
-                percent =  parseInt(dist / totalLen * 100);
-                $sliderTrack.css('width', percent + '%');
-                $sliderHandler.css('left', percent + '%');
-                $sliderValue.text(percent);
-
-                e.preventDefault();
-            })
-        ;
-    });</script><script type="text/html" id="tpl_top-tips"><div class="page">
+<script type="text/html" id="tpl_slider"></script>
+    
+    <script type="text/html" id="tpl_top-tips">
+      <div class="page">
     <div class="page__hd">
         <h1 class="page__title">TopTips</h1>
         <p class="page__desc">顶部提示条</p>
     </div>
     <div class="page__bd page__bd_spacing">
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showTopTips">显示提示条</a>
-        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="hideTopTips">隐藏提示条</a>
+        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showTopTips">showTopTips</a>
+        <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="hideTopTips">hideTopTips</a>
     </div>
 
     <div role="alert" class="weui-toptips weui-toptips_warn" id="topTips">错误提示</div>
@@ -12078,7 +11638,10 @@
           $('#hideTopTips').on('click', function(){
                 $('#topTips').fadeOut(200);
           });
-    });</script><script type="text/template" id="footerTmpl"><div class="page__ft">
+    });
+</script>
+    
+    <script type="text/template" id="footerTmpl"><div class="page__ft">
             <div class="page_logo_wrp">
               <a href="javascript:home()"><img src="images/icon_footer_link.png" /></a>
             </div>
