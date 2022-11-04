@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<title>Docentes | Control </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.02.0/css/all.min.css'> <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v6/search?o=r&m=free -->   
@@ -12,7 +12,8 @@
 <link rel="stylesheet" href="https://xbrpw.github.io/eso/lib/style.css">
 <link rel="stylesheet" href="https://xbrpw.github.io/eso/lib/ie7/ie7.css">
 <link rel="stylesheet" href="data:text/css;base64,Cjpyb290IHsKICAtLXNtLWZvbnQtc2l6ZS1zbWFsbDogOTAlOwogIC0tc20tZm9udC1zaXplLXJlZ3VsYXI6IDEwMCU7CiAgLS1zbS1mb250LXNpemUtbGFyZ2U6IDEyMCU7CiAgLS1zbS1ib3JkZXItY29sb3Itbm9ybWFsOiByZ2JhKDAsIDAsIDAsIDAuMSk7CiAgLS1zbS1idG4tYmctY29sb3I6IGJsYWNrOwogIC0tc20tYnV0dG9uLWNvbG9yOiB3aGl0ZTsKICAtLXNtLXRleHQtY29sb3Itbm9ybWFsOiAjMDAwOwogIC0tc20tdGV4dC1jb2xvci1saWdodDogaHNsKDAsIDAlLCA2MCUpOwogIC0tc20tZmllbGQtYmctY29sb3I6ICNmZmY7CiAgLS1zbS1hY2NlbnQtY29sb3I6ICNGRUQzNEQ7CiAgLS1zbS1pbnZhbGlkLWJnLWNvbG9yOiByZ2JhKDI1NSwgMCwgMCwgMC4wNSk7CiAgLS1zbS14LXNtYWxsLW1hcmdpbjogNXB4OwogIC0tc20tc21hbGwtbWFyZ2luOiAxMHB4OwogIC0tc20tbWVkaXVtLW1hcmdpbjogMjBweDsKICAtLXNtLWxhcmdlLW1hcmdpbjogMzBweDsKICAtLXNtLXgtbGFyZ2UtbWFyZ2luOiA2MHB4OwogIC0tc20tbGFyZ2UtbmVnYXRpdmUtbWFyZ2luOiAtMzBweDsKICAtLXNtLXgtbGFyZ2UtbmVnYXRpdmUtbWFyZ2luOiAtNjBweDsKICAtLXNtLWlucHV0LXdpZHRoLXNtYWxsOiAzMCU7CiAgLS1zbS1pbnB1dC13aWR0aC1tZWRpdW06IDUwJTsKICAtLXNtLWlucHV0LXdpZHRoLWxhcmdlOiBhdXRvOwp9CgpAbWVkaWEgKHByZWZlcnMtY29sb3Itc2NoZW1lOiBkYXJrKSB7Cgkuc21fX2Zvcm0gewogICAgLS1zbS1ib3JkZXItY29sb3Itbm9ybWFsOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMik7CiAgICAtLXNtLWJ0bi1iZy1jb2xvcjogd2hpdGU7CiAgICAtLXNtLXRleHQtY29sb3Itbm9ybWFsOiAjZmZmOwogICAgLS1zbS10ZXh0LWNvbG9yLWxpZ2h0OiByZ2JhKDI1NSwyNTUsMjU1LCAwLjUpOwogICAgLS1zbS1idXR0b24tY29sb3I6ICMyMTIxMjQ7CiAgICAtLXNtLWZpZWxkLWJnLWNvbG9yOiAjMjEyMTI0OwogICAgLS1zbS1saW5rLWNvbG9yOiAjRkVEMzREOwogICAgLS1zbS1pbnZhbGlkLWJnLWNvbG9yOiByZ2JhKDI1NSwgMCwgMCwgMC4yKTsKICB9CiAgLnNtX19mb3JtIC5zbS1maWVsZF9faW5wdXQgewogICAgYm9yZGVyOiAxcHggc29saWQgIzdjN2M3YyAhaW1wb3J0YW50OwogIH0KICAuc21fX2Zvcm0gLnNtLWZpZWxkX19zZWxlY3QgewogICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCdkYXRhOmltYWdlL3N2Zyt4bWw7Y2hhcnNldD1VUy1BU0NJSSwlM0NzdmclMjB4bWxucyUzRCUyMmh0dHAlM0ElMkYlMkZ3d3cudzMub3JnJTJGMjAwMCUyRnN2ZyUyMiUyMHdpZHRoJTNEJTIyMjkyLjQlMjIlMjBoZWlnaHQlM0QlMjIyOTIuNCUyMiUzRSUzQ3BhdGglMjBmaWxsJTNEJTIyd2hpdGUlMjIlMjBkJTNEJTIyTTI4NyUyMDY5LjRhMTcuNiUyMDE3LjYlMjAwJTIwMCUyMDAtMTMtNS40SDE4LjRjLTUlMjAwLTkuMyUyMDEuOC0xMi45JTIwNS40QTE3LjYlMjAxNy42JTIwMCUyMDAlMjAwJTIwMCUyMDgyLjJjMCUyMDUlMjAxLjglMjA5LjMlMjA1LjQlMjAxMi45bDEyOCUyMDEyNy45YzMuNiUyMDMuNiUyMDcuOCUyMDUuNCUyMDEyLjglMjA1LjRzOS4yLTEuOCUyMDEyLjgtNS40TDI4NyUyMDk1YzMuNS0zLjUlMjA1LjQtNy44JTIwNS40LTEyLjglMjAwLTUtMS45LTkuMi01LjUtMTIuOHolMjIlMkYlM0UlM0MlMkZzdmclM0UnKSwKICAgICAgbGluZWFyLWdyYWRpZW50KHRvIGJvdHRvbSwgcmdiYSgwLDAsMCwgMC43KSAwJSxyZ2JhKDAsMCwwLCAwLjgpIDEwMCUpICFpbXBvcnRhbnQ7CiAgfQogIAp9CgpAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7CiAgOnJvb3QgewogICAgLS14LXNtYWxsLW1hcmdpbjogM3B4OwogICAgLS1zbWFsbC1tYXJnaW46IDZweDsKICAgIC0tbWVkaXVtLW1hcmdpbjogMTJweDsKICAgIC0tbGFyZ2UtbWFyZ2luOiAyNHB4OwogICAgLS14LWxhcmdlLW1hcmdpbjogNDhweDsKICAgIC0tbGFyZ2UtbmVnYXRpdmUtbWFyZ2luOiAtMjRweDsKICAgIC0teC1sYXJnZS1uZWdhdGl2ZS1tYXJnaW46IC00OHB4OwogIH0KfQoKLnNtX19mb3JtIHsKICBmb250LWZhbWlseTogIlJvYm90byIsIHNhbnMtc2VyaWY7CiAgZm9udC1zaXplOiAxNHB4OwogIGxpbmUtaGVpZ2h0OiAyMHB4Owp9Cgouc20tZm9ybS1pY29uIHsKICBtYXgtaGVpZ2h0OiA1MHB4OwogIG1hcmdpbi1sZWZ0OiB2YXIoLS1zbS1zbWFsbC1tYXJnaW4pOwogIG1hcmdpbi10b3A6IHZhcigtLXNtLW1lZGl1bS1tYXJnaW4pOwp9Cgouc20tZm9ybS1pY29uLS1oYXMtaGVhZGVyIHsKICBtYXJnaW4tdG9wOiAtMjVweDsKfQoKLnNtLWZvcm0tYmFubmVyIHsKICBoZWlnaHQ6IDE0MHB4OwogIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7CiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjsKICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7Cn0KCi5zbS1mb3JtLXRpdGxlIHsKICBib3JkZXItYm90dG9tOiAxcHggc29saWQgdmFyKC0tc20tYm9yZGVyLWNvbG9yLW5vcm1hbCk7CiAgcGFkZGluZy1ib3R0b206IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgbWFyZ2luOiB2YXIoLS1zbS1zbWFsbC1tYXJnaW4pOwp9Cgouc20tZm9ybS10aXRsZV9faGVhZGVyIHsKICBtYXJnaW4tYm90dG9tOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7CiAgY29sb3I6IHZhcigtLXNtLXRleHQtY29sb3Itbm9ybWFsKTsKfQoKLnNtLWZvcm0tdGl0bGVfX2luZm8gewogIGNvbG9yOiB2YXIoLS1zbS10ZXh0LWNvbG9yLWxpZ2h0KTsKICBtYXJnaW4tdG9wOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7CiAgbWFyZ2luLWJvdHRvbTogMDsKfQoKLnNtLWZpZWxkX193cmFwcGVyIHsKICBwYWRkaW5nOiB2YXIoLS1zbS1zbWFsbC1tYXJnaW4pOwp9Cgouc20tZmllbGRfX3dyYXBwZXI6Zmlyc3Qtb2YtdHlwZSB7CiAgcGFkZGluZy10b3A6IHZhcigtLXNtLWxhcmdlLW1hcmdpbik7Cn0KCi5zbS1maWVsZCB7CiAgZGlzcGxheTogZmxleDsKICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOwogIGJveC1zaXppbmc6IGJvcmRlci1ib3g7Cn0KCi5zbS1maWVsZCBsYWJlbCB7CiAgY29sb3I6IHZhcigtLXNtLXRleHQtY29sb3Itbm9ybWFsKTsgIAp9Cgouc20tZmllbGQtLXNtYWxsIHsKICB3aWR0aDogdmFyKC0tc20taW5wdXQtd2lkdGgtc21hbGwpOwp9Cgouc20tZmllbGQtLW1lZGl1bSB7CiAgd2lkdGg6IHZhcigtLXNtLWlucHV0LXdpZHRoLW1lZGl1bSk7Cn0KCi5zbS1maWVsZC0tbGFyZ2UgewogIHdpZHRoOiB2YXIoLS1zbS1pbnB1dC13aWR0aC1sYXJnZSk7Cn0KCi5zbS1maWVsZC0tbGFyZ2Ugc2VsZWN0IHsKICB3aWR0aDogMTAwJTsKfQoKLnNtLWZpZWxkX19sYWJlbCB7CiAgbWFyZ2luLWJvdHRvbTogdmFyKC0tc20teC1zbWFsbC1tYXJnaW4pOwogIGNvbG9yOiB2YXIoIC0tc20tdGV4dC1jb2xvci1ub3JtYWwpOwogIGZvbnQtd2VpZ2h0OiA1MDA7Cn0KCi5zbS1maWVsZF9faW5wdXQgewogIGFsbDogdW5zZXQ7CiAgcGFkZGluZzogdmFyKC0tc20tc21hbGwtbWFyZ2luKTsKICBib3JkZXItdG9wOiAxcHggc29saWQgIzdjN2M3YzsKICBib3JkZXItbGVmdDogMXB4IHNvbGlkICNjM2MzYzM7CiAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2MzYzNjMzsKICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2RkZDsKICBiYWNrZ3JvdW5kOiB2YXIoLS1zbS1maWVsZC1iZy1jb2xvcik7CiAgYm9yZGVyLXJhZGl1czogNXB4OwogIGNvbG9yOiB2YXIoLS1zbS10ZXh0LWNvbG9yLW5vcm1hbCk7CiAgZm9udC1zaXplOiAxNnB4Owp9Cgouc20tZmllbGRfX2lucHV0OmZvY3VzOmludmFsaWQgewogIGJveC1zaGFkb3c6IGluc2V0IDAgMCAzcHggcmdiKDI1NSAwIDApOwogIGJhY2tncm91bmQtY29sb3I6IHZhcigtLXNtLWludmFsaWQtYmctY29sb3IpOwp9Cgouc20tZmllbGRfX3NlbGVjdCB7CiAgYWxsOiB1bnNldDsKICBmb250LXNpemU6IDE2cHg7CiAgcGFkZGluZzogdmFyKC0tc20tc21hbGwtbWFyZ2luKTsKICBwYWRkaW5nLXJpZ2h0OiB2YXIoLS1zbS1sYXJnZS1tYXJnaW4pOwogIGJvcmRlcjogMXB4IHNvbGlkICM3YzdjN2M7CiAgYm94LXNoYWRvdzogMCAxcHggMCAxcHggcmdiYSgwLDAsMCwuMDQpOwogIGJhY2tncm91bmQ6IHZhcigtLXNtLWJ0bi1iZy1jb2xvcik7CiAgYm9yZGVyLXJhZGl1czogNXB4OwogIGFwcGVhcmFuY2U6IG5vbmU7CiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCdkYXRhOmltYWdlL3N2Zyt4bWw7Y2hhcnNldD1VUy1BU0NJSSwlM0NzdmclMjB4bWxucyUzRCUyMmh0dHAlM0ElMkYlMkZ3d3cudzMub3JnJTJGMjAwMCUyRnN2ZyUyMiUyMHdpZHRoJTNEJTIyMjkyLjQlMjIlMjBoZWlnaHQlM0QlMjIyOTIuNCUyMiUzRSUzQ3BhdGglMjBmaWxsJTNEJTIydmFyKC0tc20tdGV4dC1jb2xvci1ub3JtYWwpJTIyJTIwZCUzRCUyMk0yODclMjA2OS40YTE3LjYlMjAxNy42JTIwMCUyMDAlMjAwLTEzLTUuNEgxOC40Yy01JTIwMC05LjMlMjAxLjgtMTIuOSUyMDUuNEExNy42JTIwMTcuNiUyMDAlMjAwJTIwMCUyMDAlMjA4Mi4yYzAlMjA1JTIwMS44JTIwOS4zJTIwNS40JTIwMTIuOWwxMjglMjAxMjcuOWMzLjYlMjAzLjYlMjA3LjglMjA1LjQlMjAxMi44JTIwNS40czkuMi0xLjglMjAxMi44LTUuNEwyODclMjA5NWMzLjUtMy41JTIwNS40LTcuOCUyMDUuNC0xMi44JTIwMC01LTEuOS05LjItNS41LTEyLjh6JTIyJTJGJTNFJTNDJTJGc3ZnJTNFJyksCiAgbGluZWFyLWdyYWRpZW50KHRvIGJvdHRvbSwgI2ZmZmZmZiAwJSwjZTVlNWU1IDEwMCUpOwogIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQsIHJlcGVhdDsKICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiByaWdodCAuN2VtIHRvcCA1MCUsIDAgMDsKICBiYWNrZ3JvdW5kLXNpemU6IC42NWVtIGF1dG8sIDEwMCU7CiAgYm94LXNpemluZzogYm9yZGVyLWJveDsKICB3aWR0aDogMTAwJTsKICBjb2xvcjogdmFyKC0tc20tdGV4dC1jb2xvci1ub3JtYWwpOwp9Cgouc20tZmllbGRfX2lucHV0OjpwbGFjZWhvbGRlciB7CiAgY29sb3I6IHZhcigtLXNtLXRleHQtY29sb3ItbGlnaHQpOwp9Cgouc20tZmllbGRfX2lucHV0LnNtLWZpZWxkX19pbnB1dC0tdGV4dCwKLnNtLWZpZWxkX19pbnB1dC5zbS1maWVsZF9faW5wdXQtLXRleHRhcmVhIHsKICBjdXJzb3I6IHRleHQ7Cn0KCi5zbS1maWVsZF9faW5wdXQuc20tZmllbGRfX2lucHV0LS10ZXh0YXJlYSB7CiAgcmVzaXplOiB2ZXJ0aWNhbDsKICBtaW4taGVpZ2h0OiA2MHB4Owp9Cgouc20tZmllbGRfX2lucHV0LS1maWxlIHsKICBtYXJnaW4tdG9wOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7Cn0KCi5zbS1jaG9pY2UtbGlzdF9fY2hvaWNlIHsKICBkaXNwbGF5OiBmbGV4OwogIGZsZXgtZGlyZWN0aW9uOiByb3c7CiAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICBtYXJnaW4tYm90dG9tOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7Cn0KCi5zbS1jaG9pY2UtbGlzdF9fY2hvaWNlIGlucHV0IHsKICBtYXJnaW4tcmlnaHQ6IHZhcigtLXNtLXgtc21hbGwtbWFyZ2luKTsKfQoKLnNtLWZpZWxkX19pbmZvIHsKICBjb2xvcjogdmFyKC0tc20tdGV4dC1jb2xvci1saWdodCk7CiAgZm9udC1zaXplOiB2YXIoLS1zbS1mb250LXNpemUtc21hbGwpOwp9Cgouc20tc2VjdGlvbi1icmVhayB7CiAgYm9yZGVyLXRvcDogMXB4IHNvbGlkIHZhcigtLXNtLWJvcmRlci1jb2xvci1ub3JtYWwpOwp9Cgouc20tc2VjdGlvbi1icmVha19faGVhZGVyIHsKICBtYXJnaW4tYm90dG9tOiB2YXIoLS1zbS14LXNtYWxsLW1hcmdpbik7CiAgY29sb3I6IHZhcigtLXNtLXRleHQtY29sb3Itbm9ybWFsKTsKICBmb250LXdlaWdodDogNTAwOwp9Cgouc20tc2VjdGlvbi1icmVha19faW5mbyB7CiAgbWFyZ2luLXRvcDogMDsKICBjb2xvcjogdmFyKC0tc20tdGV4dC1jb2xvci1saWdodCk7Cn0KCi5zbS1hY3Rpb25zX19jb250YWluZXIgewogIGJvcmRlci10b3A6IDFweCBzb2xpZCB2YXIoLS1zbS1ib3JkZXItY29sb3Itbm9ybWFsKTsKICBtYXJnaW46IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgcGFkZGluZy10b3A6IHZhcigtLXNtLW1lZGl1bS1tYXJnaW4pOwp9Cgouc20tYnJhbmRpbmctZm9vdGVyIHsKICBtYXJnaW46IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgcGFkZGluZy10b3A6IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgcGFkZGluZy1ib3R0b206IHZhcigtLXNtLW1lZGl1bS1tYXJnaW4pOwogIGZvbnQtc2l6ZTogOTAlOwp9Cgouc20tYnJhbmRpbmctZm9vdGVyIGEgewogIHRleHQtZGVjb3JhdGlvbjogbm9uZTsKICBjb2xvcjogdmFyKC0tc20tbGluay1jb2xvcik7Cn0KCi5zbS1idG4gewogIGJhY2tncm91bmQ6IHZhcigtLXNtLWJvcmRlci1jb2xvci1ub3JtYWwpOwogIGJvcmRlcjogMDsKICBib3JkZXItcmFkaXVzOiA2cHg7CiAgcGFkZGluZzogdmFyKC0tc20tc21hbGwtbWFyZ2luKSB2YXIoLS1zbS1tZWRpdW0tbWFyZ2luKTsKICBmb250LXNpemU6IDEyMCU7CiAgZm9udC13ZWlnaHQ6IDYwMDsKICBjdXJzb3I6IHBvaW50ZXI7Cn0KCi5zbS1idG4tLXByaW1hcnkgewogIGJhY2tncm91bmQ6IHZhcigtLXNtLXRleHQtY29sb3Itbm9ybWFsKTsKICBjb2xvcjogdmFyKC0tc20tYnV0dG9uLWNvbG9yKTsKfQoKLnNtLWJ0bjpob3ZlciB7CiAgYm94LXNoYWRvdzogMCAwIDZweCAtMXB4IHZhcigtLXNtLWFjY2VudC1jb2xvcik7Cn0KCi5zbS1maWVsZF9fZ3JvdXAgewogIGRpc3BsYXk6IGZsZXg7CiAgZmxleC1kaXJlY3Rpb246IHJvdzsKfQoKLnNtLWZpZWxkX19ncm91cC1pdGVtIHsKICBkaXNwbGF5OiBmbGV4OwogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47CiAgbWFyZ2luLXJpZ2h0OiB2YXIoLS1zbS1zbWFsbC1tYXJnaW4pOwp9Cgouc20tZmllbGRfX2dyb3VwLWl0ZW06bGFzdC1vZi10eXBlIHsKICBtYXJnaW4tcmlnaHQ6IDA7Cn0KCi5zbS1maWVsZF9faXRlbS1pbmZvIHsKICBjb2xvcjogdmFyKC0tc20tdGV4dC1jb2xvci1saWdodCk7CiAgZm9udC1zaXplOiB2YXIoLS1zbS1mb250LXNpemUtc21hbGwpOwp9Cgouc20tZmllbGRfX2dyb3VwLWl0ZW0gewogIGZsZXg6IDE7Cn0KCgouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLWxhcmdlIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpmaXJzdC1vZi10eXBlIHsKICBmbGV4OiAwOwp9Cgouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLWxhcmdlICAuc20tZmllbGRfX2dyb3VwLWl0ZW06bGFzdC1vZi10eXBlIHsKICBmbGV4OiAxOwp9Cgouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLXNtYWxsIC5zbS1maWVsZF9fZ3JvdXAsCi5zbS1maWVsZC0tbmFtZS5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAgewogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47Cn0KCi5zbS1maWVsZC0tbmFtZS5zbS1maWVsZC0tc21hbGwgLnNtLWZpZWxkX19ncm91cC1pdGVtLAouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLW1lZGl1bSAuc20tZmllbGRfX2dyb3VwLWl0ZW0gewogIG1hcmdpbi1ib3R0b206IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgbWFyZ2luLXJpZ2h0OiAwOwp9Cgouc20tZmllbGQtLW5hbWUuc20tZmllbGQtLXNtYWxsIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpsYXN0LW9mLXR5cGUsCi5zbS1maWVsZC0tbmFtZS5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpsYXN0LW9mLXR5cGUgIHsKICBtYXJnaW4tYm90dG9tOiAwOwp9Cgouc20tZmllbGQtLWFkZHJlc3Muc20tZmllbGQtLXNtYWxsIC5zbS1maWVsZF9fZ3JvdXAsCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAgewogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47Cn0KCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tc21hbGwgLnNtLWZpZWxkX19ncm91cC1pdGVtLAouc20tZmllbGQtLWFkZHJlc3Muc20tZmllbGQtLW1lZGl1bSAuc20tZmllbGRfX2dyb3VwLWl0ZW0gewogIG1hcmdpbi1ib3R0b206IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7CiAgbWFyZ2luLXJpZ2h0OiAwOwp9Cgouc20tZmllbGQtLWFkZHJlc3Muc20tZmllbGQtLXNtYWxsIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpsYXN0LW9mLXR5cGUsCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpsYXN0LW9mLXR5cGUsCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tc21hbGwgLnNtLWZpZWxkX19ncm91cC1pdGVtOmZpcnN0LW9mLXR5cGUsCi5zbS1maWVsZC0tYWRkcmVzcy5zbS1maWVsZC0tbWVkaXVtIC5zbS1maWVsZF9fZ3JvdXAtaXRlbTpmaXJzdC1vZi10eXBlICB7CiAgbWFyZ2luLWJvdHRvbTogMDsKfQoKLnNtLWZpZWxkLS1hZGRyZXNzIC5zbS1maWVsZF9faW5wdXQgewogIG1hcmdpbi1ib3R0b206IHZhcigtLXNtLXNtYWxsLW1hcmdpbik7Cn0K"/></form>
-           
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>           
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
 <style>
     /* Preloder */ #preloder {position: fixed;width: 100%;height: 100%;z-index: 999999;justify-content: center;background-color: teal;align-items: center;text-align: center;/*min-height: 80vh;*/}
 .loader {width: 40px;height: 40px;position: absolute;border-radius: 60px;animation: loader 0.8s linear infinite;-webkit-animation: loader 0.8s linear infinite;}
@@ -148,7 +149,7 @@
 <style>
     /* Set a style for all buttons */
     .buttoneso {
-      background-color: #04aa6def;
+      background-color: #093324ef;
       color: white;
       padding: 14px 20px;
       margin: 8px 0;
@@ -171,14 +172,14 @@
     
     /* Add a color to the cancel button */
     .cancelbtn {
-      background-color: rgb(0, 128, 128);
+      background-color: rgba(11, 54, 54, 0.897);
     
       border-radius:  50px 0px 0px 50px
     }
     
     /* Add a color to the delete button */
     .deletebtn {
-      background-color: rgba(0, 128, 128, 0.781);
+      background-color: rgba(12, 82, 82, 0.63);
       border-radius: 0px 50px 50px 00px;
      
     }
@@ -292,8 +293,8 @@
       .sidenav {padding-top: 15px;}
       .sidenav a {font-size: 18px;}
     }
-    </style>  
-    <style>
+</style>  
+<style>
         .tablinkeso {
           float: left;
           border: none;
@@ -309,8 +310,159 @@
         /* Style the tab content */
         .tabcontenteso {
           display: none;}
-        </style>
-          
+</style>
+<style>
+
+.bodyBubble {
+  background-color: rgba(11, 51, 51, 0.945);
+  background: linear-gradient(to bottom, rgb(5, 37, 37) 0%, rgb(10, 85, 85) 100%);
+  width: 100%;
+  height: 280px;
+  display: flex;
+  z-index: -3;
+  
+}
+
+/* bubbles*/
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -4;
+}
+
+.bubbles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 15px;
+  height: 10px;
+  background: rgba(5, 75, 75, 0.829);
+  animation: animate 25s linear infinite;
+  bottom: 20px;
+  z-index: -5;
+}
+
+.bubbles li:nth-child(1) {
+  left: 25%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 1s;
+}
+
+.bubbles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 10s;
+}
+
+.bubbles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.bubbles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+.bubbles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 1s;
+}
+
+.bubbles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.bubbles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.bubbles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 35s;
+}
+
+.bubbles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 25s;
+}
+
+.bubbles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}    
+</style>  
+<script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /* Loop through a collection of all HTML elements: */
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /* Make an HTTP request using the attribute value as the file name: */
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /* Remove the attribute, and call this function once more: */
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /* Exit the function: */
+          return;
+        }
+      }
+    }
+</script>        
 </head>
 <body>
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -360,55 +512,77 @@
 </div>
     
 <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#Close" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#">Bloc de notas</a>
     <a href="#">Herramientas</a>
     <a href="#">Ayuda</a>
     <a href="#">Retroalimentación</a>
 </div>
 
-<div id="main">
-<div class="w3-bar w3-teal w3-card-2 w3-xxlarge " style="height:60px">
-  <button class="w3-bar-item w3-teal  w3-ripple w3-xlarge" onclick="openCity('Tokyo')" ><i class="fa-duotone fa-bars w3-xlarge" style="margin-top:8px"></i></button>
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="w3-hide">&#9776; open</span>
-  <button class="w3-bar-item w3-teal w3-ripple w3-large" onclick="openCity('London')" style="margin-top:8px"><span><b>Inicio</b></span></button>
-  <!-- Contiene el sub menu
-   <button class="w3-bar-item w3-button w3-ripple" onclick="openCity('Paris')"><span>I</span></button>
-   -->
-  
+<div id="main" >
+    <div class="verde-mode">
+        <div class=" w3-bar verde-mode w3-card-2 w3-xxlarge " style="height:60px">
+            <button class="w3-bar-item verde-mode  w3-ripple w3-xlarge" onclick="openCity('Tokyo')"  aria-label="El toggle de Menu"><i class="fa-duotone fa-bars w3-xlarge" style="margin-top:8px"></i></button>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="w3-hide verde-mode">&#9776; open</span>
+            <button class="w3-bar-item  verde-mode w3-ripple w3-large" onclick="openCity('London')" style="margin-top:8px"><span class='con-una-sombra-negra-en-el-texto'><b>Inicio</b></span></button>
+            <style>.con-una-sombra-negra-en-el-texto {color: white;text-shadow: 2px 2px 4px #000000;}</style>
+            <!-- Contiene el sub menu
+            <button class="w3-bar-item w3-button w3-ripple" onclick="openCity('Paris')"><span>I</span></button>
+            -->    
 
-<!-- Se abre hasta que quede el spacio entre texto y sub 
-  <div class="w3-dropdown-hover w3-right">
-    <button class="w3-button w3-teal "> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://xbrpw.github.io/eso/img/sor-juana-ines-de-la-cruz-verde.svg" class="    w3-right" style="width:38px">  &nbsp; &nbsp;&nbsp;   </button>    
-    <div class="w3-dropdown-content w3-bar-block w3-teal w3-card-2 ">
-      <a href="#" class="w3-bar-item w3-button"><i class="fa-duotone fa-right-from-bracket"></i> <span>Cerrar Sesión</span></a>
-        <button class="w3-bar-item w3-button w3-ripple w3-right" onclick="DarkMode()"><i class="fa-duotone fa-circle-half-stroke"></i> <span>Dark Mode</span> </button>  
-    </div>
-  </div> -->   
-  <span class="w3-margin-right w3-padding" title="Dark Mode">&nbsp;&nbsp;<svg class="icon icon-sor-juanaicon- w3-ripple w3-right-align  w3-right w3-margin-right " title="Dark Mode"  onclick="DarkMode()" style="margin-top:2px; width: 1.6em; height:1.6em;"><use xlink:href="#icon-sor-juana-ines-de-la-cruzicon-"></use></svg>   &nbsp;&nbsp;&nbsp;&nbsp;</span>
-  <!-- esta es otra forma con img
-<button class="w3-bar-item w3-teal w3-ripple w3-right-align  w3-right "  onclick="DarkMode()" ><img src="https://xbrpw.github.io/eso/img/sor-juana-ines-de-la-cruz-verde.svg" class="w3-right " style="width:38px" title="Dark Mode">  </button>-->
-  <button class="w3-bar-item w3-teal w3-ripple w3-right-align  w3-right w3-xlarge" style="margin-top:5px" onclick="openCity('Notificaciones')" title="Notificaciones"><i class="fa-duotone fa-bell w3-xlarge"></i><span class="w3-hide-small w3-large">&nbsp;Notificaciones</span></button>
-  <button class="w3-bar-item w3-teal w3-ripple w3-right-align  w3-right w3-xlarge" style="margin-top:5px" onclick="document.getElementById('id01eso').style.display='block'" title="Ayuda"><i class="fa-duotone fa-circle-question w3-xlarge"></i><span class="w3-hide-small w3-large">&nbsp;Ayuda</span></button>
-  <button class="w3-bar-item w3-teal w3-ripple w3-right-align  w3-right w3-xlarge" style="margin-top:5px" onclick="document.getElementById('id01eso').style.display='block'" title="Herramientas"><i class="fa-duotone fa-circle-question w3-xlarge"></i><span class="w3-hide-small w3-large">&nbsp;Herramientas</span></button>
-</div>
-
-<div id="London" class="city" >  
-    <div class="w3-container w3-margin-bottom">
-        <div class="w3-card-2-white-15">
-            <div class="w3-panel verde-mode w3-display-container w3-ripple w3-round-xlarge w3-card-4 " ><br>           
-            <span>  <i class="fa-duotone fa-address-book w3-xlarge w3-ripple"  ></i> &nbsp; <span class="w3-xlarge"><b>Directorio</b></span> </span>
-             <span onclick="this.parentElement.style.display='none'"    class=" w3-large w3-right-align  w3-right w3-ripple"> &nbsp; &nbsp;&times; &nbsp; &nbsp; </span>
-            <p><b>Del personal administrativo y docentes </b> de la escuela. Completa tu registro. <br>¡Gracias por tu participación!</p>
-            <div class="w3-container clearfix " >
-                <div class="w3-marging w3-padding">
-                    <button type="button" class="buttoneso cancelbtn" onclick="openCity('Notificaciones')" >                
-                        <a href="https://share.sheetmonkey.io/f/jMBVZqEcZXYjBWkUsiBuE9" target="eso0514" class="a"><b> Completar <br> registro</b></a>
-                    </button>
-                    <button type="button" onclick="this.parentElement.style.display='none'" class="buttoneso deletebtn"><span><b>Lo he <br>completado</b><span></button>                       
+            <!-- Se abre hasta que quede el spacio entre texto y sub 
+            <div class="w3-dropdown-hover w3-right">
+                <button class="w3-button w3-teal "> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://xbrpw.github.io/eso/img/sor-juana-ines-de-la-cruz-verde.svg" class="    w3-right" style="width:38px">  &nbsp; &nbsp;&nbsp;   </button>    
+                <div class="w3-dropdown-content w3-bar-block w3-teal w3-card-2 ">
+                <a href="#" class="w3-bar-item w3-button"><i class="fa-duotone fa-right-from-bracket"></i> <span>Cerrar Sesión</span></a>
+                    <button class="w3-bar-item w3-button w3-ripple w3-right" onclick="DarkMode()"><i class="fa-duotone fa-circle-half-stroke"></i> <span>Dark Mode</span> </button>  
                 </div>
-              </div> <div class="w3-margin-bottom "></div>        
-            </div>
+            </div> -->   
+            <span class="w3-margin-right w3-padding" title="Dark Mode">&nbsp;&nbsp;<svg class="icon icon-sor-juanaicon- w3-ripple w3-right-align  w3-right w3-margin-right " title="Dark Mode"  onclick="DarkMode()" style="margin-top:2px; width: 1.6em; height:1.6em;"><use xlink:href="#icon-sor-juana-ines-de-la-cruzicon-"></use></svg>   &nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <!-- esta es otra forma con img
+            <button class="w3-bar-item w3-teal w3-ripple w3-right-align  w3-right "  onclick="DarkMode()" ><img src="https://xbrpw.github.io/eso/img/sor-juana-ines-de-la-cruz-verde.svg" class="w3-right " style="width:38px" title="Dark Mode">  </button>-->
+            <button class="w3-bar-item verde-mode w3-ripple w3-right-align  w3-right w3-xlarge" style="margin-top:5px" onclick="openCity('Notificaciones')" title="Notificaciones"><i class="fa-duotone fa-bell w3-xlarge"></i><span class="w3-hide-small w3-large verde-mode">&nbsp;Notificaciones</span></button>
+            <button class="w3-bar-item verde-mode w3-ripple w3-right-align  w3-right w3-xlarge" style="margin-top:5px" onclick="document.getElementById('id01eso').style.display='block'" title="Ayuda"><i class="fa-duotone fa-circle-question w3-xlarge verde-mode"></i><span class="w3-hide-small w3-large">&nbsp;Ayuda</span></button>
+            <button class="w3-bar-item verde-mode w3-ripple w3-right-align  w3-right w3-xlarge" style="margin-top:5px"  title="Herramientas">
+                <a href="https://xbrpw.github.io/eso//herramientas.html" target="eso0514" class="a">
+                    <i class="fa-duotone fa-tools w3-xlarge verde-mode"></i><span class="w3-hide-small w3-large">&nbsp;Herramientas</span>
+                </a>
+            </button>
+        </div>
+    </div>
+
+ <div id="London" class="city" >  
+    <div class="w3-container w3-margin-bottom ">
+      <div class="bodyBubbl"></div>
+       
+    
+
+        <div class="w3-card-2-white-15 w3-card-4"  onclick="openCity('Notificaciones')" > 
+            <a href="https://share.sheetmonkey.io/f/jMBVZqEcZXYjBWkUsiBuE9" target="eso0514" class="a">
+                <div class="w3-panel verde-mode w3-display-container w3-ripple w3-round-xlarge w3-card-4 bodyBubble" ><br> 
+                    <div class="bg_gradient"   onclick="this.parentElement.style.display='none'">
+                        <ul class="bubbles"  >                 
+                            <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>
+                            <div style="z-index: 1;">
+                                <span>  <i class="fa-duotone fa-address-book w3-xlarge w3-ripple con-una-sombra-negra-en-el-texto"  ></i> &nbsp; <span class="w3-xlarge con-una-sombra-negra-en-el-texto"  style="z-index: 9999;"><b>Directorio</b></span> </span>
+                                <span onclick="this.parentElement.style.display='none'"    class=" w3-large w3-right-align  w3-right w3-ripple"> &nbsp; &nbsp;&times; &nbsp; &nbsp; </span>
+                                <p><b  style="z-index: 1;">Del personal administrativo y docentes </b> de la escuela. Completa tu registro. <br></p>
+                                <div class="w3-container clearfix "  >
+                                
+                                    <div class="w3-center w3-centered">
+                                        <button type="button" class="buttoneso cancelbtn w3-card-2" onclick="openCity('Notificaciones')"  style="z-index: 1;">                
+                                            <a href="https://share.sheetmonkey.io/f/jMBVZqEcZXYjBWkUsiBuE9" target="eso0514" class="a con-una-sombra-negra-en-el-texto"><b> Completar <br> registro</b></a>
+                                        </button>
+                                        <button type="button" onclick="this.parentElement.style.display='none'" class="buttoneso deletebtn w3-card-2 con-una-sombra-negra-en-el-texto"  style="z-index: 9999;"><span><b>Lo he <br>completado</b><span></button>                       
+                                        <span class="w3-large con-una-sombra-negra-en-el-texto"> ¡Gracias por tu participación!  </span>
+                                    </div>
+                                
+                                </div> 
+                            </div>
+                        </ul>       
+                    </div>            
+                </div>
+            </a>
         </div>
       </div>       
  
@@ -427,16 +601,16 @@
                 <a href="./tecnologia.html" target="esoSJ" class="a">
                     <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-ellipsis-vertical w3-xlarge w3-right-align w3-ripple"  ></i></span> 
                         <div class="w3-bar-item ">                            
-                            <span class="w3-large w3-ripple"><span data-nosnippet><b> Tecnología</b></span>  </span><br>
-                                <span class="w3-ripple">Innovación</span>  
+                            <span class="w3-large w3-ripple" data-nosnippet><b> Tecnología</b></span><br>
+                            <span class="w3-ripple">Innovación</span>  
                         </div>    
                 </a>                               
             </li>
             <li class="w3-bar w3-ripple" onclick="openCity('Paris')"> 
                 <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-ellipsis-vertical w3-xlarge w3-right-align w3-ripple"  ></i></span> 
                     <div class="w3-bar-item ">                            
-                        <span class="w3-large w3-ripple"><span data-nosnippet><b> Ingeniería </b></span>  </span><br>
-                            <span class="w3-ripple">Asombro</span>  
+                        <span class="w3-large w3-ripple" data-nosnippet><b> Ingeniería </b>  </span><br>
+                        <span class="w3-ripple">Asombro</span>  
                     </div>                                   
             </li>   
             <li class="w3-bar w3-ripple" onclick="openCity('Paris')"> 
@@ -594,8 +768,8 @@
     </div>
       
     <div  style="overflow: hidden; position: fixed; bottom: 0; width: 100%;;justify-content: center;align-items: center;text-align: center;" class="verde-mode">
-      <button class="tablinkeso verde-mode" onclick="openeso('xproyecto', this, 'teal')" id="defaultOpeneso"><i class="fa-duotone fa-book"></i> &nbsp;<b> Proyecto</b></button>
-      <button class="tablinkeso verde-mode" onclick="openeso('xmateria', this, 'teal')"><i class="fa-duotone fa-folder-open"></i> &nbsp; <b>Materia</b></button>                        
+      <button class="tablinkeso verde-mode" onclick="openeso('xproyecto', this, 'rgba(2, 34, 34, 0.432)')" id="defaultOpeneso"><i class="fa-duotone fa-book con-una-sombra-negra-en-el-texto"></i> &nbsp;<b class='con-una-sombra-negra-en-el-texto'> Proyecto</b></button>
+      <button class="tablinkeso verde-mode" onclick="openeso('xmateria', this, 'rgba(2, 34, 34, 0.432)')"><i class="fa-duotone fa-folder-open con-una-sombra-negra-en-el-texto"></i> &nbsp; <b class='con-una-sombra-negra-en-el-texto'>Materia</b></button>                        
     </div>
 </div> 
 
@@ -614,6 +788,7 @@
                                 <span class="w3-large w3-ripple"><i class="fa-duotone fa-arrow-left w3-xlarge w3-ripple"  ></i> &nbsp;<b>Regresar</b></span>
                             </div>                                   
                     </li>
+                    
                     <iframe  src="./ciencia.html" name="esoSJ" height="710px" width="100%" title="ESO-0514" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
                     <div w3-include-html="./ciencia.html"></div> 
           
@@ -695,11 +870,9 @@
 </div>
 
 <div id="Notificaciones" class=" city" style="display:none"> 
-    <iframe  src="https://xbrpw.github.io/eso/alerts/index.html" name="eso0514" height="710px" width="100%" title="ESO-0514" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
-    <div w3-include-html="https://xbrpw.github.io/eso/alerts/index.html"></div> 
+    <iframe  src="" name="eso0514" height="710px" width="100%" title="ESO-0514" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
     
-    <p id="getURL" class="w3-hide"></p>
-    
+    <p id="getURL" class="w3-hide"></p>    
     <script>
         document.getElementById("getURL").innerHTML = 
         "" + window.location.href;
@@ -840,7 +1013,9 @@
     reset();
     </script> 
 
-
+<script>
+    includeHTML();
+</script>
 <script>
 // Get the modal
 var modal = document.getElementById('id03open');
@@ -853,6 +1028,7 @@ window.onclick = function(event) {
 }
 </script>
 
+<script src='xbr.pw/assets/css/hey/fondo-del-buuble//swiper.min.js'></script>
 <script src="https://www.luisangelmaciel.one/js/compressed.js"></script>
 <script src="https://www.luisangelmaciel.one/preloader.js"></script>
 <script>
