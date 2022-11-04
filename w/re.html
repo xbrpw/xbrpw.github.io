@@ -49,6 +49,7 @@
 .white-mode  .w3-ulsj li {padding: 8px 16px;border-bottom: 2px solid rgba(227, 236, 236, 0.521);}
 .white-mode  .w3-ulsj li:last-child {border-bottom: none}
 .white-mode  .w3-teal,.w3-hover-teal:hover {color: #fff!important;background-color: #009688!important}
+.white-mode  .w3-card-2 {box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)}
 
 .dark-mode {
   background-color: rgb(12, 11, 11);
@@ -69,10 +70,10 @@
 .dark-mode .w3-ulsj li {padding: 8px 16px;border-bottom: 2px solid rgba(4, 22, 22, 0.952)}
 .dark-mode .w3-ulsj li:last-child {border-bottom: none}
 .dark-mode .w3-teal,.w3-hover-teal:hover {color: #fff!important;background-color: #043d37!important}
+.dark-mode .w3-card-2-white {box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);}
 
 .a,.a:after,.a:link,.a:visited,.a:hover{text-decoration: none;color:inherit;cursor: pointer;}
 .w3-teal-opacity,.w3-hover-teal-opacity:hover {color: #fff!important;background-color: #009687f1!important}
-.w3-card-2-white {box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);}
 .w3-card-2-white-15 {box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.24), 0 2px 10px 0 rgba(255, 255, 255, 0.199);border-radius: 15px 15px 15px 15px}
 .w3-card-2-black {box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(255, 255, 255, 0.12);border-radius: 15px 15px 15px 15px}
 .w3-modal-white {z-index: 3;display: none;padding-top: 100px;position: fixed;left: 0;top: 0;width: 100%;height: 100%;overflow: auto;background-color: rgb(255, 255, 255);background-color: rgb(255, 255, 255)}
@@ -523,7 +524,7 @@
 
 <div id="main" >
     <div class="verde-mode">
-        <div class=" w3-bar verde-mode w3-card-2 w3-xxlarge " style="height:60px">
+        <div class=" w3-bar verde-mode w3-card-2 w3-xxlarge " style="height:60px"> 
             <button class="w3-bar-item verde-mode  w3-ripple w3-xlarge" onclick="openCity('Tokyo')"  aria-label="El toggle de Menu"><i class="fa-duotone fa-bars w3-xlarge" style="margin-top:8px"></i></button>
             <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="w3-hide verde-mode">&#9776; open</span>
             <button class="w3-bar-item  verde-mode w3-ripple w3-large" onclick="openCity('London')" style="margin-top:8px"><span class='con-una-sombra-negra-en-el-texto'><b>Inicio</b></span></button>
@@ -554,7 +555,7 @@
                     <i class="fa-duotone fa-tools w3-xlarge verde-mode"></i><span class="w3-hide-small w3-large">&nbsp; Herramientas</span>
                 </a>
             </button>
-            <p onclick="openCity('iUser')">iUser</p>
+           
         </div>
     </div>
 
@@ -943,6 +944,12 @@
                                 <span class="w3-large w3-ripple"> <i class="fa-duotone fa-circle-half-stroke w3-xlarge  w3-ripple" ></i> &NonBreakingSpace;<b>Dark Mode</b></span>
                             </div>                                   
                     </li> 
+                    <li class="w3-bar w3-hoverable" onclick="openCity('iUser')"> 
+                        <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-chevron-right w3-xlarge w3-right-align w3-ripple"></i></span>
+                            <div class="w3-bar-item"  >                            
+                                <span class="w3-large w3-ripple"> <i class="fa-duotone fa-user w3-xlarge  w3-ripple" ></i> &NonBreakingSpace;<b>User</b></span>
+                            </div>                                   
+                    </li>                     
                     <li  class="white-mode green-mode ">  </li>  
                                      
                     <li class="w3-bar w3-hoverable"> <a href="https://xbrpw.github.io/eso/" >
@@ -1053,17 +1060,21 @@
 </div>
 
 <div id="iUser" class="city" style="display:none">
-    <li class="w3-bar w3-hoverable" onclick="openCity('London')"> 
-        <span  class='w3-bar-item  w3-right'></span> 
-            <div class="w3-bar-item" >                            
-                <span class="w3-large w3-ripple"><i class="fa-duotone fa-arrow-left w3-xlarge w3-ripple"  ></i> &nbsp;<b>Regresar</b></span>
-            </div>                                   
-    </li>    
-    <p id="getURL"></p>    
-    <script>
-        document.getElementById("getURL").innerHTML = 
-        "" + window.location.href;
-    </script>
+    <ul class="w3-ul">
+        <li class="w3-bar w3-hoverable" onclick="openCity('London')"> 
+            <span  class='w3-bar-item  w3-right'></span> 
+                <div class="w3-bar-item" >                            
+                    <span class="w3-large w3-ripple"><i class="fa-duotone fa-arrow-left w3-xlarge w3-ripple"  ></i> &nbsp;<b>Regresar</b></span>
+                </div>                                   
+        </li> 
+        <li class="w3-bar w3-hoverable" id="getURL">  
+            <script>
+                document.getElementById("getURL").innerHTML = 
+                "" + window.location.href;
+            </script>
+        </li> 
+    </ul>  
+   
 </div>
 
 </div>
