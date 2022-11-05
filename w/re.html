@@ -777,8 +777,9 @@
             
           </div>
       </div>
+
       <div id="iUser" class="city" style="display:none">
-        <span onclick="this.parentElement.style.display='none'">
+        <span onclick="this.parentElement.style.display='none'"  >
           <a href="#main" class="a" onclick="openCity('London')" >
             <ul class="w3-ulsj" >     
               <li class="w3-bar w3-hoverable" > 
@@ -790,11 +791,12 @@
             </ul>
             <iframe  src="" name="eso0514" height="710px" width="100%" title="ESO-0514" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>                    
           </a>        
-        </span>    
+        </span>  
+       
       </div>     
                   
       <div id="London" class="city">  
-          <div  style="overflow: hidden; position: fixed; bottom: 0; width: 100%;;justify-content: center;align-items: center;text-align: center;   backdrop-filter: blur(8px) brightness(1.2);-webkit-backdrop-filter: blur(8px) brightness(1.2); z-index: 5;" class="verde-mode">
+          <div  style="overflow: hidden; position: fixed; bottom: 0; width: 100%;;justify-content: center;align-items: center;text-align: center;   backdrop-filter: blur(8px) brightness(1.2);-webkit-backdrop-filter: blur(8px) brightness(1.2); z-index: 1;" class="verde-mode">
             <button class="tablinkeso verde-mode" onclick="openeso('xproyecto', this, 'rgba(2, 34, 34, 0.432)')" id="defaultOpeneso"><i class="fa-duotone fa-book con-una-sombra-negra-en-el-texto"></i> &nbsp;<b class='con-una-sombra-negra-en-el-texto'> Proyecto</b></button>
             <button class="tablinkeso verde-mode" onclick="openeso('xmateria', this, 'rgba(2, 34, 34, 0.432)')"><i class="fa-duotone fa-folder-open con-una-sombra-negra-en-el-texto"></i> &nbsp; <b class='con-una-sombra-negra-en-el-texto'>Materia</b></button>                        
           </div>  
@@ -811,6 +813,178 @@
                       </span>
                   </li> 
               </ul>
+              <span id="fooCiencia" style="display: none;" onclick="toggle_visibility('fooCiencia');">        
+                <ul class="w3-ul" id="#RegresaraCiencia"  >   
+                  <li class="w3-bar w3-hoverable" > 
+                    <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-chevron-left w3-xlarge w3-right-align w3-ripple"  ></i></span> 
+                        <div class="w3-bar-item" >                            
+                            <span class="w3-large w3-ripple"><i class="fa-duotone fa-arrow-left w3-xlarge w3-ripple"  ></i> &nbsp;<b><a href="#RegresaraCiencia" onclick="openCity('London')" class="a">Regresar</a></b></span>
+                        </div>                                   
+                  </li>                 
+                  <li class="w3-bar w3-hoverable"  style="display:none"> 
+                      <span  class='w3-bar-item  w3-right'><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
+                          <div class="w3-bar-item">                            
+                              <span class="w3-large w3-ripple"> <a href="https://www.blogger.com/blog/settings/7340644200665521349" target="_blank" class="a"><i class="fa-duotone fa-list-check w3-xlarge  w3-ripple"  ></i>&nbsp;<b> Moderar entradas</b></a></span>
+                          </div>                                   
+                  </li>
+                  <li class="w3-bar w3-hoverable"   >               
+                    <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
+                      <div class="w3-bar-item">                            
+                          <span class="w3-large w3-ripple">  <a href="https://eso514-ciencia.blogspot.com/" target="elBlogDe" class="a"  onclick="toggle_visibility('BlogCiencia');"><i class="fa-brands fa-blogger-b w3-xlarge  w3-ripple" ></i>&nbsp;&nbsp;<b> Ver blog </b></a></span>
+                      </div>                                   
+                  </li>
+                  <li class="w3-bar w3-hoverable" onclick="document.getElementById('id03open').style.display='block'"> 
+                  <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
+                      <div class="w3-bar-item">                            
+                          <span class="w3-large w3-ripple"><i class="fa-duotone fa-upload w3-xlarge  w3-ripple"  ></i>&nbsp;&nbsp;<b> Publicar evidencia</b></span>
+                      </div>                                   
+                  </li>
+                  <li class="w3-bar w3-hoverable" > 
+                      <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-chevron-right w3-xlarge w3-right-align w3-ripple" onclick="myFunctionCopy()"></i></span> 
+                          <div class="w3-bar-item " >                            
+                              <span class="w3-large w3-ripple" onclick="myVeryCopiar()"><i class="fa-duotone fa-copy w3-xlarge  w3-ripple" ></i> &nbsp; <b onclick="myFunctionCopy()">Ver y copiar el email</b> <br>
+                              <span class="w3-small " id="verElEmail"></span> </span>
+                          </div>  
+                          <input type="text" value="escuela.secundaria.oficial.514.ciencia@blogger.com" id="myInputmateria" class="w3-hide">                        
+                          <script>
+                              function myVeryCopiar() {
+                                var x = document.getElementById("verElEmail");
+                                if (x.innerHTML === "escuela.secundaria.oficial.514.ciencia@blogger.com") {
+                                  x.innerHTML = "escuela.secundaria.oficial.514.ciencia@blogger.com";
+                                } else {
+                                  x.innerHTML = "escuela.secundaria.oficial.514.ciencia@blogger.com";
+                                }
+                              }
+                          </script>
+                          <script>
+                          function myFunctionCopy() {
+                            // Get the text field
+                            var copyText = document.getElementById("myInputmateria");
+      
+                            // Select the text field
+                            copyText.select();
+                            copyText.setSelectionRange(0, 99999); // For mobile devices
+      
+                            // Copy the text inside the text field
+                            navigator.clipboard.writeText(copyText.value);
+      
+                            // Alert the copied text
+                            alert("Email copiado: " + copyText.value);
+                          }
+                          </script>
+                  </li>  
+                  <li  class="white-mode green-mode ">  </li>
+                  <li class="w3-bar w3-hoverable w3-block" onclick="enconstruccion()" > 
+                      <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple w3-hide"  ></i></span> 
+                          <div class="w3-bar-item" id="enConstruccionProximamente">                            
+                              <span class="w3-large w3-ripple"><axxx href="https://xbrpw.github.io/eso/colaborar.html" target="eso0514" class="a"><i class="fa-duotone fa-pen-to-square w3-xlarge  w3-ripple"  ></i> &nbsp;<b>Colaborar</b></a></span>
+                          </div>  
+                          <script>
+                              function enconstruccion() {
+                                var x = document.getElementById("enConstruccionProximamente");
+                                if (x.innerHTML === " <i class='fa-duotone fa-pen-to-square w3-xlarge  w3-ripple'  ></i>&nbsp;&nbsp;<span class='w3-large w3-ripple'><b>En construcción</b></span>") {
+                                  x.innerHTML = " <span class='w3-large w3-ripple'><b>Colaborar</b></span>";
+                                } else {
+                                  x.innerHTML = " <i class='fa-duotone fa-pen-to-square w3-xlarge  w3-ripple'  ></i>&nbsp;&nbsp;<span class='w3-large w3-ripple'><b>En construcción</b></span>";
+                                }
+                              }
+                          </script>                                 
+                  </li>
+                  <li class="w3-bar w3-hoverable"  > 
+                  <span  class='w3-bar-item  w3-right'><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
+                      <div class="w3-bar-item">                            
+                          <span class="w3-large w3-ripple"> <a href="https://drive.google.com/drive/folders/1cdyGbDIZXFTov8c1XZzfnT_jqYYBtaMU" target="_blank" class="a"><i class="fa-brands fa-google-drive w3-xlarge w3-ripple"  ></i>&nbsp;<b> Guardar en Drive</b></a></span>
+                      </div>                                   
+                  </li>  
+                  <li  class="white-mode green-mode " style="height: 200px;"></li>                 
+                </ul>
+              </span>
+              <span id="fooTecnologia" style="display: none;" onclick="toggle_visibility('fooTecnologia');">        
+                <ul class="w3-ul" id="#RegresaraTecnologia" >   
+                  <li class="w3-bar w3-hoverable" > 
+                    <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-chevron-left w3-xlarge w3-right-align w3-ripple"  ></i></span> 
+                        <div class="w3-bar-item" >                            
+                            <span class="w3-large w3-ripple"><i class="fa-duotone fa-arrow-left w3-xlarge w3-ripple"  ></i> &nbsp;<b><a href="#RegresaraTecnologia" onclick="openCity('London')" class="a">Regresar</a></b></span>
+                        </div>                                   
+                  </li>                 
+                  <li class="w3-bar w3-hoverable"  style="display:none"> 
+                      <span  class='w3-bar-item  w3-right'><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
+                          <div class="w3-bar-item">                            
+                              <span class="w3-large w3-ripple"> <a href="https://www.blogger.com/blog/settings/7340644200665521349" target="_blank" class="a"><i class="fa-duotone fa-list-check w3-xlarge  w3-ripple"  ></i>&nbsp;<b> Moderar entradas</b></a></span>
+                          </div>                                   
+                  </li>
+                  <li class="w3-bar w3-hoverable"   >               
+                    <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
+                      <div class="w3-bar-item">                            
+                          <span class="w3-large w3-ripple">  <a href="https://eso514-ciencia.blogspot.com/" target="elBlogDe" class="a"  onclick="toggle_visibility('BlogCiencia');"><i class="fa-brands fa-blogger-b w3-xlarge  w3-ripple" ></i>&nbsp;&nbsp;<b> Ver blog </b></a></span>
+                      </div>                                   
+                  </li>
+                  <li class="w3-bar w3-hoverable" onclick="document.getElementById('id03open').style.display='block'"> 
+                  <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
+                      <div class="w3-bar-item">                            
+                          <span class="w3-large w3-ripple"><i class="fa-duotone fa-upload w3-xlarge  w3-ripple"  ></i>&nbsp;&nbsp;<b> Publicar evidencia</b></span>
+                      </div>                                   
+                  </li>
+                  <li class="w3-bar w3-hoverable" > 
+                      <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-chevron-right w3-xlarge w3-right-align w3-ripple" onclick="myFunctionCopy()"></i></span> 
+                          <div class="w3-bar-item " >                            
+                              <span class="w3-large w3-ripple" onclick="myVeryCopiar()"><i class="fa-duotone fa-copy w3-xlarge  w3-ripple" ></i> &nbsp; <b onclick="myFunctionCopy()">Ver y copiar el email</b> <br>
+                              <span class="w3-small " id="verElEmail"></span> </span>
+                          </div>  
+                          <input type="text" value="escuela.secundaria.oficial.514.ciencia@blogger.com" id="myInputmateria" class="w3-hide">                        
+                          <script>
+                              function myVeryCopiar() {
+                                var x = document.getElementById("verElEmail");
+                                if (x.innerHTML === "escuela.secundaria.oficial.514.ciencia@blogger.com") {
+                                  x.innerHTML = "escuela.secundaria.oficial.514.ciencia@blogger.com";
+                                } else {
+                                  x.innerHTML = "escuela.secundaria.oficial.514.ciencia@blogger.com";
+                                }
+                              }
+                          </script>
+                          <script>
+                          function myFunctionCopy() {
+                            // Get the text field
+                            var copyText = document.getElementById("myInputmateria");
+      
+                            // Select the text field
+                            copyText.select();
+                            copyText.setSelectionRange(0, 99999); // For mobile devices
+      
+                            // Copy the text inside the text field
+                            navigator.clipboard.writeText(copyText.value);
+      
+                            // Alert the copied text
+                            alert("Email copiado: " + copyText.value);
+                          }
+                          </script>
+                  </li>  
+                  <li  class="white-mode green-mode ">  </li>
+                  <li class="w3-bar w3-hoverable w3-block" onclick="enconstruccion()" > 
+                      <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple w3-hide"  ></i></span> 
+                          <div class="w3-bar-item" id="enConstruccionProximamente">                            
+                              <span class="w3-large w3-ripple"><axxx href="https://xbrpw.github.io/eso/colaborar.html" target="eso0514" class="a"><i class="fa-duotone fa-pen-to-square w3-xlarge  w3-ripple"  ></i> &nbsp;<b>Colaborar</b></a></span>
+                          </div>  
+                          <script>
+                              function enconstruccion() {
+                                var x = document.getElementById("enConstruccionProximamente");
+                                if (x.innerHTML === " <i class='fa-duotone fa-pen-to-square w3-xlarge  w3-ripple'  ></i>&nbsp;&nbsp;<span class='w3-large w3-ripple'><b>En construcción</b></span>") {
+                                  x.innerHTML = " <span class='w3-large w3-ripple'><b>Colaborar</b></span>";
+                                } else {
+                                  x.innerHTML = " <i class='fa-duotone fa-pen-to-square w3-xlarge  w3-ripple'  ></i>&nbsp;&nbsp;<span class='w3-large w3-ripple'><b>En construcción</b></span>";
+                                }
+                              }
+                          </script>                                 
+                  </li>
+                  <li class="w3-bar w3-hoverable"  > 
+                  <span  class='w3-bar-item  w3-right'><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
+                      <div class="w3-bar-item">                            
+                          <span class="w3-large w3-ripple"> <a href="https://drive.google.com/drive/folders/1cdyGbDIZXFTov8c1XZzfnT_jqYYBtaMU" target="_blank" class="a"><i class="fa-brands fa-google-drive w3-xlarge w3-ripple"  ></i>&nbsp;<b> Guardar en Drive</b></a></span>
+                      </div>                                   
+                  </li>  
+                  <li  class="white-mode green-mode " style="height: 200px;"></li>                
+                </ul>
+              </span>  
               <ul class="w3-ulsj " >
                 <li class="w3-bar w3-ripple" onclick="openCity('iUser')" >   
                     <a href="https://share.sheetmonkey.io/f/jMBVZqEcZXYjBWkUsiBuE9" target="eso0514" class="a" onclick="this.parentElement.style.display='none'">
@@ -821,20 +995,21 @@
                             </div>                                   
                     </a>
                 </li> 
-                <li class="w3-bar w3-ripple"  onclick="openCity('Notificaciones')"  onclick="toggle_visibility('fooCiencia');"> 
+                <li class="w3-bar w3-ripple"  onclick="toggle_visibility('fooCiencia');"> 
                         <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-ellipsis-vertical w3-xlarge w3-right-align w3-ripple"  ></i></span> 
                             <div class="w3-bar-item ">                            
                                 <span class="w3-large w3-ripple"><span data-nosnippet><b> Ciencia</b></span>  </span><br>
                                 <span class="w3-ripple">Descubrimientos</span>  
                             </div>            
                 </li>        
-                <li class="w3-bar w3-ripple" nclick="openCity('Notificaciones')"  onclick="toggle_visibility('fooTecnologia');">             
+                <li class="w3-bar w3-ripple"  onclick="toggle_visibility('fooTecnologia');" >             
                         <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-ellipsis-vertical w3-xlarge w3-right-align w3-ripple"  ></i></span> 
                             <div class="w3-bar-item ">                            
                                 <span class="w3-large w3-ripple" data-nosnippet><b> Tecnología</b></span><br>
                                 <span class="w3-ripple">Innovación  </span>  
                             </div>                                            
-                </li>            
+                </li>    
+                          
                 <li class="w3-bar w3-ripple" nclick="openCity('Paris')"> 
                     <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-ellipsis-vertical w3-xlarge w3-right-align w3-ripple"  ></i></span> 
                         <div class="w3-bar-item ">                            
@@ -1578,178 +1753,7 @@
       </div>
 
       <div id="Notificaciones" class=" city" style="display:none">               
-        <span id="fooCiencia" >        
-          <ul class="w3-ul" id="#RegresaraCiencia">   
-            <li class="w3-bar w3-hoverable" > 
-              <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-chevron-left w3-xlarge w3-right-align w3-ripple"  ></i></span> 
-                  <div class="w3-bar-item" >                            
-                      <span class="w3-large w3-ripple"><i class="fa-duotone fa-arrow-left w3-xlarge w3-ripple"  ></i> &nbsp;<b><a href="#RegresaraCiencia" onclick="openCity('London')" class="a">Regresar</a></b></span>
-                  </div>                                   
-            </li>                 
-            <li class="w3-bar w3-hoverable"  style="display:none"> 
-                <span  class='w3-bar-item  w3-right'><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
-                    <div class="w3-bar-item">                            
-                        <span class="w3-large w3-ripple"> <a href="https://www.blogger.com/blog/settings/7340644200665521349" target="_blank" class="a"><i class="fa-duotone fa-list-check w3-xlarge  w3-ripple"  ></i>&nbsp;<b> Moderar entradas</b></a></span>
-                    </div>                                   
-            </li>
-            <li class="w3-bar w3-hoverable"   >               
-              <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
-                <div class="w3-bar-item">                            
-                    <span class="w3-large w3-ripple">  <a href="https://eso514-ciencia.blogspot.com/" target="elBlogDe" class="a"  onclick="toggle_visibility('BlogCiencia');"><i class="fa-brands fa-blogger-b w3-xlarge  w3-ripple" ></i>&nbsp;&nbsp;<b> Ver blog </b></a></span>
-                </div>                                   
-            </li>
-            <li class="w3-bar w3-hoverable" onclick="document.getElementById('id03open').style.display='block'"> 
-            <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
-                <div class="w3-bar-item">                            
-                    <span class="w3-large w3-ripple"><i class="fa-duotone fa-upload w3-xlarge  w3-ripple"  ></i>&nbsp;&nbsp;<b> Publicar evidencia</b></span>
-                </div>                                   
-            </li>
-            <li class="w3-bar w3-hoverable" > 
-                <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-chevron-right w3-xlarge w3-right-align w3-ripple" onclick="myFunctionCopy()"></i></span> 
-                    <div class="w3-bar-item " >                            
-                        <span class="w3-large w3-ripple" onclick="myVeryCopiar()"><i class="fa-duotone fa-copy w3-xlarge  w3-ripple" ></i> &nbsp; <b onclick="myFunctionCopy()">Ver y copiar el email</b> <br>
-                        <span class="w3-small " id="verElEmail"></span> </span>
-                    </div>  
-                    <input type="text" value="escuela.secundaria.oficial.514.ciencia@blogger.com" id="myInputmateria" class="w3-hide">                        
-                    <script>
-                        function myVeryCopiar() {
-                          var x = document.getElementById("verElEmail");
-                          if (x.innerHTML === "escuela.secundaria.oficial.514.ciencia@blogger.com") {
-                            x.innerHTML = "escuela.secundaria.oficial.514.ciencia@blogger.com";
-                          } else {
-                            x.innerHTML = "escuela.secundaria.oficial.514.ciencia@blogger.com";
-                          }
-                        }
-                    </script>
-                    <script>
-                    function myFunctionCopy() {
-                      // Get the text field
-                      var copyText = document.getElementById("myInputmateria");
-
-                      // Select the text field
-                      copyText.select();
-                      copyText.setSelectionRange(0, 99999); // For mobile devices
-
-                      // Copy the text inside the text field
-                      navigator.clipboard.writeText(copyText.value);
-
-                      // Alert the copied text
-                      alert("Email copiado: " + copyText.value);
-                    }
-                    </script>
-            </li>  
-            <li  class="white-mode green-mode ">  </li>
-            <li class="w3-bar w3-hoverable w3-block" onclick="enconstruccion()" > 
-                <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple w3-hide"  ></i></span> 
-                    <div class="w3-bar-item" id="enConstruccionProximamente">                            
-                        <span class="w3-large w3-ripple"><axxx href="https://xbrpw.github.io/eso/colaborar.html" target="eso0514" class="a"><i class="fa-duotone fa-pen-to-square w3-xlarge  w3-ripple"  ></i> &nbsp;<b>Colaborar</b></a></span>
-                    </div>  
-                    <script>
-                        function enconstruccion() {
-                          var x = document.getElementById("enConstruccionProximamente");
-                          if (x.innerHTML === " <i class='fa-duotone fa-pen-to-square w3-xlarge  w3-ripple'  ></i>&nbsp;&nbsp;<span class='w3-large w3-ripple'><b>En construcción</b></span>") {
-                            x.innerHTML = " <span class='w3-large w3-ripple'><b>Colaborar</b></span>";
-                          } else {
-                            x.innerHTML = " <i class='fa-duotone fa-pen-to-square w3-xlarge  w3-ripple'  ></i>&nbsp;&nbsp;<span class='w3-large w3-ripple'><b>En construcción</b></span>";
-                          }
-                        }
-                    </script>                                 
-            </li>
-            <li class="w3-bar w3-hoverable"  > 
-            <span  class='w3-bar-item  w3-right'><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
-                <div class="w3-bar-item">                            
-                    <span class="w3-large w3-ripple"> <a href="https://drive.google.com/drive/folders/1cdyGbDIZXFTov8c1XZzfnT_jqYYBtaMU" target="_blank" class="a"><i class="fa-brands fa-google-drive w3-xlarge w3-ripple"  ></i>&nbsp;<b> Guardar en Drive</b></a></span>
-                </div>                                   
-            </li>  
-            <li  class="white-mode green-mode ">  </li>                  
-          </ul>
-        </span>
-        <span id="fooTecnologia" >        
-          <ul class="w3-ul" id="#RegresaraTecnologia">   
-            <li class="w3-bar w3-hoverable" > 
-              <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-chevron-left w3-xlarge w3-right-align w3-ripple"  ></i></span> 
-                  <div class="w3-bar-item" >                            
-                      <span class="w3-large w3-ripple"><i class="fa-duotone fa-arrow-left w3-xlarge w3-ripple"  ></i> &nbsp;<b><a href="#RegresaraTecnologia" onclick="openCity('London')" class="a">Regresar</a></b></span>
-                  </div>                                   
-            </li>                 
-            <li class="w3-bar w3-hoverable"  style="display:none"> 
-                <span  class='w3-bar-item  w3-right'><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
-                    <div class="w3-bar-item">                            
-                        <span class="w3-large w3-ripple"> <a href="https://www.blogger.com/blog/settings/7340644200665521349" target="_blank" class="a"><i class="fa-duotone fa-list-check w3-xlarge  w3-ripple"  ></i>&nbsp;<b> Moderar entradas</b></a></span>
-                    </div>                                   
-            </li>
-            <li class="w3-bar w3-hoverable"   >               
-              <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
-                <div class="w3-bar-item">                            
-                    <span class="w3-large w3-ripple">  <a href="https://eso514-ciencia.blogspot.com/" target="elBlogDe" class="a"  onclick="toggle_visibility('BlogCiencia');"><i class="fa-brands fa-blogger-b w3-xlarge  w3-ripple" ></i>&nbsp;&nbsp;<b> Ver blog </b></a></span>
-                </div>                                   
-            </li>
-            <li class="w3-bar w3-hoverable" onclick="document.getElementById('id03open').style.display='block'"> 
-            <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
-                <div class="w3-bar-item">                            
-                    <span class="w3-large w3-ripple"><i class="fa-duotone fa-upload w3-xlarge  w3-ripple"  ></i>&nbsp;&nbsp;<b> Publicar evidencia</b></span>
-                </div>                                   
-            </li>
-            <li class="w3-bar w3-hoverable" > 
-                <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-chevron-right w3-xlarge w3-right-align w3-ripple" onclick="myFunctionCopy()"></i></span> 
-                    <div class="w3-bar-item " >                            
-                        <span class="w3-large w3-ripple" onclick="myVeryCopiar()"><i class="fa-duotone fa-copy w3-xlarge  w3-ripple" ></i> &nbsp; <b onclick="myFunctionCopy()">Ver y copiar el email</b> <br>
-                        <span class="w3-small " id="verElEmail"></span> </span>
-                    </div>  
-                    <input type="text" value="escuela.secundaria.oficial.514.ciencia@blogger.com" id="myInputmateria" class="w3-hide">                        
-                    <script>
-                        function myVeryCopiar() {
-                          var x = document.getElementById("verElEmail");
-                          if (x.innerHTML === "escuela.secundaria.oficial.514.ciencia@blogger.com") {
-                            x.innerHTML = "escuela.secundaria.oficial.514.ciencia@blogger.com";
-                          } else {
-                            x.innerHTML = "escuela.secundaria.oficial.514.ciencia@blogger.com";
-                          }
-                        }
-                    </script>
-                    <script>
-                    function myFunctionCopy() {
-                      // Get the text field
-                      var copyText = document.getElementById("myInputmateria");
-
-                      // Select the text field
-                      copyText.select();
-                      copyText.setSelectionRange(0, 99999); // For mobile devices
-
-                      // Copy the text inside the text field
-                      navigator.clipboard.writeText(copyText.value);
-
-                      // Alert the copied text
-                      alert("Email copiado: " + copyText.value);
-                    }
-                    </script>
-            </li>  
-            <li  class="white-mode green-mode ">  </li>
-            <li class="w3-bar w3-hoverable w3-block" onclick="enconstruccion()" > 
-                <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple w3-hide"  ></i></span> 
-                    <div class="w3-bar-item" id="enConstruccionProximamente">                            
-                        <span class="w3-large w3-ripple"><axxx href="https://xbrpw.github.io/eso/colaborar.html" target="eso0514" class="a"><i class="fa-duotone fa-pen-to-square w3-xlarge  w3-ripple"  ></i> &nbsp;<b>Colaborar</b></a></span>
-                    </div>  
-                    <script>
-                        function enconstruccion() {
-                          var x = document.getElementById("enConstruccionProximamente");
-                          if (x.innerHTML === " <i class='fa-duotone fa-pen-to-square w3-xlarge  w3-ripple'  ></i>&nbsp;&nbsp;<span class='w3-large w3-ripple'><b>En construcción</b></span>") {
-                            x.innerHTML = " <span class='w3-large w3-ripple'><b>Colaborar</b></span>";
-                          } else {
-                            x.innerHTML = " <i class='fa-duotone fa-pen-to-square w3-xlarge  w3-ripple'  ></i>&nbsp;&nbsp;<span class='w3-large w3-ripple'><b>En construcción</b></span>";
-                          }
-                        }
-                    </script>                                 
-            </li>
-            <li class="w3-bar w3-hoverable"  > 
-            <span  class='w3-bar-item  w3-right'><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
-                <div class="w3-bar-item">                            
-                    <span class="w3-large w3-ripple"> <a href="https://drive.google.com/drive/folders/1cdyGbDIZXFTov8c1XZzfnT_jqYYBtaMU" target="_blank" class="a"><i class="fa-brands fa-google-drive w3-xlarge w3-ripple"  ></i>&nbsp;<b> Guardar en Drive</b></a></span>
-                </div>                                   
-            </li>  
-            <li  class="white-mode green-mode ">  </li>                  
-          </ul>
-        </span>                  
+                  
       </div>
     </div><!-- main  -->
     
