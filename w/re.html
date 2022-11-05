@@ -507,7 +507,154 @@
       from { transform: translateY(10px) }
     }
   </style> 
-     
+   <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+      
+    .wraper-Accesos {
+      font-family: "DM Sans", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+      overflow-x: hidden;
+      background-position: center;
+      background-size: cover;
+  
+    }
+    /*#0f0f10 #79798c*/
+    
+    .content-section {
+      display: block;
+      margin-top: 32px;
+      overflow-x: hidden;
+      padding: 0 40px;
+    }
+    
+    .section-header {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 16px;
+    }
+    .section-header-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .section-header-link {
+      display: block;
+      font-size: 16px;
+      line-height: 16px;
+    }
+    
+    .access-links {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0 -8px;
+    }
+    
+    .access-icon {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .access-icon svg {
+      width: 36px;
+      height: 36px;
+    }
+    
+    .access-link-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 8px;    
+    }
+    .access-link-wrapper:nth-child(1) .access-icon {
+      background-color: #08463d;
+      color:white;
+    }
+    .access-link-wrapper:nth-child(2) .access-icon {
+      background-color: #08463d;
+      color:white;
+    }
+    .access-link-wrapper:nth-child(3) .access-icon {
+      background-color: #08463d;
+      color:white;
+    }
+    .access-link-wrapper:nth-child(4) .access-icon {
+      background-color: #08463d;
+      color:white;
+    }
+    .access-link-wrapper:nth-child(5) .access-icon {
+      background-color: #08463d;
+      color:white;
+    }
+    .access-link-wrapper:nth-child(6) .access-icon {
+      background-color: #08463d;
+      color:white;
+    }
+    .access-link-wrapper:nth-child(7) .access-icon {
+      background-color: #08463d;
+      color:white;
+    }
+    .access-link-wrapper:nth-child(8) .access-icon {
+      background-color: #08463d;
+      color:white;
+    }
+    .access-link-wrapper:nth-child(9) .access-icon {
+      background-color: #08463d;
+      color:white;
+    }
+    
+    .access-text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    
+    @media screen and (min-width: 850px) and (max-width: 1042px) {
+      .access-icon {
+        padding: 16px;
+      }
+    
+      .access-icon svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      .access-icon svg {
+        width: 36px;
+        height: 36px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .access-link-wrapper {
+        width: 33.3%;
+      }
+    }
+    @media screen and (max-width: 520px) {
+      body {
+        padding: 0;
+      }
+    
+      .content-section {
+        padding: 0 20px;
+      }
+    }
+    </style>
+
     <script>
         function includeHTML() {
           var z, i, elmnt, file, xhttp;
@@ -674,20 +821,18 @@
                             </div>                                   
                     </a>
                 </li> 
-                <li class="w3-bar w3-ripple"  onclick="openCity('Notificaciones')"  onclick="toggle_visibility('foo');"> 
+                <li class="w3-bar w3-ripple"  onclick="openCity('Notificaciones')"  onclick="toggle_visibility('fooCiencia');"> 
                         <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-ellipsis-vertical w3-xlarge w3-right-align w3-ripple"  ></i></span> 
                             <div class="w3-bar-item ">                            
                                 <span class="w3-large w3-ripple"><span data-nosnippet><b> Ciencia</b></span>  </span><br>
                                 <span class="w3-ripple">Descubrimientos</span>  
                             </div>            
                 </li>        
-                <li class="w3-bar w3-ripple" nclick="openCity('Paris')">             
+                <li class="w3-bar w3-ripple" nclick="openCity('Notificaciones')"  onclick="toggle_visibility('fooTecnologia');">             
                         <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-ellipsis-vertical w3-xlarge w3-right-align w3-ripple"  ></i></span> 
                             <div class="w3-bar-item ">                            
                                 <span class="w3-large w3-ripple" data-nosnippet><b> Tecnología</b></span><br>
-                                <span class="w3-ripple">Innovación  
-                                 
-                                </span>  
+                                <span class="w3-ripple">Innovación  </span>  
                             </div>                                            
                 </li>            
                 <li class="w3-bar w3-ripple" nclick="openCity('Paris')"> 
@@ -732,9 +877,100 @@
                                 <span class="w3-ripple">del cuidado ambiental y del humano</span>  
                         </div>                                   
                 </li> 
-                <li class="w3-bar w3-ripple" > </li> 
-                <li class="w3-bar w3-ripple" > </li> <li class="w3-bar w3-ripple" ></li>  
-              </ul>                                             
+              </ul>  
+                <div class="wraper-Accesos"> 
+                  <section class="content-section">
+                <!-- <h1 class="section-header">Accesos rápidos</h1> -->
+                <div class="access-links">
+                  <div class="access-link-wrapper  " >
+                    <div class="access-icon w3-card-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w3-card-2" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <polyline points="21 15 16 10 5 21"/>
+                      </svg>
+                    </div>
+                    <span class="access-text">Images</span>
+                  </div>
+                  <div class="access-link-wrapper">
+                    <div class="access-icon w3-card-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-music">
+                        <path d="M9 18V5l12-2v13"/>
+                        <circle cx="6" cy="18" r="3"/>                   <circle cx="18" cy="16" r="3"/>
+                      </svg>
+                    </div>
+                    <span class="access-text">Music</span>
+                  </div>
+                  <div class="access-link-wrapper">
+                    <div class="access-icon w3-card-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-music">
+                        <path d="M9 18V5l12-2v13"/>
+                        <circle cx="6" cy="18" r="3"/>                   <circle cx="18" cy="16" r="3"/>
+                      </svg>
+                    </div>
+                    <span class="access-text">Music</span>
+                  </div>
+                  <div class="access-link-wrapper">
+                    <div class="access-icon w3-card-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-music">
+                        <path d="M9 18V5l12-2v13"/>
+                        <circle cx="6" cy="18" r="3"/>                   <circle cx="18" cy="16" r="3"/>
+                      </svg>
+                    </div>
+                    <span class="access-text">Music</span>
+                  </div>
+                  <div class="access-link-wrapper">
+                    <div class="access-icon w3-card-2" >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                      </svg>
+                    </div>
+                    <span class="access-text">Video</span>
+                  </div>
+                  <div class="access-link-wrapper">
+                    <div class="access-icon w3-card-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-left">
+                        <line x1="17" y1="10" x2="3" y2="10"/>
+                        <line x1="21" y1="6" x2="3" y2="6"/>
+                        <line x1="21" y1="14" x2="3" y2="14"/>
+                        <line x1="17" y1="18" x2="3" y2="18"/>
+                      </svg>
+                    </div>
+                    <span class="access-text">Docs</span>
+                  </div>
+                  <div class="access-link-wrapper">
+                    <div class="access-icon w3-card-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                        <polyline points="2 17 12 22 22 17"/>
+                        <polyline points="2 12 12 17 22 12"/>
+                      </svg>
+                    </div>
+                    <span class="access-text">Apps</span>
+                  </div>
+                  <div class="access-link-wrapper">
+                    <div class="access-icon w3-card-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="8 12 12 16 16 12"/>
+                        <line x1="12" y1="8" x2="12" y2="16"/>
+                      </svg>
+                    </div>
+                    <span class="access-text">Download</span>
+                  </div>
+                  <div class="access-link-wrapper">
+                    <div class="access-icon w3-card-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="8 12 12 16 16 12"/>
+                        <line x1="12" y1="8" x2="12" y2="16"/>
+                      </svg>
+                    </div>
+                    <span class="access-text">Download</span>
+                  </div>
+                </div>
+              </section>
+                </div>  <br><br><br><br>                                                  
           </div>              
           
           <div id="xmateria" class="tabcontenteso">
@@ -844,9 +1080,11 @@
                                   <span class="w3-ripple">Creatividad</span>  
                           </div>                                   
                   </li>    
+                  <div w3-include-html="user.html"></div>
                   <li class="w3-bar w3-ripple" > </li>  
                   <li class="w3-bar w3-ripple" > </li> 
-                  <li class="w3-bar w3-ripple" > </li>                     
+                  <li class="w3-bar w3-ripple" > </li>   
+                                    
               </ul>                
           </div>                   
       </div> 
@@ -924,8 +1162,6 @@
                                   </div>                                   
                           </li> 
                           <li class="w3-bar w3-hoverable" onclick="openCity('iUser')" > 
-                            <div w3-include-html="user.html"></div>
-
                             <a href="./user.html" target="eso0514" class="a">
                                 <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-chevron-right w3-xlarge w3-right-align w3-ripple"  ></i></span> 
                                     <div class="w3-bar-item"  >                            
@@ -1342,7 +1578,7 @@
       </div>
 
       <div id="Notificaciones" class=" city" style="display:none">               
-        <span id="foo" >        
+        <span id="fooCiencia" >        
           <ul class="w3-ul" id="#RegresaraCiencia">   
             <li class="w3-bar w3-hoverable" > 
               <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-chevron-left w3-xlarge w3-right-align w3-ripple"  ></i></span> 
@@ -1356,8 +1592,7 @@
                         <span class="w3-large w3-ripple"> <a href="https://www.blogger.com/blog/settings/7340644200665521349" target="_blank" class="a"><i class="fa-duotone fa-list-check w3-xlarge  w3-ripple"  ></i>&nbsp;<b> Moderar entradas</b></a></span>
                     </div>                                   
             </li>
-            <li class="w3-bar w3-hoverable"   > 
-              
+            <li class="w3-bar w3-hoverable"   >               
               <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
                 <div class="w3-bar-item">                            
                     <span class="w3-large w3-ripple">  <a href="https://eso514-ciencia.blogspot.com/" target="elBlogDe" class="a"  onclick="toggle_visibility('BlogCiencia');"><i class="fa-brands fa-blogger-b w3-xlarge  w3-ripple" ></i>&nbsp;&nbsp;<b> Ver blog </b></a></span>
@@ -1428,7 +1663,93 @@
             </li>  
             <li  class="white-mode green-mode ">  </li>                  
           </ul>
-        </span>              
+        </span>
+        <span id="fooTecnologia" >        
+          <ul class="w3-ul" id="#RegresaraTecnologia">   
+            <li class="w3-bar w3-hoverable" > 
+              <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-chevron-left w3-xlarge w3-right-align w3-ripple"  ></i></span> 
+                  <div class="w3-bar-item" >                            
+                      <span class="w3-large w3-ripple"><i class="fa-duotone fa-arrow-left w3-xlarge w3-ripple"  ></i> &nbsp;<b><a href="#RegresaraTecnologia" onclick="openCity('London')" class="a">Regresar</a></b></span>
+                  </div>                                   
+            </li>                 
+            <li class="w3-bar w3-hoverable"  style="display:none"> 
+                <span  class='w3-bar-item  w3-right'><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
+                    <div class="w3-bar-item">                            
+                        <span class="w3-large w3-ripple"> <a href="https://www.blogger.com/blog/settings/7340644200665521349" target="_blank" class="a"><i class="fa-duotone fa-list-check w3-xlarge  w3-ripple"  ></i>&nbsp;<b> Moderar entradas</b></a></span>
+                    </div>                                   
+            </li>
+            <li class="w3-bar w3-hoverable"   >               
+              <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
+                <div class="w3-bar-item">                            
+                    <span class="w3-large w3-ripple">  <a href="https://eso514-ciencia.blogspot.com/" target="elBlogDe" class="a"  onclick="toggle_visibility('BlogCiencia');"><i class="fa-brands fa-blogger-b w3-xlarge  w3-ripple" ></i>&nbsp;&nbsp;<b> Ver blog </b></a></span>
+                </div>                                   
+            </li>
+            <li class="w3-bar w3-hoverable" onclick="document.getElementById('id03open').style.display='block'"> 
+            <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
+                <div class="w3-bar-item">                            
+                    <span class="w3-large w3-ripple"><i class="fa-duotone fa-upload w3-xlarge  w3-ripple"  ></i>&nbsp;&nbsp;<b> Publicar evidencia</b></span>
+                </div>                                   
+            </li>
+            <li class="w3-bar w3-hoverable" > 
+                <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-chevron-right w3-xlarge w3-right-align w3-ripple" onclick="myFunctionCopy()"></i></span> 
+                    <div class="w3-bar-item " >                            
+                        <span class="w3-large w3-ripple" onclick="myVeryCopiar()"><i class="fa-duotone fa-copy w3-xlarge  w3-ripple" ></i> &nbsp; <b onclick="myFunctionCopy()">Ver y copiar el email</b> <br>
+                        <span class="w3-small " id="verElEmail"></span> </span>
+                    </div>  
+                    <input type="text" value="escuela.secundaria.oficial.514.ciencia@blogger.com" id="myInputmateria" class="w3-hide">                        
+                    <script>
+                        function myVeryCopiar() {
+                          var x = document.getElementById("verElEmail");
+                          if (x.innerHTML === "escuela.secundaria.oficial.514.ciencia@blogger.com") {
+                            x.innerHTML = "escuela.secundaria.oficial.514.ciencia@blogger.com";
+                          } else {
+                            x.innerHTML = "escuela.secundaria.oficial.514.ciencia@blogger.com";
+                          }
+                        }
+                    </script>
+                    <script>
+                    function myFunctionCopy() {
+                      // Get the text field
+                      var copyText = document.getElementById("myInputmateria");
+
+                      // Select the text field
+                      copyText.select();
+                      copyText.setSelectionRange(0, 99999); // For mobile devices
+
+                      // Copy the text inside the text field
+                      navigator.clipboard.writeText(copyText.value);
+
+                      // Alert the copied text
+                      alert("Email copiado: " + copyText.value);
+                    }
+                    </script>
+            </li>  
+            <li  class="white-mode green-mode ">  </li>
+            <li class="w3-bar w3-hoverable w3-block" onclick="enconstruccion()" > 
+                <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple w3-hide"  ></i></span> 
+                    <div class="w3-bar-item" id="enConstruccionProximamente">                            
+                        <span class="w3-large w3-ripple"><axxx href="https://xbrpw.github.io/eso/colaborar.html" target="eso0514" class="a"><i class="fa-duotone fa-pen-to-square w3-xlarge  w3-ripple"  ></i> &nbsp;<b>Colaborar</b></a></span>
+                    </div>  
+                    <script>
+                        function enconstruccion() {
+                          var x = document.getElementById("enConstruccionProximamente");
+                          if (x.innerHTML === " <i class='fa-duotone fa-pen-to-square w3-xlarge  w3-ripple'  ></i>&nbsp;&nbsp;<span class='w3-large w3-ripple'><b>En construcción</b></span>") {
+                            x.innerHTML = " <span class='w3-large w3-ripple'><b>Colaborar</b></span>";
+                          } else {
+                            x.innerHTML = " <i class='fa-duotone fa-pen-to-square w3-xlarge  w3-ripple'  ></i>&nbsp;&nbsp;<span class='w3-large w3-ripple'><b>En construcción</b></span>";
+                          }
+                        }
+                    </script>                                 
+            </li>
+            <li class="w3-bar w3-hoverable"  > 
+            <span  class='w3-bar-item  w3-right'><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
+                <div class="w3-bar-item">                            
+                    <span class="w3-large w3-ripple"> <a href="https://drive.google.com/drive/folders/1cdyGbDIZXFTov8c1XZzfnT_jqYYBtaMU" target="_blank" class="a"><i class="fa-brands fa-google-drive w3-xlarge w3-ripple"  ></i>&nbsp;<b> Guardar en Drive</b></a></span>
+                </div>                                   
+            </li>  
+            <li  class="white-mode green-mode ">  </li>                  
+          </ul>
+        </span>                  
       </div>
     </div><!-- main  -->
     
@@ -1821,247 +2142,6 @@
                           </li>                  
                           
   </ul>   
-  <div class="wraper-Accesos"> 
-    <style>
-    * {
-      box-sizing: border-box;
-    }
-    
-    html {
-      scroll-behavior: smooth;
-    }
-      
-    .wraper-Accesos {
-      font-family: "DM Sans", sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      overflow: hidden;
-      overflow-x: hidden;
-      background-position: center;
-      background-size: cover;
-  
-    }
-    /*#0f0f10 #79798c*/
-    
-    .content-section {
-      display: block;
-      margin-top: 32px;
-      overflow-x: hidden;
-      padding: 0 40px;
-    }
-    
-    .section-header {
-      font-size: 24px;
-      line-height: 32px;
-      margin-bottom: 16px;
-    }
-    .section-header-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .section-header-link {
-      display: block;
-      font-size: 16px;
-      line-height: 16px;
-    }
-    
-    .access-links {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      margin: 0 -8px;
-    }
-    
-    .access-icon {
-      width: 100%;
-      height: 100%;
-      border-radius: 12px;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .access-icon svg {
-      width: 36px;
-      height: 36px;
-    }
-    
-    .access-link-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding: 8px;    
-    }
-    .access-link-wrapper:nth-child(1) .access-icon {
-      background-color: #08463d;
-      color:white;
-    }
-    .access-link-wrapper:nth-child(2) .access-icon {
-      background-color: #08463d;
-      color:white;
-    }
-    .access-link-wrapper:nth-child(3) .access-icon {
-      background-color: #08463d;
-      color:white;
-    }
-    .access-link-wrapper:nth-child(4) .access-icon {
-      background-color: #08463d;
-      color:white;
-    }
-    .access-link-wrapper:nth-child(5) .access-icon {
-      background-color: #08463d;
-      color:white;
-    }
-    .access-link-wrapper:nth-child(6) .access-icon {
-      background-color: #08463d;
-      color:white;
-    }
-    .access-link-wrapper:nth-child(7) .access-icon {
-      background-color: #08463d;
-      color:white;
-    }
-    .access-link-wrapper:nth-child(8) .access-icon {
-      background-color: #08463d;
-      color:white;
-    }
-    .access-link-wrapper:nth-child(9) .access-icon {
-      background-color: #08463d;
-      color:white;
-    }
-    
-    .access-text {
-      font-size: 16px;
-      line-height: 24px;
-    }
-    
-    @media screen and (min-width: 850px) and (max-width: 1042px) {
-      .access-icon {
-        padding: 16px;
-      }
-    
-      .access-icon svg {
-        width: 20px;
-        height: 20px;
-      }
-    }
-    @media screen and (max-width: 900px) {
-      .access-icon svg {
-        width: 36px;
-        height: 36px;
-      }
-    }
-    @media screen and (max-width: 768px) {
-      .access-link-wrapper {
-        width: 33.3%;
-      }
-    }
-    @media screen and (max-width: 520px) {
-      body {
-        padding: 0;
-      }
-    
-      .content-section {
-        padding: 0 20px;
-      }
-    }
-    </style>
-  
-      <section class="content-section w3-hide">
-        <!-- <h1 class="section-header">Accesos rápidos</h1> -->
-        <div class="access-links">
-          <div class="access-link-wrapper  " >
-            <div class="access-icon w3-card-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w3-card-2" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21 15 16 10 5 21"/>
-              </svg>
-            </div>
-            <span class="access-text">Images</span>
-          </div>
-          <div class="access-link-wrapper">
-            <div class="access-icon w3-card-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-music">
-                <path d="M9 18V5l12-2v13"/>
-                <circle cx="6" cy="18" r="3"/>                   <circle cx="18" cy="16" r="3"/>
-              </svg>
-            </div>
-            <span class="access-text">Music</span>
-          </div>
-          <div class="access-link-wrapper">
-            <div class="access-icon w3-card-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-music">
-                <path d="M9 18V5l12-2v13"/>
-                <circle cx="6" cy="18" r="3"/>                   <circle cx="18" cy="16" r="3"/>
-              </svg>
-            </div>
-            <span class="access-text">Music</span>
-          </div>
-          <div class="access-link-wrapper">
-            <div class="access-icon w3-card-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-music">
-                <path d="M9 18V5l12-2v13"/>
-                <circle cx="6" cy="18" r="3"/>                   <circle cx="18" cy="16" r="3"/>
-              </svg>
-            </div>
-            <span class="access-text">Music</span>
-          </div>
-          <div class="access-link-wrapper">
-            <div class="access-icon w3-card-2" >
-              <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play">
-                <polygon points="5 3 19 12 5 21 5 3"/>
-              </svg>
-            </div>
-            <span class="access-text">Video</span>
-          </div>
-          <div class="access-link-wrapper">
-            <div class="access-icon w3-card-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-left">
-                <line x1="17" y1="10" x2="3" y2="10"/>
-                <line x1="21" y1="6" x2="3" y2="6"/>
-                <line x1="21" y1="14" x2="3" y2="14"/>
-                <line x1="17" y1="18" x2="3" y2="18"/>
-              </svg>
-            </div>
-            <span class="access-text">Docs</span>
-          </div>
-          <div class="access-link-wrapper">
-            <div class="access-icon w3-card-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
-                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-                <polyline points="2 17 12 22 22 17"/>
-                <polyline points="2 12 12 17 22 12"/>
-              </svg>
-            </div>
-            <span class="access-text">Apps</span>
-          </div>
-          <div class="access-link-wrapper">
-            <div class="access-icon w3-card-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="8 12 12 16 16 12"/>
-                <line x1="12" y1="8" x2="12" y2="16"/>
-              </svg>
-            </div>
-            <span class="access-text">Download</span>
-          </div>
-          <div class="access-link-wrapper">
-            <div class="access-icon w3-card-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="8 12 12 16 16 12"/>
-                <line x1="12" y1="8" x2="12" y2="16"/>
-              </svg>
-            </div>
-            <span class="access-text">Download</span>
-          </div>
-        </div>
-      </section>
-  </div>
-  
+
   
 </html> 
