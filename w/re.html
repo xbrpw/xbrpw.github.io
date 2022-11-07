@@ -34,7 +34,16 @@
     100% {-webkit-transform: rotate(360deg);border: 4px solid #f44336;border-left-color: transparent;}}
     .font-serif{font-family:serif}.font-sans-serif{font-family:sans-serif}.font-cursive{font-family:cursive}.font-monospace{font-family:monospace}
     .hp {display: block;margin-top: 1em;margin-bottom: 1em;margin-left: 0;margin-right: 0;font-size: 1em;  font-weight: normal;}
+    .visually-hidden {
+  position:absolute;
+  opacity:0;
+}
 
+.without-pointer-events {
+  position:absolute;
+  opacity:0;
+  pointer-events: none;
+}
     .white-mode {
       background-color: white;
       color: black;
@@ -1754,6 +1763,15 @@
 
       <div id="Notificaciones" class=" city" style="display:none">               
                   
+          <div>
+            <div class="visually-hidden"></div>
+            <a href="#">Click me</a>
+          </div>
+
+          <div>
+            <div class="visually-hidden without-pointer-events"></div>
+            <a href="#">Click me</a>
+          </div>
       </div>
     </div><!-- main  -->
     
