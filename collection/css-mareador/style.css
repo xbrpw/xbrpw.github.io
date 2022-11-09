@@ -1,0 +1,65 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+body div {
+  background: url("https://xbrpw.github.io/img/Noto%20Color%20Emoji%20Animated/face-with-spiral-eyes_1f635-200d-1f4ab.gif" );
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(2deg);
+  opacity: 0;
+  -webkit-animation: ugghhghghhghg 2s infinite alternate;
+          animation: ugghhghghhghg 2s infinite alternate;
+}
+body > div {
+  width: 120px;
+  height: 120px;
+}
+body > div > div {
+  width: 360px;
+  height: 360px;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+body > div > div > div {
+  width: 600px;
+  height: 600px;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+body > div > div > div > div {
+  width: 840px;
+  height: 840px;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+body > div > div > div > div > div {
+  width: 1080px;
+  height: 1080px;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+body > div > div > div > div > div > div {
+  width: 1320px;
+  height: 1320px;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes ugghhghghhghg {
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@keyframes ugghhghghhghg {
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}

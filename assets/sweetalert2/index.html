@@ -1,0 +1,211 @@
+
+<!doctype html>
+<html lang="es-MX">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" >
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" >
+
+<style>body {font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; }</style>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" >
+
+<style>
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}summary{display:list-item}
+audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
+audio:not([controls]){display:none;height:0}[hidden],template{display:none}
+a{background-color:transparent}a:active,a:hover{outline-width:0}
+abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+b,strong{font-weight:bolder}dfn{font-style:italic}mark{background:#ff0;color:#000}
+small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}img{border-style:none}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}
+button,input,select,textarea,optgroup{font:inherit;margin:0}optgroup{font-weight:bold}
+button,input{overflow:visible}button,select{text-transform:none}
+button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button}
+button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}
+button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}
+button.ez-button{
+  background: linear-gradient(to right,#196BCA ,#6433E0);
+  background-color: #196BCA;
+  color: #fff;
+  font-family: Verdana;
+  font-size: 18px;
+  font-weight: 800;
+  font-style: normal;
+  text-decoration: none;
+  padding: 18px 70px;
+  border: 0px solid #ffffff;
+  border-radius: 100px;
+  display: inline-block;
+  text-shadow: 2px 2px 0px #000;
+ }
+ button.ez-button:hover{
+  background: linear-gradient(to right,#1866c0 ,#5f30d5);
+  background-color: #1866c0;
+ }
+ button.ez-button:active{
+  transform: scale(0.95);
+ }
+ .w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,
+.w3-cell-row:before,.w3-cell-row:after,.w3-clear:after,.w3-clear:before,.w3-bar:before,.w3-bar:after{content:"";display:table;clear:both}
+.w3-col,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter{float:left;width:100%}
+.w3-col.s1{width:8.33333%}.w3-col.s2{width:16.66666%}.w3-col.s3{width:24.99999%}.w3-col.s4{width:33.33333%}
+.w3-col.s5{width:41.66666%}.w3-col.s6{width:49.99999%}.w3-col.s7{width:58.33333%}.w3-col.s8{width:66.66666%}
+.w3-col.s9{width:74.99999%}.w3-col.s10{width:83.33333%}.w3-col.s11{width:91.66666%}.w3-col.s12{width:99.99999%}
+@media (min-width:601px){.w3-col.m1{width:8.33333%}.w3-col.m2{width:16.66666%}.w3-col.m3,.w3-quarter{width:24.99999%}.w3-col.m4,.w3-third{width:33.33333%}
+.w3-col.m5{width:41.66666%}.w3-col.m6,.w3-half{width:49.99999%}.w3-col.m7{width:58.33333%}.w3-col.m8,.w3-twothird{width:66.66666%}
+.w3-col.m9,.w3-threequarter{width:74.99999%}.w3-col.m10{width:83.33333%}.w3-col.m11{width:91.66666%}.w3-col.m12{width:99.99999%}}
+@media (min-width:993px){.w3-col.l1{width:8.33333%}.w3-col.l2{width:16.66666%}.w3-col.l3{width:24.99999%}.w3-col.l4{width:33.33333%}
+.w3-col.l5{width:41.66666%}.w3-col.l6{width:49.99999%}.w3-col.l7{width:58.33333%}.w3-col.l8{width:66.66666%}
+.w3-col.l9{width:74.99999%}.w3-col.l10{width:83.33333%}.w3-col.l11{width:91.66666%}.w3-col.l12{width:99.99999%}}
+.w3-rest{overflow:hidden}.w3-stretch{margin-left:-16px;margin-right:-16px}
+.w3-content,.w3-auto{margin-left:auto;margin-right:auto}.w3-content{max-width:980px}.w3-auto{max-width:1140px}
+</style>
+</head>
+  <script>
+    function executeExample() {
+      // placeholder for the executeExample until it's actually loaded
+    }
+  </script>
+
+ <body>
+  <!-- Examples -->
+
+    <h1  class="mobile-hidden"  id="show-sidebar" style="display: flex;
+    justify-content: center;
+    align-items: center;"><img class="w3-image w3-responsive" width="390px"  height="76px" src="https://sweetalert2.github.io/images/SweetAlert2.png"></h1>
+  <h2 id="examples" style="display: flex;
+  justify-content: center;
+  align-items: center;">Examples </h2>
+
+
+
+  <center>
+
+  
+ <div class="w3-container w3-content">
+  
+      <span  id="message-example">
+               
+          <button class="ez-button" aria-label="Try me! Example: A basic message" onclick="executeExample('basicMessage')">
+            A basic message
+          </button>
+
+      </span><br><br>
+  
+      <span  id="title-text-example">             
+          <button class="ez-button" aria-label="Try me! Example: A title with a text under" onclick="executeExample('titleText')">
+            A title with a text under
+          </button>
+
+      </span><br><br>
+  
+      <span  id="serror-example">
+        <div class="ui">
+          <button class="ez-button" aria-label="Try me! Example: A modal with a title, an error icon, a text, and a footer" onclick="executeExample('errorType')">
+            ErrorType
+          </button>
+
+      </span><br><br>
+  
+      <span  id="long-text">
+        <div class="ui">
+          <button class="ez-button" aria-label="Try me! Example: A modal window with a long content inside" onclick="executeExample('longText')">
+            A modal window with a long content inside
+          </button>
+
+      </span><br><br>
+  
+      <span  id="custom-html">
+        <div class="ui">
+          <button class="ez-button" aria-label="Try me! Example: Custom HTML description and buttons" onclick="executeExample('customHtml')">
+            Custom HTML description and buttons with ARIA labels
+          </button>
+      
+      </span><br><br>
+  
+      <span  id="three-buttons">
+               
+          <button class="ez-button" aria-label="Try me! Example: A dialog with three buttons" onclick="executeExample('threeButtons')">
+            A dialog with three buttons
+          </button>
+
+      </span><br><br>
+  
+      <span  id="custom-position">
+               
+          <button class="ez-button" aria-label="Try me! Example: A custom positioned dialog" onclick="executeExample('customPosition')">
+            A custom positioned dialog
+          </button>
+    
+      </span><br><br>
+  
+  
+      <span  id="confirm-dialog">
+               
+          <button class="ez-button" aria-label="Try me! Example: A confirm dialog, with a function attached to the 'Confirm'-button" onclick="executeExample('warningConfirm')">
+            A confirm dialog, with a function attached to the "Confirm"-button
+          </button>
+      
+      </span><br><br>
+  
+      <span  id="dismiss-handle">
+               
+          <button class="ez-button" aria-label="Try me! Example: passing a parameter, you can execute something else for 'Cancel'" onclick="executeExample('handleDismiss')">
+            ... and by passing a parameter, you can execute something else for "Cancel"
+          </button>
+
+      </span><br><br>
+  
+      <span  id="custom-image-example">
+               
+          <button class="ez-button" aria-label="Try me! Example: A message with a custom image" onclick="executeExample('customImage')">
+            A message with a custom image
+          </button>
+
+      </span><br><br>
+  
+      <span  id="custom-width-padding-background">
+               
+          <button class="ez-button" aria-label="Try me! Example: A message with custom width, padding and background" onclick="executeExample('customWidth')">
+            A message with custom width, padding, background and animated Nyan Cat
+          </button>
+
+      </span><br><br>
+  
+      <span  id="timer-example">
+               
+          <button class="ez-button" aria-label="Try me! Example: A message with auto close timer" onclick="executeExample('timer')">
+            A message with auto close timer
+          </button>
+
+      </span><br><br>
+  
+      <span  id="rtl">               
+          <button class="ez-button" aria-label="Try me! Example: A message in Arabic" onclick="executeExample('rtl')">
+            Right-to-left support for Arabic, Persian, Hebrew, and other RTL languages
+          </button>
+      </span><br><br>
+  
+      <span  id="ajax-request">               
+          <button class="ez-button" aria-label="Try me! Example: AJAX request" onclick="executeExample('ajaxRequest')">
+            AJAX request example
+          </button>
+      </span><br><br>
+    </div>
+  </center>
+
+
+  <script src="https://sweetalert2.github.io/dist/bundle.js" defer></script>
+
+  </body>
+  </html>

@@ -1,0 +1,104 @@
+.ag-format-container {
+  width: 1142px;
+  margin: 0 auto;
+}
+
+
+body {
+  height: 100vh;
+  width: 100%;
+  min-width: 320px;
+  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/glass-crash/images/bg.jpg) no-repeat scroll 50% 0 #241718;
+  background-size: cover;
+
+  overflow-x: hidden;
+}
+.ag-glass-crash_ball {
+  width: 10vh;
+
+  position: absolute;
+  top: 89vh;
+  left: 35vh;
+
+  -webkit-transition: all .45s cubic-bezier(.43, .1, .98, .61);
+  -moz-transition: all .45s cubic-bezier(.43, .1, .98, .61);
+  -o-transition: all .45s cubic-bezier(.43, .1, .98, .61);
+  transition: all .45s cubic-bezier(.43, .1, .98, .61);
+}
+.ag-glass-crash_img {
+  width: 100%;
+}
+.js-ag-end {
+  width: 78vh;
+
+  top: 5vh;
+  left: 10vh;
+
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.ag-glass-crash_glass {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/glass-crash/images/glass.png);
+  background-repeat: no-repeat;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+@media only screen and (max-width: 979px) {
+  body {
+    width: 100%;
+
+    overflow: hidden;
+  }
+  .ag-glass-crash_ball {
+    top: 80vh;
+    left: 0;
+  }
+  .js-ag-end {
+    top: 10vh;
+    left: 10vh;
+  }
+  .js-ag-end {
+    width: 70%;
+  }
+  .ag-glass-crash_glass {
+    background-size: 190% auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+
+}
+
+@media only screen and (max-width: 639px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .ag-format-container {
+    width: 750px;
+  }
+
+}
+
+@media (min-width: 980px) and (max-width: 1161px) {
+  .ag-format-container {
+    width: 960px;
+  }
+
+}

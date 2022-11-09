@@ -1,0 +1,78 @@
+/* -- Variables -- */
+/* icon color       */
+/* shadow color     */
+/* background color */
+/* bg border radius */
+/* box length       */
+@import "https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
+#icon-box span {
+  display: block;
+  position: absolute;
+  height: 75px;
+  width: 75px;
+  color: #fff;
+  text-shadow: #12664b 1px 1px, #12664b 2px 2px, #12664b 3px 3px, #12664b 4px 4px, #12664b 5px 5px, #12664b 6px 6px, #12664b 7px 7px, #12664b 8px 8px, #12664b 9px 9px, #12664b 10px 10px, #12664b 11px 11px, #12664b 12px 12px, #12664b 13px 13px, #12664b 14px 14px, #12664b 15px 15px, #12664b 16px 16px, #12664b 17px 17px, #12664b 18px 18px, #12664b 19px 19px, #12664b 20px 20px, #12664b 21px 21px, #12664b 22px 22px, #12664b 23px 23px, #12664b 24px 24px, #12664b 25px 25px, #12664b 26px 26px, #12664b 27px 27px, #12664b 28px 28px, #12664b 29px 29px, #12664b 30px 30px, #12664b 31px 31px, #12664b 32px 32px, #12664b 33px 33px, #12664b 34px 34px, #12664b 35px 35px, #12664b 36px 36px, #12664b 37px 37px, #12664b 38px 38px, #12664b 39px 39px, #12664b 40px 40px, #12664b 41px 41px, #12664b 42px 42px, #12664b 43px 43px, #12664b 44px 44px, #12664b 45px 45px, #12664b 46px 46px, #12664b 47px 47px, #12664b 48px 48px, #12664b 49px 49px, #12664b 50px 50px, #12664b 51px 51px, #12664b 52px 52px, #12664b 53px 53px, #12664b 54px 54px, #12664b 55px 55px, #12664b 56px 56px, #12664b 57px 57px, #12664b 58px 58px, #12664b 59px 59px, #12664b 60px 60px, #12664b 61px 61px, #12664b 62px 62px, #12664b 63px 63px, #12664b 64px 64px, #12664b 65px 65px, #12664b 66px 66px, #12664b 67px 67px, #12664b 68px 68px, #12664b 69px 69px, #12664b 70px 70px, #12664b 71px 71px, #12664b 72px 72px, #12664b 73px 73px, #12664b 74px 74px, #12664b 75px 75px, #12664b 76px 76px, #12664b 77px 77px, #12664b 78px 78px, #12664b 79px 79px, #12664b 80px 80px, #12664b 81px 81px, #12664b 82px 82px, #12664b 83px 83px, #12664b 84px 84px, #12664b 85px 85px, #12664b 86px 86px, #12664b 87px 87px, #12664b 88px 88px, #12664b 89px 89px, #12664b 90px 90px, #12664b 91px 91px, #12664b 92px 92px, #12664b 93px 93px, #12664b 94px 94px, #12664b 95px 95px, #12664b 96px 96px, #12664b 97px 97px, #12664b 98px 98px, #12664b 99px 99px, #12664b 100px 100px, #12664b 101px 101px, #12664b 102px 102px, #12664b 103px 103px, #12664b 104px 104px, #12664b 105px 105px, #12664b 106px 106px, #12664b 107px 107px, #12664b 108px 108px, #12664b 109px 109px, #12664b 110px 110px, #12664b 111px 111px, #12664b 112px 112px, #12664b 113px 113px, #12664b 114px 114px, #12664b 115px 115px, #12664b 116px 116px, #12664b 117px 117px, #12664b 118px 118px, #12664b 119px 119px, #12664b 120px 120px, #12664b 121px 121px, #12664b 122px 122px, #12664b 123px 123px, #12664b 124px 124px, #12664b 125px 125px, #12664b 126px 126px, #12664b 127px 127px, #12664b 128px 128px, #12664b 129px 129px, #12664b 130px 130px, #12664b 131px 131px, #12664b 132px 132px, #12664b 133px 133px, #12664b 134px 134px, #12664b 135px 135px, #12664b 136px 136px, #12664b 137px 137px, #12664b 138px 138px, #12664b 139px 139px, #12664b 140px 140px, #12664b 141px 141px, #12664b 142px 142px, #12664b 143px 143px, #12664b 144px 144px, #12664b 145px 145px, #12664b 146px 146px, #12664b 147px 147px, #12664b 148px 148px, #12664b 149px 149px, #12664b 150px 150px;
+}
+
+#icon-box span:hover {
+  display: block;
+  position: absolute;
+  height: 75px;
+  width: 75px;
+  color: #fff;
+  text-shadow: #0A3728 1px 1px, #0A3728 2px 2px, #0A3728 3px 3px, #0A3728 4px 4px, #0A3728 5px 5px, #0A3728 6px 6px, #0A3728 7px 7px, #0A3728 8px 8px, #0A3728 9px 9px, #0A3728 10px 10px, #0A3728 11px 11px, #0A3728 12px 12px, #0A3728 13px 13px, #0A3728 14px 14px, #0A3728 15px 15px, #0A3728 16px 16px, #0A3728 17px 17px, #0A3728 18px 18px, #0A3728 19px 19px, #0A3728 20px 20px, #0A3728 21px 21px, #0A3728 22px 22px, #0A3728 23px 23px, #0A3728 24px 24px, #0A3728 25px 25px, #0A3728 26px 26px, #0A3728 27px 27px, #0A3728 28px 28px, #0A3728 29px 29px, #0A3728 30px 30px, #0A3728 31px 31px, #0A3728 32px 32px, #0A3728 33px 33px, #0A3728 34px 34px, #0A3728 35px 35px, #0A3728 36px 36px, #0A3728 37px 37px, #0A3728 38px 38px, #0A3728 39px 39px, #0A3728 40px 40px, #0A3728 41px 41px, #0A3728 42px 42px, #0A3728 43px 43px, #0A3728 44px 44px, #0A3728 45px 45px, #0A3728 46px 46px, #0A3728 47px 47px, #0A3728 48px 48px, #0A3728 49px 49px, #0A3728 50px 50px, #0A3728 51px 51px, #0A3728 52px 52px, #0A3728 53px 53px, #0A3728 54px 54px, #0A3728 55px 55px, #0A3728 56px 56px, #0A3728 57px 57px, #0A3728 58px 58px, #0A3728 59px 59px, #0A3728 60px 60px, #0A3728 61px 61px, #0A3728 62px 62px, #0A3728 63px 63px, #0A3728 64px 64px, #0A3728 65px 65px, #0A3728 66px 66px, #0A3728 67px 67px, #0A3728 68px 68px, #0A3728 69px 69px, #0A3728 70px 70px, #0A3728 71px 71px, #0A3728 72px 72px, #0A3728 73px 73px, #0A3728 74px 74px, #0A3728 75px 75px, #0A3728 76px 76px, #0A3728 77px 77px, #0A3728 78px 78px, #0A3728 79px 79px, #0A3728 80px 80px, #0A3728 81px 81px, #0A3728 82px 82px, #0A3728 83px 83px, #0A3728 84px 84px, #0A3728 85px 85px, #0A3728 86px 86px, #0A3728 87px 87px, #0A3728 88px 88px, #0A3728 89px 89px, #0A3728 90px 90px, #0A3728 91px 91px, #0A3728 92px 92px, #0A3728 93px 93px, #0A3728 94px 94px, #0A3728 95px 95px, #0A3728 96px 96px, #0A3728 97px 97px, #0A3728 98px 98px, #0A3728 99px 99px, #0A3728 100px 100px, #0A3728 101px 101px, #0A3728 102px 102px, #0A3728 103px 103px, #0A3728 104px 104px, #0A3728 105px 105px, #0A3728 106px 106px, #0A3728 107px 107px, #0A3728 108px 108px, #0A3728 109px 109px, #0A3728 110px 110px, #0A3728 111px 111px, #0A3728 112px 112px, #0A3728 113px 113px, #0A3728 114px 114px, #0A3728 115px 115px, #0A3728 116px 116px, #0A3728 117px 117px, #0A3728 118px 118px, #0A3728 119px 119px, #0A3728 120px 120px, #0A3728 121px 121px, #0A3728 122px 122px, #0A3728 123px 123px, #0A3728 124px 124px, #0A3728 125px 125px, #0A3728 126px 126px, #0A3728 127px 127px, #0A3728 128px 128px, #0A3728 129px 129px, #0A3728 130px 130px, #0A3728 131px 131px, #0A3728 132px 132px, #0A3728 133px 133px, #0A3728 134px 134px, #0A3728 135px 135px, #0A3728 136px 136px, #0A3728 137px 137px, #0A3728 138px 138px, #0A3728 139px 139px, #0A3728 140px 140px, #0A3728 141px 141px, #0A3728 142px 142px, #0A3728 143px 143px, #0A3728 144px 144px, #0A3728 145px 145px, #0A3728 146px 146px, #0A3728 147px 147px, #0A3728 148px 148px, #0A3728 149px 149px, #0A3728 150px 150px;
+  -webkit-transition: text-shadow 0.2s 1s ease-out;
+  -moz-transition: text-shadow 0.2s 1s ease-out;
+  -o-transition: text-shadow 0.2s 1s ease-out;
+  transition: text-shadow 0.2s 1s ease-out;
+}
+
+
+#icon-box {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  font-size: 35px;
+  line-height: 75px;
+  background-color: #1b926c;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-transition: background-color 1.9s 0s ease-in-out;
+-moz-transition: background-color 1.9s 0s ease-in-out;
+-o-transition: background-color1.9s 0s ease-in-out;
+transition: background-color 1.9s 0s ease-in-out;
+}
+
+/* Help Styles */
+#container {
+  text-align: center;
+
+}
+
+#container div:hover {  background:  #16926c;
+
+background: #16926c; /* fallback color if gradients are not supported*/ 
+background: -webkit-linear-gradient(#0E7254, #12926C, #0C6249);
+background: -moz-linear-gradient(#0E7254, #12926C, #0C6249);
+background: -o-linear-gradient(#0E7254, #12926C, #0C6249);
+background: linear-gradient(#0E7254, #12926C, #0C6249);
+}
+
+#container div {
+  display: inline-block;
+  margin: 0.1em; background:  #12926c;
+}
+
+i:hover {text-shadow: 4px 3px 12px #000000;
+  -webkit-transition: text-shadow 0.2s 1s linear;
+  -moz-transition: text-shadow 0.2s 1s linear;
+  -o-transition: text-shadow 0.2s 1s linear;
+  transition: text-shadow 0.2s 1s linear;
+  -webkit-transition: all 1.1s 0s linear;
+  -moz-transition: all 1.1s 0s linear;
+  -o-transition: all 1.1s 0s linear;
+  transition: all 1.1s 0s linear;}

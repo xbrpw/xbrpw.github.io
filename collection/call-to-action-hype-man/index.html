@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Call to Action Hype Man</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.csss">
+  <style>
+        html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Open Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow: hidden;
+      background: linear-gradient(to bottom, rgba(255,242,232,1) 0%,rgba(254,215,223,1) 100%); 
+    }
+
+    .zone {
+      border-radius: 100%;
+      width: 500px;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px dashed #818181;
+      flex-shrink: 0;
+    }
+
+    .button-bodymovin {
+      border: 0;
+      position: relative;
+      padding: 0;
+      cursor: pointer;
+      background: transparent;
+      outline: none;
+    }
+
+    .bodymovin {
+      width: 62px; /* 310 */
+      height: 34px; /* 170 */
+      position: absolute;
+      top: -29px;
+      right: 4%;
+      z-index: 0;
+      pointer-events: none;
+      transition: transform 0s;
+    }
+
+    .bodymovin--hidden {
+      transform: translateY(30px);
+      transition: transform 0.55s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
+
+    .textbodymovin {
+      position: relative;
+      padding: 15px 34px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      display: block;
+      background: #442770;
+      border-radius: 3px;
+      transition: background 0.2s ease-in-out;
+    }
+
+    .buttonbodymovin:hover .textbodymovin {
+      background: #7934a0;
+    }
+  </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="zone">
+  <button class="button-bodymovin">
+    <span class="bodymovin"></span>
+    <span class="textbodymovin">Aquí esta el truco</span>
+  </button>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.7/lottie.min.js'></script>
+  <script  src="./script.js"></script>
+  <script> const bodymovinDiv = document.querySelector('.bodymovin');
+    const zone = document.querySelector('.zone');
+    let animationRunning = false;
+    const animData = {
+      container: bodymovinDiv,
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/stick-man.json' };
+    
+    
+    const anim = lottie.loadAnimation(animData);
+    anim.setSpeed(2.6);
+    
+    zone.addEventListener('mouseenter', mouseEnter);
+    zone.addEventListener('mouseleave', mouseLeave);
+    
+    function mouseEnter() {
+      if (!animationRunning) {
+        animationRunning = true;
+        bodymovinDiv.classList.remove('bodymovin--hidden');
+        anim.loop = false;
+        anim.setDirection(1);
+        anim.playSegments([0, 8], true);
+        anim.addEventListener('complete', startLoop);
+      }
+    }
+    
+    function mouseLeave() {
+      // anim.stop();
+      bodymovinDiv.classList.add('bodymovin--hidden');
+      animationRunning = false;
+      anim.removeEventListener('complete', startLoop); // If we leave before the loop starts we want to make sure to clear it
+    }
+    
+    function startLoop() {
+      anim.loop = true;
+      anim.removeEventListener('complete', startLoop);
+      anim.playSegments([9, 13], true);
+    }
+    </script>
+
+</body>
+</html>

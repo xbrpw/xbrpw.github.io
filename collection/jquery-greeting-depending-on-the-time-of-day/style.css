@@ -1,0 +1,14 @@
+body {
+  font-family: sans-serif;
+  background: white;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.greeting {
+  font-weight: 600;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

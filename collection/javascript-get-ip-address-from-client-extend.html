@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Navigator - get computer information with javascript</title>
+ <style>
+  body {
+    margin: 1em;
+    padding: 0;
+    background: #fcfcfa;
+    font-family: Helvetica,Roboto,Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #0a0a0a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+ </style>
+
+</head>
+<body>
+
+<h2>This is your computer:</h2>
+<div id="ipinfo"></div>
+<div id="navigator"></div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script>
+          var txt = "";
+
+
+      txt += "<div> Your computer has: <strong>"+navigator.hardwareConcurrency+" CPU cores</strong></div>";
+      txt += "<div> Your computer has: <strong>"+navigator.deviceMemory+" GB RAM memory</strong></div>";
+      txt += "<div> Browser CodeName: <strong>"+navigator.appCodeName+" </strong></div>";
+      txt += "<div> Browser Name: <strong>"+navigator.appName+"</strong></div>";
+      txt += "<div> Browser Version: <strong>"+navigator.appVersion+"</strong></div>";
+      txt += "<div> Browser Vendor: <strong>"+navigator.vendor+"</strong></div>";
+      txt += "<div> Cookies Enabled: <strong>"+navigator.cookieEnabled+"</strong></div>";
+      txt += "<div> Java Enabled: <strong>"+navigator.javaEnabled()+"</strong></div>";
+      txt += "<div> Browser Online: <strong>"+navigator.onLine+"</strong></div>";
+      txt += "<div> Language: <strong>"+navigator.language+"</strong></div>";
+      txt += "<div> Languages: <strong>"+navigator.languages+"</strong></div>";
+      txt += "<div> Platform: <strong>"+navigator.platform+"</strong></div>";
+      txt += "<div> User-agent Header: <strong>"+navigator.userAgent+"</strong></div>";
+      txt += "<div> maxTouchPoints: <strong>"+navigator.maxTouchPoints+"</strong></div>";
+      txt += "<div> Product: <strong>"+navigator.product+"</strong></div>";
+      txt += "<div> screen.width: <strong>"+screen.width+"</strong></div>";
+      txt += "<div> screen.height: <strong>"+screen.height+"</strong></div>";
+      txt += "<div> screen.colorDepth: <strong>"+screen.colorDepth+"</strong></div>";
+
+      txt += "<div> window.innerWidth: <strong>"+window.innerWidth+"</strong></div>";
+      txt += "<div> window.innerHeight: <strong>"+window.innerHeight+"</strong></div>";
+
+      txt += "<div> document.clientWidth: <strong>"+document.documentElement.clientWidth+"</strong></div>";
+      txt += "<div> document.clientHeight: <strong>"+document.documentElement.clientHeight+"</strong></div>";
+
+      txt += "<div> body.clientWidth: <strong>"+document.body.clientWidth+"</strong></div>";
+      txt += "<div> body.clientHeight: <strong>"+document.body.clientHeight+"</strong></div>";
+
+      txt += "<div> window.location.pathname: <strong>"+window.location.pathname+"</strong></div>";
+
+      txt += "<div> document.referrer: <strong>"+document.referrer+"</strong></div>";
+
+      txt += "<div> history.length: <strong>"+history.length+"</strong></div>";
+      numPlugins = navigator.plugins.length
+      txt += "<div> number of browser plugins: <strong>"+numPlugins+"</strong></div>";
+      for (i = 0; i < numPlugins; i++) {
+        plugin = navigator.plugins[i];
+        txt += "<div> Plugin"+i+" Name: <strong>"+plugin.name+"</strong></div>";
+        txt += "<div> Plugin"+i+" FileName: <strong>"+plugin.filename+"</strong></div>";
+        txt += "<div> Plugin"+i+" Description: <strong>"+plugin.description+"</strong></div>";
+        numTypes = plugin.length;
+        for (j = 0; j < numTypes; j++) {
+          mimetype = plugin[j];
+          if (mimetype) {
+            enabled = "No";
+            enabledPlugin = mimetype.enabledPlugin;
+          }
+          if (enabledPlugin && (enabledPlugin.name == plugin.name)) {
+            enabled = "Yes";
+          }
+          txt += "<div> MimeType"+j+" Type: <strong>"+mimetype.type+"</strong></div>";
+          txt += "<div> MimeType"+j+" Description: <strong>"+mimetype.description+"</strong></div>";
+          txt += "<div> MimeType"+j+" suffixes: <strong>"+mimetype.suffixes+"</strong></div>";
+          txt += "<div> MimeType"+j+" enabled: <strong>"+enabled+"</strong></div>";
+        }
+      }
+
+      document.getElementById("navigator").innerHTML=txt;
+
+
+
+
+
+
+
+
+
+        jQuery.getJSON('https://ipinfo.io/json', function(data) {
+          ip_data = data;
+          var ipinfo = "";
+          ipinfo += "<div> Your IP is: <strong>"+ip_data.ip+"</strong></div>";
+          ipinfo += "<div> Your ISP city is: <strong>"+ip_data.city+"</strong></div>";
+          ipinfo += "<div> Your ISP region: <strong>"+ip_data.region+"</strong></div>";
+          ipinfo += "<div> Your ISP country: <strong>"+ip_data.country+"</strong></div>";
+          ipinfo += "<div> Your ISP geolocation: <strong>"+ip_data.loc+"</strong></div>";
+          ipinfo += "<div> Your ISP postal code: <strong>"+ip_data.postal+"</strong></div>";
+          ipinfo += "<div> Your timezone: <strong>"+ip_data.timezone+"</strong></div>";
+          document.getElementById("ipinfo").innerHTML=ipinfo;
+        });
+      // end
+      // end
+      /*
+      for(var property in navigator){ 
+          var str = navigator[property]
+          document.write(property+ "&nbsp;&nbsp;<em>"+str+"</em><br />");
+      } 
+      */
+  </script>
+
+</body>
+</html>

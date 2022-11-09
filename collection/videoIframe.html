@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>videoIframe responsive</title>
+  <style>
+    .videoIframe-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe,  
+        .video-wrapper object,  
+        .video-wrapper embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+  </style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="videoIframe-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/y5-hH8DnqMk" frameborder="0" allowfullscreen></iframe>
+    </div>
+<!-- partial -->
+  
+</body>
+</html>

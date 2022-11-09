@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="fabs">
+  <div class="chat">
+    <div class="chat_header">
+      <span id="chat_head">Live Chat</span>
+      <div class="chat_loader"></div>
+      <div class="chat_option"><i class="zmdi zmdi-more-vert"></i>
+        <ul>
+          <li><span class="chat_color" style="border:solid 5px #2196F3" color="blue"></span></li>
+          <li><span class="chat_color" style="border:solid 5px #00bcd4" color="cyan"></span></li>
+          <li><span class="chat_color" style="border:solid 5px #607d8b" color="blue-grey"></span></li>
+          <li><span class="chat_color" style="border:solid 5px #4caf50" color="green"></span></li>
+          <li><span class="chat_color" style="border:solid 5px #8bc34a" color="light-green"></span></li>
+          <li><span class="chat_color" style="border:solid 5px #cddc39" color="lime"></span></li>
+          <li><span class="chat_color" style="border:solid 5px #ffc107" color="amber"></span></li>
+          <li><span class="chat_color" style="border:solid 5px #ff5722" color="deep-orange"></span></li>
+          <li><span class="chat_color" style="border:solid 5px #f44336" color="red"></span></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="chat_login">      
+        <input id="chat_log_email" placeholder="Email" ></input>
+        <a id="chat_send_email" class="" style=" position: relative;
+
+  width: 90%;
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 500;
+  color: #795c5c;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  border: none;
+  outline: none;
+  /*background: #eceff1;*/
+  height: 35px;
+  resize: none;
+  padding: 6px;
+  padding-top: 3px;
+  border-radius: 3px;
+  /*box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);*/
+  margin: 10px 0 0 0;"><i class="zmdi zmdi-mail-send"></i></a>  
+    <div class="chat_login_alert"></div>
+    </div>
+    <div id="chat_converse" class="chat_converse">
+      <span class="chat_msg_item chat_msg_item_admin">
+            <div class="chat_avatar">
+              <i class="zmdi zmdi-headset-mic"></i>
+            </div>¡Hola! Anda, cuéntame, qué pasa</span>
+      <span class="chat_msg_item chat_msg_item_user">
+            <div class="chat_avatar">
+              <i class="zmdi zmdi-account"></i>
+            </div>...</span>
+    </div>
+    <div class="fab_field">
+      <a id="fab_listen" class="fab"><i class="zmdi zmdi-mic-outline"></i></a>
+      <a id="fab_send" class="fab"><i class="zmdi zmdi-mail-send"></i></a>
+      <textarea id="chatSend" name="chat_message" placeholder="..." class="chat_field chat_message"></textarea>
+    </div>
+  </div>
+  <a target="_blank" id="fab_help" class="fab"><i class="zmdi zmdi-help-outline"></i></a>
+  <a id="prime" class="fab"><i class="prime zmdi zmdi-plus"></i></a>
+</div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-1.11.3.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

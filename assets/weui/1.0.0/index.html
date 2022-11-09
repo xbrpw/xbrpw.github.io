@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='https://cdn.bootcss.com/weui/1.1.1/style/weui.min.css'>
+<link rel='stylesheet' href='https://cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css'>
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  
+  <!-- page head -->
+  <div class="page__hd">
+    <a href="javascript:;" class="nav-btn nav-btn-left">
+      <i class="weui-icon-success"></i>
+      <span style="">选项</span>
+    </a>
+    <span>jqWeUI v1.0</span>
+    <a href="javascript:;" class="nav-btn nav-btn-right">
+      <i class="weui-icon-info-circle"></i>
+      <span style="">信息</span>
+    </a>
+  </div>
+	
+  
+	<!-- page body -->
+  <div class="page__bd">
+    <div class="weui-tab">
+      <!-- 页面内容 -->
+      <div class="weui-tab__panel" style="padding:2.2rem 0 3rem;">
+        <div class="weui-cells__title">九宫格</div>
+        <div class="weui-grids">
+          <grid-icon v-for="i in 9"></grid-icon>
+        </div>
+        <br />
+        <div class="weui-cells__title">选择器</div>
+        <div class="weui-cells">
+          <div class="weui-cell">
+            <div class="weui-cell__bd">
+              <input id="picker" class="weui-input" type="text" placeholder="点击选择">
+            </div>
+          </div>
+        </div>
+        <br />
+      </div>
+      
+      <!-- 导航栏 -->
+      <div class="weui-tabbar">
+        <a href="javascript:;" class="weui-tabbar__item weui-bar__item--on">
+          <span class="weui-badge" style="position:absolute; top:-4px;margin-left:20px">8</span>
+          <div class="weui-tabbar__icon">
+            <icon></icon>
+          </div>
+          <p class="weui-tabbar__label">微信</p>
+        </a>
+        <a href="javascript:;" class="weui-tabbar__item">
+          <div class="weui-tabbar__icon">
+            <icon></icon>
+          </div>
+          <p class="weui-tabbar__label">通讯录</p>
+        </a>
+        <a href="javascript:;" class="weui-tabbar__item">
+          <div class="weui-tabbar__icon">
+            <icon></icon>
+          </div>
+          <p class="weui-tabbar__label">发现</p>
+        </a>
+        <a href="javascript:;" class="weui-tabbar__item">
+          <div class="weui-tabbar__icon">
+            <icon></icon>
+          </div>
+          <p class="weui-tabbar__label">用户</p>
+        </a>
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  <!-- 弹出面板 -->
+  <div id="half" class="weui-popup__container popup-bottom" style="display: none; z-index:9999">
+    <div class="weui-popup__overlay"></div>
+    <div class="weui-popup__modal">
+      <div class="toolbar">
+        <div class="toolbar-inner">
+          <a href="javascript:;" class="picker-button close-popup" style="font-size:16px">关闭</a>
+          <h1 class="title">标题</h1>
+        </div>
+      </div>
+      <div class="modal-content">
+        <div class="weui-grids">
+          <a href="javascript:;" class="weui-grid js_grid" data-id="dialog">
+            <div class="weui-grid__icon">
+              <icon></icon>
+            </div>
+            <p class="weui-grid__label">
+              朋友圈
+            </p>
+          </a>
+          <a href="javascript:;" class="weui-grid js_grid" data-id="progress">
+            <div class="weui-grid__icon">
+              <icon></icon>
+            </div>
+            <p class="weui-grid__label">
+              微信
+            </p>
+          </a>
+          <a href="javascript:;" class="weui-grid js_grid" data-id="msg">
+            <div class="weui-grid__icon">
+              <icon></icon>
+            </div>
+            <p class="weui-grid__label">
+              手机QQ
+            </p>
+          </a>
+          <a href="javascript:;" class="weui-grid js_grid" data-id="dialog">
+            <div class="weui-grid__icon">
+              <icon></icon>
+            </div>
+            <p class="weui-grid__label">
+              微博
+            </p>
+          </a>
+          <a href="javascript:;" class="weui-grid js_grid" data-id="progress">
+            <div class="weui-grid__icon">
+              <icon></icon>
+            </div>
+            <p class="weui-grid__label">
+              复制链接
+            </p>
+          </a>
+          <a href="javascript:;" class="weui-grid js_grid" data-id="msg">
+            <div class="weui-grid__icon">
+              <icon></icon>
+            </div>
+            <p class="weui-grid__label">
+              发送邮件
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<!-- partial -->
+  <script src='https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js'></script>
+<script src='https://cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

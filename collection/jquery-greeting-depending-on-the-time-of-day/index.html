@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Greeting depending on the time of day</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="greeting"></div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  <script>
+    var thehours = new Date().getHours();
+    var themessage;
+    var morning = ('Buenos días');
+    var afternoon = ('Buenas tardes');
+    var evening = ('Buenas noches');
+
+    if (thehours >= 0 && thehours < 12) {
+      themessage = morning; 
+
+    } else if (thehours >= 12 && thehours < 17) {
+      themessage = afternoon;
+
+    } else if (thehours >= 17 && thehours < 24) {
+      themessage = evening;
+    }
+
+    $('.greeting').append(themessage);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript get IP address from client</title> 
+</head>
+<body>
+<!-- partial:index.partial.html -->
+Your IP: <span id="ip"></span>
+<div></div>
+
+Your City: <span id="city"></span>
+<div></div>
+
+Your region: <span id="region"></span>
+<div></div>
+
+Your country: <span id="country"></span>
+<div></div>
+
+Geo location: <span id="loc"></span>
+<div></div>
+
+Postal code: <span id="postal"></span>
+<div></div>
+
+Org info: <span id="org"></span>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script>
+      $.getJSON('https://ipinfo.io/json/', function(data) {
+        console.log(JSON.stringify(data, null, 2));
+        $("#ip").text(data.ip);
+        $("#city").text(data.city);
+        $("#region").text(data.region);
+        $("#country").text(data.country);
+        $("#loc").text(data.loc);
+        $("#postal").text(data.postal);
+        $("#org").text(data.org);
+      });
+  </script>
+
+</body>
+</html>
