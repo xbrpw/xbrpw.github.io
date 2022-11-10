@@ -7,18 +7,19 @@
   <link rel='stylesheet' href='https://res.wx.qq.com/open/libs/weui/0.4.0/weui.css'>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   
-  <!-- https://weui.io/0.4.x -->
+  <!-- https://weui.io/0.4.x https://weui.io/ -->
   <link rel="stylesheet" href="./style.css">
-  
+  <link rel="stylesheet" href="https://weui.io/style/weui.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
 
-<div class="hd">
-  <h1 class="page_title">&nbsp; Bautizo Hirumi</h1>
+<div class="hd" id="MarceloHome">
+  <h1 class="page_title">&nbsp; Marcelo</h1>
 </div>
-<div class="bd">
+
+<div class="bd" id="SobreelBautizo">
 <div class="weui_cells_title">Bautizo Hirumi</div>
 <div class="weui_cells weui_cells_access">
     <a class="weui_cell" href="javascript:;"  onclick="document.getElementById('id01').style.display='block'">
@@ -36,17 +37,10 @@
         </div>
     </a>
 </div>
-
-
-
-
-
-
-
-  <div id="id01" class="un-modal">
-    
-    <div class="">
-      <div class="">       
+  <main js-lazyload-container>
+    <div id="id01" class="un-modal">
+      
+      
               <div class=" ">
                 <div class="bd">
                   <div class="weui_cells_title" onclick="document.getElementById('id01').style.display='none'">Bautizo Hirumi</div>
@@ -56,28 +50,29 @@
                             <div class="weui_cell_bd weui_cell_primary">
                                 <div class="weui_uploader">
                                     <div class="weui_uploader_hd weui_cell">
-                                        <div class="weui_cell_bd weui_cell_primary">Opciones</div>
-                                        <div class="weui_cell_ft">16</div>
+                                        <div class="weui_cell_bd weui_cell_primary" onclick="document.getElementById('pregunta').style.display='block'">Opciones</div>
+                                        <div class="weui_cell_ft">18</div>
                                     </div>
                                     <div class="weui_uploader_bd">
-                                        <ul class="weui_uploader_files">
-                                          <li class="weui_uploader_file" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-1072480.png)"></li>
-                                          <li class="weui_uploader_file" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-1147387.png)"></li>
-                                          <li class="weui_uploader_file" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-1468935.png)"></li>
-                                          <li class="weui_uploader_file" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-1480193.png)"></li>
-                                          <li class="weui_uploader_file" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-253234.png)"></li>
-                                          <li class="weui_uploader_file" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-4306379.png)"></li>
-                                          <li class="weui_uploader_file" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-4375271.png)"></li>
-                                          <li class="weui_uploader_file" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-4843292 (1).png)"></li>
-                                          <li class="weui_uploader_file" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-719716 (2).png)"></li>
-                                          <li class="weui_uploader_file" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-769703.png)"></li>
-                                          <li class="weui_uploader_file" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-785182 (3).png)"></li>
-                                          <li class="weui_uploader_file" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-970950.png)"></li>
-                                          <li class="weui_uploader_file" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-christmas-decoration-735242.png)"></li>
-                                          <li class="weui_uploader_file" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-emoji-1810326 (1).png)"></li>
-                                          <li class="weui_uploader_file" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-wings-1660241 (1).png)"></li>
-                                          <li class="weui_uploader_file" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-christmas-angel-215347.png)"></li>
-                                            <li class="weui_uploader_file weui_uploader_status w3-hide" style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)">
+                                        <ul class="weui_uploader_files">                                        
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito" style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/1072480-600.png)" onclick="document.getElementById('photo1').style.display='block'"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/descarga.png)"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-1072480.png)"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-1147387.png)"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-1468935.png)"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-1480193.png)"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-253234.png)"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-4306379.png)"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-4375271.png)"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-48432921.png)"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-7197162.png)"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-769703.png)"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-7851823.png)"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-970950.png)"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-christmas-decoration-735242.png)"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-emoji-18103261.png)"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-angel-wings-16602411.png)"></li>
+                                        <li class="weui_uploader_file" js-lazyload loading="lazy" js-alt="angelito"  style="background-image:url(http://www.xbr.pw/go/icon-xbrpw/angeles/noun-christmas-angel-215347.png)"></li>                                          <li class="weui_uploader_file weui_uploader_status w3-hide" style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)">
                                                 <div class="weui_uploader_status_content">
                                                     <i class="weui_icon_warn"></i>
                                                 </div>
@@ -93,64 +88,151 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="weui_cells_title">De estas imágenes...</div>
-                    <div class="weui_cells weui_cells_form">
-                      <form target="_blank" action="https://formsubmit.co/lamacpad@gmail.com" method="POST">
-                        <div class="weui_cell">
-                            <div class="">
-                                <input type="text" name="_subject"  class="weui_textarea" placeholder="¿Cuál te gusto más?" value="¿Cuál te gusto más?" required>          
-                            </div>
-                        </div>
-                    </div>
-                    <div class="weui_btn_area">
-                        <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips" ><button type="submit" class="" style="background-color: none; border: 0; background: transparent; color:white">Enviar</button></a>                        
-                    </div>
-                           
-                        <input type="hidden" name="_next" value="https://www.xbr.pw" false>                            
-                        <input type="text" name="_honey" style="display:none">                       
-                        
-                      </form>
-              
-              
+                    </div>                    
+                  </div>
                   
-             
-              </div>
-      </div>
-    </div>
-  </div>
+              
+                    <div class="weui_btn_area" onclick="document.getElementById('pregunta').style.display='block'">
+                        <a class="weui_btn weui_btn_primary " href="javascript:"><button  class="" style="background-color: none; border: 0; background: transparent; color:white">Cuál te gusto más</button>
+                        </a>                        
+                    </div>
 
-  <div class="weui_cells_title w3-hide" onclick="document.getElementById('pregunta').style.display='block'">¿Cuál te gusta más?</div>
+  
+                            
+                                                                        
+              </div>
+
+
+    </div>
+  </main>
+
+
   <div id="pregunta" class="un-modal">    
     <div class="bd">
-      <div class="weui_cells_title" onclick="document.getElementById('pregunta').style.display='none'">Bautizo Hirumi</div>
-     
-      </div>           
-    </div>
+    <div class="weui_cells_title" onclick="document.getElementById('pregunta').style.display='none'">Bautizo Hirumi</div>
+      <div class="weui-form">
+        <div class="weui-form__text-area">
+          <h2 class="weui-form__title">Pregunta</h2>
+          <div class="weui-form__desc">¿Cuál te gusto más?</div>
+        </div>
+        <form target="_blank" action="https://formsubmit.co/lamacpad@gmail.com" method="POST">                            
+          <input type="hidden" name="_next" value="https://www.xbr.pw">                            
+          <input type="text" name="_honey" style="display:none">                       
+          
+       
 
-  </div>
+          <div class="weui-form__control-area">
+            <div class="weui-cells__group weui-cells__group_form">
+              <div class="weui-cells weui-cells_form">
+                  <div class="weui-cell weui-cell_active">
+                      <div class="weui-cell__bd">
+                          <textarea class="weui-textarea" placeholder="Aquí va tu respuesta" rows="1"></textarea>
+                          <div role="option" aria-live="polite" class="weui-textarea-counter w3-hide"><span>0</span>/200</div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+  
 
+          <div class="weui_btn_area" onclick="document.getElementById('pregunta').style.display='block'">
+            <a class="weui_btn weui_btn_primary "  href="#SobreelBautizo" ><button type="submit" class="" style="background-color: none; border: 0; background: transparent; color:white">Enviar</button>
+            </a>                        
+          </div>
+        </form> 
 
-
-
-
-
-
-
-<div class="weui_dialog_alert" style="display: none;">
-  <div class="weui_mask"></div>
-  <div class="weui_dialog">
-      <div class="weui_dialog_hd">
-        <strong class="weui_dialog_title">Diseño de <b>lam:p</b></strong>
-    </div>
-      <div class="weui_dialog_bd">www.luisangelmaciel.one</div>
-      <div class="weui_dialog_ft">
-          <a href="javascript:;" class="weui_btn_dialog primary">Go!</a>
-      </div>
+        <input type="hidden" name="_next" value="https://www.xbr.pw" false>                            
+        <input type="text" name="_honey" style="display:none">                       
+        
+      </form>   
+      </div>     
+    </div>           
   </div>
 </div>
-<!-- partial -->
+
+<div class="bd" id="SobreelDiaDelPadre">
+  <div class="weui_cells_title">Día del Padre</div>
+
+  <div class="weui_cells weui_cells_access">
+      <a class="weui_cell" href="javascript:;"  onclick="document.getElementById('galeriaDiaDelPadre').style.display='block'">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>Fotogalería</p>
+          </div>
+          <div class="weui_cell_ft">
+          </div>
+      </a>      
+  </div>
+     
+  <div id="galeriaDiaDelPadre" class="un-modal">
   
+
+    <div class="bd">            
+      <div class="weui_cells_title" onclick="document.getElementById('galeriaDiaDelPadre').style.display='none'">Día del padre</div>
+      <div class="weui_cells_title" ></div>
+        <div class="weui_cells weui_cells_form">
+            <div class="weui_cell">
+              <iframe></iframe>     
+            </div>
+        </div>                    
+    </div>
+
+
+  </div>
+</div>
+  
+<div class="bd" id="Holi">
+  <div class="weui_cells_title" >Sobre</div>
+  <div class="weui_cells weui_cells_access">
+      <a class="weui_cell" href="javascript:;"  onclick="document.getElementById('Holiholi').style.display='block'">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>Contact Marcelo</p>
+          </div>
+          <div class="weui_cell_ft">
+          </div>
+      </a>      
+  </div>
+
+  <div id="Holiholi" class="un-modal">                      
+              <div class="bd">                
+                  <div class="weui_dialog_alert" >
+                    <div class="weui_mask"></div>
+                    <div class="weui_dialog">
+                        <div class="weui_dialog_hd">
+                          <strong class="weui_dialog_title">Diseño de <b>lam:p</b></strong>
+                      </div>
+                        <div class="weui_dialog_bd">www.luisangelmaciel.one</div>
+                        <div class="weui_dialog_ft">
+                            <a href="#MarceloHome" class="weui_btn_dialog primary" onclick="document.getElementById('Holiholi').style.display='none'">Go!</a>
+                        </div>
+                    </div>
+                  </div>                                                                                                       
+              </div>  
+  </div>
+
+  
+</div>
+
+
+
+
+<iv id="photo1" class="un-modal">                      
+              <div class="bd">                
+                          
+                  <span id="galleryImg" alt="" role="img" class="weui-gallery__img" style="background-image: url(http://www.xbr.pw/go/icon-xbrpw/angeles/1072480-600.png);"></span>
+                  <div class="weui-gallery__opr">
+                      <a role="button" aria-label="删除" href="javascript:" class="weui-gallery__del">
+                          <i class="weui-icon-delete weui-icon_gallery-delete"  onclick="document.getElementById('photo1').style.display='none'"></i>
+                      </a>
+                  </div>                                                  
+                                                                                                                                     
+              </div>  
+  </div>
+
+<!-- partial -->
+
+<script src='https://cdn.jsdelivr.net/npm/intersection-observer-polyfill@0.1.0/dist/IntersectionObserver.js'></script>
+<script  src="https://xbrpw.github.io/collection/recomendados/image-lazy-loading/dist/index.html"></script>
+
 </body>
 </html>
 
