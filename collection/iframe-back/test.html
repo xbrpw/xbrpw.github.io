@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<a href="index.html">INDEX</a><br>
+<button onclick="goBack('if1')">Back</button>
+<button onclick="goForward('if1')">Forward</button>
+<button onclick="refreshPage('if1')">Refresh</button>
+<iframe id="if1" src="iframe1.html" width="100%" onLoad="add2history(this.id,this.contentWindow.location)"></iframe>
+
+<button onclick="goBack('if2')">Back</button>
+<button onclick="goForward('if2')">Forward</button>
+<button onclick="refreshPage('if2')">Refresh</button>
+<iframe id="if2" src="iframe2.html" width="100%" onLoad="add2history(this.id,this.contentWindow.location)"></iframe>
+
+<button onclick="goBack('if3')">Back</button>
+<button onclick="goForward('if3')">Forward</button>
+<button onclick="refreshPage('if3')">Refresh</button>
+<iframe id="if3" src="iframe3.html" width="100%" onLoad="add2history(this.id,this.contentWindow.location)"></iframe>
+
+<script>
+	var iframes = document.getElementsByTagName('iframe');
+	var framesHistory = new Array();
+	var frameId;
+
+	for (var i = 0; i < iframes.length; i++) {
+		frameId = iframes[i].getAttribute("id");
+		framesHistory[frameId] = new Array();
+
+		fObj = framesHistory[frameId];
+		fObj["frameName"] = frameId;
+		fObj["status"] = new Array();
+		fObj.status["current"] = 0;
+		fObj.status["previous"] = 0;
+		fObj["history"] = new Array();
+		fObj.history[fObj.status.current] = iframes[i].src;
+	}
+	console.log(framesHistory);
+
+
+	function add2history(frameId,location){
+		fObj = framesHistory[frameId];
+		if (location.href != fObj.history[fObj.status.current] && location.href != fObj.history[fObj.status.current+1] && fObj.history[fObj.status.current] != window.location.href) {
+			fObj.status.previous = fObj.status.current;
+			n = fObj.status.current = fObj.status.current+1;
+			fObj["history"][n] = location.href;
+		}
+	}
+
+	function refreshPage(frameId){
+		var iframe = document.getElementById(frameId);
+		fObj = framesHistory[frameId];
+		iframe.src = fObj.history[fObj.status.current];
+	}
+
+	function goBack(frameId) {
+		var iframe = document.getElementById(frameId);
+		fObj = framesHistory[frameId];
+		if (fObj.status.current !=0) {
+			iframe.src = fObj.history[fObj.status.current-1];
+			fObj.status.previous = fObj.status.current;
+			n = fObj.status.current = fObj.status.current-1;	
+		} else{
+			//console.log("There is no previous page!");
+		}
+	}
+
+	function goForward(frameId) {
+		var iframe = document.getElementById(frameId);
+		fObj = framesHistory[frameId];
+		if (fObj.history[fObj.status.current+1]) {
+			iframe.src = fObj.history[fObj.status.current+1];
+			fObj.status.previous = fObj.status.current;
+			n = fObj.status.current = fObj.status.current+1;
+		} else{
+			//console.log("There is no next page!");
+		}
+	}
+</script>
+
+</body>
+</html>

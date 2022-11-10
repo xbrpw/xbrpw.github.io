@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<button class="togglebutton togglebuttonBox">lista</button>
+<button class="togglebuttonBox togglebutton">box</button>
+  
+<br><br>
+<article class="articlehover spannew "  style="display:none">
+  <p>a</p>
+  <p>b</p>
+  <p>c</p>
+  <p>d</p>
+</article>
+<article class="articlehover spannewBox">
+  <p>1</p>
+  <p>2</p>
+  <p>3</p>
+  <p>4</p>
+</article>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".togglebutton").click(function(){
+    $(".spannew").toggle();
+  });
+});
+  $(document).ready(function(){
+  $(".togglebuttonBox").click(function(){
+    $(".spannewBox").toggle();
+  });
+});
+</script>
+  
+</body>
+</html>

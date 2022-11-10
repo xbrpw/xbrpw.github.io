@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Material Design App Bars: Bottom</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<svg id="appbar" width="0" height="0" viewBox="0 0 72 36" xmlns="http://www.w3.org/2000/svg">
+  <clipPath id="appbar__cutout">
+    <path d="M36 36C55.8823 36 72 19.8823 72 0V112H0V0C0 19.8823 16.1177 36 36 36Z" />
+  </clipPath>
+</svg>
+
+<h1>Material Design, App Bar: Bottom</h1>
+<div class="container">
+  <div class="container__example container__example--center-fab">
+    <h2 class="description">Fab at center</h2>
+    <div class="appbar appbar__bottom appbar__bottom--no-cut">
+      <a href="javacript:void(0)" class="appbar__bottom--fab" title="add" aria-label="Add">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"/>
+        </svg>
+      </a>
+      
+      <div class="appbar__bottom--normal">
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/></svg>
+        </a>
+      </div>
+      <div class="appbar__bottom--normal flex--right">
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"/></svg>
+        </a>
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container__example container__example--center-fab-cutout">
+    <h2 class="description">Fab at center cutout</h2>
+    <div class="appbar appbar__bottom appbar__bottom--center-cut">
+      <a href="javacript:void(0)" class="appbar__bottom--fab appbar__bottom--fab-primary" title="add" aria-label="Add">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"/>
+        </svg>
+      </a>
+      
+      <div class="appbar__bottom--normal">
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/></svg>
+        </a>
+      </div>
+      
+      <div class="appbar__bottom--cutout"></div>
+      
+      <div class="appbar__bottom--normal flex--right">
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"/></svg>
+        </a>
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container__example container__example--end-fab">
+    <h2 class="description">Fab at end</h2>
+    <div class="appbar appbar__bottom appbar__bottom--end-no-cut">
+      <a href="javacript:void(0)" class="appbar__bottom--fab appbar__bottom--fab-end" title="add" aria-label="Add">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"/>
+        </svg>
+      </a>
+      
+      <div class="appbar__bottom--normal">
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/></svg>
+        </a>
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" /></svg>
+        </a>
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M17.63,5.84C17.27,5.33 16.67,5 16,5H5A2,2 0 0,0 3,7V17A2,2 0 0,0 5,19H16C16.67,19 17.27,18.66 17.63,18.15L22,12L17.63,5.84Z" /></svg>
+        </a>
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container__example container__example--end-fab-cutout">
+    <h2 class="description">Fab at end cutout</h2>
+    <div class="appbar appbar__bottom appbar__bottom--end-cut">
+      <a href="javacript:void(0)" class="appbar__bottom--fab appbar__bottom--fab-primary appbar__bottom--fab-end" title="add" aria-label="Add">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"/>
+        </svg>
+      </a>
+      
+      <div class="appbar__bottom--normal">
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/></svg>
+        </a>
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" /></svg>
+        </a>
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M17.63,5.84C17.27,5.33 16.67,5 16,5H5A2,2 0 0,0 3,7V17A2,2 0 0,0 5,19H16C16.67,19 17.27,18.66 17.63,18.15L22,12L17.63,5.84Z" /></svg>
+        </a>
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+        </a>
+      </div>
+      
+      <div class="appbar__bottom--cutout"></div>
+      
+      <div class="appbar__bottom--spacer"></div>
+    </div>
+  </div>
+  
+  <div class="container__example container__example--no-fab">
+    <h2 class="description">No fab</h2>
+    <div class="appbar appbar__bottom appbar__bottom--no-fab">
+      <div class="appbar__bottom--normal">
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/></svg>
+        </a>
+      </div>
+      <div class="appbar__bottom--normal flex--right">
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" /></svg>
+        </a>
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M17.63,5.84C17.27,5.33 16.67,5 16,5H5A2,2 0 0,0 3,7V17A2,2 0 0,0 5,19H16C16.67,19 17.27,18.66 17.63,18.15L22,12L17.63,5.84Z" /></svg>
+        </a>
+        <a href="javascript:void(0)">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" /></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

@@ -1,0 +1,156 @@
+@import 'base.scss';
+
+// *:focus {
+//   outline: none;
+// }
+
+// *:focus-visible {
+//   outline: rem(2) solid var(--secondary);
+//   outline-offset: rem(2);
+// }
+
+body {
+  display: grid;
+  align-content: baseline;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Roboto Slab';
+  font-weight: 400;
+}
+
+.container {
+  display: grid;
+  grid-row-gap: rem(16);
+  &__example {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: rem(200);
+    overflow: hidden;
+    border: rem(1) solid rgba(black, 0.24);
+    border-radius: rem(8);
+    &--no-support {
+      position: absolute;
+      top: 0;
+      left: 16px;
+      color: var(--secondary-text-on-secondary-light);
+      a {
+        color: var(--secondary);
+      }
+    }
+  }
+}
+
+.appbar {
+  display: flex;
+  width: 100%;
+  min-height: rem(56);
+  &__bottom {
+    position: relative;
+    width: 100%;
+    color: white;
+    &--inset {
+      --appbar-background-color: var(--primary);
+      --appbar-scale: 1;
+
+      background: var(--appbar-background-color);
+      @supports (background: paint(id)) {
+        filter:
+          drop-shadow(0 rem(2) rem(4) rgba(0,0,0,.2))
+          drop-shadow(0 rem(4) rem(5) rgba(0,0,0,.14))
+          drop-shadow(0 rem(1) rem(10) rgba(0,0,0,.12));
+        &.appbar__bottom--center {
+          background: paint(appBarBottom, center);
+        }
+        &.appbar__bottom--end {
+          background: paint(appBarBottom, end);
+        }
+      }
+      
+      @supports not (background: paint(id)) {
+        box-shadow: 
+          0 rem(2) rem(4) rem(-1) rgba(0,0,0,.2),
+          0 rem(4) rem(5) 0 rgba(0,0,0,.14),
+          0 rem(1) rem(10) 0 rgba(0,0,0,.12);
+      }
+    }
+  }
+  &__left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &__right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &__button {
+    will-change: color;
+    transition: color 170ms ease-out;
+    display: inline-block;
+    margin: 0 rem(4);
+    padding: rem(8);
+    color: var(--secondary-text-on-primary);
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      color: var(--primary-text-on-primary);
+    }
+  }
+}
+
+.fab {
+  will-change: box-shadow, background-color;
+  transition: box-shadow 170ms ease-out;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(54);
+  height: rem(54);
+  color: #FFFFFF;
+  font-size: 0;
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 50%;
+  z-index: +1;
+  cursor: pointer;
+  box-shadow:
+    0 rem(3) rem(5) rem(-1) rgba(0,0,0,.2),
+    0 rem(6) rem(10) 0 rgba(0,0,0,.14),
+    0 rem(1) rem(18) 0 rgba(0,0,0,.12);
+  @supports (background: paint(id)) {
+    background-color: var(--primary);
+  }
+  &--center {
+    left: 50%;
+    bottom: rem(56);
+    transform: translate(-50%, calc(#{rem(54)} / 2));
+  }
+  &--end {
+    right: rem(0);
+    bottom: rem(56);
+    transform: translate(#{rem(-18)}, calc(#{rem(54)} / 2));
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--secondary--dark);
+    box-shadow:
+      0 rem(7) rem(8) rem(-4) rgba(0,0,0,.2),
+      0 rem(12) rem(17) rem(2) rgba(0,0,0,.14),
+      0 rem(5) rem(22) rem(4) rgba(0,0,0,.12);
+    @supports (background: paint(id)) {
+      background-color: var(--primary-dark);
+    }
+  }
+}
