@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-auto w3-center">
+
+
+<div class="w3-container">
+  <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-black">Open Modal</button>
+
+  <div id="id02" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p>Some text. Some text. Some text.</p>
+        <p>Some text. Some text. Some text.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Fade In Modal</button>
+
+
+  <div id="id01" class="w3-modal w3-animate-opacity" style="background-color:black">
+   
+      <div class="">
+        <img src="https://www.xbr.pw/assets/style/theme/darkmode%20goku.svg" class="w3-image w3-responsive" width="100%" heigth="100vh;" onclick="document.getElementById('id01').style.display='none'" >
+      </div>      
+  
+  </div>
+</div>
+            
+</body>
+</html>
