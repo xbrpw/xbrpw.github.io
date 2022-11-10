@@ -810,18 +810,36 @@
             <button class="tablinkeso verde-mode" onclick="openeso('xmateria', this, 'rgba(2, 34, 34, 0.432)')"><i class="fa-duotone fa-folder-open con-una-sombra-negra-en-el-texto"></i> &nbsp; <b class='con-una-sombra-negra-en-el-texto'>Materia</b></button>                        
           </div>  
       
-          <div id="xproyecto" class="tabcontenteso" >             
+          <div id="xproyecto" class="tabcontenteso" >    
+          
+            <div  class="de-lista-a-box  ">
               <ul class="w3-ulsj " >
                   <li class="w3-bar w3-ripple"  >   
                       <span>
-                          <span  class='w3-bar-item  w3-right'> <i class="fa-duotone fa-list w3-xlarge  w3-right-align w3-ripple"></i> &nbsp; <i class="fa-duotone fa-th w3-xlarge w3-right-align w3-ripple"></i> </span> 
+                          <span  class='w3-bar-item  w3-right'> 
+                            <i class="fa-duotone fa-list w3-xlarge  w3-right-align w3-ripple togglebutton togglebuttonBox"></i> &nbsp; 
+                            <i class="fa-duotone fa-th w3-xlarge w3-right-align w3-ripple togglebuttonBox togglebutton"></i> </span> 
                               <div class="w3-bar-item ">                            
                                   <span class="w3-large w3-ripple w3-hide"><span data-nosnippet><i class="fa-duotone fa-book w3-xlarge"></i> &nbsp;  <b>Accesos rápidos </b></span>  </span><br>
                                   <span class="w3-ripple w3-hide">&nbsp; &nbsp; &nbsp; &nbsp; Por proyecto Unesco</span>  
-                              </div>                                   
+                              </div>                               
                       </span>
                   </li> 
               </ul>
+              <article class="articlehover spannew "  style="display:none">
+                <p>a</p>
+                <p>b</p>
+                <p>c</p>
+                <p>d</p>
+              </article>
+              <article class="articlehover spannewBox">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+              </article>
+            </div>
+
               <span id="fooCiencia" style="display: none;" onclick="toggle_visibility('fooCiencia');">        
                 <ul class="w3-ul" id="#RegresaraCiencia"  >   
                   <li class="w3-bar w3-hoverable" > 
@@ -1062,7 +1080,7 @@
                         </div>                                   
                 </li> 
               </ul>  
-                <div class="wraper-Accesos"> 
+                <div class="wraper-Accesos w3-hide"> 
                   <section class="content-section">
                 <!-- <h1 class="section-header">Accesos rápidos</h1> -->
                 <div class="access-links">
@@ -1917,6 +1935,7 @@
           </div>
     </div>
 
+    
     <script type="text/javascript">
         function toggle_visibility(id) {
         var e = document.getElementById(id);
@@ -2048,6 +2067,19 @@
     <script src="https://www.luisangelmaciel.one/preloader.js"></script>
     <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>  
     <script src="/weui.jsxxx"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $(".togglebutton").click(function(){
+        $(".spannew").toggle();
+      });
+    });
+      $(document).ready(function(){
+      $(".togglebuttonBox").click(function(){
+        $(".spannewBox").toggle();
+      });
+    });
+    </script>
   </body>
 
   <div class="w3-container w3-margin-bottom animation9s w3-hide"  style="z-index: 2;" onclick="openCity('Paris')" >
