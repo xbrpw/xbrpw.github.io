@@ -843,9 +843,41 @@
 
           
 
-  
+  <div class="w3-hide">
 <script src="https://carrier.formcarry.com/js/v1.js"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+$(function(){
+    $(".ajaxForm").submit(function(e){
+        e.preventDefault();
+        var href = $(this).attr("action");
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: href,
+            data: $(this).serialize(),
+            success: function(response){
+                if(response.status == "success"){
+                    alert("Evidencia enviada para previa moderación. Gracias!");
+                }else{
+                    alert("Ha ocurrido un error: " + response.message);
+                }
+            }
+        });
+    });
+});
+</script>
+<form class="ajaxForm" action="https://formcarry.com/s/8S4FdSF-6" accept-charset="UTF-8">
+  <form class="ajaxForm" action="https://formcarry.com/s/8S4FdSF-6" accept-charset="UTF-8">
+    <input type="email" name="email">
+    <input type="text" name="name">
+    <input type="file" name="picture" multiple>
+    <input type="hidden" name="_next" value="https://xbrpw.github.io/w/re.html">
+    <input type="hidden" name="_gotcha"><!-- use this to prevent spam -->
+    <button type="submit">Enviar</button>
+  </form>
+</form>
 
 
 
@@ -1058,7 +1090,7 @@
     </form>
   </section>
   
-
+</div>
             <span id="fooCiencia" style="display: none;" onclick="toggle_visibility('fooCiencia');">        
               <ul class="w3-ul" id="#RegresaraCiencia"  >   
                 <li class="w3-bar w3-hoverable" > 
@@ -1665,7 +1697,7 @@
                           
                           <li  class="white-mode green-mode ">  </li>  
                            <li class="w3-bar w3-hoverable" onclick="openCity('iUserx')" > 
-                            <a href="https://mail.google.com/chat/u/0/#chat/dm/0lP_TEAAAAE" target="_blank" class="a">
+                            <a href="https://xbr.pw/eso/soporte-tecnico.html" target="_top" class="a">
                                 <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-chevron-right w3-xlarge w3-right-align w3-ripple"  ></i></span> 
                                     <div class="w3-bar-item"  >                            
                                         <span class="w3-large w3-ripple"> <i class="fa-duotone fa-user w3-xlarge w3-ripple"  ></i> &NonBreakingSpace;<b>Soporte Técnico</b></span>
