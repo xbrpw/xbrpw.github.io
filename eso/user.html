@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="es-MX">
+<!-- * ⊙⩌⨀ 2006 - 2022  http://twitter.com/luisangelmaciel  */  -->
+<head> 
+  <meta charset="UTF-8">  
+  <title> Docentes control</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="description" content="Docentes control">
+  <meta name="MobileOptimized" content="width" />    
+  <meta name="author" content="Luis Angel Maciel">
+  <meta name="generator" content="xbr.pw">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" >
+  <link rel="icon" type="image/x-icon" sizes="192x192" href="./favicon.svg" id="favicon" />   
+  <link rel="apple-touch-icon" href="./apple-touch-icon.svg">
+  <meta name="MobileOptimized" content="width" />
+    <link rel="stylesheet" href="../lib/style.css">
+    <link rel="stylesheet" href="../lib/ie7/ie7.css">
+  <script src="../icoSorJuana/selection.json"></script>       
+  
+  <link rel="stylesheet" href="https://xbrpw.github.io/eso/docentes/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.02.0/css/all.min.css'> <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v6/search?o=r&m=free -->   
+  <link href='https://xbrpw.github.io/assets/fontawesome/css/all.min.css' rel='stylesheet'>
+  <link href='https://xbrpw.github.io/assets/fontawesome/css/regular.min.css' rel='stylesheet'>
+  <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script> 
+  </head>
+  <body>    
+      
+    <span data-nosnippet></span> 
+   
+
+   
+
+    <div class="w3-container w3-cell-row w3-auto" id="PanelDocentes"><br>
+      <div class="w3-container  w3-cell w3-cell-middle ">
+        <div class="form-signin">
+            <form>  <br><br><center>
+            <img src="https://xbrpw.github.io/eso/img/storyset/Formula-rafiki.svg" alt="Login docentes" width="250" class="w3-image w3-responsive w3-center w3-centered" height="65" title="Login Docentes ESO 0514 SEP">
+          </center>
+          <h2 class="w3-center" style="color:#103113"><b>Docentes</b></h2>
+          <div class="form-floating">
+            <input type="text" class="form-control userEso" id="floatingInputEso" placeholder="User">
+            <label for="floatingInput">Usuario</label>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="password" class="form-control passEso" value="" id="myInputpassword"  id="password" name="password" type="password" placeholder="Password" >
+            <label for="floatingPassword">Password</label>
+          </div>    <div class="w3-right-align" onclick="myFunctionpassword()" type="checkbox"> <i class="fa-duotone fa-eye"></i> Mostrar Password </div><br> 
+          <br>  <br>  
+          <button  id="loginBtn" style="background-color: #0e6d5b; color:white" class="w3-btn w3-round-xxlarge  w3-hover-teal   w3-block loginEso" type="button"><b>Entrar</b></button>
+          
+          <br>  <br> <center>
+                
+                 <a href="#ElModerador" class="w3-text-grey" >Moderador</a>
+
+               </center> 
+        </form>  <section class="lec-sec"></section>
+            
+
+        </div>
+      </div>
+
+
+
+  
+      </div><br><br><br> </div><br><br><br>
+    </div>
+
+    <div class="w3-container w3-cell-row w3-auto" id="ElModerador"><br>
+        <div class="w3-container w3-cell w3-cell-middle ">
+          <div class="form-signin">
+              <form>  <br><br><center>
+              <img src="https://xbrpw.github.io/eso/img/storyset/Login-pana.svg" alt="Login docentes" width="250" class="w3-image w3-responsive w3-center w3-centered" height="65" title="Login Docentes ESO 0514 SEP">
+            </center>
+            <h2 class="w3-center" style="color:#103113"><b>Moderador</b></h2>
+            <div class="form-floating">
+              <input type="text" class="form-control user" id="floatingInput" placeholder="User">
+              <label for="floatingInput">Usuario</label>
+            </div>
+            <br>
+            <div class="form-floating">
+              <input type="password" class="form-control pass" value="" id="password" placeholder="Password">
+              
+              <label for="floatingPassword">Password</label><div class="w3-right-align w3-hide" onclick="myFunctionpassword()" type="checkbox"> <i class="fa-duotone fa-eye"></i> Mostrar Password </div><br> 
+            </div>
+            <br> 
+         
+            <button  id="loginBtn" style="background-color: #0e6d5b; color:white" class="w3-btn w3-round-xxlarge  w3-hover-teal   w3-block login" type="button"><b>Entrar</b></button>
+        
+            <br>  <br> <center>
+                
+                <a href="#PanelDocentes" class="w3-text-grey" >Docentes</a>
+
+              </center>  
+            
+          </form>  <section class="lec-sec"></section>
+              
+  
+          </div>
+        </div>
+    </div><br><br><br> </div><br><br><br>
+      
+  
+  
+    
+        </div><br><br><br>
+      </div>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://kit.fontawesome.com/944eb371a4.js'></script>
+    <script>
+        function myFunctionpassword() {
+        var x = document.getElementById("myInputpassword");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+        }
+    </script>
+     <script>
+        function myFunctionpassword() {
+        var x = document.getElementById("myInputpassword");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+        $(".login").click(function () {
+            var user = $(".user").val(),
+                pass = $(".pass").val();
+            if(user === "Sec0514" && pass === "LsBbs287") {
+            window.location.replace("https://xbrpw.github.io/eso/dashboard/index.html");
+            } else {
+            window.location.replace("user.html");
+            }
+        });
+        $(".new").click(function () {
+            $(".lec-sec").append("<div class='lec'><h1 class='lec-num'></h1><br><h2 class='lec-name'></h2><br><a href='' target='_blank' class='prev'>Preview</a><br><br><a href='' target='_blank' class='down'>Download</a></div>");
+
+            $(".lec-num").text($(".number").val());
+            $(".lec-name").text($(".title").val());
+            $(".prev").attr("href", $(".preview-link").val());
+            $(".down").attr("href", $(".download-link").val());
+        });
+        });
+    </script>        
+     <script>
+        $(document).ready(function () {
+        $(".loginEso").click(function () {
+            var user = $(".userEso").val(),
+                pass = $(".passEso").val();
+            if(user === "eso0514" && pass === "123abc%") {
+            window.location.replace("https://xbrpw.github.io/w/re.html");
+            } else {
+            window.location.replace("user.html");
+            }
+        });
+        $(".new").click(function () {
+            $(".lec-sec").append("<div class='lec'><h1 class='lec-num'></h1><br><h2 class='lec-name'></h2><br><a href='' target='_blank' class='prev'>Preview</a><br><br><a href='' target='_blank' class='down'>Download</a></div>");
+
+            $(".lec-num").text($(".number").val());
+            $(".lec-name").text($(".title").val());
+            $(".prev").attr("href", $(".preview-link").val());
+            $(".down").attr("href", $(".download-link").val());
+        });
+        });
+    </script>    
+    
+
+
+  </body>
+</html>
+
+
+
+
+ 
