@@ -1177,98 +1177,7 @@ $(function(){
                 <li  class="white-mode green-mode " style="height: 400px;"></li>                 
               </ul>
             </span>
-            <span id="fooTecnologia" style="display: none;" onclick="toggle_visibility('fooTecnologia');">        
-              <ul class="w3-ul" id="#RegresaraTecnologia"  >   
-                <li class="w3-bar w3-hoverable" > 
-                  <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-chevron-left w3-xlarge w3-right-align w3-ripple"  ></i></span> 
-                      <div class="w3-bar-item" >                            
-                          <span class="w3-large w3-ripple"><i class="fa-duotone fa-arrow-left w3-xlarge w3-ripple"  ></i> &nbsp;<b><a href="#RegresaraTecnologia" onclick="openCity('London')" class="a">Regresar</a></b></span>
-                      </div>                                   
-                </li>                 
-                <li class="w3-bar w3-hoverable"  style="display:none"> 
-                    <span  class='w3-bar-item  w3-right'><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
-                        <div class="w3-bar-item">                            
-                            <span class="w3-large w3-ripple"> <a href="https://www.blogger.com/blog/settings/7340644200665521349" target="_blank" class="a"><i class="fa-duotone fa-list-check w3-xlarge  w3-ripple"  ></i>&nbsp;<b> Moderar entradas</b></a></span>
-                        </div>                                   
-                </li>
-                <li class="w3-bar w3-hoverable"   >               
-                  <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
-                    <div class="w3-bar-item">                            
-                        <span class="w3-large w3-ripple">  <a href="https://eso514-tecnologia.blogspot.com/" target="elBlogDe" class="a"  onclick="toggle_visibility('BlogTecnologia');"><i class="fa-brands fa-blogger-b w3-xlarge  w3-ripple" ></i>&nbsp;&nbsp;<b> Ver blog </b></a></span>
-                    </div>                                   
-                </li>
-                <li class="w3-bar w3-hoverable" onclick="document.getElementById('OpenTecnologia').style.display='block'"> 
-                <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
-                    <div class="w3-bar-item">                            
-                        <span class="w3-large w3-ripple"><i class="fa-duotone fa-upload w3-xlarge  w3-ripple"  ></i>&nbsp;&nbsp;<b> Publicar evidencia inmediata</b></span>
-                    </div>                                   
-                </li>
-                <li class="w3-bar w3-hoverable" > 
-                  <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
-                      <div class="w3-bar-item"> 
-                        <span class="w3-large w3-ripple">  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0HoGL1pJVlMsLZyN4jel7i-Zk0oyVqWfCf365n2b21c7eFw/viewform" target="elBlogDe" class="a" ><i class="fa-brands fa-blogger-b w3-xlarge  w3-ripple" ></i>&nbsp;&nbsp;<b> Publicar evidencia previa moderación </b></a></span>                                                  
-                      </div>                                   
-                  </li>
-                <li class="w3-bar w3-hoverable" > 
-                    <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-chevron-right w3-xlarge w3-right-align w3-ripple" onclick="myFunctionCopy()"></i></span> 
-                        <div class="w3-bar-item " >                            
-                            <span class="w3-large w3-ripple" onclick="myVeryCopiar()"><i class="fa-duotone fa-copy w3-xlarge  w3-ripple" ></i> &nbsp; <b onclick="myFunctionCopy()">Ver y copiar el email</b> <br>
-                            <span class="w3-small " id="verElEmail"></span> </span>
-                        </div>  
-                        <input type="text" value="escuela.secundaria.oficial.514.tecnologia@blogger.com" id="myInputmateria" class="w3-hide">                        
-                        <script>
-                            function myVeryCopiar() {
-                              var x = document.getElementById("verElEmail");
-                              if (x.innerHTML === "escuela.secundaria.oficial.514.tecnologia@blogger.com") {
-                                x.innerHTML = "escuela.secundaria.oficial.514.tecnologia@blogger.com";
-                              } else {
-                                x.innerHTML = "escuela.secundaria.oficial.514.tecnologia@blogger.com";
-                              }
-                            }
-                        </script>
-                        <script>
-                        function myFunctionCopy() {
-                          // Get the text field
-                          var copyText = document.getElementById("myInputmateria");
-            
-                          // Select the text field
-                          copyText.select();
-                          copyText.setSelectionRange(0, 99999); // For mobile devices
-            
-                          // Copy the text inside the text field
-                          navigator.clipboard.writeText(copyText.value);
-            
-                          // Alert the copied text
-                          alert("Email copiado: " + copyText.value);
-                        }
-                        </script>
-                </li>  
-                <li  class="white-mode green-mode ">  </li>
-                <li class="w3-bar w3-hoverable w3-block" onclick="enconstruccion()" > 
-                    <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple w3-hide"  ></i></span> 
-                        <div class="w3-bar-item" id="enConstruccionProximamente">                            
-                            <span class="w3-large w3-ripple"><axxx href="https://xbrpw.github.io/eso/colaborar.html" target="eso0514" class="a"><i class="fa-duotone fa-pen-to-square w3-xlarge  w3-ripple"  ></i> &nbsp;<b>Colaborar</b></a></span>
-                        </div>  
-                        <script>
-                            function enconstruccion() {
-                              var x = document.getElementById("enConstruccionProximamente");
-                              if (x.innerHTML === " <i class='fa-duotone fa-pen-to-square w3-xlarge  w3-ripple'  ></i>&nbsp;&nbsp;<span class='w3-large w3-ripple'><b>En construcción</b></span>") {
-                                x.innerHTML = " <span class='w3-large w3-ripple'><b>Colaborar</b></span>";
-                              } else {
-                                x.innerHTML = " <i class='fa-duotone fa-pen-to-square w3-xlarge  w3-ripple'  ></i>&nbsp;&nbsp;<span class='w3-large w3-ripple'><b>En construcción</b></span>";
-                              }
-                            }
-                        </script>                                 
-                </li>
-                <li class="w3-bar w3-hoverable"  > 
-                <span  class='w3-bar-item  w3-right'><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
-                    <div class="w3-bar-item">                            
-                        <span class="w3-large w3-ripple"> <a href="https://drive.google.com/drive/folders/1G8CKVwiWmFPJFS6Q3ogq570ePgInyTCn" target="_blank" class="a"><i class="fa-brands fa-google-drive w3-xlarge w3-ripple"  ></i>&nbsp;<b> Guardar en Drive</b></a></span>
-                    </div>                                   
-                </li>  
-                <li  class="white-mode green-mode " style="height: 400px;"></li>                 
-              </ul>
-            </span>
+           
             <span id="fooIngenieria" style="display: none;" onclick="toggle_visibility('fooIngenieria');">        
               <ul class="w3-ul" id="#RegresaraIngenieria"  >   
                 <li class="w3-bar w3-hoverable" > 
@@ -1373,11 +1282,11 @@ $(function(){
                                 <span class="w3-ripple">Descubrimientos</span>  
                             </div>            
                 </li>        
-                <li class="w3-bar w3-ripple"  onclick="toggle_visibility('fooTecnologia');" >             
+                <li class="w3-bar w3-ripple"  >             
                         <span  class='w3-bar-item  w3-right'><i class="fa-duotone fa-ellipsis-vertical w3-xlarge w3-right-align w3-ripple"  ></i></span> 
                             <div class="w3-bar-item ">                            
-                                <span class="w3-large w3-ripple" data-nosnippet><b> Tecnología</b></span><br>
-                                <span class="w3-ripple">Innovación  </span>  
+                                <span class="w3-large w3-ripple" data-nosnippet><a href="tecnologia.html"  class="a"><b> Tecnología</b></span><br>
+                                <span class="w3-ripple">Innovación  </span>  </a>
                             </div>                                            
                 </li>    
                           
@@ -2238,7 +2147,7 @@ $(function(){
                   <button type="button" class="buttoneso cancelbtn"  >                
                       <a href="mailto:escuela.secundaria.oficial.514.tecnologia@blogger.com?cc=escuela.secundaria.oficial.514@gmail.com&subject=---%20Titulo%20de%20la%20evidencia%20---&body=---Evidencia%20---%0D%0A%0D%0A" class="a"><b><i class="fa-duotone fa-upload w3-xlarge"  onclick="document.getElementById('OpenTecnologia').style.display='none'"></i> <br>Si, ir abrir el email</b></a>
                       </button>
-                  <button type="button" onclick="document.getElementById('OpenTecnologia').style.display='none'" class="buttoneso deletebtn"><span><b><i class="fa-duotone fa-circle-stop w3-xlarge"></i> <br>Permanecer aqui</b><span></button>                  
+                  <button type="button" onclick="document.getElementById('OpenTecnologia').style.display='none'" class="buttoneso deletebtn"><span><b><i class="fa-duotone fa-circle-stop w3-xlarge"></i> <br><a href="#fooTecnologia"></a>Permanecer aqui</b><span></button>                  
               </div>
             </div>
           </div>
@@ -2533,7 +2442,7 @@ $(function(){
                                   <span class="w3-large w3-ripple"><i class="fa-duotone fa-upload w3-xlarge  w3-ripple"  ></i>&nbsp;&nbsp;<b> Publicar evidencia inmediatamente</b></span>
                               </div>                                   
                           </li>
-                          <li class="w3-bar w3-hoverable" onclick="document.getElementById('openCiencia').style.display='block'"> 
+                          <li class="w3-bar w3-hoverable w3-hide" onclick="document.getElementById('openCiencia').style.display='block'"> 
                             <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
                                 <div class="w3-bar-item">                            
                                     <span class="w3-large w3-ripple"><i class="fa-duotone fa-upload w3-xlarge  w3-ripple"  ></i>&nbsp;&nbsp;<b> Publicar evidencia previa autorización</b></span>
