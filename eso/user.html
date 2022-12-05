@@ -174,7 +174,52 @@
         });
         });
     </script>    
+     <script>
+      $(document).ready(function () {
+      $(".loginEso").click(function () {
+          var user = $(".userEso").val(),
+              pass = $(".passEso").val();
+          if(user === "ciencia" && pass === "ciencia") {
+          window.location.replace("https://xbrpw.github.io/w/re.html");
+          } else {
+          window.location.replace("user.html");
+          }
+      });
+      $(".new").click(function () {
+          $(".lec-sec").append("<div class='lec'><h1 class='lec-num'></h1><br><h2 class='lec-name'></h2><br><a href='' target='_blank' class='prev'>Preview</a><br><br><a href='' target='_blank' class='down'>Download</a></div>");
+
+          $(".lec-num").text($(".number").val());
+          $(".lec-name").text($(".title").val());
+          $(".prev").attr("href", $(".preview-link").val());
+          $(".down").attr("href", $(".download-link").val());
+      });
+      });
+  </script>  
+  <script sheetsu="https://sheetsu.com/apis/v1.0bu/0a97d2c109a3">
+    $(document).ready(function () {
+    $(".loginEso").click(function () {
+        var user = $(".userEso").val(),
+            pass = $(".passEso").val();
+        if(user === "luis" && pass === "luis")
+        if(user === "1" && pass === "1") {
+        window.location.replace("https://xbrpw.github.io/w/re.html");
+        } else {
+        window.location.replace("user.html");
+        }
+    });
+    $(".new").click(function () {
+        $(".lec-sec").append("<div class='lec'><h1 class='lec-num'></h1><br><h2 class='lec-name'></h2><br><a href='' target='_blank' class='prev'>Preview</a><br><br><a href='' target='_blank' class='down'>Download</a></div>");
+
+        $(".lec-num").text($(".number").val());
+        $(".lec-name").text($(".title").val());
+        $(".prev").attr("href", $(".preview-link").val());
+        $(".down").attr("href", $(".download-link").val());
+    });
+    });
+</script>    
     
+    
+      <script src="https://load.sheetsu.com"></script>
 
 
   </body>
