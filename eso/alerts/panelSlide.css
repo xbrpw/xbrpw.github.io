@@ -10,8 +10,8 @@ Plus the World's Greatest Entertainer ... Sammie! */
   /* Header */
 
   /* Set height of header. */
-  --header-height: 64px;
-  --header-height-mobile: 64px;
+  --header-height: 60px;
+  --header-height-mobile: 60px;
   --header-font-size: 25px;
   --header-font-size-mobile: 16px;
   --header-font-spacing: 1px;

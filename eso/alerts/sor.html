@@ -740,9 +740,7 @@
         
     </div>
 
-    <div class=" logo lift " style="z-index: 1070;">
-      <span class="fas fa-bell menu-toggle2 " id="toggle_button"  aria-labelledby="button-label"></span> <span id="button-label" style="display:none">Open Side Menu</span>        
-  </div>
+ 
 
     <div id="mySidenavAlerts" class="sidenavAlerts">
 
@@ -881,31 +879,15 @@
       </div></section></div>
     </div>
 
-    <div id="mainESO">
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-      <nav class="navbtn w3-hide-large w3-hide-medium">
-        <a href="alerts/index.html" class="navbtn__link navbtn__ a">
-          <img src="./img/ico-xbr/avisos-escolares.svg" class="" alt="Home" height="30px" width="30px">
-          <span class="navbtn__text">Notificaciones</span>
-        </a>
-        <a href="calendario.html" class="navbtn__link a">
-            <i class="fa fa-calendar-alt w3-xlarge"></i>
-          <span class="navbtn__text">Calendario</span>
-        </a>
-        <a href="unesco/index.html" class="navbtn__link a">      
-          <i class="fa fa-file w3-xlarge"></i>
-          <span class="navbtn__text">Proyecto</span>
-        </a>
-      </nav>
-    </div>
-    
+ 
 
     <div id="main" >
       <div class="verde-mode">
           <div class=" w3-bar verde-mode w3-card-2 w3-xxlarge " style="height:60px"> 
               <button class="w3-bar-item verde-mode  w3-ripple w3-xlarge" onclick="openCity('Tokyo')"  aria-label="El toggle de Menu"><i class="fa-duotone fa-bars w3-xlarge" style="margin-top:8px"></i></button>
-              <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="w3-hide verde-mode">&#9776; open</span>
+              
               <button class="w3-bar-item  verde-mode w3-ripple w3-large"  style="margin-top:8px"><span class='con-una-sombra-negra-en-el-texto'><a href="re.html" class="a"><b>Ciencia</b></a></span></button>
+              <button class="w3-bar-item  verde-mode w3-ripple w3-large"  style="margin-top:8px" onclick="openNav()" ><span class='con-una-sombra-negra-en-el-texto'><b>&#9776; open</b></span></button>
               <style>.con-una-sombra-negra-en-el-texto {color: white;text-shadow: 2px 2px 4px #000000;}</style>
               <!-- Contiene el sub menu
               <button class="w3-bar-item w3-button w3-ripple" onclick="openCity('Paris')"><span>I</span></button>
@@ -967,8 +949,110 @@
         data-formz-slug="AbNrEEV1"
         data-formz-type="simple"></div>
     
+        <div id="LocalStorage2">
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        
+        
+            
+                <form action="#" >
+                  <input type="text" name="save" id="text2" class="form-control" placeholder="Materia">      
+                  <button id="set2" >Guardar</button>
+                </form>
+        
+              
+           
+                <div  id="val2"><i>Nickname</i></div>
+                <button id="get2" >Guardar</button>
+                <button id="remove2">Cambiar</button>
+             
+        
          
-        <div id="LocalSotage1">
+        
+        
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+          <script>
+                
+              /* set it */
+              $('#set2').click(function() {
+                var test = $('#text2').val();
+                localStorage.setItem("test2", test);
+              });
+        
+              /* get it */
+              $('#get2').click(function() {
+                  $('#val2').text(localStorage.getItem("test2"));
+              });
+        
+              /* remove it */
+              $('#remove2').click(function() {
+                  localStorage.removeItem("test2");
+                  $('#val2').html("<i>nothing saved...</i>");
+              });
+        
+              /* on pageload, if key/value is found get it*/
+              if (localStorage.getItem("test2") !== null) {
+                $('#val2').text(localStorage.getItem("test2"));
+              }
+        
+        
+          </script>
+        
+        </div>
+
+
+        <div id="LocalStorage1">
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        
+        
+            
+                <form action="#" >
+                  <input type="text" name="save" id="text1" class="form-control" placeholder="Materia">      
+                  <button id="set1" >Guardar</button>
+                </form>
+        
+              
+           
+                <div  id="val1"><i>Nickname</i></div>
+                <button id="get1" >Guardar</button>
+                <button id="remove1">Cambiar</button>
+             
+        
+         
+        
+        
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+          <script>
+                
+              /* set it */
+              $('#set1').click(function() {
+                var test = $('#text1').val();
+                localStorage.setItem("test1", test);
+              });
+        
+              /* get it */
+              $('#get1').click(function() {
+                  $('#val1').text(localStorage.getItem("test1"));
+              });
+        
+              /* remove it */
+              $('#remove1').click(function() {
+                  localStorage.removeItem("test1");
+                  $('#val1').html("<i>nothing saved...</i>");
+              });
+        
+              /* on pageload, if key/value is found get it*/
+              if (localStorage.getItem("test1") !== null) {
+                $('#val1').text(localStorage.getItem("test1"));
+              }
+        
+        
+          </script>
+        
+        </div>
+
+        <div id="LocalStorage0">
           <style>
             /* Styling via Twitter Bootstrap, CSS --> Settings --> External CSS */
           #yay, #ooh {display: none;}
@@ -1065,7 +1149,7 @@ function includeHTML() {
 </script>
 
 
-<div w3-include-html="https://www.xbr.pw/assets/css/hi/22102022/localstorage-test/02/index.html"></div>  
+<div w3-include-html=""></div>  
 
 
 <script>
@@ -2179,9 +2263,6 @@ document.getElementById("main").style.marginLeft= "0";
     }
   }
   </script>
-</body>
-</html> 
-
 
 
 
