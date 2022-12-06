@@ -740,6 +740,10 @@
         
     </div>
 
+    <div class=" logo lift " style="z-index: 1070;">
+      <span class="fas fa-bell menu-toggle2 " id="toggle_button"  aria-labelledby="button-label"></span> <span id="button-label" style="display:none">Open Side Menu</span>        
+  </div>
+
     <div id="mySidenavAlerts" class="sidenavAlerts">
 
 
@@ -815,33 +819,10 @@
          
         
     
-          <div class="col-sm-12"><span class="closebtn">
-            <div class="alert fade alert-simple alert-primary alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert" data-brk-library="component__alert">
-              <button type="button" class="close font__size-18" data-dismiss="alert">
-                                        <span  aria-hidden="true"><i class="fa fa-times alertprimary"></i></span>
-                                        <span class="sr-only">Close</span>
-                                    </button>
-              <i class="start-icon  fa fa-info-circle faa-shake animated"></i>
-              <strong class="font__weight-semibold"> Viernes 18 de noviembre </strong> Descarga Administrativa
-            </div>
-            </span>
-          </div>
+       
     
           
       
-    
-          <div class="col-sm-12"><span class="closebtn" style="color: rgba(220, 128, 1, 0.33)";>
-            <div class="alert fade alert-simple alert-warning alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert" data-brk-library="component__alert">
-              <button type="button" class="close font__size-18" data-dismiss="alert">
-                                        <span aria-hidden="true">
-                                            <i class="fa fa-times warning"></i>
-                                        </span>
-                                        <span class="sr-only" style="color: rgba(220, 128, 1, 0.33)">Close</span>
-                                    </button>
-              <i class="start-icon fa fa-exclamation-triangle faa-flash animated"></i>
-              <strong class="font__weight-semibold">Miércoles 2 de noviembre</strong> Suspensión de labores docentes
-            </div></span>
-          </div>
     
           <div class="col-sm-12"><span class="closebtn">
             <div class="alert fade alert-simple alert-danger alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert" data-brk-library="component__alert">
@@ -915,10 +896,6 @@
           <i class="fa fa-file w3-xlarge"></i>
           <span class="navbtn__text">Proyecto</span>
         </a>
-        <a href="login/academico.html" class="navbtn__link a">      
-            <img src="./img/ico-xbr/estudiante-icon.svg" class="" alt="Home" height="30px" width="30px">
-          <span class="navbtn__text">Login</span>
-        </a>
       </nav>
     </div>
     
@@ -946,10 +923,17 @@
               <!-- esta es otra forma con img
               <button class="w3-bar-item w3-teal w3-ripple w3-right-align  w3-right "  onclick="DarkMode()" ><img src="https://xbrpw.github.io/eso/img/sor-juana-ines-de-la-cruz-verde.svg" class="w3-right " style="width:38px" title="Dark Mode">  </button>-->
               <button class="w3-bar-item verde-mode w3-ripple w3-right-align  w3-right w3-xlarge" style="margin-top:5px" onclick="openCity('iUser')" title="Notificaciones">            
-                  <a href="https://xbrpw.github.io/eso/alerts/index.html" target="eso0514" class="a w3-hide>
+                  <a href="https://xbrpw.github.io/eso/alerts/index.html" target="eso0514" class="a ">                     
                       <i class="fa-duotone fa-bell w3-xlarge verde-mode"></i> <span class="w3-hide-small w3-large verde-mode">&nbsp;Notificaciones</span>
                   </a>
               </button>
+              <button class="w3-bar-item verde-mode w3-ripple w3-right-align  w3-right w3-xlarge" style="margin-top:5px" title="Notificaciones">            
+                <a href="https://xbrpw.github.io/eso/alerts/index.html" target="eso0514" class="a ">                     
+                    <i class="fa-duotone fa-bell w3-xlarge verde-mode"></i> <span class="w3-hide-small w3-large verde-mode">&nbsp;2</span>
+                </a>
+                <span class="fas fa-bell menu-toggle2 " id="toggle_button"  aria-labelledby="button-label"></span> <span id="button-label" style="display:none">Open Side Menu</span>
+            </button>
+             
               <button class="w3-bar-item verde-mode w3-ripple w3-right-align  w3-right w3-xlarge" style="margin-top:5px" onclick="document.getElementById('id01eso').style.display='block'" title="Ayuda"><i class="fa-duotone fa-circle-question w3-xlarge verde-mode"></i><span class="w3-hide-small w3-large">&nbsp; Ayuda</span></button>
               <button class="w3-bar-item verde-mode w3-ripple w3-right-align  w3-right w3-xlarge" style="margin-top:5px"  onclick="openCity('iUser')" title="Herramientas" >
                   <a href="https://xbrpw.github.io/eso/herramientas.html" target="eso0514" class="a">
@@ -1081,8 +1065,7 @@ function includeHTML() {
 </script>
 
 
-<div w3-include-html="https://www.xbr.pw/assets/css/hi/22102022/localstorage-test/02/index.html"></div> 
-<div w3-include-html="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xbr/short-url/assets/css/hi/22102022/localstorage-test/02/index.html"></div> 
+<div w3-include-html="https://www.xbr.pw/assets/css/hi/22102022/localstorage-test/02/index.html"></div>  
 
 
 <script>
@@ -1957,9 +1940,7 @@ includeHTML();
 <style>a {color: inherit;text-decoration: inherit;background-color: transparent;} 
 .panel-nav {padding: 0.01em 16px; line-height: 1.15; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */} </style>
       
-  <div class=" logo lift " style="z-index: 1070;">
-      <span class="fas fa-bell menu-toggle2 " id="toggle_button"  aria-labelledby="button-label"></span> <span id="button-label" style="display:none">Open Side Menu</span>        
-  </div>
+ 
       
  
 
