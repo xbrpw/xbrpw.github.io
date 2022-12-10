@@ -1,0 +1,80 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+	$(function(){
+	    $(".ajaxForm").submit(function(e){
+	        e.preventDefault();
+	        var href = $(this).attr("action");
+	        $.ajax({
+	            type: "POST",
+	            dataType: "json",
+	            url: href,
+	            data: $(this).serialize(),
+	            success: function(response){
+	                if(response.status == "success"){
+	                    alert("We received your submission, thank you!");
+	                }else{
+	                    alert("An error occured: " + response.message);
+	                }
+	            }
+	        });
+	    });
+	});
+</script>
+
+<form class="ajaxForm" action="https://formcarry.com/s/8S4FdSF-6" method="POST">
+	<input type="email" name="email">
+	<button type="submit">Send</button>
+</form>
+
+
+
+
+<script>
+	$(function(){
+	    $(".ajaxForm").submit(function(e){
+	        e.preventDefault();
+	        var href = $(this).attr("action");
+	        $.ajax({
+	            type: "POST",
+	            url: href,
+	            data: new FormData(this),
+	            dataType: "json",
+	            processData: false,
+	            contentType: false,
+	            success: function(response){
+	                if(response.status == "success"){
+	                    alert("We received your submission, thank you!");
+	                }else{
+	                    alert("An error occured.");
+	                }
+	            }
+	        });
+	    });
+	});
+</script>
+
+
+
+
+
+
+<form class="ajaxForm" action="https://formcarry.com/s/8S4FdSF-6" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
+  
+  
+  
+  
+  <form class="ajaxForm" action="https://formcarry.com/s/8S4FdSF-6" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
+	<input type="file" name="picture">
+	<input type="submit" value="Send">
+</form>
+  
+  
+  
+  <form action="https://formcarry.com/s/8S4FdSF-6
+
+" method="POST" enctype="multipart/form-data">
+	<input type="file" name="picture">
+	<input type="file" name="picture2">
+	<input type="file" name="picture3">
+	<input type="submit" value="Send">
+</form>
