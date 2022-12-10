@@ -1006,12 +1006,13 @@
                 <div class=" w3-bar verde-mode w3-card-2 w3-xxlarge " style="height:60px"> 
                     <button class="w3-bar-item verde-mode  w3-ripple w3-xlarge" onclick="openCity('Tokyo')"  aria-label="El toggle de Menu"><i class="fa-duotone fa-bars w3-xlarge" style="margin-top:8px"></i></button>
                     
-                    <button class="w3-bar-item  verde-mode w3-ripple w3-large"  style="margin-top:8px"><span class='con-una-sombra-negra-en-el-texto'><a href="#" class="a"><b>Ciencia</b></a></span></button>
-                    <button class="w3-bar-item w3-button" onclick="openCity('London1')">London</button>
-                    <button class="w3-bar-item w3-button" onclick="openCity('Paris1')">Paris</button>
-                    <button class="w3-bar-item w3-button" onclick="openCity('eso1')">Eso</button>
-                    <button class="w3-bar-item w3-button" onclick="openCity('sor')">Eso</button>
-                    <button class="w3-bar-item  verde-mode w3-ripple w3-large"  style="margin-top:8px" onclick="openNav()" ><span class='con-una-sombra-negra-en-el-texto'><b>&#9776; open</b></span></button>
+                    <!-- otra opción <button class="w3-bar-item  verde-mode w3-ripple w3-large"  style="margin-top:8px"><span class='con-una-sombra-negra-en-el-texto'><a href="#" class="a"><b>Ciencia</b></a></span></button> 
+                    -->
+               
+                    
+                    
+                    
+                    <button class="w3-bar-item  verde-mode w3-ripple w3-large"  style="margin-top:8px" onclick="openNav()" ><span class='con-una-sombra-negra-en-el-texto'><b> Ciencia </b></span></button>
                     <style>.con-una-sombra-negra-en-el-texto {color: white;text-shadow: 2px 2px 4px #000000;}</style>
                     <!-- Contiene el sub menu
                     <button class="w3-bar-item w3-button w3-ripple" onclick="openCity('Paris')"><span>I</span></button>
@@ -1033,11 +1034,11 @@
                             <i class="fa-duotone fa-bell w3-xlarge verde-mode"></i> <span class="w3-hide-small w3-large verde-mode">&nbsp;Notificaciones</span>
                         </a>
                     </button>
-                    <button class="w3-bar-item verde-mode w3-ripple w3-right-align  w3-right w3-xlarge" style="margin-top:5px" title="Notificaciones">            
-                      <a href="https://xbrpw.github.io/eso/alerts/index.html" target="eso0514" class="a ">                     
+                    <button class="w3-bar-item verde-mode w3-ripple w3-right-align  w3-right w3-xlarge menu-toggle2 " style="margin-top:5px" title="Notificaciones" id="toggle_button"  aria-labelledby="button-label">            
+                        <span id="button-label" style="display:none">Open Side Menu</span>
                           <i class="fa-duotone fa-bell w3-xlarge verde-mode"></i> <span class="w3-hide-small w3-large verde-mode">&nbsp;2</span>
-                      </a>
-                      <span class="fas fa-bell menu-toggle2 " id="toggle_button"  aria-labelledby="button-label"></span> <span id="button-label" style="display:none">Open Side Menu</span>
+           
+               
                   </button>
                    
                     <button class="w3-bar-item verde-mode w3-ripple w3-right-align  w3-right w3-xlarge" style="margin-top:5px" onclick="document.getElementById('id01eso').style.display='block'" title="Ayuda"><i class="fa-duotone fa-circle-question w3-xlarge verde-mode"></i><span class="w3-hide-small w3-large">&nbsp; Ayuda</span></button>
@@ -1045,6 +1046,20 @@
                         <a href="https://xbrpw.github.io/eso/herramientas.html" target="eso0514" class="a">
                             <i class="fa-duotone fa-tools w3-xlarge verde-mode"></i><span class="w3-hide-small w3-large">&nbsp; Herramientas</span>
                         </a>
+                    </button>
+                    <button class="w3-bar-item verde-mode w3-ripple w3-right-align  w3-right w3-xlarge" style="margin-top:5px"  onclick="openCity('sor')" title="Herramientas" >
+                     
+                            <i class="fa-duotone fa-tools w3-xlarge verde-mode"></i><span class=" w3-large">&nbsp; 1a</span>
+                       
+                    </button>
+                    <button class="w3-bar-item verde-mode w3-ripple w3-right-align  w3-right w3-xlarge" style="margin-top:5px"   onclick="openCity('eso1')" title="Herramientas" >                     
+                        <i class="fa-duotone fa-tools w3-xlarge verde-mode"></i><span class=" w3-large">&nbsp; 2b</span>                   
+                    </button>
+                    <button class="w3-bar-item verde-mode w3-ripple w3-right-align  w3-right w3-xlarge" style="margin-top:5px"  onclick="openCity('Paris1')" title="Herramientas" >                     
+                        <i class="fa-duotone fa-tools w3-xlarge verde-mode"></i><span class=" w3-large">&nbsp; 3c</span>                   
+                    </button>
+                     <button class="w3-bar-item verde-mode w3-ripple w3-right-align  w3-right w3-xlarge" style="margin-top:5px" onclick="openCity('London1')" title="Herramientas" >                     
+                        <i class="fa-duotone fa-tools w3-xlarge verde-mode"></i><span class=" w3-large">&nbsp; 4d</span>                   
                     </button>
                   
                 </div>
@@ -1073,218 +1088,7 @@
               data-formz-slug="AbNrEEV1"
               data-formz-type="simple"></div>
           
-              <div id="LocalStorage2">
-      
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-              
-              
-                  
-                      <form action="#" >
-                        <input type="text" name="save" id="text2" class="form-control" placeholder="Materia">      
-                        <button id="set2" >Guardar</button>
-                      </form>
-              
-                    
-                 
-                      <div  id="val2"><i>Nickname</i></div>
-                      <button id="get2" >Guardar</button>
-                      <button id="remove2">Cambiar</button>
-                   
-              
-               
-              
-              
-                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-                <script>
-                      
-                    /* set it */
-                    $('#set2').click(function() {
-                      var test = $('#text2').val();
-                      localStorage.setItem("test2", test);
-                    });
-              
-                    /* get it */
-                    $('#get2').click(function() {
-                        $('#val2').text(localStorage.getItem("test2"));
-                    });
-              
-                    /* remove it */
-                    $('#remove2').click(function() {
-                        localStorage.removeItem("test2");
-                        $('#val2').html("<i>nothing saved...</i>");
-                    });
-              
-                    /* on pageload, if key/value is found get it*/
-                    if (localStorage.getItem("test2") !== null) {
-                      $('#val2').text(localStorage.getItem("test2"));
-                    }
-              
-              
-                </script>
-              
-              </div>
-      
-      
-              <div id="LocalStorage1">
-      
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-              
-              
-                  
-                      <form action="#" >
-                        <input type="text" name="save" id="text1" class="form-control" placeholder="Materia">      
-                        <button id="set1" >Guardar</button>
-                      </form>
-              
-                    
-                 
-                      <div  id="val1"><i>Nickname</i></div>
-                      <button id="get1" >Guardar</button>
-                      <button id="remove1">Cambiar</button>
-                   
-              
-               
-              
-              
-                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-                <script>
-                      
-                    /* set it */
-                    $('#set1').click(function() {
-                      var test = $('#text1').val();
-                      localStorage.setItem("test1", test);
-                    });
-              
-                    /* get it */
-                    $('#get1').click(function() {
-                        $('#val1').text(localStorage.getItem("test1"));
-                    });
-              
-                    /* remove it */
-                    $('#remove1').click(function() {
-                        localStorage.removeItem("test1");
-                        $('#val1').html("<i>nothing saved...</i>");
-                    });
-              
-                    /* on pageload, if key/value is found get it*/
-                    if (localStorage.getItem("test1") !== null) {
-                      $('#val1').text(localStorage.getItem("test1"));
-                    }
-              
-              
-                </script>
-              
-              </div>
-      
-              <div id="LocalStorage0">
-                <style>
-                  /* Styling via Twitter Bootstrap, CSS --> Settings --> External CSS */
-                #yay, #ooh {display: none;}
-                </style>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-              
-              
-              
-                 
-                    <div class="alert alert-success" id="yay">Su navegador es compatible con el almacenamiento local. ¡Hurra!</div>
-                    <div class="alert alert-danger" id="ooh">Aww... Su navegador no es compatible con el almacenamiento local.</div>
-              
-               
-                  
-                      <form action="#" class="form-inline">
-                        <div class="form-group">
-                          <input type="text" name="save" id="text" class="form-control" placeholder="Materia">
-                        </div>
-                        <button id="set" class="btn btn-primary">Guardar</button>
-                      </form>
-              
-                    
-                 
-                      <div class="alert alert-info" id="val"><i>Nickname</i></div>
-                      <button id="get" class="btn btn-success">Guardar</button>
-                      <button id="remove" class="btn btn-danger">Cambiar</button>
-                   
-              
-               
-              
-              
-                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-                <script>
-                        /* Detect browser can use local storage */
-                    if (typeof(Storage) !== 'undefined') {
-                      $('#yay').fadeIn('slow');
-                    } else {
-                      $('#ooh').fadeIn('slow');
-                    }
-              
-                    /* set it */
-                    $('#set').click(function() {
-                      var test = $('#text').val();
-                      localStorage.setItem("test", test);
-                    });
-              
-                    /* get it */
-                    $('#get').click(function() {
-                        $('#val').text(localStorage.getItem("test"));
-                    });
-              
-                    /* remove it */
-                    $('#remove').click(function() {
-                        localStorage.removeItem("test");
-                        $('#val').html("<i>nothing saved...</i>");
-                    });
-              
-                    /* on pageload, if key/value is found get it*/
-                    if (localStorage.getItem("test") !== null) {
-                      $('#val').text(localStorage.getItem("test"));
-                    }
-              
-              
-                </script>
-      
-                <script>
-                function includeHTML() {
-                  var z, i, elmnt, file, xhttp;
-                  /*loop through a collection of all HTML elements:*/
-                  z = document.getElementsByTagName("*");
-                  for (i = 0; i < z.length; i++) {
-                    elmnt = z[i];
-                    /*search for elements with a certain attribute:*/
-                    file = elmnt.getAttribute("w3-include-html");
-                    if (file) {
-                      /*make an HTTP request using the attribute value as the file name:*/
-                      xhttp = new XMLHttpRequest();
-                      xhttp.onreadystatechange = function() {
-                        if (this.readyState == 4) {
-                          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                          if (this.status == 404) {elmnt.innerHTML = "Elemento no encontrado";}
-                          /*remove the attribute, and call this function once more:*/
-                          elmnt.removeAttribute("w3-include-html");
-                          includeHTML();
-                        }
-                      }      
-                      xhttp.open("GET", file, true);
-                      xhttp.send();
-                      /*exit the function:*/
-                      return;
-                    }
-                  }
-                };
-                </script>
-      
-      
-                <div w3-include-html=""></div>  
-      
-      
-                <script>
-                includeHTML();
-                </script>
-      
-      
-                
-                
-              
-              </div>
+           
                     <ul class="w3-ul" >                
                       <li class="w3-bar w3-hoverable"   >               
                         <span  class='w3-bar-item  w3-right' ><i class="fa-duotone   fa-chevron-right  w3-xlarge w3-right-align w3-ripple"  ></i></span> 
@@ -1979,10 +1783,221 @@
             <div id="eso1" class=" common-structure city" style="display:none">
               <span onclick="this.parentElement.style.display='none'"
               class="w3-button w3-large w3-display-topright">&times;</span>
-              <h2>ESO</h2>    
+              <div id="LocalStorage2">
+      
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+              
+              
+                  
+                      <form action="#" >
+                        <input type="text" name="save" id="text2" class="form-control" placeholder="Materia">      
+                        <button id="set2" >Guardar</button>
+                      </form>
+              
+                    
+                 
+                      <div  id="val2"><i>Nickname</i></div>
+                      <button id="get2" >Guardar</button>
+                      <button id="remove2">Cambiar</button>
+                   
+              
+               
+              
+              
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+                <script>
+                      
+                    /* set it */
+                    $('#set2').click(function() {
+                      var test = $('#text2').val();
+                      localStorage.setItem("test2", test);
+                    });
+              
+                    /* get it */
+                    $('#get2').click(function() {
+                        $('#val2').text(localStorage.getItem("test2"));
+                    });
+              
+                    /* remove it */
+                    $('#remove2').click(function() {
+                        localStorage.removeItem("test2");
+                        $('#val2').html("<i>nothing saved...</i>");
+                    });
+              
+                    /* on pageload, if key/value is found get it*/
+                    if (localStorage.getItem("test2") !== null) {
+                      $('#val2').text(localStorage.getItem("test2"));
+                    }
+              
+              
+                </script>
+              
+              </div>
+      
+      
+              <div id="LocalStorage1">
+      
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+              
+              
+                  
+                      <form action="#" >
+                        <input type="text" name="save" id="text1" class="form-control" placeholder="Materia">      
+                        <button id="set1" >Guardar</button>
+                      </form>
+              
+                    
+                 
+                      <div  id="val1"><i>Nickname</i></div>
+                      <button id="get1" >Guardar</button>
+                      <button id="remove1">Cambiar</button>
+                   
+              
+               
+              
+              
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+                <script>
+                      
+                    /* set it */
+                    $('#set1').click(function() {
+                      var test = $('#text1').val();
+                      localStorage.setItem("test1", test);
+                    });
+              
+                    /* get it */
+                    $('#get1').click(function() {
+                        $('#val1').text(localStorage.getItem("test1"));
+                    });
+              
+                    /* remove it */
+                    $('#remove1').click(function() {
+                        localStorage.removeItem("test1");
+                        $('#val1').html("<i>nothing saved...</i>");
+                    });
+              
+                    /* on pageload, if key/value is found get it*/
+                    if (localStorage.getItem("test1") !== null) {
+                      $('#val1').text(localStorage.getItem("test1"));
+                    }
+              
+              
+                </script>
+              
+              </div>
+      
+              <div id="LocalStorage0">
+                <style>
+                  /* Styling via Twitter Bootstrap, CSS --> Settings --> External CSS */
+                #yay, #ooh {display: none;}
+                </style>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+              
+              
+              
+                 
+                    <div class="alert alert-success" id="yay">Su navegador es compatible con el almacenamiento local. ¡Hurra!</div>
+                    <div class="alert alert-danger" id="ooh">Aww... Su navegador no es compatible con el almacenamiento local.</div>
+              
+               
+                  
+                      <form action="#" class="form-inline">
+                        <div class="form-group">
+                          <input type="text" name="save" id="text" class="form-control" placeholder="Materia">
+                        </div>
+                        <button id="set" class="btn btn-primary">Guardar</button>
+                      </form>
+              
+                    
+                 
+                      <div class="alert alert-info" id="val"><i>Nickname</i></div>
+                      <button id="get" class="btn btn-success">Guardar</button>
+                      <button id="remove" class="btn btn-danger">Cambiar</button>
+                   
+              
+               
+              
+              
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+                <script>
+                        /* Detect browser can use local storage */
+                    if (typeof(Storage) !== 'undefined') {
+                      $('#yay').fadeIn('slow');
+                    } else {
+                      $('#ooh').fadeIn('slow');
+                    }
+              
+                    /* set it */
+                    $('#set').click(function() {
+                      var test = $('#text').val();
+                      localStorage.setItem("test", test);
+                    });
+              
+                    /* get it */
+                    $('#get').click(function() {
+                        $('#val').text(localStorage.getItem("test"));
+                    });
+              
+                    /* remove it */
+                    $('#remove').click(function() {
+                        localStorage.removeItem("test");
+                        $('#val').html("<i>nothing saved...</i>");
+                    });
+              
+                    /* on pageload, if key/value is found get it*/
+                    if (localStorage.getItem("test") !== null) {
+                      $('#val').text(localStorage.getItem("test"));
+                    }
+              
+              
+                </script>
+      
+                <script>
+                function includeHTML() {
+                  var z, i, elmnt, file, xhttp;
+                  /*loop through a collection of all HTML elements:*/
+                  z = document.getElementsByTagName("*");
+                  for (i = 0; i < z.length; i++) {
+                    elmnt = z[i];
+                    /*search for elements with a certain attribute:*/
+                    file = elmnt.getAttribute("w3-include-html");
+                    if (file) {
+                      /*make an HTTP request using the attribute value as the file name:*/
+                      xhttp = new XMLHttpRequest();
+                      xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                          if (this.status == 404) {elmnt.innerHTML = "Elemento no encontrado";}
+                          /*remove the attribute, and call this function once more:*/
+                          elmnt.removeAttribute("w3-include-html");
+                          includeHTML();
+                        }
+                      }      
+                      xhttp.open("GET", file, true);
+                      xhttp.send();
+                      /*exit the function:*/
+                      return;
+                    }
+                  }
+                };
+                </script>
+      
+      
+                <div w3-include-html=""></div>  
+      
+      
+                <script>
+                includeHTML();
+                </script>
+      
+      
+                
+                
+              
+              </div>  
             </div>
     
-              <div id="sor" class=" common-structure city" style="display:none">
+            <div id="sor" class=" common-structure city" style="display:none">
                 <span onclick="this.parentElement.style.display='none'"
                 class="w3-button w3-large w3-display-topright">&times;</span>
                 <div sheetsu="https://sheetsu.com/apis/v1.0bu/0a97d2c109a3" sheetsu-search='{"Eje": "Tecnología"}'>
@@ -2004,7 +2019,7 @@
     
     
               </div>
-          </div><!-- main  -->
+            </div><!-- main  -->
           
       </div>
   

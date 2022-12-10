@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<main>
+  <div class="new-note">
+    <input type="text" name="title" id="title" placeholder="Title">
+    <textarea name="content" id="content" placeholder="Start writing"></textarea>
+    <div id="form-error"></div>
+  </div>
+  <div class="button-container">
+    <button class="add-btn" onclick="addNote()">Add note</button>
+  </div>
+  <div id="notes-wrapper"></div>
+</main>
+
+
+
+  <script  src="./script.js"></script>
+  <div class="row" sheetsu="https://sheetsu.com/apis/v1.0/d49de1401d62">
+    <div class="col-1">
+      <a href={{url}}> <b>{{seccion}}</b> {{detalles}} </a>
+    </div>
+  </div>
+
+  <script src="https://load.sheetsu.com"></script> 
+
+</body>
+</html>
