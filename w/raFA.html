@@ -1,76 +1,106 @@
 
 <!DOCTYPE html>
-<html lang="es.MX">
+<html lang="es-MX">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>aily ui</title>
-    <link rel="stylesheet" type="text/css" href="https://rafaelalucas.com/css/main.css">
-
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-137426789-2');
-    </script>
-
+    <title>Daily UI</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="themain.css">
     <link rel="shortcut icon" href="" />
-
     <meta name="description" content="Challenge accepted by" />
-
     <meta name="keywords"
-        content="rafaela lucas, rafaela lucas designer, graphic design, ui design, web design, daily ui, daily ui challenge, digital product design,ui designer, front end developer" />
-
-    <meta property="og:title" content="Daily UI | by Rafaela Lucas | rafaelalucas.com" />
+        content="luis angel maciel, luis angel maciel designer, graphic design, ui design, web design, daily ui, daily ui challenge, digital product design,ui designer, front end developer" />
+    <meta property="og:title" content="Daily UI " />
     <meta property="og:description" content="Challenge accepted by  "/>
-    <meta property="og:image" content="assets/fb_thumb.jpg" />
+    <meta property="og:image" content="" />
     <meta property="og:url" content="" />
 </head>
 
 
-</head>
-
-<body>
+<body>       
 
     <nav class="mainNav">
-        <div class="mainNav__content">
-            <a href="" class="mainNav__back">
-                <img class="mainNav__icon" src="https://rafaelalucas.com/assets/icon-5.svg" alt="Back">
-                <p class="mainNav__linkBack">rafaelalucas.com</p>
-            </a>
+        <div class="mainNav__content">          
+            <span  class="mainNav__back tablink" onclick="opentab(event,'1')">
+                <img class="mainNav__icon" src="icon-5.svg" alt="Back">
+                <p class="mainNav__linkBack" >lamp</p>
+            </span>
+            <span  class="mainNav__back tablink" onclick="opentab(event,'2')">                
+                <p class="mainNav__linkBack" >2</p>
+            </span>
+            <span  class="mainNav__back tablink" onclick="opentab(event,'3')">                
+                <p class="mainNav__linkBack" >3</p>
+            </span>
 
             <div class="mainNav__social">
                 <div class="mainNav__social">
-                    <a class="mainNav__iconSocial" href="https://dribbble.com/rafaelalucas" target="_blank"
-                        rel="noopener"><img src="assets/dribbble.svg" alt="Dribbble"></a>
-                    <a class="mainNav__iconSocial" href="https://codepen.io/rafaelavlucas" target="_blank"
-                        rel="noopener"><img src="assets/codepen.svg" alt="Codepen"></a>
-                    <a class="mainNav__iconSocial" href="https://www.linkedin.com/in/rafaelalucas" target="_blank"
-                        rel="noopener"><img src="assets/linkedin.svg" alt="Linkedin"></a>
+                    <a class="mainNav__iconSocial" href="" target="_blank"
+                        rel="noopener"><img src="dribbble.svg" alt="Dribbble"></a>
+                    <a class="mainNav__iconSocial" href="https://codepen.io/luisangelmaciel" target="_blank"
+                        rel="noopener"><img src="codepen.svg" alt="Codepen"></a>
+                    <a class="mainNav__iconSocial" href="" target="_blank"
+                        rel="noopener"><img src="linkedin.svg" alt="Linkedin"></a>
                 </div>
             </div>
         </div>
     </nav>
+       
+         
+         <div id="1" class="  tab">
+            <header class="mainHeading">
+                <article class="mainHeading__headingText">
+                    <h1 class="mainHeading__title">Daily UI Challenge</h1>
+                    <p class="mainHeading__description">UI and Code by Lamp</p>
+                </article>
+        
+            </header>
+            <section class="wrapper">
+                <div class="dailyItems"></div>
+            </section>
+         </div>
+       
+         <div id="2" class="  tab" style="display:none">
+            <header class="mainHeading">
+                <article class="mainHeading__headingText">
+                    <h1 class="mainHeading__title">Daily UI Challenge</h1>
+                    <p class="mainHeading__description">2</p>
+                </article>
+        
+            </header>
 
-    <header class="mainHeading">
-        <article class="mainHeading__headingText">
-            <h1 class="mainHeading__title">Daily UI Challenge</h1>
-            <p class="mainHeading__description">UI and Code by Rafaela Lucas</p>
-        </article>
+            <a href="https://himonster.siteoly.com/" target="_self">Siteoly</a>
+         </div>
+       
+         <div id="3" class="  tab" style="display:none">
+            <header class="mainHeading">
+                <article class="mainHeading__headingText">
+                    <h1 class="mainHeading__title">Daily UI Challenge</h1>
+                    <p class="mainHeading__description">3</p>
+                </article>
+        
+            </header>
+         </div>
 
-    </header>
-    <section class="wrapper">
-        <div class="dailyItems"></div>
-    </section>
-
-    <script src="https://rafaelalucas.com/dailyui/js/main.js"></script>
+         <script>
+            function opentab(evt, tabName) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("tab");
+                for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+                }
+                document.getElementById(tabName).style.display = "block";
+                evt.currentTarget.className += " w3-white";
+            }
+         </script>
+         <script src="script.js"></script>
 </body>
 
 </html>

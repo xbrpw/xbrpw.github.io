@@ -3,33 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 
-<main>
-  <div class="new-note">
-    <input type="text" name="title" id="title" placeholder="Title">
-    <textarea name="content" id="content" placeholder="Start writing"></textarea>
-    <div id="form-error"></div>
-  </div>
-  <div class="button-container">
-    <button class="add-btn" onclick="addNote()">Add note</button>
-  </div>
-  <div id="notes-wrapper"></div>
-</main>
-
-
-
-  <script  src="./script.js"></script>
-  <div class="row" sheetsu="https://sheetsu.com/apis/v1.0/d49de1401d62">
-    <div class="col-1">
-      <a href={{url}}> <b>{{seccion}}</b> {{detalles}} </a>
+  
+<div>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ 
+   <div class="w3-bar w3-black">
+     <button class="w3-bar-item w3-button tablink w3-red" onclick="opentab(event,'1')">Home</button>
+     <button class="w3-bar-item w3-button tablink" onclick="opentab(event,'2')">Terminos y condiciones</button>
+     <button class="w3-bar-item w3-button tablink" onclick="opentab(event,'3')">Ver publicaciones</button>
+   </div>
+   
+   <div id="1" class="w3-container  tab">
+    <main>
+      <hgroup>
+        <div class="new-note">
+          <input type="text" name="title" id="title" placeholder="Title">
+          <textarea name="content" id="content" placeholder="Start writing"></textarea>
+          <div id="form-error"></div>
+        </div>
+        <div class="button-container">
+          <button class="add-btn" onclick="addNote()">Add note</button>
+        </div>
+        <div id="notes-wrapper"></div>
+      </hgroup>
+    </main>
+   </div>
+ 
+   <div id="2" class="w3-container  tab" style="display:none">
+     <h2>2</h2>
+   </div>
+ 
+   <div id="3" class="w3-container  tab" style="display:none">
+    <script  src="./script.js"></script>
+    <div class="row" sheetsu="https://sheetsu.com/apis/v1.0/d49de1401d62">
+      <div class="col-1">
+        <a href={{url}}> <b>{{seccion}}</b> {{detalles}} </a>
+      </div>
     </div>
-  </div>
+  
+    <script src="https://load.sheetsu.com"></script> 
+   </div>
+   <script>
+ function opentab(evt, tabName) {
+   var i, x, tablinks;
+   x = document.getElementsByClassName("tab");
+   for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+   }
+   tablinks = document.getElementsByClassName("tablink");
+   for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+   }
+   document.getElementById(tabName).style.display = "block";
+   evt.currentTarget.className += " w3-red";
+ }
+ </script>
+ 
+ </div>
 
-  <script src="https://load.sheetsu.com"></script> 
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
 
 </body>
 </html>
