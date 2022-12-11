@@ -48,7 +48,22 @@
             </div>
         </div>
     </nav>
-       
+       <script>function tabOneClickHandler(e) {
+        Enabler.counter('Click on Tab 1');
+    }
+    document.getElementById('tab-one').addEventListener('click',
+    tabOneClickHandler, false);</script>
+    <div id="tab-one">TAB ONE</div>
+    <style>#tab {
+        position: absolute;
+        width: 130px;
+        height: 20px;
+        top: 35px;
+        left: 25px;
+        cursor: pointer;
+    }
+    </style>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
          
          <div id="1" class="  tab">
             <header class="mainHeading">
