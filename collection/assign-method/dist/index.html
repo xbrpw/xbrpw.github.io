@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es-mx" >
+<head>
+  <meta charset="UTF-8">
+  <title>Assign() Method</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    button {
+      background-color: dodgerblue;
+      border: none;
+      color: white;
+      padding: 12px 10px;
+      font-size: 19px;
+      margin: 0rem 1rem;
+      cursor: pointer;
+    }
+
+    .luisangelmaciel {
+      background-color: purple;
+    }
+  </style>
+</head>
+<body>
+
+    <button onclick="redirectToXiiberTravel()" class="xiibertravel">
+      Xiiber Travel
+    </button>
+    <button onclick="redirectToLuisAngelMaciel()" class="luisangelmaciel">
+      luisangelmaciel.one
+    </button>
+    <button onclick="redirectToCodepen()" class="codepen">
+      Codepen
+    </button>
+  <script>
+    function redirectToXiiberTravel() {
+          window.location.assign("https://www.xiiber.com");
+        }
+        function redirectToLuisAngelMaciel() {
+          window.location.assign("https://www.luisangelmaciel.one");
+        }
+        function redirectToCodepen() {
+          window.location.assign("https://codepen.io/luisangelmaciel");
+        } 
+  </script>
+  <script  src="./script.js"></script>
+
+</body>
+</html>

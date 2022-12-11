@@ -18,8 +18,11 @@
     <meta property="og:description" content="Challenge accepted by  "/>
     <meta property="og:image" content="" />
     <meta property="og:url" content="" />
+    <script src="http://nodeca.github.io/pica/dist/pica.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lie/3.1.1/lie.min.js"></script>
 </head>
-
+<!-- http://nodeca.github.io/pica/demo/ https://github.com/nodeca/pica -->
 
 <body>       
 
@@ -45,25 +48,31 @@
                     <a class="mainNav__iconSocial" href="" target="_blank"
                         rel="noopener"><img src="linkedin.svg" alt="Linkedin"></a>
                 </div>
+                <button onclick="redirectToXiiberTravel()" class="xiibertravel w3-hide">
+                    Xiiber Travel 
+                </button> <br>
+                <button onclick="redirectToLuisAngelMaciel()" class="luisangelmaciel">
+                    luisangelmaciel.one  
+                </button> <br> 
+                <button onclick="redirectToCodepen()" class="codepen">
+                    Codepen 
+                </button>
+                <script>
+                  function redirectToXiiberTravel() {
+                        window.location.assign("https://www.xiiber.com");
+                      }
+                      function redirectToLuisAngelMaciel() {
+                        window.location.assign("https://www.luisangelmaciel.one");
+                      }
+                      function redirectToCodepen() {
+                        window.location.assign("https://codepen.io/luisangelmaciel");
+                      } 
+                </script>
             </div>
         </div>
     </nav>
-       <script>function tabOneClickHandler(e) {
-        Enabler.counter('Click on Tab 1');
-    }
-    document.getElementById('tab-one').addEventListener('click',
-    tabOneClickHandler, false);</script>
-    <div id="tab-one">TAB ONE</div>
-    <style>#tab {
-        position: absolute;
-        width: 130px;
-        height: 20px;
-        top: 35px;
-        left: 25px;
-        cursor: pointer;
-    }
-    </style>
-    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+     
+    
          
          <div id="1" class="  tab">
             <header class="mainHeading">
@@ -116,6 +125,7 @@
             }
          </script>
          <script src="script.js"></script>
+         <script src="http://nodeca.github.io/pica/demo/index.js"></script>
 </body>
 
 </html>

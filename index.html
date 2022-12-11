@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!-- CodePen - Cool hover effect -->
+<!DOCTYPE html> 
 <html lang="es-MX" >    <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
   <meta charset="UTF-8">
@@ -32,12 +32,16 @@
 }</style>
 
 </head>
-<body style=" height: 100vh;
-margin: 0;
-display: grid;
-place-content: center;">
+<body style=" height: 100vh;margin: 0;display: grid;place-content: center;">
 
 <h1 class="coolHoverEffect"><b>xbrpw</b>.github.io</h1>
+
+<button onclick="reloadCurrentPage()"><code>Reload (F5)</code></button>
+<script>
+  function reloadCurrentPage(){
+    window.location.reload()
+  }
+</script>
 
   
 </body>

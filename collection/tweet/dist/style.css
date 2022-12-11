@@ -1,0 +1,101 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  font-family: Sans-Serif;
+  background: #F5F8FA;
+}
+
+.tweet {
+  margin: 10vh auto;
+  border: 1px solid #eee;
+  padding: 25px 50px;
+  border-radius: 5px;
+  max-width: 500px;
+  background: white;
+}
+.tweet .follow {
+  display: block;
+  background-color: #f5f8fa;
+  background-image: linear-gradient(#fff, #f5f8fa);
+  border: 1px #e1e8ed solid;
+  border-radius: 5px;
+  color: black;
+  padding: 5px;
+  margin-top: 9px;
+  float: right;
+  text-align: center;
+  text-decoration: none;
+}
+.tweet .follow:hover {
+  background-color: #e1e8ed;
+  background-image: linear-gradient(#fff, #e1e8ed);
+}
+.tweet .follow:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.tweet .follow i {
+  color: #55acee;
+  padding-right: 5px;
+}
+.tweet--user:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.tweet--user-avatar {
+  border-radius: 5px;
+  float: left;
+  margin-right: 10px;
+}
+.tweet--user-name {
+  font-weight: bold;
+  padding-top: 9px;
+}
+.tweet--user-name span {
+  font-weight: normal;
+  color: #999;
+  font-size: 0.8em;
+  display: block;
+}
+.tweet--body {
+  margin: 20px 0 5px;
+  font-size: 1.5em;
+}
+.tweet--time {
+  font-weight: normal;
+  color: #999;
+  font-size: 0.8em;
+}
+.tweet--actions {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+.tweet--actions [class*=fa-] {
+  float: right;
+  margin-left: 20px;
+  color: #999;
+}
+.tweet--actions [class*=fa-].fa-heart:hover {
+  color: #DD2E44;
+}
+.tweet--actions [class*=fa-]:hover {
+  color: #4A913C;
+  cursor: pointer;
+}
+.tweet--actions [class*=fa-]:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.tweet--actions span {
+  color: #999;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}

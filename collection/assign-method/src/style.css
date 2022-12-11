@@ -1,0 +1,13 @@
+    button {
+      background-color: dodgerblue;
+      border: none;
+      color: white;
+      padding: 12px 10px;
+      font-size: 19px;
+      margin: 0rem 1rem;
+      cursor: pointer;
+    }
+
+    .hashnode {
+      background-color: purple;
+    }
