@@ -32,10 +32,10 @@ window.onload = function (e) {
 
 
     const items = [{
-            url: `#`,
+            url: `https://www.xbr.pw/adivina-quien/index.html`,
             name: `01`,
-            image: `dailyui-2.jpg`,
-            desc: "Sign Up",
+            image: `adivina-quien-juego-para-celular.jpg`,
+            desc: "Adivina Quién?",
             color: "#8988cc"
         },
         {
