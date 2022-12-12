@@ -34,9 +34,9 @@ window.onload = function (e) {
     const items = [{
             url: `https://www.xbr.pw/adivina-quien/index.html`,
             name: `01`,
-            image: `adivina-quien-juego-para-celular.jpg`,
+            image: `adivina-quien-juego-para-celular.png`,
             desc: "Adivina Quién?",
-            color: "#8988cc"
+            color: "#144B9C"
         },
         {
             url: `#`,
@@ -386,7 +386,7 @@ window.onload = function (e) {
             name: `50`,
             image: `placeholder.jpg`,
             desc: "Coming soon",
-            color: "#E87867"
+            color: "#144B9C"
         },
     ];
 
