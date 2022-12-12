@@ -60,8 +60,7 @@
 
 
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="themain.css">
-    <link rel="shortcut icon" href="" />
+    <link rel="shortcut icon" href="favicon.svg" />
     <meta name="description" content="Challenge accepted by" />
     <meta name="keywords"
         content="luis angel maciel, luis angel maciel designer, graphic design, ui design, web design, daily ui, daily ui challenge, digital product design,ui designer, front end developer" />
@@ -72,6 +71,44 @@
     <script src="http://nodeca.github.io/pica/dist/pica.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lie/3.1.1/lie.min.js"></script>
+
+    
+    <script>
+    function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain attribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+        /*make an HTTP request using the attribute value as the file name:*/
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /*remove the attribute, and call this function once more:*/
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+            }
+        }      
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /*exit the function:*/
+        return;
+        }
+    }
+    };
+    </script>
+
+
+
+    
+
+   
+
 </head>
 <!-- http://nodeca.github.io/pica/demo/ https://github.com/nodeca/pica -->
 
@@ -122,16 +159,13 @@
             </div>
         </div>
     </nav>
-     
-    
-         
+                  
          <div id="1" class="  tab">
             <header class="mainHeading">
                 <article class="mainHeading__headingText">
                     <h1 class="mainHeading__title">Daily UI Challenge</h1>
-                    <p class="mainHeading__description">UI and Code by Lamp</p>
-                </article>
-        
+                    <p class="mainHeading__description">CodeLamp</p>
+                </article>        
             </header>
             <section class="wrapper">
                 <div class="dailyItems"></div>
@@ -143,8 +177,7 @@
                 <article class="mainHeading__headingText">
                     <h1 class="mainHeading__title">Daily UI Challenge</h1>
                     <p class="mainHeading__description">2</p>
-                </article>
-        
+                </article>        
             </header>
 
                 <div class="row" sheetsu="https://sheetsu.com/apis/v1.0bu/743be2bc12cb">
@@ -156,17 +189,17 @@
                
                 <script src="https://load.sheetsu.com"></script>
  
-            <a href="https://himonster.siteoly.com/" target="_self">Siteoly</a>
-         </div>
+            <a href="https://himonster.siteoly.com/" target="_self">Siteoly Hihello.monster</a>
+            <a href="https://sticker.ly/user/hipxar" target="_self">Siteolytickerly hiPxar
        
          <div id="3" class="  tab" style="display:none">
             <header class="mainHeading">
                 <article class="mainHeading__headingText">
                     <h1 class="mainHeading__title">Daily UI Challenge</h1>
                     <p class="mainHeading__description">3</p>
-                </article>
-        
+                </article>        
             </header>
+            <div w3-include-html="content.html"></div> 
          </div>
 
          <script>
@@ -183,6 +216,9 @@
                 document.getElementById(tabName).style.display = "block";
                 evt.currentTarget.className += " w3-white";
             }
+         </script>
+         <script>
+            includeHTML();
          </script>
          <script src="script.js"></script>
          <script src="http://nodeca.github.io/pica/demo/index.js"></script>
