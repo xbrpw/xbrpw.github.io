@@ -1,0 +1,449 @@
+<!DOCTYPE html><html lang="es-MX">
+<!-- * ⊙⩌⨀ 2006 - 2022  http://twitter.com/luisangelmaciel  */  -->
+<head> 
+  <meta charset="UTF-8">  
+  <title> Docentes control</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="description" content="Docentes control">
+  <meta name="MobileOptimized" content="width" />    
+  <meta name="author" content="Luis Angel Maciel">
+  <meta name="generator" content="xbr.pw">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" >
+  <link rel="icon" type="image/x-icon" sizes="192x192" href="./favicon.svg" id="favicon" />   
+  <link rel="apple-touch-icon" href="./apple-touch-icon.svg">
+  <meta name="MobileOptimized" content="width" />
+    <link rel="stylesheet" href="../lib/style.css">
+    <link rel="stylesheet" href="../lib/ie7/ie7.css">
+  <script src="../icoSorJuana/selection.json"></script>       
+  
+  <link rel="stylesheet" href="https://xbrpw.github.io/eso/docentes/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.02.0/css/all.min.css'> <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v6/search?o=r&m=free -->   
+  <link href='https://xbrpw.github.io/assets/fontawesome/css/all.min.css' rel='stylesheet'>
+  <link href='https://xbrpw.github.io/assets/fontawesome/css/regular.min.css' rel='stylesheet'>
+  <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script> 
+
+
+  </head>
+  <head>
+    <base target="_top">
+    <script>
+      function AddRow()
+        {
+        var usernamee = document.getElementById("usernamee").value;
+        var passwordd = document.getElementById("passwordd").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        if (usernamee==""|| passwordd==""|| email==""|| phone=="") {
+            return false;
+        }
+        else {
+        google.script.run.AddRecord(usernamee,passwordd,email,phone);
+        document.getElementById("page2_id1").className = "page2_id1-off";
+        document.getElementById("page3_id1").className = "page3_id1";
+        }
+        }
+
+        function LoginUser()
+        {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        google.script.run.withSuccessHandler(function(output) 
+        {
+        if(output == 'TRUE')
+        {
+            document.getElementById("displayusername").innerHTML = username;
+            document.getElementById("page1_id1").className = "page1_class1-off";
+            document.getElementById("page4_id1").className = "page4_id1";    
+        }
+        else if(output == 'FALSE')
+        {
+            document.getElementById("errorMessage").innerHTML = "Invalid data";     
+        }    
+        }).checkLogin(username, password);
+        }
+        
+            function function1(){
+                document.getElementById("page1_id1").className = "page1_class1-off";
+                document.getElementById("page2_id1").className = "page2_id1";
+            }
+
+            function function3(){ 
+            document.getElementById("page3_id1").className = "page3_id1-off";
+            document.getElementById("page1_id1").className = "page1_id1"; 
+            }
+
+    </script>
+        <style>
+
+        /*page1*/
+        .page1_class1-off{
+            display: none;
+        }
+
+
+        /*page2*/
+        .page2_class1{
+            display: none;
+        }
+
+        .page2_id1-off{
+            display:none;
+        }
+
+        /*page3*/
+        .page3_class1{
+            display:none;
+
+        }
+        .page3_id1-off{
+            display:none;
+        }
+
+        /*page4*/
+        .page4_class1{
+            display:none;
+
+        }
+        .page4_id1-off{
+            display:none;
+        }
+
+        input[type=text]:hover{
+            /*    border-bottom:2px solid black;*/
+            }
+        input[type=number]:hover{
+              /*  border-bottom:2px solid black;*/
+            }
+        input[type=password]:hover{
+                /*border-bottom:2px solid black;*/
+            }
+
+        .user{
+      /*  display: inline-block;
+        width: 75px;
+        height: 75px;
+        border: 8px solid black;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden
+        /*box-sizing: border-box;*/
+        }
+
+        /*the head/*/
+        .user::before{
+        /*content: '';
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: black;
+        border-radius: 50%;
+        position: absolute;
+        left: calc(50% - 11px);
+        top: 10px;*/
+        }
+
+        /*the body*/
+        .user::after{
+     /*   content: '';
+        display: inline-block;
+        width:50px;
+        height:40px;
+        background: black;
+       *border-radius: 50%;
+        position: absolute;
+        left: calc(50% - 24px);
+        top: 39px;*/
+        }
+
+</style>
+</head>
+
+  <body>    
+      
+    <span data-nosnippet></span> 
+   
+    
+          
+
+   <!--page1-->
+<center>
+    <div class="w3-container w3-cell-row w3-auto" ><br>
+        <div class="w3-container  w3-cell w3-cell-middle ">
+            <br><br><center>
+                <img src="https://xbrpw.github.io/eso/img/storyset/Formula-rafiki.svg" alt="Login docentes" width="250" class="w3-image w3-responsive w3-center w3-centered" height="65" title="Login Docentes ESO 0514 SEP">
+              </center>
+            <div class="page1_class1" id="page1_id1" > 
+                <h2 class="w3-center" style="color:#103113"><b>Docentes</b></h2>
+            <br>
+            <div class="form-floating">
+                    <input type="text" class="form-control userEso" id="username" placeholder="Username">
+                    <label for="floatingInput">Usuario</label>
+            </div>       
+            <br>
+            <div class="form-floating">
+                <input type="password" class="form-control passEso" value="" id="myInputpassword"  id="password" name="password"  placeholder="Password" >
+                <label for="floatingPassword">Password</label>
+              </div>    <div class="w3-right-align" onclick="myFunctionpassword()" type="checkbox"> <i class="fa-duotone fa-eye"></i> Mostrar Password </div><br>                          
+            <br><span id="errorMessage" style="color: red" ></span><br>
+
+
+         
+
+
+
+
+            <input type="submit" value="Login" onclick="LoginUser()"  style="background-color: #0e6d5b; color:white" class="w3-btn w3-round-xxlarge  w3-hover-teal   w3-block loginEso" type="button"><br>           
+            <input type="button" onClick="function1()" value="Create New"  style="background-color: #0e6d5b; color:white" class="w3-btn w3-round-xxlarge  w3-hover-teal   w3-block loginEso" type="button"  />
+
+           
+            <br> <center>
+                  
+                <a href="#ElModerador" class="w3-text-grey" >Moderador</a>
+
+              </center> 
+
+            </div>
+        </div>
+    </div>
+   
+   <!--page2-->
+   <div class="page2_class1" id="page2_id1" >
+    <h1>Create Account</h1>
+       <input type="text" id="usernamee" placeholder="Name" style="border-top: none;border-right: none;border-left: none;outline: none; text-align: center;font-size:0.9em ;width: 50%;font-weight:bold;"/><br>
+       <br>
+       <input type="password" id="passwordd" placeholder="Create password" style="border-top: none;border-right: none;border-left: none;outline: none; text-align: center;font-size: 0.9;width: 50%;font-weight:bold;" /><br>
+           <br>
+       <input type="text" id="email" placeholder="Email" style="border-top: none;border-right: none;border-left: none;outline: none; text-align: center;font-size:0.9em ;width: 50%;font-weight:bold;"/><br>
+       <br>
+       <input type="number" id="phone" placeholder="Phone no." style="border-top: none;border-right: none;border-left: none;outline: none; text-align: center;font-size:0.9em ;width: 50%;font-weight:bold;" /><br><br>
+       <b style="color:red;">La contraseña debe contener letras y números.</b><br><br>
+       <input type="submit" value="Create" onclick="AddRow()" style="float: right;padding-top: 1px;padding-bottom: 1px;padding-left: 10px;padding-right: 10px;font-size: 0.9em;font-weight:bold;" />
+       <br>
+   </div>
+   
+   <!--page3-->
+    <div class="page3_class1" id="page3_id1" style="background:none;border:2px solid gray;border-radius: 20px;width: 250px;padding-top: 10px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;"><center>
+       <h2> Your account has been successfully created. Login to your account</h2>
+       <input type="submit"  onClick="function3()" value="Login" style="font-weight:bold;"><br>
+    </div> 
+   
+   <!--page4-->
+   <div class="page4_class1" id="page4_id1" style="background:none;border:2px solid gray;border-radius: 20px;width: 250px;padding-top: 10px;padding-bottom: 20px;padding-left: 20px;padding-right: 20px;" ><center>
+       <br>
+       <h2>Hi <b id="displayusername" style="color:red;"></b>!</h2>
+       <div class="user"></div>
+       <h2> You are successfully logged in.</h2>
+       <h2>**************</h2>
+       <br>
+     </div>
+   </center>
+
+
+
+
+
+    <div class="w3-container w3-cell-row w3-auto" id="PanelDocentes"><br>
+      <div class="w3-container  w3-cell w3-cell-middle w3-hide">
+        <div class="form-signin">
+            <form>  
+          <h2 class="w3-center" style="color:#103113"><b>Docentes</b></h2>
+          <div class="form-floating">
+            <input type="text" class="form-control userEso" id="floatingInputEso" placeholder="User">
+            <label for="floatingInput">Usuario</label>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="password" class="form-control passEso" value="" id="myInputpassword"  id="password" name="password" type="password" placeholder="Password" >
+            <label for="floatingPassword">Password</label>
+          </div>    <div class="w3-right-align" onclick="myFunctionpassword()" type="checkbox"> <i class="fa-duotone fa-eye"></i> Mostrar Password </div><br> 
+          <br>  <br>  
+          <button  id="loginBtn" style="background-color: #0e6d5b; color:white" class="w3-btn w3-round-xxlarge  w3-hover-teal   w3-block loginEso" type="button"><b>Entrar</b></button>
+          
+          <br>  <br> <center>
+                
+                 <a href="#ElModerador" class="w3-text-grey" >Moderador</a>
+
+               </center> 
+        </form>  <section class="lec-sec"></section>
+            
+
+        </div>
+      </div>
+
+
+
+  
+      </div><br><br><br> </div><br><br><br>
+    </div>
+
+    <div class="w3-container w3-cell-row w3-auto" id="ElModerador"><br>
+        <div class="w3-container w3-cell w3-cell-middle ">
+          <div class="form-signin">
+              <form>  <br><br><center>
+              <img src="https://xbrpw.github.io/eso/img/storyset/Login-pana.svg" alt="Login docentes" width="250" class="w3-image w3-responsive w3-center w3-centered" height="65" title="Login Docentes ESO 0514 SEP">
+            </center>
+            <h2 class="w3-center" style="color:#103113"><b>Moderador</b></h2>
+            <div class="form-floating">
+              <input type="text" class="form-control user" id="floatingInput" placeholder="User">
+              <label for="floatingInput">Usuario</label>
+            </div>
+            <br>
+            <div class="form-floating">
+              <input type="password" class="form-control pass" value="" id="password" placeholder="Password">
+              
+              <label for="floatingPassword">Password</label><div class="w3-right-align w3-hide" onclick="myFunctionpassword()" type="checkbox"> <i class="fa-duotone fa-eye"></i> Mostrar Password </div><br> 
+            </div>
+            <br> 
+         
+            <button  id="loginBtn" style="background-color: #0e6d5b; color:white" class="w3-btn w3-round-xxlarge  w3-hover-teal   w3-block login" type="button"><b>Entrar</b></button>
+        
+            <br>  <br> <center>
+                
+                <a href="#PanelDocentes" class="w3-text-grey" >Docentes</a>
+
+              </center>  
+            
+          </form>  <section class="lec-sec"></section>
+              
+  
+          </div>
+        </div>
+    </div><br><br><br> </div><br><br><br>
+      
+  
+  
+    
+        </div><br><br><br>
+      </div>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://kit.fontawesome.com/944eb371a4.js'></script>
+    <script>
+        function myFunctionpassword() {
+        var x = document.getElementById("myInputpassword");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+        }
+    </script>
+     <script>
+        function myFunctionpassword() {
+        var x = document.getElementById("myInputpassword");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+        $(".login").click(function () {
+            var user = $(".user").val(),
+                pass = $(".pass").val();
+            if(user === "Sec0514" && pass === "LsBbs287") {
+            window.location.replace("https://xbrpw.github.io/eso/dashboard/index.html");
+            } else {
+            window.location.replace("user.html");
+            }
+        });
+        $(".new").click(function () {
+            $(".lec-sec").append("<div class='lec'><h1 class='lec-num'></h1><br><h2 class='lec-name'></h2><br><a href='' target='_blank' class='prev'>Preview</a><br><br><a href='' target='_blank' class='down'>Download</a></div>");
+
+            $(".lec-num").text($(".number").val());
+            $(".lec-name").text($(".title").val());
+            $(".prev").attr("href", $(".preview-link").val());
+            $(".down").attr("href", $(".download-link").val());
+        });
+        });
+    </script>        
+     <script>
+        $(document).ready(function () {
+        $(".loginEso").click(function () {
+            var user = $(".userEso").val(),
+                pass = $(".passEso").val();
+            if(user === "eso0514" && pass === "123abc%") {
+            window.location.replace("https://xbrpw.github.io/w/re.html");
+            } else {
+            window.location.replace("user.html");
+            }
+        });
+        $(".new").click(function () {
+            $(".lec-sec").append("<div class='lec'><h1 class='lec-num'></h1><br><h2 class='lec-name'></h2><br><a href='' target='_blank' class='prev'>Preview</a><br><br><a href='' target='_blank' class='down'>Download</a></div>");
+
+            $(".lec-num").text($(".number").val());
+            $(".lec-name").text($(".title").val());
+            $(".prev").attr("href", $(".preview-link").val());
+            $(".down").attr("href", $(".download-link").val());
+        });
+        });
+    </script>    
+     <script>
+      $(document).ready(function () {
+      $(".loginEso").click(function () {
+          var user = $(".userEso").val(),
+              pass = $(".passEso").val();
+          if(user === "ciencia" && pass === "ciencia") {
+          window.location.replace("https://xbrpw.github.io/w/re.html");
+          } else {
+          window.location.replace("user.html");
+          }
+      });
+      $(".new").click(function () {
+          $(".lec-sec").append("<div class='lec'><h1 class='lec-num'></h1><br><h2 class='lec-name'></h2><br><a href='' target='_blank' class='prev'>Preview</a><br><br><a href='' target='_blank' class='down'>Download</a></div>");
+
+          $(".lec-num").text($(".number").val());
+          $(".lec-name").text($(".title").val());
+          $(".prev").attr("href", $(".preview-link").val());
+          $(".down").attr("href", $(".download-link").val());
+      });
+      });
+  </script>  
+  <script sheetsu="https://sheetsu.com/apis/v1.0bu/0a97d2c109a3">
+    $(document).ready(function () {
+    $(".loginEso").click(function () {
+        var user = $(".userEso").val(),
+            pass = $(".passEso").val();
+        if(user === "esodirectivos" && pass === "123abc%") {
+        window.location.replace("https://xbrpw.github.io/w/re.html");
+        } else {
+        window.location.replace("directivos.html");
+        }
+    });
+    $(".new").click(function () {
+        $(".lec-sec").append("<div class='lec'><h1 class='lec-num'></h1><br><h2 class='lec-name'></h2><br><a href='' target='_blank' class='prev'>Preview</a><br><br><a href='' target='_blank' class='down'>Download</a></div>");
+
+        $(".lec-num").text($(".number").val());
+        $(".lec-name").text($(".title").val());
+        $(".prev").attr("href", $(".preview-link").val());
+        $(".down").attr("href", $(".download-link").val());
+    });
+    });
+</script>    
+    
+    
+      <script src="https://load.sheetsu.com"></script>
+
+
+  </body>
+</html>
+
+ 
+<!-- {{usernamee}}	{{password}}	nombre	apellido	email	phone	Celular	Cargo	Fecha de incorporación a la escuela	Materias
+
+Hola maestro, 
+
+Puede entrar a su perfil de maestro de la ESO-0514
+con los datos siguientes
+
+¡Saludos! 
+
+<iframe src="https://script.google.com/macros/s/AKfycbw7KunYLHoXQpzTViultB_ggauSUpbYwkstdfch8HpIGbhTtB1fw65HjDFH_thLbj9r/exec" width="100%" height="500px" scrolling="no"></iframe>
+-->
