@@ -46,38 +46,38 @@ window.onload = function (e) {
             color: "#98111f"
         },
         {
-            url: `#`,
+            url: `https://www.xbr.pw/assets/css/hey/image-gallery-with-detailed-info/index.html`,
             name: `03`,
-            image: `dailyui-3.jpg`,
-            desc: "Landing Page",
+            image: `cgtravel-2017.jpg`,
+            desc: "CG Travel 2017",
             color: "#6aa0b6"
         },
         {
-            url: `#`,
+            url: `https://www.xbr.pw/assets/clone/fakebook/src/index.html`,
             name: `04`,
             image: `error404.png`,
-            desc: "Calculator ",
+            desc: "Fesobook ",
             color: "#1a9991"
         },
         {
-            url: `#`,
+            url: `https://codepen.io/luisangelmaciel/full/wveJyvP`,
             name: `05`,
             image: `placeholder.jpg`,
-            desc: "App Icon",
+            desc: "Game. Goku vs Moro",
             color: "#b0b0b3"
         },
         {
-            url: `#`,
+            url: `https://codepen.io/luisangelmaciel/full/vYjZQPG`,
             name: `06`,
             image: `placeholder.jpg`,
-            desc: "Profile",
+            desc: "Singboard e-commerce",
             color: "#e28473"
         },
         {
-            url: `#`,
+            url: `https://xbrpw.github.io/links.html`,
             name: `07`,
             image: `placeholder.jpg`,
-            desc: "Settings",
+            desc: "Bookmarks",
             color: "#8160de"
         },
         {

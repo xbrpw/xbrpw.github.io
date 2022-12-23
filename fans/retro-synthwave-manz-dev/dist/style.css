@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&display=swap');
+
+:root {
+  --header-font: Lalezar, sans-serif;
+  --hand-font: Hurricane, cursive;
+    
+  background: #111;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 700px;
+  margin: 5em auto;
+}
+
+.synthwave-draw {
+  font-family: var(--hand-font);
+  font-size: 4rem;
+  font-weight: 400;
+  color: #ed1ca6;
+  background: linear-gradient(#f590e3 15%, #ed1ca6 20%, #f513aa 30%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+  transform: translate(5%, 5px);
+  filter: drop-shadow(0 0 5px #f513aa);
+  z-index: 5;
+}
+
+.synthwave-title {
+  --border-color: #7bbbf4;
+  
+  display: inline-flex;
+  font-family: var(--header-font);
+  font-size: 8rem;
+  height: 80px;
+  line-height: 80%;
+  background: 
+    linear-gradient(to bottom, #001a4e 15%, #003eaa 25%, #fffffa 50%, #000100 50%, #8a148c 75%, #deaae3),
+    linear-gradient(to bottom, #fff 37%, #242960 38%, #fff 95%);
+  color: red;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter:
+    drop-shadow(-2px 0 0 var(--border-color))
+    drop-shadow(2px 0 0 var(--border-color))
+    drop-shadow(0 2px 0 var(--border-color))
+    drop-shadow(0 -2px 0 var(--border-color))
+    drop-shadow(5px 5px 3px #000)
+    drop-shadow(0 0 4px #0e0480);
+}

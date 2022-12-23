@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 150px;
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  position: relative;
+  left: 60px;
+}
+
+h1 {
+  font-family: "Geo", monospace;
+  font-weight: 400;
+  line-height: 0.65;
+  display: inline-flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  transform: rotateY(11deg);
+}
+
+h1:nth-child(1) {
+  text-shadow: 0 0 10px #42bfe4, 0 0 20px #42bfe4, 0 0 30px #42bfe4;
+}
+
+h1:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.8);
+  text-stroke: 1.5px rgba(255, 255, 255, 0.8);
+  background: linear-gradient(135deg, #131313 0%, #1c1c1c 9%, #2b2b2b 24%, #111111 40%, #000000 49%, #2c2c2c 50%, #474747 61%, #666666 75%, #595959 88%, #4c4c4c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  text-shadow: -5px -5px 1px rgba(0, 0, 0, 0.4);
+}
+
+span:nth-child(1) {
+  font-size: 100pt;
+  letter-spacing: -4pt;
+}
+
+span:nth-child(2) {
+  font-size: 170pt;
+  letter-spacing: -10pt;
+}

@@ -156,15 +156,15 @@
         .sidebar {padding-top: 15px;}
         .sidebar a {font-size: 18px;}
       }
-      </style>
+  </style>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.02.0/css/all.min.css'> <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v6/search?o=r&m=free -->   
   <link href='https://xbrpw.github.io/assets/fontawesome/css/all.min.css' rel='stylesheet'>
   <link href='https://xbrpw.github.io/assets/fontawesome/css/regular.min.css' rel='stylesheet'>
-  
   </head>
+
   <body>    
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
@@ -210,31 +210,21 @@
     <span data-nosnippet></span>   
  
 
-    <div id="loggedInx"> 
-     
-  
-      <div id="mySidebar" class="sidebar">
+    <div id="loggedInx">       
+      <div id="mySidebar" class="sidebar w3-hide">
         <br>
-        <a href="./info.html" target="eso0514" onclick="closeNav()" >Indicaciones</a>
-        <a href="./acesos.html#materias" target="eso0514" onclick="closeNav()" class="w3-ripple">Materias</a>
-       <!-- REGRESARLO  <a href="./acesos.html#proyecto"target="eso0514" onclick="closeNav()" class="w3-ripple">Proyecto</a>    -->   
-        <a href="../herramientas.html" target="eso0514" onclick="closeNav()" class="w3-ripple"><i class="fa fa-tools"></i> Herramientas</a></a>      
-        <a href="../bloc-de-notas/index.html" target="eso0514" onclick="closeNav()" class="w3-ripple"><i class="fa fa-pencil"></i> Bloc de notas</a>    
-        <!-- REGRESARLO <a href="./info.html" target="eso0514"  onclick="closeNav()" class="w3-ripple">Comentarios</a>   -->
-        <a href="#"  onclick="closeNav()" ><small>cerrar</small></a>
+        <a href="#Indicaciones" target="eso0514" onclick="closeNav()" >Indicaciones</a>     
+        <a href="#Cerrar"  onclick="closeNav()" ><small>cerrar</small></a>
       </div>
       
       <!-- App -->     
       <div class="w3-bar w3-large  w3-white w3-card-2 w3-hide-large w3-hide-medium w3-top">
         <a class="w3-bar-item w3-circle  w3-ripple" href="#ESO0514"  class="openbtn" onclick="openNav()"><i class="fa fa-bars  "></i></a> 
         <div class="w3-text-black w3-left w3-ripple  w3-xxlarge"class="openbtn"><h4 >Accesos </h4></div>
-            <div class="w3-text-black w3-right  w3-ripple  w3-xxlarge" ><!-- <h4><i class="fa fa-search " class="w3-text-black" ></i></h4> -->  
+            <div class="w3-text-black w3-right  w3-ripple  w3-xxlarge" >              
               <h4>
-                <span> <a href="./info.html" target="eso0514" ><i class="fa fa-info"></i>  </a></span> &nbsp; &nbsp; 
-               <!--  <span onclick="myFunction()"><i class="fa fa-info " onclick="myFunction()" ></i> &nbsp; &nbsp; </span>-->
-                <!-- <span> <a href="./herramientas" target="eso0514" onclick="closeNav()"><i class="fa fa-tools"></i> </a></span> &nbsp; &nbsp;  -->
-                <!-- <span> <a href="./bloc-de-notas/index.html" target="eso0514" onclick="closeNav()">  </a></span> &nbsp; &nbsp;  -->
-                <span> <a href="../alerts/index.html" target="eso0514" ><i class="fa fa-bell"></i> </a></span> &nbsp;
+                <span> <i class="fa fa-info"></i>  </span> &nbsp; &nbsp;                                                
+                <span> <i class="fa fa-bell"></i></span> &nbsp;
                <span> <svg class="icon icon-sor-juanaicon-" style=" width: 1.7em; height:1.7em;"><use xlink:href="#icon-sor-juanaicon-"></use></svg></span> &nbsp; &nbsp;
               </h4> 
             </div>
@@ -245,13 +235,8 @@
         <div class="w3-auto">
           <div class="w3-text-black w3-left w3-ripple  w3-xxlarge"class="openbtn"><h4 >Accesos </h4></div>
             <div class="w3-text-black w3-right  w3-ripple  w3-xxlarge" ><!-- <h4><i class="fa fa-search " class="w3-text-black" ></i></h4> -->  
-              <h4>
-                
-                  <span> <a href="./info.html" target="eso0514" ><i class="fa fa-info " ></i>&nbsp; &nbsp; Indicaciones</a> &nbsp; &nbsp; 
-                <!-- <span onclick="myFunction()"><i class="fa fa-info " onclick="myFunction()" ></i>&nbsp; &nbsp; Indicaciones &nbsp; &nbsp; </span> -->
-                <span> <a href="../herramientas.html" target="eso0514" > Herramientas</a></span> &nbsp; &nbsp; 
-                <span> <a href="../bloc-de-notas/index.html" target="eso0514" > Bloc de notas</a></span> &nbsp; &nbsp; 
-                <span> <a href="../alerts/index.html" target="eso0514" > <i class="fa fa-bell"></i> </a></span> &nbsp; &nbsp; 
+              <h4>                
+                <span> <i class="fa fa-info " ></i>&nbsp; &nbsp; Indicaciones &nbsp; &nbsp;   
                 <svg class="icon icon-sor-juanaicon-" style=" width: 1.7em; height:1.7em;"><use xlink:href="#icon-sor-juanaicon-"></use></svg> 
               </h4> 
             </div>
@@ -259,65 +244,12 @@
       </div>      
       <br>    
       <br>
-      <div id="sor-juana" >
-    <!--  <iframe  src="./acesos.html" name="eso0514" height="650px" width="100%" title="ESO-0514" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> -->
+      <div id="sor-juana">    
     </div>
   
-
                 
     </div><!-- ojo -->
    
-
-  
-
-   
-    <script>
-      $(document).ready(function(){
-        $("#myInput").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $("#myDIV *").filter(function() {
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
-        });
-      });
-    </script>        
-    <script>
-    function sortTable() {
-    var table, rows, switching, i, x, y, shouldSwitch;
-    table = document.getElementById("myTable");
-    switching = true;
-    /*Make a loop that will continue until
-    no switching has been done:*/
-    while (switching) {
-      //start by saying: no switching is done:
-      switching = false;
-      rows = table.rows;
-      /*Loop through all table rows (except the
-      first, which contains table headers):*/
-      for (i = 1; i < (rows.length - 1); i++) {
-      //start by saying there should be no switching:
-      shouldSwitch = false;
-      /*Get the two elements you want to compare,
-      one from current row and one from the next:*/
-      x = rows[i].getElementsByTagName("TD")[0];
-      y = rows[i + 1].getElementsByTagName("TD")[0];
-      //check if the two rows should switch place:
-      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-        //if so, mark as a switch and break the loop:
-        shouldSwitch = true;
-        break;
-      }
-      }
-      if (shouldSwitch) {
-      /*If a switch has been marked, make the switch
-      and mark that a switch has been done:*/
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      }
-    }
-    }
-    </script>
-
     <script>
       function openNav() {
       document.getElementById("mySidebar").style.width = "250px";
@@ -329,26 +261,6 @@
       document.getElementById("main").style.marginLeft= "0";
       }
     </script>
-   
-     <script>
-      function myFunction() {
-        var x = document.getElementById("AgregarMas");
-        if (x.className.indexOf("w3-show-inline-block") == -1) {
-          x.className += " w3-show-inline-block";
-        } else { 
-          x.className = x.className.replace(" w3-show-inline-block", "");
-        }
-      }
-    </script>
-
+  
   </body>
-
- 
-
 </html>
-
-
-
-
-
- 

@@ -1,0 +1,252 @@
+$dur: 1.2s;
+$ease: ease-in;
+$dir: infinite;
+
+html { box-sizing: border-box; } *, *::before, *::after { box-sizing: inherit; }
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap {
+  position: relative;
+}
+.card {
+  background-image: linear-gradient(
+    #168ade 13%,
+    #2e6db4 13%,
+    #2e6db4 30%,
+    #168ade 30%
+  );
+  width: 35vw;
+  height: 22vw;
+  border-radius: 1.5vw;
+  position: relative;
+  animation: card $dur alternate $ease $dir;
+}
+.eyes {
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    border: .5vw solid #222;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(45deg) translateX(-50%);
+    animation: eyes $dur alternate $ease $dir;
+  }
+  &::before {
+    margin-left: -4vw;
+  }
+  &::after {
+    margin-left: 4vw;
+  }
+}
+.mouth {
+  position: absolute;
+  bottom: 25%;
+  width: 100%;
+  text-align: center;
+  transform-origin: 0 0;
+  color: #a5050e;
+  font-size: 10vw;
+  line-height: 0;
+  /* am using a circle symbol char to stop transform scale pixelation that can happen to CSS shapes */
+  animation: mouth $dur alternate $ease $dir;
+}
+.zs {
+  position: absolute;
+  top: 5vw;
+  right: 5vw;
+}
+.z {
+  position: absolute;
+  font-weight: bold;
+  font-size: 2vw;
+  color: #a7a7a7;
+  transform-origin: top left;
+  &:nth-of-type(1) {
+    animation: zee1 $dur alternate $ease $dir;
+  }
+  &:nth-of-type(2) {
+    top: -3vw; right: -5vw;
+    animation: zee2 $dur alternate $ease $dir;
+  }
+  &:nth-of-type(3) {
+    top: -6.5vw; right: -2.5vw;
+    animation: zee3 $dur alternate $ease $dir;
+  }
+  &:nth-of-type(4) {
+    top: -9vw; right: -7vw;
+    font-size: 3vw;
+    animation: zee4 $dur alternate $ease $dir;
+  }
+  &:nth-of-type(5) {
+    top: -12vw; right: -3vw;
+    font-size: 3vw;
+    animation: zee5 $dur alternate $ease $dir;
+  }
+  &:nth-of-type(6) {
+    top: -15vw; right: -8vw;
+    font-size: 3vw;
+    animation: zee6 $dur alternate $ease $dir;
+  }
+}
+@keyframes card {
+  0% {
+    transform: scale(1);
+  } 
+  95% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes eyes {
+  0% {
+    margin-top: 0;
+  } 
+  95% {
+    margin-top: -1vw;
+  }
+  100% {
+    margin-top: -1vw;
+  }
+}
+@keyframes mouth {
+  0% {
+    font-size: 2vw;
+  } 
+  95% {
+    font-size: 7vw;
+  }
+  100% {
+    font-size: 7vw;
+  }
+}
+@keyframes zee1 {
+  0% {
+    opacity: 0;
+    transform: rotate(-20deg);
+  }
+  10% {
+    opacity: 0;
+    transform: rotate(-20deg);
+  }
+  30% {
+    opacity: 1;
+    transform: rotate(-20deg);
+  }
+  30% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+@keyframes zee2 {
+  0% {
+    opacity: 0;
+    transform: rotate(80deg);
+  }
+  15% {
+    opacity: 0;
+    transform: rotate(80deg);
+  }
+  35% {
+    opacity: 1;
+    transform: rotate(80deg);
+  }
+  35% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(120deg);
+  }
+}
+@keyframes zee3 {
+  0% {
+    opacity: 0;
+    transform: rotate(80deg);
+  }
+  20% {
+    opacity: 0;
+    transform: rotate(80deg);
+  }
+  40% {
+    opacity: 1;
+    transform: rotate(80deg);
+  }
+  40% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(120deg);
+  }
+}
+@keyframes zee4 {
+  0% {
+    opacity: 0;
+    transform: rotate(200deg);
+  }
+  30% {
+    opacity: 0;
+    transform: rotate(200deg);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(200deg);
+  }
+  50% {
+    transform: rotate(240deg);
+  }
+  100% {
+    transform: rotate(240deg);
+  }
+}
+@keyframes zee5 {
+  0% {
+    opacity: 0;
+    transform: rotate(100deg);
+  }
+  40% {
+    opacity: 0;
+    transform: rotate(100deg);
+  }
+  60% {
+    opacity: 1;
+    transform: rotate(140deg);
+  }
+  60% {
+    transform: rotate(140deg);
+  }
+  100% {
+    transform: rotate(140deg);
+  }
+}
+@keyframes zee6 {
+  0% {
+    opacity: 0;
+    transform: rotate(120deg);
+  }
+  50% {
+    opacity: 0;
+    transform: rotate(120deg);
+  }
+  70% {
+    opacity: 1;
+    transform: rotate(120deg);
+  }
+  70% {
+    transform: rotate(160deg);
+  }
+  100% {
+    transform: rotate(160deg);
+  }
+}
