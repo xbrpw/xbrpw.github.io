@@ -39,10 +39,10 @@ window.onload = function (e) {
             color: "#144B9C"
         },
         {
-            url: `#`,
+            url: `https://www.xbr.pw/sharon/spinners-page-loaders/index.html`,
             name: `02`,
-            image: `dailyui-1.jpg`,
-            desc: "Credit Card Checkout",
+            image: `sharon-spinners-and-page-loaders.png`,
+            desc: "Sharon Spinners page loaders",
             color: "#98111f"
         },
         {
