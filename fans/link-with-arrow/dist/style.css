@@ -1,0 +1,29 @@
+@charset "UTF-8";
+.arrow-link {
+  color: #000;
+  font-family: Helvetica;
+  /*font-size: 20px;*/
+  -webkit-transition: all 0.15s ease-in-out;
+  color: #313131;
+  background-color: transparent;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.arrow-link:after {
+  position: relative;
+  bottom: 0.2ex;
+  margin-left: 10px;
+  content: "";
+  color: #1560FB;
+  font-family: "FontAwesome";
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transition: all 0.15s ease-in-out;
+}
+.arrow-link:hover {
+  color: #777;
+}
+.arrow-link:hover:after {
+  transform: translateX(7px);
+}

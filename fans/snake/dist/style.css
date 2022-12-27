@@ -1,0 +1,100 @@
+html { box-sizing: border-box; }
+html *,
+html *:before,
+html *:after { box-sizing: inherit; }
+
+body {
+  color: #858B1B;
+  font-family: 'Press Start 2P', sans-serif;
+  background: rgba(8,15,0,1);
+}
+
+#board {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20rem;
+  height: 25rem;
+  margin-top: 1rem;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(to bottom, rgba(133,139,27,1) 75%, rgba(116,121,26,1) 100%);
+  background-size: 100% 4px;
+  box-shadow: inset 0 0 1rem rgba(0,0,0,0.5);
+}
+#board:before,
+#board:after {
+  content: 'Score';
+  position: absolute;
+  z-index: 10;
+  bottom: 100%;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to bottom, rgba(10,45,0,1) 75%, rgba(10,60,0,1) 100%);
+  background-size: 100% 4px;
+  box-shadow: inset 0 0 1rem rgba(0,0,0,0.5);
+}
+#board:after {
+  content: attr(data-score);
+  right: 0;
+  text-align: right;
+  background: none;
+  box-shadow: none;
+}
+
+#board.click-to-play:before,
+#board.game-over:before {
+  content: 'Snake';
+  top: -2rem;
+  bottom: 0;
+  text-align: center;
+  font-size: x-large;
+  line-height: 19rem;
+}
+#board.game-over:before {
+  content: 'Game Over';
+}
+
+#board.click-to-play:after,
+#board.game-over:after {
+  content: 'Use arrows or swipe';
+  bottom: 14rem;
+  display: block; 
+  width: 100%;
+  text-align: center;
+  font-size: x-small;
+}
+#board.game-over:after {
+  content: 'Score: 'attr(data-score);
+}
+
+.click-to-play #snake:after,
+.game-over #snake:after {
+  content: 'Click to Play';
+  position: absolute;
+  z-index: 20;
+  bottom: 0.5rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: x-small;
+  text-transform: uppercase;
+}
+
+.trail {
+  position: absolute;
+  top: 9rem; 
+  left: 4rem;
+  width: 1rem;
+  height: 1rem;
+  background-image: linear-gradient(to bottom, rgba(10,45,0,1) 75%, rgba(10,60,0,1) 100%);
+  background-size: 100% 4px;
+}
+
+#token {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background:  rgba(10,45,0,0.5);
+}

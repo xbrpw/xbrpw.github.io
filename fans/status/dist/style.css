@@ -1,0 +1,45 @@
+.status {
+  display: flex;
+  align-items: center;
+  font-family: Helvetica;
+}
+.status__light {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.status__light__ring {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  animation: pulsate 2s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 0;
+  border: 3px solid #BADA55;
+  border-radius: 30px;
+}
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
+}
+.status__light__led {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #BADA55;
+  border-radius: 100%;
+}
+.status__message {
+  margin-left: 10px;
+}

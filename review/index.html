@@ -47,7 +47,6 @@
 <meta name="author" content="@LuisAngelMaciel">
 <meta property="og:url" content="https://xbrpw.github.io/">
 <meta property="og:site_name" content="Review ">
-<!--  size="1080x400" -->
 <meta property="og:image" content="./og-image.png" />
 <meta property="og:image:secure_url" content="./og-image.png" />
 <meta property="og:image:width" content="1080" />
@@ -55,11 +54,12 @@
 
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
-<link href="https://xbrpw.github.io/assets/fontawesome/css/all.min.css" rel="stylesheet"> <link href="https://xbrpw.github.io/assets/fontawesome/css/regular.min.css" rel="stylesheet">
+<link href="https://xbrpw.github.io/assets/fontawesome/css/all.min.css" rel="stylesheet"> 
+<link href="https://xbrpw.github.io/assets/fontawesome/css/regular.min.css" rel="stylesheet">
 <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v6/search?o=r&m=free -->   
 
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="shortcut icon" href="favicon.svg" />
     <meta name="description" content="Challenge accepted by" />
     <meta name="keywords"
@@ -68,70 +68,66 @@
     <meta property="og:description" content="Challenge accepted by  "/>
     <meta property="og:image" content="" />
     <meta property="og:url" content="" />
-    <script src="http://nodeca.github.io/pica/dist/pica.js"></script>
+    <script src="js/js-pica.js"></script> <!-- http://nodeca.github.io/pica/demo/ https://github.com/nodeca/pica -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lie/3.1.1/lie.min.js"></script>
 
     
     <script>
-    function includeHTML() {
-    var z, i, elmnt, file, xhttp;
-    /*loop through a collection of all HTML elements:*/
-    z = document.getElementsByTagName("*");
-    for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        /*search for elements with a certain attribute:*/
-        file = elmnt.getAttribute("w3-include-html");
-        if (file) {
-        /*make an HTTP request using the attribute value as the file name:*/
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4) {
-            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-            /*remove the attribute, and call this function once more:*/
-            elmnt.removeAttribute("w3-include-html");
-            includeHTML();
+        function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain attribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+            /*make an HTTP request using the attribute value as the file name:*/
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                /*remove the attribute, and call this function once more:*/
+                elmnt.removeAttribute("w3-include-html");
+                includeHTML();
+                }
+            }      
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            /*exit the function:*/
+            return;
             }
-        }      
-        xhttp.open("GET", file, true);
-        xhttp.send();
-        /*exit the function:*/
-        return;
         }
-    }
-    };
+        };
     </script>
 
-
-
-    
 
    
 
 </head>
-<!-- http://nodeca.github.io/pica/demo/ https://github.com/nodeca/pica -->
 
 <body>       
 
     <nav class="mainNav">
         <div class="mainNav__content">          
             <span  class="mainNav__back tablink" onclick="opentab(event,'1')">
-                <img class="mainNav__icon" src="icon-5.svg" alt="Back">
-                <p class="mainNav__linkBack" >lamp</p>
+                <img class="mainNav__icon" src="img/icon-5.svg" alt="Back">
+                <p class="mainNav__linkBack" >Daily UI Challenge</p>
             </span>
             <span  class="mainNav__back tablink" onclick="opentab(event,'2')">                
-                <p class="mainNav__linkBack" >2</p>
+                <p class="mainNav__linkBack" >Día a día</p>
             </span>
             <span  class="mainNav__back tablink" onclick="opentab(event,'3')">                
-                <p class="mainNav__linkBack" >3</p>
+                <p class="mainNav__linkBack" >Personalizalo</p>
             </span>
 
             <div class="mainNav__social">
                 <div class="mainNav__social">
-                    <span class="mainNav__iconSocial" onclick="redirectToXiiberTravel()" class="xiibertravel w3-hide"><img src="dribbble.svg" alt="Dribbble" class="w3-hide"></span>
-                    <span class="mainNav__iconSocial" onclick="redirectToLuisAngelMaciel()" class="luisangelmaciel"><img src="linkedin.svg" alt="Linkedin" ></span>
-                    <span class="mainNav__iconSocial" onclick="redirectToCodepen()" class="codepen"><img src="codepen.svg" alt="Codepen"></span>
+                    <span class="mainNav__iconSocial" onclick="redirectToXiiberTravel()" class="xiibertravel w3-hide"><img src="img/dribbble.svg" alt="Dribbble" class="w3-hide"></span>
+                    <span class="mainNav__iconSocial w3-hide" onclick="redirectToLuisAngelMaciel()" class="luisangelmaciel w3-hide"><img src="img/linkedin.svg" alt="Linkedin" class="w3-hide"></span>
+                    <span class="mainNav__iconSocial" onclick="redirectToCodepen()" class="codepen"><img src="img/codepen.svg" alt="Codepen"></span>
                 </div>    
                 <script>
                   function redirectToXiiberTravel() {
@@ -152,7 +148,7 @@
             <header class="mainHeading">
                 <article class="mainHeading__headingText">
                     <h1 class="mainHeading__title">Daily UI Challenge</h1>
-                    <p class="mainHeading__description">CodeLamp</p>
+                    <p class="mainHeading__description" >CodeLamp</p>
                 </article>        
             </header>
             <section class="wrapper">
@@ -164,40 +160,182 @@
             <header class="mainHeading">
                 <article class="mainHeading__headingText">
                     <h1 class="mainHeading__title">Daily UI Challenge</h1>
-                    <p class="mainHeading__description">2</p>
                 </article>        
             </header>
-            <iframe src="https://www.xbr.pw//assets/css/hi/run-dmc-starter/run-dmc-starter/dist/index.html" 
-            name="iframe_a" height="360px" width="100%" title="Iframe Example" style="border:none;" allowfullscreen ></iframe>
-            <p><a href="https://xbrpw.github.io/1596/dist/index.html" target="iframe_a">W3Schools.com</a></p>
+            <iframe src="../bookmarks.html" 
+            name="iframe_b" height="360px" width="100%" title="Iframe Example" style="border:none;" allowfullscreen ></iframe>
+            <p><a href="https://xbrpw.github.io/1596/dist/index.html" target="iframe_b">Notas</a></p>
+            <a href="https://himonster.siteoly.com/" target="iframe_b">Siteoly Hihello.monster</a><br>
+            <a href="https://sticker.ly/user/hipxar"target="iframe_b">Siteolytickerly hiPxar</a><br>
+            <a href="https://www.xbr.pw/SiOkey/index.html"  target="iframe_b">SiOkey</a><br>
+            <a href="https://xbrpw.github.io/1596/dist/index.html"  target="iframe_b">Publicaciones</a><br>
+            <a href="./codepen/index.html"  target="iframe_b">Codepen</a><br>
+            Animations<br>
+            <a href="https://xbrpw.github.io/animation/useless-machine/index.html"  target="iframe_b"></a><br>
+            <a href=""  target="iframe_b"></a><br>
+            <a href=""  target="iframe_b"></a><br>
+          
+                <div class="row" >
+                   
 
-                <div class="row" sheetsu="https://sheetsu.com/apis/v1.0bu/743be2bc12cb">
-                    <div class="col-4">
-                        <b>{{titulo}}</b> <a href="{{url}}" target="_self" >{{descripcion}}</a>                           
+                    <div>
+                        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+                    
+                        <style media="screen">
+                        html, body {
+                            margin: 0;
+                            padding: 0;
+                            width: 100%;
+                        }
+                    
+                    
+                    
+                        .tweet {
+                            margin: 2.5vh auto;
+                            /*border: 1px solid #eee;*/
+                            padding: 6px 12px;
+                            /*border-radius: 5px;*/
+                            max-width: 500px;
+                            background: white;
+                            font-family: Sans-Serif;
+                        }
+                        .tweet .follow {
+                            display: block;
+                            background-color: #f5f8fa;
+                            background-image: linear-gradient(#fff, #f5f8fa);
+                            border: 1px #e1e8ed solid;
+                            border-radius: 5px;
+                            color: black;
+                            padding: 5px;
+                            margin-top: 9px;
+                            float: right;
+                            text-align: center;
+                            text-decoration: none;
+                        }
+                        .tweet .follow:hover {
+                            background-color: #e1e8ed;
+                            background-image: linear-gradient(#fff, #e1e8ed);
+                        }
+                        .tweet .follow:after {
+                            content: "";
+                            display: block;
+                            clear: both;
+                        }
+                        .tweet .follow i {
+                            color: #55acee;
+                            padding-right: 5px;
+                        }
+                        .tweet--user:after {
+                            content: "";
+                            display: block;
+                            clear: both;
+                        }
+                        .tweet--user-avatar {
+                            border-radius: 100px;
+                            float: left;
+                            margin-right: 10px;
+                        }
+                        .tweet--user-name {
+                            font-weight: bold;
+                            /*padding-top: 4px;*/
+                        }
+                        .tweet--user-name span {
+                            font-weight: normal;
+                            color: #999;
+                            font-size: 14px;
+                            display: block;
+                        }
+                        .tweet--body {
+                            margin: 20px 0 5px;
+                            /*font-size: 1.2em;*/
+                        }
+                        .tweet--time {
+                            font-weight: normal;
+                            color: #999;
+                            font-size: 0.8em;
+                        }
+                        .tweet--actions {
+                            margin-top: 20px;
+                            border-top: 1px solid #eee;
+                            padding-top: 10px;
+                        }
+                        .tweet--actions [class*=fa-] {
+                            float: right;
+                            margin-left: 20px;
+                            color: #999;
+                        }
+                        .tweet--actions [class*=fa-].fa-heart:hover {
+                            color: #DD2E44;
+                        }
+                        .tweet--actions [class*=fa-]:hover {
+                            color: #4A913C;
+                            cursor: pointer;
+                        }
+                        .tweet--actions [class*=fa-]:after {
+                            content: "";
+                            display: block;
+                            clear: both;
+                        }
+                        .tweet--actions span {
+                            color: #999;
+                            font-size: 0.8em;
+                            text-transform: uppercase;
+                        }
+                        </style>
+                    
+                    
+                        <div class="tweet">
+                        <a href="#" class="follow" style="display:none"><i class="fa fa-twitter"></i>Follow</a>
+                        
+                        <div class="tweet--user">
+                            <img class="tweet--user-avatar" src="https://assets.codepen.io/5297098/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1629389309&width=512" 
+                            alt="avatar-twitter" width="45px" height="45px" />
+                            <div class="tweet--user-name">Luis Angel Maciel<span>@lamacpad</span></div>                            
+                        </div>
+
+                       
+                        <div sheetsu="https://sheetsu.com/apis/v1.0bu/743be2bc12cb">
+                        <p class="tweet--body"><b>{{titulo}}</b><br>  
+                            <a class="automatic a" rel="nofollow" href="{{url}}" target="iframe_b" > {{descripcion}} </a> <span style="color:grey">{{etiqueta}}</span
+                        </p>  
+                        
+                            
+                            <div class="tweet--actions" style="display:none">
+                                <i class="fa fa-ellipsis-h"  style="display:none"></i>
+                                <i class="fa fa-heart"></i>
+                                <i class="fa fa-retweet"  style="display:none"></i>
+                                <i class="fa fa-reply"  style="display:none"></i>
+                                <span>10 Dic 22</span>
+                            </div>
+                        </div>
+                        </div>
+                       
                     </div>
-                    <p>{{etiqueta}}</p>
-                </div>
-               
-                <script src="https://load.sheetsu.com"></script>
- 
-            <a href="https://himonster.siteoly.com/" target="_self">Siteoly Hihello.monster</a>
-            <a href="https://sticker.ly/user/hipxar" target="_self">Siteolytickerly hiPxar</a>
+                    <br>
+                  
+                </div>               
+               <script src="https://load.sheetsu.com"></script>                                       
          </div>
        
          <div id="3" class="tab" style="display:none">
             <header class="mainHeading">
-                <article class="mainHeading__headingText">
-                    <h1 class="mainHeading__title">Daily UI Challenge</h1>
-                    <p class="mainHeading__description">3</p>
+                <article class="mainHeading__headingText">                    
+                    <h1 class="mainHeading__title">Personalizalo</h1>
                 </article>        
             </header>
             <div w3-include-html="content.html"></div> 
             <iframe src="https://www.xbr.pw//assets/css/hi/run-dmc-starter/run-dmc-starter/dist/index.html" 
-            name="iframe_a" height="360px" width="100%" title="Iframe Example" style="border:none;" allowfullscreen ></iframe>
-            <p><a href="https://xbrpw.github.io/1596/dist/index.html" target="iframe_a">.</a></p>
-            
+            name="contenteditable" height="360px" width="100%" title="Puedes editar el contenido" style="border:none;" allowfullscreen ></iframe>
+
+            <a href="https://codepen.io/luisangelmaciel/full/PojeWLo" target="contenteditable">Desing & travel</a><br>
+            <a href="https://www.xbrpw.github.io/editable/retro-synthwave/index.html" target="contenteditable">Retro Synthwave</a><br>
+            <a href="" target="contenteditable"></a><br>
+            <a href="" target="contenteditable"></a><br>
+            <a href="" target="contenteditable"></a><br>
+           
          </div>
 
+        
          <script>
             function opentab(evt, tabName) {
                 var i, x, tablinks;
@@ -216,8 +354,9 @@
          <script>
             includeHTML();
          </script>
-         <script src="script.js"></script>
-         <script src="http://nodeca.github.io/pica/demo/index.js"></script><script src="pica.js"></script>
+         <script src="js/script.js"></script>
+         <script src="js/pica.js"></script><!--  <script src="http://nodeca.github.io/pica/demo/index.js"></script>-->
 </body>
 
 </html>
+
