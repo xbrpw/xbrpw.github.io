@@ -1,0 +1,53 @@
+body {
+  margin:0;
+}
+.journey {
+  height:100vh;
+  background:
+   radial-gradient(159% 101% at 138% 127%,#0000 99%,#256705) 69% 44%/16% 19%,
+   radial-gradient(182% 91% at -34% 127%,#489b0b 99%,#0000) 100% 100%/16% 37%,
+   radial-gradient(102% 111% at -24% 104%,#0000 98%,#fff 98.5% 100%,#0000 100.5%)107% 100%/45% 58%,
+   radial-gradient(102% 111% at -24% 104%,#0000 89%,#4e534d 81.5% 109%,#0000 109.5%)107% 100%/45% 58%,
+    
+   radial-gradient(155% 121% at -34% 127%,#0000 99%,#205c04) 100% 100%/50% 37%,
+   radial-gradient(125% 157% at 135% 146%,#0000 95%,#fff 95.5% 98%,#0000 98.5%)50% 100%/55% 35%,
+   radial-gradient(125% 157% at 135% 146%,#0000 81%,#4e534d 81.5% 111%,#0000 111.5%)50% 100%/55% 35%,
+    
+   radial-gradient(farthest-side at bottom,#489b0b 99%,#0000) 82% 126%/181% 49%,
+   
+   /*radial-gradient(farthest-side at bottom,#0000 99%,#8ed6ec) 68% 100%/74% 76%,*/
+   radial-gradient(129% 94% at 53% 100%,#0000 99%,#8ed6ec) 55.5% 45%/25% 53%,
+   radial-gradient(93% 195% at 143% 146%,#0000 96%,#fff 96.5% 97.5%,#0000 98%)18% 100%/48% 76%,
+   radial-gradient(93% 195% at 143% 146%,#0000 89%,#4e534d 81.5% 105%,#0000 100.5%)18% 100%/48% 76%,
+   radial-gradient(farthest-side at bottom,#205c04 99%,#0000) 200% 100%/80% 60%,    
+   radial-gradient(farthest-side at bottom,#256705 99%,#0000) 68% 100%/74% 76%,    
+   #8ed6ec;
+   background-repeat:no-repeat;
+}
+.journey:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 129px;
+    border-radius: 10px 10px 0 0;
+    background: linear-gradient(90deg,#b1542c,#7d3812);
+    bottom: 13%;
+    left: 20%;
+    transform: perspective(200px) rotateY(29deg) rotate(-7deg);
+}
+.journey:after {
+  content: "¡Tu puedes!";
+  text-align: center;
+  font-size: 28px;
+  font-family: sans-serif;
+  font-weight: bold;
+  position: absolute;
+  padding: 5px 20px 5px 5px;
+  background: #8c3d19;
+  border-left: 5px solid #b75730;
+  color: #fff;
+  bottom: calc(13% + 80px);
+  left: calc(20% - 60px);
+  transform: perspective(200px) rotateY(29deg) rotate(-7deg);
+  clip-path: polygon(0 2px,5px 0,calc(100% - 18px) 0,100% 50%,calc(100% - 14px) 100%,5px 100%,0 calc(100% - 2px));
+}

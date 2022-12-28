@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Indie Flower", cursive;
+    font-size: 25px;
+    line-height: 1.5;
+    color: #222;
+    background-image: linear-gradient(#efd798, #ebcf82);
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.instructions {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+}
+
+.notes-container {
+    flex-basis: 1000px;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #fcfcfc;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 
+                0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.notes-list {
+    width: 90%;
+    min-height: 57px;
+    background-image: repeating-linear-gradient(
+        #a7d3ff 0px,
+        #a7d3ff 1px,
+        transparent 2px,
+        transparent 55px
+    );
+    margin: 0 auto;
+    padding-bottom: 2px;
+    text-align: left;
+    counter-reset: listCounter;
+}
+
+.note {
+    line-height: 2.2;
+    animation: fadeInUp 400ms linear;
+}
+
+.note::before {
+    color: #26383a;
+    content: counter(listCounter) ". ";
+    counter-increment: listCounter;
+}
+
+.note:focus {
+    cursor: text;
+}
+
+.btn-save {
+    font-family: inherit;
+    font-size: inherit;
+    color: #fff;
+    background-color: #999;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 5px 25px;
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+.unsaved {
+    background-color: #40ad40;
+    animation: pulse 1s infinite ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+@keyframes pulse {
+    50% {
+        transform: scale(1.07);
+    }
+}

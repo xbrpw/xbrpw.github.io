@@ -1,0 +1,17 @@
+body {
+  background: #1a1a1a;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+#hue {
+  width: 100px;
+  height: 24px;
+  display: block;
+}
+
+#button {
+  margin: 5% auto;
+}
