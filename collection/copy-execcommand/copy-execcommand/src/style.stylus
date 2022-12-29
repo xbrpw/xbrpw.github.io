@@ -1,0 +1,76 @@
+/// VARIABLES
+$font-family = 'Catamaran', sans-serif
+$root-font-size = 16
+$root-font-base = (1 / $root-font-size)
+
+$base-rem = $root-font-base * 1rem
+$base-em = $root-font-base * 1em
+
+$background-color = #F5F5F4
+$border-color = #607D8B
+
+$primary-color = #607D8B
+
+/// STANDARD ELEMENTS
+:root
+	font-size unit($root-font-size, 'px')
+
+*
+	box-sizing border-box
+	margin 0
+	padding 0
+	line-height 1
+	border 0
+
+html, body
+	width 100vw
+	min-width 100vw
+	height 100vh
+	min-height 100vh
+
+body
+	background-color $background-color
+	font-family $font-family
+
+p
+	font-size ($base-rem * 20)
+	line-height 1.25
+
+.container
+	display flex
+	justify-content center
+	align-items center
+	width 100%
+	height 100%
+	.wrap
+		flex 0 1 ($base-rem * 600)
+		margin ($base-rem * 10)
+		.box
+			padding ($base-rem * 20)
+			background-color white
+			border ($base-rem * 1px) solid $border-color
+			border-radius ($base-rem * 3px)
+			&:not(:last-child)
+				margin-bottom ($base-rem * 25)
+
+[data-copy-text]
+	& + i.material-icons
+		transition all .25s ease-in-out
+		position absolute
+		top 0
+		right 0
+		background-color $background-color
+		padding ($base-rem * 5px) ($base-rem * 10px)
+		color black
+		border-color $border-color
+		border-style solid
+		border-top-right-radius ($base-rem * 3px)
+		border-bottom-width ($base-rem * 1px)
+		border-left-width ($base-rem * 1px)
+		opacity 0.3
+		cursor pointer
+		z-index +1
+		&:hover, &.active
+			background-color $primary-color
+			opacity 1
+			color white

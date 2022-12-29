@@ -1,0 +1,134 @@
+:root {
+  --primary: #263238;
+  --primary-light: #4F5B62;
+  --primary-dark: #000A12;
+  --secondary: #DD2C00;
+  --secondary-light: #FF6434;
+  --secondary-dark: #A30000;
+  --tertiary: #2962FF;
+  --tertiary-light: #768FFF;
+  --tertiary-dark: #0039CB;
+  --primary-text-on-primary: white;
+  --primary-text-on-primary-light: white;
+  --primary-text-on-primary-dark: white;
+  --primary-text-on-secondary: white;
+  --primary-text-on-secondary-light: black;
+  --primary-text-on-secondary-dark: white;
+  --primary-text-on-tertiary: white;
+  --primary-text-on-tertiary-light: black;
+  --primary-text-on-tertiary-dark: white;
+  --primary-text-on-light: black;
+  --primary-text-on-dark: white;
+  --secondary-text-on-primary: rgba(255, 255, 255, 0.5);
+  --secondary-text-on-primary-light: rgba(255, 255, 255, 0.71);
+  --secondary-text-on-primary-dark: rgba(255, 255, 255, 0.45);
+  --secondary-text-on-secondary: rgba(255, 255, 255, 0.97);
+  --secondary-text-on-secondary-light: rgba(0, 0, 0, 0.68);
+  --secondary-text-on-secondary-dark: rgba(255, 255, 255, 0.71);
+  --secondary-text-on-tertiary: rgba(255, 255, 255, 0.94);
+  --secondary-text-on-tertiary-light: rgba(0, 0, 0, 0.68);
+  --secondary-text-on-tertiary-dark: rgba(255, 255, 255, 0.66);
+  --secondary-text-on-light: rgba(0, 0, 0, 0.56);
+  --secondary-text-on-dark: rgba(255, 255, 255, 0.57);
+  --disabled-text-on-primary: rgba(255, 255, 255, 0.35);
+  --disabled-text-on-primary-light: rgba(255, 255, 255, 0.49);
+  --disabled-text-on-primary-dark: rgba(255, 255, 255, 0.34);
+  --disabled-text-on-secondary: rgba(255, 255, 255, 0.72);
+  --disabled-text-on-secondary-light: rgba(0, 0, 0, 0.5);
+  --disabled-text-on-secondary-dark: rgba(255, 255, 255, 0.53);
+  --disabled-text-on-tertiary: rgba(255, 255, 255, 0.65);
+  --disabled-text-on-tertiary-light: rgba(0, 0, 0, 0.5);
+  --disabled-text-on-tertiary-dark: rgba(255, 255, 255, 0.48);
+  --disabled-text-on-light: rgba(0, 0, 0, 0.43);
+  --disabled-text-on-dark: rgba(255, 255, 255, 0.39);
+  --error-text-on-light: #b71c1c;
+  --error-text-on-dark: #ef9a9a;
+  --border-color-on-light: rgba(0, 0, 0, 0.12);
+  --border-color-on-dark: rgba(255, 255, 255, 0.12);
+  --border-width-small: 0.0625rem;
+  --border-width-medium: 0.1875rem;
+  --border-secondary-color-on-light: rgba(0, 0, 0, 0.38);
+  --border-secondary-color-on-dark: rgba(255, 255, 255, 0.5);
+  --border-on-light: rgba(0, 0, 0, 0.12) solid 0.0625rem;
+  --border-on-dark: rgba(255, 255, 255, 0.12) solid 0.0625rem;
+  --primary-background: #EEEEEE;
+  --secondary-background: #424242;
+  --root-font-size: 16;
+}
+
+:root {
+  font-size: calc(var(--root-font-size) * 1px);
+}
+
+body, html {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background-color: var(--primary-background);
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+header {
+  position: relative;
+  padding: 0 4rem;
+  background-color: #FFFFFF;
+  border-bottom: 0.0625rem solid var(--border-color-on-light);
+  box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.26);
+  z-index: 1;
+}
+header h1 {
+  padding: 1.5rem 0 0.5rem;
+  font-size: 1.25rem;
+  color: var(--tertiary-dark);
+}
+header p {
+  padding-bottom: 1rem;
+  color: var(--secondary-text-on-light);
+  font-weight: bolder;
+  letter-spacing: 0.0625rem;
+}
+
+.images {
+  display: grid;
+  justify-content: center;
+  align-content: start;
+  grid-template-columns: 12.5rem 12.5rem 12.5rem 12.5rem;
+  grid-auto-rows: 12.5rem;
+  grid-gap: 1rem;
+  height: calc(100% - 7.3125rem);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.image {
+  position: relative;
+  display: block;
+  width: 12.5rem;
+  height: 12.5rem;
+  background: #FFFFFF;
+  border: 0.0625rem solid var(--border-on-light);
+  z-index: 0;
+}
+.image--large {
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+  width: 26rem;
+  height: 26rem;
+}
+.image--wide {
+  grid-column-start: span 2;
+  width: 26rem;
+}
+
+@media screen and (max-width: 56.25rem) {
+  .images {
+    grid-template-columns: 12.5rem 12.5rem;
+  }
+}
