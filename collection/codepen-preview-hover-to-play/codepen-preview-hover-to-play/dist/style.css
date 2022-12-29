@@ -1,0 +1,150 @@
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+  font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+  background-color: #191919;
+}
+
+.pen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 380px;
+  padding: 0.3125em;
+  transform: translate3d(-50%,-50%,0);
+  color: #999;
+  background-color: #2f2f31;
+  border-radius: 0.125em;
+  box-shadow: 0 0.25em 0.25em -0.125em rgba(0,0,0,0.5);
+}
+
+.add-to-collection {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  width: 1.375em;
+  height: 1.375em;
+  padding-right: 0.4em;
+  overflow: hidden;
+  color: #fff;
+  font-size: 1.375em;
+  line-height: 1.375em;
+  text-align: right;
+  text-decoration: none;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 1em;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.pen:hover .add-to-collection { opacity: 1; }
+
+.add-to-collection:hover {
+  width: 6.75em;
+  background-color: rgba(0,0,0,1);
+}
+
+.add-to-collection::before {
+  content: 'Add to collection';
+  position: absolute;
+  top: 50%;
+  right: 1.5em;
+  padding: 0 0.75em 0 0.25em;
+  transform: translateY(-50%);
+  font-size: 0.625em;
+  white-space: nowrap;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.add-to-collection:hover::before { opacity: 1; }
+
+.pen-frame {
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/38273/submit_button-still.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.pen:hover .pen-frame {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/38273/submit_button.gif);
+}
+
+.meta {
+  padding: 0.5em 0.625em 0.25em;
+  
+}
+
+.meta h3 {
+  margin: 0.25em 0 0.75em;
+  font-weight: 900;
+  font-size: 0.9375em;
+}
+
+.meta a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.meta a:hover {
+  color: #ccc;
+}
+
+.meta .user {
+  font-size: 0.8125em;
+}
+
+.meta .user img {
+  display: inline-block;
+  width: 1.4375em;
+  height: 1.4375em;
+  margin-right: 0.1875em;
+  vertical-align: middle;
+}
+
+.meta .badge {
+  margin-left: 0.2308em;
+  font-size: 0.7692em;
+}
+
+.meta .stats {
+  position: absolute;
+  right: 0.3076em;
+  bottom: 1em;
+  font-size: 0.8125em;
+}
+
+.meta .stats a {
+  padding: 0 0.3076em;
+}
+
+.meta .stats svg {
+  position: relative;
+  top: 0.0769em;
+  display: inline-block;
+  margin-left: 0.1538em;
+  fill: currentColor;
+}
+
+.badge {
+  padding: 0.0625em 0.3125em;
+  color: #000;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-radius: 0.3125em;
+}
+
+.badge-pro { background-color: #fcd000; }
+
+
+/* CSS image preloading - just for demo */
+body::after {
+  position: absolute; width: 0; height: 0; overflow: hidden; z-index: -1;
+  content: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/38273/submit_button.gif);
+}

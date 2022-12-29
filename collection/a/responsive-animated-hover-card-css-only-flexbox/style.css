@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Assistant", sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: gray;
+}
+
+.grid {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cardcontainer {
+  max-width: 350px;
+  min-width: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  margin: 30px;
+  border: 1px solid rgba(64, 64, 64, 0.7);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition: all 0.4s ease-in-out;
+}
+
+.cardcontainer:hover {
+  border: 1px solid rgba(255, 255, 255, 1);
+  background: dodgerblue;
+  color: white;
+  transition: all 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 74px 75px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transform: translateY(-15px);
+}
+
+.cardcontainer img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  filter: grayscale(100%);
+  transition: all 0.4s ease-in-out;
+}
+
+.cardcontainer:hover img {
+  filter: grayscale(0%);
+  border: 1px solid rgba(255, 255, 255, 0);
+  transition: all 0.4s ease-in-out;
+}
+
+.cardcontainer h1 {
+  line-height: 50%;
+  font-size: 150%;
+}
+
+.bottomline {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  width: 120px;
+  position: relative;
+  top: 7px;
+}
+
+.links::before {
+  content: "SHARE";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  opacity: 0.5;
+}
+
+.cardcontainer svg {
+  transition: all 0.4s ease-in-out;
+  fill: dodgerblue;
+}
+
+.cardcontainer:hover svg {
+  color: white;
+  transition: all 0.4s ease-in-out;
+  fill: white;
+}
+
+.cardbutton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 100px;
+  height: 30px;
+  background: dodgerblue;
+  color: white;
+  transition: all 0.6s ease-in-out;
+}
+
+.cardbutton:hover {
+  transform: translateY(-4px) scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.cardcontainer:hover .cardbutton {
+  background: white;
+  color: dodgerblue;
+  transition: all 0.4s ease-in-out;
+}
+
+.cardcontainer p {
+  position: relative;
+  bottom: 10px;
+  line-height: 130%;
+  font-size: 11pt;
+}
+
+.cardcontainer svg:hover {
+  transform: translateY(5px);
+  transition: all 0.3s ease-in-out;
+}

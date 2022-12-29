@@ -1,0 +1,49 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	margin: 0;
+	padding: 1rem;
+}
+
+.wrapper {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+li + li {
+	margin-top: 1rem;
+}
+
+li {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	background: aliceblue;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	width: calc(100% - 2rem);
+	box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+}
+
+li::before {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' width='100' title='fish'%3E%3Cpath d='M327.1 96c-89.97 0-168.54 54.77-212.27 101.63L27.5 131.58c-12.13-9.18-30.24.6-27.14 14.66L24.54 256 .35 365.77c-3.1 14.06 15.01 23.83 27.14 14.66l87.33-66.05C158.55 361.23 237.13 416 327.1 416 464.56 416 576 288 576 256S464.56 96 327.1 96zm87.43 184c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24 13.26 0 24 10.74 24 24 0 13.25-10.75 24-24 24z' /%3E%3C/svg%3E");
+}
+
+li:nth-child(even) {
+	flex-direction: row-reverse;
+	background: honeydew;
+	margin-right: -2rem;
+	margin-left: 2rem;
+}
+
+li:nth-child(even)::before {
+	transform: rotateY(180deg);
+}

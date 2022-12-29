@@ -1,0 +1,479 @@
+:root {
+  --cat-colour: #ddad6a;
+  --cat-colour-dark: #c19557;
+  --nose-colour: #dd746a;
+  --stroke-width: 7px;
+  --stroke-colour: #1f1244;
+  --sky: #48a5e2;
+}
+
+body {
+  background: var(--sky);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cat-container {
+  margin-top: 40px;  
+  animation-name: falling;
+  animation-duration: 2.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.cat {
+  position: relative;
+}
+
+.body {
+  width: 225px;
+  height: 250px;
+  background: var(--cat-colour);
+  border-radius: 199px 147px 127px 154px;
+  border: var(--stroke-width) solid var(--stroke-colour);
+  position: relative;
+}
+
+.tummy {
+  width: 100px;
+  height: 115px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+.eye-mark {
+  /*
+  use a clipping mask?
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  right: 0;
+  */
+}
+
+.ear-back {
+  width: 50px;
+  height: 65px;
+  border-radius: 50%;
+  background: white;
+  border: var(--stroke-width) solid var(--stroke-colour);
+  position: absolute;
+  left: 170px;
+  top: 5px;
+  transform: rotate(30deg);
+  
+  animation-name: ears;
+  animation-duration: 0.1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.ear-front {
+  width: 55px;
+  height: 70px;
+  background: var(--stroke-colour);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  transform: rotate(-30deg);
+  
+  animation-name: ears;
+  animation-duration: 0.1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.ear-inner {
+  width: 39px;
+  height: 65px;
+  background: var(--cat-colour);
+  border-radius: 50%;
+  position: relative;
+  left: 11px;
+  top: 12px;
+}
+
+.eye {
+  width: 20px;
+  height: 20px;
+  background: var(--stroke-colour);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.eye-left {
+  left: 90px;
+  top: 45px;
+}
+.eye-right {
+  right: 30px;
+  top: 45px;
+}
+
+.nose {
+  width: 25px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--nose-colour);
+  border: solid 1px var(--stroke-colour);
+  position: absolute;
+  left: 131px;
+  top: 49px;
+}
+
+.mouth {
+  position: absolute;
+  width: 20px;
+  height: 25px;
+  background: var(--cat-colour);
+  border-radius: 50%;
+  border: solid 2px var(--stroke-colour);
+}
+
+.mouth-right {
+  left: 142px;
+  top: 53px;
+}
+
+.mouth-left {
+  left: 123px;
+  top: 53px;
+}
+
+.mouth:before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 30px;
+  background: var(--cat-colour);
+  position: relative;
+  top: -20px;
+  left: -5px;
+}
+
+.leg {
+  background: var(--stroke-colour);
+  width: 50px;
+  height: 105px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -30px;
+  left: -10px;
+  transform: rotate(230deg);  
+}
+
+.leg-inner {
+  position: absolute;
+  width: 43px;
+  height: 100px;
+  background: var(--cat-colour);
+  border-radius: 50%;
+  right: 4px;
+  bottom: -4px;
+}
+
+.leg-front {
+  top: 100px;
+  left: 11px;
+  transform-origin: bottom center;
+  animation-name: leg-back;
+  animation-duration: .7s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.1s;
+  animation-direction: alternate;
+}
+
+.leg-back {
+  left: 190px;
+  transform: rotate(120deg);
+  
+  animation-name: leg-back;
+  animation-duration: .2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.leg-back .leg-inner {
+  background: var(--cat-colour-dark);
+}
+
+.paw {
+  background: var(--stroke-colour);
+  width: 45px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 80px;
+  left: -20px;
+  transform: rotate(45deg);
+}
+
+.paw-front {
+  top: 118px;
+  left: -5px;
+  transform-origin: top center;
+  
+  animation-name: paw-front;
+  animation-duration: .7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.paw-inner {
+  background: var(--cat-colour);
+  width: 38px;
+  height: 75px;
+  border-radius: 50%;
+  position: relative;
+  top: -4px;
+  left: 3px;
+}
+
+.paw-back {
+  left: 215px;
+  transform: rotate(-35deg);
+  
+  animation-name: paw-front;
+  animation-duration: .3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 0.5s;
+}
+
+.paw-back .paw-inner {
+  background: var(--cat-colour-dark);
+}
+
+.speed-container {
+  display: flex;
+  justify-content: space-around;
+  width: 75px;
+}
+
+.speed {
+  width: 5px;
+  height: 130px;
+  background: white;
+  border-radius: 5px;
+  z-index:100;
+  
+  animation-name: speed;
+  animation-duration: 0.1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.speed-left {
+  margin-top: 3px;
+}
+
+@keyframes speed {
+  0% {
+    margin-top: 0px;
+  }
+  
+  50%% {
+    margin-top: 1px;
+  }
+  
+  0% {
+    margin-top: 0px;
+  }
+}
+
+@keyframes falling {
+  0% {
+    transform: rotate(-25deg);
+  }
+  
+  100% {
+    transform: rotate(-17deg);
+  }
+}
+
+@keyframes ears {
+  0% {
+    transform: rotate(-35deg);
+  }
+  100% {
+    transform: rotate(-27deg);
+  }
+}
+
+@keyframes leg-back {
+  0% {
+    transform: rotate(115deg);
+  }
+  100% {
+    transform: rotate(122deg);
+  }
+}
+
+@keyframes paw-front {
+  0% {
+    transform: rotate(-115deg);
+  }
+  100% {
+    transform: rotate(-120deg);
+  }
+}
+
+.cloud {
+  position: absolute;
+  display: block;
+  top: 50px;
+}
+
+.cloud:after {
+  content: '';
+  display: block;
+  background: var(--sky);
+  width: 250px;
+  height: 60px;
+  position: relative;
+  top: 36px;
+}
+
+.cloud-segment {
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.cloud-left {
+  width: 70px;
+  height: 70px;
+}
+.cloud-middle {
+  width: 90px;
+  height: 90px;
+  top: -20px;
+  left: 40px;
+}
+.cloud-bottom {
+  width: 150px;
+  height: 150px;
+  left: 100px;
+  top: -60px;
+}
+
+.cloud-1 {
+  left: 10vw;
+  top: 50vh;
+  
+  animation-name: cloud-1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.cloud-2 {
+  left: 70vw;
+  top: 15vh;
+    
+  animation-name: cloud-2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.cloud-far {
+  transform: scale(0.6);
+}
+
+.cloud-close {
+  transform: scale(-4, 4);
+  
+  animation-name: cloud-3;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-direction: forwards;
+  animation-iteration-count: infinite;
+}
+
+.cloud-3 {
+  top: 50vh;
+  right: -10vw;
+}
+
+.cloud-4 {
+  transform: scale(4, 4);
+  top: -100vh;
+  left: 0vw;
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+
+.cloud-close:after {
+  display: none;
+}
+
+@keyframes cloud-1 {
+  0% {
+    top: 50vh;
+  }
+  
+  49% {
+    left: 10vw;
+  }
+  50% {
+    top: -100px;
+    left: -100vw;
+  }
+  51% {
+    top: 110vh;
+    left: 10vw;
+  }
+  100% {
+    top: 50vh;
+  }
+}
+
+@keyframes cloud-2 {
+  0% {
+    top: 15vh;
+  }
+  
+  49% {
+    left: 70vw;
+  }
+  50% {
+    top: -400px;
+    left: -400vw;
+  }
+  51% {
+    top: 140vh;
+    left: 70vw;
+  }
+  100% {
+    top: 15vh;
+  }
+}
+
+@keyframes cloud-3 {
+  0% {
+    top: 150vh;
+  }
+  20% {
+    top: -150vh;
+  }
+  100% {
+    top: -151vh;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .cat {
+    transform: scale(0.7);
+  }
+}

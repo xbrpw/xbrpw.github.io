@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  background-color: #000000;
+  font-family: "Helvetica", sans-serif;
+  color: #FFFFFF;
+}
+
+input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+body.loaded input {
+  display: none;
+}
+
+h1 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  color: rgba(255, 255, 255, 0);
+  font-size: 5em;
+  margin: 0;
+}

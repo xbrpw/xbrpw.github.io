@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap");
+*,
+*:before,
+*:after {
+  font-feature-settings: "kern";
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-font-smoothing: antialiased !important;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-text: #202020;
+  --color-bg: #f4f4f4;
+  font-family: "Libre Caslon Text", serif;
+  font-size: clamp(105%, calc(100% + 2vw), 200%);
+  color: var(--color-text);
+  color-scheme: light;
+  line-height: 1.4;
+  background-color: var(--color-bg);
+}
+
+html {
+  overflow-y: auto;
+  block-size: 100%;
+  padding-inline: calc((100vw - min(32ch, 90vw)) / 2);
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-block-size: 100%;
+  margin: 0;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  position: relative;
+  margin-block: 10vmin 0.1em;
+  font-size: clamp(4rem, calc(4rem + 20vw), 10rem);
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: -0.06em;
+  white-space: nowrap;
+}
+
+h1 span {
+  display: inline-block;
+  transform: translatey(-0.85ex);
+  -webkit-margin-start: -0.3ch;
+          margin-inline-start: -0.3ch;
+  font-size: 0.4em;
+  font-weight: 700;
+}
+
+h1 small {
+  position: absolute;
+  top: 55%;
+  right: 6.5ch;
+  font-size: 0.06em;
+  letter-spacing: 0;
+}
+
+p {
+  margin-block: 0 10vmin;
+  font-weight: 700;
+  text-indent: 2ch;
+  word-break: normal;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+a {
+  color: var(--color-text);
+  text-underline-offset: 0.1em;
+}
+
+@media (min-width: 80em) {
+  html {
+    padding-inline: 10vmin;
+  }
+
+  article {
+    align-items: baseline;
+    flex-direction: row;
+    gap: 2rem;
+    padding-block: 5vmin;
+  }
+
+  article > * {
+    margin: 0;
+  }
+
+  p {
+    text-indent: 0;
+    max-inline-size: 35ch;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #f4f4f4;
+    --color-bg: #101010;
+    color-scheme: dark;
+  }
+}

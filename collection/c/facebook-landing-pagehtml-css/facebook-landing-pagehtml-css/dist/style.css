@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  background-color: rgb(230, 230, 230);
+}
+.container {
+  min-height: 100vh;
+  max-width: 100%;
+  margin:0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .col {
+  margin: 0 auto;
+  position: relative;
+  /* background-color: red; */
+}
+.container .left {
+  max-width: 90%;
+}
+.container .left img {
+  width: 300px;
+  height: auto;
+}
+.container .left h2 {
+  font-weight: 500;
+  margin-top: 15px;
+}
+.container .right {
+  background: #fff;
+  border-radius: 5px;
+  width: 420px;
+  height: 360px;
+  margin: 60px auto;
+  padding: 20px 20px 0 20px;
+  text-align: center;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+}
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 5px;
+  outline: none;
+  padding: 15px 12px;
+  color: #080808;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  font-size: 17px;
+}
+.login-form input:focus {
+  border: 0.5px solid #0078f6;
+  box-shadow: 0px 0px 3px #0078f6;
+}
+.login-form input[type="submit"] {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  background: #0078f6;
+  display: block;
+  margin: 10px auto 0 auto;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 12px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.4s;
+}
+.login-form input[type="submit"]:hover {
+  cursor: pointer;
+  background: #016ee2;
+}
+.container .right h5 {
+  margin: 20px 0;
+}
+.container .right h5 a {
+  font-size: 14px;
+  color: #0078f6;
+  text-decoration: none;
+  font-weight: 400;
+}
+.container .right h5 a:hover {
+  color: #0262c9;
+  text-decoration: underline;
+}
+.container .right hr {
+  border-top: 1px solid #d3d3d3;
+}
+.container .right button {
+  padding: 15px 12px;
+  border-radius: 5px;
+/*   width: 200px; */
+  margin-top: 20px;
+  border: none;
+  background: #43b72a;
+  font-size: 17px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.container .right button:hover {
+  background: #3ea327;
+}

@@ -1,0 +1,101 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+body {
+  background: #F5F5F5;
+  font-family: "Josefin Sans", sans-serif;
+  color: #F5F5F5;
+  word-spacing: 3px;
+  font-size: 1.5em;
+}
+
+.logo {
+  color: #FB7650;
+  border: solid 5px #EEE;
+  width: 6.5em;
+  padding: 5px;
+  text-align: center;
+  height: 4em;
+  margin: auto;
+  background: #FFF;
+}
+
+.wrapper {
+  width: 18em;
+  height: 22em;
+  margin: auto;
+  background: #FB7650;
+  border: 5px #FB9172 solid;
+  -webkit-border-radius: 5px;
+  font-size: 1.5em;
+}
+
+.email {
+  width: 15em;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  border: solid 3px #4BAAC8;
+}
+
+.url {
+  width: 15em;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  border: solid 3px #5C4F3D;
+}
+
+.text {
+  width: 15em;
+  height: 6em;
+  font-size: 1em;
+  -webkit-border-radius: 5px;
+  border: solid 3px FIREBRICK;
+  outline: none;
+}
+
+input {
+  outline: none;
+  color: #191919;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1em;
+}
+
+input {
+  active: none;
+}
+
+fieldset {
+  border: none;
+}
+
+button {
+  background: #F5F5F5;
+  border: none;
+  color: FIREBRICK;
+  font-size: 0.6em;
+  -webkit-border-radius: 3px;
+  border-bottom: 5px solid #D8D8D8;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  left: 1.5em;
+  -webkit-transition: all 500ms;
+}
+button:hover {
+  opacity: 0.85;
+}
+
+section {
+  width: 20em;
+  position: relative;
+  left: 1em;
+  top: 1em;
+}
+
+a:link {
+  color: FIREBRICK;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+}
+
+a:hover {
+  opacity: 0.5;
+}

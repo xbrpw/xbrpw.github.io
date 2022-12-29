@@ -1,0 +1,120 @@
+@import "compass/css3";
+
+/* 
+ * What do you have to be scared of?
+ *
+ * Lorin Tackett, July 2013
+ * http://lorintackett.com
+ *
+ * EDIT: August 2020
+ * -------------------------------------------------------------
+ * Earlier this year I updated my personal website to use React,
+ * and refactored the clouds seen here as a canvas animation. It
+ * is much more fluid and performant with canvas.
+ * Check out the code here:
+ * https://github.com/ltackett/lorintackett.com/blob/lorintackett.com/2020-01-clouds-and-quotes/src/components/Clouds/Clouds.jsx
+ */
+
+// Import google font
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+// Cloud vars
+$clouds: 
+  ("https://s.cdpn.io/15514/clouds_2.png" 1000px 20s),
+  ("https://s.cdpn.io/15514/clouds_1.png" 1000px 15s),
+  ("https://s.cdpn.io/15514/clouds_3.png" 1579px 17s);
+
+// Animation & keyframes
+// Refactor by @HugoGiraudel
+// https://codepen.io/HugoGiraudel
+@for $i from 1 through length($clouds) {
+  
+  $item     : nth($clouds, $i);
+  $path     : nth($item, 1);
+  $width    : nth($item, 2);
+  $duration : nth($item, 3);
+  
+  @keyframes clouds-loop-#{$i} {
+    to { background-position: -$width 0; }
+  }
+  
+  .clouds-#{$i} {
+    background-image: url($path);
+    animation: clouds-loop-#{$i} $duration infinite linear;
+  }
+}
+
+// =====================================================
+
+html, body {
+  font-family: sans-serif;
+  height:  100%;
+  padding: 0;
+  margin:  0;
+}
+
+body {
+  @include background(linear-gradient(#333, #000));
+  
+  &, a { color: #cccccc; }
+}
+
+h1.quote {
+  @include transform(translate(-50%, -50%));
+  @include inline-block;
+  text-align:      right;
+  text-decoration: none;
+  font-family:     'Oswald', sans-serif;
+  font-weight:     normal;
+  position:        absolute;
+  top:             50%;
+  left:            50%;
+  font-size:       1.5em;
+  line-height:     1.5em;
+  margin:          0;
+  text-shadow:     0 -1px 0  #ffffff,
+                   0 2px 3px #000000;
+
+  span { display: block; }
+}
+
+section.info {
+  position:  absolute;
+  bottom:    0;
+  right:     2ch;
+  font-size: 60%;
+  
+  dl {
+    @include display-flex;
+    
+    dt, dd {
+      margin:  0;
+      padding: 0;
+    }
+
+    dt { padding-right: 1ch; }
+    dd { padding-right: 4ch; }
+  }
+}
+  
+.clouds {
+  @include opacity(0.4);
+  pointer-events: none;
+  position: absolute;
+  overflow: hidden;
+  top:      0;
+  left:     0;
+  right:    0;
+  height:   100%;
+}  
+
+.clouds-1,
+.clouds-2,
+.clouds-3 {
+  background-repeat: repeat-x;
+  position: absolute;
+  top:      0;
+  right:    0;
+  left:     0;
+  height:   500px;
+}

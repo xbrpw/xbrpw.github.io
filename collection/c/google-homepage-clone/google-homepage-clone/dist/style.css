@@ -1,0 +1,245 @@
+html {
+  font-size: 100%;
+  box-szing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img, svg {
+  display: block;
+}
+
+a, button, input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  border-bottom: 1px solid grey;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: arial, "Roboto Mono", monospace;
+  color: #222;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+header ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+}
+header ul a {
+  color: #000000DE;
+}
+header .google-apps {
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.55rem 0.5rem;
+  position: relative;
+}
+header .google-apps:hover {
+  background-color: #f2f2f2;
+}
+header .google-apps .apps-menu-icon {
+  display: flex;
+  font-size: 0.9rem;
+  font-weight: lighter;
+  color: #5f6368;
+  gap: 1px;
+}
+header .google-apps .apps-menu-icon svg {
+  height: 1.2rem;
+}
+header .google-apps .apps-menu {
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-72%) translateY(105%);
+  border-radius: 0.45rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 18rem;
+  height: 25rem;
+  background-color: #fff;
+  z-index: 10;
+  padding: 0.5rem;
+  overflow: hidden;
+  display: none;
+}
+header .google-apps .apps-menu.open {
+  display: block;
+}
+header .google-apps .apps-menu .apps-menu-inner {
+  overflow-y: scroll;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  padding: 0.85rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 2rem;
+}
+header .google-apps .apps-menu .apps-menu-inner svg {
+  width: 2.5rem;
+}
+header .google-apps .apps-menu .apps-menu-inner img {
+  width: 2.75rem;
+  border-radius: 50%;
+}
+header .google-apps .apps-menu .apps-menu-inner::-webkit-scrollbar {
+  width: 0.5rem;
+}
+header .google-apps .apps-menu .apps-menu-inner::-webkit-scrollbar-thumb {
+  background-color: rgba(169, 169, 169, 0.3);
+  border-radius: 1rem;
+}
+header .profile-pic {
+  width: 2.35rem;
+  border-radius: 50%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+main .logo {
+  margin-bottom: -1rem;
+}
+main .logo h2 {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: 4.85rem;
+  letter-spacing: -0.5rem;
+  font-weight: 500;
+}
+main .logo h2.letter-one {
+  font-size: 5.85rem;
+}
+main .logo .letter-one, main .logo .letter-four {
+  color: #4285F4;
+}
+main .logo .letter-two, main .logo .letter-six {
+  color: #DB4437;
+}
+main .logo .letter-three {
+  color: #F4B400;
+}
+main .logo .letter-five {
+  color: #0F9D58;
+}
+main .logo .letter-six {
+  transform: rotate(-20deg);
+}
+main .search-box {
+  position: relative;
+  height: 2.5rem;
+  width: 30rem;
+  border: 1px solid #dfe1e5;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .search-box:hover, main .search-box:focus {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+main .search-box input {
+  flex-grow: 0.9;
+  height: 60%;
+  padding: 0 1rem;
+  color: #rgba 0, 0, 0, 0.87;
+  border: 0;
+  outline: 0;
+  font-size: 1rem;
+}
+main .search-box .fa-search {
+  color: #9aa0a6;
+}
+main .search-box .fa-microphone {
+  color: #4285F4;
+}
+main .search-buttons {
+  display: flex;
+  gap: 1rem;
+}
+main .search-buttons button {
+  border: 0;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  background-color: #f8f9fa;
+}
+main .search-buttons button:hover, main .search-buttons button:focus {
+  box-shadow: 0 0.85px 2px rgba(0, 0, 0, 0.3);
+}
+main .language-options {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+main .language-options .languages ul {
+  display: flex;
+  gap: 0.5rem;
+}
+main .language-options .languages ul a {
+  color: #1A0DAB;
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: #0000008a;
+}
+footer a {
+  color: #70757A;
+}
+footer div {
+  padding: 0.75rem 0.85rem;
+  background-color: #f8f9fa;
+}
+footer .menu {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid lightgrey;
+  color: #70757A;
+}
+footer section ul {
+  display: flex;
+  gap: 1.5rem;
+}

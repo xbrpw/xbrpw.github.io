@@ -1,0 +1,55 @@
+/* Colors */
+$background: #f6cb4f;
+$theme-black: #0d0d0d;
+
+/* Dimensions */
+$loader-wrapper-width: 90px;
+$loader-width: 35px;
+$loader-height: 35px;
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $background;
+}
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%loader {
+  position: absolute;
+  width: $loader-width;
+  height: $loader-height;
+  border: 10px solid $theme-black;
+  border-radius: 40px;
+}
+
+/* Specific Styles */
+.container {
+  @extend %center;
+  height: 100vh;
+}
+.loader-wrapper {
+  display: flex;
+  position: absolute;
+  top: calc(50% - calc(#{$loader-wrapper-width} / 2));
+  left: calc(50% - calc(#{$loader-wrapper-width} / 2));
+  width: $loader-wrapper-width;
+}
+.loader-1 {
+  @extend %loader;
+}
+.loader-2 {
+  @extend %loader;
+  margin-left: 55px;
+}
+.loader-3 {
+  @extend %loader;
+  width: $loader-wrapper-width;
+  margin-top: 55px;
+}

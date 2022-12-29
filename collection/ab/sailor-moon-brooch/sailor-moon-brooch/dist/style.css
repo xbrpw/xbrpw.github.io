@@ -1,0 +1,231 @@
+#brooch-container{
+    width: 600px;
+    height:600px;
+    display: block;
+    position: relative;
+    left: 50%;
+    margin-left: -300px;
+}
+.gold-bg{
+    display: block;
+    width: 600px;
+    height: 600px;
+    border-radius: 300px;
+    background-color: gold;
+    border: brown solid 1px;
+    position: relative;
+    z-index: 500;
+}
+.pink-bg{
+    display: block;
+    position: relative;
+    width: 525px;
+    height: 525px;
+    border-radius: 262.5px;
+    left: 50%;
+    margin-left:-267.5px;
+    top: 50%;
+    margin-top:-267.5px;
+    border: black solid 5px;
+    background-color: lightpink;
+    z-index: 499;
+
+}
+#star-container{
+    width: 510px;
+    height: 500px;
+    position: absolute;
+    display: block;
+    left: 50%;
+    margin-left: -255px;
+    z-index: 1;
+}
+#inner-star, .inner-star-outline{
+    position: absolute;
+    display: block;
+}
+#inner-star{
+    z-index: 100;
+    display: block;
+    position: absolute;
+    top: 0;
+}
+#inner-most-circle{
+    display: block;
+    position: absolute;
+    background-color: lightpink;
+    width: 125px;
+    height: 125px;
+    border: black solid 2px;
+    border-radius: 50%;
+    z-index: 300;
+    top: 30px;
+    left: 50%;
+    margin-left: -62.5px;
+}
+#inner-most-circle-outline{
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    left: 50%;
+    margin-left: -71px;
+    position:absolute;
+    display: block;
+    border: 2px goldenrod solid;
+    z-index: 295;
+    margin-top: 23px;
+}
+.inner-star-outline{
+    z-index: 150;
+}
+.small-circle{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    background-color: gold;
+    border: 1px solid black;
+}
+#small-circle-top{
+    top: 13.17%;
+    z-index: 350;
+    left: 50%;
+    margin-left: -27px;
+}
+#small-circle-right{
+    top: 281px;
+    right: 62px;
+    z-index: 351;
+}
+#small-circle-bottom{
+    bottom: 70px;
+    left: 50%;
+    margin-left: -27px;
+    z-index: 350;
+}
+#small-circle-left{
+    top: 281px;
+    left: 63px;
+    z-index: 351;
+}
+#red-color-circle{
+    background-color: red;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    display: block;
+    top: 50%;
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -20px;
+    border: 1px black solid;
+    z-index: 400;
+    border-radius: 50%;
+}
+#yellow-color-circle{
+    background-color: goldenrod;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    display: block;
+    border:1px solid black;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -20px;
+}
+#blue-color-circle{
+    background-color: darkblue;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    display: block;
+    border: 1px solid black;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -20px;
+}
+#green-color-circle{
+    background-color: green;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    display: block;
+    border: 1px solid black;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -20px;
+}
+#middle-circle{
+    width:219px;
+    height: 219px;
+    border-radius: 50%;
+    background-color: gold;
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -113.5px;
+    margin-top:-77%;
+    border: 4px solid black;
+}
+
+#crescent{
+    z-index: 250;
+    display: block;
+    position: absolute;
+    top: 30px;
+    width: 205px;
+    height: 205px;
+    border-radius: 50%;
+    background-color: gold;
+    border: 3px solid goldenrod;
+    left: 50%;
+    margin-left: -105.5px;
+}
+#gold-upper-outline{
+    border: 3px solid goldenrod;
+    width: 170px;
+    height: 170px;
+    left: 50%;
+    margin-left: -88px;
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    z-index: 251;
+    top: 20px;
+}
+#gold-overlay{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    margin-left: -74.5px;
+    z-index: 252;
+    background-color: gold;
+}
+#gold-star{
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 50;
+}
+#smaller-circle{
+    width: 275px;
+    height: 275px;
+    position: absolute;
+    top: 50%;
+    margin-top: -130px;
+    left: 50%;
+    margin-left: -137.5px;
+    display: block;
+    background-color: gold;
+    z-index: 200;
+    border-radius: 50%;
+}

@@ -1,0 +1,48 @@
+/* Colors */
+/* Dimensions */
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6cb4f;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-3, .loader-2, .loader-1 {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border: 10px solid #0d0d0d;
+  border-radius: 40px;
+}
+
+/* Specific Styles */
+.container {
+  height: 100vh;
+}
+
+.loader-wrapper {
+  display: flex;
+  position: absolute;
+  top: calc(50% - calc(90px / 2));
+  left: calc(50% - calc(90px / 2));
+  width: 90px;
+}
+
+.loader-2 {
+  margin-left: 55px;
+}
+
+.loader-3 {
+  width: 90px;
+  margin-top: 55px;
+}

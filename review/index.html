@@ -4,7 +4,7 @@
 <html lang="es-MX" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#" >  
 <head>
 <meta charset="UTF-8">
-<title>Review </title>
+<title>Review (By @luisangelmaciel)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="title" content="Review ">
 <meta name="description" content="Review ">
@@ -88,7 +88,7 @@
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4) {
                 if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                if (this.status == 404) {elmnt.innerHTML = "Página no encontrada.";}
                 /*remove the attribute, and call this function once more:*/
                 elmnt.removeAttribute("w3-include-html");
                 includeHTML();
@@ -350,8 +350,9 @@
                 tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
                 }
                 document.getElementById(tabName).style.display = "block";
-                evt.currentTarget.className += " w3-white";
+                evt.currentTarget.className += " ";
             }
+            // evt.currentTarget.className += " w3-white";evt.currentTarget.className += " w3-white";
          </script>
          <script>
             includeHTML();

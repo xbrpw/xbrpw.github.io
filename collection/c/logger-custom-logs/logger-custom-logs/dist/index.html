@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Logger: Custom Logs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section>
+  <h1>Logger</h1>
+  <ul>
+    <li><code>var log = new Logger();</code></li>
+    <li class=log-info>
+      <code>log.info(Hey, here’s some ‘info’, the number 2 is equal to:", 2)</code>
+      <code symbol="і">Hey, here’s some ‘info’, the number 2 is equal to: <strong>2</strong></code>
+    </li>
+    <li class=log-pass>
+      <code>log.pass("Great Job! You ‘pass’!")</code>
+      <code symbol="✓">Great Job! You ‘pass’!</code>
+    </li>
+    <li class=log-warn>
+      <code>log.warn("Watch yourself. I will only ‘warn’ you once...")</code>
+      <code symbol="◬">Watch yourself. I will only ‘warn’ you once...</code>
+    </li>
+    <li class=log-fail>
+      <code>log.fail("Woah! Total ‘fail’! This is totally not what you were looking for.")</code>
+      <code symbol="!">Woah! Total ‘fail’! This is totally not what you were looking for.</code>
+    </li>
+    <li class=log-go>
+      <code>log.go("Let’s just ‘go’ with something a bit more basic.")  </code>
+      <code symbol="→">Let’s just ‘go’ with something a bit more basic.</code>
+    </li>
+    <li class=log-go>
+      <code>log.go("Check the inspector, foo.")  </code>
+      <code symbol="→">Check the inspector, foo.</code>
+    </li>
+  </ul>
+</section>
+<!-- partial -->
+  <script src='https://codepen.io/jakealbaugh/pen/WvNjZB.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

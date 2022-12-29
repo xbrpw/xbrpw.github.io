@@ -88,17 +88,18 @@ window.onload = function (e) {
             color: "#61378a"
         },
         {
-            url: `#`,
+            url: `https://codepen.io/luisangelmaciel/full/dyRVXLW`,
             name: `08`,
             image: `img/placeholder.webp`,
-            desc: "Music Player",
+            desc: "Pokerangers App. Ringtone Pokemon + Power Rangers ",
+            // desc: "Music Player Social Share ",
             color: "#e2a902"
         },
         {
-            url: `#`,
+            url: `https://codepen.io/luisangelmaciel/full/jOwrYBJ`,
             name: `09`,
             image: `img/placeholder.webp`,
-            desc: "Social Share",
+            desc: "Vegeta | FCC-Tribute-Page ",
             color: "#359ed2"
         },
         {

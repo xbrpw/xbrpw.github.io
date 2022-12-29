@@ -1,0 +1,3 @@
+// Yea yea yea, I know semantic markups and I know click events are should be done on JavaScript. I'm just trying to have fun here. :)
+
+// P.S. No space for username pleassse...

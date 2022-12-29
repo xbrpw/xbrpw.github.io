@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+  width:1020px;
+  margin:auto;
+}
+.container .main-wrap {
+}
+.container .main-wrap .row {
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.container .main-wrap .row .columns {
+  width: 33.3333333%;
+  padding:8px
+}
+.container .main-wrap .row .columns .card-wrap{
+  box-shadow:0px 2px 15px 0.5px #ddd;
+  padding 8px
+}
+.container .main-wrap .row .columns .card-body {
+  padding: 23px;
+}
+
+.thumb-wrap img {
+  width:100%;
+}

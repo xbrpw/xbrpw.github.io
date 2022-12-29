@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  margin: 5vh auto 1rem;
+  width: min(80ch, 100vw - 2rem);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 30ch), 1fr));
+  gap: 2rem max(5vw, 2rem);
+}
+
+header,
+main {
+  padding-bottom: max(8vh, 2rem);
+}
