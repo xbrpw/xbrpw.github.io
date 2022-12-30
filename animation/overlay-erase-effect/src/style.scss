@@ -1,0 +1,21 @@
+body {
+  min-height: 100vh;
+  position: relative;
+    background-image: url(https://s3.amazonaws.com/123rf-chrome/images/52037441_xl.jpg);
+  background-size: cover;
+}
+#canvas-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 98;
+  opacity: 0.85;
+}
+
+#canvas-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  opacity: 0.05;
+}

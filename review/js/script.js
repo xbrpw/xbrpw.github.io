@@ -77,57 +77,58 @@ window.onload = function (e) {
             url: `www.xbr.pw/assets/clone/fakebook/src/index.html`,
             name: `07`,
             image: `img/placeholder.webp`,
-            desc: "Bookmarks",
+            desc: "Fakebook",
             color: "#8160de"
         },
         {
-            url: `https://www.luisangelmaciel.one/yicel/indextml`,
+            url: `https://luisangelmaciel.github.io/yicel/`,
             name: `Name URL`,
-            image: `img/placeholder.webp`,
-            desc: "404 Page",
+            image: `img/ladybug-yicel-miraculus.png`,
+            desc: "Game Yicel Miraculus",
             color: "#61378a"
         },
         {
             url: `https://codepen.io/luisangelmaciel/full/dyRVXLW`,
             name: `08`,
-            image: `img/placeholder.webp`,
-            desc: "Pokerangers App. Ringtone Pokemon + Power Rangers ",
-            // desc: "Music Player Social Share ",
-            color: "#e2a902"
+            image: `img/pokerangers-app.png`,
+            desc: "Pokerangers App. Ringtone Pokemon + Power Rangers ",            
+            color: "#e2a902"        
         },
         {
             url: `https://codepen.io/luisangelmaciel/full/jOwrYBJ`,
             name: `09`,
-            image: `img/placeholder.webp`,
+            image: `img/vegeta-FCC-Tribute-Page.png`,
             desc: "Vegeta | FCC-Tribute-Page ",
             color: "#359ed2"
         },
         {
-            url: `#`,
+            url: `https://codepen.io/luisangelmaciel/pen/wveMjxw`,
             name: `10`,
-            image: `img/placeholder.webp`,
-            desc: "Flash Message",
+            image: `img/team-master-magic-sayayin.png`,
+            desc: "Go, Team master magic sayayin!",
             color: "#62ccb9"
         },
         {
-            url: `#`,
+            url: `https://www.xbr.pw/eevee-traductor/index.html`,
             name: `11`,
-            image: `img/placeholder.webp`,
-            desc: "E-Commerce Shop (Single Item)",
+            image: `img/eevee-traductor.png`,
+            desc: "",
+            // desc: "Music Player, Social Share, Flash Message, E-Commerce Shop (Single Item), Direct Messaging, 404 Page
+            // Countdown Timer, Pop-Up / Overlay ",
             color: "#F3615C"
         },
         {
-            url: `#`,
+            url: `https://www.xbr.pw/alllinks/index.html`,
             name: `12`,
-            image: `img/placeholder.webp`,
-            desc: "Direct Messaging",
+            image: `img/alllinks-social-share.png`,
+            desc: "Social Share",
             color: "#60c4c7"
         },
         {
             url: `#`,
             name: `13`,
             image: `img/placeholder.webp`,
-            desc: "Countdown Timer",
+            desc: "",
             color: "#fe9014"
         },
         {
@@ -141,7 +142,7 @@ window.onload = function (e) {
             url: `#`,
             name: `15`,
             image: `img/placeholder.webp`,
-            desc: "Pop-Up / Overlay",
+            desc: "",
             color: "#5d48c9"
         },
         {

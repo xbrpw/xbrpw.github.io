@@ -1,0 +1,84 @@
+
+<!-- /* ⊙⩌⨀ 2006 - 2022  http://twitter.com/luisangelmaciel  */ -->  
+<!DOCTYPE html><!-- ⊙⩌⨀ 2006 - 2022 © LuisAngelMaciel :P! -->
+<html lang="es-MX" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#" >  
+<head>
+<meta charset="UTF-8">
+  <title>Shining Button</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href="./aqua.min.css"> <!-- <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/alphardex/aqua.css/dist/aqua.min.css'> -->
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  
+<div id="Shining-Button">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/alphardex/aqua.css/dist/aqua.min.css'> 
+  
+  <style>
+      body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;  
+    }
+
+    .shining-line {
+      --shining-line-bg: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        white,
+        rgba(255, 255, 255, 0)
+      );
+      --shining-line-width: 1.5rem;
+      --shining-line-scale-y: 1.5;
+      --shining-line-skew-x: -30deg;
+      --shining-line-basic-transform: scaleY(var(--shining-line-scale-y))
+        skewX(var(--shining-line-skew-x)) rotateZ(0);
+      position: relative;
+      overflow: hidden;
+      font-weight: bold;
+    }
+    .shining-line::before {
+      position: absolute;
+      z-index: 1;
+      content: "";
+      top: 0;
+      left: 0;
+      width: var(--shining-line-width);
+      height: 100%;
+      background: var(--shining-line-bg);
+      transform: var(--shining-line-basic-transform);
+      -webkit-animation: shining-line-move 1s ease-in-out infinite;
+              animation: shining-line-move 1s ease-in-out infinite;
+      opacity: 0.8;
+      filter: blur(1px);
+    }
+
+    @-webkit-keyframes shining-line-move {
+      from {
+        left: -20%;
+      }
+      to {
+        left: 120%;
+      }
+    }
+
+    @keyframes shining-line-move {
+      from {
+        left: -20%;
+      }
+      to {
+        left: 120%;
+      }
+    }
+  </style>
+  <div class="shining-line rounded-3xl">
+    <div class="btn btn-primary btn-round rounded-3xl">Shining Button</div>
+  </div>
+</div>
+
+  
+</body>
+</html>

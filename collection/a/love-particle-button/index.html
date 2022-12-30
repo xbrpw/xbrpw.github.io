@@ -1,0 +1,58 @@
+<!DOCTYPE html><!-- ⊙⩌⨀ 2006 - 2022 © http://twitter.com/luisangelmaciel --><html lang="es-MX"  ><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Love Particle Button</title>  
+  <link rel='stylesheet' href='aqua.min.css'> <!-- <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@alphardex/aqua.css@1.5.5/dist/aqua.min.css'> -->
+  <link rel="stylesheet" href="./love-particle-button.css">
+
+</head>
+<body>
+
+<div id="Love particle">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@alphardex/aqua.css@1.5.5/dist/aqua.min.css'>  
+  
+  <style>
+      .bodylove {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f7f7fd;
+    }
+
+    .heart {
+      --heart-color: var(--danger-color);
+      --heart-width: 16px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: var(--heart-width);
+      height: var(--heart-width);
+      background: var(--heart-color);
+      transform: rotate(-45deg);
+      pointer-events: none;
+    }
+    .heart::before, .heart::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      border-radius: 50%;
+    }
+    .heart::before {
+      top: -50%;
+    }
+    .heart::after {
+      right: -50%;
+    }
+  </style>
+
+  <div class="btn-heart bodylove">
+    <span style="color: transparent"> Me gusta  </span>
+  </div>
+
+  <script  src="./love-particle-button.js"></script>
+</div>
+
+</body>
+</html>
