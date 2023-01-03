@@ -1,0 +1,20 @@
+:root {
+  --canvas-width: 400px;
+  --canvas-height: 400px;
+}
+body {
+  background: #222;
+  overflow: hidden;
+}
+#canvas {
+  width: var(--canvas-width);
+  height: var(--canvas-height);
+  position: absolute;
+  left: calc(50% - var(--canvas-width) / 2);
+  top: calc(50% - var(--canvas-height) / 2);
+  cursor: pointer;
+}
+#coords {
+  color: #fff;
+  font-weight: 700;
+}

@@ -1,0 +1,28 @@
+body {
+  font-family: "Helvetica", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+.container .inputWrapper input, .container .inputWrapper button {
+  appearance: none;
+  border: 1px solid black;
+  padding: 1em;
+  font-size: 1em;
+}
+.container .inputWrapper button {
+  background: transparent;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+.container .inputWrapper button:hover {
+  color: white;
+  background: black;
+}
+.container .inputWrapper .passwordError {
+  display: none;
+  color: red;
+  margin-top: 0.25em;
+}

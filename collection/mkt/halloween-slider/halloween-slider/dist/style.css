@@ -1,0 +1,95 @@
+body {
+  background: #000;
+  text-align: center;
+}
+
+.wrapper {
+  margin: 0px auto;
+  width: 600px;
+}
+
+/* Monster */
+#eyes {
+  transform: scale(0.5);
+}
+#ee,
+#ee1 {
+  filter: brightness(20%);
+}
+#pill {
+  transform-origin: 135.5px 45px;
+  transform: scaleX(0);
+}
+#pill1 {
+  transform-origin: 68px 45px;
+  transform: scaleX(0);
+}
+
+.st0 {
+  fill: url(#SVGID_1_);
+}
+.st1 {
+  fill: url(#SVGID_00000112612548848006251330000016200028491449562265_);
+}
+
+.st3 {
+  fill: url(#SVGID_00000044136472506090996500000004798217254691301798_);
+}
+.st4 {
+  opacity: 0.4;
+  filter: blur(1px);
+}
+
+.evileye {
+  filter: url(#filter);
+}
+
+
+/* Slider */
+
+input[type=range]::-ms-track {
+  cursor: pointer;
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]:focus {
+  outline: none; 
+}
+
+.slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 200px;
+  height: 50px;
+  border: none;
+  background: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  margin-top: 40px;
+  z-index: 999;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Lager_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 400 400' style='enable-background:new 0 0 400 400;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23666;%7D%0A%3C/style%3E%3Cg%3E%3Cpath class='st0' d='M200,381c-27.1,0-53.2-5.1-77.7-15.1c-3.8-1.5-6.2-5.2-6.2-9.3v-24.5c-29-13.1-53.7-32.7-71.6-57 c-19.9-26.9-30.4-58.3-30.4-90.7C14.1,93.2,97.5,19,200,19s185.9,74.2,185.9,165.4c0,32.4-10.5,63.7-30.4,90.7 c-17.9,24.3-42.6,43.9-71.6,57v24.5c0,4.1-2.4,7.7-6.2,9.2C253.3,375.9,227.1,381,200,381z'/%3E%3Cpath d='M200,29c97.1,0,175.9,69.6,175.9,155.4c0,62.5-41.8,116.4-102,141.1v31.1c-22.5,9.2-47.5,14.4-73.9,14.4 c-26.4,0-51.4-5.1-73.9-14.3v-31.1c-60.2-24.7-102-78.6-102-141.1C24.1,98.6,102.9,29,200,29 M200,9C148.1,9,99.3,26.9,62.4,59.5 c-18.2,16.1-32.5,34.8-42.5,55.8C9.4,137.2,4.1,160.4,4.1,184.4c0,34.5,11.2,67.9,32.3,96.6c17.7,24,41.6,43.7,69.7,57.4v18.2 c0,8.1,4.9,15.4,12.4,18.5c25.6,10.5,53,15.8,81.5,15.8c28.5,0,55.9-5.3,81.5-15.9c7.5-3.1,12.4-10.4,12.4-18.5v-18.2 c28-13.7,52-33.4,69.7-57.4c21.1-28.7,32.3-62.1,32.3-96.6c0-24-5.3-47.3-15.8-69.1c-10-20.9-24.3-39.7-42.5-55.8 C300.7,26.9,251.9,9,200,9L200,9z'/%3E%3C/g%3E%3Cg%3E%3Ccircle cx='275.7' cy='197.8' r='60.7'/%3E%3Ccircle cx='124.3' cy='197.8' r='60.7'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Lager_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 400 400' style='enable-background:new 0 0 400 400;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23CCCCCC;%7D%0A%3C/style%3E%3Cg%3E%3Cpath class='st0' d='M200,381c-27.1,0-53.2-5.1-77.7-15.1c-3.8-1.5-6.2-5.2-6.2-9.3v-24.5c-29-13.1-53.7-32.7-71.6-57 c-19.9-26.9-30.4-58.3-30.4-90.7C14.1,93.2,97.5,19,200,19s185.9,74.2,185.9,165.4c0,32.4-10.5,63.7-30.4,90.7 c-17.9,24.3-42.6,43.9-71.6,57v24.5c0,4.1-2.4,7.7-6.2,9.2C253.3,375.9,227.1,381,200,381z'/%3E%3Cpath d='M200,29c97.1,0,175.9,69.6,175.9,155.4c0,62.5-41.8,116.4-102,141.1v31.1c-22.5,9.2-47.5,14.4-73.9,14.4 c-26.4,0-51.4-5.1-73.9-14.3v-31.1c-60.2-24.7-102-78.6-102-141.1C24.1,98.6,102.9,29,200,29 M200,9C148.1,9,99.3,26.9,62.4,59.5 c-18.2,16.1-32.5,34.8-42.5,55.8C9.4,137.2,4.1,160.4,4.1,184.4c0,34.5,11.2,67.9,32.3,96.6c17.7,24,41.6,43.7,69.7,57.4v18.2 c0,8.1,4.9,15.4,12.4,18.5c25.6,10.5,53,15.8,81.5,15.8c28.5,0,55.9-5.3,81.5-15.9c7.5-3.1,12.4-10.4,12.4-18.5v-18.2 c28-13.7,52-33.4,69.7-57.4c21.1-28.7,32.3-62.1,32.3-96.6c0-24-5.3-47.3-15.8-69.1c-10-20.9-24.3-39.7-42.5-55.8 C300.7,26.9,251.9,9,200,9L200,9z'/%3E%3C/g%3E%3Cg%3E%3Ccircle cx='275.7' cy='197.8' r='60.7'/%3E%3Ccircle cx='124.3' cy='197.8' r='60.7'/%3E%3C/g%3E%3C/svg%3E%0A");
+}

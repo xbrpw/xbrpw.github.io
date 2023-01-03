@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>  
+    .rayado {
+      position: relative;
+      display: inline-block;
+    }
+     .rayado::before,  .rayado::after {
+      position: absolute;
+      left: 50%;
+      content: "";
+      display: block;
+      height: 0.35em;
+      border-radius: 50%;
+    }
+     .rayado::before {
+      bottom: -0.5em;
+      z-index: -2;
+      width: 110%;
+      margin-left: -50%;
+      background-color: #000;
+      background: linear-gradient(90deg, #000 25%, #fff 100%);
+    }
+     .rayado::after {
+      bottom: -0.63em;
+      z-index: -1;
+      width: 120%;
+      margin-left: -45%;
+      background-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+<p class="rayado">Luis Ángel</p>
+<!-- partial -->
+  
+</body>
+</html>

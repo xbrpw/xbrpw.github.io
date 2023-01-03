@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Toggle btn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+      @import url(https://fonts.googleapis.com/css?family=Lato:700);
+      *, *:before, *:after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      html, body {height: 100%;}
+      
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-family: "Lato", sans-serif;
+        color: #626A6B;
+        background-color: #A1B1B2;
+      }
+  </style>
+</head>
+<body>
+
+  
+<section>
+  <style>
+    #toggle-btn, #toggle-btn + label {
+      display: inline-block;
+    }
+    
+    #toggle-btn {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    
+    #toggle-btn + label {
+      position: relative;
+      font-size: 2rem;
+      padding: 1rem 1.5rem;
+      border: 3px solid;
+      cursor: pointer;
+      -webkit-user-select: none;
+        -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+  }
+    #toggle-btn + label:before {content: "Show ";}
+    #toggle-btn:checked + label:before {content: "Hide ";}
+</style>
+	<input type="checkbox" id="toggle-btn"/>
+	<label for="toggle-btn"><!-- Page--></label>
+</section>
+
+  
+</body>
+</html>

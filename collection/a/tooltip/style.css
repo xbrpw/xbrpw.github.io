@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+
+
+
+.tooltip {
+  color: #1f8b8a;
+  border-bottom: thin dashed #1d7b77;
+  position: relative;
+  cursor: pointer;
+  line-height: 2.5;
+}
+
+.tooltip:before,
+.tooltip:after {
+  display: block;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s;
+  left: 50px;
+  margin-bottom: -15px;
+  transition: margin .2s;
+  line-height: 1.3;
+}
+
+.tooltip:before {
+  width: 190px;
+  padding: 10px;
+  box-sizing: border-box;
+  bottom: 25px;
+  border-radius: 5px;
+  font-size: .9em;
+  text-align: center;
+  margin-left: -130px;
+  background: rgba(0,0,0,.85);
+  content: attr(data-title);
+  color: #fff;
+}
+
+.tooltip:after {
+  content: "";
+  border-top: 7px solid rgba(0,0,0,.85);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  bottom: 18px;
+  margin-left: -40px;
+}
+
+.tooltip:hover:before,
+.tooltip:hover:after {
+  visibility: visible;
+  opacity: 1;
+  margin-bottom: 0px;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: thin dashed #a6a6a6;
+  color: #a6a6a6;
+  transition: all .2s;
+}
+
+a:hover {
+  border-bottom: thin dashed #8e8e8e;
+  color: #8e8e8e;
+}

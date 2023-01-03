@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-div {
+  padding: 30px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  height: 100%;
+  min-width: 100vw;
+  width: 100%;
+  background-color: #104d68;
+  transition: background-color 0.2s ease;
+}
+
+.light #light-off {
+  visibility: hidden;
+}
+
+.dark {
+  background-color: #04161d;
+}
+.dark #fish-group,
+.dark #light-glow,
+.dark #light-on {
+  visibility: hidden;
+}
+
+#light-group #light-string {
+  transition: all 0.5s ease;
+  transform: translateY(0);
+}
+#light-group:hover {
+  cursor: pointer;
+}
+#light-group:hover #light-string {
+  transform: translateY(30px);
+}
+
+#eyelid-up,
+#mouth-straight {
+  visibility: hidden;
+}
+
+.cls-1 {
+  fill: url(#radial-gradient);
+}
+
+.cls-2 {
+  fill: url(#linear-gradient);
+}
+
+.cls-22,
+.cls-3 {
+  fill: #193f3c;
+}
+
+.string {
+  fill: #d8d8d8;
+  stroke: #25a4a7;
+  stroke-width: 2px;
+}
+
+.cls-4 {
+  fill: url(#linear-gradient-2);
+}
+
+.cls-5 {
+  fill: #324570;
+}
+
+.cls-6 {
+  fill: #8b71ff;
+}
+
+.cls-7 {
+  fill: #0a1735;
+}
+
+.cls-8 {
+  fill: url(#linear-gradient-3);
+}
+
+.cls-9 {
+  fill: url(#linear-gradient-4);
+}
+
+.cls-10,
+.cls-18 {
+  fill: #fff;
+}
+
+.cls-11 {
+  fill: #acadac;
+}
+
+.cls-12 {
+  fill: url(#linear-gradient-5);
+}
+
+.cls-13 {
+  fill: #acacad;
+}
+
+.cls-14 {
+  fill: url(#linear-gradient-6);
+}
+
+.cls-15 {
+  fill: url(#linear-gradient-8);
+}
+
+.cls-16 {
+  fill: #191c3f;
+}
+
+.cls-17 {
+  fill: #d4e2ff;
+}
+
+.cls-17,
+.cls-22,
+.cls-23 {
+  stroke: #193f3c;
+}
+
+.cls-17,
+.cls-20,
+.cls-22,
+.cls-23,
+.cls-25 {
+  stroke-miterlimit: 10;
+}
+
+.cls-17,
+.cls-23 {
+  stroke-width: 12px;
+}
+
+.cls-18 {
+  opacity: 0.28;
+}
+
+.cls-19 {
+  fill: #d3eafd;
+}
+
+.cls-20,
+.cls-21,
+.cls-25,
+.cls-26 {
+  fill: none;
+  stroke-width: 3.39px;
+}
+
+.cls-20,
+.cls-21 {
+  stroke: #52cec2;
+}
+
+.cls-21,
+.cls-26 {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cls-22 {
+  stroke-width: 9.51px;
+}
+
+.cls-23 {
+  fill: #fff768;
+}
+
+.cls-24 {
+  fill: #fdfc9c;
+}
+
+.cls-25,
+.cls-26 {
+  stroke: #ceb225;
+}
+
+.cls-27 {
+  fill: url(#linear-gradient-9);
+}
+
+.cls-28 {
+  fill: url(#linear-gradient-10);
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Christmas Landing Page</title>
+  <!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lobster%7CParisienne%7CRaleway:200,300" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="loader"></div>
+	<!-- Parallax Container -->
+	<div id="container" class="parallax-container snow">
+		<ul id="christmas_scene" class="christmas-scene" >
+			<li class="layer" data-depth="0.80"><div class="layer-5 layer-photo photo-zoom"></div></li>
+			<li class="layer" data-depth="0.60"><div class="layer-4 layer-photo photo-zoom"></div></li>
+			<li class="layer" data-depth="0.40"><div class="layer-3 layer-photo photo-zoom"></div></li>
+			<li class="layer" data-depth="0.20"><div class="layer-2 layer-photo photo-zoom"></div></li>
+			<li class="layer" data-depth="0.00"><div class="layer-1 layer-photo"></div></li>
+		</ul>
+		<!-- Countdown Container -->
+		<div id="countdown_container"></div>
+
+		<!-- Merry Christmas Text -> You can replace with anything you like! -->
+		<div class="merry-christmas-text">Merry Christmas</div>
+
+		<!-- Happy new year 2017 photo -->
+		<div class="happy-new-year"></div>
+
+		<!-- Contact Pole Image -> From here the E-mail modal is triggered -->
+		<div id="mail_pole">
+			<img src="http://awesome-coding.com/theme/images/pole.png" class="img-responsive" alt="mail-pole" data-toggle="modal" data-target="#contact_modal">
+		</div>
+		<!-- Christmas Tree -->
+		<img src="http://awesome-coding.com/theme/images/christmas-tree.png" alt="christmas-tree" id="christmas_tree"/>
+
+		<!-- Social Media Icons Container -->
+		<div class="icons-container">
+			<a href="#" title="Facebook"><img src="http://awesome-coding.com/theme/images/icons/facebook.png" alt="facebook-social-icon"></a>
+			<a href="#" title="Google Plus"><img src="http://awesome-coding.com/theme/images/icons/google.png" alt="google-plus-social-icon"></a>
+			<a href="#" title="Twitter"><img src="http://awesome-coding.com/theme/images/icons/twitter.png" alt="twitter-social-icon"></a>
+			<a href="#" title="Instagram"><img src="http://awesome-coding.com/theme/images/icons/instagram.png" alt="instagram-social-icon"></a>
+			<a href="#" title="Linkedin"><img src="http://awesome-coding.com/theme/images/icons/linkedin.png" alt="linkedin-social-icon"></a>
+			<a href="#" title="Pinterest"><img src="http://awesome-coding.com/theme/images/icons/pinterest.png" alt="pinterest-social-icon"></a>
+		</div>
+	</div>
+
+	<!-- Send E-mail Modal -->
+	<div class="modal fade" id="contact_modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="col-md-12 mail-container">
+						<div class="col-md-12 padding-none bg-color">
+							<div class="col-md-12 text-center">It's Christmas!</div>
+							<div class="col-md-12 text-center">Don't be shy, Send us a message!</div>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<form class="col-md-12 padding-none">
+								<div class="col-md-6 col-xs-12">
+									<div class="col-md-12 padding-none">
+										<input type="text" class="mail-first-name" id="form_first_name" placeholder="First Name" />
+									</div>
+									<div class="col-md-12 padding-none">
+										<input type="text" class="mail-last-name" id="form_last_name" placeholder="Last Name" />
+									</div>
+									<div class="col-md-12 padding-none">
+										<input type="text" class="mail-email" id="form_valid_email" placeholder="E-mail" />
+									</div>
+									<div class="col-md-12 padding-none">
+										<textarea class="mail-message" id="form_message" placeholder="Message"></textarea>
+									</div>
+								</div>
+								<div class="col-md-6 col-xs-12 text-right">
+									<img src="http://awesome-coding.com/theme/images/form-image.png" alt="form-pattern-image">
+									<button class="btn form-submit-button" type="submit" id="submit_form_btn">Send</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-md-12 padding-none mail-container hidden">
+						<div class="col-md-12 padding-none bg-color thank-you-msg text-large" id="form_success_msg"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

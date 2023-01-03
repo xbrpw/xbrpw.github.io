@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Quick broken glass on hover</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700&amp;#39;'><link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<svg id="demo" xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<defs>
+<clipPath id="theClipPath">
+<circle id="reveal" r="0" fill="red" cx="420" cy="340" />
+</clipPath>  
+</defs> 
+<image id="regular" xlink:href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/314556/warriorRegular.jpg" x="0" y="0" width="1200" height="800" />
+<g clip-path="url(#theClipPath)">
+  <image  xlink:href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/314556/warriorBrokenGlass.jpg" x="0" y="0" width="1200" height="800" opacity="0.9"/>	
+</g>
+</svg>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/utils/Draggable.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/GSDevTools.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

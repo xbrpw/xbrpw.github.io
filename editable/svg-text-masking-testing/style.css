@@ -1,0 +1,43 @@
+.container {
+  background-size: 116.25% auto;
+  background-position: center 8%;
+  margin: 1rem auto;
+  position: relative;
+  width: min(100%, 600px);
+}
+
+.cutout {
+  position: absolute;
+  height: 101%;
+  left: 50%;
+  transform: translate(-55.2%, -1%);
+  width: auto;
+}
+
+svg {
+  height: auto;
+  width: 100%;
+}
+
+clipPath text {
+  font-family: mallory-ultra;
+  font-size: 30px;
+  letter-spacing: -0.075em;
+  line-height: 1;
+  transform-origin: center;
+}
+
+.animate {
+  animation: pop-in cubic-bezier(0.19, -0.42, 0.53, 1.31) 350ms;
+  animation-delay: attr(data-animation-delay);
+}
+
+@keyframes pop-in {
+  0% {
+    scale: 0;
+  }
+
+  100% {
+    scale: 1;
+  }
+}

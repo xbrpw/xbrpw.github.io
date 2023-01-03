@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #323033;
+  color: #fcfcfa;
+}
+
+@keyframes slideDown {
+  0%, 30% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  0%, 30% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes openUp {
+  0%, 30% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes fadeIn {
+  0%, 30% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.main-container {
+  font-size: 25px;
+  font-family: "Helvetica Neue";
+  text-align: center;
+  text-transform: uppercase;
+}
+.main-container .logo-container {
+  display: inline-block;
+  margin: 1em;
+}
+.main-container .logo-container .line1, .main-container .logo-container .line3 {
+  font-weight: 100;
+  font-size: 0.85em;
+  letter-spacing: 1px;
+  animation: slideUp 1s;
+  animation-fill-mode: backwards;
+}
+.main-container .logo-container .line2, .main-container .logo-container .line4 {
+  font-size: 2em;
+  padding: 0 0.45em;
+  letter-spacing: 1px;
+  font-weight: bold;
+  animation: slideUp 1s;
+  animation-fill-mode: backwards;
+}
+.main-container .logo-container .line6 {
+  letter-spacing: 2px;
+  font-size: 0.75em;
+  font-weight: 500;
+}
+.main-container .logo-container .line7 {
+  letter-spacing: 5px;
+  font-size: 0.5em;
+}
+.main-container .logo-container .line5 {
+  position: relative;
+  margin: 0.25em 0 0.5em 0;
+  padding: 0.3em 0;
+  animation: openUp 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+.main-container .logo-container .line5:before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: -50%;
+  transform: translate(50%, 50%);
+  width: 100%;
+  height: 1.5px;
+  background: #fcfcfa;
+}
+.main-container .logo-container .line5:after {
+  content: "";
+  position: absolute;
+  bottom: 15%;
+  left: -50%;
+  transform: translate(50%, 50%);
+  width: 100%;
+  height: 1.5px;
+  background: #fcfcfa;
+}
+.main-container .logo-container .line6 {
+  margin-top: 0.5em;
+}
+.main-container .logo-container .line7 {
+  line-height: 2em;
+}
+.main-container .logo-container .line6, .main-container .logo-container .line7 {
+  animation: slideDown 1s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+.main-container .logo-container .fa {
+  margin-top: 0.25em;
+  font-size: 1.35em;
+  animation: fadeIn 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
+}

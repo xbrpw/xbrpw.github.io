@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+    --canvas-width: 400px;
+    --canvas-height: 400px;
+  }
+  body {
+    background: #222;
+    overflow: hidden;
+  }
+  #canvas {
+    width: var(--canvas-width);
+    height: var(--canvas-height);
+    position: absolute;
+    left: calc(50% - var(--canvas-width) / 2);
+    top: calc(50% - var(--canvas-height) / 2);
+    cursor: pointer;
+  }
+  #coords {
+    color: #fff;
+    font-weight: 700;
+  }
+  </style>
+
+</head>
+<body>
+<!-- Scratch to reveal -->
+<canvas id="canvas" width="400" height="400"></canvas>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

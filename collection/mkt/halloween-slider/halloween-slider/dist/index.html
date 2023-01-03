@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Halloween Slider</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+
+  <! –– Monster ––>
+  <svg version="1.1" id="eyes" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 76.9" style="enable-background:new 0 0 200 76.9;" xml:space="preserve">
+        <! –– Monster left eye––>    
+    <radialGradient id="SVGID_1_" cx="177.5137" cy="44.9043" r="27.1516" gradientTransform="matrix(-1 0 0 1 245.6859 0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.3757" style="stop-color:#F15A24" />
+      <stop offset="1" style="stop-color:#000000" />
+    </radialGradient>
+    <circle class="st0" id="ee" cx="68.2" cy="44.9" r="27.2" />
+    <radialGradient id="SVGID_00000171711621130329799450000002086544960624373905_" cx="68.1722" cy="44.9043" r="9.1708" gradientUnits="userSpaceOnUse">
+      <stop offset="0.6407" style="stop-color:#652210" />
+      <stop offset="1" style="stop-color:#000000" />
+    </radialGradient>
+    <circle class="evileye" style="fill:url(#SVGID_00000171711621130329799450000002086544960624373905_);" cx="68.2" cy="44.9" r="9.2" />
+    <ellipse id="pill1" cx="68.2" cy="44.9" rx="3.5" ry="4.6" />    
+    <! –– Monster rigth eye––>    
+    <radialGradient id="SVGID_00000106842411549351654530000013522795449081887899_" cx="110.1389" cy="44.8583" r="27.1516" gradientTransform="matrix(1 0 0 1 25.4796 0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.3757" style="stop-color:#F15A24" />
+      <stop offset="1" style="stop-color:#000000" />
+    </radialGradient>
+    <circle id="ee1" style="fill:url(#SVGID_00000106842411549351654530000013522795449081887899_);" cx="135.6" cy="44.9" r="27.2" />
+    <radialGradient id="SVGID_00000094591540226556750440000011777796877978848664_" cx="135.547" cy="44.8583" r="9.1708" gradientTransform="matrix(-1 0 0 1 271.1655 0)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.6407" style="stop-color:#652210" />
+      <stop offset="1" style="stop-color:#000000" />
+    </radialGradient>
+    <circle class="evileye" style="fill:url(#SVGID_00000094591540226556750440000011777796877978848664_);" cx="135.6" cy="44.9" r="9.2" />
+    <ellipse id="pill" cx="135.6" cy="44.9" rx="3.5" ry="4.6" /> 
+     <! –– Monster body––>  
+    <ellipse class="st4" cx="102.1" cy="13.8" rx="81.3" ry="35.1" />
+    <ellipse cx="102.1" cy="9.8" rx="81.3" ry="35.1" />
+  </svg>
+  
+  <! –– Slider ––>
+  <input type="range" min="1" max="100" value="0" class="slider" id="range">
+</div>
+
+<! –– Noise pattern ––>
+  <svg>
+    <defs>
+      <filter id="filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feTurbulence baseFrequency="1" xresult="colorNoise">
+          <animate attributeName="baseFrequency" values="0.1;0.8;0.1" dur="30s" repeatCount="indefinite" />
+        </feTurbulence>
+        <feColorMatrix in="colorNoise" type="matrix" values=".35 .35 .35 0 0 .35 .35 .35 0 0 .35 .35 .35 0 0 0 0 0 1 0" />
+        <feComposite operator="in" in2="SourceGraphic" result="monoNoise" />
+        <feBlend in="SourceGraphic" in2="monoNoise" mode="multiply" />
+      </filter>
+    </defs>
+  </svg>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

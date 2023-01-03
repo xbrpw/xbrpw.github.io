@@ -1,0 +1,10 @@
+.visually-hidden {
+  position:absolute;
+  opacity:0;
+}
+
+.without-pointer-events {
+  position:absolute;
+  opacity:0;
+  pointer-events: none;
+}

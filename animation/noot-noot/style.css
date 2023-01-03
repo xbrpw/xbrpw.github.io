@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+}
+
+.landscape-background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #44cdff;
+}
+
+.landscape-background .ground {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #f7f7f7;
+}
+
+.landscape-background .sun {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 25px;
+  right: 50px;
+  border-radius: 50%;
+  background-color: #ffd400;
+}
+
+.pingu {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: -450px auto 0 auto;
+}
+.pingu .head {
+  position: relative;
+  width: 150px;
+  height: 135px;
+  margin: auto;
+  background-color: black;
+  border-radius: 45%;
+}
+.pingu .head .eye {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+}
+.pingu .head .eye:nth-child(1) {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+.pingu .head .eye:nth-child(2) {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+.pingu .head .eye::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background-color: black;
+  transform: translate(-50%, -50%);
+}
+.pingu .head .eye::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  top: 50%;
+  left: 40%;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 2;
+}
+.pingu .head .mouth {
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  background-color: red;
+  bottom: 30px;
+  left: 50%;
+  border-radius: 50% 50% 50% 50%/70% 73% 27% 30%;
+  transform: translateX(-50%);
+}
+.pingu .body {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background-color: black;
+  margin: -20px auto;
+  border-radius: 50% 50% 50% 50%/82% 82% 18% 18%;
+}
+.pingu .body::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 225px;
+  height: 225px;
+  top: 25px;
+  left: 50%;
+  border-radius: 50% 50% 50% 50%/82% 82% 18% 18%;
+  background-color: orange;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+.pingu .body::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: 215px;
+  top: 38px;
+  left: 50%;
+  border-radius: 50% 50% 50% 50%/82% 82% 18% 18%;
+  background-color: white;
+  transform: translateX(-50%);
+  z-index: 6;
+}
+.pingu .body .arm {
+  position: absolute;
+  width: 50px;
+  height: 200px;
+  background-color: black;
+}
+.pingu .body .arm:nth-child(1) {
+  top: 38px;
+  left: 40px;
+  border-radius: 46% 20% 32% 62%/34% 25% 21% 27%;
+  transform: rotate(30deg);
+  transform-origin: top right;
+  animation: movinLeftArm 1s linear alternate infinite;
+}
+.pingu .body .arm:nth-child(2) {
+  top: 35px;
+  right: 35px;
+  border-radius: 8% 62% 64% 36%/34% 25% 21% 27%;
+  transform: rotate(-30deg);
+  transform-origin: top left;
+  animation: movinRightArm 1s linear alternate infinite;
+}
+.pingu .feet {
+  position: relative;
+  width: 200px;
+  height: 70px;
+  margin: auto;
+}
+.pingu .feet::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 5px;
+  width: 100px;
+  height: 70px;
+  border-radius: 50% 50% 50% 50%/62% 64% 36% 38%;
+  background-color: orange;
+}
+.pingu .feet::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 5px;
+  width: 100px;
+  height: 70px;
+  border-left: 1px solid grey;
+  border-radius: 50% 50% 50% 50%/62% 64% 36% 38%;
+  background-color: orange;
+}
+
+.text {
+  position: absolute;
+  width: 220px;
+  height: 150px;
+  margin-top: -500px;
+  margin-left: -25px;
+}
+.text p {
+  position: absolute;
+  width: 100%;
+  font-weight: bolder;
+  font-family: impact;
+  font-size: 35px;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 10;
+}
+.text::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: white;
+}
+.text::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  bottom: 50px;
+  right: 0;
+  border-radius: 46% 54% 0% 100%/32% 100% 0% 68%;
+  background-color: white;
+}
+
+@keyframes movinRightArm {
+  from {
+    transform: rotate(-30deg);
+  }
+  to {
+    transform: rotate(-50deg);
+  }
+}
+@keyframes movinLeftArm {
+  from {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(60deg);
+  }
+}

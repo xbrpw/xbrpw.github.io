@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  margin: 0;
+}
+
+.box {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 5rem;
+  letter-spacing: 0.5rem;
+  color: deeppink;
+  text-shadow: 0px 1px 1px #445055, -1px 0px 1px #cdd2d5, -1px 2px 1px #445055, -2px 1px 1px #cdd2d5, -2px 3px 1px #445055, -3px 2px 1px #cdd2d5, -3px 4px 1px #445055, -4px 3px 1px #cdd2d5, -4px 5px 1px #445055, -5px 4px 1px #cdd2d5, -5px 6px 1px #445055, -6px 5px 1px #cdd2d5, -6px 7px 1px #445055, -7px 6px 1px #cdd2d5, -7px 8px 1px #445055, -8px 7px 1px #cdd2d5;
+}

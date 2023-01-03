@@ -1,0 +1,100 @@
+@-webkit-keyframes drop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes drop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes roll {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 90% 55%;
+  }
+  50% {
+    transform: rotate(360deg);
+    transform-origin: 90% 55%;
+  }
+  100% {
+    transform: rotate(720deg);
+    transform-origin: 90% 55%;
+  }
+}
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 90% 55%;
+  }
+  50% {
+    transform: rotate(360deg);
+    transform-origin: 90% 55%;
+  }
+  100% {
+    transform: rotate(720deg);
+    transform-origin: 90% 55%;
+  }
+}
+.animate-eye .pinata-eye {
+  -webkit-animation: roll 1s linear;
+          animation: roll 1s linear;
+}
+
+.pinata-container {
+  display: block;
+  height: 300px;
+  width: 100%;
+}
+
+#pinata {
+  overflow: visible;
+  position: absolute;
+  left: 50%;
+  top: -25px;
+  width: 150px;
+  margin-left: -75px;
+  transform-origin: top center;
+  -webkit-animation: swing 1.5s cubic-bezier(0.31, 0.2, 0.67, 0.785) infinite;
+          animation: swing 1.5s cubic-bezier(0.31, 0.2, 0.67, 0.785) infinite;
+}

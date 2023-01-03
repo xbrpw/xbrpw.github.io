@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0 20px;
+}
+.container {
+  clip-path: circle(100%);
+  cursor: pointer;
+  left: 50%;
+  height: var(--height);
+  max-width: 640px;
+  position: relative;
+  transform-origin: 50% 50%;
+  transform: translateX(-50%);
+  transition: clip-path 300ms, height 300ms;
+  width: 100%;
+}
+.video {
+  transition: transform 300ms;
+  transform-origin: -19% 1%;
+  width: 100%;
+}
+.minimized.container {
+  clip-path: circle(15% at 12.5% 50%);
+  height: var(--halfHeight);
+  transition: clip-path 300ms, height 300ms;
+}
+.minimized .video {
+  transform: scale(0.45);
+  transition: transform 300ms;
+}
+.text {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 auto;
+  margin-top: 10px;
+  max-width: 640px;
+}
+.what {
+  color:  #222;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.time {
+  color: #888;
+  font-weight: 300;
+}
+.title {
+  color:  #222;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.hr {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  max-width: 640px;
+}

@@ -1,0 +1,28 @@
+.status {
+  width: 100%;
+  padding: 20px;
+  font-size: 2rem;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #FFF;
+  transition: all .575s
+}
+
+.status.on {
+  background: #2DDE98;
+  text-shadow: 0 0 8px rgba(0,0,0,.4);
+}
+.status.off {
+  background: #ff6c5f;
+}
+
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

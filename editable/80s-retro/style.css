@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Bungee+Spice);
+
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+body {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	background-color: black;
+	overflow: hidden;
+}
+
+div {
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+h1,
+h2 {
+	text-align: center;
+}
+
+h1 {
+	font-family: "Bungee Spice";
+	font-size: 7rem;
+	background-image: linear-gradient(
+		180deg,
+		rgba(48, 88, 113, 1) 10%,
+		rgba(26, 98, 189, 1) 15%,
+		rgba(134, 184, 249, 1) 28%,
+		rgba(208, 229, 255, 1) 51%,
+		rgba(0, 0, 0, 1) 63%,
+		rgba(226, 32, 218, 1) 80%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+h2 {
+	font-family: "Lobster";
+	font-size: 4rem;
+	color: #be30d0;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #be30d0, 0 0 40px #be30d0,
+		0 0 50px #be30d0, 0 0 60px #be30d0, 0 0 70px #be30d0;
+	position: relative;
+	top: -250px;
+	right: 170px;
+	transform: rotate(-20deg);
+}
+
+.shadow {
+	position: relative;
+	top: -365px;
+	left: 2px;
+	background: rgb(134, 184, 249);
+	background: linear-gradient(
+		180deg,
+		rgba(134, 184, 249, 1) 28%,
+		rgba(77, 233, 245, 1) 80%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+	h1 {
+		font-size: 6rem;
+	}
+
+	h2 {
+		font-size: 3rem;
+		top: -200px;
+		right: 145px;
+	}
+
+	.shadow {
+		top: -304px;
+	}
+}

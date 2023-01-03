@@ -1,0 +1,167 @@
+/* Please ❤ this if you like it! */
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
+
+/* #Primary
+================================================== */
+
+body{
+	width: 100%;
+	background-color: #1f2029;
+	overflow-x: hidden;
+}
+h4{
+  font-family: 'Poppins', sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+  color: #0af1c6;
+  font-weight: 400;
+  font-style: italic;
+}
+.section {
+  position: relative;
+	width: 100%;
+	display: block;
+}
+.full-height {
+  height: 100vh;
+}
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+	position: absolute;
+	left: -9999px;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+.checkbox-tool:checked + label,
+.checkbox-tool:not(:checked) + label{
+	position: relative;
+	width: 80px;
+	display: block;
+	padding: 0;
+	margin: 0 auto;
+	text-align: center;
+	height: 70px;
+	border-radius: 4px;
+  margin-top: 65px;
+  background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 6%, hsla(0,0%,100%, .1) 7.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,0) 4%, hsla(0,0%,0%,.03) 4.5%),
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),    
+    linear-gradient(90deg, hsl(0,0%,78%)  0%, 
+    hsl(0,0%,90%) 47%, 
+    hsl(0,0%,70%)100%);
+	z-index: 100;
+  cursor: pointer;
+}
+
+label span:nth-child(1){
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  transform: translateY(22px);
+  border-radius: 50%;
+  background-color:  #1f2029;
+  z-index:2;
+}
+label span:nth-child(2){
+  position: relative;
+  width: 8px;
+  height: 16px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  transform: translateY(16px);
+  border-radius: 3px;
+  background-color:  #1f2029;
+  z-index: 1;
+}
+label span:nth-child(3){
+  position: relative;
+  width: 4px;
+  height: 4px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  transform: translateY(-4px);
+  border-radius: 50%;
+  background-color:  #d6d6d6;
+  z-index:4;
+}
+label span:nth-child(4){
+  position: relative;
+  width: 62px;
+  height: 50px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  transform: translateY(-86px);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border: 10px solid #d6d6d6;
+  border-bottom-width: 0;
+	background-color: #1f2029;
+  z-index:6;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear; 
+}
+label span:nth-child(5){
+  position: relative;
+  width: 62px;
+  height: 50px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  transform: translateY(-136px);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border: 10px solid #d6d6d6;
+  border-bottom-width: 0;
+  border-right-width: 0;
+	background-color: #1f2029;
+  z-index:5;
+}
+.checkbox-tool:checked + label span:nth-child(4){
+  transform: translateY(-96px);
+}
+.btn{  
+	border-radius: 4px;
+	height: 48px;
+	font-size: 16px;
+	font-weight: 500;
+	-webkit-transition: all 200ms linear !important;
+    transition: all 200ms linear !important;
+	padding: 0 35px;
+	letter-spacing: 1px;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-ms-flex-pack: center;
+	text-align: center;
+	border: none;
+	color: #1f2029;
+  background-color: #0af1c6;
+  transform: translateY(-25px);
+  opacity: 0;
+  pointer-events: none;
+}
+.btn:hover{
+	box-shadow: 0 6px 15px 0 rgba(10, 241, 198, .2) !important;
+}
+.checkbox-tool:checked ~ .btn{
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}

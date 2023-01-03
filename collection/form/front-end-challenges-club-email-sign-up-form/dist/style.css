@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+:root {
+  --color-primary: #4c2982;
+  --color-secondary: #f9d170;
+  --color-bg: #f9f7f3;
+  --color-text: #252525;
+  --color-light: #f3f3f3;
+  --color-success: #067973;
+  --color-success-bg: #f5fffe;
+  --color-error: #b71540;
+  --color-error-bg: #fdeff3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: 0;
+}
+* input::-webkit-outer-spin-button,
+* input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  background: var(--color-bg);
+  font-family: "Inter", sans-serif;
+}
+body * {
+  transition: all 0.4s ease;
+}
+
+.signUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 80px 40px;
+}
+.signUp__content {
+  max-width: 300px;
+}
+.signUp__title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+}
+.signUp__form {
+  position: relative;
+}
+.signUp__label {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+}
+.signUp__email {
+  position: relative;
+  height: 48px;
+  display: flex;
+  margin-top: 8px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+}
+.signUp__input {
+  width: 100%;
+  height: auto;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: var(--color-text);
+  transition: all 0.4s ease;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+.signUp__input:focus {
+  color: var(--color-text);
+  border: none;
+  outline: 0;
+  box-shadow: inset 0px 0px 0px 1px var(--color-primary);
+}
+.signUp__input:focus:placeholder {
+  display: none;
+}
+.signUp__input:placeholder {
+  color: var(--color-text);
+  opacity: 0.3;
+}
+.signUp__placeholder {
+  position: absolute;
+}
+.signUp__submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  min-width: 48px;
+  height: 48px;
+  background: var(--color-secondary);
+  border: 0;
+}
+.signUp__submit .icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--color-primary);
+}
+.signUp__submit:focus, .signUp__submit:active {
+  box-shadow: inset 0px 0px 0px 1px var(--color-primary);
+}
+.signUp__error, .signUp__success {
+  position: absolute;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 40px;
+  width: 100%;
+  transition: all 0.4s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.signUp__error p, .signUp__success p {
+  font-weight: bold;
+  font-size: 16px;
+}
+.signUp__error small, .signUp__success small {
+  font-size: 14px;
+}
+.signUp__error .icon, .signUp__success .icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 8px;
+  top: 16px;
+}
+.signUp__error.show, .signUp__success.show {
+  opacity: 1;
+  visibility: visible;
+}
+.signUp__error {
+  background: var(--color-error-bg);
+  border: 1px solid var(--color-error);
+  color: var(--color-error);
+  margin-top: 16px;
+}
+.signUp__error .icon {
+  fill: var(--color-error);
+}
+.signUp__error.show {
+  animation: error 0.4s ease both;
+}
+.signUp__success {
+  background: var(--color-success-bg);
+  border: 1px solid var(--color-success);
+  color: var(--color-success);
+  position: absolute;
+  top: 0;
+  transform: translatey(40px);
+  transition: all 0.4s cubic-bezier(0.52, 0.62, 0.42, 1.14);
+}
+.signUp__success .icon {
+  fill: var(--color-success);
+}
+.signUp__success.show {
+  transform: translatey(0px);
+}
+
+@keyframes error {
+  0% {
+    transform: translatex(0px);
+  }
+  25% {
+    transform: translatex(-8px);
+  }
+  50% {
+    transform: translatex(8px);
+  }
+  75% {
+    transform: translatex(-8px);
+  }
+  100% {
+    transform: translatex(0px);
+  }
+}

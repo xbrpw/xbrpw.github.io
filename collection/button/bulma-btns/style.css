@@ -1,0 +1,17 @@
+.is-scrollable {
+  width: 100%;
+  overflow: auto;
+}
+
+.is-centered {
+  overflow: auto;
+}
+
+.box {
+  min-height: min-content; /* needs vendor prefixes */
+  display: flex;
+}
+.aligner{
+  align-items: center;
+  justify-content: center;
+}

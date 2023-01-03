@@ -1,0 +1,48 @@
+.container {
+  font-family: sans-serif;
+  margin: 0 auto 50px;
+  max-width: 500px;
+}
+
+label {
+  --base-font-size: 20px;
+  --input-border-color: grey;
+  --label-opacity: 0;
+  --label-transform: translateY(.5em);
+  --placeholder-opacity: .5;
+  font-size: var(--base-font-size);
+  font-family: sans-serif;
+  line-height: 1;
+  margin: 0;
+}
+label:focus-within {
+  --input-border-color: gold;
+  --label-opacity: 1;
+  --label-transform: translateY(0);
+  --placeholder-opacity: 0;
+}
+label span {
+  display: block;
+  font-size: 0.75em;
+  line-height: 1.5;
+  opacity: var(--label-opacity);
+  transform: var(--label-transform);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+label input {
+  border: 0.1em solid var(--input-border-color);
+  border-radius: 0.15em;
+  box-sizing: border-box;
+  display: block;
+  font-size: 1em;
+  padding: 0.5em;
+  margin: 0 0 0.5em 0;
+  transition: border 200ms ease;
+  width: 100%;
+}
+label input::placeholder {
+  opacity: var(--placeholder-opacity);
+}
+label input:focus {
+  outline: none;
+}

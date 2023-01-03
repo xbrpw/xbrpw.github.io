@@ -1,0 +1,85 @@
+html {
+  --background-color: #ebebeb;
+  font-family: helvetica, sans-serif;
+  background-color: var(--background-color);
+  color: #211;
+  transform: translate3d(0, 0, 0);
+  height: 100vh;
+  width: 100vw;
+}
+html::before {
+  content: "";
+  display: block;
+  width: 20vmin;
+  height: 30vmin;
+  background-color: var(--background-color);
+  position: fixed;
+  top: 49%;
+  left: 50%;
+  z-index: -1;
+  border-radius: 50%/43%;
+  transform: translate(-160%, -50%);
+  box-shadow: 1.4vmin -2.1vmin 1.4vmin 1.4vmin rgba(0, 0, 0, 0.1), 0 0.7vmin 1.4vmin 1.4vmin rgba(0, 0, 0, 0.1), 1.4vmin 1.4vmin 1.4vmin 1.4vmin rgba(0, 0, 0, 0.1), 0 -1.4vmin 2.8vmin 0.7vmin #fff, 0 0 1.4vmin 1.4vmin #fff, 0 0 1.4vmin 2.8vmin #cbcbca, 0 0 0 4.2vmin #dedede;
+}
+html::after {
+  content: "8";
+  font-weight: bold;
+  color: #aaa;
+  font-size: 45vmin;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: -2;
+  transform: rotateZ(-89deg) scaleX(0.2) translateY(-20vmin) translateX(15vmin);
+  filter: blur(5.5vmin);
+}
+
+body {
+  width: 40vmin;
+  height: 53vmin;
+  left: 50%;
+  top: 48%;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  text-transform: uppercase;
+  background: linear-gradient(60deg, #bfbfbf, #ffffff 68.91%);
+  font-weight: bold;
+  font-size: 3.4rem;
+  font-size: 7vmin;
+  text-align: center;
+  z-index: 2;
+  word-spacing: 100vw;
+  border-radius: 50%/3% 2% 6% 6%;
+  box-shadow: inset 0 5vw 10vw rgba(0, 0, 0, 0.05), inset -2px -10px 100px rgba(255, 255, 255, 0.8);
+}
+body::before {
+  content: "";
+  display: block;
+  width: 97%;
+  height: 3%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 1.5%;
+  background: black;
+  border-radius: 50%;
+  background: linear-gradient(175deg, #ffffff 20.59%, #e0e0e0 81.51%);
+  box-shadow: 0px 0.3vmin 0.3vmin 0.56vmin #fff, 0px 0.56vmin 0.56vmin 0.5vmin rgba(0, 0, 0, 0.1);
+}
+body::after {
+  content: "";
+  width: 80%;
+  height: 90%;
+  position: absolute;
+  z-index: -1;
+  background-color: #fff;
+  top: 10px;
+  left: 0;
+  opacity: 0.2;
+  border-radius: 0 0 100%;
+  box-shadow: 0 0 1.4vmin 1.4vmin rgba(255, 255, 255, 0.5), inset 4.2vmin 4.2vmin 8.4vmin 0px rgba(30, 30, 30, 0.2);
+}

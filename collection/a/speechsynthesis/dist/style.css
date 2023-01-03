@@ -1,0 +1,29 @@
+.container{
+  height:100vh;
+  width:100vw;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:2.5rem;
+}
+
+input{
+  height:35px;
+  width:250px;
+}
+button{
+  height:40px;
+  width:150px;
+
+}
+select{
+  height:35px;
+  width:410px;
+}
+.options_container{
+  display:flex;
+  align-items:flex-start;
+  justidy-content:center;
+  flex-direction:column;
+}

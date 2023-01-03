@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Codepen Challenge:  Vue - Transitions</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container" id="app">
+        <div class="card">
+            <img class="card__photo" :src="randomUser.photo" />
+            <h3 class="card__name">{{ randomUser.name }}</h3>
+            <div class="card__details">
+                <button @click="slide(-1)" :class="{ 'activeArrow': activePrevArrow }">
+                    <i data-feather="chevron-left"></i>    
+                </button>
+                
+                <div class="infoSlider">
+                    <transition 
+                        :name="transitionName" 
+                        mode="out-in" 
+                        tag="ul">
+                        <li v-if="infoState === 'location'" key="location">
+                            <small>Location</small>
+                            <span>{{ randomUser.location }}</span>
+                        </li>
+                        <li v-if="infoState === 'email'" key="email">
+                            <small>Email</small>
+                            <span>{{ randomUser.email }}</span>
+                        </li>
+                        <li v-if="infoState === 'phone'" key="phone">
+                            <small>Phone</small>
+                            <span>{{ randomUser.phone }}</span>
+                        </li>
+                    </transition>
+                </div>
+
+                <button @click="slide(1)" :class="{ 'activeArrow': activeNextArrow }">
+                    <i data-feather="chevron-right"></i>    
+                </button>
+                
+            </div>
+            <button class="card__follow" @mouseover="showFollowCard = true" @mouseout="showFollowCard = false" @mousedown="onFollow">Follow</button>
+            <button :class="iconActiveLike" class="card__like" @mousedown="showLikes">
+                <i data-feather="heart"></i>
+                <div id="likes" class="likes">{{ numOfLikes }}</div>
+            </button>
+            <button :class="iconActive" class="card__shared" @mousedown="showShareCard = !showShareCard">
+                <i data-feather="share-2"></i>
+            </button>
+        </div>
+
+        <transition @enter="shareCardEnter" @leave="shareCardLeave">
+            <div class="card shared" v-show="showShareCard" id="shareCard">
+                <button id="shareIcon" @click="showShareCard = false">
+                    <i data-feather="facebook"></i>
+                </button>    
+                <button id="shareIcon" @click="showShareCard = false">
+                    <i data-feather="instagram"></i>
+                </button> 
+                <button id="shareIcon" @click="showShareCard = false">
+                    <i data-feather="twitter"></i>
+                </button> 
+                <button id="shareIcon" @click="showShareCard = false">
+                    <i data-feather="linkedin"></i>
+                </button> 
+            </div>
+        </transition>
+
+        <transition @enter="followCardEnter" @leave="followCardLeave">
+            <div class="card follow" v-if="showFollowCard">
+                <div class="follow__num">
+                    <p><strong>{{ numOfFollowers }}</strong> followers</p>
+                </div>
+                <div class="follow__num">
+                    <p><strong>{{ numFollowing }}</strong> following</p>
+                </div>
+                <div class="follow__num">
+                    <p><strong>{{ numOfLikes }}</strong> likes</p>
+                </div>
+            </div>
+        </transition>
+    </div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/vue@2.6.11'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.27.0/feather.min.js'></script>
+<script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

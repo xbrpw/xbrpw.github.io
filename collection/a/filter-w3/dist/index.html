@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Filter W3</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<style>
+.filterDiv {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+<body>
+
+<h2>Filter DIV Elements</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('ciencia')"> Ciencia</button>
+  <button class="btn" onclick="filterSelection('quimica')"> Quimica</button>
+  <button class="btn" onclick="filterSelection('biologia')"> Biología</button>
+   <button class="btn" onclick="filterSelection('vidaSaludable')"> vidaSaludable</button>
+  <button class="btn" onclick="filterSelection('Tecnología ')"> Tecnología  </button>
+  <button class="btn" onclick="filterSelection('Talleres')">Talleres </button>
+  <button class="btn" onclick="filterSelection('Ingeniería  ')">Ingeniería </button>
+    <button class="btn" onclick="filterSelection('Física')"> Física</button>
+  <button class="btn" onclick="filterSelection('Geografía')"> Geografía</button>
+  <button class="btn" onclick="filterSelection('Matemáticas')"> </button>
+  <button class="btn" onclick="filterSelection('valores   ')"> </button>
+  <button class="btn" onclick="filterSelection('Creatividad')"> </button>
+    <button class="btn" onclick="filterSelection('EducaciónFísica')">Educación Física </button>
+  <button class="btn" onclick="filterSelection('Historia')">Historia</button>
+  <button class="btn" onclick="filterSelection('FormaciónCívicayÉtica')"> </button>
+  <button class="btn" onclick="filterSelection('Espaol  ')">Español </button>
+  <button class="btn" onclick="filterSelection('Inglés')">Inglés </button>
+  <button class="btn" onclick="filterSelection('Artes')">Artes </button>
+  <button class="btn" onclick="filterSelection('Orientación')">Orientación </button>
+  
+  <button class="btn" onclick="filterSelection('Directivos')">Directivos </button>
+ 
+  
+  
+</div>
+
+<div class="container">
+  <div class="filterDiv ciencia quimica biologia vidaSaludable">ciencia quimica biologia vidaSaludable</div>
+  <div class="filterDiv ciencia ">Ciencia</div>
+  <div class="filterDiv tecnologia  Talleres ">Tecnología asignaturaTecnologia Talleres</div>
+  <div class="filterDiv tecnologia">Tecnología </div>
+  <div class="filterDiv Ingeniería Física Geografía ">Ingeniería Física Geografía </div>
+  <div class="filterDiv Ingeniería">Ingeniería</div>
+  <div class="filterDiv Matemáticas">Matemáticas</div>
+  <div class="filterDiv valores  FormaciónCívicayÉtica  Espaol  Inglés ">Valores   Formación Cívica y Ética,  Español,  Inglés </div>
+  <div class="filterDiv valores">Valores </div>
+  <div class="filterDiv Creatividad EducaciónFísica  Historia  Artes Orientación">Creatividad EducaciónFísica  Historia  Artes Orientación</div>
+  <div class="filterDiv Creatividad">Creatividad</div>
+  <div class="filterDiv Directivos">Directivos</div>
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

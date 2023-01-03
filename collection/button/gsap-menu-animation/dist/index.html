@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Gsap Menu Animation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="menu">
+  <div class="slider">
+    <div class="focus"></div>
+  </div>
+  <a class="link" href="#">
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <title>ionicons-v5-i</title>
+        <path d="M80,212V448a16,16,0,0,0,16,16h96V328a24,24,0,0,1,24-24h80a24,24,0,0,1,24,24V464h96a16,16,0,0,0,16-16V212" style="
+                fill: none;
+                stroke: inherit;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 32px;
+              " />
+        <path d="M480,256,266.89,52c-5-5.28-16.69-5.34-21.78,0L32,256" style="
+                fill: none;
+                stroke: inherit;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 32px;
+              " />
+        <polyline points="400 179 400 64 352 64 352 133" style="
+                fill: none;
+                stroke: inherit;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 32px;
+              " />
+      </svg>
+    </div>
+  </a><a class="link" href="#">
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <title>ionicons-v5-f</title>
+        <path d="M352.92,80C288,80,256,144,256,144s-32-64-96.92-64C106.32,80,64.54,124.14,64,176.81c-1.1,109.33,86.73,187.08,183,252.42a16,16,0,0,0,18,0c96.26-65.34,184.09-143.09,183-252.42C447.46,124.14,405.68,80,352.92,80Z" style="
+                fill: none;
+                stroke: inherit;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 32px;
+              " />
+      </svg>
+    </div>
+  </a><a class="link" href="#">
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <title>ionicons-v5-a</title>
+        <path d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z" style="
+                fill: none;
+                stroke: inherit;
+                stroke-miterlimit: 10;
+                stroke-width: 32px;
+              " />
+        <line x1="256" y1="176" x2="256" y2="336" style="
+                fill: none;
+                stroke: inherit;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 32px;
+              " />
+        <line x1="336" y1="256" x2="176" y2="256" style="
+                fill: none;
+                stroke: inherit;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 32px;
+              " />
+      </svg>
+    </div>
+  </a><a class="link" href="#">
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <title>ionicons-v5-j</title>
+        <path d="M344,144c-3.92,52.87-44,96-88,96s-84.15-43.12-88-96c-4-55,35-96,88-96S348,90,344,144Z" style="
+                fill: none;
+                stroke: inherit;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 32px;
+              " />
+        <path d="M256,304c-87,0-175.3,48-191.64,138.6C62.39,453.52,68.57,464,80,464H432c11.44,0,17.62-10.48,15.65-21.4C431.3,352,343,304,256,304Z" style="
+                fill: none;
+                stroke: inherit;
+                stroke-miterlimit: 10;
+                stroke-width: 32px;
+              " />
+      </svg>
+    </div>
+  </a><a class="link" href="#">
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <title>ionicons-v5-q</title>
+        <path d="M262.29,192.31a64,64,0,1,0,57.4,57.4A64.13,64.13,0,0,0,262.29,192.31ZM416.39,256a154.34,154.34,0,0,1-1.53,20.79l45.21,35.46A10.81,10.81,0,0,1,462.52,326l-42.77,74a10.81,10.81,0,0,1-13.14,4.59l-44.9-18.08a16.11,16.11,0,0,0-15.17,1.75A164.48,164.48,0,0,1,325,400.8a15.94,15.94,0,0,0-8.82,12.14l-6.73,47.89A11.08,11.08,0,0,1,298.77,470H213.23a11.11,11.11,0,0,1-10.69-8.87l-6.72-47.82a16.07,16.07,0,0,0-9-12.22,155.3,155.3,0,0,1-21.46-12.57,16,16,0,0,0-15.11-1.71l-44.89,18.07a10.81,10.81,0,0,1-13.14-4.58l-42.77-74a10.8,10.8,0,0,1,2.45-13.75l38.21-30a16.05,16.05,0,0,0,6-14.08c-.36-4.17-.58-8.33-.58-12.5s.21-8.27.58-12.35a16,16,0,0,0-6.07-13.94l-38.19-30A10.81,10.81,0,0,1,49.48,186l42.77-74a10.81,10.81,0,0,1,13.14-4.59l44.9,18.08a16.11,16.11,0,0,0,15.17-1.75A164.48,164.48,0,0,1,187,111.2a15.94,15.94,0,0,0,8.82-12.14l6.73-47.89A11.08,11.08,0,0,1,213.23,42h85.54a11.11,11.11,0,0,1,10.69,8.87l6.72,47.82a16.07,16.07,0,0,0,9,12.22,155.3,155.3,0,0,1,21.46,12.57,16,16,0,0,0,15.11,1.71l44.89-18.07a10.81,10.81,0,0,1,13.14,4.58l42.77,74a10.8,10.8,0,0,1-2.45,13.75l-38.21,30a16.05,16.05,0,0,0-6.05,14.08C416.17,247.67,416.39,251.83,416.39,256Z" style="
+                fill: none;
+                stroke: inherit;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 32px;
+              " />
+      </svg>
+    </div>
+  </a>
+</div>
+
+<!--  -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

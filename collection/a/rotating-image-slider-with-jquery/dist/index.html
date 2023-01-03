@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - ROTATING IMAGE SLIDER WITH JQUERY</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="content">
+  <h1>Rotating Image Slider</h1><br>
+  
+	<div class="rm_wrapper">
+		<div id="rm_container" class="rm_container">
+			<ul>
+				<li data-images="rm_container_1" data-rotation="-15"><img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/1.jpg"/></li>
+				<li data-images="rm_container_2" data-rotation="-5"><img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/2.jpg"/></li>
+				<li data-images="rm_container_3" data-rotation="5"><img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/3.jpg"/></li>
+				<li data-images="rm_container_4" data-rotation="15"><img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/4.jpg"/></li>
+			</ul>
+			<div id="rm_mask_left" class="rm_mask_left"></div>
+			<div id="rm_mask_right" class="rm_mask_right"></div>
+			<div id="rm_corner_left" class="rm_corner_left"></div>
+			<div id="rm_corner_right" class="rm_corner_right"></div>
+			<h2>Fashion Explosion 2013</h2>
+			<div style="display:none;">
+				<div id="rm_container_1">
+					<img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/1.jpg"/>
+					<img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/5.jpg"/>
+					<img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/6.jpg"/>
+					<img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/7.jpg"/>
+				</div>
+				<div id="rm_container_2">
+					<img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/2.jpg"/>
+					<img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/8.jpg"/>
+					<img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/9.jpg"/>
+					<img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/10.jpg"/>
+				</div>
+				<div id="rm_container_3">
+					<img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/3.jpg"/>
+					<img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/11.jpg"/>
+					<img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/12.jpg"/>
+					<img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/13.jpg"/>
+				</div>
+				<div id="rm_container_4">
+					<img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/4.jpg"/>
+					<img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/14.jpg"/>
+					<img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/15.jpg"/>
+					<img src="https://tympanus.net/Tutorials/RotatingImageSlider/images/16.jpg"/>
+				</div>
+			</div>
+		</div>
+		<div class="rm_nav">
+			<a id="rm_next" href="#" class="rm_next"></a>
+			<a id="rm_prev" href="#" class="rm_prev"></a>
+		</div>
+		<div class="rm_controls">
+			<a id="rm_play" href="#" class="rm_play">Play</a>
+			<a id="rm_pause" href="#" class="rm_pause">Pause</a>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://tympanus.net/Tutorials/RotatingImageSlider/js/jquery.transform-0.9.3.min_.js"></script>
+<script type="text/javascript" src="https://tympanus.net/Tutorials/RotatingImageSlider/js/jquery.mousewheel.js"></script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

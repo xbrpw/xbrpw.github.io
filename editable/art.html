@@ -1,0 +1,78 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+/************************
+ * CSS Reset & container
+ ************************/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.container {
+	background: #06030D;
+	height: 100vh;
+	display: flex;
+}
+
+/***************
+ * Main content
+ ***************/
+.content {
+	margin: auto;
+	text-align: center;
+	font-family: 'Goldman', cursive;
+	font-weight: 800;
+	letter-spacing: -0.3333em;
+	background: url(https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+	background-position: center;
+  background-size: cover;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+.content p {
+	line-height: 0.66666em;
+}
+.content .top-line {
+	font-size: 16.5vw;
+}
+.content .bottom-line {
+	font-size: 32vw;
+}
+
+/*********************************
+ * Attribution (initially hidden)
+ *********************************/
+.attr {
+	position: absolute;
+	bottom: 0;
+	color: #3782C7;
+	width: 300px;
+	left: calc(50vw - 150px);
+	padding: 10px;
+	text-align: center;
+	margin: auto;
+	background: hsl(0, 0%, 50%, 0.18);
+	opacity: 0;
+	font-family: "Open Sans", sans-serif;
+	font-size: 0.8em;
+	border-radius: 10px 10px 0 0;
+	transition: opacity 0.75s;
+}
+.attr a {
+	color: #F2CC45;
+	text-decoration: none;
+}
+.attr:hover {
+	opacity: 1;
+}
+
+/**************************************/
+</style>
+<div class="container">
+	<div class="content">
+		<p class="top-line"contenteditable="true">abstract</p>
+		<p class="bottom-line"contenteditable="true">ART</p>
+	</div>
+</div>

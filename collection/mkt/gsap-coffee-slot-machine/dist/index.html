@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - GSAP Coffee Slot Machine</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--
+  Source code at 
+  https://github.com/taylorkmho/coffeeSlots
+-->
+
+<section><aside><div class="graphic"><svg class="graphic__machine slot-machine" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150.36 214.76">
+  <defs>
+    <rect id="slot-machine__slot" width="27.39" height="51.5" y="41.85" fill="#fff"/>
+    <path id="slot-machine__display" fill="#fff" d="M74.94 5.92a105 105 0 0 1 39.42 7.25c3.62 1.48 3.9 4.52 4.17 7.94v.4c.25 3.25-.23 6-3.5 6H34.8c-3.26 0-3.74-2.8-3.5-6v-.4c.27-3.4.56-6.44 4.18-7.92a105 105 0 0 1 39.46-7.25z"/>
+    <mask id="Mask">
+      <use xlink:href="#slot-machine__display" />
+    </mask>
+  </defs>
+  <g class="slot-machine__handle">
+    <circle cx="144.15" cy="38.7" r="6.21" fill="#d96e66"/>
+    <path fill="#cdd5d8" d="M145 79.46l-.36-34.58a5 5 0 0 1-.55 0 5.7 5.7 0 0 1-.76-.05l-.48 34-7.4-1.8-.38 24.17 13.14-4.26V80.3z"/>
+  </g>
+  <g class="slot-machine__display">
+    <path fill="#cdd5d8" d="M74.7 0c24.5 0 42.62 6.63 52.23 11.22a14.67 14.67 0 0 1 8.3 12.3l.64 9.92H13.54l.64-9.92a14.67 14.67 0 0 1 8.3-12.3C32.1 6.62 50.24 0 74.7 0z"/>
+    <use xlink:href="#slot-machine__display" />
+    <rect mask="url(#Mask)" width="122.33" height="24" x="13.54" y="4" fill="transparent"></rect>
+  </g>
+  <g class="slot-machine__base">
+    <rect width="122.33" height="68.47" x="13.54" y="33.44" fill="#7a6863"/>
+    <polygon fill="#9f8176" points="149.4 118.27 0 118.16 13.54 101 135.87 101 149.4 118.27"/>
+    <rect width="149.4" height="96.48" y="118.16" fill="#7a6863"/>
+  </g>
+  <g class="slot-machine__slots">
+    <use x="61" xlink:href="#slot-machine__slot" />
+    <use x="27.61" xlink:href="#slot-machine__slot" />
+    <use x="94.4" xlink:href="#slot-machine__slot" />
+  </g>
+  <g class="slot-machine__hole">
+    <rect width="66.54" height="70.22" x="41.66" y="136.76" fill="#3d3432"/>
+    <rect width="66.54" height="4.37" x="41.66" y="202.61" fill="#9f8176"/>
+  </g>
+  <g class="slot-machine__flow">
+    <rect width="10.29" height="46.97" x="69.55" y="155.64" fill="#c6a19d" opacity=".5"/>
+    <circle cx="69" cy="166" r="2" fill="#fff"/>
+    <circle cx="72" cy="168.5" r="3" fill="#fff"/>
+    <circle cx="79.56" cy="158" r="1.91" fill="#fff"/>
+    <circle cx="76.35" cy="183" r="1.4" fill="#fff"/>
+    <circle cx="78.34" cy="178" r=".7" fill="#fff"/>
+    <circle cx="69.26" cy="193" r="1.4" fill="#fff"/>
+  </g>
+  <path class="slot-machine__shadow" d="M74.24 214.76V0h.17C49.94 0 31.97 6.63 22.36 11.22a14.75 14.75 0 0 0-8.38 12.3l-.72 9.92v68.32L0 117.76h.24v97h74z" opacity=".1"/>
+</svg></div></aside><main><div class="copy"><h1 class="copy__title">THE <strong>COFFEE-O-MATIC</strong></h1><p class="copy__description">With coffee prices soaring, management has come up with this elegant caffeine solution. Who said budget cuts can&rsquo;t be fun?</p></div><div class="slots"><div class="slots__slot"></div><div class="slots__slot"></div><div class="slots__slot"></div></div><button data-action="spin" class="btn btn--spin">SPIN</button></main></section>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
