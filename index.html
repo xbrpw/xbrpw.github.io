@@ -2,8 +2,9 @@
 <html lang="es-MX" >    <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
   <meta charset="UTF-8">
-  <title>xiiber power mx  ⚡️ Desarrollando ideas a la medida</title>
+<title>xiiber power mx  ⚡️ Desarrollando ideas a la medida</title>
 </head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 /*@import url('https://fonts.googleapis.com/css?family=Hind:400,600,700');*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap");
@@ -11,43 +12,465 @@ font-family: 'Hind', sans-serif;
 /*font-family: "Lora", serif;*/
 
 .overflow-hidden {overflow:hidden;}
+
+
+
+@charset "UTF-8";
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; overflow:hidden; }
+  
+
+body {margin: 0;}
+
+footer {display: block;}
+
+a {background: transparent;}
+
+a:active, a:hover {
+  outline: 0;}
+
+h1 {font-size: 2em;margin: 0.67em 0;}
+
+img {
+  border: 0;}
+
+@media print {
+  * {text-shadow: none !important;color: rgb(0, 0, 0) !important;background: transparent !important;box-shadow: none !important;}
+
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: benton-sans, "Helvetica Neue", helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  background-color: black;
+
+}
+
+a {text-decoration: none;}
+
+a:hover, a:focus {
+
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+img {
+  vertical-align: middle;
+}
+
+h1 {
+  font-family: inherit;
+  font-weight: 200;
+  line-height: 1.1;
+}
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+
+
+.dot {
+  animation:yellowWipeDown 5s ease-out;
+  background-color:white;
+  box-shadow:none;
+  height:100vh;
+  left:0;
+  position:absolute;
+  right:0;
+  top:0;
+  width:100vw;
+  z-index:-1;
+}
+
+@keyframes yellowWipeDown {
+  0% {
+    box-shadow:0 0 1vmin 1vmin rgba(212, 200, 200, 0.884); 
+    height:1vmin;
+  }
+  100% {
+    box-shadow:0 0 10vmin 10vmin rgba(255, 255, 255, 0.774);
+    height:100vh;
+  }
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  z-index: -1; 
+  position:absolute; 
+
+}
+
+.container:before, .container:after {
+  content: " ";
+  display: table;
+}
+
+.container:after {
+  clear: both;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+a {
+  text-decoration: none;
+}
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  html, body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+html, body {
+  height: 100%;
+}
+
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -200px; /* este sube */ 
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+  height: 100px;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.container .content {
+  margin-bottom: 40px;
+}
+
+h1.logo {
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+h1.logo a {
+  display: inline-block;
+  height: 96px;
+  width: 69px;
+  overflow: hidden;
+  background: url("");
+  background-repeat: repeat;
+}
+
+h1.logo a:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.302325581395349), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+  h1.logo a {
+    background: url("");
+    background-size: 69px auto;
+  }
+}
+.logo-sfdc {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 430px;
+  height: 130px;
+  padding: 13.66667px 0;
+  text-align: center;
+
+}
+
+.logo-sfdc a {
+  display: block;
+
+  text-decoration: none;
+  color: black;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+}
+
+.logo-sfdc a span {
+  display: inline-block;
+  height: 49px;
+  width: 70px;
+  text-align: center;
+  margin: 0 3px -22px;
+  overflow: hidden;
+  background: url("");
+  background-repeat: repeat;
+  background-repeat: no-repeat;
+}
+
+.logo-sfdc a span:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.302325581395349), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+  .logo-sfdc a span {
+    background: url("");
+    background-size: 70px auto;
+  }
+}
+
+.logo-top {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 430px;
+  height: 20px;
+  padding: 13.66667px 0;
+  text-align: center;
+
+}
+
+.logo-top a {
+  display: block;
+
+  text-decoration: none;
+  color: black;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+}
+
+.logo-top a span {
+  display: inline-block;
+  height: 49px;
+  width: 70px;
+  text-align: center;
+  margin: 0 3px -22px;
+  overflow: hidden;
+  background: url("");
+  background-repeat: repeat;
+  background-repeat: no-repeat;
+}
+
+.logo-top a span:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.302325581395349), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+  .logo-top a span {
+    background: url("");
+    background-size: 70px auto;
+  }
+}
+.legal {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  text-align: center;
+}
+
+.legal li {
+  display: inline-block;
+  margin: 5px;
+}
+
+.legal li, .legal a {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: 0;  color: black;
+}
+
+.legal a:hover {
+  color: black;
+}
 </style>
 
 <body>
-
-<div style=" height: 100vh;margin: 0;display: grid;place-content: center;">
-  <h1 class="coolHoverEffect"><b>xbr.pw</b> power</h1>
-  <style>
-    .coolHoverEffect {
-    --c: #ef6a3e;
-    line-height: 1.6em;
-    background: linear-gradient(var(--c) 0 0), conic-gradient(from -135deg at 100% 50%, var(--c) 90deg, #0000 0) 0 var(--p, 0%), conic-gradient(from -135deg at 1.2em 50%, #0000 90deg, var(--c) 0) 100% var(--p, 0%);
-    -webkit-background-clip: text, border-box, border-box;
-    background-size: 100%, var(--s, 0%) 150%, var(--s, 0%) 150%;
-    background-repeat: no-repeat;
-    background-blend-mode: difference, normal;
-    filter: Invert(1);
-    color: transparent;
-    transition: 0.4s ease-in, background-position 0s;
-  }
-
-  .coolHoverEffect:hover {
-    --p: 100%;
-    /* it should be .6em (1.2em/2) but we use a litte bigger to avoid gaps */
-    --s: calc(50% + .61em);font-size: 1.5rem;
-    border-radius: 25px;
-    font-weight: 400;
-  }
-
-  .coolHoverEffect {
-    font-family: Roboto; 
-    font-weight: 400;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0 0.8em;font-weight: 200;
-  }
-  </style>
+<div class="logo-top ">
+  <a href="#login" title="xbr.pw">Crear cuenta <span></span>  Continuar como invitado</a><span id="login"></span><br>
 </div>
+  <div class="dot"></div>  
+  <div class="page-wrap">
+    <div class="container">     
+      <h1 class="logo"><a href="" title="xBr">xBr</a></h1>
+      <div class="content"> <!-- Iniciar sesión -->
+        <img src="https://luisangelmaciel.github.io/img/lamp-martech.svg" width="200px" height="auto">
+      </div>
+    </div>
+    <div style="z-index: 99;  display: block;
+    margin: auto;
+    max-width: 430px;
+    height: 55px;
+    text-align: center;" class="w3-container w3-center">
+      <!-- style=" height: 100vh;margin: 0;display: grid;place-content: center;" -->
+      <h1 class="coolHoverEffect"><b>Iniciar</b> Sesión</h1>
+      <style >
+        .coolHoverEffect {
+        --c: #ef6a3e;
+        line-height: 1.6em;
+        background: linear-gradient(var(--c) 0 0), conic-gradient(from -135deg at 100% 50%, var(--c) 90deg, #0000 0) 0 var(--p, 0%), conic-gradient(from -135deg at 1.2em 50%, #0000 90deg, var(--c) 0) 100% var(--p, 0%);
+        -webkit-background-clip: text, border-box, border-box;
+        background-size: 100%, var(--s, 0%) 150%, var(--s, 0%) 150%;
+        background-repeat: no-repeat;
+        background-blend-mode: difference, normal;
+        filter: Invert(1);
+        color: transparent;
+        transition: 0.4s ease-in, background-position 0s;
+      }
+    
+      .coolHoverEffect:hover {
+        --p: 100%;
+        /* it should be .6em (1.2em/2) but we use a litte bigger to avoid gaps */
+        --s: calc(50% + .61em);font-size: 1.5rem;
+        border-radius: 25px;
+        font-weight: 400;
+      }
+    
+      .coolHoverEffect {
+        font-family: Roboto; 
+        font-weight: 400;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0 0.8em;font-weight: 200;
+      }
+      </style>
+    </div>  
+  </div>
+
+
+
+  <footer class="logo-sfdc">
+  
+ 
+    <a href="#login" title="xbr.pw" class="w3-hide"> Crear cuenta <span></span>  Continuar como invitado</a><span id="login"></span><br>
+  
+    <div style=" display: block;
+    margin: auto;
+    max-width: 430px;
+    height: 1px;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.514) 0, rgba(5, 35, 165, 0.2) 50%, rgba(255, 255, 255, 0.514) 100%);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;"></div> 
+
+    <ul class="legal">
+      <li><a href="#TermsOfService">Términos de servicio</a></li><span id="TermsOfService"></span>
+      <li><a href="#privacy">Privacidad</a></li><span id="privacy"></span>
+      <li><a href="#cookies">Cookies</a></li><span id="cookies"></span>
+      <li><a href="#cookies"> &copy; 2022 xbr.pw</a></li><span id="cookies"></span>
+    </ul>
+  </footer>
+
+
+<!--   <div>
+      <h1 class="coolHoverEffect" style=" height: 100vh;margin: 0;display: grid;place-content: center;"><b>xbr.pw</b> power</h1>
+      <style>
+        .coolHoverEffect {
+        --c: #ef6a3e;
+        line-height: 1.6em;
+        background: linear-gradient(var(--c) 0 0), conic-gradient(from -135deg at 100% 50%, var(--c) 90deg, #0000 0) 0 var(--p, 0%), conic-gradient(from -135deg at 1.2em 50%, #0000 90deg, var(--c) 0) 100% var(--p, 0%);
+        -webkit-background-clip: text, border-box, border-box;
+        background-size: 100%, var(--s, 0%) 150%, var(--s, 0%) 150%;
+        background-repeat: no-repeat;
+        background-blend-mode: difference, normal;
+        filter: Invert(1);
+        color: transparent;
+        transition: 0.4s ease-in, background-position 0s;
+      }
+    
+      .coolHoverEffect:hover {
+        --p: 100%;
+        /* it should be .6em (1.2em/2) but we use a litte bigger to avoid gaps */
+        --s: calc(50% + .61em);font-size: 1.5rem;
+        border-radius: 25px;
+        font-weight: 400;
+      }
+    
+      .coolHoverEffect {
+        font-family: Roboto; 
+        font-weight: 400;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0 0.8em;font-weight: 200;
+      }
+      </style>
+    </div>
+  -->
 
 
 
