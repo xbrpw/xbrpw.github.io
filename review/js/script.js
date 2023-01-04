@@ -49,7 +49,7 @@ window.onload = function (e) {
             url: `https://www.xbr.pw/assets/css/hey/image-gallery-with-detailed-info/index.html`,
             name: `03`,
             image: `img/cgtravel-2017.webp`,
-            desc: "CG Travel 2017",
+            desc: "CG Travel 2016",
             color: "#6aa0b6"
         },
         {
@@ -125,11 +125,11 @@ window.onload = function (e) {
             color: "#60c4c7"
         },
         {
-            url: `#`,
+            url: `https://www.xbr.pw/assets/css/hi/responsive-css-vertical-slider-with-thumbnails/dist/index.html`,
             name: `13`,
-            image: `img/placeholder.webp`,
-            desc: "",
-            color: "#fe9014"
+            image: `img/cgtravel-2017.png`,
+            desc: "CG Travel 2017",
+            color: "#6aa0b6"
         },
         {
             url: `#`,
