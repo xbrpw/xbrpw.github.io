@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+blue = #26b1ff
+lime = #49c85b
+purple = #994ae1
+*
+	box-sizing border-box
+body
+	text-align center
+	background-color #111
+	color white
+	font-family Open Sans, sans-serif
+	font-weight lighter
+h1
+	letter-spacing 5px
+	margin-bottom 0px
+hr
+	display: block
+	height: 1px
+	border: 0
+	border-top: 1px solid orangered
+	margin: 1em 0
+	padding: 0
+hr.blue
+	border-color blue
+hr.purple
+	border-color purple
+hr.lime
+	border-color lime
+.row.codepen-lines
+	width 500px
+	max-width 500px
+	margin auto
+.row
+	margin-bottom 30px
+	.col6,.col12
+		border 1px solid white
+		padding-bottom 20px
+		.button
+			text-decoration none
+			color white
+			padding 10px 0px
+			border-bottom 5px solid #111
+			letter-spacing 2px
+		.button.border-blue
+			&:hover
+				border-bottom-color blue
+		.button.border-lime
+			&:hover
+				border-bottom-color lime
+		.button.border-purple
+			&:hover
+				border-bottom-color purple
+		.button.border-white
+			&:hover
+				border-bottom-color #d0d0d0
+		.button.gray-button
+			background-color #272729
+			padding 10px 30px
+			&:hover
+				background-color lighten(@background-color, 10%)
+		.white-border
+			border 2px solid white
+			padding 10px
+			border-radius 5px
+			&:hover
+				color #111
+				background-color white
+		.green-button
+			background-color lime
+			padding 15px 30px
+			&:hover
+				background-color darken(lime, 10%)
+.remove-left-border
+	border-left-width 0px!important
+.content
+	width 90%
+	margin auto
+@media (max-width: 680px)
+	.col4
+		width 33.333333333333336%
+	.row.codepen-lines
+		width 100%

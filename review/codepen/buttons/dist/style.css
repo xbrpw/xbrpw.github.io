@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
+* {
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  background-color: #111;
+  color: #fff;
+  font-family: Open Sans, sans-serif;
+  font-weight: lighter;
+}
+h1 {
+  letter-spacing: 5px;
+  margin-bottom: 0px;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ff4500;
+  margin: 1em 0;
+  padding: 0;
+}
+hr.blue {
+  border-color: #26b1ff;
+}
+hr.purple {
+  border-color: #994ae1;
+}
+hr.lime {
+  border-color: #49c85b;
+}
+.row.codepen-lines {
+  width: 500px;
+  max-width: 500px;
+  margin: auto;
+}
+.row {
+  margin-bottom: 30px;
+}
+.row .col6,
+.row .col12 {
+  border: 1px solid #fff;
+  padding-bottom: 20px;
+}
+.row .col6 .button,
+.row .col12 .button {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 0px;
+  border-bottom: 5px solid #111;
+  letter-spacing: 2px;
+}
+.row .col6 .button.border-blue:hover,
+.row .col12 .button.border-blue:hover {
+  border-bottom-color: #26b1ff;
+}
+.row .col6 .button.border-lime:hover,
+.row .col12 .button.border-lime:hover {
+  border-bottom-color: #49c85b;
+}
+.row .col6 .button.border-purple:hover,
+.row .col12 .button.border-purple:hover {
+  border-bottom-color: #994ae1;
+}
+.row .col6 .button.border-white:hover,
+.row .col12 .button.border-white:hover {
+  border-bottom-color: #d0d0d0;
+}
+.row .col6 .button.gray-button,
+.row .col12 .button.gray-button {
+  background-color: #272729;
+  padding: 10px 30px;
+}
+.row .col6 .button.gray-button:hover,
+.row .col12 .button.gray-button:hover {
+  background-color: #3c3c3f;
+}
+.row .col6 .white-border,
+.row .col12 .white-border {
+  border: 2px solid #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+.row .col6 .white-border:hover,
+.row .col12 .white-border:hover {
+  color: #111;
+  background-color: #fff;
+}
+.row .col6 .green-button,
+.row .col12 .green-button {
+  background-color: #49c85b;
+  padding: 15px 30px;
+}
+.row .col6 .green-button:hover,
+.row .col12 .green-button:hover {
+  background-color: #39bd4c;
+}
+.remove-left-border {
+  border-left-width: 0px !important;
+}
+.content {
+  width: 90%;
+  margin: auto;
+}
+@media (max-width: 680px) {
+  .col4 {
+    width: 33.333333333333336%;
+  }
+  .row.codepen-lines {
+    width: 100%;
+  }
+}

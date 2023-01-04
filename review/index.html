@@ -128,8 +128,53 @@
             <div class="mainNav__social">
                 <div class="mainNav__social">
                     <span class="mainNav__iconSocial" onclick="redirectToXiiberTravel()" class="xiibertravel w3-hide"><img src="img/dribbble.svg" alt="Dribbble" class="w3-hide"></span>
+                    <span class="mainNav__iconSocial" id="theme-toggle"><img src="img/linkedin.svg" alt="Linkedin" title="Dark-mode"></span>
                     <span class="mainNav__iconSocial w3-hide" onclick="redirectToLuisAngelMaciel()" class="luisangelmaciel w3-hide"><img src="img/linkedin.svg" alt="Linkedin" class="w3-hide"></span>
                     <span class="mainNav__iconSocial" onclick="redirectToCodepen()" class="codepen"><img src="img/codepen.svg" alt="Codepen"></span>
+
+                     <div id="DarkMode-Localstorage">
+                        <style>
+                          body {
+                            color: black; 
+                            background-color: white;
+                          }
+                          body.dark {
+                            color: white; 
+                            background-color: black;
+                          }
+                        </style>
+
+                        <script>
+                        var darkMode = false;
+
+                        // default to system setting
+                        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                        darkMode = true;
+                        }
+
+                        // preference from localStorage should overwrite
+                        if (localStorage.getItem('theme') === 'dark') {
+                        darkMode = true;
+                        } else if (localStorage.getItem('theme') === 'light') {
+                        darkMode = false;
+                        }
+
+                        if (darkMode) {
+                        document.body.classList.toggle('dark');
+                        }
+
+                        document.addEventListener('DOMContentLoaded', () => {
+
+                        document.getElementById('theme-toggle').addEventListener('click', () => {
+                        document.body.classList.toggle('dark');
+                          localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+                        });
+
+                        });  
+                        </script>
+
+            </div>
+
                 </div>    
                 <script>
                   function redirectToXiiberTravel() {
@@ -328,7 +373,7 @@
          <div id="2" class="  tab" style="display:none">
             <header class="mainHeading">
                 <article class="mainHeading__headingText">
-                    <h1 class="mainHeading__title">Daily UI Challenge</h1>
+                    <h1 class="mainHeading__title w3-hide">Daily UI Challenge</h1>
                 </article>        
             </header>
             <iframe src="../bookmarks.html" 
@@ -527,71 +572,113 @@
                <script src="https://load.sheetsu.com"></script>                                       
          </div>
        
-         <div id="3" class="tab" style="display:none">
+         <div id="3" class="tab w3-container" style="display:none">
             <header class="mainHeading">
-                <article class="mainHeading__headingText">                    
-                    <h1 class="mainHeading__title">Personalizalo |  Editable</h1>
+                <article class="mainHeading__headingText w3-hide">                    
+                    <h1 class="mainHeading__title w3-hide">Personalizalo |  Editable</h1>
                 </article>        
             </header>
-            <div w3-include-html="content.html"></div> 
-            <div w3-include-html="./status.html/></div> 
+            <div w3-include-html="https://xbrpw.github.io/collection/a/to-do-with-localstorage-json/index.html"></div> 
+            <br>
+            <div w3-include-html="./status.html"></div> 
+           
+            <br>
+            <div class="searchable">
+              <input type="text" autofocus 
+                    style="display: block;width: 99%;padding: 0.5em;outline: none;" 
+                    placeholder="🔍 Buscar..."/><br>
+              <!-- Loop through your blog posts -->
+              <div class="searchable-item">
+                <h1>JavaScript search</h1>
+                <p>some description</a>
+              </div>
+              <div class="searchable-item">
+                <h1>Another JavaScript library</h1>
+                <p>some other description</p>
+              </div>
+              <div class="searchable-item">
+                <h1>Design resources</h1>
+                <p>description about design resources</p>
+              </div>
+              <div class="searchable-item">
+                <h1>Other topic</h1>
+                <p>some other topic description</p>
+              </div>to-do-with-localstorage-json
+              <script>
+              ;(function search () {
+                ;[...document.querySelectorAll('.searchable')].forEach(makeSearchable)
+                function makeSearchable ($searchable) {
+                  const $searchableItems = [...$searchable.querySelectorAll('.searchable-item')]
+                  const $search = $searchable.querySelector('input')
+                  $search.addEventListener('keyup', (e) => {
+                    $searchableItems.forEach(function ($el) {
+                      const text = $el.getAttribute('data-search') || $el.innerText
+                      const show = new RegExp(e.target.value, 'i').test(text)
+                      $el.style.display = show ? '' : 'none'
+                    })
+                  })
+                }
+              })()
+            </script>
+</div>
+
             <iframe src="https://www.xbr.pw//assets/css/hi/run-dmc-starter/run-dmc-starter/dist/index.html" 
             name="contenteditable" height="360px" width="100%" title="Puedes editar el contenido" style="border:none;" allowfullscreen ></iframe>
-            <a href="https://codepen.io/luisangelmaciel/full/PojeWLo" target="contenteditable">Desing & travel</a><br>
-            <a href="https://www.xbrpw.github.io/editable/retro-synthwave/index.html" target="contenteditable">Retro Synthwave</a><br>
-            <a href="https://www.xbr.pw/assets/css/hi/focus/index.html" target="contenteditable">Focus</a><br>
-            <a href="https://www.xbr.pw/memes/homero/index.html" target="contenteditable">Homero Meme</a><br>
-            <a href="https://www.xbr.pw/user/lizzi/index.html" target="contenteditable">Lizzi Maciel</a><br>
-            <a href="https://xbrpw.github.io/collection/ab/sunglasses/sunglasses/dist/index.html" target="contenteditable">Emoji con lentes</a><br>
-            <a href="xbrpw.github.io/editable/sliced-text-effect/index.html" target="contenteditable">sliced-text effect/</a><br>
-            <a href="" target="contenteditable"></a><br>
-            <a href="" target="contenteditable"></a><br>
-            <a href="" target="contenteditable"></a><br>
-            <a href="" target="contenteditable"></a><br>
+            <a href="https://codepen.io/luisangelmaciel/full/PojeWLo" target="contenteditable" class="searchable-item" class="searchable-item" class="searchable-item">Desing & travel</a><br>
+            <a href="https://www.xbrpw.github.io/editable/retro-synthwave/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Retro Synthwave</a><br>
+            <a href="https://www.xbr.pw/assets/css/hi/focus/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Focus</a><br>
+            <a href="https://www.xbr.pw/memes/homero/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Homero Meme</a><br>
+            <a href="https://www.xbr.pw/user/lizzi/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Lizzi Maciel</a><br>
+            <a href="https://xbrpw.github.io/collection/ab/sunglasses/sunglasses/dist/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Emoji con lentes</a><br>
+            <a href="xbrpw.github.io/editable/sliced-text-effect/index.html" target="contenteditable" class="searchable-item" class="searchable-item">sliced-text effect/</a><br>
+            <a href="https://www.xbr.pw/assets/css/reference-master/js-mutation-observer-localstorage.html" target="contenteditable" class="searchable-item" class="searchable-item">Tiny note</a><br>
+            <a href="https://xbrpw.github.io/short-url/assets/css/hey/luisemoji.github.io/encabezados-titulares/index.html" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
+            <a href="https://xbrpw.github.io//short-url/assets/css/hey/crea-contador-regresivo/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Contador</a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
             
             Guia<br>
-            <a href="assets/css/hi/resizable-grid-columns/dist/index.html" target="contenteditable">Resizable Grid Columns</a><br>
-            <a href="https://xbrpw.github.io/collection/a/assign-method/dist/index.html" target="contenteditable">Metodo de anclaje</a><br>
-            <a href="https://xbrpw.github.io/collection/a/animated-star-rating/index.html" target="contenteditable">Animated Star Rrating</a><br>
-            <a href="https://xbrpw.github.io/collection/a/background/viewport-gradient-rotation/dist/index.html" target="contenteditable">Viewport gradient rotation</a><br>
-            <a href="https://xbrpw.github.io/collection/a/banner/index.html" target="contenteditable">Banner</a><br>
-            <a href="https://xbrpw.github.io/collection/a/download-page-as-image-with-html2canvas/index.html" target="contenteditable">download-page-as-image-with html2canvas</a><br>
-            <a href="/assets/css/hi/focus/index.html" target="contenteditable">Focus</a><br>
-            <a href="" target="contenteditable"></a><br>
-            <a href="" target="contenteditable"></a><br>
-            <a href="" target="contenteditable"></a><br>
-            <a href="" target="contenteditable"></a><br>
+            <a href="assets/css/hi/resizable-grid-columns/dist/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Resizable Grid Columns</a><br>
+            <a href="https://xbrpw.github.io/collection/a/assign-method/dist/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Metodo de anclaje</a><br>
+            <a href="https://xbrpw.github.io/collection/a/animated-star-rating/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Animated Star Rrating</a><br>
+            <a href="https://xbrpw.github.io/collection/a/background/viewport-gradient-rotation/dist/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Viewport gradient rotation</a><br>
+            <a href="https://xbrpw.github.io/collection/a/banner/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Banner</a><br>
+            <a href="https://xbrpw.github.io/collection/a/download-page-as-image-with-html2canvas/index.html" target="contenteditable" class="searchable-item" class="searchable-item">download-page-as-image-with html2canvas</a><br>
+            <a href="/assets/css/hi/focus/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Focus</a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
 
-            <a href="https://xbrpw.github.io/collection/alternating-list/a/alternating-list/dist/index.html" target="contenteditable">Alternating Llist</a><br>
-            <a href="https://xbrpw.github.io/collection/a/10-line/index.html" target="contenteditable">10 lin. columnas</a><br>
-            <a href="https://xbrpw.github.io/collection/a/10-principles/index.html" target="contenteditable">10 principios. list</a><br>
-            <a href="https://xbrpw.github.io/collection/a/card-slider/index.html" target="contenteditable">Cards slider</a><br>
-            <a href="https://xbrpw.github.io/collection/a/expanding-column-layout/index.html" target="contenteditable">expanding-column layout</a><br>
-            <a href="" target="contenteditable"></a><br>
-            <a href="" target="contenteditable"></a><br>
-            <a href="" target="contenteditable"></a><br>
+            <a href="https://xbrpw.github.io/collection/alternating-list/a/alternating-list/dist/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Alternating Llist</a><br>
+            <a href="https://xbrpw.github.io/collection/a/10-line/index.html" target="contenteditable" class="searchable-item" class="searchable-item">10 lin. columnas</a><br>
+            <a href="https://xbrpw.github.io/collection/a/10-principles/index.html" target="contenteditable" class="searchable-item" class="searchable-item">10 principios. list</a><br>
+            <a href="https://xbrpw.github.io/collection/a/card-slider/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Cards slider</a><br>
+            <a href="https://xbrpw.github.io/collection/a/expanding-column-layout/index.html" target="contenteditable" class="searchable-item" class="searchable-item">expanding-column layout</a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
             
 
             imagen/Galeria  <br>
-            <a href="https://www.xbr.pw/assets/css/hi/image-modal/index.html" target="contenteditable">PhotoSwipe v4.0.7. JavaScript gallery, no dependencies.</a><br>            
-            <a href="https://www.xbr.pw//user/monkey-d-luffy/index.html" target="contenteditable">Monkey D´Luffy</a><br>
-            <a href="" target="contenteditable"></a><br>
-            <a href="" target="contenteditable"></a><br>
-            <a href="" target="contenteditable"></a><br>
-            <a href="" target="contenteditable"></a><br>
+            <a href="https://www.xbr.pw/assets/css/hi/image-modal/index.html" target="contenteditable" class="searchable-item" class="searchable-item">PhotoSwipe v4.0.7. JavaScript gallery, no dependencies.</a><br>            
+            <a href="https://www.xbr.pw//user/monkey-d-luffy/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Monkey D´Luffy</a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
 
             Lighthouse <br>
-            <a href="https://www.xbr.pw/eevee-traductor/eevee-dex/index.html#/pokemon/eevee " target="contenteditable">Pokedex Eevee</a><br>
-            <a href="https://www.xbr.pw//memes/index.html" target="contenteditable">Memes (en contruccion)</a><br>
+            <a href="https://www.xbr.pw/eevee-traductor/eevee-dex/index.html#/pokemon/eevee " target="contenteditable" class="searchable-item" class="searchable-item">Pokedex Eevee</a><br>
+            <a href="https://www.xbr.pw//memes/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Memes (en contruccion)</a><br>
             
-            <a href="" target="contenteditable"></a><br>
-            <a href="" target="contenteditable"></a><br>
-            <a href="" target="contenteditable"></a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
             Social Media Apps <br>
-            <a href="https://www.xbr.pw//assets/css/hi/responsive-nft-dashboard-with-tailwind-css/dist/index.html" target="contenteditable">Dashboard Obscuro</a><br>
-            <a href="" target="contenteditable"></a><br>
-            <a href="" target="contenteditable"></a><br>
-            <a href="" target="contenteditable"></a><br>
+            <a href="https://www.xbr.pw//assets/css/hi/responsive-nft-dashboard-with-tailwind-css/dist/index.html" target="contenteditable" class="searchable-item" class="searchable-item">Dashboard Obscuro</a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
+            <a href="" target="contenteditable" class="searchable-item" class="searchable-item"></a><br>
 
             <div>
               <style>  
@@ -627,8 +714,7 @@
              <p class="rayado">Luis Ángel</p>
             </div>
           
-
-
+          
             
            
      
