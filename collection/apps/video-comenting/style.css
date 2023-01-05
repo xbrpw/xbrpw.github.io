@@ -1,0 +1,334 @@
+body {
+  font: 400 16px/1.4 "Proxima Nova", "Helvetica", sans-serif;
+  letter-spacing: 0.05em;
+  color: #4A6D7F;
+}
+
+.app {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+.app.control-panel-expanded .canvas {
+  bottom: 20rem;
+}
+.app.control-panel-expanded .control-panel {
+  height: 20rem;
+}
+
+.site-header {
+  background: #2D3B44;
+  height: 4rem;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  position: relative;
+}
+
+.canvas {
+  position: absolute;
+  top: 4rem;
+  right: 20rem;
+  bottom: 6rem;
+  left: 0;
+  background: #1F242A;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+.canvas.typing:after {
+  content: "Media is paused while typing";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.canvas .video {
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar {
+  width: 20rem;
+  background: #F6F9FC;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.sidebar-header {
+  position: relative;
+  z-index: 1;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: stretch;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.sidebar-header .panel-control {
+  flex: 1;
+  border: none;
+  background: #CCD7DF;
+  cursor: pointer;
+  outline: none;
+  font-family: "Proxima Nova", "Helvetica", sans-serif;
+  font-size: 1rem;
+  color: #4A6D7F;
+  letter-spacing: 0.05em;
+}
+.sidebar-header .panel-control.active {
+  background: transparent;
+}
+
+.onboarding {
+  padding: 1rem;
+  text-align: center;
+}
+
+.sidebar-panel {
+  display: none;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+}
+.sidebar-panel.active-panel {
+  display: block;
+}
+
+.comments-panel-body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 6rem;
+  left: 0;
+  overflow: auto;
+}
+
+.comments-panel-footer {
+  height: 6rem;
+  background: #CCD7DF;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.comments-panel-footer .comment-input {
+  display: block;
+  width: 100%;
+  line-height: 1.4;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+.notes-panel-body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 6rem;
+  left: 0;
+  overflow: auto;
+}
+
+.notes-panel-footer {
+  height: 6rem;
+  background: #CCD7DF;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.notes-panel-footer .comment-input {
+  display: block;
+  width: 100%;
+  line-height: 1.4;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+.control-panel {
+  height: 6rem;
+  position: absolute;
+  right: 20rem;
+  bottom: 0;
+  left: 0;
+  background: #2D3B44;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+.playbar {
+  position: relative;
+  height: 20px;
+  background: #CCD7DF;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: crosshair;
+}
+.playbar .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #448CCB;
+  pointer-events: none;
+  transform: translateX(-100%);
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.markers {
+  position: relative;
+  height: 1rem;
+  margin-bottom: 0.5rem;
+}
+.markers .marker {
+  position: absolute;
+  bottom: 0;
+  width: 1rem;
+  height: 1rem;
+  background: #8A58DD;
+  margin-left: -0.5rem;
+  border-radius: 100%;
+  cursor: pointer;
+  transform: transalateY(-0.5rem);
+}
+
+.playback-time {
+  display: inline-block;
+  color: #F6F9FC;
+  margin: 0 0.5rem;
+}
+
+.thread {
+  position: relative;
+  margin: 1rem 1rem;
+  border: 1px solid #CCD7DF;
+  background: #fff;
+  border-radius: 4px;
+  padding: 2rem 0 2rem;
+}
+
+.thread-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 2rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.thread-header .timestamp {
+  font-size: 0.875rem;
+  color: #CCD7DF;
+}
+.thread-header .timestamp:hover {
+  color: #448CCB;
+  cursor: pointer;
+}
+.thread-header.open-menu .comment-options {
+  display: block;
+}
+
+.thread-footer {
+  position: absolute;
+  height: 2rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.comment-options {
+  display: none;
+  background: #fff;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  z-index: 1;
+}
+.comment-options .menu-item {
+  padding: 0.25rem 1rem;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #CCD7DF;
+}
+.comment-options .menu-item:last-child {
+  border-bottom: 0;
+}
+.comment-options .menu-item:hover {
+  background: #eee;
+}
+
+.comment {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #CCD7DF;
+  overflow: auto;
+}
+.comment:last-child {
+  border-bottom: 0;
+}
+.comment .comment-author {
+  font-weight: 600;
+}
+
+.note {
+  background: #fff;
+  border: 1px solid #CCD7DF;
+  overflow: auto;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.transcript-panel {
+  margin-top: 1rem;
+}
+
+.transcript {
+  background: #F6F9FC;
+  color: #4A6D7F;
+  padding: 1rem;
+  border-radius: 4px;
+  height: 11rem;
+  overflow: auto;
+}
+
+.task-list .task {
+  position: relative;
+  margin: 1rem 1rem;
+  border: 1px solid #CCD7DF;
+  background: #fff;
+  border-radius: 4px;
+  padding: 2rem 1rem 2rem;
+}

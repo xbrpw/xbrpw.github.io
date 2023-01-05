@@ -1,0 +1,104 @@
+<div id="app">
+  <div>
+    <nav>
+      <div class="container">
+        <div class="nav-inner">
+          <div class="nav-item">
+            Heart social
+          </div>
+          <div class="heart beat"></div>
+          <div class="nav-item clickable"
+               v-on:click="showLiked = !showLiked"
+               :class="{ 'active' : showLiked }">
+            <span class="faded">Show<span v-if="showLiked">ing</span> loved</span> {{ totalLikes }}
+            &nbsp;
+            <span class="heart small"></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <header :class="{ 'hide' : showLiked }">
+      <div class="container">
+        <h1 class="title">
+          New for you
+        </h1>
+        <div class="items items-header">
+          <div v-for="item in featuredItems"
+               class="item">
+            <div class="item-inner">
+              <div class="item-media" :style=" `background-image: url(${item.image});` "
+                   v-on:click="highlightItem(item)"></div>
+              <div class="item-nav" v-on:dblclick="likeItem(item)">
+                <h3 class="title">
+                  {{ item.title }} <span class="view">double tap to like</span>
+                </h3>
+                <span class="heart small clickable"
+                      :class="{ 'faded' : !item.liked }"
+                      v-on:click="likeItem(item)"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <h2 v-if="showLiked">
+          Loved by you
+        </h2>
+        <h2 v-else>
+          More for you
+        </h2>
+        <div class="items">
+          <div v-for="item in feedItems"
+               class="item">
+            <div class="item-inner">
+              <div class="item-media" :style=" `background-image: url(${item.image});` "
+                   v-on:click="highlightItem(item)"></div>
+                <div class="item-nav" v-on:dblclick="likeItem(item)">
+                  <h3 class="title">
+                    {{ item.title }} <span class="view">double tap to like</span>
+                  </h3>
+                  <span class="heart small clickable"
+                        :class="{ 'faded' : !item.liked }"
+                        v-on:click="likeItem(item)"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-if="showLiked && !feedItems.length" class="no-likes">
+          <h3>Not much love yet 🙊</h3>
+          <button v-on:click="showLiked = false">
+            Show everything
+          </button>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      <div class="container">
+        <a href="//twitter.com/lewitje" target="_blank">@Lewitje</a>
+      </div>
+    </footer>
+    
+    <div v-if="highlighted" class="modal">
+      <div class="modal-inner">
+        <div class="close" v-on:click="highlighted = null">
+          Close
+        </div>
+        <span class="heart small clickable"
+              :class="{ 'faded' : !highlighted.liked }"
+              v-on:click="likeItem(highlighted)"></span>
+        <h2 class="modal-title">
+          {{ highlighted.title }}
+        </h2>
+      </div>
+      <div class="modal-media"
+           :style=" `background-image: url(${highlighted.image});` ">
+
+      </div>
+    </div>
+  </div>
+</div>

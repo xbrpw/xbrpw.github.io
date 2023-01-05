@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  color: #444;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+img {
+  display: block;
+  width: 100%;
+}
+.content {
+  width: 100%;
+  max-width: 600px;
+  margin: 60px auto;
+}
+.progress {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  height: 100px;
+  width: 100px;
+}
+.progress .percent {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  line-height: 100px;
+  width: 100%;
+}
+.progress svg path {
+  fill: none;
+}
+.progress svg.progress-circle path {
+  stroke: #4b00ff;
+  stroke-width: 2;
+}

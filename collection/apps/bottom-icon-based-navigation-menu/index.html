@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bottom Icon-Based Navigation Menu</title>
+  <style>
+          body {
+          margin: 0 0 55px 0;
+      }
+
+      .navResponsive {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          height: 55px;
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+          background-color: #ffffff;
+          display: flex;
+          overflow-x: auto;
+      }
+
+      .navResponsive__link {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          flex-grow: 1;
+          min-width: 50px;
+          overflow: hidden;
+          white-space: nowrap;
+          font-family: sans-serif;
+          font-size: 13px;
+          color: #444444;
+          text-decoration: none;
+          -webkit-tap-highlight-color: transparent;
+          transition: background-color 0.1s ease-in-out;
+      }
+
+      .navResponsive__link:hover {
+          background-color: #eeeeee;
+      }
+
+      .navResponsive__link--active {
+          color: #009578;
+      }
+
+      .navResponsive__icon {
+          font-size: 18px;
+      }
+  </style>
+
+</head>
+<body>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<nav class="navResponsive">
+  <a href="#dashboard" class="navResponsive__link">
+    <i class="material-icons nav__icon">dashboard</i>
+    <span class="navResponsive__text">Dashboard</span>
+  </a>
+  <a href="#profile" class="navResponsive__link nav__link--active">
+    <i class="material-icons nav__icon">person</i>
+    <span class="navResponsive__text">Profile</span>
+  </a>
+  <a href="#devices" class="navResponsive__link">
+    <i class="material-icons nav__icon">devices</i>
+    <span class="navResponsive__text">Devices</span>
+  </a>
+  <a href="#privacy" class="navResponsive__link">
+    <i class="material-icons nav__icon">lock</i>
+    <span class="navResponsive__text">Privacy</span>
+  </a>
+  <!-- a href="#" class="navResponsive__link">
+    <i class="material-icons nav__icon">settings</i>
+    <span class="navResponsive__text">Settings</span>
+  </a -->
+</nav>
+
+  
+</body>
+</html>

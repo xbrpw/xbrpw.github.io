@@ -1153,7 +1153,9 @@
           </div>
         </div>
       </div>
-    </div></div></footer>
+    </div></div>
+  </footer>
+  
     
  
 </div>
@@ -1189,23 +1191,93 @@ elements.footerRandomlamp.innerHTML += footerRandom[rand];
 reset();
 </script> <br><br>
 
+<style>
+          body {
+          margin: 0 0 55px 0;
+      }
 
-<nav class="navbtn w3-hide-large w3-hide-medium">
+      .navResponsive {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          height: 55px;
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+          background-color: #ffffff;
+          display: flex;
+          overflow-x: auto;
+      }
+
+      .navResponsive__link {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          flex-grow: 1;
+          min-width: 50px;
+          overflow: hidden;
+          white-space: nowrap;
+          font-family: sans-serif;
+          font-size: 13px;
+          color: #444444;
+          text-decoration: none;
+          -webkit-tap-highlight-color: transparent;
+          transition: background-color 0.1s ease-in-out;
+      }
+
+      .navResponsive__link:hover {
+          background-color: #eeeeee;
+      }
+
+      .navResponsive__link--active {
+          color: #009578;
+      }
+
+      .navResponsive__icon {
+          font-size: 18px;
+      }
+  </style>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<nav class="navResponsive">
+  <a href="alerts/index.html" class="navResponsive__link a">
+    <i class="material-icons nav__icon">dashboard</i>
+    <span class="navResponsive__text">Notificaciones/span>
+  </a>
+  <a href="calendario.html"  class="navResponsive__link nav__link--active a">
+    <i class="material-icons nav__icon">person</i>
+    <span class="navResponsive__text">Calendario</span>
+  </a>
+  <a href="unesco/index.html" class="navResponsive__link a">
+    <i class="material-icons nav__icon">devices</i>
+    <span class="navResponsive__text">Proyecto </span>
+  </a>
+  <a href="login/academico.html" class="navResponsive__link a">
+    <i class="material-icons nav__icon">lock</i>
+    <span class="navResponsive__text">Login</span>
+  </a>
+  <!-- a href="#" class="navResponsive__link">
+    <i class="material-icons nav__icon">settings</i>
+    <span class="navResponsive__text">Settings</span>
+  </a -->
+</nav>
+
+
+
+<nav class="navbtn w3-hide-large w3-hide-medium w3-card-2 w3-hide">
   <a href="alerts/index.html" class="navbtn__link navbtn__ a">
     <img src="./img/ico-xbr/avisos-escolares.svg" class="" alt="Home" height="30px" width="30px">
-    <span class="navbtn__text">Notificaciones</span>
+    <span class="navbtn__text"><!-- Notificaciones --></span>
   </a>
   <a href="calendario.html" class="navbtn__link a">
       <i class="fa fa-calendar-alt w3-xlarge"></i>
-    <span class="navbtn__text">Calendario</span>
+    <span class="navbtn__text"><!-- Calendario --></span>
   </a>
   <a href="unesco/index.html" class="navbtn__link a">      
     <i class="fa fa-file w3-xlarge"></i>
-    <span class="navbtn__text">Proyecto</span>
+    <span class="navbtn__text"><!-- Proyecto --></span>
   </a>
   <a href="login/academico.html" class="navbtn__link a">      
       <img src="./img/ico-xbr/estudiante-icon.svg" class="" alt="Home" height="30px" width="30px">
-    <span class="navbtn__text">Login</span>
+    <span class="navbtn__text"><!-- Login --></span>
   </a>
 </nav>
 
@@ -1453,12 +1525,12 @@ while (switching) {
       
       <!-- Modal footer -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-        
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>        
       </div>
       
     </div>
   </div>
 </div><!-- /The Modal -->
+
 
 </body></html>

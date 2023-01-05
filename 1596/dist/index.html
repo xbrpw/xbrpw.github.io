@@ -38,6 +38,13 @@
  
    <div id="2" class="w3-container  tab" style="display:none">
      <h2>2</h2>
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/trix/0.12.0/trix.css'> 
+      <form …>
+        <input id="x" type="hidden" name="content">
+        <trix-editor input="x"></trix-editor>        
+      </form>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/trix/0.12.0/trix.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/trix/0.12.0/trix-core.js'></script>
    </div>
  
    <div id="3" class="w3-container  tab" style="display:none">
@@ -51,20 +58,20 @@
     <script src="https://load.sheetsu.com"></script> 
    </div>
    <script>
- function opentab(evt, tabName) {
-   var i, x, tablinks;
-   x = document.getElementsByClassName("tab");
-   for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-   }
-   tablinks = document.getElementsByClassName("tablink");
-   for (i = 0; i < x.length; i++) {
-     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-   }
-   document.getElementById(tabName).style.display = "block";
-   evt.currentTarget.className += " w3-red";
- }
- </script>
+      function opentab(evt, tabName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("tab");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " w3-red";
+      }
+   </script>
  
  </div>
 
