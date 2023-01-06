@@ -271,7 +271,8 @@ window.onload = function (e) {
                 color = items[i].color;
 
             var template = `
-            <a href="${url}" target="iframe_b"  rel="noopener" class="dailyItem" onclick="opentab(event,'2')" title="${desc}">
+            <div onclick="opentab(event,'2')">
+            <a href="${url}" target="iframe_b"  rel="noopener" class="dailyItem"  title='${desc}'>
                     <span style="color: transparent"> Me gusta  </span>          
                     <div class="dailyItem__content">
                     <div class="dailyItem__itemBg" style="background-color:${color}f0"></div>
@@ -282,9 +283,9 @@ window.onload = function (e) {
                     </div>
                     <div class="dailyItem__image"> 
                         <img src="${img}" alt="Daily UI ${name} - ${desc}">
-                    </div>
-                
-            </a>`;
+                    </div>                
+            </a>
+            </div>`;
             itemContainer.insertAdjacentHTML('beforeend', template);
         }
     }
@@ -298,7 +299,7 @@ window.onload = function (e) {
                 color2 = itemEmpty[0].color;
 
             var template = `
-            <div class="dailyItem ">
+            <div class="dailyItem " >
                     <div class="dailyItem__content">
                     <div class="dailyItem__itemBg" style="background-color:${color2}70"></div>
                     <article class="dailyItem__text">

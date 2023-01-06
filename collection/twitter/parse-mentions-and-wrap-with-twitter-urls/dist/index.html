@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Parse @mentions and wrap with Twitter URLs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<!-- partial -->
+  <script>
+    const source = 'This is an @mention.';
+
+    const result = source.replace(/(?:^|[^a-zA-Z0-9_＠!@#$%&*])(?:(?:@|＠)(?!\/))([a-zA-Z0-9/_]{1,15})(?:\b(?!@|＠)|$)/g, ` <a href="https://twitter.com/@$1luisangelmaciel">@$1</a>`);
+
+    document.write(result);
+  </script>
+
+</body>
+</html>

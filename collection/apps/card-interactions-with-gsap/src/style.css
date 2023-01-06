@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  background: linear-gradient(180deg, #ae5c49 0%, #593733 100%);
+}
+
+.mock-window {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 72px 1fr 100px;
+  background-color: #131517;
+}
+
+@media (min-width: 640px) {
+  .mock-window {
+    width: 414px;
+    height: 896px;
+  }
+}
+
+.device-details {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.page {
+  grid-row: 1/4;
+  grid-column: 1/2;
+}
+.backdrop {
+  grid-row: 1/4;
+  grid-column: 1/2;
+  background: #171010;
+  display: none;
+}
+.bottom-nav {
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+
+.device-top {
+  height: 72px;
+}
+.nav {
+  height: 120px;
+}
+.titles {
+  height: 72px;
+}
+
+.tabs {
+  height: 48px;
+}
+
+.card {
+  border-radius: 24px;
+}
+
+.card-1 {
+  background: url("https://assets.codepen.io/3685267/card-interactions-gsap-image1.jpg");
+  background-size: 366px 366px;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+}
+.card-2 {
+  background: url("https://assets.codepen.io/3685267/card-interactions-gsap-image2.jpg");
+  background-size: 366px 366px;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+}
+.card-3 {
+  background: url("https://assets.codepen.io/3685267/card-interactions-gsap-image3.jpg");
+  background-size: 366px 366px;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+}
+
+.tab-selected {
+  background-color: #444346;
+}
+
+.text-secondary {
+  color: #9fa1a3;
+}
+
+.absolute-center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.test {
+  transform: translate(-100px, -100px);
+}
+.test1 {
+  transform: translate(0px, -100px);
+}
+.test2 {
+  transform: translate(100px, -100px);
+}
+
+.btn-options {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}

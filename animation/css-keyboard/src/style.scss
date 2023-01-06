@@ -1,0 +1,260 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:300,400|Inconsolata);
+$alpha: 1,2,3,4,5,6,7,8,9,0,"-","=",q,w,e,r,t,y,u,i,o,p,"[","]","\\",a,s,d,f,g,h,j,k,l,";","'",z,x,c,v,b,n,m,",",".","/","space";
+$alpha-shift: "!","@","#","$","%","^","&","*","(",")","_","+",Q,W,E,R,T,Y,U,I,O,P,"{","}","|",A,S,D,F,G,H,J,K,L,":",'"',Z,X,C,V,B,N,M,"<",">","?","space";
+$board-count: 20;
+
+// build out the selectors for hiding and showing keyboards
+// as well as toggling shift and the active state for delete and shift
+// labels do not have active states, because they pass it along to their `for` input.
+// therefore, to style the "active" state of a label, you do input#id:active ~ label[for="id"] { the style }
+$initial-checked-sel: "";
+$board-hide-sel: "";
+$board-show-sel: "";
+$shift-key-sel: "";
+$shift-board-sel: "";
+$active-sel: "";
+@for $i from 0 through $board-count {
+  // active states for delete and shift keys
+  $active-sel: $active-sel + "#in-#{$i}-delete:active  ~ section#board-#{$i} [for=\"in-#{$i}-delete\"],";
+  $active-sel: $active-sel + "#shift-#{$i}-shift:active  ~ section#board-#{$i} [for=\"shift-#{$i}-shift\"],";
+  // when shift is checked, style its label to indicate shifting
+  $shift-key-sel: $shift-key-sel + "#shift-#{$i}-shift:checked ~ section [for=\"shift-#{$i}-shift\"],";
+  // update the board when shift is selected
+  $shift-board-sel: $shift-board-sel + "#shift-#{$i}-shift:checked ~ #board-#{$i},";
+  // show hide the current character's board
+  $board-hide-sel: $board-hide-sel + "[id^=\"in-#{$i}-\"]:not(#in-#{$i}-delete):checked ~ #board-#{$i}:not(:first-of-type), ";
+  $board-show-sel: $board-show-sel + "[id^=\"in-#{$i}-\"]:not(#in-#{$i}-delete):checked ~ #board-#{$i + 1}, ";
+  @if($i < $board-count - 1) {
+    // we need delete keys, since a board's delete is in the _next_ board.
+    $initial-checked-sel: $initial-checked-sel + "#in-#{$i + 1}-delete:checked";
+    // if less than second to last add tilde to chain the delete key selectors above
+    @if($i < $board-count - 2) {
+      $initial-checked-sel: $initial-checked-sel + " ~ ";
+    }
+  }
+}
+
+// build out the selectors for output and active state
+// for each letter
+@for $a from 0 through length($alpha) - 1 {
+  $letter-output-sel: "";
+  $letter-cap-output-sel: "";
+  // for each board
+  @for $i from 0 through $board-count {
+    // add that board's instance of the letter
+    // for the :active state of the input
+    $active-sel: $active-sel + "#in-#{$i}-#{$a}:active ~ section#board-#{$i} [for=\"in-#{$i}-#{$a}\"],";
+    // for the :checked without shift state of the input
+    $letter-output-sel: $letter-output-sel + "#in-#{$i}-#{$a}:checked ~ #shift-#{$i}-shift:not(:checked) ~ #out #out-#{$i}::after, ";
+    // for the :checked with shift state of the input
+    $letter-cap-output-sel: $letter-cap-output-sel + "#in-#{$i}-#{$a}:checked ~ #shift-#{$i}-shift:checked ~ #out #out-#{$i}::after, ";
+  }
+  // grab the value for lower and shifted
+  $low: nth($alpha, $a + 1);
+  $cap: nth($alpha-shift, $a + 1);
+  // if letter is "space", change the pseudo content to render as space
+  @if $low == "space" { $low: "\00a0"; }
+  @if $cap == "space" { $cap: "\00a0"; }
+  // set the content.
+  #{$letter-output-sel} { content: "#{$low}"; }
+  #{$letter-cap-output-sel} { content: "#{$cap}"; }
+}
+
+// when input is active, style its label
+#{$shift-key-sel},
+#{$active-sel} {
+  background: #BBB;
+  color: #FFF;
+  box-shadow: 0px 0px 0px 1px #AAA;
+}
+
+// when shifted, uppercase dat ish
+#{$shift-board-sel} {
+  text-transform: uppercase;
+}
+
+// hide all boards
+[id^="board-"],
+#{$board-hide-sel} {
+  display: none;
+}
+
+// show board when active
+#{$board-show-sel},
+#{$initial-checked-sel} ~ #board-0 {
+  display: flex;
+}
+
+// style keyboard
+$gutter: 4px;
+$label-h: 56px;
+[id^="board-"] {
+  width: 740px;
+  margin: 1rem auto;
+  box-sizing: border-box;
+  padding: $gutter * 2;  
+  border-radius: 4px;
+  background: #EEE;
+  box-shadow: 0px 1px 0px 2px #DDD;
+  flex-wrap: wrap;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+}
+  
+  // full labels
+  label[for^="shift-"],
+  label[for$="-46"],
+  label[for$="-delete"] {
+    text-transform: none;
+    font-size: 0.8em;
+    line-height: $label-h * 1.5!important;
+  }
+  label[for^="shift-"] { 
+    flex-basis: calc(20% - #{$gutter * 2});
+    order: 101; 
+    text-align: left!important;
+  }
+  label[for$="-46"] {
+    color: white;
+    flex-basis: calc(60% - #{$gutter * 2});
+    order: 102;
+  }
+  label[for$="-delete"] {
+    flex-basis: calc(20% - #{$gutter * 2});
+    order: 103;
+    text-align: right!important;
+  }
+  
+  [id^="board-"] label { 
+    text-align: center; 
+    box-sizing: border-box;
+    height: $label-h;
+    line-height: $label-h;
+    padding: 0 0.5rem;
+    margin: $gutter;
+    user-select: none;
+    border-radius: 4px;
+    background: #FFF;
+    box-shadow: 0px 1px 0px 2px #DDD;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      box-shadow: 0px 0px 0px 1px #AAA;
+    }
+    &::before {
+      font-size: 0.8em;
+      display: block;
+      text-align: center;
+      line-height: 2;
+      margin-bottom: $label-h / -4;
+      left: 0;
+    }
+  }
+  
+  // justify rows. using this map as a guide for which letters on which rows
+  $rows: (
+    (1,2,3,4,5,6,7,8,9,0,"-","="),
+    (q,w,e,r,t,y,u,i,o,p,"[","]","\\"),
+    (a,s,d,f,g,h,j,k,l,";","'"),
+    (z,x,c,v,b,n,m,",",".","/")
+  );
+  // verify a char is not a number or symbol by checking against this map
+  $letter: (z,x,c,v,b,n,m,a,s,d,f,g,h,j,k,l,q,w,e,r,t,y,u,i,o,p);
+  // track the global index by adding to this on each loop through rows
+  $add: 0;
+  // for eac hrow
+  @each $r in $rows {
+    $sel: "";
+    $count: length($r);
+    $rat: 1 / $count;
+    // for each item in row
+    @for $a from 0 through length($r) - 1 { 
+      // make a label selector
+      $sel: $sel + "[for$=\"-#{$a + $add}\"], "; 
+      // add symbol if not an uppercase on shift
+      $shift: nth($alpha-shift, $add + $a + 1);
+      $let: nth($alpha, $add + $a + 1);
+      $is-letter: index($letter, $let);
+      @if $is-letter {
+      } @else {
+        // override with shift content
+        [for$="-#{$a + $add}"]::before {
+          content: "#{$shift}";
+        }
+      }
+    }
+    // increase the master counter
+    $add: $add + $count;
+    // give each item in row the same equally divided flex-basis for perfect wrapping
+    #{$sel} { flex-basis: calc(#{$rat * 100%} - #{$gutter * 2}); }
+  }
+
+// deactivate on last
+#board-#{$board-count} label:not([for$="-delete"]) {
+  background: #BBB;
+  color: #999;
+  box-shadow: 0px 0px 0px 1px #AAA;
+  font-style: italic;
+  pointer-events: none;
+}
+
+$out-size: 12rem;
+$out-font: 2.4rem;
+#out {
+  height: $out-size;
+  width: 740px;
+  margin: 1rem auto;
+  font-size: $out-font;
+  line-height: $out-size;
+  text-align: center;
+  padding: 1rem 0;
+  background: #222;
+  color: white;
+  border-radius: 4px;
+  text-shadow: 1px 1px 0px black;
+  box-shadow: 0px 1px 0px 2px #111;  
+  span {
+    border-bottom: 1px solid #CCC;
+  }
+}
+
+body {
+  background: #36494E;
+  text-align: center;
+  padding: 1rem;
+}
+
+[for="show-radios"] {
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  background: #222;
+  color: #CCC;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 2px black;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 1rem 0 0;
+  user-select: none;
+  &:hover {
+    box-shadow: 0px 0px 0px 1px black;
+  }
+  &::before {
+    content: "Show ";
+  }
+}
+
+#show-radios {
+  position: absolute;
+  top: -100px;  
+  &:not(:checked) ~ input {
+    position: absolute;
+    top: -100px;
+  }
+  &:active ~ [for="show-radios"] {
+    background: #333;
+  }
+  &:checked ~ [for="show-radios"]::before {
+    content: "Hide ";
+  }
+}
+

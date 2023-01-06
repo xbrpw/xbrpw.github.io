@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* common css */
+body{ 
+	font-size: 13px; 
+	font-weight: 300;
+}
+a{
+	color: #589bc6;
+	text-decoration: none;
+}
+a:hover{color:#c9192e;}
+.flex{
+	display: flex;
+	justify-content: space-between;
+}
+.flex>li{
+	flex:1;
+	margin-right:16px;
+}
+.white{ 
+	display: block;
+	padding: 10px 0;
+	color: #fff; 
+	font-weight: 500;
+}
+.title{
+	display: block;
+	margin-bottom: 8px;
+	color: #fff;
+	font-family: 'Anton', sans-serif;
+	font-size: 22px;
+	letter-spacing: 1.4px;
+}
+button{
+	color: #fff;
+	font-size: 14px;
+	background-color:#c9192e;
+	border:none;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+footer{
+	width: 100%;
+	height: 100%;
+	color: #8d9293;
+	background-color:#1c1c1c;
+}
+
+footer .wrap{
+	width: 900px;
+	margin: auto;
+	padding: 40px 0;
+}
+footer .wrap .upper_side ul.flex li{
+	padding: 4px 0;
+}
+
+
+/* mid box */
+footer .wrap .mid_side{
+	margin: 50px 0;
+}
+footer .wrap .mid_side ul.second_depth li p{
+	margin:12px 0;
+}
+footer .wrap .mid_side ul.second_depth li button.store{
+	width: 200px;
+	line-height: 3;
+}
+footer .wrap .mid_side ul.second_depth li button.store:hover{
+	background-color: #a11425;
+}
+footer .wrap .mid_side ul.sns{
+	width: 160px;
+}
+footer .wrap .mid_side ul.sns li{ margin-right:4px;}
+footer .wrap .mid_side ul.sns li a{
+	position: relative;
+	display: block;
+	width: 18px;
+	height: 18px;
+	padding: 8px;
+	background-color: #3e3e3e;
+	transition: all 0.3s;
+}
+footer .wrap .mid_side ul.sns li:nth-child(1):hover a{
+	background-color: #3b5998;
+}
+footer .wrap .mid_side ul.sns li:nth-child(2):hover a{
+	background-color: #00aced;
+}
+footer .wrap .mid_side ul.sns li:nth-child(3):hover a{
+	background-color: #b00;;
+}
+footer .wrap .mid_side ul.sns li:nth-child(4):hover a{
+	background-color: #517fa4;
+}
+
+footer .wrap .mid_side ul.sns li a i{
+	color: #fff;
+	font-size: 18px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+footer .wrap .mid_side ul li .input_box{
+	width: 300px;
+}
+footer .wrap .mid_side ul li .input_box input{
+	width: 250px;
+	padding-left: 10px;
+}
+footer .wrap .mid_side ul li .input_box button{
+	width: 50px;
+	height: 36px;
+}
+footer .wrap .mid_side ul li .input_box button:hover{
+	background-color: #000;
+}
+/* last box */
+footer .wrap .lower_side{
+	position: relative;
+	width: 466px;
+}
+footer .wrap .lower_side ul.flex{
+	align-items: flex-end;
+}
+footer .wrap .lower_side ul.flex li{
+	margin-bottom:8px;
+	flex: none;
+}
+footer .wrap .lower_side li.logo{
+	display: block;
+    width: 132px;
+    height: 70px;
+		margin-bottom:0px!important;
+    background: url(https://www.vans.com/wcsstore/vans-storefront/images/logos/logo-white.svg) no-repeat center;
+    background-size: cover;
+}
+
+
+
+
+
+
+/*==================================================================*/
+@media all and (max-width:1023px) and (min-width:640px){
+	
+	footer .wrap{
+		width: 90%;
+	}
+	
+/* mid box */
+	footer .wrap .mid_side ul.second_depth{
+		margin-top: 14px;
+	}	
+	footer .wrap .mid_side ul.second_depth li p{
+		display:none;
+	}
+	footer .wrap .mid_side ul.second_depth li button.store{
+		width: 160px;
+	}
+	footer .wrap .mid_side ul li .input_box{
+		width: 230px;
+	}
+	
+}
+
+
+/*==================================================================*/
+@media all and (max-width:639px){
+
+	
+/* common css */
+	.flex{
+		flex-direction:column;
+	}
+	.title{
+		font-size: 18px;
+	}
+	footer .wrap{
+		width: 95%;
+		min-width:320px;
+	}
+	footer .wrap .upper_side ul.flex li{
+		position: relative;
+		padding:8px 0;
+	}
+	footer .wrap .upper_side ul.flex li.first_depth > p:before{
+		position: absolute;
+		top: -1px;
+		right: 0;
+		padding: 5px 8px;
+		content:'\f0d7';
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+		color:#fff;
+		font-size:24px;
+		cursor: pointer;
+	}
+	footer .wrap .upper_side ul.flex li.first_depth.on > p:before{
+		transform: rotate(180deg);
+	}
+	footer .wrap .upper_side ul.flex li.first_depth > p:after{
+		display: block;
+		content:'';
+		width: 100%;
+		padding-top:8px;
+		border-bottom:1px solid rgba(255,255,255,0.5);
+	}
+	footer .wrap .upper_side ul.second_depth{
+		height: 0;
+		display:none;
+	}
+	footer .wrap .upper_side li.first_depth.on ul.second_depth{
+		height: auto;
+		display: block;
+	}
+/* mid box */
+	footer .wrap .mid_side{
+		margin: 30px 0;
+	}
+	footer .wrap .mid_side ul.flex > li{
+		margin: 10px 0;
+	}
+	footer .wrap .mid_side ul.second_depth li p{
+		display:none;
+	}
+	footer .wrap .mid_side ul.second_depth li button.store{
+		width: 100%;
+		margin-top: 8px;
+	}
+	footer .wrap .mid_side ul.sns{
+		flex-direction: row;
+	}
+	footer .wrap .mid_side ul li .input_box{
+		width: 100%;
+		flex-direction: row;
+		margin-top: 12px;
+	}
+	footer .wrap .mid_side ul li .input_box input{
+		width: 80%;
+	}
+	footer .wrap .mid_side ul li .input_box button{
+		width: 20%;
+	}
+/* last box */
+	footer .wrap .lower_side{
+		width: 100%;
+	}
+	footer .wrap .lower_side ul.flex{
+		flex-direction: row;
+		flex-wrap:wrap;
+	}
+
+
+	
+	
+}

@@ -1,7 +1,7 @@
 The MIT License (MIT)
 
-Copyright (c) 2023 Luis Angel Maciel (https://codepen.io/luisangelmaciel/pen/yLqarWg)
-Fork of an original work Codepen Cards layout design (https://codepen.io/luisangelmaciel/pen/yLqarWg)
+Copyright (c) 2023 Andy Bell (https://codepen.io/andy-set-studio/pen/yLarjdw)
+Fork of an original work Perfect video embed with aspect ratio (https://codepen.io/andy-set-studio/pen/yLarjdw)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
