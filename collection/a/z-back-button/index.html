@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>z back button</title>
+  <style>
+    .zaback {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 32px;
+    height: 32px;
+    display:block;
+    border-radius: 30px;
+    cursor: pointer;
+    cursor: hand;
+    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    z-index:999999999999;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    /*Best for Internet Explorer 8 */
+    filter: alpha(opacity=70);
+    /*Internet Explorer 5, 6, 7, 8 */
+    -moz-opacity: 0.7;
+    /* Old Mozilla Browsers */
+    -webkit-opacity: 0.7;
+    /* Old Webkit browsers (Safari, Chrome, various others) */
+    -khtml-opacity: 0.7;
+    /* Really old Safari browsers and Konqueror */
+    opacity: 0.7;
+    }
+    .zaback span:hover {
+        text-decoration:underline;
+    }
+    .zaback div {
+        background-color: #555;
+        width: 32px;
+        height: 32px;
+    }
+    .zaback div {
+        -webkit-mask-size: 32px 32px;
+        -webkit-mask-image: url('https://cdn4.iconfinder.com/data/icons/miu/22/circle_back_arrow_-64.png');
+    }
+  </style>
+</head>
+<body>
+
+<span class="zaback"><div onclick=goback()></div></span>
+
+  <script  src="./script.js"></script>
+  <script>
+    // should be wrap in head
+    function goback() {
+        alert('back');
+        document.getElementById("demo").innerHTML = "Gracias";
+    }
+
+    $(document).on("click", ".zaback", function () {
+        window.history.back()
+    });
+   </script>
+
+</body>
+</html>
