@@ -1,0 +1,101 @@
+$font-stack: 'Source Sans Pro', sans-serif;
+$transition: 500ms;
+$window-width: 400px;
+$window-height: 250px;
+$button-color: #ED6A5A; 
+
+#age-verify {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(#000, 0.6);
+  transition: $transition;
+  .window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $window-width;
+    height: $window-height;
+    overflow: hidden;
+    padding: 40px;
+    margin-left: -($window-width/2);
+    margin-top: -($window-height/2);
+    background-color: #fff;
+    border:6px solid $button-color;
+    box-sizing: border-box;
+    box-shadow: 0 20px 60px rgba(#000,0.2);
+    transition: $transition;
+    span {
+      display: block;
+      text-align: center;
+      margin-bottom: 10px;
+      font-family: $font-stack;
+      &.title {
+        color: $button-color;
+        font-size: 24px;
+      }
+    }
+    button {
+      border: 0;
+      margin: 0;
+      padding: 0;
+      width:48%;
+      height:60px;
+      color:#FFF;
+      font-size: 18px;
+      background-color: $button-color;
+      margin-top:20px;
+      font-family: $font-stack;
+      transform:scale(1);
+      transition: .2s;
+      &.back {
+        display:block;
+        float:none;
+        margin:auto;
+        background-color: #fff;
+        color:$button-color !important;
+        margin-top:20px;
+      }
+      &.yes {
+        float:left;
+      }
+      &.no {
+        float:right;
+      }
+      &:hover {
+        transform:scale(1.1);
+        box-shadow: 0 20px 60px rgba(#000,0.2);
+        background-color: lighten($button-color,10%);
+      }
+    }
+    .underBox {
+      position:absolute;
+      width: $window-width;
+      height: $window-height;
+      padding: 40px;
+      top:100%;
+      left:0;
+      right:0;
+      background-color: $button-color;
+      transition: $transition;
+      box-sizing:border-box;
+      * {
+        color:#FFF !important;
+      }
+    }
+  }
+  &.hidden {
+    opacity:0;
+    visibility: hidden;
+    .window {
+      transform:scale(0.5);
+    }
+  }
+  &.under {
+    .window .underBox {
+      top:0%;
+    }
+  }
+}
