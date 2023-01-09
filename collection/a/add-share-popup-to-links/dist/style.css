@@ -1,0 +1,11 @@
+body {
+  margin: 50px;
+  text-align: center;
+}
+body ul {
+  list-style: none;
+}
+body ul li {
+  display: inline-block;
+  margin: 0 10px;
+}

@@ -4,16 +4,17 @@
 :root {
   --header-font: Lalezar, sans-serif;
   --hand-font: Hurricane, cursive;
-    
+  align-items: center;
   background: #111;
 }
 
 .text {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  width: 700px;
-  margin: 5em auto;
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  align-items: center;
+  width: 80%;
+  height: 100hv;
+  margin:1em auto;
 }
 
 .synthwave-draw {
@@ -24,7 +25,20 @@
   background: linear-gradient(#f590e3 15%, #ed1ca6 20%, #f513aa 30%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;  
-  transform: translate(5%, 5px);
+  transform: translate(1%, 7px);
+  filter: drop-shadow(0 0 5px #f513aa);
+  z-index: 5;
+}
+
+.titles {
+  font-family: var(--hand-font);
+  font-size: 4rem;
+  font-weight: 400;
+  color: #ed1ca6;
+  background: linear-gradient(#f590e3 15%, #ed1ca6 20%, #f513aa 30%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+  transform: translate(5%, 15px);
   filter: drop-shadow(0 0 5px #f513aa);
   z-index: 5;
 }
@@ -35,7 +49,7 @@
   display: inline-flex;
   font-family: var(--header-font);
   font-size: 8rem;
-  height: 80px;
+  height: 250px;
   line-height: 80%;
   background: 
     linear-gradient(to bottom, #001a4e 15%, #003eaa 25%, #fffffa 50%, #000100 50%, #8a148c 75%, #deaae3),

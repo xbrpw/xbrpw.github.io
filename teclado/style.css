@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font: 18px Sans-Serif;
+  height: 100vh; }
+
+
+html {
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: 20px;
+}
+img {width:25px; height:25x;}

@@ -1,0 +1,15 @@
+@import "compass/css3";
+
+body {
+  margin: 50px;
+  text-align: center;
+  
+  ul {
+    list-style: none;
+    
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+}
