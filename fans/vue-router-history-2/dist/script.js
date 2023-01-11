@@ -1,17 +1,18 @@
 const VueA = Vue.extend({
-  template: `<div class="route-view">A</div>` });
+  template: `<div class="route-view"><iframe src="https://xbrpw.github.io//review/entradas/index.html" name="seccion-A" height="780px" width="100%" title="lamp" style="border:none;" allowfullscreen ></iframe></div>` });
 
 const VueB = Vue.extend({
-  template: `<div class="route-view">B</div>` });
+  template: `<div class="route-view"><iframe src="https://xbrpw.github.io" name="seccion-B" height="780px" width="100%" title="lamp" style="border:none;" allowfullscreen ></iframe></div>` });
 
 const VueC = Vue.extend({
-  template: `<div class="route-view">C</div>` });
+  template: `<div class="route-view"><iframe src="https://xbrpw.github.io/review/index.html" name="seccion-C" height="780px" width="100%" title="lamp" style="border:none;" allowfullscreen ></iframe></div>` });
 
 const VueD = Vue.extend({
-  template: `<div class="route-view">D</div>` });
+  template: `<div class="route-view"><iframe src="https://luisangelmaciel.github.io" name="seccion-D" height="780px" width="100%" title="lamp" style="border:none;" allowfullscreen ></iframe></div>` });
 
 
-
+  
+         
 
 const router = new VueRouter({
   routes: [
@@ -43,8 +44,15 @@ new Vue({
   router,
   template: `
             <div>
-            <h2>Local key</h2>
-            <pre>{{ direction }}</pre>
+            <pre style="display:none">{{ direction }}</pre>
+            <nav>
+                <button @click="history.go(-1)" style="display:none">Back</button>
+                <button @click="history.go(1)" style="display:none">Forward</button>                
+                <router-link :to="{name: 'A'}">Page A</router-link>
+                <router-link :to="{name: 'B'}">Page B</router-link>
+                <router-link :to="{name: 'C'}">Page C</router-link>
+                <router-link :to="{name: 'D'}">luisangelmaciel</router-link>
+            </nav> 
             <transition
                 name="slide"
                 appear
@@ -70,15 +78,7 @@ new Vue({
                 <router-view :key="$router.path"></router-view>
             </transition>
 
-            <nav>
-                <button @click="history.go(-1)">Back</button>
-                <button @click="history.go(1)">Forward</button>
-                <hr>
-                <router-link :to="{name: 'A'}">Page A</router-link>
-                <router-link :to="{name: 'B'}">Page B</router-link>
-                <router-link :to="{name: 'C'}">Page C</router-link>
-                <router-link :to="{name: 'D'}">Page D</router-link>
-            </nav>    
+               
             </div>
         `,
   data() {

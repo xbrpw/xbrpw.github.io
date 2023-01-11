@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Only Web Avatars</title>
+  <style>
+        .avatar {
+        font-size: 16px;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        background: #555555;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .avatar::after {
+        content: attr(data-label);
+        font-family: "Readex Pro", sans-serif;
+        color: #ffffff;
+      }
+  </style>
+
+</head>
+<body>
+
+<div class="avatar" data-label="LA"></div>
+
+  <script>
+    const avatars = document.querySelectorAll(".avatar");
+
+    avatars.forEach((a) => {
+      const charCodeRed = a.dataset.label.charCodeAt(0);
+      const charCodeGreen = a.dataset.label.charCodeAt(1) || charCodeRed;
+
+      const red = Math.pow(charCodeRed, 7) % 200;
+      const green = Math.pow(charCodeGreen, 7) % 200;
+      const blue = (red + green) % 200;
+
+      a.style.background = `rgb(${red}, ${green}, ${blue})`;
+    });    
+  </script>
+
+</body>
+</html>

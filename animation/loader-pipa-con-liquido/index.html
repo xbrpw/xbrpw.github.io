@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es-mx" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!doctype html>
+
+<svg width="100%" height="100%" viewBox="-160 -160 320 320">
+
+	<style>
+		body {
+			margin: 0;
+		}
+		svg {
+			position: absolute;
+		}
+		#mask #vessel {
+			fill: #ffffff;
+			stroke: #000000;
+			stroke-width: 40;
+		}
+		#mask #fluid {
+			fill: #ffffff;
+		}
+		#mask #bubbles * {
+			fill: #000000;
+		}
+		#flask #vessel {
+			fill: none;
+			stroke: #ff7f00;
+			stroke-width: 13.333;
+		}
+		#flask #fluid {
+			fill: #ff7f00;
+		}
+		#flask #bubbles * {
+			fill: #ff7f00;
+		}
+	</style>
+
+	<defs>
+		<mask id="mask">
+			<path
+				id="vessel"
+				transform="rotate(45)"
+				d="M-29.851-160c0,0-0.15,20-0.149,40s-20,33.381-20,33.381C-79.89-69.328-100.001-37.013-100.001,0
+		c0,55.229,44.772,100,100,100c55.229,0,100-44.771,100-100c0-37.014-20.11-69.328-50-86.619c0,0-20-13.381-20-33.381
+		s0.064-40,0.064-40" />
+			<path id="fluid" />
+			<g id="bubbles">
+
+			</g>
+		</mask>
+	</defs>
+
+	<g>
+		<g id="flask">
+			<path
+				id="vessel"
+				transform="rotate(45)"
+				d="M-29.851-160c0,0-0.15,20-0.149,40s-20,33.381-20,33.381C-79.89-69.328-100.001-37.013-100.001,0
+		c0,55.229,44.772,100,100,100c55.229,0,100-44.771,100-100c0-37.014-20.11-69.328-50-86.619c0,0-20-13.381-20-33.381
+		s0.064-40,0.064-40" />
+			<path id="fluid" mask="url(#mask)" />
+			<g id="bubbles">
+
+			</g>
+		</g>
+	</g>
+
+</svg>
+
+<script>var Animator=function(){var d=function(b){var a,d;a={interval:16,painters:[],sanity:null};for(d in a)this[d]=b[d]||a[d];this.main()},a=window.requestAnimationFrame||setTimeout;d.prototype.main=function(){var b=this;!1===this.interval||this.sanity&&!this.sanity()||(setTimeout(function(){b.main()},this.interval),this.move(),a(function(){b.draw()},this.interval))};d.prototype.move=function(){var b,a;for(b=0;b<this.painters.length;b++)a=this.painters[b],a.move&&a.move(this.interval)};d.prototype.draw=
+function(){var a,c;for(a=0;a<this.painters.length;a++)c=this.painters[a],c.draw&&c.draw(this.interval)};return d}(),Painters={};
+Painters.bubble=function(){var d=0,a=function(a){this.p=[0,0];this.v=[0,0];this.a=[0,0];this.e=Snap(a).circle(0,0,0);this.id=d++};a.prototype.init=function(a,c,d){this.e.stop();this.e.animate({r:this.radius},d);delete c[this.id];a[this.id]=this};a.prototype.term=function(a,c,d){this.e.stop();this.e.attr({r:0},d);delete a[this.id];c[this.id]=this};a.prototype.move=function(a){this.v[0]+=a*this.a[0];this.v[1]+=a*this.a[1];this.p[0]+=a*this.v[0];this.p[1]+=a*this.v[1];this.time-=a};a.prototype.draw=
+function(){this.e.attr({cx:this.p[0],cy:this.p[1]})};return a}();
+Painters.fizz=function(){var d=function(a){var b,c;b={selector:"",spawnRate:1,spawnArea:[[0,0],[1,1]],spawnTime:100,boundArea:[[0,0],[1,1]],boundTime:100,minRadius:0,maxRadius:1,v:[0,0],a:[0,0],_attached:{},_detached:{}};for(c in b)this[c]=a[c]||b[c]};d.prototype.bubble=function(){var a,b;for(a in this._detached){b=this._detached[a];break}b||(a=Painters.bubble,b=new a(this.selector));return b};d.prototype.init=function(){var a,b;Math.random()<this.spawnRate&&(a=this.bubble(),b=Math.random(),a.p[0]=
+this.spawnArea[0][0]*b+this.spawnArea[1][0]*(1-b),b=Math.random(),a.p[1]=this.spawnArea[0][1]*b+this.spawnArea[1][1]*(1-b),b=Math.random(),a.radius=this.minRadius*b+this.maxRadius*(1-b),a.v[0]=this.v[0],a.v[1]=this.v[1],a.a[0]=this.a[0],a.a[1]=this.a[1],a.time=this.boundTime,a.init(this._attached,this._detached,this.spawnTime))};d.prototype.term=function(a){a.p[0]<this.boundArea[0][0]||a.p[0]>this.boundArea[1][0]||a.p[1]<this.boundArea[0][1]||a.p[1]>this.boundArea[1][1]?a.term(this._attached,this._detached):
+0>a.time&&a.term(this._attached,this._detached)};d.prototype.move=function(a){var b,c;for(b=0;b<a;b++)this.init();for(c in this._attached)b=this._attached[c],b.move(a),this.term(b)};d.prototype.draw=function(a){var b,c;for(b in this._attached)c=this._attached[b],c.draw(a),this.term(c)};return d}();
+Painters.wave=function(){var d=function(a){var b,c;b={pathLength:1,waveHeight:1,waveLength:1,waveOffset:0,velocity:0};for(c in b)this[c]=a[c]||b[c]};d.prototype.move=function(a){this.waveOffset+=this.velocity*a};d.prototype.draw=function(){var a,b,c,d,g,k,l,f=this.waveLength,e=2*f,h=this.waveHeight*(Math.floor(this.waveOffset/e)%2?-1:1),m=-1*h;c=this.waveOffset%e;a=c/e;d="q"+f*a+","+h*a+" "+e*a+",0";c=this.pathLength-c;b=Math.floor(c/e);k="q"+f+","+m+" "+e+",0";l="q"+f+","+h+" "+e+",0";g="";for(a=
+0;a<b;a++)g+=a%2?l:k;a=c%e/e;this.path=d+g+("q"+f*a+","+(b%2?h:m)*a+" "+e*a+",0")};return d}();</script>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

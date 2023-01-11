@@ -1,0 +1,10 @@
+* {
+  overflow: hidden;
+/*   background:linear-gradient(#000 66%, #291111); */
+  background:url('https://www.hbo.com/content/dam/hbodata/series/game-of-thrones/episodes/8/key-art/got-s8-ka-1920x1080.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg') center center no-repeat;
+  background-size: cover;
+}
+
+canvas {
+  display: block;
+}

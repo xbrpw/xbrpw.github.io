@@ -7,6 +7,7 @@ body {
   background-color: white;
   font-family: "Bebas Neue", arial;
   margin-top: 4em;
+  overflow: hidden;
 }
 
 .heading {

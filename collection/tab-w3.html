@@ -1,0 +1,45 @@
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<div class="">
+
+  <div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button tablink w3-grey" onclick="openTab(event,'London')">London</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'About')">About</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'More')">More</button>
+  </div>
+  
+  <div id="London" class="w3-container Tab">
+    <h2>London</h2>
+    <p>London is the capital Tab of England.</p>
+  </div>
+
+  <div id="About" class="w3-container Tab" style="display:none">
+    <h2>About</h2>
+    <p>About is the capital of France.</p> 
+  </div>
+
+  <div id="More" class=" w3-container Tab" style="display:none">
+    <h2>More</h2>
+    <p>More is the capital of Japan.</p>
+  </div>
+</div>
+
+<script>
+function openTab(evt, TabName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("Tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(TabName).style.display = "block";
+  evt.currentTarget.className += "";
+}
+</script>
+
+

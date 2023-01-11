@@ -123,19 +123,17 @@ body {
   /*max-width: 640px;*/
 }
 .what {
-  color: #222;
   font-size: 12px;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 .time {
   color: #888;
   font-weight: 300;
 }
 .title {
-  color: #222;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 19px;
+  font-weight: 300;
   margin-bottom: 5px;
 }
 .hr {

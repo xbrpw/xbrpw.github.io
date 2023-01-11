@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es-mx" >
+<head>
+  <meta charset="UTF-8">
+  <title>Light Rider</title>  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .body-light-reader {
+    background-color: #111;
+    overflow: hidden;
+    text-align:center;
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    }
+
+    body,
+    html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    }
+
+    .svg-light-reader {
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    
+    }
+
+
+    .ring, #d0ot{
+      mix-blend-mode:overlay;
+    }
+  </style>
+
+</head>
+<body>
+<div class="body-light-reader">
+<svg class="mainSVG svg-light-reader " viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" >
+<defs>
+  <filter id="glow" x="-100%" y="-100%" width="250%" height="250%">
+    <feGaussianBlur stdDeviation="10" result="coloredBlur" />
+    <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
+    <feFlood id="glowAlpha" flood-color="#38DFF1" flood-opacity="0.3"></feFlood>
+    <feComposite in2="offsetblur" operator="in"></feComposite>
+    <feMerge>
+      <feMergeNode/>          
+      <feMergeNode in="SourceGraphic"></feMergeNode>
+    </feMerge>
+  </filter>   
+ 
+<radialGradient id="bgGrad" cx="400" cy="300" r="220" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#0867C7"/>
+	<stop  offset="0.86" style="stop-color:#111" stop-opacity="0"/>
+</radialGradient>  
+  <circle class="particle" cx="0" cy="0" r="1" /> 
+<path id="orbit" fill="none" stroke="none" stroke-width="4" stroke-miterlimit="10" d="M300,80c121.5,0,220,98.5,220,220S421.5,520,300,520,80,421.5,80,300,178.5,80,300,80"/>   
+  </defs>
+
+<rect id="rectGrad" fill="url(#bgGrad)" width="800" height="600" opacity="0.8"/>
+  <radialGradient id="dotGrad" cx="0" cy="0" r="50" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:1"/>
+	<!-- <stop  offset="0.3" style="stop-color:#FD3A02;stop-opacity:0.6"/> -->
+   <stop  offset="0.3" style="stop-color:#0867C7;stop-opacity:0.6"/>
+	<stop  offset="0.8" style="stop-color:#081029;stop-opacity:0"/>
+</radialGradient>
+  <g id="pContainer"  />
+<g class="whole" >
+  <circle id="dot" fill="url(#dotGrad)" cx="0" cy="0" r="50"/> 
+ <circle class="ring" filter="url(#glow)" cx="400" cy="300" r="220" fill="none" stroke="#64A8AF" stroke-width="34" opacity="0"/>
+</g>
+  <circle id="follower" fill="#081029" cx="0" cy="0" r="0"/> 
+</svg>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.jsx'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Physics2DPlugin.min.js'></script><script  src="./script.js"></script>
+</div>
+
+</body>
+</html>

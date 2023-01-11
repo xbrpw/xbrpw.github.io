@@ -1,117 +1,994 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="es-MX" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - A Pen by Luis Angel Maciel</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!-- <div class="post">
- <div class="text">
-    <div class="what">VIDEO&nbsp;&nbsp;<span class="time">|&nbsp;&nbsp;Yesterday</span></div>
-    <div class="title">Lorem Ipsum</div>
-    Neque porro quisquam...
-  </div>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+	.div-Invisible-scrollbar  {
+	  --thumb: #004C92;
+	  --bar: transparent;
+	  --barhover: rgba(0, 0, 0, .1);
+	  max-width: 100%;
+	  margin: 0;
+	  height: 100vh;
+	  overflow: scroll;
+	}
   
-  <div class="text">
-    <div class="what">ARTICLE&nbsp;&nbsp;<span class="time">|&nbsp;&nbsp;2 days ago</span></div>
-    <div class="title">Other post</div>Some other post...</div>
-</div>
+	.custom-scroll-bar {
+	  /* Scroll Custom */
+	  scrollbar-width: var(--width);
+	  scrollbar-color: var(--thumb) var(--bar);
+	}
+  
+	.custom-scroll-bar::-webkit-scrollbar {
+	  width: var(--width);
+	  transition: all .275s;
+	}
+  
+	.custom-scroll-bar::-webkit-scrollbar-track {
+	  background: var(--bar);
+	  transition: all .275s;
+	}
+  
+	.custom-scroll-bar::-webkit-scrollbar-track:hover {
+	  background: var(--barhover);
+	}
+  
+	.div-Invisible-scrollbar ::-webkit-scrollbar-thumb {
+	  background-color: transparent;
+	  border-radius: 8px;
+	  transition: all .275s;
+	}
+  
+	.div-Invisible-scrollbar :hover::-webkit-scrollbar-thumb {
+	  background-color: var(--thumb);
+	}
+  
+	.custom-scroll-bar.invisible {
+	  --width: 0;
+	}
+  
+	.Body-Invisible-scrollbar {
+	  text-align: start;
+	}  
+  </style>  
+  <style>
+	body {overflow: hidden;text-align:center;align-items: center;justify-content: center; }
+	body,html {height: 100%;width: 100%;margin: 0;padding: 0;}
 
-<br> 
--->
+	#preloder {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0; margin: 0;padding: 0;
+			z-index: 999999;
+			overflow: hidden;text-align:center;display: flex;align-items: center;justify-content: center;
+			background-color: #1B1C24;      
+		}		
+  </style>
+  
+	<script>
+	function includeHTML() {
+	var z, i, elmnt, file, xhttp;
+	/*loop through a collection of all HTML elements:*/
+	z = document.getElementsByTagName("*");
+	for (i = 0; i < z.length; i++) {
+	elmnt = z[i];
+	/*search for elements with a certain attribute:*/
+	file = elmnt.getAttribute("w3-include-html");
+	if (file) {
+		/*make an HTTP request using the attribute value as the file name:*/
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+		if (this.readyState == 4) {
+			if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+			if (this.status == 404) {elmnt.innerHTML = "Elemento no encontrado";}
+			/*remove the attribute, and call this function once more:*/
+			elmnt.removeAttribute("w3-include-html");
+			includeHTML();
+		}
+		}      
+		xhttp.open("GET", file, true);
+		xhttp.send();
+		/*exit the function:*/
+		return;
+	}
+	}
+	};
+	</script>
+</head>
 
+<body class="Body-Invisible-scrollbar  custom-scroll-bar invisible ">
 
-<div class="nav-wrapper">
-	
-	<button class="actions-btn">
-		<i class="material-icons">
-		add
-		</i>
-		<span><!-- actions --></span>
-	</button>
-	
-	  <div class="textxxx">
-    <div class="what">VIDEO&nbsp;&nbsp;<span class="time">|&nbsp;&nbsp;Yesterday</span></div>
-    <div class="title">Lorem Ipsum</div>
-    Neque porro quisquam...
-  </div><br>
-  <!-- hr class="hr" -->
-	
-	
-	<div class="button-drawer">
-					<i class="material-icons close-drawer">
-					clear
-					</i>
-
-				<button class="actions-btn"> 1</button>
-				<button class="actions-btn"> 2</button>
-				<button class="actions-btn"> 3</button>
-	</div>
-	
-</div>
-<br>
-<div class="nav-wrapper">
-	
-	<button class="actions-btn">
-		<i class="material-icons">
-		add
-		</i>
-		<span><!-- actions --></span>
-	</button>
-	
-	  <div class="textxxx">
-    <div class="what">VIDEO&nbsp;&nbsp;<span class="time">|&nbsp;&nbsp;Yesterday</span></div>
-    <div class="title">Lorem Ipsum</div>
-    He ordered his regular breakfast. Two eggs sunnyside up, hash browns, and two strips of bacon. He continued to look at the menu wondering if this would be the day he added something new. This was also part of the routine. A few seconds of hesitation to see if something else would be added to the order before demuring and saying that would be all. It was the same exact meal that he had ordered every day for the past two years.
-  </div><br>
-  <!-- hr class="hr" -->
-	
-	
-	<div class="button-drawer">
-					<i class="material-icons close-drawer">
-					clear
-					</i>
-
-				<button class="actions-btn"> 1</button>
-				<button class="actions-btn"> 2</button>
-				<button class="actions-btn"> 3</button>
-	</div>
-	
-</div>
-
-
-
-<!-- <div class="nav-wrapper">
-	
-	<button class="actions-btn">
-		<i class="material-icons">
-		add
-		</i>
-		<span></span>
-	</button>
+<div id="preloder" >
+	<div class="body-light-reader">
+		<style>
+			.body-light-reader {
+			background-color: #111;
+			overflow: hidden;
+			text-align:center;
+			  display: flex;
+			  align-items: center;
+			  justify-content: center; 
+			  height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			}
+		
+			body,
+			html {
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			}
+		
+			.svg-light-reader {
+			width: 100%;
+			height: 100%;
+			visibility: hidden;
+			
+			}
+		
+		
+			.ring, #d0ot{
+			  mix-blend-mode:overlay;
+			}
+		  </style>
+	<svg class="mainSVG svg-light-reader " viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" >
+	<defs>
+	  <filter id="glow" x="-100%" y="-100%" width="250%" height="250%">
+		<feGaussianBlur stdDeviation="10" result="coloredBlur" />
+		<feOffset dx="0" dy="0" result="offsetblur"></feOffset>
+		<feFlood id="glowAlpha" flood-color="#38DFF1" flood-opacity="0.3"></feFlood>
+		<feComposite in2="offsetblur" operator="in"></feComposite>
+		<feMerge>
+		  <feMergeNode/>          
+		  <feMergeNode in="SourceGraphic"></feMergeNode>
+		</feMerge>
+	  </filter>   
 	 
-	<h2>Title Goes Here 3 </h2>
-	<p>more info here</p>
+	<radialGradient id="bgGrad" cx="400" cy="300" r="220" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#0867C7"/>
+		<stop  offset="0.86" style="stop-color:#111" stop-opacity="0"/>
+	</radialGradient>  
+	  <circle class="particle" cx="0" cy="0" r="1" /> 
+	<path id="orbit" fill="none" stroke="none" stroke-width="4" stroke-miterlimit="10" d="M300,80c121.5,0,220,98.5,220,220S421.5,520,300,520,80,421.5,80,300,178.5,80,300,80"/>   
+	  </defs>
 	
-	<div class="button-drawer">
-					<i class="material-icons close-drawer">
-					clear
-					</i>
-
-				<button class="actions-btn"> 1</button>
-				<button class="actions-btn"> 2</button>
-				<button class="actions-btn"> 3</button>
+	<rect id="rectGrad" fill="url(#bgGrad)" width="800" height="600" opacity="0.8"/>
+	  <radialGradient id="dotGrad" cx="0" cy="0" r="50" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:1"/>
+		<!-- <stop  offset="0.3" style="stop-color:#FD3A02;stop-opacity:0.6"/> -->
+	   <stop  offset="0.3" style="stop-color:#0867C7;stop-opacity:0.6"/>
+		<stop  offset="0.8" style="stop-color:#081029;stop-opacity:0"/>
+	</radialGradient>
+	  <g id="pContainer"  />
+	<g class="whole" >
+	  <circle id="dot" fill="url(#dotGrad)" cx="0" cy="0" r="50"/> 
+	 <circle class="ring" filter="url(#glow)" cx="400" cy="300" r="220" fill="none" stroke="#64A8AF" stroke-width="34" opacity="0"/>
+	</g>
+	  <circle id="follower" fill="#081029" cx="0" cy="0" r="0"/> 
+	</svg>
+	
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js'></script>
+	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Physics2DPlugin.min.js'></script><script  src="./light-reader.js"></script>
 	</div>
-	
-</div> 
--->
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
+</div>
 
+<div class="w3-bar w3-black">
+	<button class="w3-bar-item w3-button tablink w3-grey" onclick="openTab(event,'Home')">Home</button>
+	<button class="w3-bar-item w3-button tablink" onclick="openTab(event,'About')">About</button>
+	<button class="w3-bar-item w3-button tablink" onclick="openTab(event,'More')">More</button>
+</div>
+  
+	
+<div id="About" class="Tab div-Invisible-scrollbar custom-scroll-bar invisible" style="display:none">
+	<iframe src="https://xbrpw.github.io/"     name="tab-about" height="780px" width="100%" title="Puedes editar el contenido" style="border:none;" allowfullscreen ></iframe>
+	https://www.xbr.pw//assets/css/hey/cards-carrusel-horizontal/index.html
+</div>
+
+<div id="More" class="Tab div-Invisible-scrollbar custom-scroll-bar invisible"  style="display:none">
+<p><b>Incluye</b> Preloader, Scroll bar invisible, Search, Filter, Modal, localStorage, Avatar,</p>
+<div>
+<style>
+	/* -------------------------------- 
+
+	Primary style
+
+	-------------------------------- */
+	*, *::after, *::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+
+	
+
+	body {
+	font-family: "Source Sans Pro", sans-serif;
+	/*color: #34383c;
+	background-color: #ffffff;*/
+	}
+	body.overflow-hidden {
+	/* used when modal is visible */
+	overflow: hidden;
+	}
+
+	a {
+	color: #03bb91;
+	text-decoration: none;
+	}
+
+	/* -------------------------------- 
+
+	Main Components 
+
+	-------------------------------- */
+	.cd-section {
+	padding: 1em 2.5%;
+	text-align: center;
+	}
+	@media only screen and (min-width: 768px) {
+	.cd-section {
+		padding: 2em 5%;
+	}
+	.cd-section p {
+		line-height: 1;
+	}
+	}
+	@media only screen and (min-width: 1170px) {
+	.cd-section {
+		padding: 2em 10%;
+	}
+	}
+
+	.cd-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transition: visibility 0s 0.3s, opacity 0.3s 0s, z-index 0s 0.3s;
+	-moz-transition: visibility 0s 0.3s, opacity 0.3s 0s, z-index 0s 0.3s;
+	transition: visibility 0s 0.3s, opacity 0.3s 0s, z-index 0s 0.3s;
+	}
+	.cd-modal::after {
+	/* gradient overlay at bottom of modal window */
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	pointer-events: none;
+	background: transparent;
+	background: -webkit-linear-gradient(bottom, #34383c, rgba(52, 56, 60, 0));
+	background: linear-gradient(to top, #34383c, rgba(52, 56, 60, 0));
+	}
+	.cd-modal .cd-modal-content {
+	height: 100%;
+	width: 100%;
+	padding: 2em 2%;
+	text-align: left;
+	overflow-y: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	}
+	.cd-modal p {
+	color: #ffffff;
+	line-height: 1.6;
+	margin: 2em 0;
+	}
+	.modal-is-visible .cd-modal {
+	z-index: 1;
+	visibility: visible;
+	opacity: 1;
+	pointer-events: auto;
+	-webkit-transition: visibility 0s 0s, opacity 0.3s 0s, z-index 0s 0s;
+	-moz-transition: visibility 0s 0s, opacity 0.3s 0s, z-index 0s 0s;
+	transition: visibility 0s 0s, opacity 0.3s 0s, z-index 0s 0s;
+	}
+	.modal-is-visible .cd-modal .cd-modal-content {
+	-webkit-overflow-scrolling: touch;
+	}
+	@media only screen and (min-width: 768px) {
+	.cd-modal .cd-modal-content {
+		padding: 2em 5%;
+	}
+	}
+	@media only screen and (min-width: 1170px) {
+	.cd-modal .cd-modal-content {
+		padding: 3em 10%;
+	}
+	.cd-modal p {
+		line-height: 2;
+	}
+	}
+
+	.cd-modal-action {
+	position: relative;
+	}
+	.cd-modal-action .btn, .cd-modal-action .cd-modal-bg {
+	display: inline-block;
+	height: 4em;
+	background-color: #34383c;
+	}
+	.cd-modal-action .btn {
+	width: 12.5em;
+	border-radius: 5em;
+	color: #ffffff;
+	line-height: 4em;
+	white-space: nowrap;
+	font-weight: 700;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transition: color 0.2s 0.3s, width 0.3s 0s;
+	-moz-transition: color 0.2s 0.3s, width 0.3s 0s;
+	transition: color 0.2s 0.3s, width 0.3s 0s;
+	}
+	.cd-modal-action .btn.to-circle {
+	width: 4em;
+	color: transparent;
+	-webkit-transition: color 0.2s 0s, width 0.3s 0.2s;
+	-moz-transition: color 0.2s 0s, width 0.3s 0.2s;
+	transition: color 0.2s 0s, width 0.3s 0.2s;
+	}
+	.cd-modal-action .cd-modal-bg {
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	top: 0;
+	width: 4em;
+	border-radius: 50%;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-transform: translateX(-2em);
+	-moz-transform: translateX(-2em);
+	-ms-transform: translateX(-2em);
+	-o-transform: translateX(-2em);
+	transform: translateX(-2em);
+	-webkit-transition: visibility 0s 0.5s;
+	-moz-transition: visibility 0s 0.5s;
+	transition: visibility 0s 0.5s;
+	}
+	.cd-modal-action .cd-modal-bg.is-visible {
+	opacity: 1;
+	visibility: visible;
+	}
+
+	.cd-modal-close {
+	position: fixed;
+	z-index: 1;
+	top: 20px;
+	right: 5%;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.3) url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-close_copy.svg) no-repeat center center;
+	/* image replacement */
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	-o-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+	-moz-transition: -moz-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+	transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+	}
+	.no-touch .cd-modal-close:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+	}
+	.modal-is-visible .cd-modal-close {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+	-moz-transition: -moz-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+	transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	}
+	@media only screen and (min-width: 768px) {
+	.cd-modal-close {
+		top: 70px;
+	}
+	}	
+</style>
+			
+<section class="cd-section">
+		
+		<div class="cd-modal-action">
+			<a href="#0" class="btn" data-type="modal-trigger">Adivina Quién</a>
+			<span class="cd-modal-bg"></span>
+		</div> <!-- cd-modal-action -->
+
+		<div class="cd-modal">
+			<div class="cd-modal-content">
+				
+				<div>
+					<style>
+						.avatar {
+						font-size: 16px;
+						width: 3em;
+						height: 3em;
+						border-radius: 50%;
+						background: #555555;
+						display: inline-flex;
+						align-items: center;
+						justify-content: center;
+					}
+				
+					.avatar::after {
+						content: attr(data-label);
+						font-family: "Readex Pro", sans-serif;
+						color: #ffffff;
+					}
+					</style>
+				
+				
+				
+					<div class="avatar" data-label="LA"></div>
+				
+					<script>
+						const avatars = document.querySelectorAll(".avatar");
+				
+						avatars.forEach((a) => {
+						const charCodeRed = a.dataset.label.charCodeAt(0);
+						const charCodeGreen = a.dataset.label.charCodeAt(1) || charCodeRed;
+				
+						const red = Math.pow(charCodeRed, 7) % 200;
+						const green = Math.pow(charCodeGreen, 7) % 200;
+						const blue = (red + green) % 200;
+				
+						a.style.background = `rgb(${red}, ${green}, ${blue})`;
+						});    
+					</script>
+				</div>
+			
+					
+				<div id="LocalStorage0">
+					<style>
+					/* Styling via Twitter Bootstrap, CSS --> Settings --> External CSS */
+					#yay, #ooh {display: none;}
+					</style>
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+				
+				
+				
+					
+						<div class="alert alert-success" id="yay">Su navegador es compatible con el almacenamiento local. ¡Hurra!</div>
+						<div class="alert alert-danger" id="ooh">Aww... Su navegador no es compatible con el almacenamiento local.</div>
+				
+				
+					
+						<form action="#" class="form-inline">
+							<div class="form-group">
+							<input type="text" name="save" id="text" class="form-control" placeholder="Materia">
+							</div>
+							<button id="set" class="btn btn-primary">Guardar</button>
+						</form>
+				
+						
+					
+						<div class="alert alert-info" id="val"><i>Nickname</i></div>
+						<button id="get" class="btn btn-success">Guardar</button>
+						<button id="remove" class="btn btn-danger">Cambiar</button>
+					
+				
+				
+				
+				
+					<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+					<script>
+							/* Detect browser can use local storage */
+						if (typeof(Storage) !== 'undefined') {
+						$('#yay').fadeIn('slow');
+						} else {
+						$('#ooh').fadeIn('slow');
+						}
+				
+						/* set it */
+						$('#set').click(function() {
+						var test = $('#text').val();
+						localStorage.setItem("test", test);
+						});
+				
+						/* get it */
+						$('#get').click(function() {
+							$('#val').text(localStorage.getItem("test"));
+						});
+				
+						/* remove it */
+						$('#remove').click(function() {
+							localStorage.removeItem("test");
+							$('#val').html("<i>nothing saved...</i>");
+						});
+				
+						/* on pageload, if key/value is found get it*/
+						if (localStorage.getItem("test") !== null) {
+						$('#val').text(localStorage.getItem("test"));
+						}
+				
+				
+					</script>	  
+				</div>
+
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad modi repellendus, optio eveniet eligendi molestiae? Fugiat, temporibus! A rerum pariatur neque laborum earum, illum voluptatibus eum voluptatem fugiat, porro animi tempora? Sit harum nulla, nesciunt molestias, iusto aliquam aperiam est qui possimus reprehenderit ipsam ea aut assumenda inventore iste! Animi quaerat facere repudiandae earum quisquam accusamus tempora, delectus nesciunt, provident quae aliquam, voluptatum beatae quis similique in maiores repellat eligendi voluptas veniam optio illum vero! Eius, dignissimos esse eligendi veniam.
+				</p>
+
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad modi repellendus, optio eveniet eligendi molestiae? Fugiat, temporibus! A rerum pariatur neque laborum earum, illum voluptatibus eum voluptatem fugiat, porro animi tempora? Sit harum nulla, nesciunt molestias, iusto aliquam aperiam est qui possimus reprehenderit ipsam ea aut assumenda inventore iste! Animi quaerat facere repudiandae earum quisquam accusamus tempora, delectus nesciunt, provident quae aliquam, voluptatum beatae quis similique in maiores repellat eligendi voluptas veniam optio illum vero! Eius, dignissimos esse eligendi veniam.
+				</p>
+			</div> <!-- cd-modal-content -->
+		</div> <!-- cd-modal -->
+
+		<a href="#0" class="cd-modal-close">Close</a>
+</section> 
+<script>
+	;(function search () {
+	;[...document.querySelectorAll('.searchable')].forEach(makeSearchable)
+	function makeSearchable ($searchable) {
+		const $searchableItems = [...$searchable.querySelectorAll('.searchable-item')]
+		const $search = $searchable.querySelector('input')
+		$search.addEventListener('keyup', (e) => {
+		$searchableItems.forEach(function ($el) {
+			const text = $el.getAttribute('data-search') || $el.innerText
+			const show = new RegExp(e.target.value, 'i').test(text)
+			$el.style.display = show ? '' : 'none'
+		})
+		})
+	}
+	})()
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/velocity.min.js'></script>
+<script>
+jQuery(document).ready(function($){
+	//trigger the animation - open modal window
+	$('[data-type="modal-trigger"]').on('click', function(){
+		var actionBtn = $(this),
+			scaleValue = retrieveScale(actionBtn.next('.cd-modal-bg'));
+		
+		actionBtn.addClass('to-circle');
+		actionBtn.next('.cd-modal-bg').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+			animateLayer(actionBtn.next('.cd-modal-bg'), scaleValue, true);
+		});
+
+		//if browser doesn't support transitions...
+		if(actionBtn.parents('.no-csstransitions').length > 0 ) animateLayer(actionBtn.next('.cd-modal-bg'), scaleValue, true);
+	});
+
+	//trigger the animation - close modal window
+	$('.cd-section .cd-modal-close').on('click', function(){
+		closeModal();
+	});
+	$(document).keyup(function(event){
+		if(event.which=='27') closeModal();
+	});
+
+	$(window).on('resize', function(){
+		//on window resize - update cover layer dimention and position
+		if($('.cd-section.modal-is-visible').length > 0) window.requestAnimationFrame(updateLayer);
+	});
+
+	function retrieveScale(btn) {
+		var btnRadius = btn.width()/2,
+			left = btn.offset().left + btnRadius,
+			top = btn.offset().top + btnRadius - $(window).scrollTop(),
+			scale = scaleValue(top, left, btnRadius, $(window).height(), $(window).width());
+
+		btn.css('position', 'fixed').velocity({
+			top: top - btnRadius,
+			left: left - btnRadius,
+			translateX: 0,
+		}, 0);
+
+		return scale;
+	}
+
+	function scaleValue( topValue, leftValue, radiusValue, windowW, windowH) {
+		var maxDistHor = ( leftValue > windowW/2) ? leftValue : (windowW - leftValue),
+			maxDistVert = ( topValue > windowH/2) ? topValue : (windowH - topValue);
+		return Math.ceil(Math.sqrt( Math.pow(maxDistHor, 2) + Math.pow(maxDistVert, 2) )/radiusValue);
+	}
+
+	function animateLayer(layer, scaleVal, bool) {
+		layer.velocity({ scale: scaleVal }, 400, function(){
+			$('body').toggleClass('overflow-hidden', bool);
+			(bool) 
+				? layer.parents('.cd-section').addClass('modal-is-visible').end().off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend')
+				: layer.removeClass('is-visible').removeAttr( 'style' ).siblings('[data-type="modal-trigger"]').removeClass('to-circle');
+		});
+	}
+
+	function updateLayer() {
+		var layer = $('.cd-section.modal-is-visible').find('.cd-modal-bg'),
+			layerRadius = layer.width()/2,
+			layerTop = layer.siblings('.btn').offset().top + layerRadius - $(window).scrollTop(),
+			layerLeft = layer.siblings('.btn').offset().left + layerRadius,
+			scale = scaleValue(layerTop, layerLeft, layerRadius, $(window).height(), $(window).width());
+		
+		layer.velocity({
+			top: layerTop - layerRadius,
+			left: layerLeft - layerRadius,
+			scale: scale,
+		}, 0);
+	}
+
+	function closeModal() {
+		var section = $('.cd-section.modal-is-visible');
+		section.removeClass('modal-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+			animateLayer(section.find('.cd-modal-bg'), 1, false);
+		});
+		//if browser doesn't support transitions...
+		if(section.parents('.no-csstransitions').length > 0 ) animateLayer(section.find('.cd-modal-bg'), 1, false);
+	}
+});
+</script>
+</div>	
+<!-- <div w3-include-html=""></div>   -->	
+<iframe src="https://xbrpw.github.io/review"     name="tab-more" height="780px" width="100%" title="Puedes editar el contenido" style="border:none;" allowfullscreen ></iframe>
+</div>
+
+
+<div id="Home" class="Tab div-Invisible-scrollbar custom-scroll-bar invisible">
+   
+	
+	<div class=" "><br>		
+		<div class="searchable">
+				<div class="w3-container"><input type="text" autofocus  placeholder=" 🔍 Buscar..."/>
+				    <br>
+					<div id="myBtnContainer">
+						<span onclick="filterSelection('all')"> Show all</span>
+						<span  onclick="filterSelection('animation')"> Animation </span>
+						<span  onclick="filterSelection('css')"> CSS </span>
+						<span  onclick="filterSelection('unloader')"> Loader </span>
+					</div>	
+			    </div>
+				<style>
+					input {
+					display: block;
+					width: 99%;
+					padding: 0.5em;
+					outline: none;   			
+					border: 0.5px solid rgba(136, 132, 132, 0.411); 
+					border:over 1px solid rgba(65, 62, 62, 0.329); 
+					border-radius: 10px;}
+				</style>	
+	
+				<div>
+					<style>
+						.filterDiv {
+						display: none;
+						}
+	
+						.show {
+						display: block;
+						}
+	
+						/* Style the buttons */
+						.btn {
+						border: none;
+						outline: none;
+						padding: 12px 16px;
+						background-color: #f1f1f1;
+						cursor: pointer;
+						}
+	
+						.btn:hover {
+						background-color: #ddd;
+						}
+	
+						.btn.active {
+						background-color: #666;
+						color: white;
+						}
+					</style>
+	
+												
+				   								
+					<div class="container">
+						<div class="nav-wrapper searchable-item 03ene filterDiv all unloader">				
+							<button class="actions-btn"><i class="material-icons">add</i><span><!-- actions --></span></button>
+							
+							<div class="textxxx">
+								<div class="what">03 enero 2023&nbsp;&nbsp;<span class="time">|&nbsp;&nbsp;Yesterday</span></div>
+								<div class="title">Lorem Ipsum</div>
+								vue-router-history-2
+							</div><br>
+			
+							<div class="button-drawer">
+								<i class="material-icons close-drawer">clear</i>		
+								<button class="actions-btn"> 1</button>
+								<button class="actions-btn"> 2</button>
+								<button class="actions-btn"> 3</button>
+							</div>				
+						</div>
+
+						<div class="nav-wrapper searchable-item 03ene filterDiv all">				
+							<button class="actions-btn"><i class="material-icons">add</i><span><!-- actions --></span></button>
+							
+							<div class="textxxx">
+								<div class="what">03 enero 2023&nbsp;&nbsp;<span class="time">|&nbsp;&nbsp;Yesterday</span></div>
+								<div class="title">Lorem Ipsum</div>
+								vue-router-history-2
+							</div><br>
+			
+							<div class="button-drawer">
+								<i class="material-icons close-drawer">clear</i>		
+								<button class="actions-btn"> 1</button>
+								<button class="actions-btn"> 2</button>
+								<button class="actions-btn"> 3</button>
+							</div>				
+						</div>
+							
+						<div class="nav-wrapper searchable-item 02ene filterDiv all animation css">				
+							<button class="actions-btn">
+								<i class="material-icons">add</i><span><!-- actions --></span>
+							</button>
+							
+							<div class="textxxx ">
+								<div class="what">2 enero 2023&nbsp;&nbsp;<span class="time">|&nbsp;&nbsp;Animation CSS</span></div>
+								<div class="title">Efecto Focus</div>
+								Dentro las principales lineas de código se se utilizo el efecto de <code>transform: translateX(500px)</code> y <code>filter: blur(3px)</code>
+						</div><br>
+							
+							
+							<div class="button-drawer">
+											<i class="material-icons close-drawer">
+											clear
+											</i>
+						
+										<button class="actions-btn"> 1</button>
+										<button class="actions-btn"> 2</button>
+										<button class="actions-btn"> 3</button>
+							</div>
+							
+						</div>
+
+						<div class="nav-wrapper searchable-item 01ene filterDiv all animation css ">				
+							<button class="actions-btn">
+								<i class="material-icons">add</i><span><!-- actions --></span>
+							</button>
+							
+							<div class="textxxx ">
+								<div class="what">2 enero 2023&nbsp;&nbsp;<span class="time">|&nbsp;&nbsp;Animation CSS</span></div>
+								<div class="title">Efecto Focus</div>
+								Dentro las principales lineas de código se se utilizo el efecto de <code>transform: translateX(500px)</code> y <code>filter: blur(3px)</code>
+						</div><br>
+							
+							
+							<div class="button-drawer">
+											<i class="material-icons close-drawer">
+											clear
+											</i>
+						
+										<button class="actions-btn"> 1</button>
+										<button class="actions-btn"> 2</button>
+										<button class="actions-btn"> 3</button>
+							</div>
+							
+						</div>
+						
+						
+			
+					</div>		
+					<script>
+						filterSelection("all")
+						function filterSelection(c) {
+						var x, i;
+						x = document.getElementsByClassName("filterDiv");
+						if (c == "all") c = "";
+						for (i = 0; i < x.length; i++) {
+							w3RemoveClass(x[i], "show");
+							if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+						}
+						}
+	
+						function w3AddClass(element, name) {
+						var i, arr1, arr2;
+						arr1 = element.className.split(" ");
+						arr2 = name.split(" ");
+						for (i = 0; i < arr2.length; i++) {
+							if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+						}
+						}
+	
+						function w3RemoveClass(element, name) {
+						var i, arr1, arr2;
+						arr1 = element.className.split(" ");
+						arr2 = name.split(" ");
+						for (i = 0; i < arr2.length; i++) {
+							while (arr1.indexOf(arr2[i]) > -1) {
+							arr1.splice(arr1.indexOf(arr2[i]), 1);     
+							}
+						}
+						element.className = arr1.join(" ");
+						}
+	
+						// Add active class to the current button (highlight it)
+						var btnContainer = document.getElementById("myBtnContainer");
+						var btns = btnContainer.getElementsByClassName("btn");
+						for (var i = 0; i < btns.length; i++) {
+						btns[i].addEventListener("click", function(){
+							var current = document.getElementsByClassName("active");
+							current[0].className = current[0].className.replace(" active", "");
+							this.className += " active";
+						});
+						}
+					</script>
+				</div>
+	
+
+				<div>
+					<STYLE>
+					 
+					
+						  .containerB {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							flex-direction: column;
+							width: 24px;
+							height: 24px;
+							 display: flex;
+							justify-content: center;
+							align-items: center;
+						
+						  }
+					
+						  .chevronB {
+							position: absolute;
+							width: 28px;
+							height: 8px;
+							opacity: 0;
+							transform: scale3d(0.5, 0.5, 0.5);
+							animation: move 3s ease-out infinite;
+						  }
+					
+						  .chevronB:first-child {
+							animation: move 3s ease-out 1s infinite;
+						  }
+					
+						  .chevronB:nth-child(2) {
+							animation: move 3s ease-out 2s infinite;
+						  }
+					
+						  .chevronB:before,
+						  .chevronB:after {
+							content: ' ';
+							position: absolute;
+							top: 0;
+							height: 100%;
+							width: 51%;
+							background: black;
+						  }
+					
+						  .chevronB:before {
+							left: 0;
+							transform: skew(0deg, 30deg);
+						  }
+					
+						  .chevronB:after {
+							right: 0;
+							width: 50%;
+							transform: skew(0deg, -30deg);
+						  }
+					
+						  @keyframes move {
+							25% {
+							  opacity: 1;
+					
+							}
+							33% {
+							  opacity: 1;
+							  transform: translateY(30px);
+							}
+							67% {
+							  opacity: 1;
+							  transform: translateY(40px);
+							}
+							100% {
+							  opacity: 0;
+							  transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+							}
+						  }
+					
+						  .textPulseB {
+							display: block;
+							margin-top: 75px;
+							margin-left: -30px;
+							font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+							font-size: 12px;
+							color: black; 
+							text-transform: uppercase;
+							white-space: nowrap;
+							opacity: .25;
+							animation: pulse 2s linear alternate infinite;
+						  }
+					
+						  @keyframes pulse {
+							to {
+							  opacity: 1;
+							}
+						  }
+					  </style>
+					<center>
+					  <div class="containerB">
+						<div class="chevronB"></div>
+						<div class="chevronB"></div>
+						<div class="chevronB"></div><br><br><br><br>
+						<span class="textPulseB">Scroll down</span>
+					  </div>
+					</center>
+				</div>				
+				
+			
+				
+		</div> <!-- /class="Body-Invisible-scrollbar  custom-scroll-bar invisible" -->
+	</div><br><br><br><br><br><br><br><br>
+	<iframe src="https://www.xbr.pw//assets/css/hey/cards-carrusel-horizontal/index.html"     name="tab-about" height="780px" width="100%" title="Puedes editar el contenido" style="border:none;" allowfullscreen ></iframe><!--  /class="searchable" -->
+</div>
+
+
+
+
+
+<script src="./preloader.js"></script><script src='./jquery.min.js'></script><script src="./compressed.js"></script> 
+<script>
+	function openTab(evt, TabName) {
+	var i, x, tablinks;
+	x = document.getElementsByClassName("Tab");
+	for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablink");
+	for (i = 0; i < x.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+	}
+	document.getElementById(TabName).style.display = "block";
+	evt.currentTarget.className += "";
+	}
+</script>
+<script>includeHTML();</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
 </body>
 </html>
+<!-- Front End Developer from Indonesia who loves to work remotely.		
+	Desarrollador front-end de Indonesia al que le encanta trabajar de forma remota
+Developing business on the Internet. I make websites for business and bring clients.
+Desarrollo de negocios en Internet. Hago sitios web para empresas y traigo clientes.
+
+How to build
+Starter templete 
+Material starter kit 
+Beutiful Sexy Discover -->
