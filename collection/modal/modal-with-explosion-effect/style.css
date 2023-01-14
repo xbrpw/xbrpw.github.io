@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;  width: 100%;
+  height: 100%;
+}
+
+#btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #555;
+  background: rgba(245, 225, 128, 0.9);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+#btn:hover {
+  box-shadow: 0px 0px 0px rgba(245, 225, 128, 0.5);
+}
+
+#modal_wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}
+
+#modal_container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: 0px 5px;
+}
+
+#modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  padding: 20px 30px;
+  color: #444;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  transition: all 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@media screen and (max-width: 480px) {
+  #modal {
+    padding: 10px 15px;
+  }
+}
+#modal h2 {
+  font-size: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 480px) {
+  #modal h2 {
+    font-size: 34px;
+  }
+}
+#modal p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 480px) {
+  #modal p {
+    font-size: 15px;
+  }
+}
+#modal #okay {
+  background: rgba(79, 144, 193, 0.8);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 17px;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#modal #okay:hover {
+  background: rgba(79, 144, 193, 0.9);
+}
+@media screen and (max-width: 480px) {
+  #modal #okay {
+    font-size: 16px;
+  }
+}
+#modal #close {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  color: rgba(217, 83, 79, 0.8);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#modal #close:hover {
+  color: rgba(217, 83, 79, 0.9);
+}
+
+#bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+}
+
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  opacity: 1;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.hide {
+  transform: scale(0, 0);
+  visibility: hidden;
+}
+
+.show {
+  transform: scale(1, 1);
+  visibility: visible;
+}

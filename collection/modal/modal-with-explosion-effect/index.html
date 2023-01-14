@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Modal with Explosion Effect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<a id="btn" href="#">Open modal</a>
+<div class="hide" id="modal_wrapper">
+  <div id="modal_container">
+    <div class="hide" id="modal">
+      <div id="close">X</div>
+      <h2>Boo!</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet a tenetur delectus reprehenderit, omnis doloremque at earum officia unde sequi accusantium corporis praesentium deserunt laboriosam dignissimos voluptatum culpa molestiae ullam!</p>
+      <button id="okay">Okay</button>
+    </div>
+  </div>
+  <div id="bg"><img id="explosion" alt="Explosion"/></div>
+  <script>
+    const btn = document.getElementById("btn");
+    const modal_wrapper = document.getElementById("modal_wrapper");
+    const modal = document.getElementById("modal");
+    const close = document.getElementById("close");
+    const explosion = document.getElementById("explosion");
+    const okay = document.getElementById("okay");
+    const bg = document.getElementById("bg");
+
+    btn.addEventListener("click", openModal, false);
+
+    close.addEventListener("click", closeModal, false);
+    okay.addEventListener("click", closeModal, false);
+    bg.addEventListener("click", closeModal, false);
+
+    function openModal() {
+      modal_wrapper.classList.add("show");
+      explosion.setAttribute("src", "https://cdn.pbrd.co/images/mYwKJYJI.gif");
+
+      setTimeout(function() {
+        modal.classList.remove("hide");
+        modal.classList.add("show");
+      }, 250);
+    }
+
+    function closeModal() {
+      explosion.setAttribute("src", "");
+
+      modal_wrapper.classList.remove("show");
+      modal_wrapper.classList.add("hide");
+
+      modal.classList.remove("show");
+      modal.classList.add("hide");
+    }
+  </script>
+</div>
+<!-- partial -->
+  <script  src="./script.jsx"></script>
+
+</body>
+</html>

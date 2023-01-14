@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300);
+
+h1 {
+  font-family: 'Lato', Sans-serif;
+  font-weight: 100;
+  font-size: 5em;
+  text-transform: uppercase;
+  display: inline-block;
+  transform: skewY(-10deg);
+  line-height: 0.9;
+  border-top: 0.02em solid black;
+  border-bottom: 0.02em solid black;
+  padding: 0.1em 0;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: auto;
+  height: 1.87em;
+  width: 8em;  text-align: center;
+}
+
+h1 span.adj {
+  font-size: 1.05em;  text-align: center;
+}
+
+h1 small {
+  font-size: 0.25em;  text-align: center;
+  font-weight: 300;
+  text-transform: lowercase;
+  display: block;
+  text-align: center;
+  line-height: 1.9;
+}
+h1 small span.block {
+  background: white;
+  padding: 0 0.35em;
+}

@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "Marvin Visions Variable";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/MarvinVisionsTrial-Variable.ttf");
+}
+:root {
+  --black: #010101;
+  --red: #fd0002;
+  --blue: #1600fe;
+  --green: #00ff00;
+  --letter-skew: 8deg;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.words {
+  font-size: 7.5rem;
+  letter-spacing: 1rem;
+  font-family: "Marvin Visions Variable";
+  text-transform: uppercase;
+}
+.words:nth-child(odd) .char:nth-child(odd) {
+  --rotation: 10deg;
+  transform-origin: bottom left;
+  -webkit-animation-name: stretchHozThenVert;
+          animation-name: stretchHozThenVert;
+}
+.words:nth-child(odd) .char:nth-child(even) {
+  --rotation: -10deg;
+  transform-origin: bottom left;
+  -webkit-animation-name: stretchVertThenHoz;
+          animation-name: stretchVertThenHoz;
+}
+.words:nth-child(odd) .char:nth-child(even):before, .words:nth-child(odd) .char:nth-child(even):after {
+  -webkit-animation-name: stretchVertThenHoz;
+          animation-name: stretchVertThenHoz;
+}
+.words:nth-child(even) .char:nth-child(odd) {
+  --rotation: -10deg;
+  transform-origin: top right;
+  -webkit-animation-name: stretchVertThenHoz;
+          animation-name: stretchVertThenHoz;
+}
+.words:nth-child(even) .char:nth-child(even) {
+  --rotation: 10deg;
+  transform-origin: top left;
+  -webkit-animation-name: stretchHozThenVert;
+          animation-name: stretchHozThenVert;
+}
+.words:nth-child(even) .char:nth-child(even):before, .words:nth-child(even) .char:nth-child(even):after {
+  -webkit-animation-name: stretchHozThenVert;
+          animation-name: stretchHozThenVert;
+}
+
+.char {
+  position: relative;
+  display: inline-block;
+  color: var(--blue);
+  mix-blend-mode: screen;
+  font-variation-settings: "wght" 200;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-easing: ease-in-out;
+}
+.char::after, .char::before {
+  content: attr(data-char);
+  position: absolute;
+  mix-blend-mode: screen;
+  left: 0;
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: stretchHozThenVert;
+          animation-name: stretchHozThenVert;
+  animation-easing: ease-in-out;
+}
+.char::before {
+  color: var(--red);
+  font-variation-settings: "wght" 170;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+  font-size: 7.75rem;
+}
+.char::after {
+  color: var(--green);
+  font-variation-settings: "wght" 150;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  font-size: 8rem;
+}
+
+@-webkit-keyframes stretchHozThenVert {
+  0% {
+    transform: rotate(var(--rotation)) skew(var(--letter-skew), 0) scale(0.9, 1.15);
+  }
+  50% {
+    transform: rotate(var(--rotation)) skew(var(--letter-skew), 0) scale(1.15, 0.9);
+  }
+  100% {
+    transform: rotate(var(--rotation)) skew(var(--letter-skew), 0) scale(0.9, 1.15);
+  }
+}
+
+@keyframes stretchHozThenVert {
+  0% {
+    transform: rotate(var(--rotation)) skew(var(--letter-skew), 0) scale(0.9, 1.15);
+  }
+  50% {
+    transform: rotate(var(--rotation)) skew(var(--letter-skew), 0) scale(1.15, 0.9);
+  }
+  100% {
+    transform: rotate(var(--rotation)) skew(var(--letter-skew), 0) scale(0.9, 1.15);
+  }
+}
+@-webkit-keyframes stretchVertThenHoz {
+  0% {
+    transform: rotate(var(--rotation)) scale(1.15, 0.9);
+  }
+  50% {
+    transform: rotate(var(--rotation)) scale(0.9, 1.15);
+  }
+  100% {
+    transform: rotate(var(--rotation)) scale(1.15, 0.9);
+  }
+}
+@keyframes stretchVertThenHoz {
+  0% {
+    transform: rotate(var(--rotation)) scale(1.15, 0.9);
+  }
+  50% {
+    transform: rotate(var(--rotation)) scale(0.9, 1.15);
+  }
+  100% {
+    transform: rotate(var(--rotation)) scale(1.15, 0.9);
+  }
+}

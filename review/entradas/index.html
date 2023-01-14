@@ -6,8 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://xbrpw.github.io/review/entradas/style.css">
+
+  <link rel="stylesheet" href="https://xbrpw.github.io/review/entradas/style.css">  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.02.0/css/all.min.css'> 
+  <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v6/search?o=r&m=free -->   
+  <link href='https://xbrpw.github.io/assets/fontawesome/css/all.min.css' rel='stylesheet'>
+  <link href='https://xbrpw.github.io/assets/fontawesome/css/regular.min.css' rel='stylesheet'> 
+
   <style>
 	@import url("https://fonts.googleapis.com/css?family=Varela+Round");
 	body {font-family: "Varela Round", sans-serif; }
@@ -63,7 +68,7 @@
 	body {overflow: hidden;text-align:center;align-items: center;justify-content: center; }
 	body,html {height: 100%;width: 100%;margin: 0;padding: 0;}
 
-	#preloder {
+	#sharonPreloader {
 			position: fixed;
 			width: 100%;
 			height: 100%;
@@ -71,8 +76,8 @@
 			left: 0; margin: 0;padding: 0;
 			z-index: 999999;
 			overflow: hidden;text-align:center;display: flex;align-items: center;justify-content: center;
-			background-color: #1B1C24;      
-		}		
+			background-color: #1B1C24;}
+	.loader {color:black}
   </style>
   
 	<script>
@@ -104,119 +109,7 @@
 	}
 	};
 	</script>
-</head>
-
-<body class="Body-Invisible-scrollbar  custom-scroll-bar invisible ">
-
-<div id="preloder" >
-	<div class="body-light-reader">
-		<style>
-			.body-light-reader {
-			background-color: #111;
-			overflow: hidden;
-			text-align:center;
-			  display: flex;
-			  align-items: center;
-			  justify-content: center; 
-			  height: 100%;
-			width: 100%;
-			margin: 0;
-			padding: 0;
-			}
-		
-			body,
-			html {
-			height: 100%;
-			width: 100%;
-			margin: 0;
-			padding: 0;
-			}
-		
-			.svg-light-reader {
-			width: 100%;
-			height: 100%;
-			visibility: hidden;
-			
-			}
-		
-		
-			.ring, #d0ot{
-			  mix-blend-mode:overlay;
-			}
-		  </style>
-	<svg class="mainSVG svg-light-reader " viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" >
-	<defs>
-	  <filter id="glow" x="-100%" y="-100%" width="250%" height="250%">
-		<feGaussianBlur stdDeviation="10" result="coloredBlur" />
-		<feOffset dx="0" dy="0" result="offsetblur"></feOffset>
-		<feFlood id="glowAlpha" flood-color="#38DFF1" flood-opacity="0.3"></feFlood>
-		<feComposite in2="offsetblur" operator="in"></feComposite>
-		<feMerge>
-		  <feMergeNode/>          
-		  <feMergeNode in="SourceGraphic"></feMergeNode>
-		</feMerge>
-	  </filter>   
-	 
-	<radialGradient id="bgGrad" cx="400" cy="300" r="220" gradientUnits="userSpaceOnUse">
-		<stop  offset="0" style="stop-color:#0867C7"/>
-		<stop  offset="0.86" style="stop-color:#111" stop-opacity="0"/>
-	</radialGradient>  
-	  <circle class="particle" cx="0" cy="0" r="1" /> 
-	<path id="orbit" fill="none" stroke="none" stroke-width="4" stroke-miterlimit="10" d="M300,80c121.5,0,220,98.5,220,220S421.5,520,300,520,80,421.5,80,300,178.5,80,300,80"/>   
-	  </defs>
-	
-	<rect id="rectGrad" fill="url(#bgGrad)" width="800" height="600" opacity="0.8"/>
-	  <radialGradient id="dotGrad" cx="0" cy="0" r="50" gradientUnits="userSpaceOnUse">
-		<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:1"/>
-		<!-- <stop  offset="0.3" style="stop-color:#FD3A02;stop-opacity:0.6"/> -->
-	   <stop  offset="0.3" style="stop-color:#0867C7;stop-opacity:0.6"/>
-		<stop  offset="0.8" style="stop-color:#081029;stop-opacity:0"/>
-	</radialGradient>
-	  <g id="pContainer"  />
-	<g class="whole" >
-	  <circle id="dot" fill="url(#dotGrad)" cx="0" cy="0" r="50"/> 
-	 <circle class="ring" filter="url(#glow)" cx="400" cy="300" r="220" fill="none" stroke="#64A8AF" stroke-width="34" opacity="0"/>
-	</g>
-	  <circle id="follower" fill="#081029" cx="0" cy="0" r="0"/> 
-	</svg>
-	
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js'></script>
-	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Physics2DPlugin.min.js'></script><script  src="./light-reader.js"></script>
-	</div>
-</div>
-
-<div class="w3-bar w3-black">
-	<button class="w3-bar-item w3-button tablink w3-grey" onclick="openTab(event,'Home')">Home</button>
-	<button class="w3-bar-item w3-button tablink" onclick="openTab(event,'About')">About</button>
-	<button class="w3-bar-item w3-button tablink" onclick="openTab(event,'More')">More</button>
-</div>
-  
-	
-<div id="About" class="Tab div-Invisible-scrollbar custom-scroll-bar invisible" style="display:none">
-	<iframe src="https://xbrpw.github.io/"     name="tab-about" height="780px" width="100%" title="Puedes editar el contenido" style="border:none;" allowfullscreen ></iframe>
-	https://www.xbr.pw//assets/css/hey/cards-carrusel-horizontal/index.html
-	v
-</div>
-
-<div id="More" class="Tab div-Invisible-scrollbar custom-scroll-bar invisible"  style="display:none">
-<p><b>Incluye</b> Preloader, Scroll bar invisible, Search, Filter, Modal, localStorage, Avatar,</p>
-<div class="row" sheetsu="https://sheetsu.com/dashboard/sheets/84374">	
-<div class="col-4">	
-<img src="{{image-url}}">	
-<h1>{{titulo}}</h1>	
-<p>{{Description}}</p>	
-<p>{{Tag}}</p>	
-</div>	
-</div>	
-<script src="//https://load.sheetsu.com"></script>	
-	
-	
-<iframe src="https://sheetsu.com/a/f/284f3b59bb74?embedded=true"	
-width="100%" height="600" frameBorder="0"	
-style="background: transparent; border: 1px solid #dedede;"></iframe>	
-
-<div>
-<style>
+	<style>
 	/* -------------------------------- 
 
 	Primary style
@@ -358,7 +251,8 @@ style="background: transparent; border: 1px solid #dedede;"></iframe>
 	.cd-modal-action .btn.to-circle {
 	width: 4em;
 	color: transparent;
-	-webkit-transition: color 0.2s 0s, width 0.3s 0.2s;
+	-webkit-transitio
+	c n: color 0.2s 0s, width 0.3s 0.2s;
 	-moz-transition: color 0.2s 0s, width 0.3s 0.2s;
 	transition: color 0.2s 0s, width 0.3s 0.2s;
 	}
@@ -440,6 +334,113 @@ style="background: transparent; border: 1px solid #dedede;"></iframe>
 	}
 	}	
 </style>
+</head>
+
+<body class="Body-Invisible-scrollbar  custom-scroll-bar invisible ">
+
+<div id="sharonPreloader w3-hide" >
+	<div class="body-light-reader loader w3-hide">
+		<style>
+			.body-light-reader {
+			background-color: #111;
+			overflow: hidden;
+			text-align:center;
+			  display: flex;
+			  align-items: center;
+			  justify-content: center; 
+			  height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			}
+		
+			body,
+			html {
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			}
+		
+			.svg-light-reader {
+			width: 100%;
+			height: 100%;
+			visibility: hidden;
+			
+			}
+		
+		
+			.ring, #d0ot{
+			  mix-blend-mode:overlay;
+			}
+		  </style>
+	<svg class="mainSVG svg-light-reader " viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" >
+	<defs>
+	  <filter id="glow" x="-100%" y="-100%" width="250%" height="250%">
+		<feGaussianBlur stdDeviation="10" result="coloredBlur" />
+		<feOffset dx="0" dy="0" result="offsetblur"></feOffset>
+		<feFlood id="glowAlpha" flood-color="#38DFF1" flood-opacity="0.3"></feFlood>
+		<feComposite in2="offsetblur" operator="in"></feComposite>
+		<feMerge>
+		  <feMergeNode/>          
+		  <feMergeNode in="SourceGraphic"></feMergeNode>
+		</feMerge>
+	  </filter>   
+	 
+	<radialGradient id="bgGrad" cx="400" cy="300" r="220" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#0867C7"/>
+		<stop  offset="0.86" style="stop-color:#111" stop-opacity="0"/>
+	</radialGradient>  
+	  <circle class="particle" cx="0" cy="0" r="1" /> 
+	<path id="orbit" fill="none" stroke="none" stroke-width="4" stroke-miterlimit="10" d="M300,80c121.5,0,220,98.5,220,220S421.5,520,300,520,80,421.5,80,300,178.5,80,300,80"/>   
+	  </defs>
+	
+	<rect id="rectGrad" fill="url(#bgGrad)" width="800" height="600" opacity="0.8"/>
+	  <radialGradient id="dotGrad" cx="0" cy="0" r="50" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:1"/>
+		<!-- <stop  offset="0.3" style="stop-color:#FD3A02;stop-opacity:0.6"/> -->
+	   <stop  offset="0.3" style="stop-color:#0867C7;stop-opacity:0.6"/>
+		<stop  offset="0.8" style="stop-color:#081029;stop-opacity:0"/>
+	</radialGradient>
+	  <g id="pContainer"  />
+	<g class="whole" >
+	  <circle id="dot" fill="url(#dotGrad)" cx="0" cy="0" r="50"/> 
+	 <circle class="ring" filter="url(#glow)" cx="400" cy="300" r="220" fill="none" stroke="#64A8AF" stroke-width="34" opacity="0"/>
+	</g>
+	  <circle id="follower" fill="#081029" cx="0" cy="0" r="0"/> 
+	</svg>
+	
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js'></script>
+	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Physics2DPlugin.min.js'></script><script  src="./light-reader.js"></script>
+	</div>
+</div>
+
+<div class="w3-bar w3-black">
+	<button class="w3-bar-item w3-button tablink w3-grey" onclick="openTab(event,'Home')">Home</button>
+	<button class="w3-bar-item w3-button tablink w3-hide" onclick="openTab(event,'About')">About</button>
+	<button class="w3-bar-item w3-button tablink" onclick="openTab(event,'shetsu')">Shetsu</button>
+	<button class="w3-bar-item w3-button tablink" onclick="openTab(event,'More')">More</button>
+</div>
+  
+	
+<div id="About" class="Tab div-Invisible-scrollbar custom-scroll-bar invisible w3-hide" style="display:none" >
+	<iframe src="https://xbrpw.github.io/"     name="tab-about" height="780px" width="100%" title="Puedes editar el contenido" style="border:none;" allowfullscreen ></iframe>
+	https://www.xbr.pw//assets/css/hey/cards-carrusel-horizontal/index.html
+</iframe>
+</div>
+
+<div id="More" class="Tab div-Invisible-scrollbar custom-scroll-bar invisible"  style="display:none">
+<p><b>Incluye</b> Preloader, Scroll bar invisible, Search, Filter, Modal, localStorage, Avatar, Sheetmonkey, Sheetsu<br>
+	short-url/play/sphere-2/index.html<br>
+	xbrpw.github.io/collection/modal/modal-with-explosion-effect/index.html<br>
+	xbrpw.github.io/editable/lizzi-dizzy/index.html<br>
+	xbrpw.github.io/collection/prueba-img-options/index.html<br>
+	xbrpw.github.io/collection/a/name-line/index.html<br>
+</p>
+	
+	
+<div>
+
 			
 <section class="cd-section">
 		
@@ -451,6 +452,8 @@ style="background: transparent; border: 1px solid #dedede;"></iframe>
 		<div class="cd-modal">
 			<div class="cd-modal-content">
 				
+				<iframe src="https://sheetsu.com/a/f/284f3b59bb74?embedded=true"	width="100%" height="600" frameBorder="0"	style="background: transparent; border: 1px solid #dedede;" ></iframe>	
+
 				<div>
 					<style>
 						.avatar {
@@ -469,9 +472,7 @@ style="background: transparent; border: 1px solid #dedede;"></iframe>
 						font-family: "Readex Pro", sans-serif;
 						color: #ffffff;
 					}
-					</style>
-				
-				
+					</style>								
 				
 					<div class="avatar" data-label="LA"></div>
 				
@@ -559,8 +560,7 @@ style="background: transparent; border: 1px solid #dedede;"></iframe>
 					</script>	  
 				</div>
 
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad modi repellendus, optio eveniet eligendi molestiae? Fugiat, temporibus! A rerum pariatur neque laborum earum, illum voluptatibus eum voluptatem fugiat, porro animi tempora? Sit harum nulla, nesciunt molestias, iusto aliquam aperiam est qui possimus reprehenderit ipsam ea aut assumenda inventore iste! Animi quaerat facere repudiandae earum quisquam accusamus tempora, delectus nesciunt, provident quae aliquam, voluptatum beatae quis similique in maiores repellat eligendi voluptas veniam optio illum vero! Eius, dignissimos esse eligendi veniam.
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad modi repellendus, optio eveniet eligendi molestiae? Fugiat, temporibus! A rerum pariatur neque laborum earum, illum voluptatibus eum voluptatem fugiat, porro animi tempora? Sit harum nulla, nesciunt molestias, iusto aliquam aperiam est qui possimus reprehenderit ipsam ea aut assumenda inventore iste! Animi quaerat facere repudiandae earum quisquam accusamus tempora, delectus nesciunt, provident quae aliquam, voluptatum beatae quis similique in maiores repellat eligendi voluptas veniam optio illum vero! Eius, dignissimos esse eligendi veniam.
 				</p>
 
 				<p>
@@ -590,97 +590,96 @@ style="background: transparent; border: 1px solid #dedede;"></iframe>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/velocity.min.js'></script>
 <script>
-jQuery(document).ready(function($){
-	//trigger the animation - open modal window
-	$('[data-type="modal-trigger"]').on('click', function(){
-		var actionBtn = $(this),
-			scaleValue = retrieveScale(actionBtn.next('.cd-modal-bg'));
-		
-		actionBtn.addClass('to-circle');
-		actionBtn.next('.cd-modal-bg').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-			animateLayer(actionBtn.next('.cd-modal-bg'), scaleValue, true);
+	jQuery(document).ready(function($){
+		//trigger the animation - open modal window
+		$('[data-type="modal-trigger"]').on('click', function(){
+			var actionBtn = $(this),
+				scaleValue = retrieveScale(actionBtn.next('.cd-modal-bg'));
+			
+			actionBtn.addClass('to-circle');
+			actionBtn.next('.cd-modal-bg').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				animateLayer(actionBtn.next('.cd-modal-bg'), scaleValue, true);
+			});
+
+			//if browser doesn't support transitions...
+			if(actionBtn.parents('.no-csstransitions').length > 0 ) animateLayer(actionBtn.next('.cd-modal-bg'), scaleValue, true);
 		});
 
-		//if browser doesn't support transitions...
-		if(actionBtn.parents('.no-csstransitions').length > 0 ) animateLayer(actionBtn.next('.cd-modal-bg'), scaleValue, true);
-	});
-
-	//trigger the animation - close modal window
-	$('.cd-section .cd-modal-close').on('click', function(){
-		closeModal();
-	});
-	$(document).keyup(function(event){
-		if(event.which=='27') closeModal();
-	});
-
-	$(window).on('resize', function(){
-		//on window resize - update cover layer dimention and position
-		if($('.cd-section.modal-is-visible').length > 0) window.requestAnimationFrame(updateLayer);
-	});
-
-	function retrieveScale(btn) {
-		var btnRadius = btn.width()/2,
-			left = btn.offset().left + btnRadius,
-			top = btn.offset().top + btnRadius - $(window).scrollTop(),
-			scale = scaleValue(top, left, btnRadius, $(window).height(), $(window).width());
-
-		btn.css('position', 'fixed').velocity({
-			top: top - btnRadius,
-			left: left - btnRadius,
-			translateX: 0,
-		}, 0);
-
-		return scale;
-	}
-
-	function scaleValue( topValue, leftValue, radiusValue, windowW, windowH) {
-		var maxDistHor = ( leftValue > windowW/2) ? leftValue : (windowW - leftValue),
-			maxDistVert = ( topValue > windowH/2) ? topValue : (windowH - topValue);
-		return Math.ceil(Math.sqrt( Math.pow(maxDistHor, 2) + Math.pow(maxDistVert, 2) )/radiusValue);
-	}
-
-	function animateLayer(layer, scaleVal, bool) {
-		layer.velocity({ scale: scaleVal }, 400, function(){
-			$('body').toggleClass('overflow-hidden', bool);
-			(bool) 
-				? layer.parents('.cd-section').addClass('modal-is-visible').end().off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend')
-				: layer.removeClass('is-visible').removeAttr( 'style' ).siblings('[data-type="modal-trigger"]').removeClass('to-circle');
+		//trigger the animation - close modal window
+		$('.cd-section .cd-modal-close').on('click', function(){
+			closeModal();
 		});
-	}
-
-	function updateLayer() {
-		var layer = $('.cd-section.modal-is-visible').find('.cd-modal-bg'),
-			layerRadius = layer.width()/2,
-			layerTop = layer.siblings('.btn').offset().top + layerRadius - $(window).scrollTop(),
-			layerLeft = layer.siblings('.btn').offset().left + layerRadius,
-			scale = scaleValue(layerTop, layerLeft, layerRadius, $(window).height(), $(window).width());
-		
-		layer.velocity({
-			top: layerTop - layerRadius,
-			left: layerLeft - layerRadius,
-			scale: scale,
-		}, 0);
-	}
-
-	function closeModal() {
-		var section = $('.cd-section.modal-is-visible');
-		section.removeClass('modal-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-			animateLayer(section.find('.cd-modal-bg'), 1, false);
+		$(document).keyup(function(event){
+			if(event.which=='27') closeModal();
 		});
-		//if browser doesn't support transitions...
-		if(section.parents('.no-csstransitions').length > 0 ) animateLayer(section.find('.cd-modal-bg'), 1, false);
-	}
-});
+
+		$(window).on('resize', function(){
+			//on window resize - update cover layer dimention and position
+			if($('.cd-section.modal-is-visible').length > 0) window.requestAnimationFrame(updateLayer);
+		});
+
+		function retrieveScale(btn) {
+			var btnRadius = btn.width()/2,
+				left = btn.offset().left + btnRadius,
+				top = btn.offset().top + btnRadius - $(window).scrollTop(),
+				scale = scaleValue(top, left, btnRadius, $(window).height(), $(window).width());
+
+			btn.css('position', 'fixed').velocity({
+				top: top - btnRadius,
+				left: left - btnRadius,
+				translateX: 0,
+			}, 0);
+
+			return scale;
+		}
+
+		function scaleValue( topValue, leftValue, radiusValue, windowW, windowH) {
+			var maxDistHor = ( leftValue > windowW/2) ? leftValue : (windowW - leftValue),
+				maxDistVert = ( topValue > windowH/2) ? topValue : (windowH - topValue);
+			return Math.ceil(Math.sqrt( Math.pow(maxDistHor, 2) + Math.pow(maxDistVert, 2) )/radiusValue);
+		}
+
+		function animateLayer(layer, scaleVal, bool) {
+			layer.velocity({ scale: scaleVal }, 400, function(){
+				$('body').toggleClass('overflow-hidden', bool);
+				(bool) 
+					? layer.parents('.cd-section').addClass('modal-is-visible').end().off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend')
+					: layer.removeClass('is-visible').removeAttr( 'style' ).siblings('[data-type="modal-trigger"]').removeClass('to-circle');
+			});
+		}
+
+		function updateLayer() {
+			var layer = $('.cd-section.modal-is-visible').find('.cd-modal-bg'),
+				layerRadius = layer.width()/2,
+				layerTop = layer.siblings('.btn').offset().top + layerRadius - $(window).scrollTop(),
+				layerLeft = layer.siblings('.btn').offset().left + layerRadius,
+				scale = scaleValue(layerTop, layerLeft, layerRadius, $(window).height(), $(window).width());
+			
+			layer.velocity({
+				top: layerTop - layerRadius,
+				left: layerLeft - layerRadius,
+				scale: scale,
+			}, 0);
+		}
+
+		function closeModal() {
+			var section = $('.cd-section.modal-is-visible');
+			section.removeClass('modal-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				animateLayer(section.find('.cd-modal-bg'), 1, false);
+			});
+			//if browser doesn't support transitions...
+			if(section.parents('.no-csstransitions').length > 0 ) animateLayer(section.find('.cd-modal-bg'), 1, false);
+		}
+	});
 </script>
 </div>	
 <!-- <div w3-include-html=""></div>   -->	
-<iframe src="https://xbrpw.github.io/review"     name="tab-more" height="780px" width="100%" title="Puedes editar el contenido" style="border:none;" allowfullscreen ></iframe>
+<iframe src=""     name="tab-more" height="780px" width="100%" title="Puedes editar el contenido" style="border:none;" allowfullscreen ></iframe>
 </div>
 
 
 <div id="Home" class="Tab div-Invisible-scrollbar custom-scroll-bar invisible">
    
-	
 	<div class=" "><br>		
 		<div class="searchable">
 				<div class="w3-container"><input type="text" autofocus  placeholder=" 🔍 Buscar..."/>
@@ -867,9 +866,8 @@ jQuery(document).ready(function($){
 				</div>
 	
 
-				<div>
-					<STYLE>
-					 
+				<div ScrollDown>
+					<style>				 
 					
 						  .containerB {
 							display: flex;
@@ -954,14 +952,28 @@ jQuery(document).ready(function($){
 							animation: pulse 2s linear alternate infinite;
 						  }
 					
-						  @keyframes pulse {
-							to {
-							  opacity: 1;
-							}
-						  }
-					  </style>
+						  @keyframes pulse {to {opacity: 1;}}
+					</style>
+					
+<style>
+    .fadeout-4s {
+    animation:     
+      fade-out 4s ease 4s forwards;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0}
+  }
+
+  @keyframes fade-out {
+    to { opacity: 0}
+  }
+
+  @keyframes slide-in {
+    from { transform: translateY(10px) }}
+</style>
 					<center>
-					  <div class="containerB">
+					  <div class="containerB fadeout-4s ">
 						<div class="chevronB"></div>
 						<div class="chevronB"></div>
 						<div class="chevronB"></div><br><br><br><br>
@@ -969,19 +981,28 @@ jQuery(document).ready(function($){
 					  </div>
 					</center>
 				</div>				
-				
-			
+							
 				
 		</div> <!-- /class="Body-Invisible-scrollbar  custom-scroll-bar invisible" -->
 	</div><br><br><br><br><br><br><br><br>
-	<iframe src="https://www.xbr.pw//assets/css/hey/cards-carrusel-horizontal/index.html"     name="tab-about" height="780px" width="100%" title="Puedes editar el contenido" style="border:none;" allowfullscreen ></iframe><!--  /class="searchable" -->
+	<iframe src="https://www.xbr.pw/assets/css/hey/cards-carrusel-horizontal/index.html"  class="w3-hide"   name="tab-about" height="780px" width="100%" title="Puedes editar el contenido" style="border:none;" allowfullscreen ></iframe><!--  /class="searchable" -->
 </div>
 
+<div id="shetsu" class="Tab div-Invisible-scrollbar custom-scroll-bar invisible"  style="display:none"></div>
+	<div class="row" sheetsu="https://sheetsu.com/dashboard/sheets/84374">	
+		<div class="col-4">	
+		<img src="{{image-url}}">	
+		<h1>{{titulo}}</h1>	
+		<p>{{Description}}</p>	
+		<p>{{Tag}}</p>	
+		</div>	
+		</div>	
+		<script src="//https://load.sheetsu.com"></script>	
+	</div>	
+</div>	
 
+<script src="preloader.js"></script><script src='https://code.jquery.com/jquery-3.6.3.min.js'></script>
 
-
-
-<script src="preloader.js"></script><script src='jquery.min.js'></script><script src="compressed.js"></script> 
 <script>
 	function openTab(evt, TabName) {
 	var i, x, tablinks;
@@ -998,9 +1019,7 @@ jQuery(document).ready(function($){
 	}
 </script>
 <script>includeHTML();</script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="https://xbrpw.github.io/review
-
-/script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="https://xbrpw.github.io/review/script.js"></script>
 </body>
 </html>
 <!-- Front End Developer from Indonesia who loves to work remotely.		
@@ -1015,6 +1034,19 @@ Beutiful Sexy Discover
 
 https://www.xbr.pw/sharon/corriendo/index.html
 https://xbrpw.github.io/editable/bouncy-type-animation/index.html
+
+https://xbrpw.github.io/2023/calculator/index.html
+https://xbrpw.github.io/collection/button/menu-circular-button/index.html
+https://
+https://
+https://
+https://www.xbr.pw/user/angylu/index.html
+https://xbrpw.github.io/short-url/sharon/adjusting-your-settings/index.html
+https://xbrpw.github.io/
+https://xbrpw.github.io/
+https://xbrpw.github.io/
+https://xbrpw.github.io/
+https://xbrpw.github.io/
 
 
 -->

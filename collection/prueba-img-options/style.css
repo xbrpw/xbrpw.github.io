@@ -1,0 +1,17 @@
+#bgfadewrap { overflow:hidden; text-align:center; white-space:nowrap; }
+#bgfadewrap, #bgfadewrap > div {
+	z-index:-1;
+	top:0; left:0; bottom:0; right:0; 
+	width:100%; height:100%;
+}
+#bgfadewrap {
+	position:fixed;
+	background:#000;
+}
+#bgfadewrap > div {
+	position:absolute;
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	display:none;
+}
