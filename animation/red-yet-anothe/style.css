@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Bungee';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bungee/v11/N0bU2SZBIuF2PU_ECg.ttf) format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-moz-selection {
+  background: #000;
+}
+::selection {
+  background: #000;
+}
+body {
+  overflow: hidden;
+}
+h1 {
+  font-size: 15vmin;
+  margin-bottom: 0;
+}
+p {
+  font-size: 2vmin;
+}
+.canvas-container {
+  height: 100%;
+  width: 100%;
+}
+.title {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #fff;
+  font-family: 'Bungee', cursive;
+  text-align: center;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,99 @@
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+$font-stack: 'Lato', sans-serif;
+
+* { box-sizing: border-box; }
+
+$red: #ff4081;
+
+body {
+  font-family: $font-stack;
+  background: #efefef;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.radial {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  background: $red;
+  border-radius: 50%;
+  transition: all 0.5s;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.15), 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.fab {
+  border: none;
+  color: white;
+  background-color: #ff4081;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  transition: all 0.5s;
+  &:hover {
+    background-color: darken($red, 15);
+  }
+}
+
+#plus {
+  transition: all 0.5s;
+  margin-top: 7px;
+}
+
+#fa-1, #fa-2, #fa-3 {
+  position: fixed;
+  background: transparent;
+  border: none;
+  right: 60px;
+  bottom: 57px;
+  transition: all 0.5s;
+  color: white;
+  
+  &:hover {
+   tansition-delay: 0s;
+   color: lighten($red, 15); 
+  }
+}
+
+.radial {
+  &.open {
+    height: 400px;
+    width: 400px;
+    right: -125px;
+    bottom: -125px;
+    
+    .fab {
+      background-color: darken($red, 15);
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.15), 0px 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    #plus {
+      transform: rotateZ(135deg) translate(-1px, 3px);
+    }
+    #fa-1 {
+      transition-delay: 0s;
+      transform: translate(-110px, 10px);
+    }
+    #fa-2 {
+      transition-delay: 0.1s;
+      transform: translate(-85px, -85px);
+    }
+    #fa-3 {
+      transition-delay: 0.2s;
+      transform: translate(10px, -110px);
+    }
+  }
+}
+
+
+
