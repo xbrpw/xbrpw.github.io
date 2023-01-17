@@ -1,0 +1,41 @@
+body {
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: radial-gradient(ellipse, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(98,113,116,1) 100%);
+}
+.container {
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+	font-size: 5vw;
+	line-height: 1.6;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+}
+.container .line {
+	margin: 0;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.container .line .inner {
+	position: relative;
+	display: inline-block;
+	padding: 0 1.5vw;
+}
+.container .line .letter {
+	display: inline-block;
+}
+
+.youtube-link {
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+	color: #000;
+	text-decoration: none;
+	font-size: 12px;
+}

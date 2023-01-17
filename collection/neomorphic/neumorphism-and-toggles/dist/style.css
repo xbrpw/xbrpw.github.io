@@ -1,0 +1,144 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui;
+  background: #E7EEF7;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+}
+button:active, button:focus {
+  outline: 0;
+}
+
+.l-grid {
+  width: auto;
+  margin: auto;
+  display: grid;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  grid-template-columns: repeat(1, 3fr);
+}
+.l-grid__item {
+  text-align: center;
+}
+
+.c-button {
+  display: inline-flex;
+  height: 7rem;
+  width: 50rem;
+  padding-left: 2rem;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  border-radius: 1.6rem;
+  border: 0;
+  color: #879fbe;
+  background: transparent;
+  position: relative;
+  box-shadow: 0.8rem 0.8rem 2.4rem #c1d3ea, -0.8rem -0.8rem 2.4rem white, -0.2rem -0.2rem 0.2rem white;
+  transition: all 120ms ease-out 0s;
+}
+.c-button:hover:before {
+  background: rgba(255, 255, 255, 0.24);
+}
+.c-button:before {
+  content: "";
+  position: absolute;
+  border-radius: 1.6rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 2px solid transparent;
+  filter: blur(2px);
+  transition: all 120ms ease-out 0s;
+}
+.c-button:after {
+  content: "";
+  position: absolute;
+  border-radius: 1.6rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 120ms ease-out 0s;
+}
+.c-button--active {
+  background: linear-gradient(to top, #d4e0f1, #fafcfd);
+  box-shadow: inset 0.2rem 0.2rem 0.8rem #87aad7, inset 0.8rem 0.8rem 1.6rem #aec5e4, inset -0.4rem -0.4rem 0.8rem white, 2px 2px 8px #9bb8de, -2px -2px 2px rgba(255, 255, 255, 0.7);
+}
+.c-button--active:before {
+  border-color: white;
+  box-shadow: 0px 0.4rem 1.6rem white;
+}
+.c-button--active:after {
+  box-shadow: inset 0px 0px 1.6rem white;
+}
+.c-button__icon {
+  filter: grayscale(40%) brightness(110%);
+  transition: all 120ms ease-out 0s;
+}
+.c-button__label {
+  filter: grayscale(40%) brightness(110%);
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition: all 120ms ease-out 0s;
+}
+
+.u-text--red {
+  color: #F56565;
+}
+
+.u-text--blue {
+  color: #4299E1;
+}
+
+.u-text--green {
+  color: #48BB78;
+}
+
+.u-text--orange {
+  color: #ED8936;
+}
+
+.u-text--yellow {
+  color: #D69E2E;
+}
+
+.u-text--teal {
+  color: #38B2AC;
+}
+
+.u-text--indigo {
+  color: #667EEA;
+}
+
+.u-text--purple {
+  color: #9F7AEA;
+}
+
+.u-text--pink {
+  color: #ED64A6;
+}

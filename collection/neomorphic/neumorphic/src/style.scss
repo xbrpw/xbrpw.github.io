@@ -1,0 +1,74 @@
+$bg-color: #ECF0F3;
+$shadow: #d1d9e6;
+$light-shadow: #fafafa;
+
+// easily create shapes
+@mixin shape($border-radius: 10%, $width: 6rem, $height: 6rem) {
+  border-radius: $border-radius;
+  height: $height;
+  width: $width;
+}
+
+// apply flexbox styles
+@mixin flexbox ($align, $justify, $direction: row) {
+  align-items: $align;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
+// dropshadow styles
+@mixin drop-shadow {
+    box-shadow: 18px 18px 20px $shadow,
+                -18px -18px 20px $light-shadow;
+}
+
+// inset shadow -styles
+@mixin inset-shadow {
+    box-shadow: inset 18px 18px 20px $shadow,
+                inset -18px -18px 20px $light-shadow;
+}
+
+body {
+  @include flexbox(center, center);
+  box-sizing: border-box;
+  background-color: $bg-color;
+}
+
+// base styles
+.wrapper {
+  @include flexbox(center, space-around, column);
+  max-width: 50rem;
+  min-height: 100vh;
+  padding: 3rem;
+  width: 100%;
+
+  @media screen and (min-width: 500px) {
+    flex-direction: row;
+  }
+}
+
+.drop-shadow {
+  @include shape;
+  @include drop-shadow;
+}
+
+.inner-shadow--square {
+  @include shape;
+  @include inset-shadow;
+}
+
+.inner-shadow--circle {
+  @include shape(50%);
+  @include inset-shadow;
+  @include flexbox(center, center);
+  position: relative;
+
+  &::after {
+    @include shape(50%, 4rem, 4rem);
+    box-shadow: 8px 8px 15px $shadow,
+                -8px -8px 15px $light-shadow;
+    content: " ";
+    display: block;
+  }
+}

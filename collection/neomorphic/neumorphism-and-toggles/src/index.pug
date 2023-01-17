@@ -1,0 +1,46 @@
+- var buttons = [
+-  {
+- 	label: 'Sleep',
+-  icon: 'moon',
+-		type: 'red'
+- }, {
+- 	label: 'Alarm',
+-  icon: 'bell',
+-		type: 'blue'
+- }, {
+- 	label: 'Data',
+-  icon: 'bar-chart',
+-		type: 'green'
+- }, {
+- 	label: 'Wifi',
+-  icon: 'wifi',
+-		type: 'orange'
+- }, {
+- 	label: 'Alerts',
+-  icon: 'alert-circle',
+-		type: 'yellow'
+- }, {
+- 	label: 'Power',
+-  icon: 'power',
+-		type: 'teal'
+- }, {
+- 	label: 'Cast',
+-  icon: 'cast',
+-		type: 'indigo'
+- }, {
+- 	label: 'Send',
+-  icon: 'send',
+-		type: 'purple'
+- }, {
+- 	label: 'Phone',
+-  icon: 'phone',
+-		type: 'pink'
+- },
+- ]
+
+.l-grid
+	each button in buttons
+		.l-grid__item
+			button.c-button(data-button=button.type)
+				i.c-button__icon(data-feather=button.icon)
+				span.c-button__label= button.label

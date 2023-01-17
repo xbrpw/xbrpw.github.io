@@ -1,0 +1,32 @@
+body {
+  padding: 1em 2em;
+  background-color: #FFF;
+  font: normal 100%/1.4 sans-serif;
+  color: #515477;
+  overflow-x: hidden;
+}
+
+h1, p {
+  text-align: center;
+}
+
+h1 {
+  margin: .2em 0 0 0;
+  font-weight: normal;
+}
+
+p {
+  margin: .1 0 2em 0;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  height: 150px;
+  border: 1px solid #666;
+  box-sizing: border-box;
+  transform-origin: center top;
+  transition: transform .05s linear;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
