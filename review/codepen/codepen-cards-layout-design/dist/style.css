@@ -7,32 +7,36 @@
   color: #fff;
 }
 body {
-  background: #131417;
+  background: #131417;  margin: auto;
+  padding: auto;
 }
 .row {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    width: 100vw;
+    width: 100vw; margin: 5px auto;
+    padding: 10px auto;
 }
 .container {
   width: var(--container);
   margin: auto;
+  padding: auto;
 }
 .grid-items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     -webkit-box-align: start;
     -webkit-align-items: start;
     -ms-flex-align: start;
     align-items: start;
     justify-items: center;
-    grid-gap: 4rem 3rem;
+    grid-gap: 4rem 3rem;  margin: auto;
+    padding: auto;
 }
 .grid-item {
   display: block;
-  width: 100%;
+  width: 99%;
   position: relative;
   cursor: pointer;
 }
@@ -62,22 +66,52 @@ body {
 .grid-item:hover::after {
     -webkit-clip-path: inset(0 0 0 0 round 10px);
     clip-path: inset(0 0 0 0 round 10px);
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
-    bottom: 0; 
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+    top: -2rem;
+    right: .2;
+    bottom: -2rem;
+    left: .4rem;
+    margin: -1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: -1;
+    background: #1f2229;
+    -webkit-clip-path: inset(4rem 1rem 8rem 3rem round 10px);
+    clip-path: inset(2rem 0.5rem 2rem 1rem round 10px);
+    contain: strict;
 }
 
 img {
-  width: 100%;
+  width: 100%; 
+  max-width: 100%; 
+
+} 
+
+.img {
+  width: 100%; 
   max-width: 100%;
+  height: 240px;
+} 
+iframe {
+  width: 100%;
+  max-width: 100%;   height: 220px;
 }
+
 .grid-header {
     margin-bottom: 12px;
 }
-.grid-header > img,
-.authorAvatar > img{
+.grid-header > .img,
+.authorAvatar > .img{
     border-radius: 6px;
 }
+
+.avatar {
+  width: 100%;
+  max-width: 45px;
+  height: 45px; border-radius: 6px;
+} 
+
 .content-wrap {
     display: grid;
     grid-template-columns: 13% 85%;
@@ -86,7 +120,7 @@ img {
     justify-content: center;
 }
 .title {
-    padding-left: 5px;
+    padding-left: 5px; line-height: 0.5;
 }
 .title > h2 {
     font-size: 17px;
