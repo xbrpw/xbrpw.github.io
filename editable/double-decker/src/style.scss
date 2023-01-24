@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient( 135deg, #FDEB71 10%, #F8D800 100%);
+}
+.wrap {
+  padding: 15px 20px;
+  background: #c13733;
+  color: white;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+  font-size: 120px;
+  line-height: .95em;
+  letter-spacing: 1px;
+  text-shadow: 6px 4px #000;
+  box-shadow: 6px 4px #000;
+  transform: skewY(-5deg);
+}

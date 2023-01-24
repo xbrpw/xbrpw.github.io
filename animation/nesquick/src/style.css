@@ -1,0 +1,160 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya:900|Montserrat:700);
+
+:root {
+	font-size: 10px;
+}
+
+body {	
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	font-family: 'Alegreya', serif;
+	font-weight: 900;
+	font-size: calc(2em + 15vw);	
+	background-color: #1b87c1;
+	background-image: linear-gradient(#22a7ee, #156997);
+	color: #fff;
+	height: 100vh;
+	overflow: hidden;
+	white-space: nowrap;
+	user-select: none;
+}
+
+.letter {
+	display: inline-block;
+	position: relative;		
+	vertical-align: top;
+	text-transform: uppercase;	
+	text-shadow: 0 0.004em #000,
+				 0.004em 0 #000,
+				 0.004em 0.008em #000,
+				 0.008em 0.004em #000,
+				 0.008em 0.012em #000,
+				 0.012em 0.008em #000,
+				 0.012em 0.016em #000,
+				 0.016em 0.012em #000,
+				 0.016em 0.020em #000,
+				 0.020em 0.016em #000,
+				 0.020em 0.024em #000,
+				 0.024em 0.020em #000,
+				 0.024em 0.028em #000,
+				 0.028em 0.024em #000,
+				 0.028em 0.032em #000,
+				 0.032em 0.028em #000,
+				 0.032em 0.036em #000,
+				 0.036em 0.032em #000,
+				 0.036em 0.040em #000,
+				 0.040em 0.036em #000,
+				 0.040em 0.044em #000,
+				 0.044em 0.040em #000,
+				 0.044em 0.048em #000,
+				 0.048em 0.044em #000,
+				 0.048em 0.052em #000,
+				 0.052em 0.048em #000,
+				 0.052em 0.056em #000,
+				 0.056em 0.052em #000,
+				 0.056em 0.060em #000,
+				 0.060em 0.056em #000,
+				 0.060em 0.064em #000,
+				 0.064em 0.060em #000,
+				 0.064em 0.068em #000,
+				 0.068em 0.064em #000,
+				 0.068em 0.072em #000,
+				 0.072em 0.068em #000,
+				 0.072em 0.076em #000,
+				 0.076em 0.072em #000,
+				 0.076em 0.080em #000,
+				 0.080em 0.076em #000,
+				 0.080em 0.084em #000,
+				 0.084em 0.080em #000,
+				 0.084em 0.088em #000,
+				 0.088em 0.084em #000,
+				 0.088em 0.092em #000,
+				 0.092em 0.088em #000,
+				 0.092em 0.096em #000,
+				 0.096em 0.092em #000,
+				 0.096em 0.100em #000,
+				 0.100em 0.096em #000,
+				 0.100em 0.104em #000,
+				 0.104em 0.100em #000,
+				 0.104em 0.108em #000,
+				 0.108em 0.104em #000,
+				 0.108em 0.112em #000,
+				 0.112em 0.108em #000,
+				 0.112em 0.116em #000,
+				 0.116em 0.112em #000,
+				 0.116em 0.120em #000,
+				 0.120em 0.116em #000,
+				 0.120em 0.124em #000,
+				 0.124em 0.120em #000,
+				 0.124em 0.128em #000;
+	-webkit-text-stroke-color: #000;
+	-webkit-text-stroke-width: 0.024em;	
+}
+
+.letter-1 {
+	transform: rotate(-2deg);
+}
+
+.letter-2 {
+	top: 0.132em;
+	margin-left: -0.4em;
+	transform: rotate(1deg);
+}
+
+.letter-3 {
+	margin-left: -0.36em;
+}
+
+.letter-4 {
+	top: 0.136em;
+	margin-left: -0.36em;
+}
+
+.letter-4::after {
+	content: '';
+	position: absolute;	
+	width: 0.128em;
+	height: 0.332em;
+	top: 0.2em;
+	right: -0.108em;
+	background-color: #fff;
+	transform: rotate(5deg);
+}
+
+.letter-5 {
+	margin-left: -0.28em;
+	z-index: -1;
+}
+
+.letter-6 {
+	top: 0.136em;
+	margin-left: -0.38em;
+	transform: rotate(3deg);
+}
+
+.letter-7 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.2em;
+	font-weight: 700;
+	top: 0;
+	margin-left: -0.22em;
+}
+
+.letter-8 {
+	top: 0.136em;
+	margin-left: -0.28em;
+}
+
+.letter-8::after {
+	content: 'tm';
+	position: absolute;	
+	top: 8em;
+	right: -2.5em;
+	font-family: Arial, sans-serif;
+	font-size: 0.06em;
+	font-weight: 600;
+	color: #000;
+	text-shadow: none;
+	-webkit-text-stroke-width: 0;
+}

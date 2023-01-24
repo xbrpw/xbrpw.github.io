@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	display: grid;
+	place-content: center;
+	place-items: center;
+}
+h1 {
+	font-size: 48pt;
+	line-height: 40pt;
+	margin-bottom: 0;
+}
+p {
+	user-select: none;
+	width: 75%;
+	font-size: 34pt;
+	text-align: center;
+}
+
+.select-all {
+	user-select: all;
+}
