@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+     * { box-sizing: border-box;}
+      body {margin: 0;font: 18px; height: 100vh; }
+      button {background-color:transparent; border:none; padding:0; margin:0; display: inline-block;}
+      img {width:32px; height:32x;   display: inline-block; }
+      .imgResponsive {width: 100%;max-width: 32px;height: 32px;}
+      .content {flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content"s default minimum size. */padding: 20px;}
+      .fadeinout-2s {animation:fade-out 2s ease 2s forwards;}
+      @keyframes fade-in {from { opacity: 0}}
+      @keyframes fade-out {to { opacity: 0}}
+      @keyframes slide-in {from { transform: translateY(10px) }}
+      html {
+  min-height: 100vh;display: grid;
+  place-items: center;
+
+  font-family: system-ui, sans-serif;
+
+  text-align: center;
+}
+
+body {
+  width: 100%;
+  max-width: 450px;
+  transform-origin: 50% 0%;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  /* background: black;*/
+ /*  overflow: hidden; margin: 5px auto;  /*
+border-radius: 22px;
+background: linear-gradient(145deg, #f9faf2, #ffffff);
+box-shadow:  10px 10px 64px #bcbcbc,
+             -10px -10px 64px #ffffff;*/
+}
+.word { width: 100%;  max-width: 320px;max-width: 400px;overflow: hidden;}
+.row {
+  display: flex;
+  width: 100%;
+  margin: 0 auto 8px;
+  touch-action: manipulation;
+}
+button {
+  font-family: inherit;
+  font-weight: bold;
+  border: 0;
+  padding: 0;
+  margin: 0 3px 0 3px;
+  height: 42px;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+background: #f9faf2;
+box-shadow: inset 20px 20px 52px #f9faf2,
+            inset -20px -20px 52px #ffffff;
+  color: black;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.one-and-a-half {
+  flex: 1.5;
+  font-size: 12px;
+}
+  </style>
+  <script src="./lazysizes.min.js" rel="preload " as="script " async charset="utf-8 "></script>
+</head>
+
+
+
+<body>
+  <div class="word" >
+    <img src="https://xbrpw.github.io/teclado/abc/abcdragonBall.webp" alt=""  width="230px" height="auto" >
+  
+  
+    <div class="content" contenteditable="true" >
+      <p>...</p>
+    </div>
+    
+    <div class="row">
+      <button data-key="q" class="qq"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202447.webp" alt="Qq"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="w" class="ww"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_203039.webp" alt="Ww"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="e" class="ee"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160801.webp" alt="Ee"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="r" class="rr"> <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202530.webp" alt="Rr"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="t" class="tt"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202726.webp" alt="Tt"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="y" class="yy"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_203235.webp" alt="Yy"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="u" class="uu"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202938.webp" alt="Uu"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="i" class="ii"> <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160959.webp" alt="Ii"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="o" class="oo"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201916.webp" alt="Oo"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="p" class="pp"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202017.webp" alt="Pp"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>    
+    </div>
+    <div class="row">
+      <div class="spacer half"></div>
+      <button data-key="a" class="aa"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_145309.webp"  alt="aa"	style="display:inline" class="imgResponsive loading" loading="load" style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>    
+      <button data-key="s" class="ss"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202626.webp"  alt="ss"	style="display:inline" class="imgResponsive loading" loading="load" style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>    
+        
+      <button data-key="d" class="dd"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160045.webp" alt="Dd"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="f" class="ff"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160822.webp" alt="Ff"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="g" class="gg"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160850.webp" alt="Gg"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="h" class="hh"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160918.webp" alt="Hh"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="j" class="jj"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201015.webp" alt="Jj"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="k" class="kk"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201056.webp" alt="Kk"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="l" class="ll"> <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201229.webp" alt="Ll"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <div class="spacer half"></div>
+    </div>
+    <div class="row">    
+      <button data-key="↵" class="one-and-a-half">KaMe<br><small>me</small></button>
+      <button data-key="z" class="zz"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_203254.webp" alt="Zz"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="x" class="xx"> <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_203132.webp" alt="Xx" style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="c" class="cc"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160002.webp" alt="Cc"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="v" class="vv"> <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_203003.webp" alt="Vv"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="b" class="bb"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_155941.webp" alt="Bb"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="n" class="nn"> <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201743.webp" alt="Nn"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>  
+      <button data-key="m" class="mm"> <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201606.webp" alt="Mm"  style="display:inline" class="imgResponsive loading" loading="load" width="32px" height="35px"></button>      
+      <button data-key="←" class="bandwhite">B&W</button>
+    
+      <!-- <button data-key="←" class="one-and-a-half">Color</button> -->
+    </div>
+    <div class="row">    
+      <button data-key="esfera-teclado" class="esfera-teclado">Guardar y Compartir</button>  
+      <button data-key="whitespace" class="whitespace one-and-a-half">White Space</button>     
+   
+      <!-- <button data-key="←" class="one-and-a-half">Color</button> -->
+    </div>
+  </div>
+  
+
+  <script>
+    if ("loading" in HTMLImageElement.prototype) {
+        // Si el navegador soporta lazy-load, tomamos todas las imÃ¡genes que tienen la clase
+        const images = document.querySelectorAll("img.lazyload");
+        images.forEach((img) => {
+            img.src = img.dataset.src;
+        });
+    } else {
+        // Importamos dinÃ¡micamente la libreria `lazysizes`
+        let script = document.createElement("script");
+        script.async = true;
+        script.src =
+            "./lazysizes.min.js";
+        document.body.appendChild(script);
+    }
+  </script>
+	
+	
+
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

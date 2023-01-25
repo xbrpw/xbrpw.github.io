@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+     * { box-sizing: border-box;}
+      body {margin: 0;font: 18px; height: 100vh; }
+      button {background-color:transparent; border:none; padding:0; margin:0; display: inline-block;}
+      img {width:32px; height:32x;   display: inline-block; }
+      .imgResponsive {width: 100%;max-width: 32px;height: 32px;}
+      .content {flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content"s default minimum size. */padding: 20px;}
+      .fadeinout-2s {animation:fade-out 2s ease 2s forwards;}
+      @keyframes fade-in {from { opacity: 0}}
+      @keyframes fade-out {to { opacity: 0}}
+      @keyframes slide-in {from { transform: translateY(10px) }}
+      
+  </style>
+  <script src="./lazysizes.min.js" rel="preload " as="script " async charset="utf-8 "></script>
+</head>
+<body>
+
+  <button class="	diablito-sexy01	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701695_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <button class="	diablito-sexy02	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701696_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <button class="	diablito-sexy03	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701697_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <button class="	diablito-sexy04	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701698_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <button class="	diablito-sexy05	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701699_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <button class="	diablito-sexy06	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701700_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <button class="	diablito-sexy07	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701701_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <button class="	diablito-sexy08	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701702_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <button class="	diablito-sexy09	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701703_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <button class="	diablito-sexy10	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701704_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <button class="	diablito-sexy11	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701705_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <button class="	diablito-sexy12	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701706_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <button class="	diablito-sexy13	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701707_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <button class="	diablito-sexy14	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701708_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <button class="	diablito-sexy15	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701709_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <button class="	diablito-sexy16	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701710_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <button class="	diablito-sexy17	"><img src='https://xbrpw.github.io/teclado/diablito-sexy/file_1701711_128x128.webp' style='display:inline' alt="Teclado" class="imgResponsive loading" loading="load" width="32px" height="32px"></button>
+  <script>
+    if ("loading" in HTMLImageElement.prototype) {
+        // Si el navegador soporta lazy-load, tomamos todas las imÃ¡genes que tienen la clase
+        const images = document.querySelectorAll("img.lazyload");
+        images.forEach((img) => {
+            img.src = img.dataset.src;
+        });
+    } else {
+        // Importamos dinÃ¡micamente la libreria `lazysizes`
+        let script = document.createElement("script");
+        script.async = true;
+        script.src =
+            "./lazysizes.min.js";
+        document.body.appendChild(script);
+    }
+  </script>
+	
+	
+  <div class="content" contenteditable="true" >
+    <p>...</p>
+  </div>
+
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
