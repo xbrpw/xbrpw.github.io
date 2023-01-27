@@ -1,0 +1,16 @@
+body {
+  min-height: 1000px;
+}
+
+.long,
+#long,
+[id*="long"],
+[class*="long"] {
+  min-height: 500px;
+}
+
+#fixed {
+  position: fixed;
+  right: 2px;
+  opacity: 0.8;
+}

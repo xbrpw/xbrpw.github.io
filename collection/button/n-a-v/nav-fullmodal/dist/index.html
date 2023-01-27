@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Nav + fullmodal</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html><html lang="es-MX">
+<!-- * ⊙⩌⨀ 2006 - 2022  http://twitter.com/luisangelmaciel  */  -->
+<head> 
+  <meta charset="UTF-8">  
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="description" content="Menu">
+  <meta name="MobileOptimized" content="width"/>    
+  <meta name="author" content="Luis Angel Maciel">
+  <meta name="generator" content="xbr.pw">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" >
+  <link rel="icon" type="image/x-icon" sizes="192x192" href="./favicon.svg" id="favicon" />   <link rel="apple-touch-icon" href="./apple-touch-icon.svg">
+  <meta name="MobileOptimized" content="width" />  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.02.0/css/all.min.css'> 
+  <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v6/search?o=r&m=free -->   
+  <link href='https://xbrpw.github.io/assets/fontawesome/css/all.min.css' rel='stylesheet'>
+  <link href='https://xbrpw.github.io/assets/fontawesome/css/regular.min.css' rel='stylesheet'>
+  <style>a {color: inherit;text-decoration: inherit;background-color: transparent;} 
+.panel-nav {padding: 0.01em 16px; line-height: 1.15; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */}
+  
+@media screen and (max-height: 450px) {
+  .sidenavAlerts {padding-top: 0px;}} 
+  .aBlanco:link, .aBlanco:visited, .aBlanco:hover, .aBlanco:active {color: white;text-decoration: none;}
+</style>          
+ </head>
+
+<body>           
+       https://codepen.io/9kopb/full/kxJeaj intro animation movile estructura 
+     <nav id="nav-app" class="w3-xxlarge" style="font-size: 16px; height: 2.5em;">
+      <div class="w3-bar w3-xxlarge w3-white w3-card-2 w3-hide-large w3-hide-medium w3-top">
+        <div class="w3-bar-item w3-xlarge">
+           &nbsp;<i class="fa fa-bars w3-large w3-circle w3-ripple w3-large "></i>  <span class="w3-large"> Accesos</span>
+        </div> 
+      
+        <div class="w3-bar-item  w3-right w3-xlarge" >                           
+         <i class=" fa fa-info w3-circle w3-ripple w3-large "></i>  &nbsp;                                        
+         <i class=" fa fa-bell w3-circle w3-ripple w3-large"></i> &nbsp;  
+          	<style>
+						.avatar {
+						font-size: 16px;
+						width: 2.5em;
+						height: 2.5em;
+						border-radius: 50%;
+						background: #555555;
+						display: inline-flex;
+						align-items: center;
+						justify-content: center;
+					}
+				
+					.avatar::after {
+						content: attr(data-label);
+						font-family: "Readex Pro", sans-serif;
+						color: #ffffff;
+					}
+					</style>		
+          <span id="toggle_button" >
+            <span class="avatar w3-circle w3-ripple" data-label="LA"  id="button-label"></span>
+          </span>
+         				
+              </div>&nbsp;&nbsp;
+					<script>
+						const avatars = document.querySelectorAll(".avatar");
+				
+						avatars.forEach((a) => {
+						const charCodeRed = a.dataset.label.charCodeAt(0);
+						const charCodeGreen = a.dataset.label.charCodeAt(1) || charCodeRed;
+				
+						const red = Math.pow(charCodeRed, 7) % 200;
+						const green = Math.pow(charCodeGreen, 7) % 200;
+						const blue = (red + green) % 200;
+				
+						a.style.background = `rgb(${red}, ${green}, ${blue})`;
+						});    
+					</script>          
+        </div>
+      </div>       
+    </nav>
+    
+     <nav id="nav-escritorio" style="font-size: 16px; height: 4em;" >
+      <div class="w3-bar w3-xxlarge w3-white w3-card-2 w3-hide-small w3-top">
+        <div class="w3-bar-item w3-auto w3-xlarge">
+           &nbsp;&nbsp;<i class="fa fa-bars  w3-large"></i>  
+          <span class=" w3-circle w3-large "> Accesos</span>    
+        </div>
+            <div class="w3-right w3-xlarge" >             
+              <div class=" w3-bar-item w3-circle w3-ripple" >             
+                <i class="fa fa-info w3-ripple w3-large  " ></i>  
+                <span class="w3-large  "> Información</span>  
+              </div>
+              <div class=" w3-bar-item w3-circle w3-ripple" >             
+                <i class="fa fa-bell w3-ripple w3-large " ></i>  
+                <span class="w3-large "> Notificaciones</span>  
+              </div>
+               <!-- <div class=" w3-bar-item w3-circle w3-ripple" >             
+                <i class="fa fa-eye w3-ripple w3-large " ></i>  
+                <span class="w3-large "> otro</span>  
+              </div> -->                                                      
+              <div class=" w3-bar-item w3-circle w3-ripple">	<div class="avatar"  data-label="LA"></div>					
+              </div>&nbsp;&nbsp;
+           </div>
+        </div>                          
+     </nav>
+    
+  <button onclick="document.getElementById('editable01').style.display='block'" class="w3-button w3-black"><span data-nosnippet>Lo mejor la semana</span> </button>
+
+  <div id="editable01" class="w3-modal w3-container w3-white">
+    <div style="margin: 0;
+  padding: 0;
+  box-sizing: border-box; width:100%;  height:100vh; overflow:hidden;">
+      <div class="w3-container">
+        <span onclick="document.getElementById('editable01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+      <iframe width="100%" height="315" src="https://cdpn.io/pen/debug/WNKdzjK?authentication_hash=yPAJjbDwjdzA" frameborder="0" allowfullscreen style="border-radius: 10px;
+background: #c8c6dc;box-shadow: inset -20px 20px 43px #a09eb0,inset 20px -20px 43px #f0eeff;">
+      </div>
+    </div>
+  </div>
+
+     
+  Made by LAMP. Powered by W3 and Toxel, hosted on Github.
+   
+    <iframe width="100%" height="315" src="https://cdpn.io/pen/debug/XWBzjoq?authentication_hash=jVApoNQqowVr" frameborder="0" allowfullscreen style="border-radius: 10px;
+background: #c8c6dc;box-shadow: inset -20px 20px 43px #a09eb0,inset 20px -20px 43px #f0eeff;">  <a href=https://codepen.io/luisangelmaciel/pen/WNKdzjK">
+    
+
+                                                            
+     <div id="El-sidebarokey"> 
+           
+          <!-- <span class="fas fa-bell" id="toggle_button"  aria-labelledby="button-label"></span><span id="button-label" style="display:none">Open Side Menu</span>  -->  
+       
+           <aside id="side-nav" class="animated-panel">
+
+        <!-- BEGIN TOP PANEL CONTENT  -->
+        <div class="nav-top-container">
+        <img src="https://assets.codepen.io/191814/1920-1080.jpg" />
+        </div>
+    
+        <!-- BEGIN MENU ITEMS  -->
+    
+        <div class="inner-nav-container">
+    
+        <ul>
+    
+            <!-- Menu Item -->
+    
+            <li><a href="#" title="Catchy Title"><span>
+                <img alt="Image description for accessibility" src="https://assets.codepen.io/191814/placer-300-300.jpg" />
+    
+                </span>
+                <div>
+                <h2>Catchy Title</h2>
+                <h3>A caption that wraps multiple lines.</h3>
+                </div>
+            </a></li>
+            <!-- // END Menu Item -->
+    
+            <!-- Menu Item -->
+    
+            <li><a href="#" title="Catchy Title"><span>
+                <img alt="Image description for accessibility" src="https://assets.codepen.io/191814/placer-300-300.jpg" />
+    
+                </span>
+                <div>
+                <h2>Catchy Title</h2>
+                <h3>A caption that wraps multiple lines.</h3>
+                </div>
+            </a></li>
+            <!-- // END Menu Item -->
+    
+            <!-- Menu Item -->
+    
+            <li><a href="#" title="Catchy Title"><span>
+                <img alt="Image description for accessibility" src="https://assets.codepen.io/191814/placer-300-300.jpg" />
+    
+                </span>
+                <div>
+                <h2>Catchy Title</h2>
+                <h3>A caption that wraps multiple lines.</h3>
+                </div>
+            </a></li>
+            <!-- // END Menu Item -->
+    
+            <!-- Menu Item -->
+    
+            <li><a href="#" title="Catchy Title"><span>
+                <img alt="Image description for accessibility" src="https://assets.codepen.io/191814/placer-300-300.jpg" />
+    
+                </span>
+                <div>
+                <h2>Catchy Title</h2>
+                <h3>A caption that wraps multiple lines.</h3>
+                </div>
+            </a></li>
+            <!-- // END Menu Item -->
+    
+            <!-- Menu Item -->
+    
+            <li><a href="#" title="Catchy Title"><span>
+                <img alt="Image description for accessibility" src="https://assets.codepen.io/191814/placer-300-300.jpg" />
+    
+                </span>
+                <div>
+                <h2>Catchy Title</h2>
+                <h3>A caption that wraps multiple lines.</h3>
+                </div>
+            </a></li>
+            <!-- // END Menu Item -->
+    
+            <!-- Menu Item -->
+    
+            <li><a href="#" title="Catchy Title"><span>
+                <img alt="Image description for accessibility" src="https://assets.codepen.io/191814/placer-300-300.jpg" />
+    
+                </span>
+                <div>
+                <h2>Catchy Title</h2>
+                <h3>A caption that wraps multiple lines.</h3>
+                </div>
+            </a></li>
+            <!-- // END Menu Item -->
+    
+            <!-- Menu Item -->
+    
+            <li><a href="#" title="Catchy Title"><span>
+                <img alt="Image description for accessibility" src="https://assets.codepen.io/191814/placer-300-300.jpg" />
+    
+                </span>
+                <div>
+                <h2>Catchy Title</h2>
+                <h3>A caption that wraps multiple lines.</h3>
+                </div>
+            </a></li>
+            <!-- // END Menu Item -->
+    
+            <!-- Menu Item -->
+    
+            <li><a href="#" title="Catchy Title"><span>
+                <img alt="Image description for accessibility" src="https://assets.codepen.io/191814/placer-300-300.jpg" />
+    
+                </span>
+                <div>
+                <h2>Catchy Title</h2>
+                <h3>A caption that wraps multiple lines.</h3>
+                </div>
+            </a></li>
+            <!-- // END Menu Item -->
+    
+        </ul>
+        <!-- SIDE NAV FOOTER  -->
+        <footer>
+            <h2>FOOTER STUFF</h2>
+        </footer>
+    
+        </div> <!-- END MENU ITEMS  -->
+    
+</aside>
+           <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+           <script>
+        // JQUERY TOGGLE 
+
+    $("#toggle_button").click(function () {
+    $("#hamburger , #side-nav").toggleClass("is-active");
+
+    });
+
+    // TOGGLE PANEL WITH ESCAPE KEY
+
+    $(document).keydown(function (e) {
+    "use strict";
+    if (e.keyCode === 27) {
+        if ($("#side-nav").hasClass("is-active")) {
+        $("#hamburger , #side-nav").toggleClass("is-active");
+        }
+    }
+
+    });
+
+    // TOGGLE ACTIVE CLASS ON MENU ITEMS
+
+    $(function () {
+    $(".inner-nav-container ul li").on("click", function () {
+        $(this).addClass("active").siblings().removeClass("active");
+    });
+    });
+
+
+    </script>            
+    </div>
+    
+  </body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

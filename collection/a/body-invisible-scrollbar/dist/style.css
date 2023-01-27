@@ -1,0 +1,52 @@
+.div-Invisible-scrollbar  {
+	--thumb: #004C92;
+	--bar: transparent;
+	--barhover: rgba(0, 0, 0, .1);
+	width: 620px;
+	max-width: 100%;
+	margin: 0;
+	height: 100vh;
+	overflow: scroll;
+	/*background: #EEE;*/
+}
+
+.custom-scroll-bar {
+	/* Scroll Custom */
+	scrollbar-width: var(--width);
+	scrollbar-color: var(--thumb) var(--bar);
+}
+
+.custom-scroll-bar::-webkit-scrollbar {
+	width: var(--width);
+	transition: all .275s;
+}
+ 
+.custom-scroll-bar::-webkit-scrollbar-track {
+	background: var(--bar);
+	transition: all .275s;
+}
+
+.custom-scroll-bar::-webkit-scrollbar-track:hover {
+	background: var(--barhover);
+}
+
+.div-Invisible-scrollbar ::-webkit-scrollbar-thumb {
+	background-color: transparent;
+	border-radius: 8px;
+	transition: all .275s;
+}
+
+.div-Invisible-scrollbar :hover::-webkit-scrollbar-thumb {
+	background-color: var(--thumb);
+}
+
+.custom-scroll-bar.invisible {
+	--width: 0;
+}
+
+body {
+	text-align: center;
+}
+.Body-Invisible-scrollbar {
+	text-align: start;
+}

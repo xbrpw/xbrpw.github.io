@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Troll Dance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain attribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+
+
+<div w3-include-html="https://cdpn.io/pen/debug/KKBodzQ?authentication_hash=WPALYbeEEVRk"></div> 
+
+<script>
+includeHTML();
+</script>
+</div>
+
+
+<!-- <img class="troll__face" src="https://i.ibb.co/8XVN8CW/trollface.png" srcset="https://i.ibb.co/8XVN8CW/trollface.png 1x, https://i.ibb.co/DW8Byny/trollface-2x.png 2x" alt="Trollface" width="140" height="115">-->
+	
+		<div class="troll">
+	<div class="troll__head">
+		<img class="troll__face" src="https://xbrpw.github.io/teclado/BackgroundEraser_20230124_145650534.png" srcset="https://xbrpw.github.io/teclado/BackgroundEraser_20230124_145650534.png 1x, https://xbrpw.github.io/teclado/BackgroundEraser_20230124_145650534%20(1).png 2x" alt="Trollface" width="140" height="115"><!-- 140x115, 280x230 -->
+		<div class="troll__right-arm">
+			<div class="troll__right-lower-arm">
+				<div class="troll__right-hand"></div>
+			</div>
+		</div>
+		<div class="troll__left-arm">
+			<div class="troll__left-lower-arm">
+				<div class="troll__left-hand"></div>
+			</div>
+		</div>
+		<div class="troll__upper-body">
+			<div class="troll__lower-body">
+				<div class="troll__right-thigh">
+					<div class="troll__right-lower-leg">
+						<div class="troll__right-foot"></div>
+					</div>
+				</div>
+				<div class="troll__left-thigh">
+					<div class="troll__left-lower-leg">
+						<div class="troll__left-foot"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

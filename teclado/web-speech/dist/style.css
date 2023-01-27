@@ -1,0 +1,67 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  background: #f7f7f7;
+  color: #333;
+}
+
+section, footer {
+  margin: 1.5em;
+}
+
+footer {
+  margin-top: 3em;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  font-weight: 400;
+  font-size: 1.5em;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  background-color: rgba(0, 0, 0, .7);
+  padding: 0.5em 1em;
+}
+h2 {
+  font-weight: 300;
+  margin: 1em 0;
+}
+h2 i:first-child {
+  margin-left: 1em;
+}
+
+button {
+  color: #fff;
+  background: rgb(65, 185, 220);
+  border-radius: 6px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  font-size: 1.2em;
+  padding: .5em 1em;
+}
+
+input[type=text] {
+  border-radius: 6px;
+  font-size: 1.2em;
+  padding: .5em;
+  box-shadow: inset 0 0 5px #666;
+  width: 300px;
+  margin-bottom: 0.5em;
+}
+
+.output_log {
+  margin-left: 1em;
+  font-family: monospace;
+  font-size: 1.5em;
+  color: #999;
+}
+
+.output {
+  height: 50px;
+  font-size: 1.2em;
+  color: maroon;
+}

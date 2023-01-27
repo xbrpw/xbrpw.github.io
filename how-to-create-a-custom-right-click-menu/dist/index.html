@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - How to create a custom right click menu</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+    <meta charset="UTF-8" />
+    <title>Custom Right Click Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+   <link href='https://xbrpw.github.io/assets/fontawesome/css/all.min.css' rel='stylesheet'>
+<link href='https://xbrpw.github.io/assets/fontawesome/css/regular.min.css' rel='stylesheet'>
+  </head>
+  <body>  
+    <div id="contextMenu" class="context-menu" style="display: none"> 
+        <ul class="menu wrap"> 
+            <li><input type="text" value="<script> </script>" id="copyscript" class="goshimp" style="display:none"> <span onclick="myFunctionscript()" class="size18px marginleft5" >&lt;script&gt; &lt;/script&gt;</span></li> 
+            <li><input type="text" value="<style> </style>" id="copystyle" class="goshimp " style="display:none"> <span onclick="myFunctionstyle()" class="size18px marginleft5" >&lt;style&gt; &lt;/style&gt;</span></li> 
+            <li><input type="text" value="<div class=''> </div>" id="copydiv" class="goshimp " style="display:none"> <span onclick="myFunctiondiv()" class="size18px marginleft5" >&lt;div class=''&gt; &lt;/div&gt;</span></li>       
+        </ul> 
+    </div> 
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

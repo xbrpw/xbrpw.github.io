@@ -1,0 +1,23 @@
+div.code {
+	width: 100%; padding: 1em auto;
+}
+
+div.code-toolbar {
+	height: 2em;
+	background: #222;
+	border-radius: 4px 4px 0 0;
+	line-height: 2;
+	padding: 0 0.5em;
+	text-align: right;color:white;
+}
+
+div.code pre {
+	font: 1em Monaco, "Courier New", monospace;
+	margin: 0 0 1em 0;
+	line-height: 1.4;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	background: #eee;
+	padding: 1em;
+	border-radius: 0 0 4px 4px;
+}

@@ -1,0 +1,18 @@
+<h3>Assessment App</h3>
+<button id='btn'>load iframe</button>
+<div style='width:100%;height:600px' id="fh">
+    App will be loaded here
+</div>
+<script>
+ $(document).ready( function() {
+
+    $("#btn").click( function() {
+
+        var content = "<iframe height=400 width=400 src='https://www.xbr.pw'></iframe>";
+
+        $("#fh").html( content );
+
+    });
+
+});
+  </script>

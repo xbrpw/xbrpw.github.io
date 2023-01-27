@@ -1,0 +1,44 @@
+
+<style>
+.container-watermark {
+  width: 100%;  
+  height: auto;
+  background: grey;  
+  position: relative;
+  z-index: -1;
+}
+
+.img-watermark {
+  margin-bottom: -3px;
+  width: 100%;
+  height: auto;
+}
+
+.container-watermark::before {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "©lamacpad";
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.container-watermark::after {
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: "MCL.Photo";  
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+}
+</style>
+<h1>Watermark with pure CSS</h1>
+<div class="container-watermark">
+  <a href="https://instagram.fsdu5-1.fna.fbcdn.net/t51.2885-15/e35/20482562_318356505243393_2194522073991217152_n.jpg">
+  <img src="https://instagram.fsdu5-1.fna.fbcdn.net/t51.2885-15/e35/20482562_318356505243393_2194522073991217152_n.jpg" class="img-watermark">
+  </a>
+</div>

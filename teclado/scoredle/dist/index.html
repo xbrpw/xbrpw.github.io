@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Scoredle</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="word" >
+  <img src="https://xbrpw.github.io/teclado/abc/abcdragonBall.webp" alt=""  width="230px" height="auto" style="display:none">
+<div style="display:none">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_145309.webp" alt="Aa"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_155941.webp" alt="Bb"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160002.webp" alt="Cc"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160045.webp" alt="Dd"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160801.webp" alt="Ee"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160822.webp" alt="Ff"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160850.webp" alt="Gg"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160918.webp" alt="Hh"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160959.webp" alt="Ii"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201015.webp" alt="Jj"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201056.webp" alt="Kk"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201229.webp" alt="Ll"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201606.webp" alt="Mm"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201743.webp" alt="Nn"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201916.webp" alt="Oo"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202017.webp" alt="Pp"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202447.webp" alt="Qq"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202530.webp" alt="Rr"  width="32px" height="35px">
+  
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202626.webp" alt="Ss"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202726.webp" alt="Tt"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202938.webp" alt="Uu"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_203003.webp" alt="Vv"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_203039.webp" alt="Ww"  width="32px" height="35px">
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_203132.webp" alt="Xx"  width="32px" height="35px"/>
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_203235.webp" alt="yy"  width="32px" height="35px"/>
+ <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_203254.webp" alt="Zz"  width="32px" height="35px"/>
+ </div>
+
+  <div class="row">
+    <button data-key="q" class="Qq"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202447.webp" alt="Qq"  width="32px" height="35px"></button>
+    <button data-key="w" class="Ww"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_203039.webp" alt="Ww"  width="32px" height="35px"></button>
+    <button data-key="e" class="Ee"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160801.webp" alt="Ee"  width="32px" height="35px"></button>
+    <button data-key="r" class="Rr"> <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202530.webp" alt="Rr"  width="32px" height="35px"></button>
+    <button data-key="t" class="Tt"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202726.webp" alt="Tt"  width="32px" height="35px"></button>
+    <button data-key="y" class="Yy"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_203235.webp" alt="Yy"  width="32px" height="35px"/></button></button>
+    <button data-key="u" class="Uu"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202938.webp" alt="Uu"  width="32px" height="35px"></button>
+    <button data-key="i" class="Ii"> <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160959.webp" alt="Ii"  width="32px" height="35px"></button>
+    <button data-key="o" class="Oo"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201916.webp" alt="Oo"  width="32px" height="35px"></button>
+    <button data-key="p" class="Pp"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202017.webp" alt="Pp"  width="32px" height="35px"></button>  
+  </div>
+  <div class="row">
+    <div class="spacer half"></div>
+    <button data-key="a" class="Aa"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_145309.webp" alt="Aa"  width="32px" height="35px"></button>
+    <button data-key="s" class="Ss"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_202626.webp" alt="Ss"  width="32px" height="35px"></button>
+    <button data-key="d" class="Dd"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160045.webp" alt="Dd"  width="32px" height="35px"></button>
+    <button data-key="f" class="Ff"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160822.webp" alt="Ff"  width="32px" height="35px"></button>
+    <button data-key="g" class="Gg"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160850.webp" alt="Gg"  width="32px" height="35px"></button>
+    <button data-key="h" class="Hh"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160918.webp" alt="Hh"  width="32px" height="35px"></button>
+    <button data-key="j" class="Jj"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201015.webp" alt="Jj"  width="32px" height="35px"></button>
+    <button data-key="k" class="Kk"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201056.webp" alt="Kk"  width="32px" height="35px"></button>
+    <button data-key="l" class="Ll"> <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201229.webp" alt="Ll"  width="32px" height="35px"></button>
+    <div class="spacer half"></div>
+  </div>
+  <div class="row">    
+    <button data-key="↵" class="one-and-a-half">KaMe<br><small>me</small></button>
+    <button data-key="z" class="Zz"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_203254.webp" alt="Zz"  width="32px" height="35px"></button>
+    <button data-key="x" class="Xx"> <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_203132.webp" alt="Xx"  width="32px" height="35px"/></button>
+    <button data-key="c" class="Cc"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_160002.webp" alt="Cc"  width="32px" height="35px"></button>
+    <button data-key="v" class="Vv"> <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_203003.webp" alt="Vv"  width="32px" height="35px"></button>
+    <button data-key="b" class="Bb"><img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_155941.webp" alt="Bb"  width="32px" height="35px"></button>
+    <button data-key="n" class="Nn"> <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201743.webp" alt="Nn"  width="32px" height="35px"></button>
+    <button data-key="m" class="Mm"> <img src="https://xbrpw.github.io/teclado/abc/IMG_20230123_201606.webp" alt="Mm"  width="32px" height="35px"></button>    
+    <button data-key="←" class="one-and-a-half">B&W</button>
+    <!-- <button data-key="←" class="one-and-a-half">Color</button> -->
+  </div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

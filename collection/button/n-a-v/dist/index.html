@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - N A V a</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css'>
+<link rel="stylesheet" href="https://xbrpw.github.io/eso/alerts/panelSlide.css">
+
+<style>a {color: inherit;text-decoration: inherit;background-color: transparent;} 
+.panel-nav {padding: 0.01em 16px; line-height: 1.15; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */}
+  
+@media screen and (max-height: 450px) {
+  .sidenavAlerts {padding-top: 0px;}} 
+  .aBlanco:link, .aBlanco:visited, .aBlanco:hover, .aBlanco:active {color: white;text-decoration: none;}
+</style>        
+    
+<span class="fas fa-bell" id="toggle_button"  aria-labelledby="button-label"></span> 
+<span id="button-label" style="display:none">Open Side Menu</span>        
+           
+<aside id="side-nav" class="animated-panel">
+
+        <!-- BEGIN TOP PANEL CONTENT  -->
+        <div class="nav-top-container">
+        <img src="https://assets.codepen.io/191814/1920-1080.jpg" />
+        </div>
+    
+        <!-- BEGIN MENU ITEMS  -->
+    
+        <div class="inner-nav-container">
+    
+        <ul>
+    
+            <!-- Menu Item -->
+    
+            <li><a href="#" title="Catchy Title"><span>
+                <img alt="Image description for accessibility" src="https://assets.codepen.io/191814/placer-300-300.jpg" />
+    
+                </span>
+                <div>
+                <h2>Catchy Title</h2>
+                <h3>A caption that wraps multiple lines.</h3>
+                </div>
+            </a></li>
+            <!-- // END Menu Item -->
+    
+            <!-- Menu Item -->
+    
+            <li><a href="#" title="Catchy Title"><span>
+                <img alt="Image description for accessibility" src="https://assets.codepen.io/191814/placer-300-300.jpg" />
+    
+                </span>
+                <div>
+                <h2>Catchy Title</h2>
+                <h3>A caption that wraps multiple lines.</h3>
+                </div>
+            </a></li>
+            <!-- // END Menu Item -->
+    
+            <!-- Menu Item -->
+    
+            <li><a href="#" title="Catchy Title"><span>
+                <img alt="Image description for accessibility" src="https://assets.codepen.io/191814/placer-300-300.jpg" />
+    
+                </span>
+                <div>
+                <h2>Catchy Title</h2>
+                <h3>A caption that wraps multiple lines.</h3>
+                </div>
+            </a></li>
+            <!-- // END Menu Item -->
+    
+            <!-- Menu Item -->
+    
+            <li><a href="#" title="Catchy Title"><span>
+                <img alt="Image description for accessibility" src="https://assets.codepen.io/191814/placer-300-300.jpg" />
+    
+                </span>
+                <div>
+                <h2>Catchy Title</h2>
+                <h3>A caption that wraps multiple lines.</h3>
+                </div>
+            </a></li>
+            <!-- // END Menu Item -->
+    
+            <!-- Menu Item -->
+    
+            <li><a href="#" title="Catchy Title"><span>
+                <img alt="Image description for accessibility" src="https://assets.codepen.io/191814/placer-300-300.jpg" />
+    
+                </span>
+                <div>
+                <h2>Catchy Title</h2>
+                <h3>A caption that wraps multiple lines.</h3>
+                </div>
+            </a></li>
+            <!-- // END Menu Item -->
+    
+            <!-- Menu Item -->
+    
+            <li><a href="#" title="Catchy Title"><span>
+                <img alt="Image description for accessibility" src="https://assets.codepen.io/191814/placer-300-300.jpg" />
+    
+                </span>
+                <div>
+                <h2>Catchy Title</h2>
+                <h3>A caption that wraps multiple lines.</h3>
+                </div>
+            </a></li>
+            <!-- // END Menu Item -->
+    
+            <!-- Menu Item -->
+    
+            <li><a href="#" title="Catchy Title"><span>
+                <img alt="Image description for accessibility" src="https://assets.codepen.io/191814/placer-300-300.jpg" />
+    
+                </span>
+                <div>
+                <h2>Catchy Title</h2>
+                <h3>A caption that wraps multiple lines.</h3>
+                </div>
+            </a></li>
+            <!-- // END Menu Item -->
+    
+            <!-- Menu Item -->
+    
+            <li><a href="#" title="Catchy Title"><span>
+                <img alt="Image description for accessibility" src="https://assets.codepen.io/191814/placer-300-300.jpg" />
+    
+                </span>
+                <div>
+                <h2>Catchy Title</h2>
+                <h3>A caption that wraps multiple lines.</h3>
+                </div>
+            </a></li>
+            <!-- // END Menu Item -->
+    
+        </ul>
+        <!-- SIDE NAV FOOTER  -->
+        <footer>
+            <h2>FOOTER STUFF</h2>
+        </footer>
+    
+        </div> <!-- END MENU ITEMS  -->
+    
+    </aside>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script>
+        // JQUERY TOGGLE 
+
+    $("#toggle_button").click(function () {
+    $("#hamburger , #side-nav").toggleClass("is-active");
+
+    });
+
+    // TOGGLE PANEL WITH ESCAPE KEY
+
+    $(document).keydown(function (e) {
+    "use strict";
+    if (e.keyCode === 27) {
+        if ($("#side-nav").hasClass("is-active")) {
+        $("#hamburger , #side-nav").toggleClass("is-active");
+        }
+    }
+
+    });
+
+    // TOGGLE ACTIVE CLASS ON MENU ITEMS
+
+    $(function () {
+    $(".inner-nav-container ul li").on("click", function () {
+        $(this).addClass("active").siblings().removeClass("active");
+    });
+    });
+
+
+    </script>
+<!-- partial -->
+  
+</body>
+</html>

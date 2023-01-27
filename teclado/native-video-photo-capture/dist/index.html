@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Native video/photo capture</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<p>Open this page on iOS or Android device</p>
+<button class="takeapic">Take a pic</button>
+<button class="takeaselfie">Snap a selfie</button>
+<button class="takeaclip">Take a clip</button>
+<button class="audio">Audio recording</button>
+
+<div class="hidden">
+  <input id="video-input" type="file" accept="video/*" capture="camcorder">
+  <input id="photo-input" type="file" accept="image/*" capture="environment">
+  <input id="selfie-input" type="file" accept="image/*" capture="user">
+  <input id="audio-input" type="file" accept="audio/*" capture>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+// ======= VALIDATION FORM ====/
+.registration {
+	padding: 10px;}
+
+
+.input-requirements {
+  font-style: italic;
+  text-align: left;
+  list-style: disc;
+  list-style-position: inside;
+  margin: 5px auto;
+  color: rgb(150,150,150);}
+
+
+.input-requirements li.invalid {
+	color: #e74c3c;}
+.input-requirements li.valid {
+	/*color: #2ecc71;*/
+	color: #56c93f;}
+
+.input-requirements li.valid:after {
+	display: inline-block;
+	padding-left: 10px;
+	content: "\2713";}

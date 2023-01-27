@@ -1,0 +1,110 @@
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+
+    <div class="column red">
+      <a href="#" class="button red">Push</a>
+      <a href="#" class="button red alt">Push</a>
+</div>
+
+<style>
+/*
+ * Copyright (c) 2012 Thibaut Courouble
+ * http://www.cssflow.com
+ *
+ * Licensed under the MIT License:
+ * https://www.opensource.org/licenses/mit-license.php
+ *
+ * View the Sass/SCSS source at:
+ * http://www.cssflow.com/snippets/multi-colored-push-buttons/demo/scss
+ *
+ * Original PSD by Marian Mraz: https://goo.gl/9Il5d
+ */
+
+
+
+.button {
+  display: inline-block;
+  position: relative;
+  height: 33px;
+  line-height: 33px;
+  padding: 0 15px;
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+  border: 2px solid;
+  border-radius: 7px;
+  outline: 0;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.button:before, .button:after {
+  content: '';
+  position: absolute;
+}
+
+.button:before {
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  z-index: -1;
+  border-radius: 9px;
+}
+
+.button:after {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 0;
+  border-radius: 7px;
+}
+
+.button.alt {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.button.alt:before {
+  display: none;
+}
+
+body {
+  background: #d04022;
+}
+
+.button.red {
+  background: #d02e17;
+  border-color: #942110 #902010 #741a0d;
+  background-image: -webkit-linear-gradient(top, #e74a29 0%, #e6451b 50%, #d02e17 50%, #b3150b 100%);
+  background-image: -moz-linear-gradient(top, #e74a29 0%, #e6451b 50%, #d02e17 50%, #b3150b 100%);
+  background-image: -o-linear-gradient(top, #e74a29 0%, #e6451b 50%, #d02e17 50%, #b3150b 100%);
+  background-image: linear-gradient(to bottom, #e74a29 0%, #e6451b 50%, #d02e17 50%, #b3150b 100%);
+}
+
+.button.red:before {
+  background: #ee442c;
+  background-image: -webkit-linear-gradient(top, #b32511, #f3533c);
+  background-image: -moz-linear-gradient(top, #b32511, #f3533c);
+  background-image: -o-linear-gradient(top, #b32511, #f3533c);
+  background-image: linear-gradient(to bottom, #b32511, #f3533c);
+}
+
+.button.red:active {
+  background: #e63b1b;
+  background-image: -webkit-linear-gradient(top, #a9110b 0%, #de3819 60%, #e63b1b 100%);
+  background-image: -moz-linear-gradient(top, #a9110b 0%, #de3819 60%, #e63b1b 100%);
+  background-image: -o-linear-gradient(top, #a9110b 0%, #de3819 60%, #e63b1b 100%);
+  background-image: linear-gradient(to bottom, #a9110b 0%, #de3819 60%, #e63b1b 100%);
+}
+
+.button.red:active:after {
+  border-color: #e63b1b;
+}
+
+</style>

@@ -1,0 +1,300 @@
+$small: 520px;
+$medium: 768px;
+$large: 1216px;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #e6ecf1;
+  font-family: 'Roboto', sans-serif;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app__phone {
+  background-color: white;
+  height: 620px;
+  width: 375px;
+  overflow: hidden;
+}
+
+.phone-header {
+  height: 50px;
+  width: 375px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background: #fafafa;
+  border-bottom: 1px solid #eeeeee;
+  z-index: 99;
+
+  img {
+    max-width: 100px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+  
+  .cancel-cta,
+  .next-cta {
+    position: absolute;
+    top: 12px;
+    color: #209cee;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .cancel-cta {
+    left: 10px;
+  }
+
+  .next-cta {
+    right: 10px;
+  }
+}
+
+.feed {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-right: -15px;
+}
+
+.instagram-post {
+  padding-top: 50px;
+}
+
+.instagram-post ~ .instagram-post {
+  padding-top: 0;
+}
+
+.instagram-post {
+  padding: 5px 0;
+  .header {
+    height: 30px;
+    border-bottom: 1px solid #fff;
+    margin: 7.5px 10px;
+    .image {
+      display: inline-block;
+    }
+    img {
+      border-radius: 99px;
+    }
+    .username {
+      padding-left: 5px;
+      font-size: 0.90rem;
+      font-weight: bold;
+    }
+  }
+  .image-container {
+    height: 330px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .content {
+    margin: 7.5px 10px;
+  }
+  .far.fa-heart,
+  .fas.fa-heart{
+    cursor: pointer;
+  }
+  .fas.fa-heart {
+    color: #f06595;
+  }
+  .likes {
+    margin: 5px 0;
+    margin-bottom: 5px !important;
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+  .caption {
+    font-size: 0.85rem;
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.instagram-post:last-child {
+  margin-bottom: 80px;
+}
+
+.selected-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 330px;
+}
+
+.filter-container {
+  height: 210px; 
+  padding: 30px 10px;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.filter-type {
+  width: 100px;
+  display: inline-block;
+  margin: 0 3px;
+  p {
+    font-size: 11px;
+    text-align: center;
+    text-transform: capitalize;
+    padding-bottom: 5px;
+  }
+  .img {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+.filter-type:last-child {
+  margin-right: 20px;  
+}
+
+.caption-container {
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  textarea {
+    border: 0;
+    font-size: 1.0rem;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee;
+  }
+  
+  textarea:focus {
+    outline: 0;
+  }
+}
+
+.phone-footer {
+  height: 35px;
+  width: 375px;
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0;
+  background: #fafafa;
+  border-top: 1px solid #eeeeee;
+  z-index: 99;
+  
+  .home-cta {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    cursor: pointer;
+  }
+  
+  .upload-cta {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    p {
+      font-size: 0.63rem;
+      position: absolute;
+      left: -25px;
+      top: 5px;
+    }
+  }
+
+  input[name="file"] {
+    visibility: hidden;
+  }
+  
+  label {
+    cursor: pointer;
+    z-index: 99;
+  }
+}
+
+.details {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  li {
+    font-size: 0.8rem;
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.twitter-section {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  .fa-twitter {
+    color: #209cee;
+    font-size: 2.0rem;
+    &:hover {
+      color: #1496ed;
+    }
+  }
+}
+
+.face-section {
+  position: absolute;
+  right: 50px;
+  bottom: 10px;
+  .fa-twitter {
+    color: #209cee;
+    font-size: 2.0rem;
+      height: 100px;
+    &:hover {
+      color: #1496ed;
+    }
+  }
+}
+.fade-leave-active {
+  transition: opacity .5s
+}
+.fade-leave-to {
+  opacity: 0
+}
+
+// Media Queries
+@media(max-width: $small) {
+  #app {
+    height: 100% !important;
+    padding-top: 0 !important;
+  }
+
+  .app__phone,
+  .app__phone__scroll__cover {
+    height: 100%;
+    width: 100%;
+  }
+
+  .phone-header,
+  .phone-footer {
+    width: 100%;
+  }
+}
+
+@media(max-width: $small) {
+  .details {
+    display: none;
+  }
+}
+
+@media(max-width: $large) and (max-height: $medium) {
+  #app {
+    height: initial;
+    padding-top: 5px;
+  }
+}

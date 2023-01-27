@@ -1,0 +1,45 @@
+html {
+  font-family: sans-serif;
+  font-size: 17px;
+  line-height: 19px;
+  color: #2F2F2F;
+}
+
+.label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 17px;
+  line-height: 19px;
+}
+
+.file {
+  display: none;
+}
+
+.field {
+  display: block;
+  padding: 22px;
+  color: #777777;
+  border: 2px dashed #BFBFBF;
+  border-radius: 10px;
+  cursor: pointer;
+  
+  .underline {
+    font-weight: normal;
+    text-decoration: underline;
+    
+    &:hover,
+    &:focus {
+      color: #EB5757;
+    }
+  }
+  
+  &.highlight {
+    border-color: #777777;
+  }
+  
+  .error {
+    color: #eb5757;
+  }
+}
+
