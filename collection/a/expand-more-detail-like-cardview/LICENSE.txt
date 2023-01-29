@@ -1,7 +1,7 @@
 The MIT License (MIT)
 
-Copyright (c) 2023 Luis Angel Maciel (https://codepen.io/luisangelmaciel/pen/PoBRwgL)
-Fork of an original work Expand More Detail like CardView (https://codepen.io/luisangelmaciel/pen/PoBRwgL)
+Copyright (c) 2023 Luis Angel Maciel (https://codepen.io/luisangelmaciel/pen/zYLovqX)
+Fork of an original work Expand More Detail like CardView (https://codepen.io/luisangelmaciel/pen/zYLovqX)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

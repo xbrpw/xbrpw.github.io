@@ -1,0 +1,5 @@
+main.its-my-window
+  - for (let i = 0; i < 4; i++)
+    span.border(class=`border-${i}` style=`--i: ${i}`)
+  each letter, index in ['s', 'u', 'p', 'a', 'd', 'u', 'p', 'a', 'f', 'l', 'y', 'o']
+    .letter(class=letter, style=`--i: ${index}`)

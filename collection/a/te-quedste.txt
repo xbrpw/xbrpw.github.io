@@ -1,0 +1,51 @@
+<div>
+<style> 
+.adios {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: bye;
+  animation-duration: 5s;  
+  animation-fill-mode: both;
+}
+
+@keyframes bye {
+  from {top: 0px;color:#000000}
+  to {top: 0px; color:#ffffff}
+}
+
+.hola {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: hi;
+  animation-duration: 15s;  
+  animation-fill-mode: both;
+}
+
+@keyframes hi {
+  from {top: 0px;color:#000000}
+  to {top: 0px; color:#ffffff}
+}
+
+.teGusto {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: quedaste;
+  animation-duration:95s;  
+  animation-fill-mode: both;
+}
+
+@keyframes quedaste {
+  from {top: 0px; color:#ffffff}
+  to {top: 0px; color:#000000}
+}
+</style>
+</head>
+<body>
+
+<div class="adios">Bayi</div>
+<div class="hola">Holi</div>
+<div class="teGUsto">Holi</div>
+</div>

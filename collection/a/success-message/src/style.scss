@@ -1,0 +1,60 @@
+$success__primary: #3DC480;
+$success__secondary: #B8BABB;
+
+.success-message {
+    text-align: center;
+    
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.success-message__icon {
+    max-width: 75px;
+}
+
+.success-message__title {
+    color: $success__primary;
+    transform: translateY(25px);
+    opacity: 0;
+    transition: all 200ms ease;
+    
+    .active & {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.success-message__content {
+    color: $success__secondary;
+    transform: translateY(25px);
+    opacity: 0;
+    transition: all 200ms ease;
+    transition-delay: 50ms;
+    
+    .active & {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.icon-checkmark {
+    circle {
+        fill: $success__primary;
+        transform-origin: 50% 50%;
+        transform: scale(0);
+        transition: transform 200ms cubic-bezier(.22, .96, .38, .98);
+    }
+    path {
+        transition: stroke-dashoffset 350ms ease;
+        transition-delay: 100ms;
+    }
+    
+    .active & {
+        circle {
+            transform: scale(1);
+        }
+    }
+}

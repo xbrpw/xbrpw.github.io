@@ -1,0 +1,226 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+  background-color: black;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+.its-my-window {
+  --size: 70vmin;
+  --duration: 700ms;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --gap: 2vmin;
+  
+  position: relative;
+  display: grid;
+  grid-gap: var(--gap);
+  grid-template-columns: repeat(4, auto);
+}
+
+.border {
+  position: absolute;
+  opacity: 0;
+  transition: opacity var(--duration) var(--ease);
+  pointer-events: none;
+  user-select: none;
+}
+
+.border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform var(--duration) var(--ease);
+}
+
+.border-0::before,
+.border-1::before {
+  transform: scaleX(0);
+}
+
+.border-2::before,
+.border-3::before {
+  transform: scaleY(0);
+}
+
+.its-my-window:hover .border-0::before,
+.its-my-window:hover .border-1::before {
+  transform: scaleX(1);
+}
+
+.its-my-window:hover .border-2::before,
+.its-my-window:hover .border-3::before {
+  transform: scaleY(1);
+}
+
+.border-0 {
+  width: 100%;
+  height: var(--gap);
+  bottom: calc(100% + var(--gap) * 2);
+  clip-path: polygon(4% 0, 99% 19%, 100% 64%, 0 95%);
+}
+
+.border-1 {
+  width: 100%;
+  height: var(--gap);
+  top: calc(100% + var(--gap) * 2);
+  clip-path: polygon(2% 39%, 98% 15%, 99% 49%, 0 95%);
+}
+
+.border-2 {
+  height: 100%;
+  width: var(--gap);
+  right: calc(100% + var(--gap) * 2);
+  clip-path: polygon(10% 1%, 97% 0, 67% 98%, 22% 100%);
+}
+
+.border-3 {
+  height: 100%;
+  width: var(--gap);
+  left: calc(100% + var(--gap) * 2);
+  clip-path: polygon(28% 0, 39% 0, 100% 100%, 29% 100%);
+}
+
+.letter {
+  position: relative;
+  width: calc(var(--size) / 4);
+  height: calc(var(--size) / 4);
+}
+
+.letter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  background-image: url("https://media.giphy.com/media/H2Z98LBIY7BDO/giphy.gif");
+  background-position: 50% 0%;
+  background-size: cover;
+  mix-blend-mode: soft-light;
+}
+
+.its-my-window .letter {
+  transition: clip-path var(--duration) var(--ease);
+}
+
+.its-my-window:hover .letter {
+  animation: calc(var(--duration) * 2) calc(var(--i) * (var(--duration) / -3)) steps(3, end) alternate infinite;
+  animation-name: colors, letter;
+}
+
+.its-my-window:hover .letter::before {
+  animation: dance calc(var(--duration) * 2) calc(var(--i) * (var(--duration) / -3)) steps(3, end) infinite;
+}
+
+.its-my-window:hover .border {
+  opacity: 1;
+  animation: border calc(var(--duration) * 2) calc(var(--i) * (var(--duration) / -3)) steps(3, end) alternate infinite;
+}
+
+.its-my-window .border::before {
+  animation: colors calc(var(--duration) * 2) calc(var(--i) * (var(--duration) / -3)) steps(3, end) alternate infinite;
+}
+
+@keyframes colors {
+  0%   { background-color: #a6e630 }
+  50%  { background-color: #f5e82f }
+  100% { background-color: #4cb8f5 } 
+}
+
+@keyframes letter {
+  25%  { transform: translate(-5%,  5%) scale(1.05) rotate(-5deg) }
+  50%  { transform: translate( 5%, -2%) rotate( 2deg) }
+  75%  { transform: translate(10%,  0%) scale(1.02) rotate( 8deg) }
+  100% { transform: translate( 0%, -5%) rotate( 4deg) }
+}
+
+@keyframes border {
+  25%  { transform: translate(-1%,  1%) rotate(-1deg) }
+  50%  { transform: translate( 1%, -2%) rotate(1deg) }
+  75%  { transform: translate( 1%,  0%) scale(1.02) rotate(2deg) }
+  100% { transform: translate( 0%, -2%) rotate(1deg) }
+}
+
+@keyframes dance {
+  100% { transform: scale(1.25) }
+}
+
+.o {
+  clip-path: circle(70% at 50% 50%);
+}
+.its-my-window:hover .o {
+  clip-path: circle(14% at 50% 50%);
+}
+
+.s {
+  clip-path: polygon(0% 0%, 51% 0, 100% 0, 100% 100%, 50% 100%, 0 100%);
+}
+.its-my-window:hover .s {
+  clip-path: polygon(100% 0, 60% 40%, 100% 70%, 0 100%, 40% 60%, 0 30%);
+}
+
+
+.d {
+clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 60% 60%, 60% 60%, 40% 40%, 40% 40%, 25% 100%, 100% 100%, 100% 0%);
+}
+.its-my-window:hover .d {
+  clip-path: polygon(6% 2%, 0 93%, 31% 100%, 27% 30%, 54% 34%, 61% 59%, 21% 72%, 31% 100%, 100% 74%, 76% 11%);
+}
+
+
+.u {
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 84% 0, 61% 0, 41% 0, 19% 0);
+}
+.its-my-window:hover .u {
+  clip-path: polygon(0 6%, 5% 100%, 96% 88%, 98% 3%, 71% 5%, 71% 62%, 31% 68%, 25% 0);
+}
+
+
+.p {
+  clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 49% 56%, 49% 46%, 49% 47%, 19% 56%, 25% 100%, 100% 100%, 100% 0%);
+}
+.its-my-window:hover .p {
+  clip-path: polygon(5% 3%, 2% 100%, 33% 92%, 24% 18%, 71% 25%, 57% 46%, 25% 41%, 19% 66%, 90% 55%, 100% 0);
+}
+
+
+.a {
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.its-my-window:hover .a {
+clip-path: polygon(46% 2%, 57% 0, 100% 83%, 0% 100%);
+}
+
+
+.f {
+  clip-path: polygon(0 0, 0 100%, 23% 100%, 57% 100%, 100% 100%, 100% 25%, 28% 28%, 33% 31%, 100% 28%, 100% 0);
+}
+.its-my-window:hover .f {
+  clip-path: polygon(0 8%, 0 97%, 23% 100%, 28% 66%, 76% 63%, 84% 37%, 30% 46%, 33% 31%, 92% 24%, 100% 0);
+}
+
+
+.l {
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 65%, 100% 0, 26% 0);
+}
+.its-my-window:hover .l {
+  clip-path: polygon(0 0, 8% 99%, 96% 84%, 100% 54%, 36% 64%, 27% 4%);
+}
+
+
+.y {
+  clip-path: polygon(0 0, 16% 0, 41% 0, 58% 0, 100% 0, 100% 100%, 0 100%, 0 35%);
+}
+.its-my-window:hover .y {
+  clip-path: polygon(5% 15%, 25% 0, 51% 31%, 78% 0, 100% 16%, 31% 100%, 0 91%, 36% 52%);
+}

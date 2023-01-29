@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
+
+body,
+html {
+	height: 100%;
+}
+
+body {
+	position: relative;
+	display: grid;
+	overflow: hidden;
+	grid-template: "body";
+	place-content: center;
+	place-items: center;
+	margin: 0;
+	background-color: #ffdd40;
+}
+
+body > *,
+body::before {
+	grid-area: body;
+}
+
+body::before {
+	content: '';
+	width: 150vmax;
+	height: 150vmax;
+	opacity: 0.4;
+	background: repeating-conic-gradient(from 0deg, white 0deg 15deg, transparent 15deg 30deg);
+	-webkit-mask-image: radial-gradient(hsla(0 0% 0% / 1), hsla(0 0% 0% / 0) 50%);
+	animation: rotate 20s linear infinite;
+}
+
+body::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: calc(50vh + 1em);
+	background-color: inherit;
+}
+
+p {
+	--duration: 1200ms;
+	--text-shadow-color: hsl(0 0% 100%);
+	
+	position: relative;
+	display: inline-block;
+	z-index: 1;
+	font-family: "Londrina Solid", sans-serif;
+	font-size: min(10vw, 10rem);
+	text-transform: uppercase;
+	text-shadow: 
+		0.006em -0.006em 0 var(--text-shadow-color),
+		0.012em -0.012em 0 var(--text-shadow-color),
+		0.018em -0.018em 0 var(--text-shadow-color),
+		0.024em -0.024em 0 var(--text-shadow-color),
+		0.030em -0.030em 0 var(--text-shadow-color),
+		0.006em  0       0 currentcolor,
+		0.012em -0.006em 0 currentcolor,
+		0.018em -0.012em 0 currentcolor,
+		0.024em -0.018em 0 currentcolor,
+		0.030em -0.024em 0 currentcolor,
+		0.036em -0.030em 0 currentcolor,
+		0.036em -0.036em 0 currentcolor;
+	perspective: 3em;
+	transform-origin: bottom center;
+	transform-style: preserve-3d;
+	animation: movement var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+p::after {
+	--transform: scaleY(-1) translateY(-30%) rotateX(-35deg) scaleY(1.2) translateY(calc(-30% + 2px));
+	--transform-alt: scaleY(-1) translateY(-30%) rotateX(-55deg) scaleY(1.4) translateY(calc(-30% + 2px));
+	
+	content: 'Good Morning Friends' / '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-shadow: initial;
+	-webkit-mask-image:
+		linear-gradient(
+			to bottom,
+			hsla(0 0% 0% / 0) 0%,
+			hsla(0 0% 0% / 0.006) 13.7%,
+			hsla(0 0% 0% / 0.022) 25.4%,
+			hsla(0 0% 0% / 0.049) 35.3%,
+			hsla(0 0% 0% / 0.086) 43.6%,
+			hsla(0 0% 0% / 0.133) 50.6%,
+			hsla(0 0% 0% / 0.188) 56.5%,
+			hsla(0 0% 0% / 0.251) 61.6%,
+			hsla(0 0% 0% / 0.323) 66%,
+			hsla(0 0% 0% / 0.402) 70.1%,
+			hsla(0 0% 0% / 0.487) 74.1%,
+			hsla(0 0% 0% / 0.579) 78.1%,
+			hsla(0 0% 0% / 0.677) 82.5%,
+			hsla(0 0% 0% / 0.780) 87.4%,
+			hsla(0 0% 0% / 0.888) 93.2%,
+			hsla(0 0% 0% / 1) 100%
+		);
+	opacity: 0.8;
+	transform: var(--transform);
+	animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes movement {
+	20% { transform: scaleY(1.4) skew(10deg)  }
+	50% { transform: scaleY(1)   skew(0)      }
+	70% { transform: scaleY(1.4) skew(-10deg) }
+}
+
+@keyframes shadow {
+	20% { transform: var(--transform-alt) }
+	50% { transform: var(--transform)     }
+	70% { transform: var(--transform-alt) }
+}
+
+@keyframes rotate {
+	to { transform: rotate(1turn) }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation: none !important;
+	}
+}

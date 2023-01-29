@@ -1,0 +1,12 @@
+.scene
+  .faux.side
+    .pip
+  .cube
+    - let side = 1;
+    while side <= 6
+      .side
+        - let pip = 1;
+        while pip <= side
+          .pip
+          - pip++;
+      - side++;

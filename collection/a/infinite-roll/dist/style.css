@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  --color-primary: black;
+  --color-secondary: whitesmoke;
+
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--color-primary);
+}
+
+.scene {
+  --size: 150vmax;
+  --offset: calc((var(--size) / 2));
+  --gap: calc(var(--size) / 15);
+  --duration: 6s;
+
+  cursor: pointer;
+  place-items: center;
+  place-content: center;
+  width: 100vmin;
+  height: 100vmin;
+  perspective: 1000vmax;
+}
+
+.scene,
+.cube {
+  display: grid;
+  grid-template-areas: "box";
+}
+
+.cube {
+  grid-area: box;
+  width: var(--size);
+  height: var(--size);
+  transform-style: preserve-3d;
+}
+
+/* CSS grid style credit: Creating dice using CSS grid by Edwin
+   Link: https://dev.to/ekeijl/creating-dice-using-css-grid-j4 */
+.side {
+  grid-area: box;
+  display: grid;
+  grid-template-areas:
+    "a . c"
+    "e g f"
+    "d . b";
+  padding: calc(var(--gap) * 2);
+  gap: var(--gap);
+  border: calc(var(--size) / 50) solid var(--color-primary);
+  border-radius: calc(var(--size) / 10);
+  background-color: var(--color-secondary);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.side:nth-child(1) {
+  transform: translateZ(var(--offset));
+}
+
+.side:nth-child(2) {
+  transform: translateZ(calc(var(--offset) * -1)) rotateY(180deg);
+}
+
+.side:nth-child(3) {
+  transform: translateX(calc(var(--offset) * -1)) rotateY(-90deg);
+}
+
+.side:nth-child(4) {
+  transform: translateX(var(--offset)) rotateY(90deg);
+}
+
+.side:nth-child(5) {
+  transform: translateY(calc(var(--offset) * -1)) rotateX(90deg);
+}
+
+.side:nth-child(6) {
+  transform: translateY(var(--offset)) rotateX(-90deg);
+}
+
+.faux.side {
+  grid-area: box;
+  width: var(--size);
+  height: var(--size);
+}
+
+.pip {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+.pip:nth-child(2) {
+  grid-area: b;
+}
+.pip:nth-child(3) {
+  grid-area: c;
+}
+.pip:nth-child(4) {
+  grid-area: d;
+}
+.pip:nth-child(5) {
+  grid-area: e;
+}
+.pip:nth-child(6) {
+  grid-area: f;
+}
+.pip:nth-child(odd):last-child {
+  grid-area: g;
+}
+
+/* Animation station */
+@-webkit-keyframes roll {
+  0% {
+    transform: scale(1) translateX(0) rotateX(0) rotateY(0);
+  }
+  15% {
+    transform: scale(0.25) translateX(0) rotateX(0.2turn) rotateY(0.1turn);
+  }
+  30% {
+    transform: scale(0.08) translateX(150%) rotateX(0.5turn) rotateY(1turn);
+  }
+  45% {
+    transform: scale(0.04) translateX(-200%) rotateX(1turn) rotateY(2turn);
+  }
+  70% {
+    transform: scale(0.02) translateX(100%) rotateX(1.75turn) rotateY(2.75turn);
+  }
+  100% {
+    transform: scale(0) translateX(0) rotateX(2.5turn) rotateY(3.5turn);
+  }
+}
+@keyframes roll {
+  0% {
+    transform: scale(1) translateX(0) rotateX(0) rotateY(0);
+  }
+  15% {
+    transform: scale(0.25) translateX(0) rotateX(0.2turn) rotateY(0.1turn);
+  }
+  30% {
+    transform: scale(0.08) translateX(150%) rotateX(0.5turn) rotateY(1turn);
+  }
+  45% {
+    transform: scale(0.04) translateX(-200%) rotateX(1turn) rotateY(2turn);
+  }
+  70% {
+    transform: scale(0.02) translateX(100%) rotateX(1.75turn) rotateY(2.75turn);
+  }
+  100% {
+    transform: scale(0) translateX(0) rotateX(2.5turn) rotateY(3.5turn);
+  }
+}
+
+@-webkit-keyframes shrink {
+  0%,
+  25% {
+    transform: scale(6) translateZ(calc(var(--offset) * -2));
+  }
+  100% {
+    transform: scale(1) translateZ(var(--offset));
+  }
+}
+
+@keyframes shrink {
+  0%,
+  25% {
+    transform: scale(6) translateZ(calc(var(--offset) * -2));
+  }
+  100% {
+    transform: scale(1) translateZ(var(--offset));
+  }
+}
+
+.cube {
+  -webkit-animation: roll var(--duration) linear infinite;
+          animation: roll var(--duration) linear infinite;
+}
+
+.faux.side {
+  -webkit-animation: shrink var(--duration) cubic-bezier(0.32, 0, 0.67, 0) infinite;
+          animation: shrink var(--duration) cubic-bezier(0.32, 0, 0.67, 0) infinite;
+}
