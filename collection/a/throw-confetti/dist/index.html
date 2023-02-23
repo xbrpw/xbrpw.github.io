@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - text-rainbow &amp; throwConfetti</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="text-rainbow-throwConfetti">
+  <style>
+  .buttonconfetti {
+    width: 100%;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+    transition: all .2s;
+    cursor: pointer;
+    font-size: 40px;
+  }
+
+  .buttonconfetti:active {
+    transform: scale(.9);
+  }
+  
+
+.text-rainbow {
+  color: rebeccapurple;
+  animation: rainbow 3s infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  #{100% / 6 * 1} {
+    color: orange
+  }
+  #{100% / 6 * 2} {
+    color: yellow
+  }
+  #{100% / 6 * 3} {
+    color: green
+  }
+  #{100% / 6 * 4} {
+    color: blue
+  }
+  #{100% / 6 * 5} {
+    color: purple
+  }
+  100% {
+    color: red;    
+  }
+}
+</style>
+<span onclick="throwConfetti()" class="text-rainbow">throwConfetti</span>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script>
+                            function vibrate(type) {
+
+                                navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+
+                                if (navigator.vibrate) {
+
+                                    if (type == 'star-wars') {
+                                        navigator.vibrate([500, 110, 500, 110, 450, 110, 200, 110, 170, 40, 450, 110, 200, 110, 170, 40, 500]);
+                                    } else if (type == 'mario') {
+                                        navigator.vibrate([125, 75, 125, 275, 200, 275, 125, 75, 125, 275, 200, 600, 200, 600]);
+                                    } else if (type == 'turtles') {
+                                        navigator.vibrate([75, 75, 75, 75, 75, 75, 75, 75, 150, 150, 150, 450, 75, 75, 75, 75, 75, 525]);
+                                    } else if (type == 'power-rangers') {
+                                        navigator.vibrate([150, 150, 150, 150, 75, 75, 150, 150, 150, 150, 450]);
+                                    } else if (type == 'phone-call') {
+                                        navigator.vibrate([1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500]);
+                                    } else if (type == '007') {
+                                        navigator.vibrate([200, 100, 200, 275, 425, 100, 200, 100, 200, 275, 425, 100, 75, 25, 75, 125, 75, 25, 75, 125, 100, 100]);
+                                    } else {
+                                        navigator.vibrate(50);
+                                    }
+
+                                }
+
+                            }
+
+                            $(document).ready(function($) {
+
+                                $('.button--normal').click(function() {
+                                    vibrate();
+                                });
+
+                                $('.button--phone-call').click(function() {
+                                    vibrate('phone-call');
+                                });
+
+                                $('.button--power-rangers').click(function() {
+                                    vibrate('power-rangers');
+                                });
+
+                                $('.button--mario').click(function() {
+                                    vibrate('mario');
+                                });
+
+                                $('.button--star-wars').click(function() {
+                                    vibrate('star-wars');
+                                });
+
+                                $('.button--turtles').click(function() {
+                                    vibrate('turtles');
+                                });
+
+                                $('.button--bond').click(function() {
+                                    vibrate('007');
+                                });
+
+                            });
+                        </script>
+<script>
+                    function randomInRange(min, max) {
+                        return Math.random() * (max - min) + min;
+                    }
+
+                    function throwConfetti() {
+                        confetti({
+                            angle: randomInRange(55, 125),
+                            spread: randomInRange(50, 70),
+                            particleCount: randomInRange(50, 100),
+                            origin: {
+                                y: 0.6
+                            }
+                        });
+                    }
+                </script>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

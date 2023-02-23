@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"> 
+
+<style>
+/* Safari syntax */
+:-webkit-full-screen {
+  background-color: yellow;
+}
+
+/* IE11 */
+:-ms-fullscreen {
+  background-color: yellow;
+}
+
+/* Standard syntax */
+:fullscreen {
+  background-color: yellow;
+}
+
+/* Style the button */
+
+.buttonfullscreen {
+  padding: 20px;background-color:transparent; border:none;
+  font-size: 20px;
+}
+</style>
+
+</head>
+<body>
+
+<h2>Fullscreen with JavaScript with on the icon to toggle</h2>
+<p>Click on the "Open Fullscreen" button to open this page in fullscreen mode. Close it by either clicking the "Esc" key on your keyboard, or with the "Close Fullscreen" button.</p>
+
+
+
+<button class="buttonfullscreen" onclick="closeFullscreen();openFullscreen();"><i onclick="myFunction(this)" class="fa-solid fa-maximize"></i></button>
+
+
+<script>
+// fullscreen
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+// toggle 
+function myFunction(x) {
+  x.classList.toggle("fa-close");
+}
+</script>
+
+</body>
+</html>
+
+
