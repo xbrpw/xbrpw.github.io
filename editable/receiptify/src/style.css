@@ -1,0 +1,545 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url('https://fonts.cdnfonts.com/css/merchant-copy-doublesize');
+ @import url("https://use.typekit.net/suf0kzk.css");
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/circular-std');
+
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 4.5rem;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+h2 {
+  font-size: 2.5rem;
+  margin-top: 0px;
+}
+.container h2 {
+  text-align: center;
+  font-family: minion-pro, serif;
+  /*font-family: 'Baskervville', serif;
+font-family: 'Libre Baskerville', serif;*/
+      font-size: 54px;
+    letter-spacing: 0px;
+    font-weight: 600;
+    font-style: normal;
+}
+p {
+  font-family: Helvetica, Geneva, Tahoma, sans-serif;
+}
+.logo {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 3.3rem;
+  text-align: center;
+  padding-top: 15px;
+}
+.info {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  text-align: center;
+}
+.period {
+      font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 15px;
+    font-family: 'mister-belvedere-oblique-regular', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -2px;
+    font-size: 24px;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 80px;
+}
+.login-btn {
+  margin: 2vh auto;
+  text-align: center;
+  text-decoration: none;
+  padding: 2vh 3vh;
+  background-color: #1db954;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Geneva, Tahoma, sans-serif;
+  width: 100%;
+  display: block;
+  max-width: 295px;
+}
+
+.footer p {
+  font-size: 1.5rem;
+}
+
+.apple {
+  background-color: #f94c57;
+}
+
+.lastfm {
+  background-color: black;
+}
+
+.time-btn {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  padding: 1vh 5vh;
+  background-color: #0056ff;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Geneva, Tahoma, sans-serif;
+  margin: 0vh 1vh;
+  width: auto;
+  font-family: 'Circular Std', sans-serif;
+}
+.login-btn:hover {
+  text-decoration: none;
+  color: white;
+}
+#options,
+#appleoption {
+  margin: 0px auto;
+  margin-top: 1vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.hidden {
+  display: none;
+}
+#loggedin,
+#login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hidden {
+  display: none;
+}
+.date {
+  margin: 0vh;
+}
+.tracks {
+  margin: 5px 0vh;
+}
+#receipt {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 25px auto;
+}
+.username-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh;
+}
+.username-input * {
+  margin: 2%;
+}
+.receiptContainer {
+  background-image: url("https://receiptify.herokuapp.com/wrinkled-paper-texture-7.jpg");
+  background-position: center;
+  width: 340px;
+  filter: brightness(110%);
+  padding: 20px;
+  text-transform: uppercase;
+}
+.begin {
+  padding-left: 0vh;
+}
+#download {
+  margin-top: 2vh;
+}
+p,
+table,
+.date {
+  font-family: "receipt", "Courier New", Courier, monospace;
+  font-family: 'Merchant Copy', sans-serif;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+#login p {
+  font-size: 1.5rem;
+}
+
+table {
+  border: none;
+}
+.total-counts {
+  border-top: 1px dashed;
+}
+.total-counts-end {
+  border-bottom: 1px dashed;
+}
+thead {
+  border-top: 1px dashed;
+  border-bottom: 1px dashed;
+}
+td {
+  padding: 2px 10px;
+  vertical-align: top;
+}
+.name {
+  width: 225px;
+  overflow: auto;
+}
+.length {
+  text-align: right;
+  padding-left: 10px;
+  padding-right: 0px;
+}
+.website {
+  margin-bottom: 0px;
+  text-transform: lowercase;
+}
+.thanks {
+  text-align: center;
+  padding: 15px 0px;
+}
+.thanks img {
+  width: 70%;
+}
+
+/** -- Added for Anthems Partnership --**/
+.header-section {
+  margin-top: 20px;
+  width: 964px;
+}
+
+.seperator {
+  width: 100%;
+  padding: 0 30%;
+}
+
+.seperator hr {
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+}
+.btn-group {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+.btn-group > .btn:first-of-type {
+  border-top-left-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+}
+.btn-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+input[type="radio" i] {
+  background-color: initial;
+  cursor: default;
+  appearance: auto;
+  padding: initial;
+  border: initial;
+}
+.btn-group > .btn-group:not(:last-child) > .btn,
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group > .btn-group:not(:first-child),
+.btn-group > .btn:not(:first-child) {
+  margin-left: -1px;
+}
+.btn-group-vertical > .btn,
+.btn-group > .btn {
+  position: relative;
+  flex: 1 1 auto;
+}
+.btn-outline-primary {
+  color: #0d6efd;
+  border-color: #0d6efd;
+}
+.btn-outline-primary:hover,
+.btn-check:checked + .btn-outline-primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+.btn-outline-secondary {
+  color: #6c757d;
+  border-color: #6c757d;
+}
+.btn-outline-secondary:hover,
+.btn-check:checked + .btn-outline-secondary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+.announcing-text {
+  color: #fd1200;
+  border-radius: 35px;
+  width: 105px;
+  height: 28px;
+  background-color: #fae6e6;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px 0;
+}
+
+.about {
+  width: 70%;
+  text-align: center;
+  padding: 5vh 0;
+}
+
+.about p {
+  font-family: "Inter";
+  font-size: 16px;
+}
+
+.about h2 {
+  font-size: 20px;
+}
+
+.middle-container {
+  text-align: center;
+}
+
+.middle-container .title {
+  font-family: "Helvetica Neue";
+  font-size: 32px;
+  font-weight: bold;
+  padding: 24px 2px 16px 2px;
+}
+
+.middle-container .subtitle {
+  font-family: "Helvetica Neue";
+  font-size: 18px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+.store-icons {
+  width: 284.74px;
+  height: 40px;
+  margin: 16px;
+  cursor: pointer;
+}
+
+.anthems-logo {
+  width: 178.04px;
+  height: 40px;
+  margin: 16px;
+  cursor: pointer;
+}
+
+.mixes-promo {
+  width: 368px;
+  height: 294.49px;
+  background-image: url(assets/img/mixes-promo.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+  margin-bottom: 55px;
+  cursor: pointer;
+}
+/** -- End of Added for Anthems Partnership --**/
+
+/* NAV BEGIN */
+
+/* Navigation Bar */
+.nav-logo-p {
+  font-size: 3.7vh;
+  left: 4vw;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+nav {
+  width: 100%;
+  box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.07);
+  height: auto;
+}
+nav > ul {
+  display: inline-block;
+  list-style-type: none;
+  padding: 2vh 3vw;
+  margin: 0vh;
+  float: right;
+}
+nav > ul > li {
+  border: 1px solid transparent;
+  border-radius: 1vh;
+  padding: 1vh 1.2vw;
+  margin: 0;
+  display: inline-block;
+}
+nav > ul > li:hover {
+  border-radius: 1.5vh;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  color: white;
+}
+nav a {
+  text-decoration: none;
+}
+nav > ul > li > a {
+  font-size: 2.2vh;
+}
+.navTransparent {
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  background-color: white;
+}
+.navTransparent > ul > li:hover {
+  border: 1px solid white;
+}
+.navTransparent > ul > li > a {
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  color: white;
+  font-size: 2.5vh;
+}
+.navTransparent > a {
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  color: white;
+  font-family: var(--heading-font);
+}
+.navColor {
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  background-color: white;
+  z-index: 99;
+}
+.navColor > ul > li:hover {
+  background-color: #1db954;
+}
+.navColor > ul > li:hover a {
+  color: white;
+}
+.navColor > ul > li > a {
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  color: black;
+}
+.nav-logo-p {
+  font-family: var(--heading-font);
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  color: white;
+}
+
+.ad-centered {
+  justify-content: center;
+}
+
+.options-ad {
+  display: flex;
+  height: 100px;
+  width: 720px;
+}
+
+@media (max-width: 330px) {
+  .options-ad {
+    display: inline-block;
+    width: 320px;
+  }
+}
+
+/* NAV END */
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+  #loggedin,
+  #login {
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+  }
+  .about {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #options {
+    flex-direction: column;
+  }
+  #loggedin,
+  #login {
+    width: 100%;
+  }
+  .time-btn {
+    margin: 1vh auto;
+  }
+  .container {
+    width: 100%;
+  }
+  .about {
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-section {
+    width: 100%;
+    padding: 0 32px;
+  }
+
+  .seperator {
+    padding: 0;
+  }
+
+  .mixes-promo {
+    background-image: url(assets/img/mixes-promo-mobile.jpg);
+    width: auto;
+    height: 190.96px;
+    max-width: 337px;
+  }
+
+  .middle-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 330px) {
+  .header-section {
+    padding: 0 15px;
+  }
+}
