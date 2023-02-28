@@ -1,0 +1,100 @@
+:root {
+  --shadow-color: black;
+  --background-color: #003454;
+  --highlight-color: #004268;
+  --spot-color: #D4DA2A;
+}
+
+body{
+  background: var(--background-color);
+  margin: 0;
+  overflow:hidden; 
+}
+
+
+
+.box-canvas{
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-bottom: 8%;
+  width: 600px;
+  height:600px;
+}
+
+.stage {
+  position: absolute;
+  width: 600px;
+  top: 200px;
+}
+
+.spotlight {
+  position: absolute;
+  left: 170px;
+  background: var(--spot-color);
+  width: 250px;
+  height: 340px;
+  -webkit-clip-path: polygon(0 0, 30% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 30% 0, 100% 100%, 0% 100%);
+}
+
+.spotlight-end {
+  position: absolute;
+  top: 293px;
+  left: 170px;
+  width: 250px;
+  height: 100px;
+  border-radius: 50%;
+  background: #E9EC1D;
+}
+
+.mic-stand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7px;
+  height: 150px;
+  background: linear-gradient(to right, var(--highlight-color), var(--shadow-color));
+  border-radius: 0 0 10% 10% / 0 0 50% 50%;
+}
+
+.stand-bottom {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 46px;
+  height: 25px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, var(--highlight-color), var(--shadow-color));
+  top: 138px;
+}
+
+.mic {
+  position: absolute;
+  width: 45px;
+  height: 15px;
+  background: linear-gradient(var(--highlight-color), var(--shadow-color));
+  transform: rotate(20deg) translateX(-50%);
+  left: 50%;
+}
+
+.mic::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: -5px;
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(circle at top left, var(--highlight-color), var(--shadow-color));
+  border-radius: 50%;
+}
+
+.mic::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  background: linear-gradient(var(--highlight-color), var(--shadow-color));
+  right: -10px;
+  top: 5px;
+}
