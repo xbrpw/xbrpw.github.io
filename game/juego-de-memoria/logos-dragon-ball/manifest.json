@@ -11,7 +11,7 @@
       },
       {
         "sizes": "512x512",
-        "type": "image/png",
+        "type": "image/x-icon",
         "src": "./favicon.svg"
       }
     ],
