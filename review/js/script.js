@@ -132,10 +132,10 @@ window.onload = function (e) {
             color: "#6aa0b6"
         },
         {
-            url: `#`,
+            url: `https://codepen.io/luisangelmaciel/full/zYmxxLQ`,
             name: `14`,
-            image: `img/placeholder.webp`,
-            desc: "On/Off Switch",
+            image: `https://i.ibb.co/q534DYR/Captura-de-pantalla-329.webp`,
+            desc: "Brands",
             color: "#1db0b9"
         },
         {
