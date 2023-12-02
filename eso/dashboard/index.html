@@ -296,6 +296,108 @@
                         </svg>
                            <a href="#CrearAviso">Crear un aviso</a>
                     </button>
+                    <button class="shadow inline-flex items-center bg-blue-500 hover:bg-blue-600 focus:outline-none focus:shadow-outline text-white font-semibold py-2 px-4 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 w-5 h-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="0" y="0" width="24" height="24" stroke="none"></rect>
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                           <a href="#PublicarEvidencia" id="myBtnFull">Publicar una evidencia</a>
+                    </button>
+
+                    <style>
+                        * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                    
+                    .modalFull {
+                        position: fixed;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        z-index: 999;
+                        display: none;
+                        -webkit-overflow-scrolling: touch;
+                        outline: 0;
+                        overflow: hidden;
+                        background-color: initial;
+                    }
+                    
+                    .closeModalFull {
+                        font-size: 50px;
+                        font-weight: 900;
+                        line-height: 1;
+                        color: #aaaaaa;
+                        text-shadow: 0 1px 0 #fff;
+                        filter: alpha(opacity=20);
+                        opacity: 0.5;
+                        position: fixed;
+                        top: 30px;
+                        right: 40px;
+                    }
+                    
+                    .closeModalFull:focus,
+                    .closeModalFull:hover {
+                        color: #000;
+                        text-decoration: none;
+                        cursor: pointer;
+                        filter: alpha(opacity=50);
+                        opacity: 0.5;
+                    }
+                    
+                    .closeModalFull {
+                        -webkit-appearance: none;
+                        padding: 0;
+                        cursor: pointer;
+                        background: 0 0;
+                        border: 0;
+                    }
+                    
+                    .closeModalFull:hover,
+                    .closeModalFull:focus {
+                        color: #000;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                    
+                        </style>
+                    
+                    
+                    <div id="myModalFull" class="modalFull">
+                        <span class="closeModalFull">&times;</span>
+                        <iframe src="https://docs.google.com/forms/d/1dmDQPOKW39m3QPgccfU-w1bjIZaYoes--Pv_9vYAVbM/edit " name="iframe_a " height="100% " width="100% " title="Iframe " allowfullscreen=" " frameborder="0 " style="border:0; "></iframe>
+                    </div>
+                    <script>
+                    // Get the modal
+                    var modal = document.getElementById("myModalFull");
+                    
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("myBtnFull");
+                    
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("closeModalFull")[0];
+                    
+                    // When the user clicks the button, open the modal
+                    btn.onclick = function () {
+                        modal.style.display = "block";
+                    };
+                    
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                    };
+                    
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function (event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    };
+                        
+                    </script>
                                        </div>
         
                 <div class="bg-orange-200 mb-10 p-6 rounded-lg shadow">

@@ -3,7 +3,7 @@ $(document).ready(function () {
     var user = $(".user").val(),
         pass = $(".pass").val();
     if(user === "Sec0514" && pass === "LsBbs287") {
-      window.location.replace("welcome.html");
+      window.location.replace("https://xbrpw.github.io/eso/dashboard/index.html");
     } else {
     window.location.replace("index.html");
     }
